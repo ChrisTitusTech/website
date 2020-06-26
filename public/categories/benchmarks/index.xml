@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Benchmarks on Chris Titus Tech</title>
+    <link>/categories/benchmarks/</link>
+    <description>Recent content in Benchmarks on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Oct 2018 20:28:58 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/benchmarks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SATA vs SAS vs NVMe Performance Breakdown</title>
+      <link>/sata-vs-sas-vs-nvme/</link>
+      <pubDate>Fri, 05 Oct 2018 20:28:58 +0000</pubDate>
+      
+      <guid>/sata-vs-sas-vs-nvme/</guid>
+      <description>This is a quick breakdown of the differences between SATA vs SAS vs NVMe. After looking at the performance below, you will be able to decide which one best suits your needs.
+ SATA (Serial Advanced Technology Advancement)  Most common Least reliable Slow  5400 – 7200 RPM Hard Drives Half duplex (Can’t read and write simultaneously) 6 GB/s connection   Cheap (1 TB SSD $150)   SAS (Serial Attached Storage)  Commonplace in data centers Very reliable  Error checking is built-in   Fast  15k RPM Hard Drives Full Duplex (Simultaneous read and write) 12 GB/s connection   Expensive (800 GB SSD $600) – Pretty much enterprise only   NVMe (Non-Volatile Memory Express)  Common in new PC builds, common in data center SANs for cache on tiered storage.</description>
+    </item>
+    
+    <item>
+      <title>Using IOMeter to determine hard drive performance</title>
+      <link>/using-iometer/</link>
+      <pubDate>Fri, 14 Sep 2018 16:50:46 +0000</pubDate>
+      
+      <guid>/using-iometer/</guid>
+      <description>Using IOMeter will give you a great benchmark on any hard drives and network drives you have. I use this quite often as you can see the effects of new hardware, introducing Link-Aggregation, or troubleshooting drives to determine if they are losing performance.
+Steps to Follow  Download IOMeter from the Official Site and run setup  
+All Programs -&amp;gt; Iometer -&amp;gt; Iometer  3a) Under ‘Topology’ tab, select the local machine</description>
+    </item>
+    
+    <item>
+      <title>How to choose DNS Server by benchmarking them</title>
+      <link>/benchmark-dns-server/</link>
+      <pubDate>Thu, 09 Mar 2017 17:35:18 +0000</pubDate>
+      
+      <guid>/benchmark-dns-server/</guid>
+      <description>By default, your DNS Server is set to your ISP’s DNS and this SLOWS down your internet, due to the fact, they are poorly managed and have horrid performance. This shows you how to choose the fastest DNS Server, but results will vary depending on the location. Running this benchmark will tell you which ones are the best to use.
+Finding the Fastest Go to https://www.grc.com/dns/benchmark.htm and download the benchmark tool.</description>
+    </item>
+    
+  </channel>
+</rss>

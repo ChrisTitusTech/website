@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/docker/</link>
+    <description>Recent content in Docker on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jun 2018 19:36:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Commiting Changes to Docker images and containers</title>
+      <link>https://www.christitus.com/commiting-docker-images/</link>
+      <pubDate>Thu, 21 Jun 2018 19:36:03 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/commiting-docker-images/</guid>
+      <description>&lt;p&gt;This is a walkthrough of how to commit changes to docker images and containers. You need to do this if you make configuration changes to any docker images. By committing changes to the docker images you can backup and clone them.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

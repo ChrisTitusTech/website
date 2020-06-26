@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interview on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/interview/</link>
+    <description>Recent content in Interview on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Sep 2019 23:25:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BigDaddyLinux Interview</title>
+      <link>https://www.christitus.com/bigdaddylinux-interview/</link>
+      <pubDate>Wed, 04 Sep 2019 23:25:17 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/bigdaddylinux-interview/</guid>
+      <description>&lt;p&gt;I had a great time chatting with Rocco from BDL and loved his interview style. I didn’t realize we talked for an hour and half, but had an absolute blast and will definitely jump in on some more of his live streams. Here is the interview:&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

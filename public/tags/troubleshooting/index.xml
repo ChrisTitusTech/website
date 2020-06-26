@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>troubleshooting on Chris Titus Tech</title>
+    <link>/tags/troubleshooting/</link>
+    <description>Recent content in troubleshooting on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Jun 2017 17:13:44 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Troubleshooting Nagios 4 Core Installation</title>
+      <link>/troubleshooting-nagios/</link>
+      <pubDate>Wed, 21 Jun 2017 17:13:44 +0000</pubDate>
+      
+      <guid>/troubleshooting-nagios/</guid>
+      <description>Use the following command to verify you have all your config and command files correct when troubleshooting Nagios core installation. This will give you a readout of any configuration errors, thus giving you the ability to fix it on the fly.
+/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+I’d recommend making an alias in your .bashrc so you can just type:testnag
+Here is an example of the alias I use
+alias testnag=&#39;/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg&#39;</description>
+    </item>
+    
+  </channel>
+</rss>

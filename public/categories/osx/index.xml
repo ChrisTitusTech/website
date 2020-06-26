@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OSX on Chris Titus Tech</title>
+    <link>/categories/osx/</link>
+    <description>Recent content in OSX on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Jan 2012 22:55:18 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/osx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fix for Kernel Panic in Mac OSX</title>
+      <link>/kernel-panic-mac-osx/</link>
+      <pubDate>Tue, 24 Jan 2012 22:55:18 +0000</pubDate>
+      
+      <guid>/kernel-panic-mac-osx/</guid>
+      <description>Follow these steps to fix a kernel panic in Mac OSX. However, if this doesn’t fix the issue, there is a good chance the motherboard is damaged and you need to send it to Apple.
+1) SMC RESETTING  Shut down the computer. Plug in the MagSafe power adapter to a power source, connecting it to the Mac if its not already connected. On the built-in keyboard, press the (left side) Shift-Control-Option keys and the power button at the same time.</description>
+    </item>
+    
+    <item>
+      <title>Release and Renew IP in OS X</title>
+      <link>/release-and-renew-ip-in-os-x/</link>
+      <pubDate>Thu, 29 Sep 2011 18:46:43 +0000</pubDate>
+      
+      <guid>/release-and-renew-ip-in-os-x/</guid>
+      <description>I recently had some issues where a bridged virtual machine in osx would disconnect my osx side network connection. A simple release and renew would fix this. Simply open up Terminal in OSX and type:
+ sudo ifconfig en0 down
+  sudo ifconfig en0 up
+ Obviously if you are renewing another interface other than your Ethernet port, en0 would need to be changed to the corresponding short name of the interface.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Powershell on Chris Titus Tech</title>
+    <link>/categories/powershell/</link>
+    <description>Recent content in Powershell on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Sep 2018 19:56:07 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing Linux Subsystem for Windows 10</title>
+      <link>/installing-linux-subsystem/</link>
+      <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
+      
+      <guid>/installing-linux-subsystem/</guid>
+      <description>The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system. &amp;lt;iframe style=&amp;quot;display: block; margin: 0px auto;&amp;rdquo; id=&amp;rdquo;_ytid_78463&amp;rdquo; width=&amp;quot;1200&amp;rdquo; height=&amp;quot;675&amp;rdquo; data-origwidth=&amp;quot;1200&amp;rdquo; data-origheight=&amp;quot;675&amp;rdquo; src=&amp;quot;https://www.youtube.com/embed/RriP3LmuKNA?enablejsapi=1&amp;amp;autoplay=0&amp;amp;cc_load_policy=0&amp;amp;iv_load_policy=3&amp;amp;loop=0&amp;amp;modestbranding=0&amp;amp;rel=0&amp;amp;fs=1&amp;amp;playsinline=0&amp;amp;autohide=2&amp;amp;theme=dark&amp;amp;color=red&amp;amp;controls=1&amp;amp;&amp;rdquo; class=&amp;rdquo;__youtube_prefs\__&amp;rdquo; title=&amp;quot;YouTube player&amp;rdquo; allow=&amp;quot;autoplay; encrypted-media&amp;rdquo; allowfullscreen data-no-lazy=&amp;quot;1&amp;rdquo; data-skipgform_ajax_framebjll=&amp;quot;&amp;ldquo;&amp;gt;Enable Linux Subsystem Feature cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Note: Perform in PowerShell</description>
+    </item>
+    
+    <item>
+      <title>Debloat Windows 10</title>
+      <link>/debloat-windows-10/</link>
+      <pubDate>Sun, 09 Sep 2018 17:08:58 +0000</pubDate>
+      
+      <guid>/debloat-windows-10/</guid>
+      <description>Right Click Windows Button -&amp;gt;Select Powershell Prompt (Admin) OR Select Command Prompt (Admin)  Note: If you don’t have PowerShell and only command prompt open command prompt (admin) and type “powershell“   Change Execution policy to allow a debloat script to run in Powershell Set-ExecutionPolicy Unrestricted Run the script from the following Github Repository. The person running this GitHub has been updating this script for a while and is a godsend.</description>
+    </item>
+    
+    <item>
+      <title>Changing file permissions using PowerShell</title>
+      <link>/changing-file-permissions/</link>
+      <pubDate>Thu, 14 Jun 2018 15:46:23 +0000</pubDate>
+      
+      <guid>/changing-file-permissions/</guid>
+      <description>Use the following script for changing file permissions using PowerShell. I use this script when command line takeown and icacls fail. Obviously, run from an elevated PowerShell prompt or by typing ‘powershell’ from elevated cmd.
+The Script Change $folder to the base directory you want for changing permissions.
+Please note, you can use network UNC paths for this or a simple C:.
+$folder = &amp;quot;\\homeserver\users\&amp;quot;&amp;lt;br /&amp;gt; $users = get-childitem $folder&amp;lt;br /&amp;gt; Foreach ($user in $users) {&amp;lt;br /&amp;gt; $acl = Get-Acl $user.</description>
+    </item>
+    
+    <item>
+      <title>Powershell Script monitors Mining Pool Hub earnings</title>
+      <link>/powershell-script-to-monitor-mining-pool-hub-earnings-market-value-and-pool-exposure-for-cryptocurrencies/</link>
+      <pubDate>Thu, 11 Jan 2018 23:18:05 +0000</pubDate>
+      
+      <guid>/powershell-script-to-monitor-mining-pool-hub-earnings-market-value-and-pool-exposure-for-cryptocurrencies/</guid>
+      <description>This Powershell Script monitors Mining Pool Hub earnings with market values to make a unique dashboard. Mining Pool Hub is one of the best out there with the auto exchange feature and frequent payouts. On the other hand, the website itself is very cumbersome and not user-friendly with infrequent updates. Consequently, use the following script for viewing outside of the browser, however, if you want a browser-based monitor I recommend miningpoolhubstats.</description>
+    </item>
+    
+    <item>
+      <title>Exclude shared mailboxes from Dynamic Distribution Group</title>
+      <link>/exclude-shared-mailboxes-exchange/</link>
+      <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
+      
+      <guid>/exclude-shared-mailboxes-exchange/</guid>
+      <description>This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.
+ Commands Connect to O365 in PS: $UserCredential = Get-Credential&amp;lt;br /&amp;gt; $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection&amp;lt;br /&amp;gt; Import-PSSession $Session
+Exclude Shared Mailboxes with this filter command: set-DynamicDistributionGroup -Name &amp;quot;all@yourcompany.com&amp;quot; -RecipientFilter {((RecipientType -eq &#39;UserMailbox&#39;) -and -not (RecipientTypeDetailsValue -eq &#39;SharedMailbox&#39;))}</description>
+    </item>
+    
+    <item>
+      <title>Force active directory sync to Office 365 with Azure ADSync</title>
+      <link>/force-active-directory-sync/</link>
+      <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
+      
+      <guid>/force-active-directory-sync/</guid>
+      <description>Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.
+Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”&amp;lt;br /&amp;gt; Start-ADSyncSyncCycle -PolicyType Delta</description>
+    </item>
+    
+  </channel>
+</rss>

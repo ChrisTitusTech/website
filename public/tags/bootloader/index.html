@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Bootloader - Chris Titus Tech | Technology Simplified</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta property="og:title" content="Bootloader" />
+<meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.christitus.com/tags/bootloader/" />
+<meta property="og:updated_time" content="2019-04-01T22:21:10+00:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bootloader"/>
+<meta name="twitter:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="alternate" type="application/rss+xml" href="/tags/bootloader/index.xml" title="Chris Titus Tech | Technology Simplified">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5817718-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+	<script data-ad-client="ca-pub-6679678361432308" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Chris Titus Tech | Technology Simplified" rel="home">
+				<div class="logo__title"><img src="/images/logo.png" align="left"></div>
+				<div class="logo__tagline">Tech Guides, Solutions, and Support</div>
+			</a>
+		</div>				
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://www.patreon.com/christitustech">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">Donate</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/recommendations/">
+				
+				<span class="menu__text">Recommendations</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://download.teamviewer.com/download/TeamViewerQS.exe">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">Remote Support</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/search/">
+				<i class='fa fa-search'></i>
+				<span class="menu__text">Search</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+		
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">Bootloader</h1>
+	</header><article class="list__item post">
+	<figure class="list__thumbnail">
+		<a href="https://www.christitus.com/grub-rescue/">
+			<img src="/wp-content/uploads/2019/04/grub-rescue.png" alt="Grub Rescue | Repairing your Bootloader" />
+		</a>
+	</figure>
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/grub-rescue/" rel="bookmark">
+			Grub Rescue | Repairing your Bootloader
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-04-01T22:21:10">2019-04-01</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Lets go over Grub Rescue and repairing your bootloader. This is a very misunderstood topic and by learn basic syntax you will be able to repair your GRUB very easily. Here are 4 methods of doing a GRUB Rescue.</p>
+	</div>
+</article>
+</main>
+
+
+			</div>
+			
+<aside class="sidebar sidebar--left">
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/christitustech" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter Tweets</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/ctitus" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn Profile</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/ChrisTitusTech" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub Projects</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitch" rel="noopener noreferrer" href="https://twitch.tv/christitustech" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitch" width="24" height="24" viewBox="0 0 2400 2800" style="enable-background:new 0 0 2400 2800">
+<path class="st0" d="M500,0L0,500v1800h600v500l500-500h400l900-900V0H500z M2200,1300l-400,400h-400l-350,350v-350H600V200h1600 V1300z"/>
+</svg>
+
+				<span>Twitch Live Streams</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="YouTube" rel="noopener noreferrer" href="https://youtube.com/c/ChrisTitusTech" target="_blank">
+				<svg
+   class="widget-social__link-icon icon icon-youtube"
+   viewBox="0 0 300 300"
+   width="24"
+   height="24">
+<path d="M 149.9375 79.222656 C 149.9375 79.222656 86.718651 79.222715 70.851562 83.345703 C 62.355775 85.719505 55.360154 92.715203 52.986328 101.33594 C 48.863375 117.20304 48.863281 150.0625 48.863281 150.0625 C 48.863281 150.0625 48.863375 183.0467 52.986328 198.66406 C 55.360154 207.28468 62.230834 214.15544 70.851562 216.5293 C 86.843592 220.77718 149.9375 220.77734 149.9375 220.77734 C 149.9375 220.77734 213.28168 220.77729 229.14844 216.6543 C 237.76923 214.28049 244.63977 207.53464 246.88867 198.78906 C 251.1366 183.04674 251.13672 150.1875 251.13672 150.1875 C 251.13672 150.1875 251.26156 117.20304 246.88867 101.33594 C 244.63977 92.715203 237.76923 85.844606 229.14844 83.595703 C 213.28168 79.222856 149.9375 79.222656 149.9375 79.222656 z M 129.82227 119.70312 L 182.42188 150.0625 L 129.82227 180.29688 L 129.82227 119.70312 z" /></svg>
+
+				<span>YouTube Videos</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/android/">Android</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/freenas/">FreeNAS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/hardware/">Hardware</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/linux/">Linux</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/macos/">MacOS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/networking/">Networking</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/software/">Software</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/virtualization/">Virtualization</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/windows/">Windows</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/windows-server/">Windows Server</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/youtube/">YouTube</a>
+			</li>
+		</ul>
+	</div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<div class="widget-taglist widget">
+  <h4 class="widget__title">Tags</h4>
+   <div class="widget__content">
+    <div id="tag-cloud" style="padding: 5px 15px">
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/adb" style="font-size:1rem">adb</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/adsync" style="font-size:1rem">adsync</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/amazon-fire" style="font-size:1rem">amazon-fire</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/aptitude" style="font-size:1rem">aptitude</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/asterisk" style="font-size:1rem">asterisk</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/aws" style="font-size:1rem">aws</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/benchmark" style="font-size:1.642476011547092rem">benchmark</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/bootloader" style="font-size:1rem">bootloader</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/btrfs" style="font-size:1rem">btrfs</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/business" style="font-size:1rem">business</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/c920-webcam" style="font-size:1rem">c920-webcam</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/citrix" style="font-size:1rem">citrix</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/cloud-migration" style="font-size:1rem">cloud-migration</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/cortana" style="font-size:1rem">cortana</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/docker" style="font-size:1rem">docker</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/emoji" style="font-size:1rem">emoji</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/exchange-2019" style="font-size:1rem">exchange-2019</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/exchange-online" style="font-size:1.642476011547092rem">exchange-online</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/exchange-server" style="font-size:2.2160716949229387rem">exchange-server</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/f-droid" style="font-size:1rem">f-droid</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/fedora" style="font-size:1.4053572316409797rem">fedora</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/firewall" style="font-size:1.642476011547092rem">firewall</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/freebsd" style="font-size:1.4053572316409797rem">freebsd</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/gaming" style="font-size:1rem">gaming</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/garmin-express" style="font-size:1rem">garmin-express</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/gfi-mailarchiver" style="font-size:1.8107144632819592rem">gfi-mailarchiver</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/gimp" style="font-size:1rem">gimp</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/google-chrome" style="font-size:1rem">google-chrome</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/google-cloud-platform" style="font-size:1.642476011547092rem">google-cloud-platform</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/grub" style="font-size:1rem">grub</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/hackintosh" style="font-size:1rem">hackintosh</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/htaccess" style="font-size:1rem">htaccess</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/hugo" style="font-size:1rem">hugo</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/iis" style="font-size:1rem">iis</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/interview" style="font-size:1rem">interview</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/learn-linux" style="font-size:1.4053572316409797rem">learn-linux</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/lightdm" style="font-size:1rem">lightdm</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/linux-file-system" style="font-size:1rem">linux-file-system</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/linux-kernel" style="font-size:1rem">linux-kernel</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/linux-mint" style="font-size:1rem">linux-mint</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/logitech" style="font-size:1rem">logitech</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/lvm" style="font-size:1.4053572316409797rem">lvm</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/manjaro" style="font-size:1rem">manjaro</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/manjaro-architect" style="font-size:1rem">manjaro-architect</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/microsoft-hyperv" style="font-size:1rem">microsoft-hyperv</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/microsoft-sql" style="font-size:1.642476011547092rem">microsoft-sql</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/microsoft-store" style="font-size:1rem">microsoft-store</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/nagios" style="font-size:1.4053572316409797rem">nagios</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/netscaler" style="font-size:1rem">netscaler</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/office365" style="font-size:1rem">office365</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/openvpn" style="font-size:1rem">openvpn</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/plex" style="font-size:1rem">plex</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/powershell" style="font-size:2.1379816194389485rem">powershell</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/python" style="font-size:1rem">python</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/remote-access" style="font-size:1rem">remote-access</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/shadow-copies" style="font-size:1rem">shadow-copies</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/ssh" style="font-size:1rem">ssh</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/ubuntu" style="font-size:1.8107144632819592rem">ubuntu</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/ubuntu-server" style="font-size:1.941210344612955rem">ubuntu-server</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/unifi" style="font-size:1rem">unifi</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/vim" style="font-size:1rem">vim</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/vmware-esxi" style="font-size:1rem">vmware-esxi</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/vpn" style="font-size:1rem">vpn</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/vssadmin" style="font-size:1rem">vssadmin</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/website" style="font-size:1.642476011547092rem">website</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/windows-10" style="font-size:2.4531904748290514rem">windows-10</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/windows-search" style="font-size:1rem">windows-search</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/windows-server-2016-core" style="font-size:1.4053572316409797rem">windows-server-2016-core</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/windows-update" style="font-size:1.4053572316409797rem">windows-update</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/wine" style="font-size:1.4053572316409797rem">wine</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/wordpress" style="font-size:1.642476011547092rem">wordpress</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/xcp-ng" style="font-size:2.0478332431880717rem">xcp-ng</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/xenorchestra" style="font-size:1.4053572316409797rem">xenorchestra</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/xenserver" style="font-size:2.2160716949229387rem">xenserver</a>
+        
+            
+            
+            
+            
+            
+            
+            <a href="/tags/zsh" style="font-size:1rem">zsh</a>
+        
+    </div>
+  </div>
+</div>
+
+
+</aside>
+		</div>
+		
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+
+		<div class="footer__copyright">
+			&copy; 2020 Chris Titus.
+			 - <a href="/terms-of-service/">Terms of Service</a>
+			 - <a href="/privacy-policy/">Privacy Policy</a>
+		</div>
+	</div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>

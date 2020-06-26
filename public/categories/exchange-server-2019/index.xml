@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exchange Server 2019 on Chris Titus Tech</title>
+    <link>/categories/exchange-server-2019/</link>
+    <description>Recent content in Exchange Server 2019 on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Oct 2018 15:45:56 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/exchange-server-2019/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing and Configuring Exchange 2019</title>
+      <link>/configuring-exchange-2019/</link>
+      <pubDate>Wed, 03 Oct 2018 15:45:56 +0000</pubDate>
+      
+      <guid>/configuring-exchange-2019/</guid>
+      <description>This article goes over what it takes for installing and configuring exchange 2019. This step-by-step guide shows you the requirements, installation steps, and basic configuration.
+Requirements  Microsoft recommends 128 GB of memory. If in a medium size environment (100-1000 users) 32-64 GB will be sufficient. Microsoft Windows Server 2012 R2/2016/2019 Co-Existence with Exchange 2013/2016 that are up-to-date 30 GB of free disk space, however, you should have plenty of TBs of storage available for the mailbox stores.</description>
+    </item>
+    
+  </channel>
+</rss>

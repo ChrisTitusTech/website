@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GFI MailArchiver on Chris Titus Tech</title>
+    <link>/categories/gfi-mailarchiver/</link>
+    <description>Recent content in GFI MailArchiver on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Mar 2015 23:56:01 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/gfi-mailarchiver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GFI Archiver resource usage</title>
+      <link>/gfi-archiver-resource-usage/</link>
+      <pubDate>Fri, 06 Mar 2015 23:56:01 +0000</pubDate>
+      
+      <guid>/gfi-archiver-resource-usage/</guid>
+      <description>Does your GFI Archiver resource usage SQL process ballon over 8GB? If so, the following procedure will reduce usage by about half and fix many performance issues.
+  Stop all MailArchiver and SQL services
+  Create a backup of ..MailArchiverStoreDataproduct.config
+  Edit product.config and add the following key within the &amp;lt;AppSettings&amp;gt; section: &amp;lt;add key=&amp;quot;MaxPoolSize&amp;quot; value=&amp;quot;20&amp;quot; /&amp;gt;
+  Re-start the services
+  *Note GFI has built-in scripts made to stop all NON-SQL services.</description>
+    </item>
+    
+    <item>
+      <title>GFI MailArchiver MAIS Queue Folder has tons of emails stuck</title>
+      <link>/mais-queue-folder/</link>
+      <pubDate>Tue, 09 Apr 2013 16:50:22 +0000</pubDate>
+      
+      <guid>/mais-queue-folder/</guid>
+      <description>The Import service can get stuck and this will stop all the mail in the MAIS Queue Folder. These are the emails that have not been processed and added to GFI Archiver yet, so do not delete them. Below is the fix on how I restored the import service and processed all the stuck email.
+The Fix Deleted all files EXCEPT for *.eml from C:\Program Files (x86)\GFIMailArchiver\MAIS\Queue
+Renamed all *.eml files to *.</description>
+    </item>
+    
+    <item>
+      <title>Moving GFI MailArchiver to another server</title>
+      <link>/moving-gfi-mailarchiver/</link>
+      <pubDate>Tue, 09 Apr 2013 16:39:37 +0000</pubDate>
+      
+      <guid>/moving-gfi-mailarchiver/</guid>
+      <description>The following walkthrough shows you the process of moving GFI MailArchiver to another server. These KB articles will assist you in the moving and migration of this server. The process is very involved and requires copying all the data files over to the new server. Afterward, backing up every single SQL database (archive store) and detaching/copying them. From there you reattach the stores and reinstall GFI MailArchiver on the new server.</description>
+    </item>
+    
+    <item>
+      <title>Configuring SQL Authentication</title>
+      <link>/configuring-sql-authentication/</link>
+      <pubDate>Tue, 09 Apr 2013 16:24:26 +0000</pubDate>
+      
+      <guid>/configuring-sql-authentication/</guid>
+      <description>Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.
+Note: This article is taken from http://kb.gfi.com/articles/SkyNet_Article/How-to-configure-SQL-Server-2005-2008-to-accept-SQL-Authentication and all credit goes to them for the writing. I’m posting it here simply as a reference in case there _site changes the above link.</description>
+    </item>
+    
+  </channel>
+</rss>

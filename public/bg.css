@@ -1,0 +1,68 @@
+* {
+  border: none;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  //background: radial-gradient(#555, #111);
+}
+canvas {
+  background: white;
+  background: radial-gradient(#FFF, #DDD);
+  //background: radial-gradient(hsl(40, 80%, 60%), hsl(0, 50%, 40%));
+  //filter: blur(1px) contrast(5);
+  //transform: scale(0.1);
+  transform-origin: 0 0;
+  //border: solid .8em green;
+  width: 100%;
+  height: 100%;
+}
+.ui {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  padding: 10px;
+  background: rgba(255,255,255,0.7);
+  
+  p {
+    //color: white;
+    font-size: 11px;
+    font-weight: 700;
+    
+    &.zoom {
+      margin-bottom: 5px;
+      
+      span {
+        margin-right: 5px;
+        border: solid 1px #777;
+        cursor: pointer;
+        border-radius: 2px;
+        
+        &.zoomin {
+          padding: 2px 5px;
+        }
+        &.zoomout {
+          padding: 2px 8px;
+        }
+        &:hover {
+          background: black;
+          color: white;
+        }
+      }
+    }
+  }
+  
+  span.zoom {
+    
+    
+  }
+}
+

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exchange Server on Chris Titus Tech</title>
+    <link>/categories/exchange-server/</link>
+    <description>Recent content in Exchange Server on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Oct 2016 20:29:26 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/exchange-server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exclude shared mailboxes from Dynamic Distribution Group</title>
+      <link>/exclude-shared-mailboxes-exchange/</link>
+      <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
+      
+      <guid>/exclude-shared-mailboxes-exchange/</guid>
+      <description>This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.
+ Commands Connect to O365 in PS: $UserCredential = Get-Credential&amp;lt;br /&amp;gt; $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection&amp;lt;br /&amp;gt; Import-PSSession $Session
+Exclude Shared Mailboxes with this filter command: set-DynamicDistributionGroup -Name &amp;quot;all@yourcompany.com&amp;quot; -RecipientFilter {((RecipientType -eq &#39;UserMailbox&#39;) -and -not (RecipientTypeDetailsValue -eq &#39;SharedMailbox&#39;))}</description>
+    </item>
+    
+    <item>
+      <title>Prevent autodiscover on Exchange server after an Office 365 Migration</title>
+      <link>/prevent-autodiscover-exchange-server/</link>
+      <pubDate>Mon, 04 Jul 2016 16:44:02 +0000</pubDate>
+      
+      <guid>/prevent-autodiscover-exchange-server/</guid>
+      <description>This article teaches you how to prevent autodiscover from happening on Exchange Server. This is important on an Office 365 migration when you still need to keep your local exchange server from resolving.
+Commands First change your local DNS
+autodiscover.yourdomain.com cname autodiscover.office365.com
+(Option 1)Next, you need to disable SCP site-wide. I did this performing a GPO Registry edit.
+HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\AutoDiscover&amp;lt;br /&amp;gt; Notex.0 in the above registry path corresponds to the Outlook version (16.</description>
+    </item>
+    
+    <item>
+      <title>Grant Full Access to all Public Folders for a user in Exchange</title>
+      <link>/grant-full-access-public-folders/</link>
+      <pubDate>Mon, 04 Jul 2016 16:32:21 +0000</pubDate>
+      
+      <guid>/grant-full-access-public-folders/</guid>
+      <description>This post goes over how to grant full access to all public folders for a user in Microsoft Exchange. I recently was migrating all public folders from an Exchange 2010 to Office 365 Environment and didn’t have access to some of the folders. Consequently, this solution saved me a lot of time from doing it through a GUI.
+Command Enter the following in Exchange Management Shell:
+Get-PublicFolder –Identity &amp;quot;\Root Folder Name&amp;quot; -Recurse | Add-PublicFolderAdministrativePermission -User &amp;quot;ctitus&amp;quot; -AccessRights AllExtendedRights</description>
+    </item>
+    
+    <item>
+      <title>Exchange Online Archive Requirements</title>
+      <link>/exchange-online-archive-requirements/</link>
+      <pubDate>Thu, 27 Aug 2015 18:41:57 +0000</pubDate>
+      
+      <guid>/exchange-online-archive-requirements/</guid>
+      <description>This article goes over Exchange Online Archive Requirements and the headache of licensing for it. I recently completed a staged migration from exchange 2007 to exchange online. If you have any users over 50 GB you need the exchange online archive. Upload all your archive files using Azure copy (see https://docs.microsoft.com/en-us/office365/securitycompliance/use-network-upload-to-import-pst-files for instructions). Afterward, make sure to check https://outlook.office365.com/owa/ to verify the archive emails. You may notice that their outlook doesn’t show the archive.</description>
+    </item>
+    
+    <item>
+      <title>Exchange Installation Error HRESULT E_FAIL</title>
+      <link>/exchange-error-hresult-e_fail/</link>
+      <pubDate>Tue, 18 Mar 2014 21:14:03 +0000</pubDate>
+      
+      <guid>/exchange-error-hresult-e_fail/</guid>
+      <description>I was recently installing and configuring a new server with 32 processors and installing server 2008 Standard and Exchange 2007 SP1 Standard. During installation I received the following error:
+HRESULT E_FAIL has been returned from a call to a COM component.
+After finding a Knowledge-base article from Microsoft, I discovered Exchange 2007 SP1 doesn’t support installation on a server with more than 24 processors but is perfectly fine updating and running on a server with more than 24 processors.</description>
+    </item>
+    
+    <item>
+      <title>Setting Anti-Spam SCL in Microsoft Exchange</title>
+      <link>/anti-spam-scl/</link>
+      <pubDate>Mon, 27 Jan 2014 16:36:35 +0000</pubDate>
+      
+      <guid>/anti-spam-scl/</guid>
+      <description>This post goes over setting the Anti-Spam SCL in Microsoft Exchange. I typically recommend leaving the Delete and Reject settings alone, but change the Move Message to Junk if the user is reporting a high amount of spam making it to his inbox. This is done with the command below SCLJunkThreshold.
+SCL (Spam Confidence Level) determines what to do with a message
+Default Exchange Values 9 = Delete Message with no NDR&amp;lt;br /&amp;gt; 7= Reject Message with NDR&amp;lt;br /&amp;gt; 5= Move Message to Junk Mail in Mailbox</description>
+    </item>
+    
+    <item>
+      <title>Outlook Security Certificate is invalid</title>
+      <link>/outlook-security-certificate/</link>
+      <pubDate>Mon, 09 Dec 2013 21:33:37 +0000</pubDate>
+      
+      <guid>/outlook-security-certificate/</guid>
+      <description>The following article fixes the Outlook security certificate error your users get when they connect to your exchange server internally. This is typically from installing a 3rd party SSL Certificate.
+(Original Article Link: http://community.spiceworks.com/how_to/show/48384-outlook-the-name-of-the-security-certificate-is-invalid-or-does-not-match-the-name-of-the-site)
+Issue: Outlook anywhere works fine with third party cert, but internal Outlook clients get cert error with NETBIOS name of Exchange server.
+Example: https://NetBIOS_name.contoso.com/autodiscover/autodiscover.xml
+Note: I tested this on Exchange 2010 as well.
+Outlook Security Certificate Resolution Change the URLs for the appropriate Exchange 2007 components.</description>
+    </item>
+    
+    <item>
+      <title>Moving GFI MailArchiver to another server</title>
+      <link>/moving-gfi-mailarchiver/</link>
+      <pubDate>Tue, 09 Apr 2013 16:39:37 +0000</pubDate>
+      
+      <guid>/moving-gfi-mailarchiver/</guid>
+      <description>The following walkthrough shows you the process of moving GFI MailArchiver to another server. These KB articles will assist you in the moving and migration of this server. The process is very involved and requires copying all the data files over to the new server. Afterward, backing up every single SQL database (archive store) and detaching/copying them. From there you reattach the stores and reinstall GFI MailArchiver on the new server.</description>
+    </item>
+    
+    <item>
+      <title>Could not continue installation because update is pending</title>
+      <link>/update-is-pending/</link>
+      <pubDate>Thu, 04 Apr 2013 19:04:14 +0000</pubDate>
+      
+      <guid>/update-is-pending/</guid>
+      <description>When installing a program I kept getting the prompt below that an update is pending. Even after a restart, this would display, therefore I changed these registry keys to clear up the issue.
+ Microsoft Server setup cannot continue because a restart from a previous installation or update is pending.
+ The Fix for an update is pending The following Registry keys control this error message. If you have rebooted and are still experiencing this issue, clear out these keys and relaunch your installer.</description>
+    </item>
+    
+    <item>
+      <title>Exchange on Primary Domain Controller Slow Reboot and Startup</title>
+      <link>/exchange-primary-domain-controller/</link>
+      <pubDate>Thu, 26 Jul 2012 20:31:21 +0000</pubDate>
+      
+      <guid>/exchange-primary-domain-controller/</guid>
+      <description>If you had the misfortune of installing Exchange on Primary Domain Controller you will experience some pain when doing a reboot. Typically it will take 10-15 minutes before it restarts and up to 30 minutes to start the Microsoft Exchange Information Store. Consequently, what is really happening in the background is the IS service is being terminated incorrectly on shutdown and the store is left in a “DIRTY” shutdown state. This is very bad on several levels and can cause the Store to corrupt and not start at all, which can be catastrophic.</description>
+    </item>
+    
+    <item>
+      <title>Archiving and Reducing Exchange Mailboxes and Stores (Part 2)</title>
+      <link>/archiving-and-reducing-exchange-mailboxes-and-stores-part-2/</link>
+      <pubDate>Wed, 29 Jun 2011 21:37:07 +0000</pubDate>
+      
+      <guid>/archiving-and-reducing-exchange-mailboxes-and-stores-part-2/</guid>
+      <description>You have analyzed your current exchange store and deciding to buy a 3rdparty solution so your users can maintain the large amount of emails they are accustomed to and retain all emails for legal/business purposes, and here are the options.
+ Buy the Barracuda Message Archiver ( website link: http://www.barracudanetworks.com/ns/products/archiver-overview.php) which is a really simple installation and maintenance. I have used this before, and it gets the job done. I did have issues with restoring emails after being exported, but after some conversion and importing to pst files it worked.</description>
+    </item>
+    
+    <item>
+      <title>Archiving and Reducing Exchange Mailboxes and Stores (Part 1)</title>
+      <link>/archiving-and-reducing-exchange-mailboxes-and-stores-part-1/</link>
+      <pubDate>Tue, 31 May 2011 22:25:30 +0000</pubDate>
+      
+      <guid>/archiving-and-reducing-exchange-mailboxes-and-stores-part-1/</guid>
+      <description>With todays reliance on email, many people use outlook as there filing system. Its not to uncommon to find 10GB+ mailboxes. This is becoming a common problem for many exchange administrators because they have no way to deal with the shear size of these mailboxes. Outlook archive system isn’t sufficiant, because most time the PSTs it creates do not properly archive and isn’t centralally located which causes a nightmare when looking for archived emails.</description>
+    </item>
+    
+    <item>
+      <title>Finding Exchange Server Version (Service Pack)</title>
+      <link>/finding-exchange-server-version-service-pack/</link>
+      <pubDate>Fri, 12 Nov 2010 20:50:25 +0000</pubDate>
+      
+      <guid>/finding-exchange-server-version-service-pack/</guid>
+      <description>There is a couple different methods to finding the version of your exchange server.
+File System %Program Files%MicrosoftExchange Serverbin folder (different for 2003) and right click store.exe -&amp;gt; Detail Tab -&amp;gt; Version
+——-OR——–
+Exchange Management Console Go to Server Configuration -&amp;gt; Hub Transport -&amp;gt; Look at Version column (Exchange 2007)
+——-OR——–
+Exchange Management Shell type get-exchangeserver
+Write down the Version number and find it on this list. It will provide you with the proper service pack and date of exchange server.</description>
+    </item>
+    
+    <item>
+      <title>Email Redundancy in Exchange (Cloud, Relay, and Multiple MX Records)</title>
+      <link>/email-redundancy-in-exchange-cloud-relay-and-multiple-mx-records/</link>
+      <pubDate>Fri, 15 Oct 2010 21:03:55 +0000</pubDate>
+      
+      <guid>/email-redundancy-in-exchange-cloud-relay-and-multiple-mx-records/</guid>
+      <description>Many small and medium businesses do not have any email redundancy, and in today’s IT environment that is unacceptable. There is 3 widely used methods for never missing or having downtime for email. Depending on the size of your business there are some that make more sense than others.
+Business Solutions
+ Cloud Email – You can host your email off-site. Recommended Vendors. Rackspace.com or Intermedia.net Pros: Disaster prevention, Archiving, Spam filtering, and Automated Backups.</description>
+    </item>
+    
+    <item>
+      <title>Exchange Management Shell (EMS)</title>
+      <link>/exchange-management-shell-ems/</link>
+      <pubDate>Wed, 06 Oct 2010 20:52:01 +0000</pubDate>
+      
+      <guid>/exchange-management-shell-ems/</guid>
+      <description>Exchange Management Shell is the core of Microsoft Exchange. The GUI was an after thought, especially in Exchange 2007. Here are some useful commands that I use often.
+Export Company to PSTs
+ Get-Mailbox -OrganizationalUnit SBSUsers | Export-Mailbox -PSTFolderPath C:pathtosave -BadItemLimit 10000 -ExcludeFolders “Junk E-Mail”,”Deleted Items” -StartDate “01/01/2009 00:01:00”
+ This is useful for moving an entire exchange store into PST format. This can be used for Exchange to External mail system migrations, or just to have a backup to access mailboxes at that point in time.</description>
+    </item>
+    
+    <item>
+      <title>ESEUTIL Proper usage, and when to use it.</title>
+      <link>/eseutil-proper-usage-and-when-to-use-it/</link>
+      <pubDate>Thu, 30 Sep 2010 05:17:41 +0000</pubDate>
+      
+      <guid>/eseutil-proper-usage-and-when-to-use-it/</guid>
+      <description>ESEUTIL is a utility to repair, check, and defrag Microsoft exchange stores. Before using ESEUTIL you must unmount your exchange store and be prepared to have downtime.
+ESEUTIL /d “C:ExchangeStorePathstore.edb” (Defrag)
+Note: I’d rarely recommend using this defrag option, but in certain instances when exchange stores are merged or drastically changed it can be beneficial. This is an OFFLINE defrag and should not be used for frequent maintenance. I’ve seen people make big mistakes by pulling a perfectly good exchange store offline to try and squeeze an extra 10 GB out of it.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial on Chris Titus Tech</title>
+    <link>/tags/tutorial/</link>
+    <description>Recent content in tutorial on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Oct 2018 16:18:46 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create iSCSI SR in XenServer</title>
+      <link>/create-iscsi-sr/</link>
+      <pubDate>Tue, 09 Oct 2018 16:18:46 +0000</pubDate>
+      
+      <guid>/create-iscsi-sr/</guid>
+      <description>This guide goes over how to Create iSCSI SR on Xen to connect to an iSCSI target. Here is the step-by-step and a video walkthrough, which includes setting up iSCSI in FreeNAS.
+Requirements  Multiple XenServers (2+) in a Pool iSCSI target (Check out FreeNAS in the video below for setting one up) At LEAST a gigabit environment   Step-by-Step Guide to Create iSCSI SR  Open and Connect to XenCenter / XCP-ng Center Select Pool and Click New Storage Make sure iSCSI is selected Name Storage Select either provisioning methods Enter IP Address / Authentication (if needed) / Click Scan Target Host Pick IQN / LUN from your storage device  Note: When Selecting IQN_, make sure you select your SAN if you are using a dedicated network_   Finish  Video Walkthrough In the end, we now have a centralized storage system that all our hosts can put their VMs on.</description>
+    </item>
+    
+    <item>
+      <title>Disable Windows Firewall Properly</title>
+      <link>/disable-windows-firewall-properly/</link>
+      <pubDate>Sat, 06 Oct 2018 17:20:22 +0000</pubDate>
+      
+      <guid>/disable-windows-firewall-properly/</guid>
+      <description>This walkthrough goes over how to Disable Windows Firewall while not affecting other programs that rely on this service. It’s important that you **DO NOT **disable the service, due to the fact it can cause issues with Microsoft Office and other products.
+ Steps to bypass firewall  Launch Windows Defender Firewall with Advanced Security (Start -&amp;gt; Run -&amp;gt; wf.msc) Click Inbound Rules Select “New Rule” Custom rule All Programs Leave Any and All Ports Any IP Address for both Allow the connection Check Domain, Private, and Public Name “Allow All”  Video Guide Finishing Up By doing this you allow all traffic inbound to this computer, consequently, all outbound traffic is already allowed by default.</description>
+    </item>
+    
+  </channel>
+</rss>

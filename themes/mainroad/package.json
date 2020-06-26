@@ -1,0 +1,35 @@
+{
+  "name": "mainroad",
+  "version": "1.0.0",
+  "description": "Responsive, simple, clean and content-focused Hugo theme based on the MH Magazine lite WordPress theme",
+  "license": "GPL-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^7.0.1",
+    "postcss-cli": "^6.1.3",
+    "stylelint": "^9.10.1",
+    "stylelint-order": "^2.2.1"
+  },
+  "scripts": {
+    "lint:css": "stylelint static/css/*.css",
+    "lint:js": "eslint static/js/*.js",
+    "lint": "npm run lint:css && npm run lint:js",
+    "fix:prefixes": "postcss -r static/css/*.css",
+    "fix:css": "stylelint static/css/*.css --fix",
+    "fix:js": "eslint static/js/*.js --fix",
+    "fix": "npm run fix:prefixes && npm run fix:css && npm run fix:js",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vimux/Mainroad.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vimux/Mainroad/issues"
+  },
+  "homepage": "https://github.com/Vimux/Mainroad"
+}

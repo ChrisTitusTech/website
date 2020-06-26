@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Server 2003 on Chris Titus Tech</title>
+    <link>/categories/windows-server-2003/</link>
+    <description>Recent content in Windows Server 2003 on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Mar 2011 15:35:23 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/windows-server-2003/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Disable Outlook Anywhere in Group Policy Object (GPO)</title>
+      <link>/disable-outlook-anywhere-in-group-policy-object-gpo/</link>
+      <pubDate>Wed, 23 Mar 2011 15:35:23 +0000</pubDate>
+      
+      <guid>/disable-outlook-anywhere-in-group-policy-object-gpo/</guid>
+      <description>By default the standard outlk12.adm templates do not come with a configuration of Outlook Anywhere. You can configure the “Configure Outlook Anywhere user interface options” options to disable or grey out the settings. However, this DOES NOT disable Outlook anywhere, just user interaction with it.
+You will need to download a new administrative template that Microsoft released in this hotfix. If you don’t like reading Microsoft’s wonderful support site instructions or Microsoft changes their support site after this blog post, here is the file and instructions paraphrased.</description>
+    </item>
+    
+    <item>
+      <title>Target Specific People or Computers with Item-Level Targeting in GPOs</title>
+      <link>/target-specific-people-or-computers-with-item-level-targeting-in-gpos/</link>
+      <pubDate>Tue, 22 Mar 2011 21:59:02 +0000</pubDate>
+      
+      <guid>/target-specific-people-or-computers-with-item-level-targeting-in-gpos/</guid>
+      <description>Using Group Policy Objects can be a huge time saver, but if used improperly can be a big headache. Once you’ve messed around with GPO settings enough, you quickly figure out that you need to create new GPOs for specific programs, events, etc… that are not all in one GPO. This gives you a lot more flexibility and makes it very easy to track down troublesome GPO related issues when done properly.</description>
+    </item>
+    
+    <item>
+      <title>Windows Server Backup (BackupExec, NTbackup, Acronis True Image, etc…)</title>
+      <link>/windows-server-backup-backupexec-ntbackup-acronis-true-image-etc/</link>
+      <pubDate>Thu, 21 Oct 2010 16:59:56 +0000</pubDate>
+      
+      <guid>/windows-server-backup-backupexec-ntbackup-acronis-true-image-etc/</guid>
+      <description>I will walk through the various backup solutions out there for businesses. Most of the big names in the backup world are very good at backups, however they must be used properly. If using Windows Server 2003, I’d recommend Acronis True Image for any file systems and NTbackup for the exchange backup or other servers. If using Windows Server 2008, I’d recommend Acronis True Image for any servers, and Acronis® Recovery™ for Microsoft Exchange.</description>
+    </item>
+    
+  </channel>
+</rss>

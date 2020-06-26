@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Chris Titus Tech</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in linux on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Dec 2019 05:31:59 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Setup a VPN Kill Switch Server</title>
+      <link>/vpn-kill-switch/</link>
+      <pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate>
+      
+      <guid>/vpn-kill-switch/</guid>
+      <description>&lt;p&gt;This will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if you are more familiar with that.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LVM (Logical Volume Management) – Combine Physical Drives and more!</title>
+      <link>/lvm-guide/</link>
+      <pubDate>Fri, 08 Nov 2019 23:06:31 +0000</pubDate>
+      
+      <guid>/lvm-guide/</guid>
+      <description>&lt;p&gt;LVM is a very cool volume management tool. It can be used for a variety of tasks and this guide explains all the things LVM can do. I also do an example video of combining physical hard drives using LVM.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Secure A Web Server</title>
+      <link>/secure-web-server/</link>
+      <pubDate>Thu, 10 Oct 2019 13:37:49 +0000</pubDate>
+      
+      <guid>/secure-web-server/</guid>
+      <description>&lt;p&gt;In this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just because you secure your server doesn’t mean you can neglect it. I highly recommend monitoring it and adjusting security as needed. Monitoring is required for proper security in my opinion.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Learn Linux</title>
+      <link>/learn-linux/</link>
+      <pubDate>Thu, 10 Oct 2019 01:42:05 +0000</pubDate>
+      
+      <guid>/learn-linux/</guid>
+      <description>&lt;p&gt;This article gives you the resources on how to learn Linux. If I am missing a resource, be sure and comment so I can add it.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Manjaro Architect Installation Guide</title>
+      <link>/manjaro-architect-installation-guide/</link>
+      <pubDate>Mon, 21 Jan 2019 19:51:04 +0000</pubDate>
+      
+      <guid>/manjaro-architect-installation-guide/</guid>
+      <description>In this book, I go over step by step the entire Manjaro Architect installation. This guide is suitable for any knowledge level from beginner to expert. I published “The Complete Manjaro Architect Installation Guide” on Amazon so, if you are installing on your main PC you can follow along without constantly scrolling through on your phone trying to find what you are looking for. I highly recommend watching the video below, and doing a trial of Manjaro Architect in a virtual machine to familiarize yourself with it.</description>
+    </item>
+    
+    <item>
+      <title>Optimizing Apache Memory Usage using mpm prefork</title>
+      <link>/apache-mpm-prefork/</link>
+      <pubDate>Wed, 26 Sep 2018 17:31:24 +0000</pubDate>
+      
+      <guid>/apache-mpm-prefork/</guid>
+      <description>This guide goes over optimizing apache memory usage by configuring mpm prefork module to the best values for your server. Afterword, you should notice substantial increases in performance especially if you are using free micro instances from Google Cloud or AWS.
+Commands used:  Check Apache Memory usage   ps -ylC apache2 --sort:rss | awk &#39;{sum+=$8; ++n} END {print &amp;quot;Tot=&amp;quot;sum&amp;quot;(&amp;quot;n&amp;quot;)&amp;quot;;print &amp;quot;Avg=&amp;quot;sum&amp;quot;/&amp;quot;n&amp;quot;=&amp;quot;sum/n/1024&amp;quot;MB&amp;quot;}&#39;
+Note: My result was between 68-71 MB with stock modules loaded, however, your results will vary.</description>
+    </item>
+    
+    <item>
+      <title>Create Swap file on Cloud VM (AWS, GCloud, or Azure)</title>
+      <link>/create-swap-file/</link>
+      <pubDate>Tue, 14 Feb 2017 21:16:13 +0000</pubDate>
+      
+      <guid>/create-swap-file/</guid>
+      <description>Use the commands below to create swap file on a micro instance with a Linux operating system. This creates a 2GB Swap file to help alleviate low system ram. Consequently, this is great for those using micro instances in the cloud that have under 1 GB of memory.
+Commands Run the following from your SSH window
+sudo fallocate -l 2G /swapfile&amp;lt;br /&amp;gt; sudo chmod 600 /swapfile&amp;lt;br /&amp;gt; sudo mkswap /swapfile&amp;lt;br /&amp;gt; sudo swapon /swapfile&amp;lt;br /&amp;gt; sudo swapon -s</description>
+    </item>
+    
+  </channel>
+</rss>

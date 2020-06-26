@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wine on Chris Titus Tech</title>
+    <link>/categories/wine/</link>
+    <description>Recent content in Wine on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Feb 2019 22:20:57 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/wine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Garmin Express on Linux | Step by Step Guide</title>
+      <link>/garmin-express-linux/</link>
+      <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
+      
+      <guid>/garmin-express-linux/</guid>
+      <description>This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.
+Linux Package Requirements:  wine-devel Note:3.19 or higher winetricks  Installation Steps First we start by creating a wineprefix and installing our prerequisites from terminal:
+Note: You will be prompted during the setup for .NET installation just hit next and finish.</description>
+    </item>
+    
+  </channel>
+</rss>

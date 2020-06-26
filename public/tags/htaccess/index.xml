@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>htaccess on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/htaccess/</link>
+    <description>Recent content in htaccess on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Sep 2018 20:50:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/htaccess/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Perfect htaccess for WordPress</title>
+      <link>https://www.christitus.com/perfect-htaccess/</link>
+      <pubDate>Sun, 23 Sep 2018 20:50:39 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/perfect-htaccess/</guid>
+      <description>&lt;p&gt;This walks you through what your htaccess should look like in a WordPress Installation. I am a minimalist and believe you shouldn’t be using a ton of plugins that slow down your install when most of what you are looking to accomplish can be achieved with this file.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

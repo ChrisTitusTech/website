@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Powershell on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/powershell/</link>
+    <description>Recent content in Powershell on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jun 2020 23:33:56 -0500</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Create a Windows Service</title>
+      <link>https://www.christitus.com/create-windows-service/</link>
+      <pubDate>Mon, 15 Jun 2020 23:33:56 -0500</pubDate>
+      
+      <guid>https://www.christitus.com/create-windows-service/</guid>
+      <description>&lt;p&gt;This article goes over how to create a windows service.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Clean Up Windows 10</title>
+      <link>https://www.christitus.com/clean-up-windows-10/</link>
+      <pubDate>Mon, 14 Oct 2019 20:08:01 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/clean-up-windows-10/</guid>
+      <description>&lt;p&gt;In this article, we will clean up Windows 10. This will include debloat, startup maintenance, system tweaks, and privacy settings. These 3 stages are broken down below and will help maintain a healthy Windows 10 system. I’d recommend re-running these steps every 6 months.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing Linux Subsystem for Windows 10</title>
+      <link>https://www.christitus.com/installing-linux-subsystem/</link>
+      <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/installing-linux-subsystem/</guid>
+      <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Debloat Windows 10</title>
+      <link>https://www.christitus.com/debloat-windows-10/</link>
+      <pubDate>Sun, 09 Sep 2018 17:08:58 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/debloat-windows-10/</guid>
+      <description>&lt;p&gt;Trying to Debloat Windows 10 is getting ridiculous and as a system admin it is soul crushing to see all that performance go to waste on the botched attempt by Microsoft to do an Appstore and its apps (I’m looking at you Candy Crush). Luckily some admins have worked tirelessly to give us a solution that works considerably well. Lets Start!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Changing file permissions using PowerShell</title>
+      <link>https://www.christitus.com/changing-file-permissions/</link>
+      <pubDate>Thu, 14 Jun 2018 15:46:23 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/changing-file-permissions/</guid>
+      <description>&lt;p&gt;Use the following script for changing file permissions using PowerShell. I use this script when command line takeown and icacls fail. Obviously, run from an elevated PowerShell prompt or by typing ‘powershell’ from elevated cmd.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Exclude shared mailboxes from Dynamic Distribution Group</title>
+      <link>https://www.christitus.com/exclude-shared-mailboxes-exchange/</link>
+      <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/exclude-shared-mailboxes-exchange/</guid>
+      <description>&lt;p&gt;This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Force active directory sync to Office 365 with Azure ADSync</title>
+      <link>https://www.christitus.com/force-active-directory-sync/</link>
+      <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/force-active-directory-sync/</guid>
+      <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

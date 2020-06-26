@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Server 2012 on Chris Titus Tech</title>
+    <link>/categories/windows-server-2012/</link>
+    <description>Recent content in Windows Server 2012 on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Oct 2016 14:01:26 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/windows-server-2012/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Force active directory sync to Office 365 with Azure ADSync</title>
+      <link>/force-active-directory-sync/</link>
+      <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
+      
+      <guid>/force-active-directory-sync/</guid>
+      <description>Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.
+Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”&amp;lt;br /&amp;gt; Start-ADSyncSyncCycle -PolicyType Delta</description>
+    </item>
+    
+    <item>
+      <title>Cleanup Server WinSxS Free Space on Server 2008 and Server 2012</title>
+      <link>/winsxs-free-space-server/</link>
+      <pubDate>Wed, 03 Aug 2016 23:19:49 +0000</pubDate>
+      
+      <guid>/winsxs-free-space-server/</guid>
+      <description>Run the following commands if you are running low on C: drive space. Generally, this is caused by windows updates and you need to clear WinSxS free space. Do this in your PowerShell prompt and you will free up a substantial amount of space.
+Please Note: You have to run updates on Windows Server 2008 if you are far behind and these commands don’t exist!
+MASTER CLEANUP: (Run this First)</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BTRFS on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/btrfs/</link>
+    <description>Recent content in BTRFS on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jan 2020 16:36:18 -0600</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/btrfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BTRFS Guide - Basic Commands, Snapshots, and RAID</title>
+      <link>https://www.christitus.com/btrfs-guide/</link>
+      <pubDate>Mon, 13 Jan 2020 16:36:18 -0600</pubDate>
+      
+      <guid>https://www.christitus.com/btrfs-guide/</guid>
+      <description>&lt;p&gt;This guide goes over everything you need to know to get started on BTRFS. With that said we will be going over the basic structure of BTRFS and the things you should and should not do.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

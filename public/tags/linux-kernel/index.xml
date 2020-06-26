@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Kernel on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/linux-kernel/</link>
+    <description>Recent content in Linux Kernel on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Sep 2019 00:32:45 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/linux-kernel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Custom Kernel in Linux</title>
+      <link>https://www.christitus.com/custom-kernel/</link>
+      <pubDate>Sun, 29 Sep 2019 00:32:45 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/custom-kernel/</guid>
+      <description>&lt;p&gt;This Guide walks your through how to install a custom kernel on Linux. I will go over performing this in a Debian-based system and an Arch-based system. Please note that the arch based system requires you to build the kernel yourself and will take much longer.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

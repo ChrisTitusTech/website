@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Target Specific People or Computers with Item-Level Targeting in GPOs - Chris Titus Tech | Technology Simplified</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta property="og:title" content="Target Specific People or Computers with Item-Level Targeting in GPOs" />
+<meta property="og:description" content="Using Group Policy Objects can be a huge time saver, but if used improperly can be a big headache. Once you’ve messed around with GPO settings enough, you quickly figure out that you need to create new GPOs for specific programs, events, etc… that are not all in one GPO. This gives you a lot more flexibility and makes it very easy to track down troublesome GPO related issues when done properly." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.christitus.com/target-specific-people-or-computers-with-item-level-targeting-in-gpos/" />
+<meta property="article:published_time" content="2011-03-22T21:59:02+00:00" />
+<meta property="article:modified_time" content="2011-03-22T21:59:02+00:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Target Specific People or Computers with Item-Level Targeting in GPOs"/>
+<meta name="twitter:description" content="Using Group Policy Objects can be a huge time saver, but if used improperly can be a big headache. Once you’ve messed around with GPO settings enough, you quickly figure out that you need to create new GPOs for specific programs, events, etc… that are not all in one GPO. This gives you a lot more flexibility and makes it very easy to track down troublesome GPO related issues when done properly."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5817718-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+	<script data-ad-client="ca-pub-6679678361432308" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Chris Titus Tech | Technology Simplified" rel="home">
+				<div class="logo__title"><img src="/images/logo.png" align="left"></div>
+				<div class="logo__tagline">Tech Guides, Solutions, and Support</div>
+			</a>
+		</div>				
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://www.patreon.com/christitustech">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">Donate</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/recommendations/">
+				
+				<span class="menu__text">Recommendations</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://download.teamviewer.com/download/TeamViewerQS.exe">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">Remote Support</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/search/">
+				<i class='fa fa-search'></i>
+				<span class="menu__text">Search</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+		
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Target Specific People or Computers with Item-Level Targeting in GPOs</h1>
+			<div id="breadcrumbs" style="font-size:12px;">
+    <a href="/">Home</a>
+    
+        
+    
+        
+            / <a href=">>target-specific-people-or-computers-with-item-level-targeting-in-gpos">Target specific people or computers with item level targeting in gpos</a>
+        
+    
+        
+    
+</div>
+
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2011-03-22T21:59:02">2011-03-22</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/windows-server/" rel="category">Windows Server</a>
+	</span>
+</div></div>
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">
+
+<style>
+#share-buttons {display: inline-block; vertical-align: middle; }
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > div {
+position: relative;
+text-align: left; 
+height: 36px; 
+width: 32px; 
+float: left; 
+text-align: center;
+}
+#share-buttons > div > svg {height: 16px; fill: #d5d5d5; margin-top: 10px;}
+#share-buttons > div:hover {cursor: pointer;}
+#share-buttons > div.facebook:hover > svg {fill: #3B5998;}
+#share-buttons > div.twitter:hover > svg {fill: #55ACEE;}
+#share-buttons > div.linkedin:hover > svg {fill: #0077b5;}
+#share-buttons > div.pinterest:hover > svg {fill: #CB2027;}
+#share-buttons > div.mail:hover > svg {fill: #7D7D7D;}
+#share-buttons > div.instagram:hover > svg {fill: #C73B92;}
+#share-buttons > div.facebook > svg {height: 18px; margin-top: 9px;}
+#share-buttons > div.twitter > svg {height: 20px; margin-top: 8px;}
+#share-buttons > div.linkedin > svg {height: 19px; margin-top: 7px;}
+#share-buttons > div.pinterest > svg {height: 20px; margin-top: 9px;}
+#share-buttons > div.mail > svg {height: 14px; margin-top: 11px;}
+</style>
+
+<span style="color: silver;">Share on: </span><div id="share-buttons">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/www.christitus.com\/target-specific-people-or-computers-with-item-level-targeting-in-gpos\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/home?status=https:\/\/www.christitus.com\/target-specific-people-or-computers-with-item-level-targeting-in-gpos\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="linkedin" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/www.christitus.com\/target-specific-people-or-computers-with-item-level-targeting-in-gpos\/&title=&summary=&source=');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></div>
+
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/www.christitus.com\/target-specific-people-or-computers-with-item-level-targeting-in-gpos\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents"></nav>
+	</div>
+</div>
+
+<div class="content post__content clearfix">
+			<p>Using Group Policy Objects can be a huge time saver, but if used improperly can be a big headache. Once you’ve messed around with GPO settings enough, you quickly figure out that you need to create new GPOs for specific programs, events, etc… that are not all in one GPO. This gives you a lot more flexibility and makes it very easy to track down troublesome GPO related issues when done properly.</p>
+<p>Now lets say you create a Power Savings GPO that you want to apply only to computers that meet certain conditions. WMI, Security, and Site Filtering are all too broad for this task, and you want to use Item-Level Targeting. After you create your Group Policy Object you will need to add this setting to the GPO.</p>
+<p><strong>In Group Policy Management Settings</strong></p>
+<p>-User Configuration -&gt; Preferences -&gt; Control Panel -&gt; Regional Options</p>
+<p>-Right-Click and Select New</p>
+<p>-Navigate to Common Tab</p>
+<p>-Check Item-Level Targeting and Press Targeting…</p>
+<p>From here you will be able to select tons of critaria that you want to meet for your GPO. This can be system requirements to install a program, or only select certain Operating Systems. You can also add is not tags that will rule out any computer that meet that criteria. The options are limitless and its very easy to incorporate in your GPO. Personally, I never use the often complicated and time consuming WMI Filters anymore.</p>
+<p>I live stream on <a href="https://twitch.tv/christitustech">Twitch</a> and encourage you to drop in and ask a question. I regularly publish on <a href="https://www.youtube.com/c/ChrisTitusTech">YouTube</a> and <a href="https://www.christitus.com/">christitus.com</a>, but if you need immediate assistance, check out our discord channel at <a href="https://www.christitus.com/discord">Chris Titus Tech Discord</a>.</p>
+		</div>
+		<script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  backgroundColor: 'rgb(255, 82, 82)',
+  textColor: '#fff'
+})</script>
+
+	</article>
+</main>
+
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/disable-outlook-anywhere-in-group-policy-object-gpo/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Disable Outlook Anywhere in Group Policy Object (GPO)</p></a>
+	</div>
+</nav>
+
+
+
+			</div>
+			
+		</div>
+		
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+
+		<div class="footer__copyright">
+			&copy; 2020 Chris Titus.
+			 - <a href="/terms-of-service/">Terms of Service</a>
+			 - <a href="/privacy-policy/">Privacy Policy</a>
+		</div>
+	</div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

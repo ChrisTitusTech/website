@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>The Perfect htaccess for WordPress - Chris Titus Tech | Technology Simplified</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta property="og:title" content="The Perfect htaccess for WordPress" />
+<meta property="og:description" content="This walks you through what your htaccess should look like in a WordPress Installation. I am a minimalist and believe you shouldn’t be using a ton of plugins that slow down your install when most of what you are looking to accomplish can be achieved with this file." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.christitus.com/perfect-htaccess/" />
+<meta property="article:published_time" content="2018-09-23T20:50:39+00:00" />
+<meta property="article:modified_time" content="2018-09-23T20:50:39+00:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Perfect htaccess for WordPress"/>
+<meta name="twitter:description" content="This walks you through what your htaccess should look like in a WordPress Installation. I am a minimalist and believe you shouldn’t be using a ton of plugins that slow down your install when most of what you are looking to accomplish can be achieved with this file."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5817718-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+	<script data-ad-client="ca-pub-6679678361432308" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Chris Titus Tech | Technology Simplified" rel="home">
+				<div class="logo__title"><img src="/images/logo.png" align="left"></div>
+				<div class="logo__tagline">Tech Guides, Solutions, and Support</div>
+			</a>
+		</div>				
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://www.patreon.com/christitustech">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">Donate</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/recommendations/">
+				
+				<span class="menu__text">Recommendations</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://download.teamviewer.com/download/TeamViewerQS.exe">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">Remote Support</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/search/">
+				<i class='fa fa-search'></i>
+				<span class="menu__text">Search</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+		
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">The Perfect htaccess for WordPress</h1>
+			<div id="breadcrumbs" style="font-size:12px;">
+    <a href="/">Home</a>
+    
+        
+    
+        
+            / <a href=">>perfect-htaccess">Perfect htaccess</a>
+        
+    
+        
+    
+</div>
+
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2018-09-23T20:50:39">2018-09-23</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/wp-content/uploads/2018/09/htaccess.png" alt="The Perfect htaccess for WordPress">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">
+
+<style>
+#share-buttons {display: inline-block; vertical-align: middle; }
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > div {
+position: relative;
+text-align: left; 
+height: 36px; 
+width: 32px; 
+float: left; 
+text-align: center;
+}
+#share-buttons > div > svg {height: 16px; fill: #d5d5d5; margin-top: 10px;}
+#share-buttons > div:hover {cursor: pointer;}
+#share-buttons > div.facebook:hover > svg {fill: #3B5998;}
+#share-buttons > div.twitter:hover > svg {fill: #55ACEE;}
+#share-buttons > div.linkedin:hover > svg {fill: #0077b5;}
+#share-buttons > div.pinterest:hover > svg {fill: #CB2027;}
+#share-buttons > div.mail:hover > svg {fill: #7D7D7D;}
+#share-buttons > div.instagram:hover > svg {fill: #C73B92;}
+#share-buttons > div.facebook > svg {height: 18px; margin-top: 9px;}
+#share-buttons > div.twitter > svg {height: 20px; margin-top: 8px;}
+#share-buttons > div.linkedin > svg {height: 19px; margin-top: 7px;}
+#share-buttons > div.pinterest > svg {height: 20px; margin-top: 9px;}
+#share-buttons > div.mail > svg {height: 14px; margin-top: 11px;}
+</style>
+
+<span style="color: silver;">Share on: </span><div id="share-buttons">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/www.christitus.com\/perfect-htaccess\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/home?status=https:\/\/www.christitus.com\/perfect-htaccess\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="linkedin" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/www.christitus.com\/perfect-htaccess\/&title=&summary=&source=');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></div>
+
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/www.christitus.com\/perfect-htaccess\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-htaccess-file-to-rule-them-all">The .htaccess file to rule them all</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#in-closing">In Closing</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+
+<div class="content post__content clearfix">
+			<p>This walks you through what your htaccess should look like in a WordPress Installation. I am a minimalist and believe you shouldn’t be using a ton of plugins that slow down your install when most of what you are looking to accomplish can be achieved with this file.</p>
+<p>Therefore, this htaccess will contain bad bot blocker, security optimizations, force https, and a variety of other optimizations. This will save you from installing about 5-10 plugins that would slow down your website.</p>
+<h2 id="the-htaccess-file-to-rule-them-all">The .htaccess file to rule them all</h2>
+<h5 id="basic-wordpress-part">Basic WordPress part</h5>
+<pre><code># BEGIN WordPress
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+&lt;/IfModule&gt;
+# END WordPress
+</code></pre><h5 id="secure-the-wordpressinstall">Secure the WordPress install</h5>
+<pre><code># Allow mod_rewrite in htaccess
+Options +FollowSymLinks
+# Disable directory browsing
+Options All -Indexes
+# Block wp-includes folder and files
+&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteBase /
+RewriteRule ^wp-admin/includes/ - [F,L]
+RewriteRule !^wp-includes/ - [S=3]
+RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+RewriteRule ^wp-includes/theme-compat/ - [F,L]
+&lt;/IfModule&gt;
+# Deny access to wp-config.php file
+&lt;files wp-config.php&gt;
+order allow,deny
+deny from all
+&lt;/files&gt;
+</code></pre><h5 id="force-https-and-set-time-zones">Force HTTPS and Set Time Zones</h5>
+<pre><code># Force HTTPS
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.christitus.com/$1 [R,L]
+# Set Central Time Zone
+SetEnv TZ America/Chicago
+</code></pre><h5 id="miscellaneous-optimizations">Miscellaneous Optimizations</h5>
+<pre><code>&lt;IfModule mod_rewrite.c&gt;
+&lt;IfModule mod_negotiation.c&gt;
+Options -MultiViews
+&lt;/IfModule&gt;
+RewriteEngine On
+# Redirect Trailing Slashes If Not A Folder...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+# Handle Front Controller...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+# Handle Authorization Header
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+&lt;/IfModule&gt;
+</code></pre><h5 id="expires-header-configuration">Expires Header Configuration</h5>
+<pre><code># BEGIN Expires
+&lt;ifModule mod_expires.c&gt;
+ExpiresActive On
+ExpiresDefault &quot;access 2 days&quot;
+ExpiresByType text/html &quot;access plus 3 seconds&quot;
+ExpiresByType image/gif &quot;access plus 2419200 seconds&quot;
+ExpiresByType image/jpeg &quot;access plus 2419200 seconds&quot;
+ExpiresByType image/jpg &quot;access plus 2419200 seconds&quot;
+ExpiresByType image/png &quot;access plus 2419200 seconds&quot;
+ExpiresByType text/css &quot;access plus 2419200 seconds&quot;
+ExpiresByType text/javascript &quot;access plus 2419200 seconds&quot;
+ExpiresByType application/x-javascript &quot;access plus 2419200 seconds&quot;
+ExpiresByType application/x-shockwave-flash &quot;access 1 month&quot;
+ExpiresByType application/pdf &quot;access 1 month&quot;
+ExpiresByType image/x-icon &quot;access 1 year&quot;
+&lt;/ifModule&gt;
+# END Expires
+</code></pre><h5 id="compression-optimization">Compression Optimization</h5>
+<pre><code>&lt;IfModule mod_deflate.c&gt;
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE image/x-icon
+AddOutputFilterByType DEFLATE image/svg+xml svg svgz
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/x-font
+AddOutputFilterByType DEFLATE application/x-font-truetype
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-font-otf
+AddOutputFilterByType DEFLATE application/x-font-woff
+AddOutputFilterByType DEFLATE application/x-font-woff2
+AddOutputFilterByType DEFLATE application/x-font-opentype
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE font/ttf
+AddOutputFilterByType DEFLATE font/otf
+AddOutputFilterByType DEFLATE font/eot
+AddOutputFilterByType DEFLATE font/woff
+AddOutputFilterByType DEFLATE font/woff2
+AddOutputFilterByType DEFLATE font/opentype
+# For Olders Browsers Which Can't Handle Compression
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+&lt;/IfModule&gt;
+</code></pre><h5 id="bad-bot-and-vulnerability-blockers">Bad Bot and Vulnerability blockers</h5>
+<pre><code># Block Bad Bots &amp; Scrapers
+SetEnvIfNoCase User-Agent &quot;Aboundex&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;80legs&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;360Spider&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Java&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Cogentbot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Alexibot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^asterias&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^attach&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^BackDoorBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^BackWeb&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Bandit&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^BatchFTP&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Bigfoot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Black.Hole&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^BlackWidow&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^BlowFish&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^BotALot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Buddy&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^BuiltBotTough&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Bullseye&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^BunnySlippers&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Cegbfeieh&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^CheeseBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^CherryPicker&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^ChinaClaw&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Collector&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Copier&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^CopyRightCheck&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^cosmos&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Crescent&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Custo&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^AIBOT&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^DISCo&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^DIIbot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^DittoSpyder&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Download\ Demon&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Download\ Devil&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Download\ Wonder&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^dragonfly&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Drip&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^eCatch&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^EasyDL&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^ebingbong&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^EirGrabber&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^EmailCollector&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^EmailSiphon&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^EmailWolf&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^EroCrawler&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Exabot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Express\ WebPictures&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Extractor&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^EyeNetIE&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Foobot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^flunky&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^FrontPage&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Go-Ahead-Got-It&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^gotit&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^GrabNet&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Grafula&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Harvest&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^hloader&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^HMView&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^HTTrack&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^humanlinks&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^IlseBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Image\ Stripper&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Image\ Sucker&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Indy\ Library&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^InfoNaviRobot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^InfoTekies&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Intelliseek&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^InterGET&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Internet\ Ninja&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Iria&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Jakarta&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^JennyBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^JetCar&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^JOC&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^JustView&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Jyxobot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Kenjin.Spider&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Keyword.Density&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^larbin&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^LexiBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^lftp&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^libWeb/clsHTTP&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^likse&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^LinkextractorPro&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^LinkScan/8.1a.Unix&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^LNSpiderguy&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^LinkWalker&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^lwp-trivial&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^LWP::Simple&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Magnet&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Mag-Net&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^MarkWatch&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Mass\ Downloader&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Mata.Hari&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Memo&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Microsoft.URL&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Microsoft\ URL\ Control&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^MIDown\ tool&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^MIIxpc&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Mirror&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Missigua\ Locator&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Mister\ PiX&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^moget&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Mozilla/3.Mozilla/2.01&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Mozilla.*NEWT&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NAMEPROTECT&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Navroad&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NearSite&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NetAnts&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Netcraft&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NetMechanic&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NetSpider&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Net\ Vampire&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NetZIP&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NextGenSearchBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NG&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NICErsPRO&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^niki-bot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NimbleCrawler&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Ninja&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^NPbot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Octopus&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Offline\ Explorer&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Offline\ Navigator&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Openfind&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^OutfoxBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^PageGrabber&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Papa\ Foto&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^pavuk&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^pcBrowser&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^PHP\ version\ tracker&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Pockey&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^ProPowerBot/2.14&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^ProWebWalker&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^psbot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Pump&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^QueryN.Metasearch&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^RealDownload&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Reaper&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Recorder&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^ReGet&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^RepoMonkey&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^RMA&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Siphon&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^SiteSnagger&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^SlySearch&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^SmartDownload&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Snake&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Snapbot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Snoopy&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^sogou&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^SpaceBison&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^SpankBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^spanner&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Sqworm&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Stripper&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Sucker&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^SuperBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^SuperHTTP&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Surfbot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^suzuran&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Szukacz/1.4&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^tAkeOut&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Teleport&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Telesoft&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^TurnitinBot/1.5&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^The.Intraformant&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^TheNomad&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^TightTwatBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Titan&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^True_Robot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^turingos&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^TurnitinBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^URLy.Warning&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Vacuum&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^VCI&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^VoidEYE&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Web\ Image\ Collector&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Web\ Sucker&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebAuto&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebBandit&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Webclipping.com&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebCopier&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebEMailExtrac.*&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebEnhancer&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebFetch&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebGo\ IS&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Web.Image.Collector&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebLeacher&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebmasterWorldForumBot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebReaper&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebSauger&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Website\ eXtractor&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Website\ Quester&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Webster&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebStripper&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebWhacker&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WebZIP&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;Whacker&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Widow&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WISENutbot&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WWWOFFLE&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^WWW-Collector-E&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Xaldon&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Xenu&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Zeus&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;ZmEu&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;^Zyborg&quot; bad_bot
+
+# Vulnerability Scanners
+SetEnvIfNoCase User-Agent &quot;Acunetix&quot; bad_bot
+SetEnvIfNoCase User-Agent &quot;FHscan&quot; bad_bot
+# Aggressive Chinese Search Engine
+#SetEnvIfNoCase User-Agent &quot;Baiduspider&quot; bad_bot
+# Aggressive Russian Search Engine
+# Uncomment to disable this search engine
+# SetEnvIfNoCase User-Agent &quot;Yandex&quot; bad_bot`
+
+&lt;Limit GET POST HEAD&gt;
+Order Allow,Deny
+Allow from all
+# Surveillance
+deny from 38.100.19.8/29
+deny from 38.100.21.0/24
+deny from 38.100.41.64/26
+deny from 38.105.71.0/25
+deny from 38.105.83.0/27
+deny from 38.112.21.140/30
+deny from 38.118.42.32/29
+deny from 65.213.208.128/27
+deny from 65.222.176.96/27
+deny from 65.222.185.72/29`
+
+Deny from env=bad_bot
+&lt;/Limit&gt;
+</code></pre><h2 id="in-closing">In Closing</h2>
+<p>I recommend and personally use all the above settings, however, I broke up each section of my htaccess so you can drop ones you don’t like or want. Pay close attention to the section Force HTTPS as this will force all http traffic to https and you must have a valid SSL Certificate.</p>
+<p>I live stream on <a href="https://twitch.tv/christitustech">Twitch</a> and encourage you to drop in and ask a question. I regularly publish on <a href="https://www.youtube.com/c/ChrisTitusTech">YouTube</a> and <a href="https://www.christitus.com/">christitus.com</a>, but if you need immediate assistance, check out our discord channel at <a href="https://www.christitus.com/discord">Chris Titus Tech Discord</a>.</p>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/htaccess/" rel="tag">htaccess</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/wordpress/" rel="tag">WordPress</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/website/" rel="tag">Website</a></li>
+	</ul>
+</div>
+
+		</footer>
+		<script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  backgroundColor: 'rgb(255, 82, 82)',
+  textColor: '#fff'
+})</script>
+
+	</article>
+</main>
+
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/snipping-tool-removed/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Snipping Tool Removed by Microsoft in October 2018 Update 1809</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/apache-mpm-prefork/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Optimizing Apache Memory Usage using mpm prefork</p></a>
+	</div>
+</nav>
+
+
+
+			</div>
+			
+		</div>
+		
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+
+		<div class="footer__copyright">
+			&copy; 2020 Chris Titus.
+			 - <a href="/terms-of-service/">Terms of Service</a>
+			 - <a href="/privacy-policy/">Privacy Policy</a>
+		</div>
+	</div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

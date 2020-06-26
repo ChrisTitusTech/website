@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Garmin Express on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/garmin-express/</link>
+    <description>Recent content in Garmin Express on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Feb 2019 22:20:57 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/garmin-express/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Garmin Express on Linux | Step by Step Guide</title>
+      <link>https://www.christitus.com/garmin-express-linux/</link>
+      <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/garmin-express-linux/</guid>
+      <description>&lt;p&gt;This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

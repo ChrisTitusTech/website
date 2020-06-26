@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Client on Chris Titus Tech</title>
+    <link>/categories/windows-client/</link>
+    <description>Recent content in Windows Client on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Oct 2018 17:20:22 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/windows-client/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Disable Windows Firewall Properly</title>
+      <link>/disable-windows-firewall-properly/</link>
+      <pubDate>Sat, 06 Oct 2018 17:20:22 +0000</pubDate>
+      
+      <guid>/disable-windows-firewall-properly/</guid>
+      <description>This walkthrough goes over how to Disable Windows Firewall while not affecting other programs that rely on this service. It’s important that you **DO NOT **disable the service, due to the fact it can cause issues with Microsoft Office and other products.
+ Steps to bypass firewall  Launch Windows Defender Firewall with Advanced Security (Start -&amp;gt; Run -&amp;gt; wf.msc) Click Inbound Rules Select “New Rule” Custom rule All Programs Leave Any and All Ports Any IP Address for both Allow the connection Check Domain, Private, and Public Name “Allow All”  Video Guide Finishing Up By doing this you allow all traffic inbound to this computer, consequently, all outbound traffic is already allowed by default.</description>
+    </item>
+    
+    <item>
+      <title>Snipping Tool Removed by Microsoft in October 2018 Update 1809</title>
+      <link>/snipping-tool-removed/</link>
+      <pubDate>Tue, 18 Sep 2018 19:06:44 +0000</pubDate>
+      
+      <guid>/snipping-tool-removed/</guid>
+      <description>The Snipping Tool is being removed by Microsoft in October 2018 Update 1809 and I am not happy! This tool is one of the best tools Microsoft has ever created, so why? Well, they want you to use the Snip and Sketch App from the Microsoft Store. Spoiler: It sucks.
+Greenshot the best Snipping Tool Replacement So what should you use? Greenshot. Its freeware and it just works. Not bulky with a toolbar, but adds a tray icon, which you don’t have to use.</description>
+    </item>
+    
+    <item>
+      <title>Using IOMeter to determine hard drive performance</title>
+      <link>/using-iometer/</link>
+      <pubDate>Fri, 14 Sep 2018 16:50:46 +0000</pubDate>
+      
+      <guid>/using-iometer/</guid>
+      <description>Using IOMeter will give you a great benchmark on any hard drives and network drives you have. I use this quite often as you can see the effects of new hardware, introducing Link-Aggregation, or troubleshooting drives to determine if they are losing performance.
+Steps to Follow  Download IOMeter from the Official Site and run setup  
+All Programs -&amp;gt; Iometer -&amp;gt; Iometer  3a) Under ‘Topology’ tab, select the local machine</description>
+    </item>
+    
+    <item>
+      <title>Installing Linux Subsystem for Windows 10</title>
+      <link>/installing-linux-subsystem/</link>
+      <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
+      
+      <guid>/installing-linux-subsystem/</guid>
+      <description>The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system. &amp;lt;iframe style=&amp;quot;display: block; margin: 0px auto;&amp;rdquo; id=&amp;rdquo;_ytid_78463&amp;rdquo; width=&amp;quot;1200&amp;rdquo; height=&amp;quot;675&amp;rdquo; data-origwidth=&amp;quot;1200&amp;rdquo; data-origheight=&amp;quot;675&amp;rdquo; src=&amp;quot;https://www.youtube.com/embed/RriP3LmuKNA?enablejsapi=1&amp;amp;autoplay=0&amp;amp;cc_load_policy=0&amp;amp;iv_load_policy=3&amp;amp;loop=0&amp;amp;modestbranding=0&amp;amp;rel=0&amp;amp;fs=1&amp;amp;playsinline=0&amp;amp;autohide=2&amp;amp;theme=dark&amp;amp;color=red&amp;amp;controls=1&amp;amp;&amp;rdquo; class=&amp;rdquo;__youtube_prefs\__&amp;rdquo; title=&amp;quot;YouTube player&amp;rdquo; allow=&amp;quot;autoplay; encrypted-media&amp;rdquo; allowfullscreen data-no-lazy=&amp;quot;1&amp;rdquo; data-skipgform_ajax_framebjll=&amp;quot;&amp;ldquo;&amp;gt;Enable Linux Subsystem Feature cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Note: Perform in PowerShell</description>
+    </item>
+    
+    <item>
+      <title>Debloat Windows 10</title>
+      <link>/debloat-windows-10/</link>
+      <pubDate>Sun, 09 Sep 2018 17:08:58 +0000</pubDate>
+      
+      <guid>/debloat-windows-10/</guid>
+      <description>Right Click Windows Button -&amp;gt;Select Powershell Prompt (Admin) OR Select Command Prompt (Admin)  Note: If you don’t have PowerShell and only command prompt open command prompt (admin) and type “powershell“   Change Execution policy to allow a debloat script to run in Powershell Set-ExecutionPolicy Unrestricted Run the script from the following Github Repository. The person running this GitHub has been updating this script for a while and is a godsend.</description>
+    </item>
+    
+    <item>
+      <title>Repair Windows Boot Partition | Includes files and partitioning</title>
+      <link>/repair-windows-boot-partition/</link>
+      <pubDate>Mon, 02 Jul 2018 17:01:44 +0000</pubDate>
+      
+      <guid>/repair-windows-boot-partition/</guid>
+      <description>This walkthrough shows you how to repair windows boot partition and boot from an existing windows installation without reinstalling windows.
+Recently I had an old server with a FAT32 system reserved partition and a bunch of extra partitions. I have already moved all the data off the server and it was ready for decommissioning. Before, I did this I wanted to go ahead and remove all these old partitions and just leave the C: Drive with the Windows installation then rebuild the System Reserved partition as NTFS as an exercise.</description>
+    </item>
+    
+    <item>
+      <title>Spooler subsystem app high CPU usage on Windows 10</title>
+      <link>/spooler-subsystem-app-cpu-usage/</link>
+      <pubDate>Tue, 02 May 2017 19:53:16 +0000</pubDate>
+      
+      <guid>/spooler-subsystem-app-cpu-usage/</guid>
+      <description>Perform the following steps to solve the Spooler subsystem app high CPU usage. I recently updated a computer to Windows 10 and found that the spooler service was using a lot of resources.
+The Solution  Open up command prompt as administrator and type the following  net stop spooler&amp;lt;br /&amp;gt; del /Q /F /S &amp;quot;%systemroot%\System32\Spool\Printers\*.*&amp;quot;&amp;lt;br /&amp;gt; net start spooler&amp;lt;br /&amp;gt;
+Conclusion Now check task manager again and verify the Spooler subsystem app is now at 0% usage.</description>
+    </item>
+    
+    <item>
+      <title>Raid Re-syncing Windows software raid</title>
+      <link>/windows-software-raid/</link>
+      <pubDate>Sun, 28 Dec 2014 22:53:22 +0000</pubDate>
+      
+      <guid>/windows-software-raid/</guid>
+      <description>I want to preface this article in saying that I would never use a software raid in a business environment. However, recently I tried the windows software raid on a home theater PC. We recently had a power issue and caused the RAID 1 to go into resyncing status. Since it was about 2 TB of data, the resync would take several days and be causing performance issues. I found I could not break the raid or remove the mirror.</description>
+    </item>
+    
+    <item>
+      <title>Remove or Hide System Reserved Partition</title>
+      <link>/hide-system-reserved-partition/</link>
+      <pubDate>Thu, 26 Jun 2014 17:55:42 +0000</pubDate>
+      
+      <guid>/hide-system-reserved-partition/</guid>
+      <description>Does your system reserve partition have a drive letter? With these steps, you will Hide System Reserved Partition and no longer see it when browsing your computer.
+Here is the fix using Diskpart:
+ Load Command Prompt (cmd) Load Diskpart (diskpart) List Disks (list disk) Select Proper Disk (select disk #) List Partitions (list partition) Select Proper Partition (select partition #) List Volumes (list volume) NOTE: Look at Drive letter of system reserved volume Select the volume to hide (select volume #) Remove assigned disk letter (remote letter X)  With this, you should no longer see it, and you will Hide System Reserved Partition for good.</description>
+    </item>
+    
+    <item>
+      <title>Take ownership of an entire drive in Windows</title>
+      <link>/take-ownership-windows/</link>
+      <pubDate>Mon, 13 Jan 2014 16:37:53 +0000</pubDate>
+      
+      <guid>/take-ownership-windows/</guid>
+      <description>The commands below will show you how to take ownership of an entire drive. Here is a simple script to accomplish just that.
+Option 1: Create a cmd file takeowner.cmd in notepad
+Option 2: Type the following or past this in a command line prompt one line at a time
+takeown /f %1 /r /d y&amp;lt;br /&amp;gt; icacls %1 /grant administrators:F /t
+Please Note: This will take a large amount of time on big drives</description>
+    </item>
+    
+    <item>
+      <title>Fix Windows Update error in Windows Vista</title>
+      <link>/fix-windows-update-vista/</link>
+      <pubDate>Wed, 27 Nov 2013 17:10:47 +0000</pubDate>
+      
+      <guid>/fix-windows-update-vista/</guid>
+      <description>This article goes over the step-by-step instructions on how to fix windows update in windows vista. Using the following solution will fix the issue: (Note: I didn’t follow all these instructions and found that just stopping the Crypto service and deleting catroot2 folder was sufficient.)
+You can try to register the following DLLs if Windows Update service is not starting up or having some issue updating/running Windows Updates:
+ Create a batch file and copy the following contents in it and then double click on it to register modules.</description>
+    </item>
+    
+    <item>
+      <title>Installing .NET Framework 3.5 / 3.0 / 2.0 Error 0x800F0906</title>
+      <link>/error-0x800f0906/</link>
+      <pubDate>Mon, 01 Jul 2013 19:23:04 +0000</pubDate>
+      
+      <guid>/error-0x800f0906/</guid>
+      <description>Recently I had error 0x800F0906 when doing a dot net framework update. http://support.microsoft.com/kb/2734782 Note: You could take this resolution further and push it out via network script if needed. Make sure to copy the Windows 8 DVD to a local network drive before attempting.
+To resolve this problem, use one of the following methods, as appropriate for the error code that you are receiving.
+Error code: 0x800F0906 This error code occurs because the computer cannot download the required files from Windows Update.</description>
+    </item>
+    
+    <item>
+      <title>Cannot Rename Folders on mapped drive</title>
+      <link>/rename-folders-mapped-drive/</link>
+      <pubDate>Mon, 15 Apr 2013 21:46:08 +0000</pubDate>
+      
+      <guid>/rename-folders-mapped-drive/</guid>
+      <description>This error message is displayed and I cannot rename folders on the mapped drive. By making a group policy change I was able to make this error go away.
+The drive that this file or folder is stored on does not allow long file names, or names containing blanks or any of the following characters: / : , ; * ? &amp;lt; &amp;gt; |
+Solution: Create a GPO to fix To resolve this problem, turn off Fast Logon Optimization.</description>
+    </item>
+    
+    <item>
+      <title>Full Screen RDP and various Remote Desktop Session hotkeys</title>
+      <link>/full-screen-rdp/</link>
+      <pubDate>Tue, 09 Apr 2013 21:40:02 +0000</pubDate>
+      
+      <guid>/full-screen-rdp/</guid>
+      <description>Here are all the hotkeys I use regularly when doing Full Screen RDP.
+Full Screen RDP Hotkey:
+Ctrl + Alt + Pause/Break Key
+Activate Connection Bar:
+Ctrl + Alt + Home
+Send Ctrl+Alt+Del on Remote Computer
+Ctrl + Alt + End
+Simulate Alt+Tab on Remote Computer
+Alt + Page Up/Page Down
+Windows Key Press on Remote Computer
+Alt + Home
+I often find myself using these hotkeys to move around, but these are needed especially when you have a locked up program in an RDP session.</description>
+    </item>
+    
+    <item>
+      <title>“Error 1327. Invalid Drive” or “Error 1325 – not a valid short file name” Fix</title>
+      <link>/valid-short-file-name/</link>
+      <pubDate>Thu, 13 Oct 2011 20:05:32 +0000</pubDate>
+      
+      <guid>/valid-short-file-name/</guid>
+      <description>If you are installing a program and receiving a pop-up message during installation of valid short file name this applies to you. I removed a drive from my computer and had this happen to me.
+Steps to Fix “not a valid short file name”   Click Start, and then click Run.
+  In the Open box, type regedit, and then click OK.
+  Under Registry Editor, locate the following registry key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</description>
+    </item>
+    
+    <item>
+      <title>Force Network Connection Priority</title>
+      <link>/force-network-connection-priority/</link>
+      <pubDate>Wed, 24 Nov 2010 19:49:33 +0000</pubDate>
+      
+      <guid>/force-network-connection-priority/</guid>
+      <description>This describes how to have an adapter take priority of all internet traffic over another. For instance, you have 2 different networks on a single computer, and the wired connection does all your internal communications, but you want the wireless adapter to do all outgoing internet applications (iexplore, firefox, etc…).
+Set the Interface Metric
+ -Open Network Connections (ncpa.cpl)
+  -Open the Network Connection to take priority (Right click desired connection -&amp;gt; Properties)</description>
+    </item>
+    
+    <item>
+      <title>Force Application to use one network connection</title>
+      <link>/force-application-to-use-one-network-connection/</link>
+      <pubDate>Wed, 24 Nov 2010 19:13:27 +0000</pubDate>
+      
+      <guid>/force-application-to-use-one-network-connection/</guid>
+      <description>There is an application called ForceBindIP that allows you to bind certain applications to network connections. It doesn’t work for all applications, but most of them. It is also a bit glitchy in Vista and 7.
+Download ForceBindIP
+Write down your IP Addresses. I use a wired and wireless connection.
+ -Run -&amp;gt; cmd
+  -ipconfig
+ Modify your Application shortcut’s target window
+ -Add forcebindip ipaddress in front of “C:applicationpathexecutable.</description>
+    </item>
+    
+  </channel>
+</rss>

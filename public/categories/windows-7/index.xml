@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows 7 on Chris Titus Tech</title>
+    <link>/categories/windows-7/</link>
+    <description>Recent content in Windows 7 on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Dec 2014 22:53:22 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/windows-7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Raid Re-syncing Windows software raid</title>
+      <link>/windows-software-raid/</link>
+      <pubDate>Sun, 28 Dec 2014 22:53:22 +0000</pubDate>
+      
+      <guid>/windows-software-raid/</guid>
+      <description>I want to preface this article in saying that I would never use a software raid in a business environment. However, recently I tried the windows software raid on a home theater PC. We recently had a power issue and caused the RAID 1 to go into resyncing status. Since it was about 2 TB of data, the resync would take several days and be causing performance issues. I found I could not break the raid or remove the mirror.</description>
+    </item>
+    
+    <item>
+      <title>Remove or Hide System Reserved Partition</title>
+      <link>/hide-system-reserved-partition/</link>
+      <pubDate>Thu, 26 Jun 2014 17:55:42 +0000</pubDate>
+      
+      <guid>/hide-system-reserved-partition/</guid>
+      <description>Does your system reserve partition have a drive letter? With these steps, you will Hide System Reserved Partition and no longer see it when browsing your computer.
+Here is the fix using Diskpart:
+ Load Command Prompt (cmd) Load Diskpart (diskpart) List Disks (list disk) Select Proper Disk (select disk #) List Partitions (list partition) Select Proper Partition (select partition #) List Volumes (list volume) NOTE: Look at Drive letter of system reserved volume Select the volume to hide (select volume #) Remove assigned disk letter (remote letter X)  With this, you should no longer see it, and you will Hide System Reserved Partition for good.</description>
+    </item>
+    
+    <item>
+      <title>Take ownership of an entire drive in Windows</title>
+      <link>/take-ownership-windows/</link>
+      <pubDate>Mon, 13 Jan 2014 16:37:53 +0000</pubDate>
+      
+      <guid>/take-ownership-windows/</guid>
+      <description>The commands below will show you how to take ownership of an entire drive. Here is a simple script to accomplish just that.
+Option 1: Create a cmd file takeowner.cmd in notepad
+Option 2: Type the following or past this in a command line prompt one line at a time
+takeown /f %1 /r /d y&amp;lt;br /&amp;gt; icacls %1 /grant administrators:F /t
+Please Note: This will take a large amount of time on big drives</description>
+    </item>
+    
+    <item>
+      <title>“Error 1327. Invalid Drive” or “Error 1325 – not a valid short file name” Fix</title>
+      <link>/valid-short-file-name/</link>
+      <pubDate>Thu, 13 Oct 2011 20:05:32 +0000</pubDate>
+      
+      <guid>/valid-short-file-name/</guid>
+      <description>If you are installing a program and receiving a pop-up message during installation of valid short file name this applies to you. I removed a drive from my computer and had this happen to me.
+Steps to Fix “not a valid short file name”   Click Start, and then click Run.
+  In the Open box, type regedit, and then click OK.
+  Under Registry Editor, locate the following registry key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</description>
+    </item>
+    
+    <item>
+      <title>Keep Windows 7 from installing device drivers from Windows Update</title>
+      <link>/keep-windows-7-from-installing-device-drivers-from-windows-update/</link>
+      <pubDate>Thu, 15 Sep 2011 15:57:09 +0000</pubDate>
+      
+      <guid>/keep-windows-7-from-installing-device-drivers-from-windows-update/</guid>
+      <description>I find a very annoying feature of Windows 7 is every device you install by default searches windows update. This makes installing devices a lot longer than it needs to be. Follow these steps to make windows search your computer first and then Windows Update if needed.
+  Right Click My Computer from Start Menu and select “Properties”
+  Click “Advanced System Settings”
+  Select Hardware Tab, and click “Device Installation Settings”</description>
+    </item>
+    
+    <item>
+      <title>Force Network Connection Priority</title>
+      <link>/force-network-connection-priority/</link>
+      <pubDate>Wed, 24 Nov 2010 19:49:33 +0000</pubDate>
+      
+      <guid>/force-network-connection-priority/</guid>
+      <description>This describes how to have an adapter take priority of all internet traffic over another. For instance, you have 2 different networks on a single computer, and the wired connection does all your internal communications, but you want the wireless adapter to do all outgoing internet applications (iexplore, firefox, etc…).
+Set the Interface Metric
+ -Open Network Connections (ncpa.cpl)
+  -Open the Network Connection to take priority (Right click desired connection -&amp;gt; Properties)</description>
+    </item>
+    
+  </channel>
+</rss>

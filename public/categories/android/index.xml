@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/categories/android/</link>
+    <description>Recent content in Android on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jun 2020 20:01:50 -0500</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debloat Android</title>
+      <link>https://www.christitus.com/debloat-android/</link>
+      <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
+      
+      <guid>https://www.christitus.com/debloat-android/</guid>
+      <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Degoogle Apps</title>
+      <link>https://www.christitus.com/degoogle-apps/</link>
+      <pubDate>Tue, 02 Jun 2020 21:28:09 -0500</pubDate>
+      
+      <guid>https://www.christitus.com/degoogle-apps/</guid>
+      <description>&lt;p&gt;This article goes over the apps that work and don&amp;rsquo;t work with a Degoogled phone without google play services installed&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Get rid of Amazon Fire Launcher without root access</title>
+      <link>https://www.christitus.com/amazon-fire-launcher/</link>
+      <pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/amazon-fire-launcher/</guid>
+      <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

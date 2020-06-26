@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amazon Fire on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/amazon-fire/</link>
+    <description>Recent content in Amazon Fire on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Jul 2017 21:46:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/amazon-fire/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Get rid of Amazon Fire Launcher without root access</title>
+      <link>https://www.christitus.com/amazon-fire-launcher/</link>
+      <pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/amazon-fire-launcher/</guid>
+      <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vssadmin on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/vssadmin/</link>
+    <description>Recent content in vssadmin on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Oct 2018 15:34:24 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/vssadmin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Clearing out Orphaned Shadow Copies</title>
+      <link>https://www.christitus.com/orphaned-shadow-copies/</link>
+      <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/orphaned-shadow-copies/</guid>
+      <description>&lt;p&gt;In this article, I go over how to get rid of Orphaned Shadow Copies that do not get cleared out by issuing: &lt;code&gt;vssadmin shadows delete /all&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows 8 on Chris Titus Tech</title>
+    <link>/categories/windows-8/</link>
+    <description>Recent content in Windows 8 on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Jun 2014 17:55:42 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/windows-8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Remove or Hide System Reserved Partition</title>
+      <link>/hide-system-reserved-partition/</link>
+      <pubDate>Thu, 26 Jun 2014 17:55:42 +0000</pubDate>
+      
+      <guid>/hide-system-reserved-partition/</guid>
+      <description>Does your system reserve partition have a drive letter? With these steps, you will Hide System Reserved Partition and no longer see it when browsing your computer.
+Here is the fix using Diskpart:
+ Load Command Prompt (cmd) Load Diskpart (diskpart) List Disks (list disk) Select Proper Disk (select disk #) List Partitions (list partition) Select Proper Partition (select partition #) List Volumes (list volume) NOTE: Look at Drive letter of system reserved volume Select the volume to hide (select volume #) Remove assigned disk letter (remote letter X)  With this, you should no longer see it, and you will Hide System Reserved Partition for good.</description>
+    </item>
+    
+    <item>
+      <title>Take ownership of an entire drive in Windows</title>
+      <link>/take-ownership-windows/</link>
+      <pubDate>Mon, 13 Jan 2014 16:37:53 +0000</pubDate>
+      
+      <guid>/take-ownership-windows/</guid>
+      <description>The commands below will show you how to take ownership of an entire drive. Here is a simple script to accomplish just that.
+Option 1: Create a cmd file takeowner.cmd in notepad
+Option 2: Type the following or past this in a command line prompt one line at a time
+takeown /f %1 /r /d y&amp;lt;br /&amp;gt; icacls %1 /grant administrators:F /t
+Please Note: This will take a large amount of time on big drives</description>
+    </item>
+    
+    <item>
+      <title>Installing .NET Framework 3.5 / 3.0 / 2.0 Error 0x800F0906</title>
+      <link>/error-0x800f0906/</link>
+      <pubDate>Mon, 01 Jul 2013 19:23:04 +0000</pubDate>
+      
+      <guid>/error-0x800f0906/</guid>
+      <description>Recently I had error 0x800F0906 when doing a dot net framework update. http://support.microsoft.com/kb/2734782 Note: You could take this resolution further and push it out via network script if needed. Make sure to copy the Windows 8 DVD to a local network drive before attempting.
+To resolve this problem, use one of the following methods, as appropriate for the error code that you are receiving.
+Error code: 0x800F0906 This error code occurs because the computer cannot download the required files from Windows Update.</description>
+    </item>
+    
+    <item>
+      <title>Windows Store not loading (On Domain)</title>
+      <link>/windows-store-not-loading/</link>
+      <pubDate>Fri, 12 Oct 2012 17:13:46 +0000</pubDate>
+      
+      <guid>/windows-store-not-loading/</guid>
+      <description>After joining my computer to the domain windows store would not load. I first had to re-enable UAC because of a GPO and that fixed launching the metro apps. I was still having the issue with Windows Store not loading and this fixed it.
+Symptoms First, if you’re getting shut out of the store (“Can’t connect to the Store right now” kind of messages) &amp;amp; on a corporate, managed machine (you’ll see ‘Managed by your system administrator’ in Windows Update) – plus getting stuff like this in event viewer:</description>
+    </item>
+    
+    <item>
+      <title>Windows Refresh PC Setting</title>
+      <link>/windows-refresh-pc/</link>
+      <pubDate>Wed, 26 Sep 2012 16:51:38 +0000</pubDate>
+      
+      <guid>/windows-refresh-pc/</guid>
+      <description>Using Windows Refresh PC now solves the common problem, that PCs get infected with viruses and require you to either reload it from the disc or recovery partition. Sometimes people lost the disc, re-partitioned their drives, or simply had their hard drive fail. This leads to installing windows from scratch and hunting down all your drivers.
+That is all changing in Windows 8, they are including a “Refresh” option and a “Remove everything and Re-install Windows” option.</description>
+    </item>
+    
+  </channel>
+</rss>

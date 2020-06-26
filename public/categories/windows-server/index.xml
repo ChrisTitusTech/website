@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Server on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/categories/windows-server/</link>
+    <description>Recent content in Windows Server on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Oct 2018 15:34:24 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/categories/windows-server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Clearing out Orphaned Shadow Copies</title>
+      <link>https://www.christitus.com/orphaned-shadow-copies/</link>
+      <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/orphaned-shadow-copies/</guid>
+      <description>&lt;p&gt;In this article, I go over how to get rid of Orphaned Shadow Copies that do not get cleared out by issuing: &lt;code&gt;vssadmin shadows delete /all&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing and Configuring Exchange 2019</title>
+      <link>https://www.christitus.com/configuring-exchange-2019/</link>
+      <pubDate>Wed, 03 Oct 2018 15:45:56 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/configuring-exchange-2019/</guid>
+      <description>&lt;p&gt;This article goes over what it takes for installing and configuring exchange 2019. This step-by-step guide shows you the requirements, installation steps, and basic configuration.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing and Configuring Windows Server 2016 Core</title>
+      <link>https://www.christitus.com/configuring-windows-server-2016-core/</link>
+      <pubDate>Fri, 28 Sep 2018 19:42:47 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/configuring-windows-server-2016-core/</guid>
+      <description>&lt;p&gt;This guide walks you through how to installing and configuring windows server 2016 core, afterward you will easily be able to add one to your environment with very little resources. Start off by using the video guide over the installation process. Once done, check the bullets below to help walk you through doing it in your infrastructure.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to remotely access Window Server 2016 Core in PowerShell </title>
+      <link>https://www.christitus.com/windows-server-2016-core-remote/</link>
+      <pubDate>Wed, 20 Jun 2018 20:30:49 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/windows-server-2016-core-remote/</guid>
+      <description>&lt;p&gt;This walkthrough shows you how to remotely access Window Server 2016 Core in PowerShell. Windows Server 2016 Core is a great minimal install of windows server but doesn’t come with any desktop experience. This means we will be doing everything via command prompt or PowerShell for the initial setup. The great thing is you use Powershell and RSAT from a Windows 10 machine and working on the server is a snap. You get the ease of administration and the reliability and compact design of Core.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Taking Databases Offline and/or Dropping through SQL Query</title>
+      <link>https://www.christitus.com/taking-databases-offline-sql-query/</link>
+      <pubDate>Thu, 31 Aug 2017 17:00:08 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/taking-databases-offline-sql-query/</guid>
+      <description>&lt;p&gt;The following SQL query is for taking databases offline, drop the offline databases, or bring them all back online. This affects every database in your SQL instance, so be very careful when using these. The following three queries will save you a considerable amount of time if repurposing an instance.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cloud migration hosting in Google, Amazon, or Microsoft</title>
+      <link>https://www.christitus.com/cloud-migration/</link>
+      <pubDate>Mon, 27 Feb 2017 21:03:20 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/cloud-migration/</guid>
+      <description>&lt;h3 id=&#34;moving-to-the-cloud&#34;&gt;Moving to the Cloud&lt;/h3&gt;
+&lt;p&gt;The following article outlines what it takes for a cloud migration to Google Cloud Compute, Amazon Web Services, or Microsoft Azure means. Most businesses want to move to the “cloud” but have no idea what that means.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Exclude shared mailboxes from Dynamic Distribution Group</title>
+      <link>https://www.christitus.com/exclude-shared-mailboxes-exchange/</link>
+      <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/exclude-shared-mailboxes-exchange/</guid>
+      <description>&lt;p&gt;This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Force active directory sync to Office 365 with Azure ADSync</title>
+      <link>https://www.christitus.com/force-active-directory-sync/</link>
+      <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/force-active-directory-sync/</guid>
+      <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cleanup Server WinSxS Free Space on Server 2008 and Server 2012</title>
+      <link>https://www.christitus.com/winsxs-free-space-server/</link>
+      <pubDate>Wed, 03 Aug 2016 23:19:49 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/winsxs-free-space-server/</guid>
+      <description>&lt;p&gt;Run the following commands if you are running low on C: drive space. Generally, this is caused by windows updates and you need to clear WinSxS free space. Do this in your PowerShell prompt and you will free up a substantial amount of space.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>“Target account name is incorrect” Domain Controller Error</title>
+      <link>https://www.christitus.com/target-account-name-domain-controller-error/</link>
+      <pubDate>Thu, 21 Jul 2016 13:31:35 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/target-account-name-domain-controller-error/</guid>
+      <description>&lt;p&gt;This article explains how to fix the “Target account name is incorrect” error you are getting on your domain controllers. This usually stems from a system administrator doing a snapshot revert on the Domain Controller which messes up the KDC service and domain replication. It also can happen if you had a DC offline for a long time 30+ days.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Prevent autodiscover on Exchange server after an Office 365 Migration</title>
+      <link>https://www.christitus.com/prevent-autodiscover-exchange-server/</link>
+      <pubDate>Mon, 04 Jul 2016 16:44:02 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/prevent-autodiscover-exchange-server/</guid>
+      <description>&lt;p&gt;This article teaches you how to prevent autodiscover from happening on Exchange Server. This is important on an Office 365 migration when you still need to keep your local exchange server from resolving.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Grant Full Access to all Public Folders for a user in Exchange</title>
+      <link>https://www.christitus.com/grant-full-access-public-folders/</link>
+      <pubDate>Mon, 04 Jul 2016 16:32:21 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/grant-full-access-public-folders/</guid>
+      <description>&lt;p&gt;This post goes over how to grant full access to all public folders for a user in Microsoft Exchange. I recently was migrating all public folders from an Exchange 2010 to Office 365 Environment and didn’t have access to some of the folders. Consequently, this solution saved me a lot of time from doing it through a GUI.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Move Website from Linux to IIS</title>
+      <link>https://www.christitus.com/move-website-linux-iis/</link>
+      <pubDate>Sat, 26 Dec 2015 05:41:50 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/move-website-linux-iis/</guid>
+      <description>&lt;p&gt;This guide goes over how to Move Website from Linux to IIS. If you’re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Exchange Online Archive Requirements</title>
+      <link>https://www.christitus.com/exchange-online-archive-requirements/</link>
+      <pubDate>Thu, 27 Aug 2015 18:41:57 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/exchange-online-archive-requirements/</guid>
+      <description>&lt;p&gt;This article goes over Exchange Online Archive Requirements and the headache of licensing for it. I recently completed a staged migration from exchange 2007 to exchange online. If you have any users over 50 GB you need the exchange online archive.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iDrac Dell Server (Off-Band Remote Access)</title>
+      <link>https://www.christitus.com/idrac-dell-server/</link>
+      <pubDate>Tue, 24 Mar 2015 18:43:46 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/idrac-dell-server/</guid>
+      <description>&lt;p&gt;I recently had a server freeze up when I wasn’t on-site and needed to power cycle it. I had configured iDrac before but it was not responsive. Here are some useful commands that can configure, reboot, and reset the iDrac function on Dell Servers. The commands below are run from a command prompt on the server (unless otherwise stated) in the (C:\Program Files\Dell\SysMgt\idrac) path.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GFI Archiver resource usage</title>
+      <link>https://www.christitus.com/gfi-archiver-resource-usage/</link>
+      <pubDate>Fri, 06 Mar 2015 23:56:01 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/gfi-archiver-resource-usage/</guid>
+      <description>&lt;p&gt;Does your GFI Archiver resource usage SQL process ballon over 8GB? If so, the following procedure will reduce usage by about half and fix many performance issues.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Outlook Security Certificate is invalid</title>
+      <link>https://www.christitus.com/outlook-security-certificate/</link>
+      <pubDate>Mon, 09 Dec 2013 21:33:37 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/outlook-security-certificate/</guid>
+      <description>&lt;p&gt;The following article fixes the Outlook security certificate error your users get when they connect to your exchange server internally. This is typically from installing a 3rd party SSL Certificate.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cannot Rename Folders on mapped drive</title>
+      <link>https://www.christitus.com/rename-folders-mapped-drive/</link>
+      <pubDate>Mon, 15 Apr 2013 21:46:08 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/rename-folders-mapped-drive/</guid>
+      <description>This error message is displayed and I cannot rename folders on the mapped drive. By making a group policy change I was able to make this error go away.
+The drive that this file or folder is stored on does not allow long file names, or names containing blanks or any of the following characters: / : , ; * ? &amp;lt; &amp;gt; |
+Solution: Create a GPO to fix To resolve this problem, turn off Fast Logon Optimization.</description>
+    </item>
+    
+    <item>
+      <title>GFI MailArchiver MAIS Queue Folder has tons of emails stuck</title>
+      <link>https://www.christitus.com/mais-queue-folder/</link>
+      <pubDate>Tue, 09 Apr 2013 16:50:22 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/mais-queue-folder/</guid>
+      <description>&lt;p&gt;The Import service can get stuck and this will stop all the mail in the MAIS Queue Folder. These are the emails that have not been processed and added to GFI Archiver yet, so do not delete them. Below is the fix on how I restored the import service and processed all the stuck email.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Moving GFI MailArchiver to another server</title>
+      <link>https://www.christitus.com/moving-gfi-mailarchiver/</link>
+      <pubDate>Tue, 09 Apr 2013 16:39:37 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/moving-gfi-mailarchiver/</guid>
+      <description>&lt;p&gt;The following walkthrough shows you the process of moving GFI MailArchiver to another server.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Configuring SQL Authentication</title>
+      <link>https://www.christitus.com/configuring-sql-authentication/</link>
+      <pubDate>Tue, 09 Apr 2013 16:24:26 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/configuring-sql-authentication/</guid>
+      <description>&lt;p&gt;Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Could not continue installation because update is pending</title>
+      <link>https://www.christitus.com/update-is-pending/</link>
+      <pubDate>Thu, 04 Apr 2013 19:04:14 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/update-is-pending/</guid>
+      <description>&lt;p&gt;When installing a program I kept getting the prompt below that an update is pending. Even after a restart, this would display, therefore I changed these registry keys to clear up the issue.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Exchange on Primary Domain Controller Slow Reboot and Startup</title>
+      <link>https://www.christitus.com/exchange-primary-domain-controller/</link>
+      <pubDate>Thu, 26 Jul 2012 20:31:21 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/exchange-primary-domain-controller/</guid>
+      <description>&lt;p&gt;If you had the misfortune of installing Exchange on Primary Domain Controller you will experience some pain when doing a reboot. Typically it will take 10-15 minutes before it restarts and up to 30 minutes to start the Microsoft Exchange Information Store. Consequently, what is really happening in the background is the IS service is being terminated incorrectly on shutdown and the store is left in a “DIRTY” shutdown state. This is very bad on several levels and can cause the Store to corrupt and not start at all, which can be catastrophic.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Disable Outlook Anywhere in Group Policy Object (GPO)</title>
+      <link>https://www.christitus.com/disable-outlook-anywhere-in-group-policy-object-gpo/</link>
+      <pubDate>Wed, 23 Mar 2011 15:35:23 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/disable-outlook-anywhere-in-group-policy-object-gpo/</guid>
+      <description>By default the standard outlk12.adm templates do not come with a configuration of Outlook Anywhere. You can configure the “Configure Outlook Anywhere user interface options” options to disable or grey out the settings. However, this DOES NOT disable Outlook anywhere, just user interaction with it.
+You will need to download a new administrative template that Microsoft released in this hotfix. If you don’t like reading Microsoft’s wonderful support site instructions or Microsoft changes their support site after this blog post, here is the file and instructions paraphrased.</description>
+    </item>
+    
+    <item>
+      <title>Target Specific People or Computers with Item-Level Targeting in GPOs</title>
+      <link>https://www.christitus.com/target-specific-people-or-computers-with-item-level-targeting-in-gpos/</link>
+      <pubDate>Tue, 22 Mar 2011 21:59:02 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/target-specific-people-or-computers-with-item-level-targeting-in-gpos/</guid>
+      <description>&lt;p&gt;Using Group Policy Objects can be a huge time saver, but if used improperly can be a big headache. Once you’ve messed around with GPO settings enough, you quickly figure out that you need to create new GPOs for specific programs, events, etc… that are not all in one GPO. This gives you a lot more flexibility and makes it very easy to track down troublesome GPO related issues when done properly.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

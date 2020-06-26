@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Cloud Platform on Chris Titus Tech</title>
+    <link>/categories/google-cloud-platform/</link>
+    <description>Recent content in Google Cloud Platform on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Mar 2019 15:23:56 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/google-cloud-platform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WordPress on Google Cloud Platform</title>
+      <link>/wordpress-google-cloud-platform/</link>
+      <pubDate>Thu, 14 Mar 2019 15:23:56 +0000</pubDate>
+      
+      <guid>/wordpress-google-cloud-platform/</guid>
+      <description>I am going over hosting WordPress on Google Cloud Platform in this article. This is a step by step guide on how to set up and host a WordPress website using a fresh installation.
+Step 1: Fresh VM console.cloud.google.com(Note: Be sure and install gcloud https://cloud.google.com/sdk/docs/downloads-apt-get&amp;lt;/a&amp;gt;)
+Setup Project and VM (micro)
+sudo apt update &amp;amp;&amp;amp; sudo apt upgrade
+Step 2: Install Swap $ sudo fallocate -l 1G /swapfile&amp;lt;br&amp;gt;$ sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576&amp;lt;br&amp;gt;$ sudo chmod 600 /swapfile&amp;lt;br&amp;gt;$ sudo mkswap /swapfile&amp;lt;br&amp;gt;$ sudo swapon /swapfile&amp;lt;br&amp;gt;$ sudo nano /etc/fstab&amp;lt;br&amp;gt;-- /swapfile swap swap defaults 0 0</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Google Cloud Platform</title>
+      <link>/intro-google-cloud-platform/</link>
+      <pubDate>Tue, 11 Sep 2018 13:44:02 +0000</pubDate>
+      
+      <guid>/intro-google-cloud-platform/</guid>
+      <description>This is an Introduction to Google Cloud Platform and goes over creating your first project and virtual machine. This walkthrough is for beginners that are just getting started with Google Cloud.
+Download GCloud SDK Allows gcloud commands from command prompt
+https://cloud.google.com/appengine/docs/standard/python/download
+Next Steps Now that we know how to use Google Cloud Platform, go out and build up your first system. I highly recommend starting with an Ubuntu server, since they have the best community support for starters, and install a web server to host a website.</description>
+    </item>
+    
+  </channel>
+</rss>

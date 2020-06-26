@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>how to on Chris Titus Tech</title>
+    <link>/tags/how-to/</link>
+    <description>Recent content in how to on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Oct 2018 15:45:56 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/how-to/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing and Configuring Exchange 2019</title>
+      <link>/configuring-exchange-2019/</link>
+      <pubDate>Wed, 03 Oct 2018 15:45:56 +0000</pubDate>
+      
+      <guid>/configuring-exchange-2019/</guid>
+      <description>This article goes over what it takes for installing and configuring exchange 2019. This step-by-step guide shows you the requirements, installation steps, and basic configuration.
+Requirements  Microsoft recommends 128 GB of memory. If in a medium size environment (100-1000 users) 32-64 GB will be sufficient. Microsoft Windows Server 2012 R2/2016/2019 Co-Existence with Exchange 2013/2016 that are up-to-date 30 GB of free disk space, however, you should have plenty of TBs of storage available for the mailbox stores.</description>
+    </item>
+    
+    <item>
+      <title>Changing file permissions using PowerShell</title>
+      <link>/changing-file-permissions/</link>
+      <pubDate>Thu, 14 Jun 2018 15:46:23 +0000</pubDate>
+      
+      <guid>/changing-file-permissions/</guid>
+      <description>Use the following script for changing file permissions using PowerShell. I use this script when command line takeown and icacls fail. Obviously, run from an elevated PowerShell prompt or by typing ‘powershell’ from elevated cmd.
+The Script Change $folder to the base directory you want for changing permissions.
+Please note, you can use network UNC paths for this or a simple C:.
+$folder = &amp;quot;\\homeserver\users\&amp;quot;&amp;lt;br /&amp;gt; $users = get-childitem $folder&amp;lt;br /&amp;gt; Foreach ($user in $users) {&amp;lt;br /&amp;gt; $acl = Get-Acl $user.</description>
+    </item>
+    
+    <item>
+      <title>Launching a startup program to run as administrator</title>
+      <link>/run-as-administrator/</link>
+      <pubDate>Mon, 27 Mar 2017 02:26:36 +0000</pubDate>
+      
+      <guid>/run-as-administrator/</guid>
+      <description>The following script shows you how to launch a startup program to run as administrator in Windows 10. This fixes many programs that require elevation and you don’t want to launch manually every time.
+Almost every online tutorial I came across said to run it as a scheduled task. This is very cumbersome and I hate it, however using the following method is easier and saves you time.
+Create a Text file in shell:startup and put the following in it.</description>
+    </item>
+    
+  </channel>
+</rss>

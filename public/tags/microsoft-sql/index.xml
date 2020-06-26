@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft SQL on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/microsoft-sql/</link>
+    <description>Recent content in Microsoft SQL on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Aug 2017 17:00:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/microsoft-sql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Taking Databases Offline and/or Dropping through SQL Query</title>
+      <link>https://www.christitus.com/taking-databases-offline-sql-query/</link>
+      <pubDate>Thu, 31 Aug 2017 17:00:08 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/taking-databases-offline-sql-query/</guid>
+      <description>&lt;p&gt;The following SQL query is for taking databases offline, drop the offline databases, or bring them all back online. This affects every database in your SQL instance, so be very careful when using these. The following three queries will save you a considerable amount of time if repurposing an instance.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GFI Archiver resource usage</title>
+      <link>https://www.christitus.com/gfi-archiver-resource-usage/</link>
+      <pubDate>Fri, 06 Mar 2015 23:56:01 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/gfi-archiver-resource-usage/</guid>
+      <description>&lt;p&gt;Does your GFI Archiver resource usage SQL process ballon over 8GB? If so, the following procedure will reduce usage by about half and fix many performance issues.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Configuring SQL Authentication</title>
+      <link>https://www.christitus.com/configuring-sql-authentication/</link>
+      <pubDate>Tue, 09 Apr 2013 16:24:26 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/configuring-sql-authentication/</guid>
+      <description>&lt;p&gt;Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

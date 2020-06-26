@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows 10 on Chris Titus Tech</title>
+    <link>/categories/windows-10/</link>
+    <description>Recent content in Windows 10 on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Oct 2018 17:20:22 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/windows-10/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Disable Windows Firewall Properly</title>
+      <link>/disable-windows-firewall-properly/</link>
+      <pubDate>Sat, 06 Oct 2018 17:20:22 +0000</pubDate>
+      
+      <guid>/disable-windows-firewall-properly/</guid>
+      <description>This walkthrough goes over how to Disable Windows Firewall while not affecting other programs that rely on this service. It’s important that you **DO NOT **disable the service, due to the fact it can cause issues with Microsoft Office and other products.
+ Steps to bypass firewall  Launch Windows Defender Firewall with Advanced Security (Start -&amp;gt; Run -&amp;gt; wf.msc) Click Inbound Rules Select “New Rule” Custom rule All Programs Leave Any and All Ports Any IP Address for both Allow the connection Check Domain, Private, and Public Name “Allow All”  Video Guide Finishing Up By doing this you allow all traffic inbound to this computer, consequently, all outbound traffic is already allowed by default.</description>
+    </item>
+    
+    <item>
+      <title>Snipping Tool Removed by Microsoft in October 2018 Update 1809</title>
+      <link>/snipping-tool-removed/</link>
+      <pubDate>Tue, 18 Sep 2018 19:06:44 +0000</pubDate>
+      
+      <guid>/snipping-tool-removed/</guid>
+      <description>The Snipping Tool is being removed by Microsoft in October 2018 Update 1809 and I am not happy! This tool is one of the best tools Microsoft has ever created, so why? Well, they want you to use the Snip and Sketch App from the Microsoft Store. Spoiler: It sucks.
+Greenshot the best Snipping Tool Replacement So what should you use? Greenshot. Its freeware and it just works. Not bulky with a toolbar, but adds a tray icon, which you don’t have to use.</description>
+    </item>
+    
+    <item>
+      <title>Installing Linux Subsystem for Windows 10</title>
+      <link>/installing-linux-subsystem/</link>
+      <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
+      
+      <guid>/installing-linux-subsystem/</guid>
+      <description>The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system. &amp;lt;iframe style=&amp;quot;display: block; margin: 0px auto;&amp;rdquo; id=&amp;rdquo;_ytid_78463&amp;rdquo; width=&amp;quot;1200&amp;rdquo; height=&amp;quot;675&amp;rdquo; data-origwidth=&amp;quot;1200&amp;rdquo; data-origheight=&amp;quot;675&amp;rdquo; src=&amp;quot;https://www.youtube.com/embed/RriP3LmuKNA?enablejsapi=1&amp;amp;autoplay=0&amp;amp;cc_load_policy=0&amp;amp;iv_load_policy=3&amp;amp;loop=0&amp;amp;modestbranding=0&amp;amp;rel=0&amp;amp;fs=1&amp;amp;playsinline=0&amp;amp;autohide=2&amp;amp;theme=dark&amp;amp;color=red&amp;amp;controls=1&amp;amp;&amp;rdquo; class=&amp;rdquo;__youtube_prefs\__&amp;rdquo; title=&amp;quot;YouTube player&amp;rdquo; allow=&amp;quot;autoplay; encrypted-media&amp;rdquo; allowfullscreen data-no-lazy=&amp;quot;1&amp;rdquo; data-skipgform_ajax_framebjll=&amp;quot;&amp;ldquo;&amp;gt;Enable Linux Subsystem Feature cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Note: Perform in PowerShell</description>
+    </item>
+    
+    <item>
+      <title>Debloat Windows 10</title>
+      <link>/debloat-windows-10/</link>
+      <pubDate>Sun, 09 Sep 2018 17:08:58 +0000</pubDate>
+      
+      <guid>/debloat-windows-10/</guid>
+      <description>Right Click Windows Button -&amp;gt;Select Powershell Prompt (Admin) OR Select Command Prompt (Admin)  Note: If you don’t have PowerShell and only command prompt open command prompt (admin) and type “powershell“   Change Execution policy to allow a debloat script to run in Powershell Set-ExecutionPolicy Unrestricted Run the script from the following Github Repository. The person running this GitHub has been updating this script for a while and is a godsend.</description>
+    </item>
+    
+    <item>
+      <title>Repair Windows Boot Partition | Includes files and partitioning</title>
+      <link>/repair-windows-boot-partition/</link>
+      <pubDate>Mon, 02 Jul 2018 17:01:44 +0000</pubDate>
+      
+      <guid>/repair-windows-boot-partition/</guid>
+      <description>This walkthrough shows you how to repair windows boot partition and boot from an existing windows installation without reinstalling windows.
+Recently I had an old server with a FAT32 system reserved partition and a bunch of extra partitions. I have already moved all the data off the server and it was ready for decommissioning. Before, I did this I wanted to go ahead and remove all these old partitions and just leave the C: Drive with the Windows installation then rebuild the System Reserved partition as NTFS as an exercise.</description>
+    </item>
+    
+    <item>
+      <title>Spooler subsystem app high CPU usage on Windows 10</title>
+      <link>/spooler-subsystem-app-cpu-usage/</link>
+      <pubDate>Tue, 02 May 2017 19:53:16 +0000</pubDate>
+      
+      <guid>/spooler-subsystem-app-cpu-usage/</guid>
+      <description>Perform the following steps to solve the Spooler subsystem app high CPU usage. I recently updated a computer to Windows 10 and found that the spooler service was using a lot of resources.
+The Solution  Open up command prompt as administrator and type the following  net stop spooler&amp;lt;br /&amp;gt; del /Q /F /S &amp;quot;%systemroot%\System32\Spool\Printers\*.*&amp;quot;&amp;lt;br /&amp;gt; net start spooler&amp;lt;br /&amp;gt;
+Conclusion Now check task manager again and verify the Spooler subsystem app is now at 0% usage.</description>
+    </item>
+    
+    <item>
+      <title>Launching a startup program to run as administrator</title>
+      <link>/run-as-administrator/</link>
+      <pubDate>Mon, 27 Mar 2017 02:26:36 +0000</pubDate>
+      
+      <guid>/run-as-administrator/</guid>
+      <description>The following script shows you how to launch a startup program to run as administrator in Windows 10. This fixes many programs that require elevation and you don’t want to launch manually every time.
+Almost every online tutorial I came across said to run it as a scheduled task. This is very cumbersome and I hate it, however using the following method is easier and saves you time.
+Create a Text file in shell:startup and put the following in it.</description>
+    </item>
+    
+    <item>
+      <title>Windows 10 IIS: C:\WINDOWS\system32\inetsrv\rewrite.dll failed to load</title>
+      <link>/windows-10-iis-rewrite-error/</link>
+      <pubDate>Mon, 19 Sep 2016 00:07:43 +0000</pubDate>
+      
+      <guid>/windows-10-iis-rewrite-error/</guid>
+      <description>This article shows you what to do if you get the rewrite.dll failed to load in Windows 10 event viewer for Windows 10 IIS.
+Commands Checked Event viewer when my website Showed up with
+Service Unavailable 503 error
+The Event Viewer Error was
+The Module DLL C:\WINDOWS\system32\inetsrv\rewrite.dll failed to load
+I went into Add/Remove Programs (Start -&amp;gt; Run-&amp;gt; appwiz.cpl) and simply repaired the following program
+IIS Url Rewrite Module 2.0</description>
+    </item>
+    
+    <item>
+      <title>Move Website from Linux to IIS</title>
+      <link>/move-website-linux-iis/</link>
+      <pubDate>Sat, 26 Dec 2015 05:41:50 +0000</pubDate>
+      
+      <guid>/move-website-linux-iis/</guid>
+      <description>This guide goes over how to Move Website from Linux to IIS. If you’re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.
+Migration The database migration from MySQL to MS SQL is actually pretty easy since you just push it through a large query, but I didn’t really want to mess with it, so I stuck with MySQL.
+Download and Install MySQL for Windows</description>
+    </item>
+    
+    <item>
+      <title>Slim Windows 10 Install</title>
+      <link>/slim-reduce-windows-10-install/</link>
+      <pubDate>Thu, 03 Dec 2015 21:32:58 +0000</pubDate>
+      
+      <guid>/slim-reduce-windows-10-install/</guid>
+      <description>UPDATED POST https://www.christitus.com/2018/09/09/debloat-windows-10/ on a newer and improved way to debloat and slim Windows 10. This following commands slim down and reduce windows 10 footprint. Removing bloatware and cleaning up your system from windows apps. Run Powershell as Administrator and run the following script to Slim down and speed up your Windows 10 Install.NOTE: Get-AppxPackage -AllUsers line can be skiped if you want to keep Windows Store / Built-In Apps (Calculator / Bing News / Mail / etc.</description>
+    </item>
+    
+    <item>
+      <title>SFC scannow error and Windows 10 corruption</title>
+      <link>/sfc-scannow-error/</link>
+      <pubDate>Sun, 26 Jul 2015 02:39:10 +0000</pubDate>
+      
+      <guid>/sfc-scannow-error/</guid>
+      <description>If you run into SFC scannow error which cannot be repaired chances are you have some corrupt system components. The fastest way to fix this is by following these steps to repair your system.
+Here is an example of the error you are seeing:
+
+ Download Windows 10 ISO from https://www.microsoft.com/en-us/software-download/windows10 Mount the ISO file by double-clicking on it. Open ‘Windows Powershell’ or ‘Command Prompt’ with Admin privileges (right click -&amp;gt; Run as Administrator) Let’s check the System Health first, by running these commands:  dism /online /cleanup-image /scanhealth dism /online /cleanup-image /checkhealth dism /online /cleanup-image /restorehealth   I’m sure that will give you an error stating that it could not perform the task.</description>
+    </item>
+    
+    <item>
+      <title>Remove or Hide System Reserved Partition</title>
+      <link>/hide-system-reserved-partition/</link>
+      <pubDate>Thu, 26 Jun 2014 17:55:42 +0000</pubDate>
+      
+      <guid>/hide-system-reserved-partition/</guid>
+      <description>Does your system reserve partition have a drive letter? With these steps, you will Hide System Reserved Partition and no longer see it when browsing your computer.
+Here is the fix using Diskpart:
+ Load Command Prompt (cmd) Load Diskpart (diskpart) List Disks (list disk) Select Proper Disk (select disk #) List Partitions (list partition) Select Proper Partition (select partition #) List Volumes (list volume) NOTE: Look at Drive letter of system reserved volume Select the volume to hide (select volume #) Remove assigned disk letter (remote letter X)  With this, you should no longer see it, and you will Hide System Reserved Partition for good.</description>
+    </item>
+    
+  </channel>
+</rss>

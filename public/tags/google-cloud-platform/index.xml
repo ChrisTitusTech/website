@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Cloud Platform on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/google-cloud-platform/</link>
+    <description>Recent content in Google Cloud Platform on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Mar 2019 15:23:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/google-cloud-platform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WordPress on Google Cloud Platform</title>
+      <link>https://www.christitus.com/wordpress-google-cloud-platform/</link>
+      <pubDate>Thu, 14 Mar 2019 15:23:56 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/wordpress-google-cloud-platform/</guid>
+      <description>&lt;p&gt;I am going over hosting WordPress on Google Cloud Platform in this article. This is a step by step guide on how to set up and host a WordPress website using a fresh installation.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Google Cloud Platform</title>
+      <link>https://www.christitus.com/intro-google-cloud-platform/</link>
+      <pubDate>Tue, 11 Sep 2018 13:44:02 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/intro-google-cloud-platform/</guid>
+      <description>&lt;p&gt;This is an Introduction to Google Cloud Platform and goes over creating your first project and virtual machine. This walkthrough is for beginners that are just getting started with Google Cloud.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Create Swap file on Cloud VM (AWS, GCloud, or Azure)</title>
+      <link>https://www.christitus.com/create-swap-file/</link>
+      <pubDate>Tue, 14 Feb 2017 21:16:13 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/create-swap-file/</guid>
+      <description>&lt;p&gt;Use the commands below to create swap file on a micro instance with a Linux operating system. This creates a 2GB Swap file to help alleviate low system ram. Consequently, this is great for those using micro instances in the cloud that have under 1 GB of memory.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

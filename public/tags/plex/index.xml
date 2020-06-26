@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Plex on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/plex/</link>
+    <description>Recent content in Plex on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Oct 2018 19:14:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/plex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install Plex plugin in FreeNAS</title>
+      <link>https://www.christitus.com/install-plex-plugin-freenas/</link>
+      <pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/install-plex-plugin-freenas/</guid>
+      <description>&lt;p&gt;This is an in-depth installation and configuration of the Plex plugin in FreeNAS 11.2. I detail the installation of plex on FreeNAS Jail and configuration of using a share as a Plex mount point.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

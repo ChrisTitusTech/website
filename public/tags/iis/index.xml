@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IIS on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/iis/</link>
+    <description>Recent content in IIS on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Dec 2015 05:41:50 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/iis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Move Website from Linux to IIS</title>
+      <link>https://www.christitus.com/move-website-linux-iis/</link>
+      <pubDate>Sat, 26 Dec 2015 05:41:50 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/move-website-linux-iis/</guid>
+      <description>&lt;p&gt;This guide goes over how to Move Website from Linux to IIS. If you’re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

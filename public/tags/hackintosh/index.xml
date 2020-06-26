@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackintosh on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/hackintosh/</link>
+    <description>Recent content in Hackintosh on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2019 01:13:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/hackintosh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hackintosh Ryzen Install</title>
+      <link>https://www.christitus.com/hackintosh-ryzen-install/</link>
+      <pubDate>Tue, 29 Oct 2019 01:13:21 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/hackintosh-ryzen-install/</guid>
+      <description>&lt;p&gt;Here is the basic install instruction for the Hackintosh Ryzen install that I used on my Ryzen 2700 with an RX 580.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

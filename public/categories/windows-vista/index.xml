@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Vista on Chris Titus Tech</title>
+    <link>/categories/windows-vista/</link>
+    <description>Recent content in Windows Vista on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Jun 2014 17:55:42 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/windows-vista/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Remove or Hide System Reserved Partition</title>
+      <link>/hide-system-reserved-partition/</link>
+      <pubDate>Thu, 26 Jun 2014 17:55:42 +0000</pubDate>
+      
+      <guid>/hide-system-reserved-partition/</guid>
+      <description>Does your system reserve partition have a drive letter? With these steps, you will Hide System Reserved Partition and no longer see it when browsing your computer.
+Here is the fix using Diskpart:
+ Load Command Prompt (cmd) Load Diskpart (diskpart) List Disks (list disk) Select Proper Disk (select disk #) List Partitions (list partition) Select Proper Partition (select partition #) List Volumes (list volume) NOTE: Look at Drive letter of system reserved volume Select the volume to hide (select volume #) Remove assigned disk letter (remote letter X)  With this, you should no longer see it, and you will Hide System Reserved Partition for good.</description>
+    </item>
+    
+    <item>
+      <title>Take ownership of an entire drive in Windows</title>
+      <link>/take-ownership-windows/</link>
+      <pubDate>Mon, 13 Jan 2014 16:37:53 +0000</pubDate>
+      
+      <guid>/take-ownership-windows/</guid>
+      <description>The commands below will show you how to take ownership of an entire drive. Here is a simple script to accomplish just that.
+Option 1: Create a cmd file takeowner.cmd in notepad
+Option 2: Type the following or past this in a command line prompt one line at a time
+takeown /f %1 /r /d y&amp;lt;br /&amp;gt; icacls %1 /grant administrators:F /t
+Please Note: This will take a large amount of time on big drives</description>
+    </item>
+    
+    <item>
+      <title>Fix Windows Update error in Windows Vista</title>
+      <link>/fix-windows-update-vista/</link>
+      <pubDate>Wed, 27 Nov 2013 17:10:47 +0000</pubDate>
+      
+      <guid>/fix-windows-update-vista/</guid>
+      <description>This article goes over the step-by-step instructions on how to fix windows update in windows vista. Using the following solution will fix the issue: (Note: I didn’t follow all these instructions and found that just stopping the Crypto service and deleting catroot2 folder was sufficient.)
+You can try to register the following DLLs if Windows Update service is not starting up or having some issue updating/running Windows Updates:
+ Create a batch file and copy the following contents in it and then double click on it to register modules.</description>
+    </item>
+    
+    <item>
+      <title>“Error 1327. Invalid Drive” or “Error 1325 – not a valid short file name” Fix</title>
+      <link>/valid-short-file-name/</link>
+      <pubDate>Thu, 13 Oct 2011 20:05:32 +0000</pubDate>
+      
+      <guid>/valid-short-file-name/</guid>
+      <description>If you are installing a program and receiving a pop-up message during installation of valid short file name this applies to you. I removed a drive from my computer and had this happen to me.
+Steps to Fix “not a valid short file name”   Click Start, and then click Run.
+  In the Open box, type regedit, and then click OK.
+  Under Registry Editor, locate the following registry key: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</description>
+    </item>
+    
+    <item>
+      <title>Force Network Connection Priority</title>
+      <link>/force-network-connection-priority/</link>
+      <pubDate>Wed, 24 Nov 2010 19:49:33 +0000</pubDate>
+      
+      <guid>/force-network-connection-priority/</guid>
+      <description>This describes how to have an adapter take priority of all internet traffic over another. For instance, you have 2 different networks on a single computer, and the wired connection does all your internal communications, but you want the wireless adapter to do all outgoing internet applications (iexplore, firefox, etc…).
+Set the Interface Metric
+ -Open Network Connections (ncpa.cpl)
+  -Open the Network Connection to take priority (Right click desired connection -&amp;gt; Properties)</description>
+    </item>
+    
+  </channel>
+</rss>

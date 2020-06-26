@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud Migration on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/cloud-migration/</link>
+    <description>Recent content in Cloud Migration on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Feb 2017 21:03:20 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/cloud-migration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cloud migration hosting in Google, Amazon, or Microsoft</title>
+      <link>https://www.christitus.com/cloud-migration/</link>
+      <pubDate>Mon, 27 Feb 2017 21:03:20 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/cloud-migration/</guid>
+      <description>&lt;h3 id=&#34;moving-to-the-cloud&#34;&gt;Moving to the Cloud&lt;/h3&gt;
+&lt;p&gt;The following article outlines what it takes for a cloud migration to Google Cloud Compute, Amazon Web Services, or Microsoft Azure means. Most businesses want to move to the “cloud” but have no idea what that means.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote Access on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/remote-access/</link>
+    <description>Recent content in Remote Access on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Sep 2019 21:55:20 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/remote-access/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Ultimate SSH Guide</title>
+      <link>https://www.christitus.com/ssh-guide/</link>
+      <pubDate>Wed, 18 Sep 2019 21:55:20 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/ssh-guide/</guid>
+      <description>&lt;p&gt;This is an SSH guide to help you set up, configure, connect, and transfer files using SSH.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

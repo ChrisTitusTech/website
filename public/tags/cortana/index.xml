@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cortana on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/cortana/</link>
+    <description>Recent content in Cortana on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Oct 2018 15:22:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/cortana/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Change Cortana Search</title>
+      <link>https://www.christitus.com/change-cortana-search/</link>
+      <pubDate>Wed, 17 Oct 2018 15:22:41 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/change-cortana-search/</guid>
+      <description>&lt;p&gt;This article goes over how to change Cortana search engine to display results in chrome instead of Microsoft Edge. Afterward, the second part requires you to install a chrome extension to search in Google instead of Bing.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

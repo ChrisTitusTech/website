@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Debloat Android - Chris Titus Tech | Technology Simplified</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta property="og:title" content="Debloat Android" />
+<meta property="og:description" content="This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.christitus.com/debloat-android/" />
+<meta property="article:published_time" content="2020-06-21T20:01:50-05:00" />
+<meta property="article:modified_time" content="2020-06-21T20:01:50-05:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Debloat Android"/>
+<meta name="twitter:description" content="This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5817718-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+	<script data-ad-client="ca-pub-6679678361432308" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="Chris Titus Tech | Technology Simplified" rel="home">
+				<div class="logo__title"><img src="/images/logo.png" align="left"></div>
+				<div class="logo__tagline">Tech Guides, Solutions, and Support</div>
+			</a>
+		</div>				
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				<i class='fa fa-heart'></i>
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://www.patreon.com/christitustech">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">Donate</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/recommendations/">
+				
+				<span class="menu__text">Recommendations</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://download.teamviewer.com/download/TeamViewerQS.exe">
+				<i class='fa fa-road'></i>
+				<span class="menu__text">Remote Support</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/search/">
+				<i class='fa fa-search'></i>
+				<span class="menu__text">Search</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+		
+	</div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Debloat Android</h1>
+			<div id="breadcrumbs" style="font-size:12px;">
+    <a href="/">Home</a>
+    
+        
+    
+        
+            / <a href=">>debloat-android">Debloat android</a>
+        
+    
+        
+    
+</div>
+
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2020-06-21T20:01:50">2020-06-21</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/android/" rel="category">Android</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/images/2020-thumbs/debloat-android.jpg" alt="Debloat Android">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">
+
+<style>
+#share-buttons {display: inline-block; vertical-align: middle; }
+#share-buttons:after {content: ""; display: block; clear: both;}
+#share-buttons > div {
+position: relative;
+text-align: left; 
+height: 36px; 
+width: 32px; 
+float: left; 
+text-align: center;
+}
+#share-buttons > div > svg {height: 16px; fill: #d5d5d5; margin-top: 10px;}
+#share-buttons > div:hover {cursor: pointer;}
+#share-buttons > div.facebook:hover > svg {fill: #3B5998;}
+#share-buttons > div.twitter:hover > svg {fill: #55ACEE;}
+#share-buttons > div.linkedin:hover > svg {fill: #0077b5;}
+#share-buttons > div.pinterest:hover > svg {fill: #CB2027;}
+#share-buttons > div.mail:hover > svg {fill: #7D7D7D;}
+#share-buttons > div.instagram:hover > svg {fill: #C73B92;}
+#share-buttons > div.facebook > svg {height: 18px; margin-top: 9px;}
+#share-buttons > div.twitter > svg {height: 20px; margin-top: 8px;}
+#share-buttons > div.linkedin > svg {height: 19px; margin-top: 7px;}
+#share-buttons > div.pinterest > svg {height: 20px; margin-top: 9px;}
+#share-buttons > div.mail > svg {height: 14px; margin-top: 11px;}
+</style>
+
+<span style="color: silver;">Share on: </span><div id="share-buttons">
+<div class="facebook" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u=https:\/\/www.christitus.com\/debloat-android\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"/></svg></div>
+<div class="twitter" title="Share this on Twitter" onclick="window.open('http://twitter.com/home?status=https:\/\/www.christitus.com\/debloat-android\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"/></svg></div>
+<div class="linkedin" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https:\/\/www.christitus.com\/debloat-android\/&title=&summary=&source=');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"/></svg></div>
+
+<div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body=https:\/\/www.christitus.com\/debloat-android\/');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
+</div>
+</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#pre-requisites-for-using-adb">Pre-Requisites for Using ADB</a>
+      <ul>
+        <li><a href="#setup-computer-with-adb-platform-tools">Setup Computer with ADB Platform Tools</a></li>
+        <li><a href="#setup-phone-for-adb-debugging">Setup Phone for ADB Debugging</a></li>
+      </ul>
+    </li>
+    <li><a href="#adb-commands---these-only-work-when-device-is-booted">ADB Commands - These only work when device is booted</a></li>
+    <li><a href="#fastboot-commands---these-commands-work-when-device-is-in-bootloader-and-fastboot-mode">Fastboot Commands - These commands work when device is in Bootloader and Fastboot Mode</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+
+<div class="content post__content clearfix">
+			<p>This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.</p>
+<h2 id="pre-requisites-for-using-adb">Pre-Requisites for Using ADB</h2>
+<p>Setup all of the following to use ADB</p>
+<h3 id="setup-computer-with-adb-platform-tools">Setup Computer with ADB Platform Tools</h3>
+<ul>
+<li>Windows Install with Chocolatey <code>choco install adb</code></li>
+<li>Linux Install with Terminal <code>sudo apt-get install android-tools-adb android-tools-fastboot</code></li>
+<li>MacOS Install with Homebrew
+<ul>
+<li>Homebrew install - <code>ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
+<li>ADB Homebrew Install - <code>brew cask install android-platform-tools</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="setup-phone-for-adb-debugging">Setup Phone for ADB Debugging</h3>
+<ol>
+<li>Open Settings, and select “About”.</li>
+<li>Tap on “Build number” seven times.</li>
+<li>Go back, and select “Developer options”.</li>
+<li>Scroll down, and check the “Android debugging” or “USB debugging” entry under “Debugging”.</li>
+<li>Plug your device into your computer.</li>
+<li>On the computer, open up a terminal/command prompt and type adb devices.</li>
+<li>A dialog should show on your device, asking you to allow usb debugging. Check “always allow”, and choose “OK”.
+<ul>
+<li>Note: If you don&rsquo;t see this prompt on you device change the usb connection to MTP or File Transfer on the device</li>
+</ul>
+</li>
+</ol>
+<h2 id="adb-commands---these-only-work-when-device-is-booted">ADB Commands - These only work when device is booted</h2>
+<ul>
+<li><code>adb devices</code> - shows all connected adb devices</li>
+<li><code>adb shell</code> - launches a shell on the device</li>
+<li><code>adb shell pm list packages</code> - list all installed packages on the device</li>
+<li><code>adb shell pm list packages -3&quot;|cut -f 2 -d &quot;:</code> - lists all user installed packages</li>
+<li><code>adb push &lt;local&gt; &lt;remote&gt;</code> - pushes the file <!-- raw HTML omitted --> to <!-- raw HTML omitted --></li>
+<li><code>adb pull &lt;remote&gt; [&lt;local&gt;]</code> - pulls the file <!-- raw HTML omitted --> to <!-- raw HTML omitted -->. If <!-- raw HTML omitted --> isn’t specified, it will pull to the current folder.</li>
+<li><code>adb logcat</code> - allows you to view the device log in real-time. You can use adb logcat -b radio to view radio logs, and adb logcat -C to view logs in colour</li>
+<li><code>adb install &lt;file&gt;</code> - installs the given .apk file to your device</li>
+<li><code>adb uninstall com.packagename</code> - uninstalls package from shell pm list packages
+<ul>
+<li><em>Note: if you encounter &ldquo;[DELETE_FAILED_INTERNAL_ERROR]&rdquo; type this to bypass:</em> <code>adb shell pm uninstall --user 0 &lt;appname&gt;</code></li>
+</ul>
+</li>
+<li><code>adb reboot</code> - reboots system</li>
+<li><code>adb reboot bootloader</code> - reboots to bootloader</li>
+<li><code>adb reboot recovery</code> - reboots into recovery mode</li>
+<li><code>adb reboot fastboot</code> - reboots into fastboot mode</li>
+</ul>
+<h2 id="fastboot-commands---these-commands-work-when-device-is-in-bootloader-and-fastboot-mode">Fastboot Commands - These commands work when device is in Bootloader and Fastboot Mode</h2>
+<ul>
+<li><code>fastboot devices</code> - shows all connected devices</li>
+<li><code>fastboot reboot</code> - reboots device - can add bootloader, recovery, and fastboot</li>
+<li><code>fastboot oem device-info</code> - shows oem bootloader status (unlocked or locked)</li>
+<li><code>fastboot oem unlock</code> - unlocks oem phones - <em>note: aosp and unlocked phones don&rsquo;t need this</em></li>
+<li><code>fastboot flashing unlock</code> - unlocks system for custom rom in pixel and other phones</li>
+<li><code>fastboot flashing unlock_critical</code> - unlocks bootloader and system partitions - <em>note: this isn&rsquo;t generally needed</em></li>
+<li><code>fastboot format:ext4 userdata</code> - format userdata on device - <em>note: this will erase your entire device</em></li>
+<li><code>fastboot boot recovery.img</code> - test recovery image without flashing</li>
+<li><code>fastboot flash recovery recovery.img</code> - flash recovery image then run <code>fastboot reboot recovery</code> to boot into it.</li>
+<li><code>fastboot flash boot boot.img</code> - flash boot image - this is the kernel</li>
+<li><code>fastboot -w</code> - wipes device</li>
+<li><code>fastboot update &lt;/path/to/your/Rom.zip&gt;</code> - flashes zip to the device</li>
+</ul>
+<p>I live stream on <a href="https://twitch.tv/christitustech">Twitch</a> and encourage you to drop in and ask a question. I regularly publish on <a href="https://www.youtube.com/c/ChrisTitusTech">YouTube</a> and <a href="https://www.christitus.com/">christitus.com</a>, but if you need immediate assistance, check out our discord channel at <a href="https://www.christitus.com/discord">Chris Titus Tech Discord</a>.</p>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/adb/" rel="tag">ADB</a></li>
+	</ul>
+</div>
+
+		</footer>
+		<script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 56,
+  backgroundColor: 'rgb(255, 82, 82)',
+  textColor: '#fff'
+})</script>
+
+	</article>
+</main>
+
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/create-windows-service/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">How to Create a Windows Service</p></a>
+	</div>
+</nav>
+
+
+
+			</div>
+			
+		</div>
+		
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+
+		<div class="footer__copyright">
+			&copy; 2020 Chris Titus.
+			 - <a href="/terms-of-service/">Terms of Service</a>
+			 - <a href="/privacy-policy/">Privacy Policy</a>
+		</div>
+	</div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>

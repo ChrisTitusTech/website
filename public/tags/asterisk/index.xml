@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Asterisk on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/asterisk/</link>
+    <description>Recent content in Asterisk on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Aug 2018 15:58:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/asterisk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Remove Asterisk from Linux server (ubuntu/centos/debian/rhel)</title>
+      <link>https://www.christitus.com/remove-asterisk/</link>
+      <pubDate>Fri, 17 Aug 2018 15:58:36 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/remove-asterisk/</guid>
+      <description>&lt;p&gt;The following removal instructions go over how to completely remove Asterisk from your Linux Instance.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

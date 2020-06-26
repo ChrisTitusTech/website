@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Server 2008 on Chris Titus Tech</title>
+    <link>/categories/windows-server-2008/</link>
+    <description>Recent content in Windows Server 2008 on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Oct 2018 15:34:24 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/windows-server-2008/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Clearing out Orphaned Shadow Copies</title>
+      <link>/orphaned-shadow-copies/</link>
+      <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
+      
+      <guid>/orphaned-shadow-copies/</guid>
+      <description>In this article, I go over how to get rid of Orphaned Shadow Copies that do not get cleared out by issuing: vssadmin shadows delete /all
+Steps to clear out all orphaned shadow copies  vssadmin shadows delete /all vssadmin shadows list  verify orphaned shadow copies still exist   Use the following command to resize shadow storage, consequently, clears out any shadow copies on that drive  vssadmin Resize ShadowStorage /For=C: /On=C: /MaxSize=300MB  Note: Repeat this for each drive with orphaned shadow copies     Afterward, do a shadows list to verify the shadow copies have been cleared out  This process can take a very long time for large drives with a lot of shadow copies.</description>
+    </item>
+    
+    <item>
+      <title>Force active directory sync to Office 365 with Azure ADSync</title>
+      <link>/force-active-directory-sync/</link>
+      <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
+      
+      <guid>/force-active-directory-sync/</guid>
+      <description>Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.
+Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”&amp;lt;br /&amp;gt; Start-ADSyncSyncCycle -PolicyType Delta</description>
+    </item>
+    
+    <item>
+      <title>Cleanup Server WinSxS Free Space on Server 2008 and Server 2012</title>
+      <link>/winsxs-free-space-server/</link>
+      <pubDate>Wed, 03 Aug 2016 23:19:49 +0000</pubDate>
+      
+      <guid>/winsxs-free-space-server/</guid>
+      <description>Run the following commands if you are running low on C: drive space. Generally, this is caused by windows updates and you need to clear WinSxS free space. Do this in your PowerShell prompt and you will free up a substantial amount of space.
+Please Note: You have to run updates on Windows Server 2008 if you are far behind and these commands don’t exist!
+MASTER CLEANUP: (Run this First)</description>
+    </item>
+    
+    <item>
+      <title>“Target account name is incorrect” Domain Controller Error</title>
+      <link>/target-account-name-domain-controller-error/</link>
+      <pubDate>Thu, 21 Jul 2016 13:31:35 +0000</pubDate>
+      
+      <guid>/target-account-name-domain-controller-error/</guid>
+      <description>This article explains how to fix the “Target account name is incorrect” error you are getting on your domain controllers. This usually stems from a system administrator doing a snapshot revert on the Domain Controller which messes up the KDC service and domain replication. It also can happen if you had a DC offline for a long time 30+ days.
+Commands   Stop and disable the Key Distribution Center (KDC) service on the troubled domain controller</description>
+    </item>
+    
+    <item>
+      <title>Exchange Installation Error HRESULT E_FAIL</title>
+      <link>/exchange-error-hresult-e_fail/</link>
+      <pubDate>Tue, 18 Mar 2014 21:14:03 +0000</pubDate>
+      
+      <guid>/exchange-error-hresult-e_fail/</guid>
+      <description>I was recently installing and configuring a new server with 32 processors and installing server 2008 Standard and Exchange 2007 SP1 Standard. During installation I received the following error:
+HRESULT E_FAIL has been returned from a call to a COM component.
+After finding a Knowledge-base article from Microsoft, I discovered Exchange 2007 SP1 doesn’t support installation on a server with more than 24 processors but is perfectly fine updating and running on a server with more than 24 processors.</description>
+    </item>
+    
+    <item>
+      <title>Could not continue installation because update is pending</title>
+      <link>/update-is-pending/</link>
+      <pubDate>Thu, 04 Apr 2013 19:04:14 +0000</pubDate>
+      
+      <guid>/update-is-pending/</guid>
+      <description>When installing a program I kept getting the prompt below that an update is pending. Even after a restart, this would display, therefore I changed these registry keys to clear up the issue.
+ Microsoft Server setup cannot continue because a restart from a previous installation or update is pending.
+ The Fix for an update is pending The following Registry keys control this error message. If you have rebooted and are still experiencing this issue, clear out these keys and relaunch your installer.</description>
+    </item>
+    
+    <item>
+      <title>Assigning Client Access Licenses without EBS Administration Console</title>
+      <link>/assigning-client-access-licenses-without-ebs-administration-console/</link>
+      <pubDate>Fri, 16 Nov 2012 22:43:31 +0000</pubDate>
+      
+      <guid>/assigning-client-access-licenses-without-ebs-administration-console/</guid>
+      <description>This is a workaround for EBS Administration Console that can no longer launch or has errors on launch. Consequently, Microsoft put the Licensing in this Console only, and no other GUI exists for it. However, that is why Powershell exists, and here are the commands to manage all your CALs in your network.
+Step-by-Step Guide  Open Powershell on Management Server. (Start -&amp;gt;All Programs -&amp;gt; Windows Powershell 1.0) Type this at command prompt: Add-PsSnapin Microsoft.</description>
+    </item>
+    
+    <item>
+      <title>Exchange on Primary Domain Controller Slow Reboot and Startup</title>
+      <link>/exchange-primary-domain-controller/</link>
+      <pubDate>Thu, 26 Jul 2012 20:31:21 +0000</pubDate>
+      
+      <guid>/exchange-primary-domain-controller/</guid>
+      <description>If you had the misfortune of installing Exchange on Primary Domain Controller you will experience some pain when doing a reboot. Typically it will take 10-15 minutes before it restarts and up to 30 minutes to start the Microsoft Exchange Information Store. Consequently, what is really happening in the background is the IS service is being terminated incorrectly on shutdown and the store is left in a “DIRTY” shutdown state. This is very bad on several levels and can cause the Store to corrupt and not start at all, which can be catastrophic.</description>
+    </item>
+    
+    <item>
+      <title>Disable Outlook Anywhere in Group Policy Object (GPO)</title>
+      <link>/disable-outlook-anywhere-in-group-policy-object-gpo/</link>
+      <pubDate>Wed, 23 Mar 2011 15:35:23 +0000</pubDate>
+      
+      <guid>/disable-outlook-anywhere-in-group-policy-object-gpo/</guid>
+      <description>By default the standard outlk12.adm templates do not come with a configuration of Outlook Anywhere. You can configure the “Configure Outlook Anywhere user interface options” options to disable or grey out the settings. However, this DOES NOT disable Outlook anywhere, just user interaction with it.
+You will need to download a new administrative template that Microsoft released in this hotfix. If you don’t like reading Microsoft’s wonderful support site instructions or Microsoft changes their support site after this blog post, here is the file and instructions paraphrased.</description>
+    </item>
+    
+    <item>
+      <title>Target Specific People or Computers with Item-Level Targeting in GPOs</title>
+      <link>/target-specific-people-or-computers-with-item-level-targeting-in-gpos/</link>
+      <pubDate>Tue, 22 Mar 2011 21:59:02 +0000</pubDate>
+      
+      <guid>/target-specific-people-or-computers-with-item-level-targeting-in-gpos/</guid>
+      <description>Using Group Policy Objects can be a huge time saver, but if used improperly can be a big headache. Once you’ve messed around with GPO settings enough, you quickly figure out that you need to create new GPOs for specific programs, events, etc… that are not all in one GPO. This gives you a lot more flexibility and makes it very easy to track down troublesome GPO related issues when done properly.</description>
+    </item>
+    
+    <item>
+      <title>Windows Server Backup (BackupExec, NTbackup, Acronis True Image, etc…)</title>
+      <link>/windows-server-backup-backupexec-ntbackup-acronis-true-image-etc/</link>
+      <pubDate>Thu, 21 Oct 2010 16:59:56 +0000</pubDate>
+      
+      <guid>/windows-server-backup-backupexec-ntbackup-acronis-true-image-etc/</guid>
+      <description>I will walk through the various backup solutions out there for businesses. Most of the big names in the backup world are very good at backups, however they must be used properly. If using Windows Server 2003, I’d recommend Acronis True Image for any file systems and NTbackup for the exchange backup or other servers. If using Windows Server 2008, I’d recommend Acronis True Image for any servers, and Acronis® Recovery™ for Microsoft Exchange.</description>
+    </item>
+    
+  </channel>
+</rss>

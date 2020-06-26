@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gcloud on Chris Titus Tech</title>
+    <link>/tags/gcloud/</link>
+    <description>Recent content in gcloud on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Feb 2017 21:16:13 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/gcloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Swap file on Cloud VM (AWS, GCloud, or Azure)</title>
+      <link>/create-swap-file/</link>
+      <pubDate>Tue, 14 Feb 2017 21:16:13 +0000</pubDate>
+      
+      <guid>/create-swap-file/</guid>
+      <description>Use the commands below to create swap file on a micro instance with a Linux operating system. This creates a 2GB Swap file to help alleviate low system ram. Consequently, this is great for those using micro instances in the cloud that have under 1 GB of memory.
+Commands Run the following from your SSH window
+sudo fallocate -l 2G /swapfile&amp;lt;br /&amp;gt; sudo chmod 600 /swapfile&amp;lt;br /&amp;gt; sudo mkswap /swapfile&amp;lt;br /&amp;gt; sudo swapon /swapfile&amp;lt;br /&amp;gt; sudo swapon -s</description>
+    </item>
+    
+  </channel>
+</rss>

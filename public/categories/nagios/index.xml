@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nagios on Chris Titus Tech</title>
+    <link>/categories/nagios/</link>
+    <description>Recent content in Nagios on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Jun 2017 04:14:45 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/nagios/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Report Nvidia-smi Temperature to Nagios</title>
+      <link>/nvidia-smi-nagios/</link>
+      <pubDate>Sat, 24 Jun 2017 04:14:45 +0000</pubDate>
+      
+      <guid>/nvidia-smi-nagios/</guid>
+      <description>Here is a custom script that reports the nvidia-smi temperature of the Nvidia cards in your system using NRPE. Conversely, NRPE performs much better than NCPA and my protocol of choice.
+*Note: Install NRPE to your Linux box first, and create this file (gpu_temp.sh) in your /usr/lib/nagios/plugins directory for Nagios Core 4+
+Nagios NRPE Query Command check_nrpe!gpu_temp.sh
+This will only query the first GPU that is found via nvidia-smi CLI command.</description>
+    </item>
+    
+    <item>
+      <title>Troubleshooting Nagios 4 Core Installation</title>
+      <link>/troubleshooting-nagios/</link>
+      <pubDate>Wed, 21 Jun 2017 17:13:44 +0000</pubDate>
+      
+      <guid>/troubleshooting-nagios/</guid>
+      <description>Use the following command to verify you have all your config and command files correct when troubleshooting Nagios core installation. This will give you a readout of any configuration errors, thus giving you the ability to fix it on the fly.
+/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+I’d recommend making an alias in your .bashrc so you can just type:testnag
+Here is an example of the alias I use
+alias testnag=&#39;/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg&#39;</description>
+    </item>
+    
+  </channel>
+</rss>

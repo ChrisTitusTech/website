@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exchange Online on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/exchange-online/</link>
+    <description>Recent content in Exchange Online on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Oct 2016 20:29:26 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/exchange-online/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exclude shared mailboxes from Dynamic Distribution Group</title>
+      <link>https://www.christitus.com/exclude-shared-mailboxes-exchange/</link>
+      <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/exclude-shared-mailboxes-exchange/</guid>
+      <description>&lt;p&gt;This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Prevent autodiscover on Exchange server after an Office 365 Migration</title>
+      <link>https://www.christitus.com/prevent-autodiscover-exchange-server/</link>
+      <pubDate>Mon, 04 Jul 2016 16:44:02 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/prevent-autodiscover-exchange-server/</guid>
+      <description>&lt;p&gt;This article teaches you how to prevent autodiscover from happening on Exchange Server. This is important on an Office 365 migration when you still need to keep your local exchange server from resolving.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Exchange Online Archive Requirements</title>
+      <link>https://www.christitus.com/exchange-online-archive-requirements/</link>
+      <pubDate>Thu, 27 Aug 2015 18:41:57 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/exchange-online-archive-requirements/</guid>
+      <description>&lt;p&gt;This article goes over Exchange Online Archive Requirements and the headache of licensing for it. I recently completed a staged migration from exchange 2007 to exchange online. If you have any users over 50 GB you need the exchange online archive.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

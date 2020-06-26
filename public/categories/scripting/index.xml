@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scripting on Chris Titus Tech</title>
+    <link>/categories/scripting/</link>
+    <description>Recent content in Scripting on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Sep 2018 17:08:58 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/scripting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debloat Windows 10</title>
+      <link>/debloat-windows-10/</link>
+      <pubDate>Sun, 09 Sep 2018 17:08:58 +0000</pubDate>
+      
+      <guid>/debloat-windows-10/</guid>
+      <description>Right Click Windows Button -&amp;gt;Select Powershell Prompt (Admin) OR Select Command Prompt (Admin)  Note: If you don’t have PowerShell and only command prompt open command prompt (admin) and type “powershell“   Change Execution policy to allow a debloat script to run in Powershell Set-ExecutionPolicy Unrestricted Run the script from the following Github Repository. The person running this GitHub has been updating this script for a while and is a godsend.</description>
+    </item>
+    
+  </channel>
+</rss>

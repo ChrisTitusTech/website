@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPN on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/vpn/</link>
+    <description>Recent content in VPN on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Sep 2018 14:59:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup an always on VPN in Ubuntu</title>
+      <link>https://www.christitus.com/setup-always-on-vpn/</link>
+      <pubDate>Mon, 10 Sep 2018 14:59:11 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/setup-always-on-vpn/</guid>
+      <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

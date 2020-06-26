@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XenOrchestra on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/xenorchestra/</link>
+    <description>Recent content in XenOrchestra on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Oct 2018 17:14:47 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/xenorchestra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Install Xen Orchestra</title>
+      <link>https://www.christitus.com/how-to-install-xen-orchestra/</link>
+      <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/how-to-install-xen-orchestra/</guid>
+      <description>&lt;p&gt;This article shows you how to install Xen Orchestra and use the interface via the web. XOA is a very powerful addition to XenServer as it brings auto-updates and making it easier to manage entire farms.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Create iSCSI SR in XenServer</title>
+      <link>https://www.christitus.com/create-iscsi-sr/</link>
+      <pubDate>Tue, 09 Oct 2018 16:18:46 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/create-iscsi-sr/</guid>
+      <description>&lt;p&gt;This guide goes over how to Create iSCSI SR on Xen to connect to an iSCSI target. Here is the step-by-step and a video walkthrough, which includes setting up iSCSI in FreeNAS.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

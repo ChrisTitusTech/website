@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emoji on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/emoji/</link>
+    <description>Recent content in Emoji on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Apr 2020 15:35:07 -0500</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Emoji</title>
+      <link>https://www.christitus.com/emoji/</link>
+      <pubDate>Thu, 09 Apr 2020 15:35:07 -0500</pubDate>
+      
+      <guid>https://www.christitus.com/emoji/</guid>
+      <description>&lt;p&gt;This article goes over installing emoji support in Linux.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZSH on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/zsh/</link>
+    <description>Recent content in ZSH on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Feb 2020 12:32:44 -0600</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Zsh</title>
+      <link>https://www.christitus.com/zsh/</link>
+      <pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate>
+      
+      <guid>https://www.christitus.com/zsh/</guid>
+      <description>&lt;p&gt;In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

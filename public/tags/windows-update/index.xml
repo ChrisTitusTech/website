@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Update on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/tags/windows-update/</link>
+    <description>Recent content in Windows Update on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Jun 2020 10:50:19 -0500</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/tags/windows-update/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wsl2</title>
+      <link>https://www.christitus.com/wsl2/</link>
+      <pubDate>Sun, 07 Jun 2020 10:50:19 -0500</pubDate>
+      
+      <guid>https://www.christitus.com/wsl2/</guid>
+      <description>&lt;p&gt;This article goes over WSL 1 and 2 for Feature Update 2004. This will help you know which WSL you are currently using for any Linux installs on your PC.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Install Only Security Updates on Windows 10</title>
+      <link>https://www.christitus.com/windows-update-security-only/</link>
+      <pubDate>Sun, 29 Mar 2020 21:55:22 -0500</pubDate>
+      
+      <guid>https://www.christitus.com/windows-update-security-only/</guid>
+      <description>&lt;p&gt;This article shows how to install only security updates on Windows 10. This is vital to avoid long updates on startup or shutdown!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MacOS on Chris Titus Tech | Technology Simplified</title>
+    <link>https://www.christitus.com/categories/macos/</link>
+    <description>Recent content in MacOS on Chris Titus Tech | Technology Simplified</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Feb 2020 12:32:44 -0600</lastBuildDate>
+    
+	<atom:link href="https://www.christitus.com/categories/macos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Zsh</title>
+      <link>https://www.christitus.com/zsh/</link>
+      <pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate>
+      
+      <guid>https://www.christitus.com/zsh/</guid>
+      <description>&lt;p&gt;In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hackintosh Ryzen Install</title>
+      <link>https://www.christitus.com/hackintosh-ryzen-install/</link>
+      <pubDate>Tue, 29 Oct 2019 01:13:21 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/hackintosh-ryzen-install/</guid>
+      <description>&lt;p&gt;Here is the basic install instruction for the Hackintosh Ryzen install that I used on my Ryzen 2700 with an RX 580.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fix for Kernel Panic in Mac OSX</title>
+      <link>https://www.christitus.com/kernel-panic-mac-osx/</link>
+      <pubDate>Tue, 24 Jan 2012 22:55:18 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/kernel-panic-mac-osx/</guid>
+      <description>&lt;p&gt;Follow these steps to fix a kernel panic in Mac OSX. However, if this doesn’t fix the issue, there is a good chance the motherboard is damaged and you need to send it to Apple.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Release and Renew IP in OS X</title>
+      <link>https://www.christitus.com/release-and-renew-ip-in-os-x/</link>
+      <pubDate>Thu, 29 Sep 2011 18:46:43 +0000</pubDate>
+      
+      <guid>https://www.christitus.com/release-and-renew-ip-in-os-x/</guid>
+      <description>&lt;p&gt;I recently had some issues where a bridged virtual machine in osx would disconnect my osx side network connection. A simple release and renew would fix this.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
