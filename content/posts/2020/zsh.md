@@ -15,7 +15,7 @@ In this article, I go over my implementation of ZSH, which is a better shell alt
 ## Why ZSH?
 ZSH is an amazing shell that just makes everything a bit easier from auto suggestions, completing tasks you do regularly considerably faster.
 
-## Before you Begin: Dependancies
+## Before you Begin: Dependencies
 I built a resource for those starting out with my Github @ https://github.com/ChrisTitusTech/zsh and will be using many files from the project. 
 
 Packages needed before you start:
