@@ -26,7 +26,8 @@ The TLDR of that guide is the last two generations of nVidia Graphics Cards and 
 AMD CPUs can technically work, but will require more tinkering and are more difficult than the Intel counterparts. 
 
 ## Files and Projects you need to download and what they do
-Here is a list of all the files and GitHub projects that are used for OpenCore.  
+Here is a list of all the files and GitHub projects that are used for OpenCore.
+
   - OpenCore GitHub (Base Project) - https://github.com/acidanthera/OpenCorePkg/releases
   - All Drivers, Kexts, and SSDTs - https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html
   - GitMacOS GitHub (Download Official Apple PKGs) - https://github.com/corpnewt/gibMacOS
