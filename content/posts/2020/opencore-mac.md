@@ -27,11 +27,11 @@ AMD CPUs can technically work, but will require more tinkering and are more diff
 
 ## Files and Projects you need to download and what they do
 Here is a list of all the files and GitHub projects that are used for OpenCore.  
-  - OpenCore GitHub (Base Project) - https://github.com/acidanthera/OpenCorePkg/releases  
-  - All Drivers, Kexts, and SSDTs - https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html  
-  - GitMacOS GitHub (Download Official Apple PKGs) - https://github.com/corpnewt/gibMacOS  
-  - ProperTree (config.plist editing) - https://github.com/corpnewt/ProperTree  
-  - SSDTTime (DSDT Dump and SSDT creation) - https://github.com/corpnewt/SSDTTime  
+  - OpenCore GitHub (Base Project) - https://github.com/acidanthera/OpenCorePkg/releases
+  - All Drivers, Kexts, and SSDTs - https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html
+  - GitMacOS GitHub (Download Official Apple PKGs) - https://github.com/corpnewt/gibMacOS
+  - ProperTree (config.plist editing) - https://github.com/corpnewt/ProperTree
+  - SSDTTime (DSDT Dump and SSDT creation) - https://github.com/corpnewt/SSDTTime
 
 ## Checklist for https://dortania.github.io/OpenCore-Desktop-Guide
 1. Check Hardware Compatibility - Document all device IDs and firmware
