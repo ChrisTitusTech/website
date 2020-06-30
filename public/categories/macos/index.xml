@@ -1,51 +1,170 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>MacOS on Chris Titus Tech | Technology Simplified</title>
+    <title>MacOS on Chris Titus Tech</title>
     <link>https://www.christitus.com/categories/macos/</link>
-    <description>Recent content in MacOS on Chris Titus Tech | Technology Simplified</description>
+    <description>Recent content in MacOS on Chris Titus Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 19 Feb 2020 12:32:44 -0600</lastBuildDate>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 27 Jun 2020 19:44:42 -0500</lastBuildDate>
     
-	<atom:link href="https://www.christitus.com/categories/macos/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.christitus.com/categories/macos/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Zsh</title>
-      <link>https://www.christitus.com/zsh/</link>
-      <pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate>
+    
+
       
-      <guid>https://www.christitus.com/zsh/</guid>
-      <description>&lt;p&gt;In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hackintosh Ryzen Install</title>
-      <link>https://www.christitus.com/hackintosh-ryzen-install/</link>
-      <pubDate>Tue, 29 Oct 2019 01:13:21 +0000</pubDate>
+      <item>
+        <title>Opencore Mac</title>
+        <link>https://www.christitus.com/opencore-mac/</link>
+        <pubDate>Sat, 27 Jun 2020 19:44:42 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sat, 27 Jun 2020 19:44:42 -0500</atom:modified>
+        <guid>https://www.christitus.com/opencore-mac/</guid>
+        <description>&lt;p&gt;This goes over how to install macOS on pretty much any piece of hardware.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://www.christitus.com//images/2020-thumbs/opencore-mac.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>OpenCore</category>
+            
+          
+        
+        
+          
+            
+              <category>macOS</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://www.christitus.com/hackintosh-ryzen-install/</guid>
-      <description>&lt;p&gt;Here is the basic install instruction for the Hackintosh Ryzen install that I used on my Ryzen 2700 with an RX 580.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Fix for Kernel Panic in Mac OSX</title>
-      <link>https://www.christitus.com/kernel-panic-mac-osx/</link>
-      <pubDate>Tue, 24 Jan 2012 22:55:18 +0000</pubDate>
+      <item>
+        <title>Zsh</title>
+        <link>https://www.christitus.com/zsh/</link>
+        <pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 19 Feb 2020 12:32:44 -0600</atom:modified>
+        <guid>https://www.christitus.com/zsh/</guid>
+        <description>&lt;p&gt;In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://www.christitus.com//images/2020-thumbs/zsh.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>ZSH</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://www.christitus.com/kernel-panic-mac-osx/</guid>
-      <description>&lt;p&gt;Follow these steps to fix a kernel panic in Mac OSX. However, if this doesn’t fix the issue, there is a good chance the motherboard is damaged and you need to send it to Apple.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Release and Renew IP in OS X</title>
-      <link>https://www.christitus.com/release-and-renew-ip-in-os-x/</link>
-      <pubDate>Thu, 29 Sep 2011 18:46:43 +0000</pubDate>
+      <item>
+        <title>Hackintosh Ryzen Install</title>
+        <link>https://www.christitus.com/hackintosh-ryzen-install/</link>
+        <pubDate>Tue, 29 Oct 2019 01:13:21 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 29 Oct 2019 01:13:21 +0000</atom:modified>
+        <guid>https://www.christitus.com/hackintosh-ryzen-install/</guid>
+        <description>&lt;p&gt;Here is the basic install instruction for the Hackintosh Ryzen install that I used on my Ryzen 2700 with an RX 580.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://www.christitus.com//wp-content/uploads/2019/10/hackintosh-Install-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Hackintosh</category>
+            
+          
+        
+        
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://www.christitus.com/release-and-renew-ip-in-os-x/</guid>
-      <description>&lt;p&gt;I recently had some issues where a bridged virtual machine in osx would disconnect my osx side network connection. A simple release and renew would fix this.&lt;/p&gt;</description>
-    </item>
+      <item>
+        <title>Fix for Kernel Panic in Mac OSX</title>
+        <link>https://www.christitus.com/kernel-panic-mac-osx/</link>
+        <pubDate>Tue, 24 Jan 2012 22:55:18 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 24 Jan 2012 22:55:18 +0000</atom:modified>
+        <guid>https://www.christitus.com/kernel-panic-mac-osx/</guid>
+        <description>&lt;p&gt;Follow these steps to fix a kernel panic in Mac OSX. However, if this doesn’t fix the issue, there is a good chance the motherboard is damaged and you need to send it to Apple.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://www.christitus.com//wp-content/uploads/2012/01/kernal-panic-mac-osx.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Release and Renew IP in OS X</title>
+        <link>https://www.christitus.com/release-and-renew-ip-in-os-x/</link>
+        <pubDate>Thu, 29 Sep 2011 18:46:43 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 29 Sep 2011 18:46:43 +0000</atom:modified>
+        <guid>https://www.christitus.com/release-and-renew-ip-in-os-x/</guid>
+        <description>&lt;p&gt;I recently had some issues where a bridged virtual machine in osx would disconnect my osx side network connection. A simple release and renew would fix this.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

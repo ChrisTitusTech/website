@@ -1,24 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Microsoft Store on Chris Titus Tech | Technology Simplified</title>
+    <title>Microsoft Store on Chris Titus Tech</title>
     <link>https://www.christitus.com/tags/microsoft-store/</link>
-    <description>Recent content in Microsoft Store on Chris Titus Tech | Technology Simplified</description>
+    <description>Recent content in Microsoft Store on Chris Titus Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 11 Jun 2020 16:04:48 -0500</lastBuildDate>
     
-	<atom:link href="https://www.christitus.com/tags/microsoft-store/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.christitus.com/tags/microsoft-store/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Debloat Windows 10 in 2020</title>
-      <link>https://www.christitus.com/debloat-windows-10-2020/</link>
-      <pubDate>Thu, 11 Jun 2020 16:04:48 -0500</pubDate>
+    
+
       
-      <guid>https://www.christitus.com/debloat-windows-10-2020/</guid>
-      <description>&lt;p&gt;This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC.&lt;/p&gt;</description>
-    </item>
+      <item>
+        <title>Debloat Windows 10 in 2020</title>
+        <link>https://www.christitus.com/debloat-windows-10-2020/</link>
+        <pubDate>Thu, 11 Jun 2020 16:04:48 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 11 Jun 2020 16:04:48 -0500</atom:modified>
+        <guid>https://www.christitus.com/debloat-windows-10-2020/</guid>
+        <description>&lt;p&gt;This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://www.christitus.com//images/2020-thumbs/debloat-windows-10-2020.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Microsoft Store</category>
+            
+          
+        
+        
+          
+            
+              <category>Windows</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

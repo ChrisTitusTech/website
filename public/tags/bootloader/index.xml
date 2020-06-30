@@ -1,24 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Bootloader on Chris Titus Tech | Technology Simplified</title>
+    <title>Bootloader on Chris Titus Tech</title>
     <link>https://www.christitus.com/tags/bootloader/</link>
-    <description>Recent content in Bootloader on Chris Titus Tech | Technology Simplified</description>
+    <description>Recent content in Bootloader on Chris Titus Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 01 Apr 2019 22:21:10 +0000</lastBuildDate>
     
-	<atom:link href="https://www.christitus.com/tags/bootloader/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.christitus.com/tags/bootloader/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Grub Rescue | Repairing your Bootloader</title>
-      <link>https://www.christitus.com/grub-rescue/</link>
-      <pubDate>Mon, 01 Apr 2019 22:21:10 +0000</pubDate>
+    
+
       
-      <guid>https://www.christitus.com/grub-rescue/</guid>
-      <description>&lt;p&gt;Lets go over Grub Rescue and repairing your bootloader. This is a very misunderstood topic and by learn basic syntax you will be able to repair your GRUB very easily. Here are 4 methods of doing a GRUB Rescue.&lt;/p&gt;</description>
-    </item>
+      <item>
+        <title>Grub Rescue | Repairing your Bootloader</title>
+        <link>https://www.christitus.com/grub-rescue/</link>
+        <pubDate>Mon, 01 Apr 2019 22:21:10 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 01 Apr 2019 22:21:10 +0000</atom:modified>
+        <guid>https://www.christitus.com/grub-rescue/</guid>
+        <description>&lt;p&gt;Lets go over Grub Rescue and repairing your bootloader. This is a very misunderstood topic and by learn basic syntax you will be able to repair your GRUB very easily. Here are 4 methods of doing a GRUB Rescue.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://www.christitus.com//wp-content/uploads/2019/04/grub-rescue.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Grub</category>
+            
+          
+            
+              <category>Bootloader</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

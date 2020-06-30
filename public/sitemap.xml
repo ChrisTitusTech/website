@@ -3,8 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.christitus.com/recommendations/</loc>
+    <loc>https://www.christitus.com/about/recommendations/</loc>
     <lastmod>2020-01-02T13:59:54-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.christitus.com/categories/</loc>
+    <lastmod>2020-06-27T19:44:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.christitus.com/</loc>
+    <lastmod>2020-06-27T19:44:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.christitus.com/categories/macos/</loc>
+    <lastmod>2020-06-27T19:44:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.christitus.com/tags/opencore/</loc>
+    <lastmod>2020-06-27T19:44:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.christitus.com/opencore-mac/</loc>
+    <lastmod>2020-06-27T19:44:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.christitus.com/posts/</loc>
+    <lastmod>2020-06-27T19:44:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.christitus.com/tags/</loc>
+    <lastmod>2020-06-27T19:44:42-05:00</lastmod>
   </url>
   
   <url>
@@ -18,22 +53,7 @@
   </url>
   
   <url>
-    <loc>https://www.christitus.com/categories/</loc>
-    <lastmod>2020-06-21T20:01:50-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.christitus.com/debloat-android/</loc>
-    <lastmod>2020-06-21T20:01:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.christitus.com/posts/</loc>
-    <lastmod>2020-06-21T20:01:50-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.christitus.com/tags/</loc>
     <lastmod>2020-06-21T20:01:50-05:00</lastmod>
   </url>
   
@@ -138,11 +158,6 @@
   </url>
   
   <url>
-    <loc>https://www.christitus.com/categories/macos/</loc>
-    <lastmod>2020-02-19T12:32:44-06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.christitus.com/tags/zsh/</loc>
     <lastmod>2020-02-19T12:32:44-06:00</lastmod>
   </url>
@@ -203,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://www.christitus.com/</loc>
+    <loc>https://www.christitus.com/about/</loc>
     <lastmod>2020-01-02T13:59:54-06:00</lastmod>
   </url>
   
@@ -588,12 +603,12 @@
   </url>
   
   <url>
-    <loc>https://www.christitus.com/terms-of-service/</loc>
+    <loc>https://www.christitus.com/about/terms-of-service/</loc>
     <lastmod>2018-09-19T15:29:33+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.christitus.com/privacy-policy/</loc>
+    <loc>https://www.christitus.com/about/privacy-policy/</loc>
     <lastmod>2018-09-19T15:25:58+00:00</lastmod>
   </url>
   
@@ -1055,6 +1070,10 @@
   <url>
     <loc>https://www.christitus.com/search/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.christitus.com/series/</loc>
   </url>
   
 </urlset>

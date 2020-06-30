@@ -1,24 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>ADSync on Chris Titus Tech | Technology Simplified</title>
+    <title>ADSync on Chris Titus Tech</title>
     <link>https://www.christitus.com/tags/adsync/</link>
-    <description>Recent content in ADSync on Chris Titus Tech | Technology Simplified</description>
+    <description>Recent content in ADSync on Chris Titus Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 07 Oct 2016 14:01:26 +0000</lastBuildDate>
     
-	<atom:link href="https://www.christitus.com/tags/adsync/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.christitus.com/tags/adsync/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Force active directory sync to Office 365 with Azure ADSync</title>
-      <link>https://www.christitus.com/force-active-directory-sync/</link>
-      <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
+    
+
       
-      <guid>https://www.christitus.com/force-active-directory-sync/</guid>
-      <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;</description>
-    </item>
+      <item>
+        <title>Force active directory sync to Office 365 with Azure ADSync</title>
+        <link>https://www.christitus.com/force-active-directory-sync/</link>
+        <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 07 Oct 2016 14:01:26 +0000</atom:modified>
+        <guid>https://www.christitus.com/force-active-directory-sync/</guid>
+        <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://www.christitus.com//wp-content/uploads/2016/10/ActiveDirecotry2-624x253.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>ADSync</category>
+            
+          
+            
+              <category>Office365</category>
+            
+          
+            
+              <category>Powershell</category>
+            
+          
+        
+        
+          
+            
+              <category>Windows Server</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

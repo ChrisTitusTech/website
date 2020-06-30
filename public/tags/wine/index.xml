@@ -1,33 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Wine on Chris Titus Tech | Technology Simplified</title>
+    <title>Wine on Chris Titus Tech</title>
     <link>https://www.christitus.com/tags/wine/</link>
-    <description>Recent content in Wine on Chris Titus Tech | Technology Simplified</description>
+    <description>Recent content in Wine on Chris Titus Tech</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 17 Jan 2020 17:43:17 -0600</lastBuildDate>
     
-	<atom:link href="https://www.christitus.com/tags/wine/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.christitus.com/tags/wine/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Lcars Screensaver</title>
-      <link>https://www.christitus.com/lcars-screensaver/</link>
-      <pubDate>Fri, 17 Jan 2020 17:43:17 -0600</pubDate>
+    
+
       
-      <guid>https://www.christitus.com/lcars-screensaver/</guid>
-      <description>&lt;p&gt;This article goes over getting the LCARS screensaver by mewho working in Linux. This Screensaver was originally intended for Windows 9x and this is for fun!&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Garmin Express on Linux | Step by Step Guide</title>
-      <link>https://www.christitus.com/garmin-express-linux/</link>
-      <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
+      <item>
+        <title>Lcars Screensaver</title>
+        <link>https://www.christitus.com/lcars-screensaver/</link>
+        <pubDate>Fri, 17 Jan 2020 17:43:17 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 17 Jan 2020 17:43:17 -0600</atom:modified>
+        <guid>https://www.christitus.com/lcars-screensaver/</guid>
+        <description>&lt;p&gt;This article goes over getting the LCARS screensaver by mewho working in Linux. This Screensaver was originally intended for Windows 9x and this is for fun!&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://www.christitus.com//images/2020-thumbs/lcars-screensaver.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Wine</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
       
-      <guid>https://www.christitus.com/garmin-express-linux/</guid>
-      <description>&lt;p&gt;This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p&gt;</description>
-    </item>
+      <item>
+        <title>Garmin Express on Linux | Step by Step Guide</title>
+        <link>https://www.christitus.com/garmin-express-linux/</link>
+        <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 15 Feb 2019 22:20:57 +0000</atom:modified>
+        <guid>https://www.christitus.com/garmin-express-linux/</guid>
+        <description>&lt;p&gt;This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://www.christitus.com//wp-content/uploads/2019/02/garmin-express-icon-1.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Garmin Express</category>
+            
+          
+            
+              <category>Wine</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>
