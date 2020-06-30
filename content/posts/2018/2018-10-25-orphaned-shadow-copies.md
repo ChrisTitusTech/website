@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-25T15:34:24+00:00
 url: /orphaned-shadow-copies/
-thumbnail: /wp-content/uploads/2018/10/shadow-copy-banner.png
+image: /wp-content/uploads/2018/10/shadow-copy-banner.png
 categories:
   - Windows Server
 tags:

@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-09T18:54:21+00:00
 url: /xenserver-xcp-ng-first-vm-install/
-thumbnail: /wp-content/uploads/2018/09/XCP-ng.png
+image: /wp-content/uploads/2018/09/XCP-ng.png
 categories:
   - Virtualization
 tags:

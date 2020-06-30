@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-12-02T05:31:59+00:00
 url: /vpn-kill-switch/
-thumbnail: /wp-content/uploads/2019/12/vpn-kill-switch-300x169.jpg
+image: /wp-content/uploads/2019/12/vpn-kill-switch-300x169.jpg
 categories:
   - Linux
   - Networking

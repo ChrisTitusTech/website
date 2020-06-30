@@ -3,7 +3,7 @@ title: "Degoogle Apps"
 type: post
 date: 2020-06-02T21:28:09-05:00
 url: /degoogle-apps/
-thumbnail: /images/2020-thumbs/degoogle-apps.jpg
+image: /images/2020-thumbs/degoogle-apps.jpg
 categories:
   - Android 
 tags:

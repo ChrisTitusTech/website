@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-26T17:31:24+00:00
 url: /apache-mpm-prefork/
-thumbnail: /wp-content/uploads/2018/09/apache-624x351.jpg
+image: /wp-content/uploads/2018/09/apache-624x351.jpg
 categories:
   - Linux
 tags:

@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-06T17:20:22+00:00
 url: /disable-windows-firewall-properly/
-thumbnail: /wp-content/uploads/2018/10/disable-firewall.png
+image: /wp-content/uploads/2018/10/disable-firewall.png
 categories:
   - Windows
   - Networking

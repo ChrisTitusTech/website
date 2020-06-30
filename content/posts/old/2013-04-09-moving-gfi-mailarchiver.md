@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2013-04-09T16:39:37+00:00
 url: /moving-gfi-mailarchiver/
-thumbnail: /wp-content/uploads/2013/04/gfi.png
+image: /wp-content/uploads/2013/04/gfi.png
 categories:
   - Windows Server
 tags:

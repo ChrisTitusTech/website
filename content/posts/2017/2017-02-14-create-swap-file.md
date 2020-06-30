@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2017-02-14T21:16:13+00:00
 url: /create-swap-file/
-thumbnail: /wp-content/uploads/2017/02/swapfile.png
+image: /wp-content/uploads/2017/02/swapfile.png
 categories:
   - Linux
 tags:

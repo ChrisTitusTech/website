@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-06-20T20:30:49+00:00
 url: /windows-server-2016-core-remote/
-thumbnail: /wp-content/uploads/2018/06/windows-server-2016.jpg
+image: /wp-content/uploads/2018/06/windows-server-2016.jpg
 categories:
   - Windows Server
 tags:

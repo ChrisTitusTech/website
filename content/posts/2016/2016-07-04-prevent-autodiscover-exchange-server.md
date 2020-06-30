@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2016-07-04T16:44:02+00:00
 url: /prevent-autodiscover-exchange-server/
-thumbnail: /wp-content/uploads/2016/07/autodiscover-redirect-prompt.png
+image: /wp-content/uploads/2016/07/autodiscover-redirect-prompt.png
 categories:
   - Windows Server
 tags:

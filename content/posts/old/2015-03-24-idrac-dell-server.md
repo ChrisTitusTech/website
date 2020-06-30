@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2015-03-24T18:43:46+00:00
 url: /idrac-dell-server/
-thumbnail: /wp-content/uploads/2015/03/Dell-iDRAC.png
+image: /wp-content/uploads/2015/03/Dell-iDRAC.png
 categories:
   - Hardware
   - Windows Server

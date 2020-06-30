@@ -3,7 +3,7 @@ title: "Custom Vim"
 type: post
 date: 2020-06-04T15:05:41-05:00
 url: /custom-vim/
-thumbnail: /images/2020-thumbs/custom-vim.jpg
+image: /images/2020-thumbs/custom-vim.jpg
 categories:
   - Linux
 tags:

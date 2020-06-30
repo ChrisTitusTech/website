@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-10-29T01:13:21+00:00
 url: /hackintosh-ryzen-install/
-thumbnail: /wp-content/uploads/2019/10/hackintosh-Install-300x169.jpg
+image: /wp-content/uploads/2019/10/hackintosh-Install-300x169.jpg
 categories:
   - MacOS
 tags:

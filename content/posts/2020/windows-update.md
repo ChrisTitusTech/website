@@ -3,7 +3,7 @@ title: "How to Install Only Security Updates on Windows 10"
 type: post
 date: 2020-03-29T21:55:22-05:00
 url: /windows-update-security-only/
-thumbnail: /images/2020-thumbs/windows-update-fix.jpg
+image: /images/2020-thumbs/windows-update-fix.jpg
 categories:
   - Windows
 tags:

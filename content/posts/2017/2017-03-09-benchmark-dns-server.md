@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2017-03-09T17:35:18+00:00
 url: /benchmark-dns-server/
-thumbnail: /wp-content/uploads/2017/03/Secure-DNS.png
+image: /wp-content/uploads/2017/03/Secure-DNS.png
 categories:
   - Networking
 tags:

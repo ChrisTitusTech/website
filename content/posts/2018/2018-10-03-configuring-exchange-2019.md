@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-03T15:45:56+00:00
 url: /configuring-exchange-2019/
-thumbnail: /wp-content/uploads/2018/10/Exchange-Server-2019.jpg
+image: /wp-content/uploads/2018/10/Exchange-Server-2019.jpg
 categories:
   - Windows Server
 tags:

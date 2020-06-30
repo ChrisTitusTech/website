@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2016-03-17T14:52:31+00:00
 url: /encore-bandit-connection/
-thumbnail: /wp-content/uploads/2016/03/bandit3-624x245.png
+image: /wp-content/uploads/2016/03/bandit3-624x245.png
 categories:
   - Networking
 

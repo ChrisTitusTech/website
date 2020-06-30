@@ -3,7 +3,7 @@ title: "Emoji"
 type: post
 date: 2020-04-09T15:35:07-05:00
 url: /emoji/
-thumbnail: /images/2020-thumbs/emoji.jpg
+image: /images/2020-thumbs/emoji.jpg
 categories:
   - Linux
 tags:

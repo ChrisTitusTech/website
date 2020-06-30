@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-01-21T19:51:04+00:00
 url: /manjaro-architect-installation-guide/
-thumbnail: /wp-content/uploads/2019/01/manjaro-e1548100581392.jpg
+image: /wp-content/uploads/2019/01/manjaro-e1548100581392.jpg
 categories:
   - Linux
 tags:

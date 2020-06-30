@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-09-04T23:25:17+00:00
 url: /bigdaddylinux-interview/
-thumbnail: /wp-content/uploads/2019/09/bigdaddy.png
+image: /wp-content/uploads/2019/09/bigdaddy.png
 categories:
   - YouTube
 tags:

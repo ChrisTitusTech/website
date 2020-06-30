@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-09T17:08:58+00:00
 url: /debloat-windows-10/
-thumbnail: /wp-content/uploads/2018/09/remove-win10-bloatware.jpg
+image: /wp-content/uploads/2018/09/remove-win10-bloatware.jpg
 categories:
   - Windows
 tags:

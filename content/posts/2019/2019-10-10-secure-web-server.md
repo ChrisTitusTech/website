@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-10-10T13:37:49+00:00
 url: /secure-web-server/
-thumbnail: https://www.christitus.com/wp-content/uploads/2019/10/secure-website-300x169.jpg
+image: https://www.christitus.com/wp-content/uploads/2019/10/secure-website-300x169.jpg
 categories:
   - Linux
   - Networking

@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2017-06-21T17:13:44+00:00
 url: /troubleshooting-nagios/
-thumbnail: /wp-content/uploads/2017/06/troubleshooting-nagios-624x484.jpg
+image: /wp-content/uploads/2017/06/troubleshooting-nagios-624x484.jpg
 categories:
   - Linux
 tags:

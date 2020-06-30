@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2013-04-04T19:04:14+00:00
 url: /update-is-pending/
-thumbnail: /wp-content/uploads/2013/04/error.png
+image: /wp-content/uploads/2013/04/error.png
 categories:
   - Windows Server
 tags:

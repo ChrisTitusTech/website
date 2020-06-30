@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2016-07-04T16:32:21+00:00
 url: /grant-full-access-public-folders/
-thumbnail: /wp-content/uploads/2013/12/microsoft_exchange_header_contentfullwidth.jpg
+image: /wp-content/uploads/2013/12/microsoft_exchange_header_contentfullwidth.jpg
 categories:
   - Windows Server
 tags:

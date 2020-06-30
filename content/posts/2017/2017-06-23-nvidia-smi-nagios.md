@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2017-06-24T04:14:45+00:00
 url: /nvidia-smi-nagios/
-thumbnail: /wp-content/uploads/2017/06/Nagios-Logo.jpg
+image: /wp-content/uploads/2017/06/Nagios-Logo.jpg
 categories:
   - Linux
 tags:

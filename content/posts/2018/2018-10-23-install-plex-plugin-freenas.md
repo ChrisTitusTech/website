@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-23T19:14:03+00:00
 url: /install-plex-plugin-freenas/
-thumbnail: /wp-content/uploads/2018/10/thumbnail-1.jpg
+image: /wp-content/uploads/2018/10/thumbnail-1.jpg
 categories:
   - FreeNAS
 tags:

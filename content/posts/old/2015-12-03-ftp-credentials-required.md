@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2015-12-03T22:47:50+00:00
 url: /ftp-credentials-required/
-thumbnail: /wp-content/uploads/2015/12/ftp-creds.png
+image: /wp-content/uploads/2015/12/ftp-creds.png
 categories:
   - Linux
 

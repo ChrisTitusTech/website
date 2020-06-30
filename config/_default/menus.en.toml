@@ -1,0 +1,21 @@
+[[main]]
+    identifier = "home"
+    name = "Home"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "/"
+    weight = 1
+
+[[main]]
+    name = "Donate"
+    post = ""
+    pre = "<i class='fa fa-road'></i>"
+    url = "https://www.patreon.com/christitustech"
+    weight = 2
+
+[[main]]
+    name = "Remote Support"
+    post = ""
+    pre = "<i class='fa fa-road'></i>"
+    url = "https://download.teamviewer.com/download/TeamViewerQS.exe"
+    weight = 3
+

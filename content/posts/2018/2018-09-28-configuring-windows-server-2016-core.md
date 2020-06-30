@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-28T19:42:47+00:00
 url: /configuring-windows-server-2016-core/
-thumbnail: /wp-content/uploads/2018/09/windows-server-2016-guide.jpg
+image: /wp-content/uploads/2018/09/windows-server-2016-guide.jpg
 categories:
   - Windows Server
 tags:

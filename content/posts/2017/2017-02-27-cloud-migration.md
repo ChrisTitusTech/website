@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2017-02-27T21:03:20+00:00
 url: /cloud-migration/
-thumbnail: /wp-content/uploads/2017/02/datacenter.png
+image: /wp-content/uploads/2017/02/datacenter.png
 ampforwp-amp-on-off:
   - default
 categories:

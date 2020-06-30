@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-11T17:14:47+00:00
 url: /how-to-install-xen-orchestra/
-thumbnail: /wp-content/uploads/2018/10/citrixready-xologo.png
+image: /wp-content/uploads/2018/10/citrixready-xologo.png
 categories:
   - Virtualization
 tags:

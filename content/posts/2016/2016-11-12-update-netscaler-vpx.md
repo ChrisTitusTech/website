@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2016-11-12T15:13:18+00:00
 url: /update-netscaler-vpx/
-thumbnail: /wp-content/uploads/2016/11/citrix-netscaler.png
+image: /wp-content/uploads/2016/11/citrix-netscaler.png
 categories:
   - Networking
 tags:

@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2014-07-01T15:39:39+00:00
 url: /deploy-excel-macros/
-thumbnail: /wp-content/uploads/2014/07/Excel-icon.png
+image: /wp-content/uploads/2014/07/Excel-icon.png
 categories:
   - Windows
 

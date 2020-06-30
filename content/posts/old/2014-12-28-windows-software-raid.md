@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2014-12-28T22:53:22+00:00
 url: /windows-software-raid/
-thumbnail: /wp-content/uploads/2014/12/RAID1.jpg
+image: /wp-content/uploads/2014/12/RAID1.jpg
 categories:
   - Windows
 

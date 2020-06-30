@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-08-17T15:58:36+00:00
 url: /remove-asterisk/
-thumbnail: /wp-content/uploads/2018/08/Asterisk_003.png
+image: /wp-content/uploads/2018/08/Asterisk_003.png
 categories:
   - Linux
 tags:

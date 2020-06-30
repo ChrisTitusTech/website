@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2012-09-26T16:51:38+00:00
 url: /windows-refresh-pc/
-thumbnail: /wp-content/uploads/2012/09/windows-reset-pc.png
+image: /wp-content/uploads/2012/09/windows-reset-pc.png
 categories:
   - Windows
 

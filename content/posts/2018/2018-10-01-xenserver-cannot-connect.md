@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-01T18:53:13+00:00
 url: /xenserver-cannot-connect/
-thumbnail: /wp-content/uploads/2016/07/xenserver.jpg
+image: /wp-content/uploads/2016/07/xenserver.jpg
 categories:
   - Virtualization
 tags:

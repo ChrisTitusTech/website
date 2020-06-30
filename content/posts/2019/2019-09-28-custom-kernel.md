@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-09-29T00:32:45+00:00
 url: /custom-kernel/
-thumbnail: /wp-content/uploads/2019/09/customkernels-300x169.jpg
+image: /wp-content/uploads/2019/09/customkernels-300x169.jpg
 categories:
   - Linux
 tags:

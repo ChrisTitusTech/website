@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-06-14T15:46:23+00:00
 url: /changing-file-permissions/
-thumbnail: /wp-content/uploads/2018/06/changing-file-permissions.png
+image: /wp-content/uploads/2018/06/changing-file-permissions.png
 categories:
   - Windows
 tags:

@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-10-14T20:08:01+00:00
 url: /clean-up-windows-10/
-thumbnail: /wp-content/uploads/2019/10/cleanup-win10-300x169.jpg
+image: /wp-content/uploads/2019/10/cleanup-win10-300x169.jpg
 categories:
   - Windows
 tags:

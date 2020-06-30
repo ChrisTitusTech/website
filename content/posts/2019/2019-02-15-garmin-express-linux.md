@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-02-15T22:20:57+00:00
 url: /garmin-express-linux/
-thumbnail: /wp-content/uploads/2019/02/garmin-express-icon-1.png
+image: /wp-content/uploads/2019/02/garmin-express-icon-1.png
 categories:
   - Linux
 tags:

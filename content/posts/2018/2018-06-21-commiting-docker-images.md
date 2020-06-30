@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-06-21T19:36:03+00:00
 url: /commiting-docker-images/
-thumbnail: /wp-content/uploads/2018/06/docker-logo.png
+image: /wp-content/uploads/2018/06/docker-logo.png
 categories:
   - Virtualization
 tags:

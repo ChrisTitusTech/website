@@ -3,7 +3,7 @@ title: "Degoogle"
 type: post
 date: 2020-06-01T17:18:27-05:00
 url: /degoogle/
-thumbnail: /images/2020-thumbs/degoogle.jpg
+image: /images/2020-thumbs/degoogle.jpg
 categories:
   - Linux
   - Windows

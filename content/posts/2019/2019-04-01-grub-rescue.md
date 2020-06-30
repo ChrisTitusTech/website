@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-04-01T22:21:10+00:00
 url: /grub-rescue/
-thumbnail: /wp-content/uploads/2019/04/grub-rescue.png
+image: /wp-content/uploads/2019/04/grub-rescue.png
 categories:
   - Linux
 tags:

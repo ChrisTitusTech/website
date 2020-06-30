@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-18T19:06:44+00:00
 url: /snipping-tool-removed/
-thumbnail: /wp-content/uploads/2018/09/snipping-tool-keyboard-shortcuts-in-Windows-10_thumb-624x348.png
+image: /wp-content/uploads/2018/09/snipping-tool-keyboard-shortcuts-in-Windows-10_thumb-624x348.png
 categories:
   - Windows
 tags:

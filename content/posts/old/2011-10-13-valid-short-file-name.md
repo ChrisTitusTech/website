@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2011-10-13T20:05:32+00:00
 url: /valid-short-file-name/
-thumbnail: /wp-content/uploads/2011/10/not-a-valid-short-file-name.png
+image: /wp-content/uploads/2011/10/not-a-valid-short-file-name.png
 categories:
   - Windows
 

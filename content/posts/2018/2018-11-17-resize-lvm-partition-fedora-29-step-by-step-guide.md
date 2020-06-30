@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-11-17T19:54:29+00:00
 url: /resize-lvm-partition-fedora-29-step-by-step-guide/
-thumbnail: /wp-content/uploads/2018/11/Selection_008.png
+image: /wp-content/uploads/2018/11/Selection_008.png
 categories:
   - Linux
 tags:

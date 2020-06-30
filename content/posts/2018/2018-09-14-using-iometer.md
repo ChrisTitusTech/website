@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-14T16:50:46+00:00
 url: /using-iometer/
-thumbnail: /wp-content/uploads/2018/09/iometer-2.png
+image: /wp-content/uploads/2018/09/iometer-2.png
 categories:
   - Windows
   - Hardware

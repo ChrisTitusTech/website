@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-09-21T04:45:08+00:00
 url: /openvpn-server/
-thumbnail: /wp-content/uploads/2019/09/openvpn.png
+image: /wp-content/uploads/2019/09/openvpn.png
 categories:
   - Linux
   - Networking

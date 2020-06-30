@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2015-07-26T02:39:10+00:00
 url: /sfc-scannow-error/
-thumbnail: /wp-content/uploads/2015/07/win10slim.jpg
+image: /wp-content/uploads/2015/07/win10slim.jpg
 categories:
   - Windows
 tags:

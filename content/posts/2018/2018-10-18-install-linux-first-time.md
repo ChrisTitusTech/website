@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-18T15:23:20+00:00
 url: /install-linux-first-time/
-thumbnail: /wp-content/uploads/2018/10/thumbnail.jpg
+image: /wp-content/uploads/2018/10/thumbnail.jpg
 categories:
   - Linux
 tags:

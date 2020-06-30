@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-06-21T15:57:35+00:00
 url: /moving-unifi-access-point/
-thumbnail: /wp-content/uploads/2018/06/unifi-ap.png
+image: /wp-content/uploads/2018/06/unifi-ap.png
 categories:
   - Networking
 tags:

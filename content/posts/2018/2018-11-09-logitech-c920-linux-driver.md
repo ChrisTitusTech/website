@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-11-09T20:36:56+00:00
 url: /logitech-c920-linux-driver/
-thumbnail: /wp-content/uploads/2018/11/c920-pro-hd-webcam-refresh.png
+image: /wp-content/uploads/2018/11/c920-pro-hd-webcam-refresh.png
 categories:
   - Linux
 tags:

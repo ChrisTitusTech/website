@@ -3,7 +3,7 @@ title: "LightDM Configuration"
 type: post
 date: 2020-01-08T08:09:34-06:00
 url: /lightdm-configuration/
-thumbnail: /images/2020-thumbs/lightdm-configuration.jpg
+image: /images/2020-thumbs/lightdm-configuration.jpg
 categories:
   - Linux
 tags:

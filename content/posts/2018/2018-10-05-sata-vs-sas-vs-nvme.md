@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-05T20:28:58+00:00
 url: /sata-vs-sas-vs-nvme/
-thumbnail: /wp-content/uploads/2018/10/ssdvsnvme.png
+image: /wp-content/uploads/2018/10/ssdvsnvme.png
 categories:
   - Hardware
 tags:

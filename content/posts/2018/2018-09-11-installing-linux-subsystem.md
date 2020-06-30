@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-11T19:56:07+00:00
 url: /installing-linux-subsystem/
-thumbnail: /wp-content/uploads/2018/09/winubuntu.png
+image: /wp-content/uploads/2018/09/winubuntu.png
 categories:
   - Linux
   - Windows

@@ -3,7 +3,7 @@ title: "Wsl2"
 type: post
 date: 2020-06-07T10:50:19-05:00
 url: /wsl2/
-thumbnail: /images/2020-thumbs/wsl2.jpg
+image: /images/2020-thumbs/wsl2.jpg
 categories:
   - Windows
 tags:

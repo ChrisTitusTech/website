@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2013-04-15T21:46:08+00:00
 url: /rename-folders-mapped-drive/
-thumbnail: /wp-content/uploads/2013/04/map-network-drive-windows.png
+image: /wp-content/uploads/2013/04/map-network-drive-windows.png
 categories:
   - Windows
   - Windows Server

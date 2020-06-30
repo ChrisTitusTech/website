@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-09T16:18:46+00:00
 url: /create-iscsi-sr/
-thumbnail: /wp-content/uploads/2018/10/xcp-ng-iscsi.png
+image: /wp-content/uploads/2018/10/xcp-ng-iscsi.png
 categories:
   - Virtualization
 tags:

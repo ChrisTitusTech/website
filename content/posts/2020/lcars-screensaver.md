@@ -3,7 +3,7 @@ title: "Lcars Screensaver"
 type: post
 date: 2020-01-17T17:43:17-06:00
 url: /lcars-screensaver/
-thumbnail: /images/2020-thumbs/lcars-screensaver.jpg
+image: /images/2020-thumbs/lcars-screensaver.jpg
 categories:
   - Linux
 tags:

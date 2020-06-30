@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-10T14:59:11+00:00
 url: /setup-always-on-vpn/
-thumbnail: /wp-content/uploads/2018/09/VPN-624x200.png
+image: /wp-content/uploads/2018/09/VPN-624x200.png
 categories:
   - Linux
 tags:

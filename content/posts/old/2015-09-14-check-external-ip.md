@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2015-09-14T18:33:12+00:00
 url: /check-external-ip/
-thumbnail: /wp-content/uploads/2015/09/ipaddress.jpg
+image: /wp-content/uploads/2015/09/ipaddress.jpg
 categories:
   - Linux
 
