@@ -1,0 +1,13 @@
+{{ if $.Param "enableSidebar" }}
+<div class="sidebar">
+    {{ partial "search/site-search" . }}
+    {{ partial "sidebar/site-bio" . }}
+</div>
+<div class="taxo-root">
+{{ partial "taxonomy/taxonomy-categories" . }}
+{{ partial "taxonomy/taxonomy-tags" . }}
+{{ partial "taxonomy/taxonomy-series" . }}
+</div>
+<hr class="hr-fade sidebar-hr" />
+{{ partial "sidebar/custom-home" . }}
+{{ end }}
