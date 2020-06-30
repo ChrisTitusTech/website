@@ -33,6 +33,7 @@ Here is a list of all the files and GitHub projects that are used for OpenCore.
   - GitMacOS GitHub (Download Official Apple PKGs) - https://github.com/corpnewt/gibMacOS
   - ProperTree (config.plist editing) - https://github.com/corpnewt/ProperTree
   - SSDTTime (DSDT Dump and SSDT creation) - https://github.com/corpnewt/SSDTTime
+  - GenSMBIOS (Generate Serial and UUID) - https://github.com/corpnewt/GenSMBIOS
 
 ## Checklist for https://dortania.github.io/OpenCore-Desktop-Guide
 1. Check Hardware Compatibility - Document all device IDs and firmware
