@@ -61,7 +61,7 @@ Debug as necessary: tail -f /var/log/syslog|grep ovpn`
 
 In closing, make sure you always use a VPN when you are concerned about your privacy. I&#8217;ve also set these up on Linux boxes between offices and it makes for a great inexpensive site-to-site VPN. Therefore, you don&#8217;t have to spend tons of money on proprietary gateways that go out of date in a couple years.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

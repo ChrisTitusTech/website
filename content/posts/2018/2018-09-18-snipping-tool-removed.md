@@ -29,7 +29,7 @@ Currently, this is labeled as Screen Sketch, however, this is changing to Snip a
 
 With Snipping Tool gone, you might as well get used to something new, and Greenshot is a great freeware that has been around for 4 years. In the short week or so that I have been using this, I have grown to love it more than the old Snipping Tool. The features give me more options, but with its polish, I am much more efficient than I ever was.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

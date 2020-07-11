@@ -48,7 +48,7 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
 
 I absolutely love Exchange 2019 due to the vast amount of improvements, that said, I am still bummed that they continue to not support DKIM through exchange server. Installing and configuring exchange 2019 was the easiest experience I&#8217;ve had to date, which is saying a lot! Overall I am liking the direction Microsoft is taking with the server line of products and I believe it will continue to have a very bright future, as long as they don&#8217;t do something stupid like including the Microsoft store.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

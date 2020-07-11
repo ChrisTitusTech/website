@@ -44,7 +44,7 @@ Here is a list of all the files and GitHub projects that are used for OpenCore.
 6. Build config.plist and configure EVERY SINGLE Fold in the config.plist file to your computers specifications
 7. Boot to Installer! *Note: This will probably fail the first couple times, it is very important to follow the config.plist guide and full auditing enabled*
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

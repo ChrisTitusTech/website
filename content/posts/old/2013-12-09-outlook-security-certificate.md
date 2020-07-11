@@ -46,7 +46,7 @@ Change the URLs for the appropriate Exchange 2007 components. To do this, follow
 
 Now that you have finished, you will not see anymore certificate popups. I highly recommend issuing a proper certificate if possible, but this typically happens when your active directory is not resolvable from the outside world. Such as `contsco.local` instead of `microsoft.com`.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

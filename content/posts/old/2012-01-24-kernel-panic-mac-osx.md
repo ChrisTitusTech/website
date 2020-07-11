@@ -52,7 +52,7 @@ _IF THE ABOVE STEPS DOES NOT WORK THEN PLEASE FOLLOW THE BELOW TROUBLESHOOTING S
 
 If you get a repair disk error, you will need to back up any data you can, and reformat the entire hard disk. Once you don&#8217;t get a kernel panic in Mac OSX any longer you will be able to restore from time machine. However, if you continue to have issues, you will need to ship it back to Apple for a logic board replacement.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

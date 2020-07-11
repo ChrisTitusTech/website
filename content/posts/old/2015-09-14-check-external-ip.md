@@ -27,7 +27,7 @@ All these commands check external IP in Linux Terminal for any Linux system.<!--
 
 Any of these commands will achieve the same result, so pick which one you like best. Personally, for business and professional environments I stick with dig and just make an alias for it, however, for home projects a simple curl ifconfig.co is great.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

@@ -42,7 +42,7 @@ _Pitfalls_
 
 I think every business should be leveraging this technology. The larger the business the harder the cloud migration will be. Small businesses I&#8217;ve done in the course of a day, whereas larger businesses take considerably longer. Stay the course and keep searching for talent capable of helping with this transition. I enjoy using all three of these major players in the market, however, for Website Hosting and Linux boxes I like Google Cloud Compute the most, and for businesses already running Office 365 Microsoft Azure makes for the easiest transition.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

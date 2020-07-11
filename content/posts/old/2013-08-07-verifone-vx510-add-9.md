@@ -22,7 +22,7 @@ Using the following steps to add or remove a 9 when using the VeriFone VX510 to
 
 Now run a couple tests to verify that is properly dialing out on your VeriFone VX510. Once done you don&#8217;t have to worry about it failing when dialing out any longer. Should you continue to have problems, it is likely that your unit is defective and will need to be replaced.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

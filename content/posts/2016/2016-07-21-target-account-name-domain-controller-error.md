@@ -39,7 +39,7 @@ net start KDC
 ```
 Typically I wait about 5-10 minutes after this and start doing checks to see if it is now replicating properly. You can also force a replicate using repadmin /replicate but usually not necessary. In the end, make sure you check to make you aren&#8217;t getting the &#8220;Target account name is incorrect&#8221; error anymore.
     
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

@@ -48,7 +48,7 @@ _Note: Default test is – 67% read, 33% write, 2 KB, 100% Random non/sequential
 
 Remember to benchmark often and always do a before and after you make any changes. This is imperative so you can see any performance gains or losses you might incur. There are many times I have been surprised by the results of switching hardware or simply testing older hardware to see how it is holding up. One thing is for certain, I haven&#8217;t found a freeware tool that is better than IOMeter in the past 15 years that I&#8217;ve been doing IT.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

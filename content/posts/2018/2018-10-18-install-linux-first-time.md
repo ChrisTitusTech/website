@@ -38,7 +38,7 @@ https://www.youtube.com/playlist?list=PLc7fktTRMBoz7n-ugZm2Ndi0np_Y4Hh1k
 
 In conclusion, this will get you started with Linux. It is a steep learning curve starting out, but well worth it in the end. After you install Linux for the first time, you will need some time to adjust. I personally did this for my Mother-In-Law and she loves it. She never has to worry about viruses or her computer crashing, which was happening often in Windows, and it was the perfect solution for her. 
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

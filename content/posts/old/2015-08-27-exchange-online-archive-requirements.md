@@ -24,7 +24,7 @@ In short, If you don&#8217;t have Pro Plus, Stand-Alone Outlook, or Office E3+ p
 
 In my opinion, this was a horrible licensing decision by Microsoft and they should revert it so any outlook can access it. In closing, the exchange online archive requires are a bit crazy, you need both the exchange archive plan and an outlook version that supports it. This couldn&#8217;t be any more confusing as Microsoft licensing usually is.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

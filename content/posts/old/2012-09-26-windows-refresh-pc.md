@@ -31,7 +31,7 @@ To Learn more about Windows Refresh PC and Restoring custom images go to <http:
 
 This details creating a custom refresh image which would include 3rd party applications. This could be a godsend for IT Professionals in business, since the image would be local and easily a one-click fix all button, so to speak.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech

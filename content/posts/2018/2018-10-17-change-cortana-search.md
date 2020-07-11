@@ -35,7 +35,7 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 In the end, you need to watch out for Windows updates. Anytime Windows does a major update, be prepared to repeat the process above, as it will reset it to Edge. Therefore, I&#8217;d bookmark the Chrometana Pro page or this one as you will be coming back to do this about twice a year. If you don&#8217;t want to do this, you can always switch to Linux. Consequently, I have written an article about the pro&#8217;s and con&#8217;s of such a switch and I highly recommend the switch if you are able.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out our discord channel at [Chris Titus Tech Discord][4].
+I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
