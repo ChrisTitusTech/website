@@ -3,7 +3,7 @@ title: "Windows Services"
 type: post
 date: 2020-07-03T13:02:23-05:00
 url: /windows-services/
-thumbnail: /images/2020-thumbs/windows-services.jpg
+image: /images/2020-thumbs/windows-services.jpg
 categories:
   - Windows
 tags:

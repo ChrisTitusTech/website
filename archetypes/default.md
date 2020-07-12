@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 type: post
 date: {{ .Date }}
 url: /{{ .Name }}/
-thumbnail: /images/2020-thumbs/{{ .Name }}.jpg
+image: /images/2020-thumbs/{{ .Name }}.jpg
 categories:
   - Linux
   - Windows
