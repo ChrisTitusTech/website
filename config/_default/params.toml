@@ -44,8 +44,8 @@ talksGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
 # whoami: usage - home page sidebar, single page bottom of post. all values can be empty
 myname = "Chris Titus"
 email = "contact@christitus.com"
-whoami = "TechGuy On YouTube"
-bioImageUrl = "" # image url like "http//..." or "images/anyfoldername/mybioimage.jpg" If not set, we find a avatar image in root/static/images/whoami/avatar.(png|jpg|svg)
+whoami = "Tech Content Creator"
+bioImageUrl = "images/avatar.png" # image url like "http//..." or "images/anyfoldername/mybioimage.jpg" If not set, we find a avatar image in root/static/images/whoami/avatar.(png|jpg|svg)
 useGravatar = false # we use this option highest priority
 location = "Dallas, TX"
 organization = "Chris Titus Tech"
@@ -53,7 +53,7 @@ link = ""
 
 # sidebar
 enableBio = true # in home page sidebar
-enableBioImage = false # in home page sidebar
+enableBioImage = true # in home page sidebar
 enableSidebar = true # Set to false to create the full width of the content.
 enableSidebarTags = false # if you want to use tags.
 enableSidebarSeries = false
