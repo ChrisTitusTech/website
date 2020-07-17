@@ -52,7 +52,7 @@ sudo apt update
 sudo apt install nvidia-driver-450 libnvidia-gl-450 libnvidia-gl-450:i386 libvulkan1 libvulkan1:i386 -y
 ```
 
-*Note: Not working? Are you using a recent nVidia card? I recommend at least RTX 900 Series or Above!
+*Note: Not working? Are you using a recent nVidia card? I recommend at least GTX 900 Series or Above!
 
 ### Arch Based Distributions
 
@@ -272,7 +272,7 @@ For Installation, we will use the ProtonUpdater script on GitHub.
 ```
 cd ~
 wget https://raw.githubusercontent.com/Termuellinator/ProtonUpdater/master/cproton.sh
-sudo +x cproton.sh
+sudo chmod +x cproton.sh
 ./cproton.sh
 ```
 
