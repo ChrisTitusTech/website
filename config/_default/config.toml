@@ -1,4 +1,4 @@
-baseURL = "https://www.christitus.com/"
+baseURL = "https://christitus.com/"
 title = "Chris Titus Tech | Technology Simplified"
 theme = "zzo" # Name of Zzo theme folder in `themes/`.
 
