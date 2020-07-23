@@ -18,5 +18,5 @@ weight: -101
 - [Express VPN - Fastest VPN Provider](https://www.linkev.com/?a_fid=christitustech)
 - [Namecheap - My Favorite Domain Registrar](http://www.tkqlhce.com/click-9109049-13269564)
 - [Pluralsite - Learning Video Courses](http://pluralsight.pxf.io/c/1398393/448522/7490)
-- [Webroot SecureAnywhere Anti-Virus](https://click.linksynergy.com/fs-bin/click?id=8H2cZwgXLTc&offerid=370428.10000475&type=3&subid=0)
+- [Recommended Anti-Virus](https://links.christitus.com/antivirus)
 
