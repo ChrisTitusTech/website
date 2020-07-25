@@ -83,7 +83,8 @@ Enable security features
 
 Change File to mirror below:  
 ```
-​order bind,host
+​order bind,hosts
+multi on
 nospoof on
 ```
 
