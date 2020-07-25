@@ -10,7 +10,7 @@ tags:
   - Microsoft Store
 ---
 This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC. 
-<!--more-->I made a guide going over the debloat process two years ago [https://www.christitus.com/debloat-windows-10/](https://www.christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved. I wanted to go over the new debloat process that is more streamlined and introduced a GUI with Whitelist/Blacklist capabilities. 
+<!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved. I wanted to go over the new debloat process that is more streamlined and introduced a GUI with Whitelist/Blacklist capabilities. 
 
 ## GitHub Project for Debloating Windows
 The project I use has been developed for many years now and is extremely good. Here is the source github project I use:  
@@ -79,5 +79,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

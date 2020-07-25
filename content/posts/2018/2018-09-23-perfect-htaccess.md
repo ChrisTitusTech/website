@@ -61,7 +61,7 @@ deny from all
 # Force HTTPS
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.christitus.com/$1 [R,L]
+RewriteRule ^(.*)$ https://christitus.com/$1 [R,L]
 # Set Central Time Zone
 SetEnv TZ America/Chicago
 ```
@@ -399,5 +399,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

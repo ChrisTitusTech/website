@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux Mint 19 on Chris Titus Tech | Technology Simplified</title>
-    <link>https://www.christitus.com/tags/linux-mint-19/</link>
+    <link>https://christitus.com/tags/linux-mint-19/</link>
     <description>Recent content in Linux Mint 19 on Chris Titus Tech | Technology Simplified</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 May 2020 13:14:23 -0500</lastBuildDate>
     
-	<atom:link href="https://www.christitus.com/tags/linux-mint-19/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://christitus.com/tags/linux-mint-19/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Install Wine Libfaudio0 Error</title>
-      <link>https://www.christitus.com/install-wine-libfaudio0-error/</link>
+      <link>https://christitus.com/install-wine-libfaudio0-error/</link>
       <pubDate>Mon, 25 May 2020 13:14:23 -0500</pubDate>
       
-      <guid>https://www.christitus.com/install-wine-libfaudio0-error/</guid>
+      <guid>https://christitus.com/install-wine-libfaudio0-error/</guid>
       <description>&lt;p&gt;This article helps you fix the Libfaudio0 error that you run into when installing Wine on an older Linux debian-based distribution like Linux Mint 19 or Ubuntu 18.&lt;/p&gt;</description>
     </item>
     

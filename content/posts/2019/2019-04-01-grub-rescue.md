@@ -54,7 +54,7 @@ _Output Example:
 `grub rescue> initrd /boot/initrd (tab complete)`  
 `grub rescue> boot`
 
-![grub](https://www.christitus.com/wp-content/uploads/2019/04/grub-300x211.png)
+![grub](https://christitus.com/wp-content/uploads/2019/04/grub-300x211.png)
 
 ## Fix GRUB Permanently
 
@@ -83,5 +83,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

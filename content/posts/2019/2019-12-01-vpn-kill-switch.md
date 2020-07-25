@@ -28,7 +28,7 @@ _*Note: use apt instead of dnf on Ubuntu or Debian Servers_
 
 ## Download OVPN Files
 
-My recommendation for a Public VPN Provider is Express VPN. It is what I use below and in my VPN videos due to its speed and amount of servers. This is my affiliate link where you will receive an extra 3 months free for signing up for a year. <https://www.christitus.com/expressvpn>  
+My recommendation for a Public VPN Provider is Express VPN. It is what I use below and in my VPN videos due to its speed and amount of servers. This is my affiliate link where you will receive an extra 3 months free for signing up for a year. <https://christitus.com/expressvpn>  
 **However, you can use these instructions on ANY VPN that provides ovpn files which any reputable VPN provider has.** 
 
 `mv ~/Downloads/client.ovpn /etc/openvpn/test.conf`
@@ -103,5 +103,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

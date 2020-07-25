@@ -113,7 +113,7 @@ Download and Install MySQL for Windows</description>
       <pubDate>Thu, 03 Dec 2015 21:32:58 +0000</pubDate>
       
       <guid>/slim-reduce-windows-10-install/</guid>
-      <description>UPDATED POST https://www.christitus.com/2018/09/09/debloat-windows-10/ on a newer and improved way to debloat and slim Windows 10. This following commands slim down and reduce windows 10 footprint. Removing bloatware and cleaning up your system from windows apps. Run Powershell as Administrator and run the following script to Slim down and speed up your Windows 10 Install.NOTE: Get-AppxPackage -AllUsers line can be skiped if you want to keep Windows Store / Built-In Apps (Calculator / Bing News / Mail / etc.</description>
+      <description>UPDATED POST https://christitus.com/2018/09/09/debloat-windows-10/ on a newer and improved way to debloat and slim Windows 10. This following commands slim down and reduce windows 10 footprint. Removing bloatware and cleaning up your system from windows apps. Run Powershell as Administrator and run the following script to Slim down and speed up your Windows 10 Install.NOTE: Get-AppxPackage -AllUsers line can be skiped if you want to keep Windows Store / Built-In Apps (Calculator / Bing News / Mail / etc.</description>
     </item>
     
     <item>

@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-03-12T20:35:00+00:00
 url: /aptitude-explained/
-image: https://www.christitus.com/wp-content/uploads/2019/03/aptitude-e1570564649126.jpg
+image: https://christitus.com/wp-content/uploads/2019/03/aptitude-e1570564649126.jpg
 categories:
   - Linux
 tags:
@@ -101,5 +101,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord
