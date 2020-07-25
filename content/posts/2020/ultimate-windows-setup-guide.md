@@ -15,11 +15,15 @@ draft: true
 
 ## One Command to Do Everything
 
+![OneCommand](/images/onecommand.png)
+
 ```powershell
 powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8Wh')"
 ```
 
 ## GitHub Project for Debloating, Optimization, and Installing Programs
+
+![github](/images/github.png)
 
 <https://github.com/ChrisTitusTech/win10script/tree/master>
 
@@ -38,13 +42,16 @@ The script will remove scheduled tasks, windows applications, install common app
 
 ### Privacy Tweaks
 
-- Disables Telemetry
-- Disables Wifi Sense
-- Disables Smart Screen and Web Search
-- Disables App Suggestions and Activity History
-- Disables Location Tracking and Maps
-- Disables Feedback and Tailored Experiences
-- Removal of Error Reporting, Cortana, and Advertising ID.
+Disabled Services and Tasks
+- Telemetry
+- Wifi Sense
+- Smart Screen and Web Search
+- App Suggestions and Activity History
+- Location Tracking and Maps
+- Feedback and Tailored Experiences
+- Error Reporting
+- Cortana
+- Advertising ID.
 
 ### Security Tweaks
 
@@ -58,7 +65,20 @@ The script will remove scheduled tasks, windows applications, install common app
 
 ### Service Tweaks
 
-Various service tweaks are done and removal of resource hungry services in windows like indexing. This shouldn't impair much functionality, but you will see big performance gains from disabling many of these services. In this section I also set time to UTC, which is nice for Linux dual boot systems.
+Services Disabled:
+
+- Malware Removal Tool
+- Driver Updates
+- Home Groups
+- Shared Experiences
+- Remote Assistance
+- Autoplay
+- Storage Sense
+- DeFragmentation
+- Superfetch
+- Indexing
+- Hibernation
+- Sleep Timeout
 
 ### UI Tweaks
 
@@ -70,7 +90,7 @@ This script will keep the core of Microsoft Office, but most other Microsoft pro
 
 ## Customization
 
-I encourage people to fork this project and comment out things they don't like! Here is a list of normal things people change:
+I encourage people to fork this project and comment out things they don't like! Here are a list of normal things people change:
 
 - Uninstalling OneDrive (This is on in my script)
 - Installing Adobe, Chocolatey, Notepad++, MPC-HC, and 7-Zip
