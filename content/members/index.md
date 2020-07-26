@@ -2,7 +2,7 @@
 title: Members
 type: page
 menu: main
-weight: 2
+weight: 3
 ---
 ##  Members Area
 

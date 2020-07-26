@@ -3,7 +3,7 @@ title: "Recommendations"
 date: 2020-01-02T13:59:54-06:00
 type: page
 menu: main
-weight: 4
+weight: 8
 ---
 # Amazon Services
 - [Offical CTT Storefront](https://www.amazon.com/shop/christitustech)
