@@ -3,9 +3,6 @@ title: Privacy Policy of Chris Titus Tech
 author: Chris Titus
 type: page
 date: 2018-09-19T15:25:58+00:00
-ampforwp-amp-on-off:
-  - default
-
 ---
 Chris Titus operates the https://www.christitus.com website, which provides the SERVICE.
 

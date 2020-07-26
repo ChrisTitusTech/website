@@ -3,9 +3,6 @@ title: Terms of Service
 author: Chris Titus
 type: page
 date: 2018-09-19T15:29:33+00:00
-ampforwp-amp-on-off:
-  - default
-
 ---
 Last updated: September 19, 2018
 

@@ -8,10 +8,10 @@ useFaviconGenerator = true # https://www.favicon-generator.org/
 languagedir = "ltr" # ltr / rtl
 
 themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"] # select options for site color theme
-notAllowedTypesInHome = ["contact", "talks", "about", "showcase"] # not allowed page types in home page. type can be set in front matter or default to folder name.
-notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"] # not allowed page types in home page sidebar(recent post titles).
-notAllowedTypesInArchive = ["about", "talks", "showcase"] # not allowed page types in archive page
-notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "page"] # not allowed page types in home page. type can be set in front matter or default to folder name.
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "page"] # not allowed page types in home page sidebar(recent post titles).
+notAllowedTypesInArchive = ["about", "talks", "showcase", "page"] # not allowed page types in archive page
+notAllowedTypesInHomeFeed = ["about", "archive", "contact", "page", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 enablePinnedPosts = true # show pinned posts first in the main view
 
 viewportSize = "normal" # widest, wider, wide, normal, narrow
@@ -167,7 +167,7 @@ commento = false
   twitch = "https://www.twitch.tv/christitustech"
 
 [donationOptions]
-  enable = true # if set, the donation button will show up on the single page.
+  enable = false # if set, the donation button will show up on the single page.
   alipay = "" # Alipay QR Code image (example path: images/donation/alipay-qrcode.png) and put your file at root/static/images/donation/
   wechat = "" # Wechat pay QR Code image (example path: same as above)
   paypal = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DKJ8HBXCAFQ3N&source=url" # Paypal URL
@@ -186,7 +186,15 @@ commento = false
 [[share]]
   name = "twitter"
   username = "christitustech"
-
+[[share]]
+  name = "reddit"
+[[share]]
+  name = "linkedin"
+[[share]]
+  name = "telegram"
+[[share]]
+  name = "tumblr"
+  
 [[footerLinks]]
   name = ""
   link = ""
