@@ -1,7 +1,7 @@
 ---
 title: "Ultimate Windows Setup Guide"
 type: post
-date: 2020-07-14T14:26:59-05:00
+date: 2020-07-27T14:26:59-05:00
 url: /ultimate-windows-setup-guide/
 image: /images/2020-thumbs/ultimate-windows-setup-guide.jpg
 categories:
