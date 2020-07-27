@@ -17,7 +17,7 @@ tags:
 ![OneCommand](/images/onecommand.png)
 
 ```powershell
-powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8Wh')"
+powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')"
 ```
 
 ## GitHub Project for Debloating, Optimization, and Installing Programs
