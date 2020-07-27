@@ -158,7 +158,7 @@ _Note: Make sure to use your *ca-pub-IDGOESHERE*
 ### Configuration of config.toml
 In your siteroot you will see this file that you will need to configure. Most users will simply edit this and away they go. Everything in this file worked pretty darn well. There was a couple spots that tripped me up which I will go over now. 
 #### BaseURL
-Make sure you fill this out completely. I messed up the automated sitemap.xml because I simply put / instead of my entire address. This is what I have in the file now: `baseURL = "https://www.christitus.com/"`
+Make sure you fill this out completely. I messed up the automated sitemap.xml because I simply put / instead of my entire address. This is what I have in the file now: `baseURL = "https://christitus.com/"`
 #### Analytics, Social, and Title/Description
 All of these options worked perfectly and I had no issues.
 #### Menu
@@ -213,8 +213,8 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord
 ```
 Now everytime I run `hugo new posts/newpost.md` it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase. 
 
@@ -229,5 +229,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

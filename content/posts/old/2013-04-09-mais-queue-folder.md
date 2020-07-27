@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2013-04-09T16:50:22+00:00
 url: /mais-queue-folder/
-featured_image: https://www.christitus.com/wp-content/uploads/2013/04/MAIS-Queue-Folder.png
+featured_image: https://christitus.com/wp-content/uploads/2013/04/MAIS-Queue-Folder.png
 short-url:
   - http://bit.ly/10FKCsL
 categories:
@@ -31,5 +31,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

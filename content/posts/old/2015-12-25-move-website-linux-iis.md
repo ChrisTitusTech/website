@@ -31,8 +31,8 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord
  [5]: https://dev.mysql.com/downloads/mysql/
  [6]: https://go.microsoft.com/fwlink/?LinkID=286266
 

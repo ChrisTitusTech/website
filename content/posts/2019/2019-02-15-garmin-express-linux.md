@@ -42,7 +42,7 @@ WINEPREFIX=/home/ctitus/GarminExpress wine explorer /desktop=garmin,1366x768 '/h
 
 Upon Launch you should see this screen which should recognize your Garmin device
 
-![Garmin Express on Linux](https://www.christitus.com/wp-content/uploads/2019/02/Selection_012.png) 
+![Garmin Express on Linux](https://christitus.com/wp-content/uploads/2019/02/Selection_012.png) 
 
 With all this done you will be able to launch Garmin Express on Linux. 
 
@@ -55,5 +55,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

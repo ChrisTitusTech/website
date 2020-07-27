@@ -20,7 +20,7 @@ Trying to Debloat Windows 10 is getting ridiculous and as a system admin it is s
   * Run the script from the following Github Repository. The person running this GitHub has been updating this script for a while and is a godsend. (Source: <https://github.com/Sycnex/Windows10Debloater>) Use Windows10Debloater.ps1from the location above 
       * _During installation select yes to debloat windows 10, select yes to remove OneDrive, and Yes to reboot after it finishes. Below is the image of performing these tasks._
 
-[![debloatwin10cmd](https://www.christitus.com/wp-content/uploads/2018/09/debloatwin10cmd.png) 
+[![debloatwin10cmd](https://christitus.com/wp-content/uploads/2018/09/debloatwin10cmd.png) 
 
 ## Video Walkthrough
 
@@ -31,5 +31,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

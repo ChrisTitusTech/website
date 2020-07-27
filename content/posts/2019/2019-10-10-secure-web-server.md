@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-10-10T13:37:49+00:00
 url: /secure-web-server/
-image: https://www.christitus.com/wp-content/uploads/2019/10/secure-website-300x169.jpg
+image: https://christitus.com/wp-content/uploads/2019/10/secure-website-300x169.jpg
 categories:
   - Linux
   - Networking
@@ -19,24 +19,30 @@ In this article, I show you all the steps needed to secure a web server and impr
 
 # Secure A Web Server Steps
 
-![firewall-png-577&#215;359](https://www.christitus.com/wp-content/uploads/2019/10/firewall-png-577x359-e1570714448285.png) 
+![firewall-png-577&#215;359](https://christitus.com/wp-content/uploads/2019/10/firewall-png-577x359.png) 
 
 **Install UFW**  
-`sudo apt-get update`  
-`sudo apt-get install ufw`  
-`sudo ufw limit 22/tcp`  
-`sudo ufw allow 80/tcp`  
-`sudo ufw allow 443/tcp`  
-`sudo ufw enable`
+
+```Bash
+sudo apt-get update  
+sudo apt-get install ufw  
+sudo ufw limit 22/tcp  
+sudo ufw allow 80/tcp  
+sudo ufw allow 443/tcp  
+sudo ufw enable
+```
 
 **Verify**  
  `sudo ufw status`
 
 **Do Global blocks**   
-`sudo ufw default deny incoming`  
- `sudo ufw default allow outgoing`
 
-![ssh](https://www.christitus.com/wp-content/uploads/2019/09/ssh-e1570564600836.png) 
+```Bash
+sudo ufw default deny incoming  
+sudo ufw default allow outgoing
+```
+
+![ssh](https://christitus.com/wp-content/uploads/2019/09/ssh.png) 
 
 ## Change SSH to Key
 
@@ -47,8 +53,10 @@ In this article, I show you all the steps needed to secure a web server and impr
 #### Method 1:
 
 **Transfer pub ssh key to server**  
-`scp ~/.ssh/id_rsa.pub user@server.com:~`  
- `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys`
+```Bash
+scp ~/.ssh/id_rsa.pub user@server.com:~
+cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+```
 
 #### Method 2:
 
@@ -58,28 +66,35 @@ Copy key and place in authorized_key file in one command
 ### Secure a Web Server Disabling Password Auth through SSH
 
 **Change the following lines in /etc/sshd_config**  
-`ChallengeResponseAuthentication no`  
-`PasswordAuthentication no`  
-`UsePAM no`  
-`PermitRootLogin no`
+```
+ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
+PermitRootLogin no
+```
 
 ## Edit /etc/sysctl.conf
 
 Enable security features
 
-![settings](https://www.christitus.com/wp-content/uploads/2019/10/settings-610x1024.png) 
+![settings](https://christitus.com/wp-content/uploads/2019/10/settings.png) 
 
 ## Prevent IP Spoof /etc/host.conf
 
 Change File to mirror below:  
-`​order bind,host`  
-​`nospoof on`
+```
+​order bind,hosts
+multi on
+nospoof on
+```
 
 ## Install Fail2Ban
 
-`sudo apt install fail2ban`  
-`sudo systemctl enable fail2ban`  
-`sudo systemctl start fail2ban`
+```Bash
+sudo apt install fail2ban
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+```
 
 ## Check Listening Ports
 
@@ -96,5 +111,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

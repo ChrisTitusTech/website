@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2015-08-27T18:41:57+00:00
 url: /exchange-online-archive-requirements/
-featured_image: https://www.christitus.com/wp-content/uploads/2015/08/exchange-online-archive.png
+featured_image: https://christitus.com/wp-content/uploads/2015/08/exchange-online-archive.png
 categories:
   - Windows Server
 tags:
@@ -28,5 +28,5 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
- [3]: https://www.christitus.com/
- [4]: https://www.christitus.com/discord
+ [3]: https://christitus.com/
+ [4]: https://christitus.com/discord

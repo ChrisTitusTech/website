@@ -1,4 +1,4 @@
-baseURL = "https://www.christitus.com/"
+baseURL = "https://christitus.com/"
 title = "Chris Titus Tech | Technology Simplified"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
