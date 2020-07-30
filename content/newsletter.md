@@ -7,5 +7,5 @@ date: 2020-07-19T15:25:58+00:00
 
 <form action="https://flowxo.com/hooks/a/6q9gzne2">
     <input name="email" type="email" placeholder="john.doe@gmail.com"/>
-    <input type="submit"/>
+    <input type="submit" value="Sign Up" />
 </form>
