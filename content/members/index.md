@@ -4,9 +4,11 @@ type: page
 menu: main
 weight: 3
 ---
-##  Members Area
+## Members Area
 
-This area is to curate videos and upload custom ebooks. 
+Thank you for supporting this site and all the content in it! Your support also helps me continue making videos on YouTube. I very much appreciate it and if you need to ask a question please email me at contact@christitus.com
+
+This area is to curate videos and upload custom ebooks. I will be expanding this section to include various things in the future. Stay tuned and check back for updates!
 
 ## Ebooks
 
