@@ -5,4 +5,5 @@ description: Optimizes, Debloats, and Secures your Windows 10!
 link: https://github.com/ChrisTitusTech/win10script
 repo: https://github.com/ChrisTitusTech/win10script
 thumb: /onecommand.png
+pinned: true
 ---
