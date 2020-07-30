@@ -19,4 +19,8 @@ This area is to curate videos and upload custom ebooks. I will be expanding this
 
 ## Member Chat
 
-{{ partial "comments/disqus.html" . }}
+{{< box >}}
+{{ if $.Param "disqus_shortname" }}
+    {{ partial "comments/disqus.html" . }}
+{{ end }
+{{< /box >}}
