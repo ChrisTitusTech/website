@@ -6,6 +6,7 @@ weight: 3
 enableComment: false 
 share: false
 enableWhoami: false
+hideToc: true
 ---
 ## Members Area
 
