@@ -1,8 +1,6 @@
 ---
 title: "Ebooks"
 type: page
-date: 2020-07-30T22:33:58-05:00
-url: /ebooks/
 enableComment: false 
 share: false
 enableWhoami: false
