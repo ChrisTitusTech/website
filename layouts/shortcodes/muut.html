@@ -1,1 +1,19 @@
-<a class="muut" href="https://muut.com/i/christitustech">christitustech</a> <script src="//cdn.muut.com/1/moot.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" href="//cdn.muut.com/1/moot.css">
+<script src="//cdn.muut.com/1/moot.min.js"></script>
+<a id="my-community" href="https://muut.com/i/christitustech">Community</a>
+
+<script>
+$('#my-community').muut({
+  sso: true,
+  api: {
+    // API key for "christitustech"- community
+    key: 'eoxEyXdYyT',
+
+    // generate following on the server side (see below)
+    message: 'MESSAGE',
+    signature: 'SIGNATURE',
+    timestamp: TIMESTAMP
+  }
+})
+</script>
