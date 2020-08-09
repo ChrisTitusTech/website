@@ -29,7 +29,7 @@ We will be utilizing PowerShell to clean up Windows 10 and get rid of a bunch of
 `iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/debloat'))`
 
 **Note: This will remove many apps in the Microsoft Store. Games, Office 365 and things that utilize the Microsoft Store. If unsure, use the customize blacklist and only tick the boxes of things you want to remove!**  
-_Source: https://github.com/Sycnex/Windows10Debloater_
+Source: https://github.com/Sycnex/Windows10Debloater
 
 ## Step 2: Clean Up Windows 10 Startup<figure class="wp-block-image">
 

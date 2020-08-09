@@ -3,7 +3,7 @@ title: Members
 type: page
 menu: main
 weight: 3
-enableComment: false 
+enableComment: true 
 share: false
 enableWhoami: false
 hideToc: true
