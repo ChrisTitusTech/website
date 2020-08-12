@@ -103,7 +103,7 @@ After doing this plug your tablet in to your computer and tap authorize device. 
 <li>Launch Automate Settings</li>
 <li>Check "Run on system startup"</li>
 <li>Import Adblocker script into Automate
-<ul><li><i>To import: click magnifying glass, type Amazon, and click "Amazon Lockscreen Ads Remover V4.5"</i></li></ul></li>
+<ul><li><i>To import: Click Import from 3 dots on right, Select SD Card and click "Amazon Lockscreen Ads Remover V4.5" from root</i></li></ul></li>
 <li>Return to Home screen of Automate and click the Ads Remover</li>
 <li>Done!</li>
 {{< /notice >}}
