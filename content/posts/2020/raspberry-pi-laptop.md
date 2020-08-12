@@ -8,7 +8,6 @@ categories:
   - Linux
 tags:
   - Raspberrypi 
-draft: true
 ---
 This post goes over the CrowPi 2 Laptop. This is a modular laptop for the raspberry pi that is simply amazing and showcases all that you can do with the pi. I highly recommend this laptop for teaching and learning.
 <!--more-->
