@@ -14,19 +14,26 @@ Three Windows 10 Scripts
 
 ![OneCommand](/images/onecommand.png)
 
-Regular (Uninstalled OneDrive, Disable Indexing, and Disables Defender)
+---
+
+## Regular (No OneDrive, Indexing, and Defender)
 
 ```Powershell
 powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')"
 ```
 
-Minimal (Leaves all Programs intact except bloatware)
+---
+
+## Minimal (Only Targets Bloatware/Telemetry)
 
 ```Powershell
 powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ5qc')"
 ```
 
-LTSC Style Debloat (*WARNING: WILL UNINSTALL LOTS OF STUFF*)  
+---
+
+## LTSC Style Debloat 
+(*WARNING: WILL UNINSTALL LOTS OF STUFF*)  
 <https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ultra-ltsc.ps1>
 
 
