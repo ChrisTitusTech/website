@@ -108,6 +108,11 @@ Comment any thing you don't want out... Example:
 "EnableSMB1",
 ```
 
+## Video Walkthrough
+
+[![vidwalk](https://img.youtube.com/vi/Tfd7BXCo9Xk/0.jpg)](https://www.youtube.com/watch?v=Tfd7BXCo9Xk)  
+_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+
 ## Conclusion
 
 This script will be great for most users out there without losing much if any functionality. I typically run this on every system I setup, but I encourage you to fork this project and make the customizations that you need. Anything is possible, and everything can be automated. Save yourself hours of time and learn how to use not only this script, but using PowerShell.

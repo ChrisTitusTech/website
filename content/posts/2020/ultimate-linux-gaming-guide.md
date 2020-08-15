@@ -278,6 +278,11 @@ sudo chmod +x cproton.sh
 
 ***
 
+## Video Walkthrough
+
+[![vidwalk](https://img.youtube.com/vi/xvrft9ULvho/0.jpg)](https://www.youtube.com/watch?v=xvrft9ULvho)  
+_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+
 ## Conclusion
 
 Doing these tweaks or just some of them will make a drastic difference when it comes to Gaming on Linux. I personally use all of the tweaks, but sometimes I end up not using the Custom kernel if I have issues with drivers like nvidia sometimes does not like it.

@@ -36,6 +36,10 @@ powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io
 (*WARNING: WILL UNINSTALL LOTS OF STUFF*)  
 <https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ultra-ltsc.ps1>
 
+## Video Walkthrough
+
+[![pi laptop](https://img.youtube.com/vi/2R28u7o9mls/0.jpg)](https://www.youtube.com/watch?v=2R28u7o9mls)  
+_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 
