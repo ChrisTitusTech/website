@@ -9,7 +9,7 @@ categories:
 tags:
   - Powershell
 ---
- This guide will walk you through a fresh Windows installation and debloat the services, tasks, and apps that are running in the background. These tweaks are for performance in mind and weaken the security of Windows in parts. You can customize the script to not have these performance tweaks.
+ This guide will walk you through a fresh Windows installation and debloat the services, tasks, and apps that are running in the background. 
 <!--more-->
 
 ## One Command to Do Everything
