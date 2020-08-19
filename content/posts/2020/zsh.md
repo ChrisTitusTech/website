@@ -27,7 +27,7 @@ Packages needed before you start:
 ## Initial Setup of ZSH
 
 ```bash
-touch "$HOME/.cache/zshhistory
+touch "$HOME/.cache/zshhistory"
 #-- Setup Alias in $HOME/zsh/aliasrc
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
