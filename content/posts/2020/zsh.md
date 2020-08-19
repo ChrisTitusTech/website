@@ -25,19 +25,25 @@ Packages needed before you start:
   - zsh-autosuggestions - Suggestions based on your history
 
 ## Initial Setup of ZSH
-```
-wget https://github.com/ChrisTitusTech/zsh/raw/master/.zshrc -O ~/.zshrc
-mkdir -p "$HOME/.zsh"
-wget https://github.com/ChrisTitusTech/zsh/raw/master/.zsh/aliasrc -O ~/.zsh/aliasrc
-git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
+
+```bash
+touch "$HOME/.cache/zshhistory
+#-- Setup Alias in $HOME/zsh/aliasrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 ```
 
 ## Complete Switch from BASH to ZSH
-`sudo nano /etc/passwd`
+
+```bash
+chsh $USER
+```
+
+*Then type `/bin/zsh`*
+
+*OR* Edit `/etc/passwd` and change /bin/bash to /bin/zsh
 
 ![ZSH Switch](/images/2020/zsh-passwd.png)
-
-Then change the your user at the end from `/bin/bash` to `/bin/zsh`
 
 ## Video Walkthrough
 [![zsh guide](https://img.youtube.com/vi/gGmBUfMaWMU/0.jpg)](https://www.youtube.com/watch?v=gGmBUfMaWMU)  
