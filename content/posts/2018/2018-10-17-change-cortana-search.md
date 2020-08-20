@@ -35,9 +35,25 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 In the end, you need to watch out for Windows updates. Anytime Windows does a major update, be prepared to repeat the process above, as it will reset it to Edge. Therefore, I&#8217;d bookmark the Chrometana Pro page or this one as you will be coming back to do this about twice a year. If you don&#8217;t want to do this, you can always switch to Linux. Consequently, I have written an article about the pro&#8217;s and con&#8217;s of such a switch and I highly recommend the switch if you are able.
 
-I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
+## Contact Me
 
- [1]: https://twitch.tv/christitustech
- [2]: https://www.youtube.com/c/ChrisTitusTech
+I live stream on [Chris Titus Tech YouTube Channel][1] every Friday at 10 AM CST and archive clips to [Titus Tech Talk][2]. I also regularly publish to [christitus.com][3], but if you'd like to contact me directly or want to contribute to help keep these articles and videos being made consider joining the CTT members. 
+
+Two Memberships exist:
+- [ChrisTitus.com Members Section][4] (_CC Only_)
+  - Full Archive of All Unlisted Live Streams
+  - Direct Members Only Email
+  - Monthly Members Only Video
+  - Starting at $2 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
+- [YouTube Chris Titus Tech Membership][5] (_All Payments Accepted_)
+  - YouTube Emojis for Comments and Live Chat
+  - YouTube Badges that changes based on membership time for comments and chat.
+  - All YouTube comments are highlighted when I review comments daily. 
+  - Immediate Access to Full Live Streams
+  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
+
+ [1]: https://www.youtube.com/c/ChrisTitusTech
+ [2]: https://www.youtube.com/c/ChrisTitusTechStreams
  [3]: https://christitus.com/
- [4]: https://christitus.com/discord
+ [4]: https://christitus.com/members
+ [5]: https://links.christitus.com/join
