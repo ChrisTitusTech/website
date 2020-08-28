@@ -12,3 +12,6 @@ package = "@netlify/plugin-sitemap"
     # By Glob pattern
     '**/page/**'
   ]
+
+[[plugins]]
+package = "netlify-plugin-amp-server-side-rendering"
