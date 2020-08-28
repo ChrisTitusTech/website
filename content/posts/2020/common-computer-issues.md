@@ -1,7 +1,7 @@
 ---
 title: "Common Computer Issues"
 type: post
-date: 2020-08-27T15:42:25-05:00
+date: 2020-08-28T05:42:25-05:00
 url: /common-computer-issues/
 image: /images/2020-thumbs/common-computer-issues.jpg
 categories:
@@ -9,7 +9,9 @@ categories:
   - Windows
   - MacOS
 tags:
-draft: true
+  - PowerShell
+  - Xorg
+  - Linux Kernel
 ---
 These are all the issues we discussed on a live stream. I took all the community questions and made this webpage for them.
 <!--more-->
@@ -53,6 +55,7 @@ EndSection
   - Make a custom bash script and set with login manager, cron job, or set in `~/.xinitrc`
 
 Sample xrandr script:
+
 ```bash
 #!/bin/bash
 xrandr --output HDMI-1 --off --output HDMI-2 --auto
@@ -167,6 +170,14 @@ Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personaliza
 OR
 
 You can also open up Start - Run - `gpedit.msc` and then go to All Settings and look for enabled features and set them to *Not Configured*
+
+## Windows - Reinstall OneDrive
+
+Open Up PowerShell Admin (Right Click Start Button)
+
+```PowerShell
+%systemroot%\SysWOW64\OneDriveSetup.exe
+```
 
 ## Contact Me
 
