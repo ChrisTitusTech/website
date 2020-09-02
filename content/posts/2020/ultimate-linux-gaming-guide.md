@@ -166,6 +166,8 @@ There are several packages that wine, proton and lutris game installs need. I re
 ### Ubuntu/Mint/Pop OS! 20
 
 ```
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
 sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' -y
 sudo add-apt-repository ppa:lutris-team/lutris -y
 sudo apt update
