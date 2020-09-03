@@ -9,7 +9,6 @@ categories:
   - Windows
 tags:
   - Cryptocurrency
-draft: true
 ---
 This article goes over everything you need to know about crypto in 2020. 
 <!--more-->
