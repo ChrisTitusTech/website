@@ -13,13 +13,13 @@ Thank you for supporting this site and all the content in it! Your support also 
 
 - Complete Manjaro Architect Guide (eBook PDF Version) - [manjaro.pdf](https://ctt.memberspace.com/content/f112f8b545f)
 - All Past Monthly Members Videos (Patreon Included) - [Members Only Videos](https://www.youtube.com/playlist?list=PLc7fktTRMBowu_ojkqT0Z_O_DSFy6K9e5)
-- All Past Full YouTube Live Streams (Unedited) - [Members Only Live Streams](https://www.youtube.com/playlist?list=PLgVG4PNqM5Sb93Sh52eAXA8aluE7fdeUX)
+- All Past Full YouTube Live Streams (Unedited) - [Live Streams](https://www.youtube.com/playlist?list=PLgVG4PNqM5Sb93Sh52eAXA8aluE7fdeUX)
 
 ***
 
 ## Latest Full Live Stream
 
-{{< youtube cFSEYiYo4vA >}}
+{{< youtube Yay9oiZBqXE >}}
 
 ***
 
