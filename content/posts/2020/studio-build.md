@@ -7,7 +7,6 @@ image: /images/2020-thumbs/studio-build.jpg
 categories:
   - YouTube
 tags:
-draft: true
 ---
 This goes over the entire studio build and redesign of 2020. 
 <!--more-->
@@ -66,8 +65,8 @@ Here is a breakdown all the equipment and construction:
 - Rode VideoMicro On-Camera Mic $60 <https://amzn.to/2DJR6ok>
 - GoPro Hero 8 $400 <https://amzn.to/339zB9B>
 
-Total Cost: $ 14,970
-Estimated with Construction: $26,000 - $30,000
+Total Estimated Material Cost: $ 14,970
+Estimated with Construction: $26,000 - $50,000
 
 ## Contact Me
 
