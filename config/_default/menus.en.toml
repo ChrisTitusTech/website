@@ -5,6 +5,12 @@
     url = "/"
     weight = 1
 
+[[members]]
+    identifier = "members"
+    name = "Members"
+    url = "https://portal.christitus.com"
+    weight = 3
+
 [[main]]
     name = "Remote Support"
     post = ""
