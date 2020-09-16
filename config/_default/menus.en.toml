@@ -6,8 +6,9 @@
     weight = 1
 
 [[members]]
-    identifier = "members"
     name = "Members"
+    post = ""
+    pre = "<i class='fa fa-heart'></i>"
     url = "https://portal.christitus.com"
     weight = 3
 
