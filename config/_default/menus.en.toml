@@ -5,7 +5,7 @@
     url = "/"
     weight = 1
 
-[[members]]
+[[main]]
     name = "Members"
     post = ""
     pre = "<i class='fa fa-heart'></i>"
