@@ -28,8 +28,10 @@ _Source Files in this project_
 ### Dependency Installs
 
 ```bash
-sudo apt install git gnome-shell-extensions chrome-gnome-shell -y
-sudo apt install gnome-tweak-tool -y
+sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
+```
+
+```bash
 git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
 mkdir ~/.themes
 mkdir ~/.icons
