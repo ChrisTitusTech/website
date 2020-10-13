@@ -15,123 +15,53 @@ draft: true
 Here is a cheatsheet of commands that every Linux user should know or have on hand.
 <!--more-->
 
-## Display system information
+## Display System Information
 
 ```bash
 uname -sr # Display kernel release information
-uptime
+uptime # How long has the computer been booted
+hostname # Show system host name
+last reboot # Displays reboot history
+cal # Show this month's calendar
+whoami # Shows current username
+```
 
-# Show system host name
-hostname
+## Hardware Information
 
-# Display the IP addresses of the host
-hostname -I
+```bash
+dmesg # Display messages in kernel ring buffer
+cat /proc/cpuinfo # Display CPU information
+free -h # Display free and used memory ( -h for human readable, -m for MB, -g for GB.)
+lspci # Display PCI devices
+lsusb # Display USB devices
+dmidecode # Display DMI/SMBIOS (hardware info) from the BIOS
+hdparm -i /dev/sda # Show info about disk sda
+```
 
-# Show system reboot history
-last reboot
+## Performance Monitoring
 
-# Show the current date and time
-date
+```bash
+top # Display and manage the top processes
+htop # Interactive process viewer
+iostat 1 # I/O statistics
+tail 50 /var/log/syslog # Display the last 50 syslog messages
+tcpdump -i eth0 'port 80' # Monitor all traffic on port 80 ( HTTP )
+lsof # List all open files on the system
+watch df -h # Execute "df -h", showing periodic updates
+```
 
-# Show this month's calendar
-cal
+## User Management
 
-# Display who is online
-w
+```bash
+id # Display the user and group ids of your current user
+groupadd test # Create a group named "test"
+useradd -m titus # Create the account and create the user's home directory
+userdel titus # Delete the titus account
+usermod -aG autologin titus # Add the titus account to the autologin group
 
-# Who you are logged in as
-whoami
-2 – HARDWARE INFORMATION
-# Display messages in kernel ring buffer
-dmesg
+## File Management
 
-# Display CPU information
-cat /proc/cpuinfo
-
-# Display memory information
-cat /proc/meminfo
-
-# Display free and used memory ( -h for human readable, -m for MB, -g for GB.)
-free -h
-
-# Display PCI devices
-lspci -tv
-
-# Display USB devices
-lsusb -tv
-
-# Display DMI/SMBIOS (hardware info) from the BIOS
-dmidecode
-
-# Show info about disk sda
-hdparm -i /dev/sda
-
-# Perform a read speed test on disk sda
-hdparm -tT /dev/sda
-
-# Test for unreadable blocks on disk sda
-badblocks -s /dev/sda
-3 – PERFORMANCE MONITORING AND STATISTICS
-# Display and manage the top processes
-top
-
-# Interactive process viewer (top alternative)
-htop
-
-# Display processor related statistics
-mpstat 1
-
-# Display virtual memory statistics
-vmstat 1
-
-# Display I/O statistics
-iostat 1
-
-# Display the last 100 syslog messages  (Use /var/log/syslog for Debian based systems.)
-tail 100 /var/log/messages
-
-# Capture and display all packets on interface eth0
-tcpdump -i eth0
-
-# Monitor all traffic on port 80 ( HTTP )
-tcpdump -i eth0 'port 80'
-
-# List all open files on the system
-lsof
-
-# List files opened by user
-lsof -u user
-
-# Display free and used memory ( -h for human readable, -m for MB, -g for GB.)
-free -h
-
-# Execute "df -h", showing periodic updates
-watch df -h
-4 – USER INFORMATION AND MANAGEMENT
-# Display the user and group ids of your current user.
-id
-
-# Display the last users who have logged onto the system.
-last
-
-# Show who is logged into the system.
-who
-
-# Show who is logged in and what they are doing.
-w
-
-# Create a group named "test".
-groupadd test
-
-# Create an account named john, with a comment of "John Smith" and create the user's home directory.
-useradd -c "John Smith" -m john
-
-# Delete the john account.
-userdel john
-
-# Add the john account to the sales group
-usermod -aG sales john
-5 – FILE AND DIRECTORY COMMANDS
+```bash
 # List all files in a long listing (detailed) format
 ls -al
 
