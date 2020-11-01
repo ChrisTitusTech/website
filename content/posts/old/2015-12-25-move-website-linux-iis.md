@@ -47,7 +47,7 @@ Two Memberships exist:
  [1]: https://www.youtube.com/c/ChrisTitusTech
  [2]: https://www.youtube.com/c/ChrisTitusTechStreams
  [3]: https://christitus.com/
- [4]: https://christitus.com/members
+ [4]: https://portal.christitus.com
  [5]: https://links.christitus.com/join [5]: https://dev.mysql.com/downloads/mysql/
  [6]: https://go.microsoft.com/fwlink/?LinkID=286266
 
