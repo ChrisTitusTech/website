@@ -9,7 +9,7 @@
     identifier = "store"
     name = "Store"
     pre = "<i class='fa fa-heart'></i>"
-    url = "https://store.christitus.com"
+    url = "https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2"
     weight = 2
 
 [[main]]
