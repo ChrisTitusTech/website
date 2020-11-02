@@ -12,3 +12,9 @@ package = "@netlify/plugin-sitemap"
     # By Glob pattern
     '**/page/**'
   ]
+
+[[redirects]]
+  from = "https://store.christitus.com/*"
+  to = "https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2"
+  status = 301
+  force = true

@@ -53,9 +53,9 @@ I live stream on [Chris Titus Tech YouTube Channel][1] every Friday at 10 AM CST
 Two Memberships exist:
 - [ChrisTitus.com Members Section][4] (_CC Only_)
   - Full Archive of All Unlisted Live Streams
-  - Direct Members Only Email
+  - Digital Downloads with Guides and Pre-Built Images
   - Monthly Members Only Video
-  - Starting at $2 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
+  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
 - [YouTube Chris Titus Tech Membership][5] (_All Payments Accepted_)
   - YouTube Emojis for Comments and Live Chat
   - YouTube Badges that changes based on membership time for comments and chat.
