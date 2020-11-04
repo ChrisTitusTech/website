@@ -33,6 +33,19 @@ What this script does
 
 Based on User feedback, this no longer uninstalls OneDrive or Office. 
 
+## User Requested Restore Scripts
+
+```PowerShell
+iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JTbKD'))
+```
+
+This restore script pops up a GUI that lets you restore what you want to FACTORY DEFAULTS! 
+
+Current Lineup:
+- Cortana
+- Tray Icons
+- Action Center
+
 ## Other GitHub Projects for Debloating Windows
 The project I use has been developed for many years now and is extremely good. Here is the source github project I use:  
 [https://github.com/Sycnex/Windows10Debloater](https://github.com/Sycnex/Windows10Debloater)
