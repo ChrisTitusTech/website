@@ -94,6 +94,7 @@ Convert to to RAID 1 after adding disk to existing subvolume
 I could put RAID 0 here... but honestly you should just use EXT4 or XFS if you are looking for performance. It would be better than using BTRFS!
 
 ## Video Walkthrough
+
 [![btrfs guide](https://img.youtube.com/vi/J2QP4onqJKI/0.jpg)](https://www.youtube.com/watch?v=J2QP4onqJKI)  
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
