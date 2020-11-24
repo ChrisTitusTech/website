@@ -52,8 +52,14 @@ Google 4a is the practical choice and is a rock solid phone that comes unlocked 
 Why Razer? Did they pay me or something? *Nope!*  
 Razer has a bunch of cool features, but also has a great open source project called OpenRazer <https://openrazer.github.io/> for any operating system. You can do all kinds of fun macros with them and I picked these two above because they are rather quiet and I hate noise. Most people would prefer a full mechanical and if you are interested in this check out the project above and pick a compatible device for your needs! 
 
-Plain Jane Keyboard and Mouse selection? Logitech
+### Logitech Options
+
 - MK545 Keyboard and Mouse Combo from Logitech - $50 - <https://amzn.to/3pEPSxO>
+
+#### 3 Device Switching Keyboard and Mouse
+
+- M720 Logitech M720 Wireless Triathlon Mouse $30 - <https://amzn.to/3fseOUu>
+- Logitech K780 Multi-Device Wireless Keyboard $100 - <https://amzn.to/33bKBUO>
 
 ## TitusPi
 
