@@ -71,7 +71,7 @@ tocLevels = ["h2", "h3", "h4"] # minimum h2, maximum h4 in your article
 enableSidebarPostsByOrder = false # another lists in the sidebar
 
 # footer
-showPoweredBy = false # show footer text: Powered by Hugo and Zzo theme
+showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme
 showFeedLinks = true # RSS Feed 
 showSocialLinks = true # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
