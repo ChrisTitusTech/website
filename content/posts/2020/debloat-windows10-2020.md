@@ -12,17 +12,20 @@ tags:
 This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC. 
 <!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved.
 
-## October 2020 Update
+## December 2020 Update
 
 If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: <https://github.com/ChrisTitusTech/win10script>
 
 If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below! 
 
+*December 2020 Feature: GUI added - Select what you want!*
+
 ```PowerShell
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
 ```
 
-What this script does
+### What this script can do
+
 - Installs Chocolatey, Notepad++, Irfanview, VLC, Java, and asks if you want Adobe Reader or Brave. 
 - Removes all Windows Store Apps EXCEPT office, xbox, and WSL. 
 - Removed Telemetry
