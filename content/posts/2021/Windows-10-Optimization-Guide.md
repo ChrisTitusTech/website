@@ -7,7 +7,7 @@ image: /images/2021-thumbs/Windows-10-Optimization-Guide.jpg
 categories:
   - Windows
 tags:
-  - Optimizations
+  - Powershell
 draft: true
 ---
 This guide goes over using a Custom ISO, Removing Windows 10 Components, and Optimizing Windows 10 Settings. 
@@ -15,10 +15,19 @@ This guide goes over using a Custom ISO, Removing Windows 10 Components, and Opt
 
 ## Custom ISO
 
-Easiest Method NTLite ($30) - <https://www.ntlite.com/>
+The whole purpose of a custom ISO is to make the initial install as slim as possible. You don't have to uninstall bloat if it never gets installed to begin with!
 
-Free Method MSMG Toolkit - <https://msmgtoolkit.in/>
+Easiest Method *NTLite* ($30) - <https://www.ntlite.com/>
 
+Free Method *MSMG Toolkit* - <https://msmgtoolkit.in/>
+
+How to Make a Custom Windows 10 ISO with *MSMG Toolkit* Video  
+[![customiso](https://img.youtube.com/vi/R6XPff38iSc/0.jpg)](https://www.youtube.com/watch?v=R6XPff38iSc)  
+_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+
+### Microsoft Method for Custom ISO (Advanced Users Only)
+
+Downloading in Installing ADK (Microsoft Image Tools) <https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install>
 Using sysprep from Microsoft <https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation>
 
 ## Installing Windows 10 and Removing Components
@@ -53,7 +62,28 @@ Source files for Tweaks <https://ameliorated.info/> or my GitHub mirror <https:/
 
 ## Optimizing Windows 10 Settings
 
+To finish things off we do some custom tweaks with the Official CTT Windows 10 Toolbox. This is something I have been customizing for years and refining every single month to work on any Windows 10 Installation. 
 
+```PowerShell
+iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
+```
+
+### What this script can do
+
+- Installs Chocolatey, Notepad++, Irfanview, VLC, Java, and asks if you want Adobe Reader or Brave. 
+- Removes all Windows Store Apps EXCEPT office, xbox, and WSL. 
+- Removed Telemetry
+- Disables Cortana
+- Deletes various schedules tasks that rebloat the system
+- Removes Other Bloatware (Candy Crush, etc.)
+- Fixes problems that other scripts causes (lock screen and personalization options restricted)
+
+Based on User feedback, this no longer uninstalls OneDrive or Office. 
+
+### Toolbox Walkthrough Video
+
+[![win10toolbox](https://img.youtube.com/vi/V27McA7ch6w/0.jpg)](https://www.youtube.com/watch?v=V27McA7ch6w)  
+_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 ## Contact Me
 
