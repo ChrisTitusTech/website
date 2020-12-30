@@ -1,14 +1,13 @@
 ---
 title: "Windows 10 Optimization Guide"
 type: post
-date: 2020-12-28T14:34:52-06:00
+date: 2020-12-30T14:34:52-06:00
 url: /Windows-10-Optimization-Guide/
 image: /images/2021-thumbs/Windows-10-Optimization-Guide.jpg
 categories:
   - Windows
 tags:
   - Powershell
-draft: true
 ---
 This guide goes over using a Custom ISO, Removing Windows 10 Components, and Optimizing Windows 10 Settings. 
 <!--more-->
@@ -30,6 +29,8 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 Downloading in Installing ADK (Microsoft Image Tools) <https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install>
 Using sysprep from Microsoft <https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation>
 
+I highly recommend a video by Craft Computing going over Windows Deployment Services if you are interested in this method - <https://youtu.be/PdKMiFKGQuc>
+
 ## Installing Windows 10 and Removing Components
 
 The Full AME Experience. Most people will NOT want to do this as it will remove functionality from Windows 10, that you CAN NOT put back in. Some of the components can be taken out in the Custom ISO phase, but this takes it to another level. 
@@ -45,6 +46,8 @@ Components Removed
 - DirectX 12
 
 Source files for Tweaks <https://ameliorated.info/> or my GitHub mirror <https://github.com/ChrisTitusTech/windows-lite-2004>
+
+![ame](/images/2021/01-win10/ame.jpg)
 
 ### Installation Overview
 
