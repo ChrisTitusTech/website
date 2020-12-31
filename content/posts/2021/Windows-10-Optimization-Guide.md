@@ -63,6 +63,22 @@ Source files for Tweaks <https://ameliorated.info/> or my GitHub mirror <https:/
 
 <https://wiki.ameliorated.info/doku.php?id=documentation_2004>
 
+### Running Updates
+
+- Download Latest Servicing Stack Update (*Check Month - Windows verison- Architecture x64*) <https://www.catalog.update.microsoft.com/Search.aspx?q=Servicing%20Stack%20Update%20Windows%2010>
+- Download Cumulative Update (*Check Month/Version/Arch AND Run After rebooting above*) <https://www.catalog.update.microsoft.com/Search.aspx?q=Cumulative%20Update%20Windows%2010>
+
+Extract Updates  
+`expand -F:* .\Windows10SSU.msu C:\Update1`  
+`dism /online /add-package /packagepath=C:\1\Windows10.0-SSU.cab`  
+Reboot  
+`expand -F:* .\Windows10Cumulative.msu C:\Update2`  
+`dism /online /add-package /packagepath=C:\2\Windows10.0-Cumulative.cab`  
+Reboot and Run  
+`dism /online /Cleanup-Image /StartComponentCleanup`
+
+_Note: File Names change and will be different from above!_
+
 ## Optimizing Windows 10 Settings
 
 To finish things off we do some custom tweaks with the Official CTT Windows 10 Toolbox. This is something I have been customizing for years and refining every single month to work on any Windows 10 Installation. 
