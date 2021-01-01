@@ -104,6 +104,34 @@ Based on User feedback, this no longer uninstalls OneDrive or Office.
 [![win10toolbox](https://img.youtube.com/vi/V27McA7ch6w/0.jpg)](https://www.youtube.com/watch?v=V27McA7ch6w)  
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
+### Windows Services to Disable
+
+1. Windows Defender & Firewall
+2. Windows Mobile Hotspot Service
+3. Bluetooth Support Service
+4. Print Spooler (Required for Printing)
+5. Fax
+6. Remote Desktop Configuration and Remote Desktop Services
+7. Windows Insider Service
+8. Secondary Logon
+9. Downloaded Maps Manager
+10. Touch Keyboard and Handwriting Panel Service
+11. Offline Files
+12. Windows Connect Now
+13. Remote Registry
+14. Application Layer Gateway Service
+15. Smart Card
+16. Windows Image Acquisition
+17. Security Center 
+18. Connected User Experiences and Telemetry
+19. Retail Demo Service
+20. Windows Media Player Network Sharing Service
+21. AllJoyn Router Service
+22. Geolocation Service
+23. Windows Biometric Service (Required for Fingerprint logon)
+24. Program Compatibility Assistant Service
+25. Enterprise App Management Service
+
 ## Contact Me
 
 I live stream on [Chris Titus Tech YouTube Channel][1] every Friday at 10 AM CST and archive clips to [Titus Tech Talk][2]. I also regularly publish to [christitus.com][3], but if you'd like to contact me directly or want to contribute to help keep these articles and videos being made consider joining the CTT members. 
