@@ -85,7 +85,7 @@ busuanziSitePV = true # site total page view count
 busuanziPagePV = true # post view count
 
 # comment
-enableComment = true
+enableComment = false
 disqus_shortname = "christitus" 
 commento = false
 
