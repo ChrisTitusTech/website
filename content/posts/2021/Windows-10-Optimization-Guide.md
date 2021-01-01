@@ -59,6 +59,10 @@ Source files for Tweaks <https://ameliorated.info/> or my GitHub mirror <https:/
 - Reboot back to Windows
 - Run `amelioration_2004.bat` as Admin and Post-Amelioration
 
+### Driver Installation
+
+Recommend using the Offline Snappy Driver Installer <https://sdi-tool.org/>. This is about 50 GB, but has every driver you need. 
+
 ### AME Step-by-Step Documentation
 
 <https://wiki.ameliorated.info/doku.php?id=documentation_2004>
