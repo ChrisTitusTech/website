@@ -2,12 +2,12 @@
 
 <ul class="sidebar">
     {{ partial "search/site-search" . }}
+    {{ partial "sidebar/custom-home" . }}
 </ul>
 <div class="taxo-root">
 {{ partial "taxonomy/taxonomy-tags" . }}
 {{ partial "taxonomy/taxonomy-categories" . }}
 {{ partial "taxonomy/taxonomy-series" . }}
-{{ partial "sidebar/custom-home" . }}
 </div>
 
 {{ end }}
