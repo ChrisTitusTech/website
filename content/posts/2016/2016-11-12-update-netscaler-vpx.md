@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2016-11-12T15:13:18+00:00
 url: /update-netscaler-vpx/
-image: /wp-content/uploads/2016/11/citrix-netscaler.png
+image: /images/2016/11/citrix-netscaler.png
 categories:
   - Networking
 tags:
@@ -20,11 +20,11 @@ Default User: nsroot Pass: nsroot (or password you changed it to)
 
 ### Go to Netscaler gateway virtual server controlling your logins
 
-![Netscaler1](/wp-content/uploads/2016/11/netscaler1.png)
+![Netscaler1](/images/2016/11/netscaler1.png)
 
 ### Click on LDAP Policy and select Edit Server
 
-![Netscaler2](/wp-content/uploads/2016/11/netscaler2.png)
+![Netscaler2](/images/2016/11/netscaler2.png)
 
 ### Update the credentials under connection settings, and also test the new settings.
 

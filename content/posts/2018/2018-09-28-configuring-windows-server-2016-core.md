@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-28T19:42:47+00:00
 url: /configuring-windows-server-2016-core/
-image: /wp-content/uploads/2018/09/windows-server-2016-guide.jpg
+image: /images/2018/09/windows-server-2016-guide.jpg
 categories:
   - Windows Server
 tags:
@@ -17,7 +17,7 @@ This guide walks you through how to installing and configuring windows server 20
 
 <https://www.microsoft.com/en-us/download/details.aspx?id=45520>
 
-![configure-core](/wp-content/uploads/2018/09/windows-server-2016.png)
+![configure-core](/images/2018/09/windows-server-2016.png)
 
 ### Steps to configuring windows server 2016 core
 

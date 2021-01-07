@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-11-09T20:36:56+00:00
 url: /logitech-c920-linux-driver/
-image: /wp-content/uploads/2018/11/c920-pro-hd-webcam-refresh.png
+image: /images/2018/11/c920-pro-hd-webcam-refresh.png
 categories:
   - Linux
 tags:
@@ -38,7 +38,7 @@ Find your C920 Webcam or other webcams you need to switch the default settings o
   
 **Output:**
   
-![c920-selection2](/wp-content/uploads/2018/11/Selection_002.png)
+![c920-selection2](/images/2018/11/Selection_002.png)
 
 ### List controls for the Logitech C920
 
@@ -46,7 +46,7 @@ Find your C920 Webcam or other webcams you need to switch the default settings o
   
 **Output:**
   
-![c920-selection3](/wp-content/uploads/2018/11/Selection_003.png)
+![c920-selection3](/images/2018/11/Selection_003.png)
 
 ### There are two values we need to change to get the best performance from our webcam.
 

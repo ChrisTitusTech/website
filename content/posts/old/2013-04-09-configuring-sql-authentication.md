@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2013-04-09T16:24:26+00:00
 url: /configuring-sql-authentication/
-image: /wp-content/uploads/2013/04/sql-authentication.png
+image: /images/2013/04/sql-authentication.png
 categories:
   - Windows Server
 tags:

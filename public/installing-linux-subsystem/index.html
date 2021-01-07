@@ -1249,8 +1249,8 @@
 <meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech.">
 
   
-    <meta property="og:image" content="https://christitus.com/wp-content/uploads/2018/09/winubuntu.png">
-    <meta property="og:image:url" content="https://christitus.com/wp-content/uploads/2018/09/winubuntu.png">
+    <meta property="og:image" content="/images/2018/09/winubuntu.png">
+    <meta property="og:image:url" content="/images/2018/09/winubuntu.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Chris Titus Tech">
     <meta property="twitter:title" content="Installing Linux Subsystem for Windows 10">
@@ -1298,7 +1298,7 @@
     "url" : "https://christitus.com/installing-linux-subsystem/",
     "description": "\u003cp\u003eThe following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual …\u003c/p\u003e",
     "keywords": ["Powershell","Ubuntu Server","Windows 10"],
-    "image" : "https://christitus.com/wp-content/uploads/2018/09/winubuntu.png",
+    "image" : "/images/2018/09/winubuntu.png",
     "author": {
       "@type": "Person",
       "name": "Chris Titus"
@@ -1694,10 +1694,13 @@ if (!doNotTrack) {
 <p><a href="https://www.youtube.com/watch?v=RriP3LmuKNA"><img src="https://img.youtube.com/vi/RriP3LmuKNA/0.jpg" alt="WSL" /></a><br />
 <em>Note: YouTube Video - Hold Ctrl + Left Click to open in new window</em></p>
 <h2 id="enable-linux-subsystem-feature">Enable Linux Subsystem Feature</h2>
-<p><code>cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</code><br />
+<p><code>cd ~
+ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</code><br />
 <em>Note: Perform in PowerShell</em></p>
 <h3 id="powershell-installation-method">PowerShell Installation Method</h3>
-<p><code>Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe</code></p>
+<p><code>Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
+ Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip
+ Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe</code></p>
 <h3 id="microsoft-store-installation-method">Microsoft Store Installation Method</h3>
 <ul>
 <li>Open the Microsoft Store</li>

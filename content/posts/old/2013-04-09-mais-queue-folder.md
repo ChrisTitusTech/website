@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2013-04-09T16:50:22+00:00
 url: /mais-queue-folder/
-featured_image: https://christitus.com/wp-content/uploads/2013/04/MAIS-Queue-Folder.png
+image: /images/2013/04/MAIS-Queue-Folder.png
 short-url:
   - http://bit.ly/10FKCsL
 categories:

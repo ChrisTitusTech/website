@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2016-08-03T23:19:49+00:00
 url: /winsxs-free-space-server/
-image: /wp-content/uploads/2016/08/cleanup-space-on-server.png
+image: /images/2016/08/cleanup-space-on-server.png
 categories:
   - Windows Server
 

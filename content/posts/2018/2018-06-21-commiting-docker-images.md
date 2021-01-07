@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-06-21T19:36:03+00:00
 url: /commiting-docker-images/
-image: /wp-content/uploads/2018/06/docker-logo.png
+image: /images/2018/06/docker-logo.png
 categories:
   - Virtualization
 tags:
@@ -22,7 +22,7 @@ _Note: This shows all your containers you need to copy Container ID for the one 
 `sudo docker commit CONTAINER_ID_GOES_HERE IMAGENAME:TAG`  
 _Example Syntax: sudo docker commit 520b0f024bf6 unifi:latest-06-21-2018_
   
-![docker](/wp-content/uploads/2018/06/docker.png)
+![docker](/images/2018/06/docker.png)
 
 Now if you have any issues you can simply create a new container using the image you created above.
 

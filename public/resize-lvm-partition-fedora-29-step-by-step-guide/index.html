@@ -1249,8 +1249,8 @@
 <meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech.">
 
   
-    <meta property="og:image" content="https://christitus.com/wp-content/uploads/2018/11/Selection_008.png">
-    <meta property="og:image:url" content="https://christitus.com/wp-content/uploads/2018/11/Selection_008.png">
+    <meta property="og:image" content="/images/2018/11/Selection_008.png">
+    <meta property="og:image:url" content="/images/2018/11/Selection_008.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Chris Titus Tech">
     <meta property="twitter:title" content="Resize LVM Partition | Fedora 29 | Step by Step Guide">
@@ -1298,7 +1298,7 @@
     "url" : "https://christitus.com/resize-lvm-partition-fedora-29-step-by-step-guide/",
     "description": "\u003cp\u003eIn this guide, I show you how to Resize LVM Partition in Fedora 29. I recently ran out of space and had to clone my install from a 120SSD ssd to a 240 GB SSD.\u003c/p\u003e",
     "keywords": ["Fedora","LVM"],
-    "image" : "https://christitus.com/wp-content/uploads/2018/11/Selection_008.png",
+    "image" : "/images/2018/11/Selection_008.png",
     "author": {
       "@type": "Person",
       "name": "Chris Titus"
@@ -1695,17 +1695,17 @@ if (!doNotTrack) {
 <h3 id="resize-lvm-partition">Resize LVM Partition</h3>
 <p>First, we need to identify the LVM Partition we need to expand. In my case, it was my home directory that was running low on space.</p>
 <p>Command: <code>df -h</code></p>
-<p><img src="/wp-content/uploads/2018/11/Selection_008-300x111.png" alt="lvm-selection8" /></p>
+<p><img src="/images/2018/11/Selection_008-300x111.png" alt="lvm-selection8" /></p>
 <p>Second, lets verify there is space to expand on the physical drive.</p>
 <p>Command: <code>vgdisplay</code></p>
-<p><img src="/wp-content/uploads/2018/11/Selection_009.png" alt="lvm-selection9" /></p>
+<p><img src="/images/2018/11/Selection_009.png" alt="lvm-selection9" /></p>
 <p>With all this verified, you can now expand the lvm partition.<br />
 <em>Note: the command below will take up a 100% of the free space, see screenshot for precise extentsion.</em></p>
 <p>Command: <code>lvextend -l 100%FREE /dev/fedora/home</code></p>
-<p><img src="/wp-content/uploads/2018/11/Selection_010.png" alt="lvm-selection10" /></p>
+<p><img src="/images/2018/11/Selection_010.png" alt="lvm-selection10" /></p>
 <p>Finally, with the logical volume extended we simply reclaim the free space now.</p>
 <p>Command: <code>resize2fs /dev/fedora/home</code></p>
-<p><img src="/wp-content/uploads/2018/11/Selection_011.png" alt="lvm-selection11" /></p>
+<p><img src="/images/2018/11/Selection_011.png" alt="lvm-selection11" /></p>
 <h2 id="contact-me">Contact Me</h2>
 <p>I live stream on <a href="https://www.youtube.com/c/ChrisTitusTech">Chris Titus Tech YouTube Channel</a> every Friday at 10 AM CST and archive clips to <a href="https://www.youtube.com/c/ChrisTitusTechStreams">Titus Tech Talk</a>. I also regularly publish to <a href="https://christitus.com/">christitus.com</a>, but if you&rsquo;d like to contact me directly or want to contribute to help keep these articles and videos being made consider joining the CTT members.</p>
 <p>Two Memberships exist:</p>

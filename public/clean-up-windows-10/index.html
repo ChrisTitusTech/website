@@ -1249,8 +1249,8 @@
 <meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech.">
 
   
-    <meta property="og:image" content="https://christitus.com/wp-content/uploads/2019/10/cleanup-win10-300x169.jpg">
-    <meta property="og:image:url" content="https://christitus.com/wp-content/uploads/2019/10/cleanup-win10-300x169.jpg">
+    <meta property="og:image" content="/images/2019/10/cleanup-win10-300x169.jpg">
+    <meta property="og:image:url" content="/images/2019/10/cleanup-win10-300x169.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Chris Titus Tech">
     <meta property="twitter:title" content="Clean Up Windows 10">
@@ -1298,7 +1298,7 @@
     "url" : "https://christitus.com/clean-up-windows-10/",
     "description": "\u003cp\u003eIn this article, we will clean up Windows 10. This will include debloat, startup maintenance, system tweaks, and privacy settings. These 3 stages are broken down below …\u003c/p\u003e",
     "keywords": ["Windows 10","PowerShell"],
-    "image" : "https://christitus.com/wp-content/uploads/2019/10/cleanup-win10-300x169.jpg",
+    "image" : "/images/2019/10/cleanup-win10-300x169.jpg",
     "author": {
       "@type": "Person",
       "name": "Chris Titus"
@@ -1692,23 +1692,23 @@ if (!doNotTrack) {
 <h2 id="step-1-debloat-windows-10">Step 1: Debloat Windows 10</h2>
 <p>We will be utilizing PowerShell to clean up Windows 10 and get rid of a bunch of useless bloat that is included with it.</p>
 <h3 id="download-powershell-script">Download PowerShell Script</h3>
-<p><img src="../../wp-content/uploads/2019/10/Screenshot_20191014_144201.png" alt="Screenshot_20191014_144201" /></p>
+<p><img src="../../images/2019/10/Screenshot_20191014_144201.png" alt="Screenshot_20191014_144201" /></p>
 <h4 id="run-powershell-script">Run PowerShell Script</h4>
-<p><img src="../../wp-content/uploads/2019/10/runcmd.png" alt="runcmd" /></p>
+<p><img src="../../images/2019/10/runcmd.png" alt="runcmd" /></p>
 <p><code>iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/debloat'))</code></p>
 <p><strong>Note: This will remove many apps in the Microsoft Store. Games, Office 365 and things that utilize the Microsoft Store. If unsure, use the customize blacklist and only tick the boxes of things you want to remove!</strong><br />
 Source: <a href="https://github.com/Sycnex/Windows10Debloater">https://github.com/Sycnex/Windows10Debloater</a></p>
 <h2 id="step-2-clean-up-windows-10-startup">Step 2: Clean Up Windows 10 Startup</h2>
-<p><img src="../../wp-content/uploads/2019/10/taskmanager.png" alt="taskmanager" /></p>
+<p><img src="../../images/2019/10/taskmanager.png" alt="taskmanager" /></p>
 <p><strong>Launch Task Manager</strong> and then click the startup tab. You need to disable any unneeded programs from here.</p>
 <h3 id="changing-startup-programs-advanced-users">Changing Startup Programs (Advanced Users)</h3>
-<p><img src="../../wp-content/uploads/2019/10/startup10.png" alt="startup10" /></p>
+<p><img src="../../images/2019/10/startup10.png" alt="startup10" /></p>
 <p>You can change startup programs from Start-Run-Type:<code>shell:startup</code> and Start-Run-Type: <code>shell:common startup</code></p>
 <p>You can also modify startup programs using registry editor HKCU or <code>HKLM\Software\Microsoft\Windows\CurrrentVersion\Run</code></p>
 <p>Cleanup <strong>Task Scheduler</strong>, as it accumulates many things that cause an install to be slow and is vital when you clean up Windows 10.</p>
 <h2 id="step-3-system-tweaks-and-privacy">Step 3: System Tweaks and Privacy</h2>
 <p>There is literally hundreds of settings in Windows 10 that are privacy concerns and why I’d recommend using a 3rd party software for this. However, you can do all the same tweaks by simply going through settings and doing all these manually. That said, I recommend using O&amp;O Shutup10 for optimal tweaks and privacy.</p>
-<p><img src="../../wp-content/uploads/2019/10/oo-shutup10.png" alt="oo-shutup10" /></p>
+<p><img src="../../images/2019/10/oo-shutup10.png" alt="oo-shutup10" /></p>
 <p>Download: <a href="https://www.oo-software.com/en/shutup10">https://www.oo-software.com/en/shutup10</a></p>
 <p>I also tell everyone to use the <strong>recommended settings</strong> as the other settings can have unintended consequences.</p>
 <h3 id="other-recommended-settings">Other Recommended Settings</h3>

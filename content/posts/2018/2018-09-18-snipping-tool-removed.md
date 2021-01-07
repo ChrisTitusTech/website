@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-18T19:06:44+00:00
 url: /snipping-tool-removed/
-image: /wp-content/uploads/2018/09/snipping-tool-keyboard-shortcuts-in-Windows-10_thumb-624x348.png
+image: /images/2018/09/snipping-tool-keyboard-shortcuts-in-Windows-10_thumb.png
 categories:
   - Windows
 tags:
@@ -23,7 +23,7 @@ Download it from there website here: <http://getgreenshot.org/downloads/>
 
 Currently, this is labeled as Screen Sketch, however, this is changing to Snip and Sketch App in the next update. Here is the preview of the upcoming disaster for Microsoft their predictably bad moves on forcing their tragic app store on us. Here is today&#8217;s download image of the app prior to the upcoming update that sunsets our beloved Snipping Tool.
   
-![screen-sketch](/wp-content/uploads/2018/09/screen-sketch.png)
+![screen-sketch](/images/2018/09/screen-sketch.png)
 
 ## Conclusion
 

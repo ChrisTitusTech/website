@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-04-01T22:21:10+00:00
 url: /grub-rescue/
-image: /wp-content/uploads/2019/04/grub-rescue.png
+image: /images/2019/04/grub-rescue.png
 categories:
   - Linux
 tags:
@@ -54,7 +54,7 @@ _Output Example:
 `grub rescue> initrd /boot/initrd (tab complete)`  
 `grub rescue> boot`
 
-![grub](https://christitus.com/wp-content/uploads/2019/04/grub-300x211.png)
+![grub](/images/2019/04/grub-300x211.png)
 
 ## Fix GRUB Permanently
 

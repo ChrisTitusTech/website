@@ -1249,8 +1249,8 @@
 <meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech.">
 
   
-    <meta property="og:image" content="https://christitus.com/wp-content/uploads/2019/03/google-cloud-platform.png">
-    <meta property="og:image:url" content="https://christitus.com/wp-content/uploads/2019/03/google-cloud-platform.png">
+    <meta property="og:image" content="/images/2019/03/google-cloud-platform.png">
+    <meta property="og:image:url" content="/images/2019/03/google-cloud-platform.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Chris Titus Tech">
     <meta property="twitter:title" content="WordPress on Google Cloud Platform">
@@ -1298,7 +1298,7 @@
     "url" : "https://christitus.com/wordpress-google-cloud-platform/",
     "description": "\u003cp\u003eI am going over hosting WordPress on Google Cloud Platform in this article. This is a step by step guide on how to set up and host a WordPress website using a fresh …\u003c/p\u003e",
     "keywords": ["Website","Google Cloud Platform","WordPress"],
-    "image" : "https://christitus.com/wp-content/uploads/2019/03/google-cloud-platform.png",
+    "image" : "/images/2019/03/google-cloud-platform.png",
     "author": {
       "@type": "Person",
       "name": "Chris Titus"
@@ -1691,7 +1691,7 @@ if (!doNotTrack) {
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <p>I am going over hosting WordPress on Google Cloud Platform in this article. This is a step by step guide on how to set up and host a WordPress website using a fresh installation.</p>
-<p><img src="/wp-content/uploads/2019/03/nas_theapplication_3216.png" alt="nas_theapplication_3216" /></p>
+<p><img src="/images/2019/03/nas_theapplication_3216.png" alt="nas_theapplication_3216" /></p>
 <h3 id="step-1-fresh-vm">Step 1: Fresh VM</h3>
 <p><em>Note: Be sure and install gcloud <a href="https://cloud.google.com/sdk/docs/downloads-apt-get">https://cloud.google.com/sdk/docs/downloads-apt-get</a><br />
 Setup Project and VM (micro)</em><br />
@@ -1704,12 +1704,12 @@ sudo mkswap /swapfile
 sudo swapon /swapfile  
 sudo nano /etc/fstab  
 </code></pre><p><code>/swapfile swap swap defaults 0 0</code></p>
-<p><img src="/wp-content/uploads/2019/03/apache2.png" alt="apache2" /></p>
+<p><img src="/images/2019/03/apache2.png" alt="apache2" /></p>
 <h3 id="step-3-install-lamp-stack-linux-apache-mysql-and-php">Step 3: Install LAMP Stack (Linux, Apache, MySQL, and PHP)</h3>
 <pre><code>sudo apt install tasksel
 sudo tasksel install lamp-server
 sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
-</code></pre><p><img src="/wp-content/uploads/2019/03/Internet_Line-20-512.png" alt="Internet_Line-20-512" /></p>
+</code></pre><p><img src="/images/2019/03/Internet_Line-20-512.png" alt="Internet_Line-20-512" /></p>
 <h3 id="step-4-configure-domain">Step 4: Configure Domain</h3>
 <p><strong>Setup DNS</strong><br />
 -Go to your web domain registrar and create A record pointing to your new server<br />
@@ -1727,7 +1727,7 @@ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 <p><code>$ a2dissite 000-default.conf</code><br />
 <code>$ a2ensite example.com.conf</code><br />
 <code>$ systemctl reload apache2</code></p>
-<p><img src="/wp-content/uploads/2019/03/san.png" alt="san" /></p>
+<p><img src="/images/2019/03/san.png" alt="san" /></p>
 <h3 id="step-5-prep-database-and-php">Step 5: Prep Database and PHP</h3>
 <p><strong>Create database</strong></p>
 <pre><code>$ mysql -u root  
@@ -1739,7 +1739,7 @@ $ mysql_secure_installation
 <pre><code>max\_input\_time = 30  
 upload\_max\_filesize = 20M  
 post\_max\_size = 21M
-</code></pre><p><img src="/wp-content/uploads/2019/03/WordPress-Logo-Download-PNG.png" alt="WordPress-Logo-Download-PNG" /></p>
+</code></pre><p><img src="/images/2019/03/WordPress-Logo-Download-PNG.png" alt="WordPress-Logo-Download-PNG" /></p>
 <h3 id="step-6-install-wordpress-on-google-cloud-platform">Step 6: Install WordPress on Google Cloud Platform</h3>
 <p><a href="https://codex.wordpress.org/Installing_WordPress">https://codex.wordpress.org/Installing_WordPress</a><br />
 <code>$ wget https://wordpress.org/latest.tar.gz</code><br />

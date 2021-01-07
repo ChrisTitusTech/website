@@ -1249,8 +1249,8 @@
 <meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech.">
 
   
-    <meta property="og:image" content="https://christitus.com/wp-content/uploads/2019/10/secure-website-300x169.jpg">
-    <meta property="og:image:url" content="https://christitus.com/wp-content/uploads/2019/10/secure-website-300x169.jpg">
+    <meta property="og:image" content="/images/2019/10/secure-website-300x169.jpg">
+    <meta property="og:image:url" content="/images/2019/10/secure-website-300x169.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Chris Titus Tech">
     <meta property="twitter:title" content="How to Secure A Web Server">
@@ -1298,7 +1298,7 @@
     "url" : "https://christitus.com/secure-web-server/",
     "description": "\u003cp\u003eIn this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just …\u003c/p\u003e",
     "keywords": ["Ubuntu","Ubuntu Server","Firewall"],
-    "image" : "https://christitus.com/wp-content/uploads/2019/10/secure-website-300x169.jpg",
+    "image" : "/images/2019/10/secure-website-300x169.jpg",
     "author": {
       "@type": "Person",
       "name": "Chris Titus"
@@ -1692,7 +1692,7 @@ if (!doNotTrack) {
       
       <p>In this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just because you secure your server doesn’t mean you can neglect it. I highly recommend monitoring it and adjusting security as needed. Monitoring is required for proper security in my opinion.</p>
 <h1 id="secure-a-web-server-steps">Secure A Web Server Steps</h1>
-<p><img src="https://christitus.com/wp-content/uploads/2019/10/firewall-png-577x359.png" alt="firewall-png-577&#215;359" /></p>
+<p><img src="/images/2019/10/firewall-png-577x359.png" alt="firewall-png-577&#215;359" /></p>
 <p><strong>Install UFW</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1725,7 +1725,7 @@ sudo ufw <span class="nb">enable</span>
 sudo ufw default allow outgoing
 </code></pre></td></tr></table>
 </div>
-</div><p><img src="https://christitus.com/wp-content/uploads/2019/09/ssh.png" alt="ssh" /></p>
+</div><p><img src="/images/2019/09/ssh.png" alt="ssh" /></p>
 <h2 id="change-ssh-to-key">Change SSH to Key</h2>
 <p><strong>Remote Machine</strong>: <code>ssh-keygen -t rsa</code></p>
 <h3 id="transfer-to-server">Transfer to Server</h3>
@@ -1752,7 +1752,7 @@ UsePAM no
 PermitRootLogin no
 </code></pre><h2 id="edit-etcsysctlconf">Edit /etc/sysctl.conf</h2>
 <p>Enable security features</p>
-<p><img src="https://christitus.com/wp-content/uploads/2019/10/settings.png" alt="settings" /></p>
+<p><img src="/images/2019/10/settings.png" alt="settings" /></p>
 <h2 id="prevent-ip-spoof-etchostconf">Prevent IP Spoof /etc/host.conf</h2>
 <p>Change File to mirror below:</p>
 <pre><code>​order bind,hosts

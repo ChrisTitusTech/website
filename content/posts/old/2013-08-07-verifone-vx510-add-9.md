@@ -10,7 +10,7 @@ categories:
 ---
 Using the following steps to add or remove a 9 when using the VeriFone VX510 to process credit cards.<!--more-->
 
-![VX510](/wp-content/uploads/2013/08/33937_Vx510hero-e1375896480531.jpg)
+![VX510](/images/2013/08/33937_Vx510hero-e1375896480531.jpg)
 
 ### Step-by-Step Instructions
 

@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2015-03-06T23:56:01+00:00
 url: /gfi-archiver-resource-usage/
-featured_image: https://christitus.com/wp-content/uploads/2015/03/MAR-new_logo.png
+image: /images/2015/03/MAR-new_logo.png
 categories:
   - Windows Server
 tags:

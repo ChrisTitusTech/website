@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-11-17T19:54:29+00:00
 url: /resize-lvm-partition-fedora-29-step-by-step-guide/
-image: /wp-content/uploads/2018/11/Selection_008.png
+image: /images/2018/11/Selection_008.png
 categories:
   - Linux
 tags:
@@ -23,26 +23,26 @@ First, we need to identify the LVM Partition we need to expand. In my case, it w
   
 Command: `df -h`
 
-![lvm-selection8](/wp-content/uploads/2018/11/Selection_008-300x111.png)
+![lvm-selection8](/images/2018/11/Selection_008-300x111.png)
 
 Second, lets verify there is space to expand on the physical drive.
   
 Command: `vgdisplay`
 
-![lvm-selection9](/wp-content/uploads/2018/11/Selection_009.png)
+![lvm-selection9](/images/2018/11/Selection_009.png)
 
 With all this verified, you can now expand the lvm partition.  
 _Note: the command below will take up a 100% of the free space, see screenshot for precise extentsion._
   
 Command: `lvextend -l 100%FREE /dev/fedora/home`
 
-![lvm-selection10](/wp-content/uploads/2018/11/Selection_010.png)
+![lvm-selection10](/images/2018/11/Selection_010.png)
 
 Finally, with the logical volume extended we simply reclaim the free space now.
   
 Command: `resize2fs /dev/fedora/home`
 
-![lvm-selection11](/wp-content/uploads/2018/11/Selection_011.png)
+![lvm-selection11](/images/2018/11/Selection_011.png)
 
 ## Contact Me
 

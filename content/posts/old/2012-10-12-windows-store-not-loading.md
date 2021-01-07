@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2012-10-12T17:13:46+00:00
 url: /windows-store-not-loading/
-image: /wp-content/uploads/2012/10/windows-store.png
+image: /images/2012/10/windows-store.png
 categories:
   - Windows
 

@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-18T15:23:20+00:00
 url: /install-linux-first-time/
-image: /wp-content/uploads/2018/10/thumbnail.jpg
+image: /images/2018/10/thumbnail.jpg
 categories:
   - Linux
 tags:
@@ -24,7 +24,7 @@ RUFUS USB Creator for Windows &#8211; <https://rufus.ie/en_IE.html>
   * Create a USB Thumb drive
   * Install
 
-![business-codes](/wp-content/uploads/2011/11/business-code-codes-207580.jpg)
+![business-codes](/images/2011/11/business-code-codes-207580.jpg)
 
 ## Basic Configuration
 

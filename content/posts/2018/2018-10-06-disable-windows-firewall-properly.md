@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-10-06T17:20:22+00:00
 url: /disable-windows-firewall-properly/
-image: /wp-content/uploads/2018/10/disable-firewall.png
+image: /images/2018/10/disable-firewall.png
 categories:
   - Windows
   - Networking
@@ -15,7 +15,7 @@ tags:
 ---
 This walkthrough goes over how to Disable Windows Firewall while not affecting other programs that rely on this service. It&#8217;s important that you **DO NOT **disable the service, due to the fact it can cause issues with Microsoft Office and other products.<!--more-->
 
-![win-firewall](/wp-content/uploads/2018/10/windows-firewall.png)
+![win-firewall](/images/2018/10/windows-firewall.png)
 
 ## Steps to bypass firewall
 

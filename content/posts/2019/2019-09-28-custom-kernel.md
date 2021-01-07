@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-09-29T00:32:45+00:00
 url: /custom-kernel/
-image: /wp-content/uploads/2019/09/customkernels-300x169.jpg
+image: /images/2019/09/customkernels-300x169.jpg
 categories:
   - Linux
 tags:
@@ -14,7 +14,7 @@ This Guide walks your through how to install a custom kernel on Linux. I will go
 
 Custom kernels in Linux are based on the Zen project and have some workstation/desktop optimizations. They are **NOT** meant for server installations. These are meant for those using Linux Desktop and utilizing it for Gaming, Production, etc. and overall I don&#8217;t recommend using these. However, if you like to tinker and squeeze every bit of performance out of your kernel than you can proceed.
 
-![debian](/wp-content/uploads/2019/09/debian.svg) 
+![debian](/images/2019/09/debian.svg) 
 
 ## Custom Kernel on Ubuntu / Debian / Mint / Pop OS
 
@@ -29,7 +29,7 @@ _Official Site [https://liquorix.net/](https://liquorix.net/) for the Liquorix K
 `sudo add-apt-repository ppa:damentz/liquorix && sudo apt-get update`  
 `sudo apt-get install linux-image-liquorix-amd64 linux-headers-liquorix-amd64`
 
-![arch](/wp-content/uploads/2019/09/arch.png) 
+![arch](/images/2019/09/arch.png) 
 
 ## Custom Kernel on Arch Linux, Manjaro, etc.
 

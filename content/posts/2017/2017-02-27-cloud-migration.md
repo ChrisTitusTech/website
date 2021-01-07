@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2017-02-27T21:03:20+00:00
 url: /cloud-migration/
-image: /wp-content/uploads/2017/02/datacenter.png
+image: /images/2017/02/datacenter.png
 ampforwp-amp-on-off:
   - default
 categories:
@@ -19,13 +19,13 @@ tags:
 
 The following article outlines what it takes for a cloud migration to Google Cloud Compute, Amazon Web Services, or Microsoft Azure means. Most businesses want to move to the &#8220;cloud&#8221; but have no idea what that means. <!--more-->If you&#8217;re a small business you typically have a couple computers scattered around with one storage device. If you&#8217;re a medium or large business you probably already have several servers at a location in a contract. Moving to the cloud is often pitched to businesses using Software-as-a-Service replacing the current system with a web application that runs through your browser. While this is ideal, in most instances it isn&#8217;t practical. So you keep paying for a bloated IT infrastructure that is dated, isn&#8217;t as reliable, and unable to change with your business needs.
 
-![PC Solution](/wp-content/uploads/2017/02/pc-solution.png)
+![PC Solution](/images/2017/02/pc-solution.png)
 
 ### Performing a Cloud Migration
 
 Leverage Google Cloud Compute, Amazon Web Services, or Microsoft Azure to perform a cloud migration. Moving your servers will often end up costing between $100 &#8211; $400 per server a month depending on your environment. When you factor in that there is no capital expenditure, maintenance, or power costs this is a far cheaper solution than your current environment. You also gain a **SUBSTANTIAL** increase in flexibility, performance, and reliability. So why hasn&#8217;t everyone transitioned to these services?
 
-![tangled](/wp-content/uploads/2017/02/tangled.png)
+![tangled](/images/2017/02/tangled.png)
 
 ### Migration Pains
 

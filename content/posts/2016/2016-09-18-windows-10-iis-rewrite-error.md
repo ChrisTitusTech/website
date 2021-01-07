@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2016-09-19T00:07:43+00:00
 url: /windows-10-iis-rewrite-error/
-image: /wp-content/uploads/2016/09/iis_rewrite-624x228.png
+image: /images/2016/09/iis_rewrite.png
 categories:
   - Windows
 tags:

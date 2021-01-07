@@ -1249,8 +1249,8 @@
 <meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech.">
 
   
-    <meta property="og:image" content="https://christitus.com/wp-content/uploads/2019/09/openvpn.png">
-    <meta property="og:image:url" content="https://christitus.com/wp-content/uploads/2019/09/openvpn.png">
+    <meta property="og:image" content="/images/2019/09/openvpn.png">
+    <meta property="og:image:url" content="/images/2019/09/openvpn.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Chris Titus Tech">
     <meta property="twitter:title" content="How to Setup a VPN Server and Clients Using OpenVPN">
@@ -1298,7 +1298,7 @@
     "url" : "https://christitus.com/openvpn-server/",
     "description": "\u003cp\u003eIn this article, I go over how to setup a VPN Server and clients using OpenVPN. this will cover the setup process of the remote machine and then connecting to it via both …\u003c/p\u003e",
     "keywords": ["OpenVPN"],
-    "image" : "https://christitus.com/wp-content/uploads/2019/09/openvpn.png",
+    "image" : "/images/2019/09/openvpn.png",
     "author": {
       "@type": "Person",
       "name": "Chris Titus"
@@ -1697,7 +1697,7 @@ if (!doNotTrack) {
 <p>you will need to enable the OpenVPN service to auto-start so the VPN stays up after reboot.<br />
 <code>sudo systemctl enable openvpn</code></p>
 <h3 id="troubleshooting">Troubleshooting:</h3>
-<p><img src="/wp-content/uploads/2019/09/tun-isnot-available.png" alt="tun-isnot-available" /></p>
+<p><img src="/images/2019/09/tun-isnot-available.png" alt="tun-isnot-available" /></p>
 <p><strong>TUN is not available</strong><br />
 -Certain VPS servers do not have TUN enabled by default. Create the follow script and run it on startup to fix this issue.</p>
 <p>-Create /usr/sbin/enabletun.sh<br />
@@ -1719,18 +1719,18 @@ if (!doNotTrack) {
 <p>Copy OVPN file to /etc/openvpn/client/client.ovpn<br />
 Test client configuration in Terminal:<br />
 <code>sudo openvpn /etc/openvpn/client/client.ovpn</code></p>
-<p><img src="/wp-content/uploads/2019/09/import-vpn.png" alt="import-vpn" /></p>
+<p><img src="/images/2019/09/import-vpn.png" alt="import-vpn" /></p>
 <p>Network manager Import VPN Connection: client.ovpn<br />
 Note: <em>Certificates stored in ~/.local/share/networkmanagement/certificates</em></p>
 <p>Connect via your Network Manager</p>
 <h3 id="troubleshooting-1">Troubleshooting:</h3>
-<p><img src="/wp-content/uploads/2019/09/tls-issue.png" alt="tls-issue" /></p>
+<p><img src="/images/2019/09/tls-issue.png" alt="tls-issue" /></p>
 <p>Verify TLS key file is enabled and created. This is a known issue on KDE desktops. If it isn’t make sure to create it using the last TLS portion of the ovpn file.</p>
 <h3 id="windows-client-setup">Windows Client Setup</h3>
 <p>Download OpenVPN client for your Windows @ <a href="https://openvpn.net/community-downloads/">https://openvpn.net/community-downloads/</a></p>
-<p><img src="/wp-content/uploads/2019/09/clientovpn-winscp.png?fit=1024%2C451&amp;ssl=1" alt="clientovpn-winscp" /></p>
+<p><img src="/images/2019/09/clientovpn-winscp.png?fit=1024%2C451&amp;ssl=1" alt="clientovpn-winscp" /></p>
 <p>Copy your client.ovpn from the server (WinSCP to connect and copy) and place the file in C:\Program Files\OpenVPN\config</p>
-<p><img src="/wp-content/uploads/2019/09/openvpnconnect.jpg" alt="openvpnconnect" /></p>
+<p><img src="/images/2019/09/openvpnconnect.jpg" alt="openvpnconnect" /></p>
 <p>Run the program and right click the icon in the tray and connect</p>
 <h2 id="video-walkthrough">Video Walkthrough</h2>
 <p><a href="https://www.youtube.com/watch?v=CBJMl9MILbg"><img src="https://img.youtube.com/vi/CBJMl9MILbg/0.jpg" alt="openvpn-yt" /></a><br />

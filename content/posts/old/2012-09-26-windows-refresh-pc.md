@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2012-09-26T16:51:38+00:00
 url: /windows-refresh-pc/
-image: /wp-content/uploads/2012/09/windows-reset-pc.png
+image: /images/2012/09/windows-reset-pc.png
 categories:
   - Windows
 
@@ -13,7 +13,7 @@ Using Windows Refresh PC now solves the common problem, that PCs get infected wi
 
 That is all changing in Windows 8, they are including a &#8220;Refresh&#8221; option and a &#8220;Remove everything and Re-install Windows&#8221; option.
 
-![Refresh PC](/wp-content/uploads/2012/09/refresh-pc.png)
+![Refresh PC](/images/2012/09/refresh-pc.png)
 
 I&#8217;m skeptical on how well this works, but in theory, this could be a great thing for the home user. Windows 8 computers are likely to get infected, just as much as a Windows 7 computer. However, having these options at users fingertips could be a blessing or a curse. Imagine if a virus re-programs these features, wouldn&#8217;t that be fun 😉 I guess we will just have to wait and see.
 

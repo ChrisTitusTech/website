@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-13T20:49:56+00:00
 url: /issuing-ssl-certs/
-image: /wp-content/uploads/2018/09/Letsencrypt.jpg
+image: /images/2018/09/Letsencrypt.jpg
 categories:
   - Linux
 tags:

@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-07T21:33:35+00:00
 url: /virtualization-introduction/
-image: /wp-content/uploads/2018/09/virtualization-624x346.jpg
+image: /images/2018/09/virtualization.jpg
 categories:
   - Virtualization
 tags:

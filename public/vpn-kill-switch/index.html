@@ -1249,8 +1249,8 @@
 <meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech.">
 
   
-    <meta property="og:image" content="https://christitus.com/wp-content/uploads/2019/12/vpn-kill-switch-300x169.jpg">
-    <meta property="og:image:url" content="https://christitus.com/wp-content/uploads/2019/12/vpn-kill-switch-300x169.jpg">
+    <meta property="og:image" content="/images/2019/12/vpn-kill-switch-300x169.jpg">
+    <meta property="og:image:url" content="/images/2019/12/vpn-kill-switch-300x169.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Chris Titus Tech">
     <meta property="twitter:title" content="How To Setup a VPN Kill Switch Server">
@@ -1298,7 +1298,7 @@
     "url" : "https://christitus.com/vpn-kill-switch/",
     "description": "\u003cp\u003eThis will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if …\u003c/p\u003e",
     "keywords": ["Ubuntu","Ubuntu Server","Firewall"],
-    "image" : "https://christitus.com/wp-content/uploads/2019/12/vpn-kill-switch-300x169.jpg",
+    "image" : "/images/2019/12/vpn-kill-switch-300x169.jpg",
     "author": {
       "@type": "Person",
       "name": "Chris Titus"
@@ -1692,7 +1692,7 @@ if (!doNotTrack) {
       
       <p>This will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if you are more familiar with that.</p>
 <h2 id="install-packages">Install packages</h2>
-<p><img src="../wp-content/uploads/2019/12/instal.png" alt="install image" /></p>
+<p><img src="../images/2019/12/instal.png" alt="install image" /></p>
 <p><code>sudo apt install openvpn ufw -y</code><br />
 <em>*Note: use apt instead of dnf on Ubuntu or Debian Servers</em></p>
 <h2 id="set-static-ip">Set Static IP</h2>
@@ -1703,12 +1703,12 @@ if (!doNotTrack) {
 <p><code>mv ~/Downloads/client.ovpn /etc/openvpn/test.conf</code></p>
 <!--adsense-->
 <h2 id="service-creation">Service creation</h2>
-<p><img src="../wp-content/uploads/2019/12/sysinstall.png" alt="sysinstall image" /></p>
+<p><img src="../images/2019/12/sysinstall.png" alt="sysinstall image" /></p>
 <p><code>ls /lib/systemd/system/</code><br />
 <em>*Check for openvpn-client@ or openvpn@</em><br />
 <code>sudo systemctl start openvpn@test</code></p>
 <h2 id="disable-ipv6-and-secure-system">Disable ipv6 and Secure System</h2>
-<p><img src="../wp-content/uploads/2019/12/sysctl.png" alt="sysctl" /></p>
+<p><img src="../images/2019/12/sysctl.png" alt="sysctl" /></p>
 <p><code>sudo nano /etc/sysctl.conf</code></p>
 <blockquote>
 <p>net.ipv6.conf.all.disable_ipv6=1<br />
@@ -1720,7 +1720,7 @@ net.ipv6.conf.lo.disable_ipv6=1</p>
 <code>cat /proc/sys/net/ipv6/conf/all/disable_ipv6</code><br />
 <code>sudo sysctl --all | grep disable_ipv6</code></p>
 <h2 id="firewall-ufw-blocks-8211-vpn-kill-switch">Firewall ufw blocks – VPN Kill Switch</h2>
-<p><img src="../wp-content/uploads/2019/12/vpnsetup.png" alt="install image" /></p>
+<p><img src="../images/2019/12/vpnsetup.png" alt="install image" /></p>
 <p><code>sudo nano /etc/default/ufw</code></p>
 <blockquote>
 <p>IPV6=no</p>
@@ -1740,7 +1740,7 @@ net.ipv6.conf.lo.disable_ipv6=1</p>
 <strong>Enable Firewall</strong><br />
 <code>sudo ufw enable</code></p>
 <h2 id="external-program-setup-on-server">External Program Setup on Server</h2>
-<p><img src="../wp-content/uploads/2019/12/transmission.png" alt="install image" /></p>
+<p><img src="../images/2019/12/transmission.png" alt="install image" /></p>
 <p><strong>X11 Forwarding</strong><br />
 <a href="https://www.youtube.com/watch?v=auePeI8vZA8"><img src="https://img.youtube.com/vi/auePeI8vZA8/0.jpg" alt="x11 forwarding" /></a><br />
 <em>Note: YouTube Video - Hold Ctrl + Left Click to open in new window</em></p>

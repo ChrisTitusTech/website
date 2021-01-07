@@ -1249,8 +1249,8 @@
 <meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech.">
 
   
-    <meta property="og:image" content="https://christitus.com/wp-content/uploads/2016/07/xenserver.jpg">
-    <meta property="og:image:url" content="https://christitus.com/wp-content/uploads/2016/07/xenserver.jpg">
+    <meta property="og:image" content="/images/2016/07/xenserver.jpg">
+    <meta property="og:image:url" content="/images/2016/07/xenserver.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:app:name:iphone" content="Chris Titus Tech">
     <meta property="twitter:title" content="XenServer cannot connect in XenCenter or XCP-ng Center">
@@ -1298,7 +1298,7 @@
     "url" : "https://christitus.com/xenserver-cannot-connect/",
     "description": "\u003cp\u003eHaving problems and your XenServer cannot connect to XenCenter? Did you have high availability enabled? If you answered yes to both these questions here is how you get …\u003c/p\u003e",
     "keywords": ["XenServer"],
-    "image" : "https://christitus.com/wp-content/uploads/2016/07/xenserver.jpg",
+    "image" : "/images/2016/07/xenserver.jpg",
     "author": {
       "@type": "Person",
       "name": "Chris Titus"
@@ -1687,14 +1687,15 @@ if (!doNotTrack) {
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <p>Having problems and your XenServer cannot connect to XenCenter? Did you have high availability enabled? If you answered yes to both these questions here is how you get your XenServer back online and functioning properly.</p>
-<p><img src="/wp-content/uploads/2018/10/xenserver-cannot-connect.png" alt="xenserver-cannot" /></p>
+<p><img src="/images/2018/10/xenserver-cannot-connect.png" alt="xenserver-cannot" /></p>
 <h3 id="step-by-step-guide">Step-by-Step Guide</h3>
 <ul>
 <li>PuTTy into the XenServer Pool Master</li>
 <li>run the following commands:</li>
 </ul>
 <p><code>xe pool-ha-disable</code><em>Note: If this fails try ha-disable force below</em></p>
-<p><code>xe host-emergency-ha-disable force=true&lt;br /&gt; xe pool-emergency-transition-to-master --force</code></p>
+<p><code>xe host-emergency-ha-disable force=true&lt;br /&gt;
+ xe pool-emergency-transition-to-master --force</code></p>
 <p><em>Note: This will force the pool and slaves to reinitialize with the pool master</em></p>
 <ul>
 <li>Once the server reboots it should connect</li>

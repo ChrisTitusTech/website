@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-11T13:44:02+00:00
 url: /intro-google-cloud-platform/
-image: /wp-content/uploads/2018/09/googlecloudplatform-624x386.png
+image: /images/2018/09/googlecloudplatform.png
 categories:
   - Virtualization
 tags:

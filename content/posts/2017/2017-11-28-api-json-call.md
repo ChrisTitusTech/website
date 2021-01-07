@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2017-11-28T22:03:53+00:00
 url: /api-json-call/
-image: /wp-content/uploads/2017/11/jsonapi-624x195.png
+image: /images/2017/11/jsonapi.png
 categories:
   - Linux
 tags:

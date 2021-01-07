@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-14T16:50:46+00:00
 url: /using-iometer/
-image: /wp-content/uploads/2018/09/iometer-2.png
+image: /images/2018/09/iometer-2.png
 categories:
   - Windows
   - Hardware
@@ -17,7 +17,7 @@ Using IOMeter will give you a great benchmark on any hard drives and network dri
 
 1) Download IOMeter from the [Official Site](http://www.iometer.org/doc/downloads.html) and run setup
   
-![isometer1](/wp-content/uploads/2018/09/isometer1.png)
+![isometer1](/images/2018/09/isometer1.png)
   
 2) All Programs -> Iometer -> Iometer
 
@@ -26,17 +26,17 @@ Using IOMeter will give you a great benchmark on any hard drives and network dri
 -Under ‘Disk Targets’ tab select the drive you want to run the IO test on:  
 -Set Maximum Disk Size to 204800 Sectors (one sector is 512 B, so 204800 sectors gives 100MB)
 
-![isometer2](/wp-content/uploads/2018/09/isometer2.png)
+![isometer2](/images/2018/09/isometer2.png)
   
 4) Under ‘Access Specifications’ tab, under Global Access Specifications, select Default, and Click Add
 
 _Note: Default test is – 67% read, 33% write, 2 KB, 100% Random non/sequential writes, Burst Length 1 I/O. This is fine for this brief guide and the sample results below use this. _
 
-![isometer3](/wp-content/uploads/2018/09/isometer3.png)
+![isometer3](/images/2018/09/isometer3.png)
 
 5) Under ‘Results Display’ tab, under Update Frequency, set to 10 seconds
 
-![isometer4](/wp-content/uploads/2018/09/iometer4.png)
+![isometer4](/images/2018/09/iometer4.png)
 
 6) Under ‘Test Setup’ tab, set Run Time to 1 minute ( If bench-marking a SAN or Network drive I recommend doing it for 5 minutes for consistency. )
 

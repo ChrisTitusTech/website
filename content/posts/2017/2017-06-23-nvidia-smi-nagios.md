@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2017-06-24T04:14:45+00:00
 url: /nvidia-smi-nagios/
-image: /wp-content/uploads/2017/06/Nagios-Logo.jpg
+image: /images/2017/06/Nagios-Logo.jpg
 categories:
   - Linux
 tags:
@@ -21,7 +21,7 @@ _*Note: Install NRPE to your_ Linux _box first, and create this file (gpu_temp.s
 
 This will only query the first GPU that is found via nvidia-smi CLI command. It will do warnings and alerts at the given thresholds.
 
-![nvidia smi nagios](/wp-content/uploads/2017/06/script.png)
+![nvidia smi nagios](/images/2017/06/script.png)
 
 ### The gpu_temp.sh Script
 

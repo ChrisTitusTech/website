@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2019-03-12T20:35:00+00:00
 url: /aptitude-explained/
-image: https://christitus.com/wp-content/uploads/2019/03/aptitude-e1570564649126.jpg
+image: /images/2019/03/aptitude.jpg
 categories:
   - Linux
 tags:

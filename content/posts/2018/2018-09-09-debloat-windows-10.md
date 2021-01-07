@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-09T17:08:58+00:00
 url: /debloat-windows-10/
-image: /wp-content/uploads/2018/09/remove-win10-bloatware.jpg
+image: /images/2018/09/remove-win10-bloatware.jpg
 categories:
   - Windows
 tags:
@@ -43,7 +43,7 @@ Based on User feedback, this no longer uninstalls OneDrive or Office.
   * Run the script from the following Github Repository. The person running this GitHub has been updating this script for a while and is a godsend. (Source: <https://github.com/Sycnex/Windows10Debloater>) Use Windows10Debloater.ps1from the location above 
       * _During installation select yes to debloat windows 10, select yes to remove OneDrive, and Yes to reboot after it finishes. Below is the image of performing these tasks._
 
-[![debloatwin10cmd](https://christitus.com/wp-content/uploads/2018/09/debloatwin10cmd.png) 
+[![debloatwin10cmd](/images/2018/09/debloatwin10cmd.png) 
 
 ## Video Walkthrough
 

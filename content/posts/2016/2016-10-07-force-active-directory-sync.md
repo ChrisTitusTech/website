@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2016-10-07T14:01:26+00:00
 url: /force-active-directory-sync/
-image: /wp-content/uploads/2016/10/ActiveDirecotry2-624x253.png
+image: /images/2016/10/ActiveDirecotry2.png
 categories:
   - Windows Server
 tags:

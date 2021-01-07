@@ -4,7 +4,7 @@ author: Chris Titus
 type: post
 date: 2018-09-23T20:50:39+00:00
 url: /perfect-htaccess/
-image: /wp-content/uploads/2018/09/htaccess.png
+image: /images/2018/09/htaccess.png
 categories:
   - Linux
 tags:
