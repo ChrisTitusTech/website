@@ -52,12 +52,12 @@ organization = ""
 link = ""
 
 # sidebar
-enableBio = false # in home page sidebar
-enableBioImage = false # in home page sidebar
+enableBio = true # in home page sidebar
+enableBioImage = true # in home page sidebar
 enableSidebar = true # Set to false to create the full width of the content.
 enableSidebarTags = false # if you want to use tags.
 enableSidebarSeries = false
-enableSidebarCategories = true
+enableSidebarCategories = false
 enableHomeSidebarTitles = true
 enableListSidebarTitles = true
 enableToc = true # single page table of contents, you can replace this param to toc(toc = true)
