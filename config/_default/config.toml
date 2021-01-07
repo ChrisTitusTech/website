@@ -1,5 +1,5 @@
 baseURL = "https://christitus.com/"
-title = "Chris Titus Tech | Technology Simplified"
+title = "Chris Titus Tech | Tech Content Creator"
 theme = "zzo" # Name of Zzo theme folder in `themes/`.
 disableKinds = ["sitemap"]
 

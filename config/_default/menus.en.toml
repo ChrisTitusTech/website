@@ -1,28 +1,44 @@
 [[main]]
-    identifier = "home"
-    name = "Home"
-    pre = "<i class='fa fa-heart'></i>"
-    url = "/"
-    weight = 1
-
-[[main]]
     identifier = "store"
     name = "Store"
     pre = "<i class='fa fa-heart'></i>"
     url = "https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2"
-    weight = 2
+    weight = 4
 
 [[main]]
     name = "Members"
     post = ""
     pre = "<i class='fa fa-heart'></i>"
     url = "https://portal.christitus.com"
+    weight = 2
+
+[[main]]
+    name = "Sections"
+    post = ""
+    pre = "<i class='fa fa-heart'></i>"
     weight = 3
 
 [[main]]
-    name = "Remote Support"
-    post = ""
-    pre = "<i class='fa fa-road'></i>"
-    url = "https://download.teamviewer.com/download/TeamViewerQS.exe"
-    weight = 9
+    name = "Android"
+    url = "/categories/android"
+    parent = "Sections"
 
+[[main]]
+    name = "Linux"
+    url = "/categories/linux"
+    parent = "Sections"
+
+[[main]]
+    name = "MacOS"
+    url = "/categories/macos"
+    parent = "Sections"
+
+[[main]]
+    name = "Networking"
+    url = "/categories/networking"
+    parent = "Sections"
+
+[[main]]
+    name = "Windows"
+    url = "/categories/windows"
+    parent = "Sections"
