@@ -27,27 +27,29 @@ With that down setting up IIS is also extremely simple now, which is quite surpr
 
 Using the Web Platform Install you can just select whatever install you want (WordPress for me) and click install. It grabs all the dependencies and installs them for you, and from here I had a fresh WordPress install. I did a simple import and changed a couple of settings that were reset and was back up and running. Overall a simple migration, and pretty happy with IIS 10 (What happened to IIS 9 we will never know&#8230;)
 
-## Contact Me
+## Chris Titus Tech
 
-I live stream on [Chris Titus Tech YouTube Channel][1] every Friday at 10 AM CST and archive clips to [Titus Tech Talk][2]. I also regularly publish to [christitus.com][3], but if you'd like to contact me directly or want to contribute to help keep these articles and videos being made consider joining the CTT members. 
+#### Social
 
-Two Memberships exist:
-- [ChrisTitus.com Members Section][4] (_CC Only_)
-  - Full Archive of All Unlisted Live Streams
+- Twitter - <https://twitter.com/christitustech>
+- YouTube - <https://youtube.com/c/ChrisTitusTech>
+- Twitch - <https://twitch.tv/christitustech>
+- Odysee / LBRY (Privacy) - <https://links.christitus.com/lbry>
+
+#### Exclusive Content
+
+- [ChrisTitus.com Members Section][1] (_CC Only_)
   - Digital Downloads with Guides and Pre-Built Images
   - Monthly Members Only Video
   - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][5] (_All Payments Accepted_)
+- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
+  - Monthly Members Only Video
   - YouTube Emojis for Comments and Live Chat
   - YouTube Badges that changes based on membership time for comments and chat.
   - All YouTube comments are highlighted when I review comments daily. 
-  - Immediate Access to Full Live Streams
   - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
- [1]: https://www.youtube.com/c/ChrisTitusTech
- [2]: https://www.youtube.com/c/ChrisTitusTechStreams
- [3]: https://christitus.com/
- [4]: https://portal.christitus.com
- [5]: https://links.christitus.com/join [5]: https://dev.mysql.com/downloads/mysql/
+ [1]: https://portal.christitus.com
+ [2]: https://links.christitus.com/join [5]: https://dev.mysql.com/downloads/mysql/
  [6]: https://go.microsoft.com/fwlink/?LinkID=286266
 
