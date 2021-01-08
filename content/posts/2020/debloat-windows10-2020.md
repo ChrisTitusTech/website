@@ -12,13 +12,14 @@ tags:
 This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC. 
 <!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved.
 
-## December 2020 Update
+## January 2021 Update
 
 If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: <https://github.com/ChrisTitusTech/win10script>
 
 If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below! 
 
 *December 2020 Feature: GUI added - Select what you want!*
+*January 2021 Feature: 10 Bug Fixes and Network Optimizations added*
 
 ```PowerShell
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
@@ -36,6 +37,11 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
 
 Based on User feedback, this no longer uninstalls OneDrive or Office. 
 
+### Toolbox Walkthrough Video
+
+[![win10toolbox](https://img.youtube.com/vi/V27McA7ch6w/0.jpg)](https://www.youtube.com/watch?v=V27McA7ch6w)  
+_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+
 ## User Requested Restore Scripts
 
 ```PowerShell
@@ -49,29 +55,12 @@ Current Lineup:
 - Tray Icons
 - Action Center
 
-## Other GitHub Projects for Debloating Windows
+## Old Methods from Prior Videos that I no longer use
 The project I use has been developed for many years now and is extremely good. Here is the source github project I use:  
 [https://github.com/Sycnex/Windows10Debloater](https://github.com/Sycnex/Windows10Debloater)
 
 This is a new project that was brought to my attention, but has quickly made a name for itself. It works very well and is typically more up to date than the above project.  
 [https://github.com/farag2/Windows-10-Setup-Script](https://github.com/farag2/Windows-10-Setup-Script)
-
-## Sycnex Debloat Options
-Here is a screenshot of the GUI for the debloater:  
-![debloat1-win10](../images/2020/debloat-win10/debloat-options.png)
-
-### Whitelist / Blacklist 
-I recommend everyone use this option and remove programs based on the selections under these lists.  
-![debloat2-win10](../images/2020/debloat-win10/debloat-options2.png)  
-Legend for the Options:  
-  - Uncheck = Will NOT Remove
-  - Checked = Will REMOVE
-
-*Note: You can also just click remove all - but it will delete EVERY APP that relies on the Windows Store*
-
-### Revert Registry Options
-
-This simply reverts any changes from the options below, like stopping edge from opening PDF files, or OneDrive removal. I never click this option. 
 
 ## Optimal Way to Use this Tool
 
@@ -81,20 +70,11 @@ I recommend running this tool under the following conditions:
   - After installing New Feature Updates
   
 Recommended Options:
-  - Pick Whitelist/Blacklist programs
-  - Remove Bloatware With Customized Blacklist
   - Disable Cortana
-  - Stop Edge PDF Takeover
   - Uninstall OneDrive
-  - Unpin all Start Menu Icons
-  - Disable Telemetry/Tasks
-  - Remove Bloatware RegKeys
+  - Run Essential Tweaks
   
 I generally always enable Dark Mode and Install 3.5 .NET but that is entirely my personal preference. 
-
-## Video Walkthrough
-
-Coming Soon
   
 ## Chris Titus Tech
 
