@@ -1,20 +1,27 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "Create Own Operating System"
 type: post
-date: {{ .Date }}
-url: /{{ .Name }}/
-image: /images/2021-thumbs/{{ .Name }}.jpg
+date: 2021-01-18T14:03:40-06:00
+url: /create-own-operating-system/
+image: /images/2021-thumbs/create-own-operating-system.jpg
 categories:
   - Linux
-  - Windows
-  - Networking
 tags:
   - Ubuntu
 draft: true
 ---
+This post will be about creating our own operating system from a base server installation. 
 <!--more-->
 
-## Chris Titus Tech
+## Installation
+
+Download Ubuntu Server ISO - <https://ubuntu.com/download/server>
+
+### Package Installation
+
+
+## Configuration
+
 
 #### Social
 
