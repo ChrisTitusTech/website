@@ -18,3 +18,15 @@ package = "@netlify/plugin-sitemap"
   to = "https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/roboform"
+  to = "https://www.anrdoezrs.net/click-9109049-14329390"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/roboform"
+  to = "https://www.jdoqocy.com/click-100287975-14061248"
+  status = 301
+  force = true
