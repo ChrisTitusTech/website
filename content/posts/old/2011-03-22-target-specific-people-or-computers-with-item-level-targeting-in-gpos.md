@@ -1,7 +1,7 @@
 ---
 title: Target Specific People or Computers with Item-Level Targeting in GPOs
 author: Chris Titus
-type: post
+
 date: 2011-03-22T21:59:02+00:00
 url: /target-specific-people-or-computers-with-item-level-targeting-in-gpos/
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Create Swap file on Cloud VM (AWS, GCloud, or Azure)
 author: Chris Titus
-type: post
+
 date: 2017-02-14T21:16:13+00:00
 url: /create-swap-file/
 image: /images/2017/02/swapfile.png

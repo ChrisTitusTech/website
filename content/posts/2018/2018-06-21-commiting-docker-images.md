@@ -1,7 +1,7 @@
 ---
 title: Commiting Changes to Docker images and containers
 author: Chris Titus
-type: post
+
 date: 2018-06-21T19:36:03+00:00
 url: /commiting-docker-images/
 image: /images/2018/06/docker-logo.png

@@ -1,7 +1,7 @@
 ---
 title: Encore Bandit II/III Connection Instructions
 author: Chris Titus
-type: post
+
 date: 2016-03-17T14:52:31+00:00
 url: /encore-bandit-connection/
 image: /images/2016/03/bandit3.png

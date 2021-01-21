@@ -1,6 +1,6 @@
 ---
 title: "BTRFS Guide - Basic Commands, Snapshots, and RAID"
-type: post
+
 date: 2020-01-13T16:36:18-06:00
 url: /btrfs-guide/
 image: /images/2020-thumbs/btrfs-guide.jpg

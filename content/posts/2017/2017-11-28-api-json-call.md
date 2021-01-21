@@ -1,7 +1,7 @@
 ---
 title: Python script to print out specific results from an API JSON call
 author: Chris Titus
-type: post
+
 date: 2017-11-28T22:03:53+00:00
 url: /api-json-call/
 image: /images/2017/11/jsonapi.png

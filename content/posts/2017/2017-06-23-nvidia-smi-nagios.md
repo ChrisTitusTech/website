@@ -1,7 +1,7 @@
 ---
 title: Report Nvidia-smi Temperature to Nagios
 author: Chris Titus
-type: post
+
 date: 2017-06-24T04:14:45+00:00
 url: /nvidia-smi-nagios/
 image: /images/2017/06/Nagios-Logo.jpg

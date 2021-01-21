@@ -1,7 +1,7 @@
 ---
 title: iDrac Dell Server (Off-Band Remote Access)
 author: Chris Titus
-type: post
+
 date: 2015-03-24T18:43:46+00:00
 url: /idrac-dell-server/
 image: /images/2015/03/Dell-iDRAC.png

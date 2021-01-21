@@ -1,6 +1,6 @@
 ---
 title: "Zsh"
-type: post
+
 date: 2020-02-19T12:32:44-06:00
 url: /zsh/
 image: /images/2020-thumbs/zsh.jpg

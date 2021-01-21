@@ -1,7 +1,7 @@
 ---
 title: Aptitude Explained
 author: Chris Titus
-type: post
+
 date: 2019-03-12T20:35:00+00:00
 url: /aptitude-explained/
 image: /images/2019/03/aptitude.jpg

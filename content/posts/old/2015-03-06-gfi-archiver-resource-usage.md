@@ -1,7 +1,7 @@
 ---
 title: GFI Archiver resource usage
 author: Chris Titus
-type: post
+
 date: 2015-03-06T23:56:01+00:00
 url: /gfi-archiver-resource-usage/
 image: /images/2015/03/MAR-new_logo.png

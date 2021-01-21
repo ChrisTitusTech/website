@@ -1,7 +1,7 @@
 ---
 title: Exclude shared mailboxes from Dynamic Distribution Group
 author: Chris Titus
-type: post
+
 date: 2016-10-31T20:29:26+00:00
 url: /exclude-shared-mailboxes-exchange/
 image: /images/2014/01/logo-Exchange-Color.jpg

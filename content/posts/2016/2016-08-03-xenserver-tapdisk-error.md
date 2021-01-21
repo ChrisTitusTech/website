@@ -1,7 +1,7 @@
 ---
 title: XenServer tapdisk experienced an error
 author: Chris Titus
-type: post
+
 date: 2016-08-03T16:12:57+00:00
 url: /xenserver-tapdisk-error/
 image: /images/2016/07/xenserver.jpg

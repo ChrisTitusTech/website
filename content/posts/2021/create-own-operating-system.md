@@ -1,6 +1,6 @@
 ---
 title: "Create Own Operating System"
-type: post
+
 date: 2021-01-18T14:03:40-06:00
 url: /create-own-operating-system/
 image: /images/2021-thumbs/create-own-operating-system.jpg

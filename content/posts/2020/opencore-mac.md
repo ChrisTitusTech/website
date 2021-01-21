@@ -1,6 +1,6 @@
 ---
 title: "Opencore Mac"
-type: post
+
 date: 2020-06-27T19:44:42-05:00
 url: /opencore-mac/
 image: /images/2020-thumbs/opencore-mac.jpg

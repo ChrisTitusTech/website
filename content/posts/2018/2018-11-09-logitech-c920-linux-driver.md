@@ -1,7 +1,7 @@
 ---
 title: Logitech C920 Linux Driver | Fix Lag and Disable Auto-Focus
 author: Chris Titus
-type: post
+
 date: 2018-11-09T20:36:56+00:00
 url: /logitech-c920-linux-driver/
 image: /images/2018/11/c920-pro-hd-webcam-refresh.png

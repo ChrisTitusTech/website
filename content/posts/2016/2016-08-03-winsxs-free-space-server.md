@@ -1,7 +1,7 @@
 ---
 title: Cleanup Server WinSxS Free Space on Server 2008 and Server 2012
 author: Chris Titus
-type: post
+
 date: 2016-08-03T23:19:49+00:00
 url: /winsxs-free-space-server/
 image: /images/2016/08/cleanup-space-on-server.png

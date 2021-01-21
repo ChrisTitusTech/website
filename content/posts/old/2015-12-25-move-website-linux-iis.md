@@ -1,7 +1,7 @@
 ---
 title: Move Website from Linux to IIS
 author: Chris Titus
-type: post
+
 date: 2015-12-26T05:41:50+00:00
 url: /move-website-linux-iis/
 image: /images/2015/12/move-wordpress-site.jpg

@@ -1,7 +1,7 @@
 ---
 title: SFC scannow error and Windows 10 corruption
 author: Chris Titus
-type: post
+
 date: 2015-07-26T02:39:10+00:00
 url: /sfc-scannow-error/
 image: /images/2015/07/win10slim.jpg

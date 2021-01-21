@@ -1,7 +1,7 @@
 ---
 title: Grant Full Access to all Public Folders for a user in Exchange
 author: Chris Titus
-type: post
+
 date: 2016-07-04T16:32:21+00:00
 url: /grant-full-access-public-folders/
 image: /images/2013/12/microsoft_exchange_header_contentfullwidth.jpg

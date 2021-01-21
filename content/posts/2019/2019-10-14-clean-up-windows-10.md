@@ -1,7 +1,7 @@
 ---
 title: Clean Up Windows 10
 author: Chris Titus
-type: post
+
 date: 2019-10-14T20:08:01+00:00
 url: /clean-up-windows-10/
 image: /images/2019/10/cleanup-win10-300x169.jpg

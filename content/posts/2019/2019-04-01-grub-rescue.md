@@ -1,7 +1,7 @@
 ---
 title: Grub Rescue | Repairing your Bootloader
 author: Chris Titus
-type: post
+
 date: 2019-04-01T22:21:10+00:00
 url: /grub-rescue/
 image: /images/2019/04/grub-rescue.png

@@ -1,7 +1,7 @@
 ---
 title: Using the find command Linux Terminal
 author: Chris Titus
-type: post
+
 date: 2014-02-21T20:56:09+00:00
 url: /find-command-linux-terminal/
 image: /images/2014/02/putty-terminals.png

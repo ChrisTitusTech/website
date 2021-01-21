@@ -1,6 +1,6 @@
 ---
 title: "Debloat Windows 10 in 2021"
-type: post
+
 date: 2020-06-11T16:04:48-05:00
 url: /debloat-windows-10-2020/
 image: /images/2020-thumbs/debloat-windows-10-2020.jpg

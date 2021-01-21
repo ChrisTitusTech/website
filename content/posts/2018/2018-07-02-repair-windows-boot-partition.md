@@ -1,7 +1,7 @@
 ---
 title: Repair Windows Boot Partition | Includes files and partitioning
 author: Chris Titus
-type: post
+
 date: 2018-07-02T17:01:44+00:00
 url: /repair-windows-boot-partition/
 image: /images/2018/07/reboot-select-proper-boot-device-rcm992x0-min-300x190.jpg

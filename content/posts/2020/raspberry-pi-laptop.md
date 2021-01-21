@@ -1,6 +1,6 @@
 ---
 title: "Raspberry Pi Laptop"
-type: post
+
 date: 2020-08-12T10:19:20-05:00
 url: /raspberry-pi-laptop/
 image: /images/2020-thumbs/raspberry-pi-laptop.jpg

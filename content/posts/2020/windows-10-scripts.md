@@ -1,6 +1,6 @@
 ---
 title: "Windows 10 Scripts"
-type: post
+
 date: 2020-08-14T11:43:17-05:00
 url: /windows-10-scripts/
 image: /images/2020-thumbs/windows-10-scripts.jpg

@@ -1,6 +1,6 @@
 ---
 title: "Windows 10 Optimization Guide"
-type: post
+
 date: 2020-12-30T14:34:52-06:00
 url: /Windows-10-Optimization-Guide/
 image: /images/2021-thumbs/Windows-10-Optimization-Guide.jpg

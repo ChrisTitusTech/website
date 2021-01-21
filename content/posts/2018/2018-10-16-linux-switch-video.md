@@ -1,7 +1,7 @@
 ---
 title: Why should I switch to Linux from Windows?
 author: Chris Titus
-type: post
+
 date: 2018-10-16T17:59:04+00:00
 url: /linux-switch-video/
 image: /images/2018/10/why-should-I-switch-to-linux.jpg

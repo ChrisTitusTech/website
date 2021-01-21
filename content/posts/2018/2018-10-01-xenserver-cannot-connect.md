@@ -1,7 +1,7 @@
 ---
 title: XenServer cannot connect in XenCenter or XCP-ng Center
 author: Chris Titus
-type: post
+
 date: 2018-10-01T18:53:13+00:00
 url: /xenserver-cannot-connect/
 image: /images/2016/07/xenserver.jpg

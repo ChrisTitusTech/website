@@ -1,7 +1,7 @@
 ---
 title: Keep Windows 7 from installing device drivers from Windows Update
 author: Chris Titus
-type: post
+
 date: 2011-09-15T15:57:09+00:00
 url: /keep-windows-7-from-installing-device-drivers-from-windows-update/
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Windows Refresh PC Setting
 author: Chris Titus
-type: post
+
 date: 2012-09-26T16:51:38+00:00
 url: /windows-refresh-pc/
 image: /images/2012/09/windows-reset-pc.png

@@ -1,7 +1,7 @@
 ---
 title: Reattach LVM after a reinstalling XenServer
 author: Chris Titus
-type: post
+
 date: 2016-08-03T16:18:32+00:00
 url: /reattach-lvm-xenserver/
 image: /images/2016/07/xenserver.jpg

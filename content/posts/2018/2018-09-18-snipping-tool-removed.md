@@ -1,7 +1,7 @@
 ---
 title: Snipping Tool Removed by Microsoft in October 2018 Update 1809
 author: Chris Titus
-type: post
+
 date: 2018-09-18T19:06:44+00:00
 url: /snipping-tool-removed/
 image: /images/2018/09/snipping-tool-keyboard-shortcuts-in-Windows-10_thumb.png

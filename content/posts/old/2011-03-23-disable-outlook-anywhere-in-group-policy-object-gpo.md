@@ -1,7 +1,7 @@
 ---
 title: Disable Outlook Anywhere in Group Policy Object (GPO)
 author: Chris Titus
-type: post
+
 date: 2011-03-23T15:35:23+00:00
 url: /disable-outlook-anywhere-in-group-policy-object-gpo/
 categories:

@@ -1,7 +1,7 @@
 ---
 title: Exchange on Primary Domain Controller Slow Reboot and Startup
 author: Chris Titus
-type: post
+
 date: 2012-07-26T20:31:21+00:00
 url: /exchange-primary-domain-controller/
 image: /images/2012/07/hosted-exchange-logo1.png

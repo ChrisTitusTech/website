@@ -1,7 +1,7 @@
 ---
 title: Remove or Hide System Reserved Partition
 author: Chris Titus
-type: post
+
 date: 2014-06-26T17:55:42+00:00
 url: /hide-system-reserved-partition/
 image: /images/2014/06/hard-disk-partition.png

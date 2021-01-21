@@ -1,7 +1,7 @@
 ---
 title: Removing or Adding 9 to Dial out on VeriFone VX510
 author: Chris Titus
-type: post
+
 date: 2013-08-07T17:29:19+00:00
 url: /verifone-vx510-add-9/
 categories:

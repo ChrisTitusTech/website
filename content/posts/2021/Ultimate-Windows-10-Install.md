@@ -1,6 +1,6 @@
 ---
 title: "Ultimate Windows 10 Install ISO"
-type: post
+
 date: 2021-01-20T10:23:43-06:00
 url: /Ultimate-Windows-10-Install-ISO/
 image: /images/2021-thumbs/Ultimate-Windows-10-Install-ISO.jpg

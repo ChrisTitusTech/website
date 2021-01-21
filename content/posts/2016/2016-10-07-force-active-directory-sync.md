@@ -1,7 +1,7 @@
 ---
 title: Force active directory sync to Office 365 with Azure ADSync
 author: Chris Titus
-type: post
+
 date: 2016-10-07T14:01:26+00:00
 url: /force-active-directory-sync/
 image: /images/2016/10/ActiveDirecotry2.png

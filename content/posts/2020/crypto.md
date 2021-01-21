@@ -1,6 +1,6 @@
 ---
 title: "Everything You Need to Know About Crypto"
-type: post
+
 date: 2020-09-03T11:33:12-05:00
 url: /crypto/
 image: /images/2020-thumbs/crypto.jpg

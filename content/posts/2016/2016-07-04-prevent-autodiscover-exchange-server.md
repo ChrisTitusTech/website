@@ -1,7 +1,7 @@
 ---
 title: Prevent autodiscover on Exchange server after an Office 365 Migration
 author: Chris Titus
-type: post
+
 date: 2016-07-04T16:44:02+00:00
 url: /prevent-autodiscover-exchange-server/
 image: /images/2016/07/autodiscover-redirect-prompt.png

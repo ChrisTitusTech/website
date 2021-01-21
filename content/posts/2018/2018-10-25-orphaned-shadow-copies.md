@@ -1,7 +1,7 @@
 ---
 title: Clearing out Orphaned Shadow Copies
 author: Chris Titus
-type: post
+
 date: 2018-10-25T15:34:24+00:00
 url: /orphaned-shadow-copies/
 image: /images/2018/10/shadow-copy-banner.png

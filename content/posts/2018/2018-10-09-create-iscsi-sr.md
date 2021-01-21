@@ -1,7 +1,7 @@
 ---
 title: Create iSCSI SR in XenServer
 author: Chris Titus
-type: post
+
 date: 2018-10-09T16:18:46+00:00
 url: /create-iscsi-sr/
 image: /images/2018/10/xcp-ng-iscsi.png

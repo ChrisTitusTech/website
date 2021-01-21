@@ -1,7 +1,7 @@
 ---
 title: Spooler subsystem app high CPU usage on Windows 10
 author: Chris Titus
-type: post
+
 date: 2017-05-02T19:53:16+00:00
 url: /spooler-subsystem-app-cpu-usage/
 image: /images/2017/05/Spooler-subsystem-app.png

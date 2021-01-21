@@ -1,6 +1,6 @@
 ---
 title: "Linux MacOS"
-type: post
+
 date: 2020-10-05T13:03:31-05:00
 url: /linux-macos/
 image: /images/2020-thumbs/linux-macos.jpg

@@ -1,6 +1,6 @@
 ---
 title: "Secure Linux"
-type: post
+
 date: 2020-08-18T13:02:25-05:00
 url: /secure-linux/
 image: /images/2020-thumbs/secure-linux.jpg

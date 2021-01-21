@@ -1,7 +1,7 @@
 ---
 title: GFI MailArchiver MAIS Queue Folder has tons of emails stuck
 author: Chris Titus
-type: post
+
 date: 2013-04-09T16:50:22+00:00
 url: /mais-queue-folder/
 image: /images/2013/04/MAIS-Queue-Folder.png

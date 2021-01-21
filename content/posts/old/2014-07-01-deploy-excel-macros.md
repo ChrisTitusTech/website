@@ -1,7 +1,7 @@
 ---
 title: Deploy excel macros to all xls files on startup
 author: Chris Titus
-type: post
+
 date: 2014-07-01T15:39:39+00:00
 url: /deploy-excel-macros/
 image: /images/2014/07/Excel-icon.png

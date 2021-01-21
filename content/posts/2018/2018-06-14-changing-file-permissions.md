@@ -1,7 +1,7 @@
 ---
 title: Changing file permissions using PowerShell
 author: Chris Titus
-type: post
+
 date: 2018-06-14T15:46:23+00:00
 url: /changing-file-permissions/
 image: /images/2018/06/changing-file-permissions.png

@@ -1,6 +1,6 @@
 ---
 title: "Custom Vim"
-type: post
+
 date: 2020-06-04T15:05:41-05:00
 url: /custom-vim/
 image: /images/2020-thumbs/custom-vim.jpg

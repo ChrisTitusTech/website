@@ -1,7 +1,7 @@
 ---
 title: Installing and Configuring Windows Server 2016 Core
 author: Chris Titus
-type: post
+
 date: 2018-09-28T19:42:47+00:00
 url: /configuring-windows-server-2016-core/
 image: /images/2018/09/windows-server-2016-guide.jpg

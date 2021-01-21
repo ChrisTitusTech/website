@@ -1,6 +1,6 @@
 ---
 title: "How to Use SSH with Github"
-type: post
+
 date: 2020-09-03T10:57:46-05:00
 url: /ssh-github/
 image: /images/github.png

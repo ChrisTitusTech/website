@@ -1,6 +1,6 @@
 ---
 title: "Fix Ticwatch Lag"
-type: post
+
 date: 2020-08-27T09:49:33-05:00
 url: /fix-ticwatch-lag/
 image: /images/2020-thumbs/fix-ticwatch-lag.jpg

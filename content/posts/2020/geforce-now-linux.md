@@ -1,6 +1,6 @@
 ---
 title: "Geforce Now Linux"
-type: post
+
 date: 2020-08-21T14:45:41-05:00
 url: /geforce-now-linux/
 image: /images/2020-thumbs/geforce-now-linux.jpg

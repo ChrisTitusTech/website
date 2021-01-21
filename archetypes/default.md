@@ -1,6 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-type: post
+
 date: {{ .Date }}
 url: /{{ .Name }}/
 image: /images/2021-thumbs/{{ .Name }}.jpg

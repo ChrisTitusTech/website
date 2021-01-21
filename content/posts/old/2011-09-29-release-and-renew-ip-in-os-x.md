@@ -1,7 +1,7 @@
 ---
 title: Release and Renew IP in OS X
 author: Chris Titus
-type: post
+
 date: 2011-09-29T18:46:43+00:00
 url: /release-and-renew-ip-in-os-x/
 categories:

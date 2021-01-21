@@ -1,7 +1,7 @@
 ---
 title: How to Setup FreeNAS 11
 author: Chris Titus
-type: post
+
 date: 2018-10-12T16:11:50+00:00
 url: /setup-freenas-11/
 image: /images/2018/10/how-to-setup-freenas.jpg

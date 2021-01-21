@@ -1,7 +1,7 @@
 ---
 title: Setup an always on VPN in Ubuntu
 author: Chris Titus
-type: post
+
 date: 2018-09-10T14:59:11+00:00
 url: /setup-always-on-vpn/
 image: /images/2018/09/VPN.png

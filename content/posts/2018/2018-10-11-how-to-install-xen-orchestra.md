@@ -1,7 +1,7 @@
 ---
 title: How to Install Xen Orchestra
 author: Chris Titus
-type: post
+
 date: 2018-10-11T17:14:47+00:00
 url: /how-to-install-xen-orchestra/
 image: /images/2018/10/citrixready-xologo.png

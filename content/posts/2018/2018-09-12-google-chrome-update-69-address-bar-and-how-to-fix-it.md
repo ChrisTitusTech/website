@@ -1,7 +1,7 @@
 ---
 title: Google Chrome missing www and how to fix it
 author: Chris Titus
-type: post
+
 date: 2018-09-12T20:49:44+00:00
 url: /google-chrome-update-69-address-bar-and-how-to-fix-it/
 image: /images/2018/09/chrome.jpg

@@ -1,7 +1,7 @@
 ---
 title: Updating LDAP Credentials for Netscaler VPX 1000
 author: Chris Titus
-type: post
+
 date: 2016-11-12T15:13:18+00:00
 url: /update-netscaler-vpx/
 image: /images/2016/11/citrix-netscaler.png

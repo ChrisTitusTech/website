@@ -1,7 +1,7 @@
 ---
 title: How to Secure A Web Server
 author: Chris Titus
-type: post
+
 date: 2019-10-10T13:37:49+00:00
 url: /secure-web-server/
 image: /images/2019/10/secure-website-300x169.jpg

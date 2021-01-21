@@ -1,7 +1,7 @@
 ---
 title: How to Learn Linux
 author: Chris Titus
-type: post
+
 date: 2019-10-10T01:42:05+00:00
 url: /learn-linux/
 image: /images/2019/10/learn-linux-300x169.jpg

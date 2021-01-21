@@ -1,7 +1,7 @@
 ---
 title: Check External IP in Linux Server
 author: Chris Titus
-type: post
+
 date: 2015-09-14T18:33:12+00:00
 url: /check-external-ip/
 image: /images/2015/09/ipaddress.jpg

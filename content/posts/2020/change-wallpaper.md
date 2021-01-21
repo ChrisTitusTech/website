@@ -1,6 +1,6 @@
 ---
 title: "Change your Desktop Wallpaper"
-type: post
+
 date: 2020-07-08T14:52:13-05:00
 url: /change-wallpaper/
 image: /images/2020-thumbs/change-wallpaper.jpg

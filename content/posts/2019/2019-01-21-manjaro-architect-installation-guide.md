@@ -1,7 +1,7 @@
 ---
 title: Manjaro Architect Installation Guide
 author: Chris Titus
-type: post
+
 date: 2019-01-21T19:51:04+00:00
 url: /manjaro-architect-installation-guide/
 image: /images/2019/01/manjaro.jpg

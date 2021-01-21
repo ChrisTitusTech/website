@@ -1,7 +1,7 @@
 ---
 title: How to remotely access Window Server 2016 Core in PowerShell 
 author: Chris Titus
-type: post
+
 date: 2018-06-20T20:30:49+00:00
 url: /windows-server-2016-core-remote/
 image: /images/2018/06/windows-server-2016.jpg

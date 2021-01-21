@@ -1,7 +1,7 @@
 ---
 title: Hackintosh Ryzen Install
 author: Chris Titus
-type: post
+
 date: 2019-10-29T01:13:21+00:00
 url: /hackintosh-ryzen-install/
 image: /images/2019/10/hackintosh-Install-300x169.jpg

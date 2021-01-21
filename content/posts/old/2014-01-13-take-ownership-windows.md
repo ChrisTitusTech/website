@@ -1,7 +1,7 @@
 ---
 title: Take ownership of an entire drive in Windows
 author: Chris Titus
-type: post
+
 date: 2014-01-13T16:37:53+00:00
 url: /take-ownership-windows/
 image: /images/2014/01/ownership.jpg

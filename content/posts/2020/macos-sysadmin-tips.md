@@ -1,6 +1,6 @@
 ---
 title: "Macos Sysadmin Tips"
-type: post
+
 date: 2020-12-14T17:25:22-06:00
 url: /macos-sysadmin-tips/
 image: /images/2020-thumbs/macos-sysadmin-tips.jpg

@@ -1,7 +1,7 @@
 ---
 title: XCP-ng / XenServer – Your First Virtual Machine Installation
 author: Chris Titus
-type: post
+
 date: 2018-09-09T18:54:21+00:00
 url: /xenserver-xcp-ng-first-vm-install/
 image: /images/2018/09/XCP-ng.png

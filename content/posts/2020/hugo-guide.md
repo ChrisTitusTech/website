@@ -1,6 +1,6 @@
 ---
 title: "Hugo Static Site Guide"
-type: post
+
 date: 2020-01-08T15:59:19-06:00
 url: /hugo-guide/
 image: /images/2020-thumbs/hugo-guide.jpg
@@ -195,7 +195,7 @@ This is where HUGO really shines and saves me a TON of time compared to WordPres
 ```
 ---
 title: "{{ replace .Name "-" " " | title }}"
-type: post
+
 date: {{ .Date }}
 url: /{{ .Name }}/
 image: /images/2020-thumbs/{{ .Name }}.jpg

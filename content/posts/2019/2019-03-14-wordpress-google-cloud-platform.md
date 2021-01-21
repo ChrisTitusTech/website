@@ -1,7 +1,7 @@
 ---
 title: WordPress on Google Cloud Platform
 author: Chris Titus
-type: post
+
 date: 2019-03-14T15:23:56+00:00
 url: /wordpress-google-cloud-platform/
 image: /images/2019/03/google-cloud-platform.png

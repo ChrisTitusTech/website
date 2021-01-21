@@ -1,7 +1,7 @@
 ---
 title: Introduction to Google Cloud Platform
 author: Chris Titus
-type: post
+
 date: 2018-09-11T13:44:02+00:00
 url: /intro-google-cloud-platform/
 image: /images/2018/09/googlecloudplatform.png

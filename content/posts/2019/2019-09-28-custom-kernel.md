@@ -1,7 +1,7 @@
 ---
 title: Custom Kernel in Linux
 author: Chris Titus
-type: post
+
 date: 2019-09-29T00:32:45+00:00
 url: /custom-kernel/
 image: /images/2019/09/customkernels-300x169.jpg

@@ -1,7 +1,7 @@
 ---
 title: SATA vs SAS vs NVMe Performance Breakdown
 author: Chris Titus
-type: post
+
 date: 2018-10-05T20:28:58+00:00
 url: /sata-vs-sas-vs-nvme/
 image: /images/2018/10/ssdvsnvme.png

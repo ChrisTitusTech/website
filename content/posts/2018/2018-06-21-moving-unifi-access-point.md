@@ -1,7 +1,7 @@
 ---
 title: Moving Unifi Access Point to another Unifi Controller
 author: Chris Titus
-type: post
+
 date: 2018-06-21T15:57:35+00:00
 url: /moving-unifi-access-point/
 image: /images/2018/06/unifi-ap.png

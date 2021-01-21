@@ -1,7 +1,7 @@
 ---
 title: How To Change Cortana Search
 author: Chris Titus
-type: post
+
 date: 2018-10-17T15:22:41+00:00
 url: /change-cortana-search/
 image: /images/2018/10/change-cortana-search.jpg

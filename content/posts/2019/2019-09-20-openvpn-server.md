@@ -1,7 +1,7 @@
 ---
 title: How to Setup a VPN Server and Clients Using OpenVPN
 author: Chris Titus
-type: post
+
 date: 2019-09-21T04:45:08+00:00
 url: /openvpn-server/
 image: /images/2019/09/openvpn.png

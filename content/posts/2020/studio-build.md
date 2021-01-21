@@ -1,6 +1,6 @@
 ---
 title: "The 2020 Studio Build"
-type: post
+
 date: 2020-09-08T15:05:58-05:00
 url: /studio-build/
 image: /images/2020-thumbs/studio-build.jpg

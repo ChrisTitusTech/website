@@ -1,7 +1,7 @@
 ---
 title: Linux File System | Directory Structure
 author: Chris Titus
-type: post
+
 date: 2019-09-23T17:23:00+00:00
 url: /linux-file-system/
 image: /images/2019/09/linux-file-system-300x169.jpg

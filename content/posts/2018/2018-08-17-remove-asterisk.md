@@ -1,7 +1,7 @@
 ---
 title: Remove Asterisk from Linux server (ubuntu/centos/debian/rhel)
 author: Chris Titus
-type: post
+
 date: 2018-08-17T15:58:36+00:00
 url: /remove-asterisk/
 image: /images/2018/08/Asterisk_003.png

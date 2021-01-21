@@ -1,7 +1,7 @@
 ---
 title: Garmin Express on Linux | Step by Step Guide
 author: Chris Titus
-type: post
+
 date: 2019-02-15T22:20:57+00:00
 url: /garmin-express-linux/
 image: /images/2019/02/garmin-express-icon-1.png

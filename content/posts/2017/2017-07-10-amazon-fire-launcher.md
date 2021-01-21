@@ -1,7 +1,7 @@
 ---
 title: Get rid of Amazon Fire Launcher without root access
 author: Chris Titus
-type: post
+
 date: 2017-07-10T21:46:28+00:00
 url: /amazon-fire-launcher/
 categories:

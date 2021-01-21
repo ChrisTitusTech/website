@@ -1,7 +1,7 @@
 ---
 title: FTP Credentials Required for WordPress Update to Plugins/Themes
 author: Chris Titus
-type: post
+
 date: 2015-12-03T22:47:50+00:00
 url: /ftp-credentials-required/
 image: /images/2015/12/ftp-creds.png

@@ -1,6 +1,6 @@
 ---
 title: "Wsl2"
-type: post
+
 date: 2020-06-07T10:50:19-05:00
 url: /wsl2/
 image: /images/2020-thumbs/wsl2.jpg

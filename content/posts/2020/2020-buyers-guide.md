@@ -1,6 +1,6 @@
 ---
 title: "2020 Buyers Guide"
-type: post
+
 date: 2020-11-20T13:46:56-06:00
 url: /2020-buyers-guide/
 image: /images/2020-thumbs/2020-buyers-guide.jpg

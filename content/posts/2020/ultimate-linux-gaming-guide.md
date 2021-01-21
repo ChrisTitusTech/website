@@ -1,6 +1,6 @@
 ---
 title: "The Ultimate Linux Gaming Guide"
-type: post
+
 date: 2020-07-14T14:27:23-05:00
 url: /ultimate-linux-gaming-guide/
 image: /images/2020-thumbs/ultimate-linux-gaming-guide.jpg

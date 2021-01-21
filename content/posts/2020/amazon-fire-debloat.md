@@ -1,6 +1,6 @@
 ---
 title: "How to Speed Up Your Amazon Fire Tablet"
-type: post
+
 date: 2020-07-21T12:37:54-05:00
 url: /amazon-fire-debloat/
 image: /images/2020-thumbs/amazon-fire-debloat.jpg

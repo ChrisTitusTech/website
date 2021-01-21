@@ -1,7 +1,7 @@
 ---
 title: Launching a startup program to run as administrator
 author: Chris Titus
-type: post
+
 date: 2017-03-27T02:26:36+00:00
 url: /run-as-administrator/
 image: /images/2017/03/runasadmin.jpg

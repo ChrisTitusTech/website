@@ -1,7 +1,7 @@
 ---
 title: How to choose DNS Server by benchmarking them
 author: Chris Titus
-type: post
+
 date: 2017-03-09T17:35:18+00:00
 url: /benchmark-dns-server/
 image: /images/2017/03/Secure-DNS.png

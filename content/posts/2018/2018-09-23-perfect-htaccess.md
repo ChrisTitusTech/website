@@ -1,7 +1,7 @@
 ---
 title: The Perfect htaccess for WordPress
 author: Chris Titus
-type: post
+
 date: 2018-09-23T20:50:39+00:00
 url: /perfect-htaccess/
 image: /images/2018/09/htaccess.png

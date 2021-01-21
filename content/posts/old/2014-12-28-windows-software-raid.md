@@ -1,7 +1,7 @@
 ---
 title: Raid Re-syncing Windows software raid
 author: Chris Titus
-type: post
+
 date: 2014-12-28T22:53:22+00:00
 url: /windows-software-raid/
 image: /images/2014/12/RAID1.jpg

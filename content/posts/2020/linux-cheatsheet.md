@@ -1,6 +1,6 @@
 ---
 title: "Linux Cheatsheet"
-type: post
+
 date: 2020-09-25T11:04:34-05:00
 url: /linux-cheatsheet/
 image: /images/2020-thumbs/linux-cheatsheet.jpg

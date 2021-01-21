@@ -1,7 +1,7 @@
 ---
 title: “Target account name is incorrect” Domain Controller Error
 author: Chris Titus
-type: post
+
 date: 2016-07-21T13:31:35+00:00
 url: /target-account-name-domain-controller-error/
 image: /images/2016/07/dcreplication.jpg

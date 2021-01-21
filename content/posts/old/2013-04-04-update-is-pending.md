@@ -1,7 +1,7 @@
 ---
 title: Could not continue installation because update is pending
 author: Chris Titus
-type: post
+
 date: 2013-04-04T19:04:14+00:00
 url: /update-is-pending/
 image: /images/2013/04/error.png

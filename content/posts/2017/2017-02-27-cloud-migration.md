@@ -1,7 +1,7 @@
 ---
 title: Cloud migration hosting in Google, Amazon, or Microsoft
 author: Chris Titus
-type: post
+
 date: 2017-02-27T21:03:20+00:00
 url: /cloud-migration/
 image: /images/2017/02/datacenter.png

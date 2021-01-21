@@ -1,7 +1,7 @@
 ---
 title: Install Plex plugin in FreeNAS
 author: Chris Titus
-type: post
+
 date: 2018-10-23T19:14:03+00:00
 url: /install-plex-plugin-freenas/
 image: /images/2018/10/thumbnail-1.jpg

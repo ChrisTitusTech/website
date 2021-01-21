@@ -1,7 +1,7 @@
 ---
 title: How To Setup a VPN Kill Switch Server
 author: Chris Titus
-type: post
+
 date: 2019-12-02T05:31:59+00:00
 url: /vpn-kill-switch/
 image: /images/2019/12/vpn-kill-switch-300x169.jpg

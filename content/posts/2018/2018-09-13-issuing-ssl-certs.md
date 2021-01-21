@@ -1,7 +1,7 @@
 ---
 title: Issuing SSL Certs using Let’s Encrypt in Ubuntu
 author: Chris Titus
-type: post
+
 date: 2018-09-13T20:49:56+00:00
 url: /issuing-ssl-certs/
 image: /images/2018/09/Letsencrypt.jpg
