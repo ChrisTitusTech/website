@@ -26,7 +26,7 @@ package = "@netlify/plugin-sitemap"
   force = true
 
 [[redirects]]
-  from = "/roboform"
+  from = "/easywp"
   to = "https://www.jdoqocy.com/click-100287975-14061248"
   status = 301
   force = true
