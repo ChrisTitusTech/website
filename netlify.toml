@@ -30,3 +30,81 @@ package = "@netlify/plugin-sitemap"
   to = "https://www.jdoqocy.com/click-100287975-14061248"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/linode"
+  to = "https://linode.gvw92c.net/xA1Rk"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Binance"
+  to = "https://www.binance.com/en/register?ref%3DEXCXLJ84"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gemini"
+  to = "https://gemini.com/share/j94zggt7"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/celsius"
+  to = "https://celsiusnetwork.app.link/19371707f3"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/partedmagic"
+  to = "https://partedmagic.com/store/?ref=35"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/join"
+  to = "https://www.youtube.com/channel/UCg6gPGh8HU2U01vaFCAsvmQ/join"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/antivirus"
+  to = "https://www.tkqlhce.com/click-9109049-11676352"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/coinbase"
+  to = "https://www.coinbase.com/join/titus_0u"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lbry"
+  to = "https://odysee.com/$/invite/@christitustech:5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ekster"
+  to = "https://ekster.com?sca_ref=128599.0kgNiKicwL"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/namecheap"
+  to = "http://www.dpbolvw.net/click-9109049-13266668"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pluralsite"
+  to = "https://pluralsight.pxf.io/kGOjL"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/expressvpn"
+  to = "https://www.expressvpn.com/christitustech"
+  status = 301
+  force = true
