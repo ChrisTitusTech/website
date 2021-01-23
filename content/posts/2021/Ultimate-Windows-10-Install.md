@@ -40,7 +40,7 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 Download and extract your drivers with the following Powershell command:
 
 ```Powershell
-DISM.exe /Online /Export-Driver /Destination:C:\Users\titus\Downloads\Drivers
+DISM.exe /Online /Export-Driver /Destination:%HOMEDRIVE%%HOMEPATH%\Downloads\Drivers
 ```
 
 You can install ANY inf files to the below directories. *EXE and Setup files DO NOT WORK!*  
@@ -61,7 +61,7 @@ Download the Windows updates from the Official Microsoft Catalog. We need two sp
 
 _Note: Be sure and download your version 20H2, 2009, 1909, etc. and x64 architecture for most computers_
 
-Put these in `ToolKit_Directory\Drivers\Updates\w10\x64`
+Put these in `ToolKit_Directory\Updates\w10\x64`
 
 ## Create the ISO
 
