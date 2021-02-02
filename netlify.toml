@@ -108,3 +108,9 @@ package = "@netlify/plugin-sitemap"
   to = "https://www.expressvpn.com/christitustech"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/blockfi"
+  to = "https://blockfi.com/?ref=4658fd40"
+  status = 301
+  force = true
