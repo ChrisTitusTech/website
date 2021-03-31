@@ -114,3 +114,15 @@ package = "@netlify/plugin-sitemap"
   to = "https://blockfi.com/?ref=4658fd40"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/odysee"
+  to = "https://odysee.com/$/invite/@christitustech:5"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/carbonite"
+  to = "https://www.anrdoezrs.net/click-100287975-14415044"
+  status = 301
+  force = true
