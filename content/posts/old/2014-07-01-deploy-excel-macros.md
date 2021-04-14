@@ -29,7 +29,7 @@ Note: I&#8217;ve also heard of folks dropping there *.bas macro files directly i
 - Twitter - <https://twitter.com/christitustech>
 - YouTube - <https://youtube.com/c/ChrisTitusTech>
 - Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://links.christitus.com/lbry>
+- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
 
 #### Exclusive Content
 
@@ -45,4 +45,4 @@ Note: I&#8217;ve also heard of folks dropping there *.bas macro files directly i
   - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
- [2]: https://links.christitus.com/join
+ [2]: https://christitus.com/join

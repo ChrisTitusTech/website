@@ -216,7 +216,7 @@ draft: true
 - Twitter - <https://twitter.com/christitustech>
 - YouTube - <https://youtube.com/c/ChrisTitusTech>
 - Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://links.christitus.com/lbry>
+- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
 
 #### Exclusive Content
 
@@ -232,7 +232,7 @@ draft: true
   - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
- [2]: https://links.christitus.com/join```
+ [2]: https://christitus.com/join```
 Now everytime I run `hugo new posts/newpost.md` it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase. 
 
 ## Video Walkthrough
@@ -249,7 +249,7 @@ This has changed my life and has made it so I can make posts like this one for p
 - Twitter - <https://twitter.com/christitustech>
 - YouTube - <https://youtube.com/c/ChrisTitusTech>
 - Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://links.christitus.com/lbry>
+- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
 
 #### Exclusive Content
 
@@ -265,4 +265,4 @@ This has changed my life and has made it so I can make posts like this one for p
   - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
- [2]: https://links.christitus.com/join
+ [2]: https://christitus.com/join

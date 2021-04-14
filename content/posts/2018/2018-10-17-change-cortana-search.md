@@ -42,7 +42,7 @@ In the end, you need to watch out for Windows updates. Anytime Windows does a ma
 - Twitter - <https://twitter.com/christitustech>
 - YouTube - <https://youtube.com/c/ChrisTitusTech>
 - Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://links.christitus.com/lbry>
+- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
 
 #### Exclusive Content
 
@@ -58,4 +58,4 @@ In the end, you need to watch out for Windows updates. Anytime Windows does a ma
   - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
- [2]: https://links.christitus.com/join
+ [2]: https://christitus.com/join

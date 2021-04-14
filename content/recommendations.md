@@ -18,5 +18,5 @@ enableWhoami: false
 - [Express VPN - Fastest VPN Provider](https://www.linkev.com/?a_fid=christitustech)
 - [Namecheap - My Favorite Domain Registrar](http://www.tkqlhce.com/click-9109049-13269564)
 - [Pluralsite - Learning Video Courses](http://pluralsight.pxf.io/c/1398393/448522/7490)
-- [Recommended Anti-Virus](https://links.christitus.com/antivirus)
+- [Recommended Anti-Virus](https://christitus.com/antivirus)
 

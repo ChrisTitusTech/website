@@ -34,7 +34,7 @@ Using the Web Platform Install you can just select whatever install you want (Wo
 - Twitter - <https://twitter.com/christitustech>
 - YouTube - <https://youtube.com/c/ChrisTitusTech>
 - Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://links.christitus.com/lbry>
+- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
 
 #### Exclusive Content
 
@@ -50,6 +50,6 @@ Using the Web Platform Install you can just select whatever install you want (Wo
   - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
- [2]: https://links.christitus.com/join [5]: https://dev.mysql.com/downloads/mysql/
+ [2]: https://christitus.com/join [5]: https://dev.mysql.com/downloads/mysql/
  [6]: https://go.microsoft.com/fwlink/?LinkID=286266
 

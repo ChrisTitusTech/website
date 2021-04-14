@@ -83,8 +83,8 @@ These are companies that you are sending your money to for safe keeping, much li
 Companies like Coinbase or Gemini are the two I use often. These companies are based in the United States and you can link your bank account to them to transfer Crypto to Dollar directly into your checking account. The fees are high and they should only be used for the purpose. While they do offer other services, it will be at a premium. _Please Note: DO NOT use credit cards to purchase crypto! You will have exorbitant fees and it is NOT worth it!_  
 I don't recommend storing money here, but they do have a good track record. If you only want to hold crypto and do nothing with it, then it is relatively safe with these institutions. 
 
-Coinbase Referral Link: <https://links.christitus.com/coinbase>
-Gemini Referral Link: <https://links.christitus.com/gemini>
+Coinbase Referral Link: <https://christitus.com/coinbase>
+Gemini Referral Link: <https://christitus.com/gemini>
 
 #### Exchanges
 
@@ -95,7 +95,7 @@ You don't have to use a company to exchange crypto, as you can use a decentraliz
 *TLDR:* Don't store money here, but use it to exchange out one currency for another
 
 Bittrex Referral Code: 4KR-KYJ-BQG
-Binance Referral Link: <https://links.christitus.com/Binance>
+Binance Referral Link: <https://christitus.com/Binance>
 
 #### Yield Companies
 
@@ -103,7 +103,8 @@ Binance Referral Link: <https://links.christitus.com/Binance>
 
 For any assets held here you gain interest or "Yield" much like an APY % from a traditional saving account. However, they gain at much higher rates, from 2% to 20%. There are three large companies in this space, crypto.com, Blockfi, and Celsius.network. These companies are less proven, but do give you return for holding your crypto with them. My personal preference is Celsius as they give in-kind payouts weekly, which means any crypto I hold with them increases slowly overtime. They also don't lock your crypto with them so I can withdraw at anytime. 
 
-Celsius Referral Link: <https://links.christitus.com/celsius>
+BlockFi Referral Link: <https://christitus.com/blockfi> *My personal recommendation*
+Celsius Referral Link: <https://christitus.com/celsius>
 
 ## Decentralized Finance Projects
 
@@ -151,7 +152,7 @@ I highly recommend <https://minerstat.com> for using a dedicated machine for min
 - Twitter - <https://twitter.com/christitustech>
 - YouTube - <https://youtube.com/c/ChrisTitusTech>
 - Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://links.christitus.com/lbry>
+- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
 
 #### Exclusive Content
 
@@ -167,4 +168,4 @@ I highly recommend <https://minerstat.com> for using a dedicated machine for min
   - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
- [2]: https://links.christitus.com/join
+ [2]: https://christitus.com/join

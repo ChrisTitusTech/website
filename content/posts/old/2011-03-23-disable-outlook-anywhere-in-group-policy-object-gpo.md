@@ -45,7 +45,7 @@ Click Close in the Add/Remove Templates dialog box.
 - Twitter - <https://twitter.com/christitustech>
 - YouTube - <https://youtube.com/c/ChrisTitusTech>
 - Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://links.christitus.com/lbry>
+- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
 
 #### Exclusive Content
 
@@ -61,5 +61,5 @@ Click Close in the Add/Remove Templates dialog box.
   - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
- [2]: https://links.christitus.com/join [5]: http://support.microsoft.com/kb/961112
+ [2]: https://christitus.com/join [5]: http://support.microsoft.com/kb/961112
  [6]: http://localhost/images/2011/03/article-961112.zip

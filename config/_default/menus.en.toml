@@ -58,7 +58,7 @@
 
 [[main]]
     name = "Odysee/LBRY"
-    url = "https://links.christitus.com/lbry"
+    url = "https://christitus.com/lbry"
     hrefTargetBlank = true
     parent = "Social"
 
