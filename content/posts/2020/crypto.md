@@ -95,16 +95,26 @@ You don't have to use a company to exchange crypto, as you can use a decentraliz
 *TLDR:* Don't store money here, but use it to exchange out one currency for another
 
 Bittrex Referral Code: 4KR-KYJ-BQG
-Binance Referral Link: <https://christitus.com/Binance>
 
 #### Yield Companies
 
 ![celsius](/images/crypto/celsius.jpg)
 
-For any assets held here you gain interest or "Yield" much like an APY % from a traditional saving account. However, they gain at much higher rates, from 2% to 20%. There are three large companies in this space, crypto.com, Blockfi, and Celsius.network. These companies are less proven, but do give you return for holding your crypto with them. My personal preference is Celsius as they give in-kind payouts weekly, which means any crypto I hold with them increases slowly overtime. They also don't lock your crypto with them so I can withdraw at anytime. 
+For any assets held here you gain interest or "Yield" much like an APY % from a traditional saving account. However, they gain at much higher rates, from 2% to 20%. There are three large companies in this space, crypto.com, Blockfi, and Celsius.network. These companies are less proven, but do give you return for holding your crypto with them. 
+
+BlockFi:
+- More Reputable
+- Direct Checking Account Link
+- Web and Mobile App
+- Monthly Interest Payouts
+
+Celsius
+- Only Crypto can be stored here and very few stable coins in Texas
+- Only Mobile app
+- Weekly Interest Payouts
 
 BlockFi Referral Link: <https://christitus.com/blockfi> *My personal recommendation*
-Celsius Referral Link: <https://christitus.com/celsius>
+Celsius No Longer Recommended (No Web App and Poor Customer Service)
 
 ## Decentralized Finance Projects
 
@@ -117,6 +127,7 @@ Notable Projects:
 - Synthetix - This wraps assets like stocks, gold, and other real world assets in a token. It has a lot of promise, but so far it is very limited. 
 - Uniswap - This is one of the first really successful decentralized exchanges. If you provide Liquidity to its pool you earn a % of the fees charged on the platform.
 - Tokensets - Wrapped assets but with a twist. Both Human and Robot ran sets rebalance a portfolio based on market conditions. Still in its early days, but interesting. 
+- Yearn.finance - Blackbox setup with massive yields upwards of 30%... seems too good to be true and I don't trust it. 
 
 Almost all these DeFi projects are causing massive amount of Ethereum transactions which in turn is causing high transaction fees. Solo yield farming requires you to be making $1000+ transactions so your profits don't get eaten by fees. 
 
