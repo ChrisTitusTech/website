@@ -14,13 +14,31 @@
     <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
     <webMaster>contact@christitus.com (Chris Titus)</webMaster>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 01 Mar 2021 14:53:09 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 20 Apr 2021 10:02:56 -0500</lastBuildDate>
     
         <atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Raspberry Pi</title>
+        <link>https://christitus.com/tags/raspberry-pi/</link>
+        <pubDate>Tue, 20 Apr 2021 10:02:56 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/tags/raspberry-pi/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Ubuntu</title>

@@ -14,7 +14,7 @@
     <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
     <webMaster>contact@christitus.com (Chris Titus)</webMaster>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 01 Mar 2021 14:53:09 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 20 Apr 2021 10:02:56 -0500</lastBuildDate>
     
         <atom:link href="https://christitus.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -44,6 +44,36 @@
         
       
 
+      
+      <item>
+        <title>Creating a Website on Raspberry Pi</title>
+        <link>https://christitus.com/pi-website/</link>
+        <pubDate>Tue, 20 Apr 2021 10:02:56 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 20 Apr 2021 10:02:56 -0500</atom:modified>
+        <guid>https://christitus.com/pi-website/</guid>
+        <description>&lt;p&gt;This is a guide on how to create a website on a Raspberry Pi. This will teach you the basics of using a LAMP stack.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2021-thumbs/pi-website.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Raspberry Pi</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>GRUB Bootloader Themes</title>
