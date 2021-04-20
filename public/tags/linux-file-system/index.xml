@@ -1,2 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Linux File System on Chris Titus Tech</title><link>https://christitus.com/tags/linux-file-system/</link><description>Recent content in Linux File System on Chris Titus Tech</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>contact@christitus.com (Chris Titus)</managingEditor><webMaster>contact@christitus.com (Chris Titus)</webMaster><copyright>©{year}, All Rights Reserved</copyright><lastBuildDate>Mon, 23 Sep 2019 17:23:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/linux-file-system/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux File System | Directory Structure</title><link>https://christitus.com/linux-file-system/</link><pubDate>Mon, 23 Sep 2019 17:23:00 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 23 Sep 2019 17:23:00 +0000</atom:modified><guid>https://christitus.com/linux-file-system/</guid><description>This article details the Linux File System and it’s directory structure.
-Linux File System – Root / -This is the root directory which should contain only the directories needed at the top level of the file structure /bin – This is where the executable files are located. These files are available to all users, but do not add programs manually here /dev – These are devices in your system – Not Mounted!</description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/09/linux-file-system-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Linux File System</category><category>Linux</category></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Linux File System on Chris Titus Tech</title>
+    <link>https://christitus.com/tags/linux-file-system/</link>
+    <description>Recent content in Linux File System on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 23 Sep 2019 17:23:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://christitus.com/tags/linux-file-system/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Linux File System | Directory Structure</title>
+        <link>https://christitus.com/linux-file-system/</link>
+        <pubDate>Mon, 23 Sep 2019 17:23:00 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 23 Sep 2019 17:23:00 +0000</atom:modified>
+        <guid>https://christitus.com/linux-file-system/</guid>
+        <description>This article details the Linux File System and it’s directory structure.
+Linux File System – Root  / -This is the root directory which should contain only the directories needed at the top level of the file structure /bin – This is where the executable files are located. These files are available to all users, but do not add programs manually here /dev – These are devices in your system – Not Mounted!</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/09/linux-file-system-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Linux File System</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -1,1 +1,226 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Categories on Chris Titus Tech</title><link>https://christitus.com/categories/</link><description>Recent content in Categories on Chris Titus Tech</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>contact@christitus.com (Chris Titus)</managingEditor><webMaster>contact@christitus.com (Chris Titus)</webMaster><copyright>©{year}, All Rights Reserved</copyright><lastBuildDate>Sat, 27 Jun 2020 19:44:42 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>MacOS</title><link>https://christitus.com/categories/macos/</link><pubDate>Sat, 27 Jun 2020 19:44:42 -0500</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/macos/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>Android</title><link>https://christitus.com/categories/android/</link><pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/android/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>Windows</title><link>https://christitus.com/categories/windows/</link><pubDate>Mon, 15 Jun 2020 23:33:56 -0500</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/windows/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>Linux</title><link>https://christitus.com/categories/linux/</link><pubDate>Thu, 04 Jun 2020 15:05:41 -0500</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/linux/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>Networking</title><link>https://christitus.com/categories/networking/</link><pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/networking/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>YouTube</title><link>https://christitus.com/categories/youtube/</link><pubDate>Wed, 04 Sep 2019 23:25:17 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/youtube/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>Windows Server</title><link>https://christitus.com/categories/windows-server/</link><pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/windows-server/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>FreeNAS</title><link>https://christitus.com/categories/freenas/</link><pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/freenas/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>Virtualization</title><link>https://christitus.com/categories/virtualization/</link><pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/virtualization/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>Hardware</title><link>https://christitus.com/categories/hardware/</link><pubDate>Fri, 05 Oct 2018 20:28:58 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/hardware/</guid><description/><dc:creator>Chris Titus</dc:creator></item><item><title>Software</title><link>https://christitus.com/categories/software/</link><pubDate>Wed, 12 Sep 2018 20:49:44 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><guid>https://christitus.com/categories/software/</guid><description/><dc:creator>Chris Titus</dc:creator></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Categories on Chris Titus Tech</title>
+    <link>https://christitus.com/categories/</link>
+    <description>Recent content in Categories on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 01 Mar 2021 14:53:09 -0600</lastBuildDate>
+    
+        <atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Linux</title>
+        <link>https://christitus.com/categories/linux/</link>
+        <pubDate>Mon, 01 Mar 2021 14:53:09 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/linux/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Windows</title>
+        <link>https://christitus.com/categories/windows/</link>
+        <pubDate>Wed, 20 Jan 2021 10:23:43 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/windows/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>MacOS</title>
+        <link>https://christitus.com/categories/macos/</link>
+        <pubDate>Mon, 14 Dec 2020 17:25:22 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/macos/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>YouTube</title>
+        <link>https://christitus.com/categories/youtube/</link>
+        <pubDate>Tue, 08 Sep 2020 15:05:58 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/youtube/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Android</title>
+        <link>https://christitus.com/categories/android/</link>
+        <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/android/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Networking</title>
+        <link>https://christitus.com/categories/networking/</link>
+        <pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/networking/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Windows Server</title>
+        <link>https://christitus.com/categories/windows-server/</link>
+        <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/windows-server/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>FreeNAS</title>
+        <link>https://christitus.com/categories/freenas/</link>
+        <pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/freenas/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Virtualization</title>
+        <link>https://christitus.com/categories/virtualization/</link>
+        <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/virtualization/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Hardware</title>
+        <link>https://christitus.com/categories/hardware/</link>
+        <pubDate>Fri, 05 Oct 2018 20:28:58 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/hardware/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Software</title>
+        <link>https://christitus.com/categories/software/</link>
+        <pubDate>Wed, 12 Sep 2018 20:49:44 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/categories/software/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

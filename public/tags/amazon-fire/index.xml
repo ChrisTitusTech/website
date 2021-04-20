@@ -1,1 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Amazon Fire on Chris Titus Tech</title><link>https://christitus.com/tags/amazon-fire/</link><description>Recent content in Amazon Fire on Chris Titus Tech</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>contact@christitus.com (Chris Titus)</managingEditor><webMaster>contact@christitus.com (Chris Titus)</webMaster><copyright>©{year}, All Rights Reserved</copyright><lastBuildDate>Mon, 10 Jul 2017 21:46:28 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/amazon-fire/index.xml" rel="self" type="application/rss+xml"/><item><title>Get rid of Amazon Fire Launcher without root access</title><link>https://christitus.com/amazon-fire-launcher/</link><pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 10 Jul 2017 21:46:28 +0000</atom:modified><guid>https://christitus.com/amazon-fire-launcher/</guid><description>&lt;p>This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p></description><dc:creator>Chris Titus</dc:creator><category>Amazon Fire</category><category>Android</category></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Amazon Fire on Chris Titus Tech</title>
+    <link>https://christitus.com/tags/amazon-fire/</link>
+    <description>Recent content in Amazon Fire on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 21 Jul 2020 12:37:54 -0500</lastBuildDate>
+    
+        <atom:link href="https://christitus.com/tags/amazon-fire/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>How to Speed Up Your Amazon Fire Tablet</title>
+        <link>https://christitus.com/amazon-fire-debloat/</link>
+        <pubDate>Tue, 21 Jul 2020 12:37:54 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 21 Jul 2020 12:37:54 -0500</atom:modified>
+        <guid>https://christitus.com/amazon-fire-debloat/</guid>
+        <description>&lt;p&gt;This Guide goes over over debloating amazon fire tablets and getting Google Store and regular tablet functionality out of them.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/amazon-fire-debloat.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Amazon Fire</category>
+            
+          
+        
+        
+          
+            
+              <category>Android</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Get rid of Amazon Fire Launcher without root access</title>
+        <link>https://christitus.com/amazon-fire-launcher/</link>
+        <pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 10 Jul 2017 21:46:28 +0000</atom:modified>
+        <guid>https://christitus.com/amazon-fire-launcher/</guid>
+        <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Amazon Fire</category>
+            
+          
+        
+        
+          
+            
+              <category>Android</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

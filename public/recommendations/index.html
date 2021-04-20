@@ -239,7 +239,7 @@
     var notAllowedTitleIds = null;
 
     
-    var tocFolding = JSON.parse("false");
+    var tocFolding = JSON.parse("true");
     
     var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
     
@@ -1245,7 +1245,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Chris Titus Tech was started as a resource for all things technology. It has evolved from a YouTube channel to now be a resource for anyone wanted to learn about a variety of tech.">
 
-<meta name="generator" content="Hugo 0.76.5" />
+<meta name="generator" content="Hugo 0.79.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1334,7 +1334,7 @@ if (!doNotTrack) {
     
 </head>
 
-<body id="root" class="theme__dark">
+<body id="root" class="theme__light">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1373,11 +1373,11 @@ if (!doNotTrack) {
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          dark
+          light
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          light
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1444,18 +1444,6 @@ if (!doNotTrack) {
 
       
         <li class="navbarm__menu--item ">
-          <a href="https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2">Store</a>
-        </li>
-      
-      
-    
-      
-      
-      
-      
-
-      
-        <li class="navbarm__menu--item ">
           <a href="https://portal.christitus.com">Members</a>
         </li>
       
@@ -1468,20 +1456,34 @@ if (!doNotTrack) {
 
       
         <li class="navbarm__menu--item ">
-          <a href="/showcase/">Projects</a>
+          <a href="/">
+            Sections
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+          </a>
         </li>
-      
-      
-    
-      
-      
-      
-      
 
-      
-        <li class="navbarm__menu--item active">
-          <a href="/recommendations/">Recommendations</a>
-        </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/categories/android">Android</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/categories/linux">Linux</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/categories/macos">MacOS</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/categories/networking">Networking</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/categories/windows">Windows</a>
+          </li>
+        
+
       
       
     
@@ -1492,7 +1494,41 @@ if (!doNotTrack) {
 
       
         <li class="navbarm__menu--item ">
-          <a href="https://download.teamviewer.com/download/TeamViewerQS.exe">Remote Support</a>
+          <a href="/">
+            Social
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+          </a>
+        </li>
+
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/lbry">Odysee/LBRY</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="https://twitch.tv/christitustech">Twitch</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="https://twitter.com/christitustech">Twitter</a>
+          </li>
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="https://youtube.com/c/ChrisTitusTech">YouTube</a>
+          </li>
+        
+
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2">Store</a>
         </li>
       
       
@@ -1500,13 +1536,7 @@ if (!doNotTrack) {
 
     
       <li class="navbarm__menu--item ">
-        <a href="/tags" class="navbarm__menu--term" data-index="0">
-          Tags
-        </a>
-      </li>
-    
-      <li class="navbarm__menu--item ">
-        <a href="/categories" class="navbarm__menu--term" data-index="1">
+        <a href="/categories" class="navbarm__menu--term" data-index="0">
           Categories
         </a>
       </li>
@@ -1524,11 +1554,11 @@ if (!doNotTrack) {
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          dark
+          light
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          light
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1563,14 +1593,6 @@ if (!doNotTrack) {
   
   
   
-  <a href="https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Store</a>
-  
-  
-  
-  
-  
-  
-  
   <a href="https://portal.christitus.com" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Members</a>
   
   
@@ -1579,7 +1601,26 @@ if (!doNotTrack) {
   
   
   
-  <a href="/showcase/" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Projects</a>
+  <div class="navbar__dropdown navbar__slide-down" data-ani="true">
+    <a href="/" class="navbar__menu-item "
+      dir="ltr">
+      Sections
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+    </a>
+    <div class="navbar__dropdown--content">
+      
+      <a href="/categories/android" class="navbar__dropdown--item" dir="ltr">Android</a>
+      
+      <a href="/categories/linux" class="navbar__dropdown--item" dir="ltr">Linux</a>
+      
+      <a href="/categories/macos" class="navbar__dropdown--item" dir="ltr">MacOS</a>
+      
+      <a href="/categories/networking" class="navbar__dropdown--item" dir="ltr">Networking</a>
+      
+      <a href="/categories/windows" class="navbar__dropdown--item" dir="ltr">Windows</a>
+      
+    </div>
+  </div>
   
   
   
@@ -1587,7 +1628,24 @@ if (!doNotTrack) {
   
   
   
-  <a href="/recommendations/" class="navbar__menu-item navbar__slide-down active" dir="ltr" data-ani="true">Recommendations</a>
+  <div class="navbar__dropdown navbar__slide-down" data-ani="true">
+    <a href="/" class="navbar__menu-item "
+      dir="ltr">
+      Social
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+    </a>
+    <div class="navbar__dropdown--content">
+      
+      <a href="/lbry" class="navbar__dropdown--item" dir="ltr">Odysee/LBRY</a>
+      
+      <a href="https://twitch.tv/christitustech" class="navbar__dropdown--item" dir="ltr">Twitch</a>
+      
+      <a href="https://twitter.com/christitustech" class="navbar__dropdown--item" dir="ltr">Twitter</a>
+      
+      <a href="https://youtube.com/c/ChrisTitusTech" class="navbar__dropdown--item" dir="ltr">YouTube</a>
+      
+    </div>
+  </div>
   
   
   
@@ -1595,7 +1653,7 @@ if (!doNotTrack) {
   
   
   
-  <a href="https://download.teamviewer.com/download/TeamViewerQS.exe" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Remote Support</a>
+  <a href="https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Store</a>
   
   
 </div>
@@ -1732,14 +1790,21 @@ if (!doNotTrack) {
 <nav class="pagination-single">
   
     
-      <a href="https://christitus.com/newsletter/" class="pagination-single__left">
+      <a href="https://christitus.com/videos/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Chris Titus Tech Newsletter</div>      
+        <div class="pagination-single__left-title">Videos</div>      
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://christitus.com/newsletter/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Chris Titus Tech Newsletter</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
@@ -2086,22 +2151,17 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc__flexbox" data-position="fixed">
     <h6 class="toc__title" data-ani="true">What&#39;s on this Page</h6>
     
-      <label class="switch" data-ani="true">
-        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    
   </div>
-  <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
+  <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
     <nav id="TableOfContents"></nav>
     <br>
-    <hr class="hr-fade sidebar-hr"/>
-<h4>Chris Titus Tech News</h4>
+    <h4>Chris Titus Tech News</h4>
 <form action="https://portal.christitus.com/email_lists/103855/subscriptions" accept-charset="UTF-8" method="post">
 <input type="email" name="email" required="required" placeholder="Email" />
 <input type="submit" value="Sign me up!" />
 </form>
 <hr class="hr-fade sidebar-hr"/>
+
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <ins class="adsbygoogle"
@@ -2245,7 +2305,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var hideToc = JSON.parse("false");
     var tocFlexbox = document.querySelector('.toc__flexbox');
     var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
-    var tocFolding = JSON.parse("false");
+    var tocFolding = JSON.parse("true");
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
@@ -2568,7 +2628,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (lib && lib.includes('mermaid')) {
       
-      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"dark\"");
+      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"light\"");
 
       if (themeVariant === "dark" || themeVariant === "hacker") {
         mermaid.initialize({ theme: 'dark' });
@@ -2774,6 +2834,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 <hr>
 </article>
+
             <footer class="footer">
     
     
@@ -2900,10 +2961,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <div class="basicflex">
         
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
-        
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
-        
     </div>
 
     <div class="footer__poweredby">
@@ -2911,11 +2968,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             <p class="caption">
                 
-                    ©2020, All Rights Reserved
+                    ©2021, All Rights Reserved
                 
             </p>
         
 
+        
+            <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
         
         
     </div> 

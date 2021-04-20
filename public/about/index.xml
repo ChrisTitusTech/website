@@ -1,6 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Abouts on Chris Titus Tech</title><link>https://christitus.com/about/</link><description>Recent content in Abouts on Chris Titus Tech</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>contact@christitus.com (Chris Titus)</managingEditor><webMaster>contact@christitus.com (Chris Titus)</webMaster><copyright>©{year}, All Rights Reserved</copyright><lastBuildDate>Thu, 02 Jan 2020 13:59:54 -0600</lastBuildDate><atom:link href="https://christitus.com/about/index.xml" rel="self" type="application/rss+xml"/><item><title>Recommendations</title><link>https://christitus.com/about/recommendations/</link><pubDate>Thu, 02 Jan 2020 13:59:54 -0600</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 02 Jan 2020 13:59:54 -0600</atom:modified><guid>https://christitus.com/about/recommendations/</guid><description>Amazon Services Offical CTT Storefront Try Twitch Prime Kindle Unlimited Audible - Get Two Free Audiobooks Services I Use in Business Backblaze Cloud Storage CDN77 - Content Delivery Network Express VPN - Fastest VPN Provider Namecheap - My Favorite Domain Registrar Pluralsite - Learning Video Courses Webroot SecureAnywhere Anti-Virus</description><dc:creator>Chris Titus</dc:creator></item><item><title>Terms of Service</title><link>https://christitus.com/about/terms-of-service/</link><pubDate>Wed, 19 Sep 2018 15:29:33 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Wed, 19 Sep 2018 15:29:33 +0000</atom:modified><guid>https://christitus.com/about/terms-of-service/</guid><description>Last updated: September 19, 2018
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Abouts on Chris Titus Tech</title>
+    <link>https://christitus.com/about/</link>
+    <description>Recent content in Abouts on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Wed, 19 Sep 2018 15:29:33 +0000</lastBuildDate>
+    
+        <atom:link href="https://christitus.com/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Terms of Service</title>
+        <link>https://christitus.com/about/terms-of-service/</link>
+        <pubDate>Wed, 19 Sep 2018 15:29:33 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 19 Sep 2018 15:29:33 +0000</atom:modified>
+        <guid>https://christitus.com/about/terms-of-service/</guid>
+        <description>Last updated: September 19, 2018
 Please read these Terms of Service (“Terms”, “Terms of Service”) carefully before using the https://www.christitus.com website (the “Service”) operated by Chris Titus Tech (“us”, “we”, or “our”).
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
-By accessing or using the Service you agree to be bound by these Terms.</description><dc:creator>Chris Titus</dc:creator></item><item><title>Privacy Policy of Chris Titus Tech</title><link>https://christitus.com/about/privacy-policy/</link><pubDate>Wed, 19 Sep 2018 15:25:58 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Wed, 19 Sep 2018 15:25:58 +0000</atom:modified><guid>https://christitus.com/about/privacy-policy/</guid><description>Chris Titus operates the https://www.christitus.com website, which provides the SERVICE.
+By accessing or using the Service you agree to be bound by these Terms.</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Privacy Policy of Chris Titus Tech</title>
+        <link>https://christitus.com/about/privacy-policy/</link>
+        <pubDate>Wed, 19 Sep 2018 15:25:58 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 19 Sep 2018 15:25:58 +0000</atom:modified>
+        <guid>https://christitus.com/about/privacy-policy/</guid>
+        <description>Chris Titus operates the https://www.christitus.com website, which provides the SERVICE.
 This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the Chris Titus Tech website.
-If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service.</description><dc:creator>Chris Titus</dc:creator></item></channel></rss>
+If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service.</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

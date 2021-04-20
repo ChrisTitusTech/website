@@ -1,3 +1,1806 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Linux on Chris Titus Tech</title><link>https://christitus.com/categories/linux/</link><description>Recent content in Linux on Chris Titus Tech</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>contact@christitus.com (Chris Titus)</managingEditor><webMaster>contact@christitus.com (Chris Titus)</webMaster><copyright>©{year}, All Rights Reserved</copyright><lastBuildDate>Thu, 04 Jun 2020 15:05:41 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Custom Vim</title><link>https://christitus.com/custom-vim/</link><pubDate>Thu, 04 Jun 2020 15:05:41 -0500</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 04 Jun 2020 15:05:41 -0500</atom:modified><guid>https://christitus.com/custom-vim/</guid><description>&lt;p>This article goes over customizing VIM and making a custom vim installation.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/custom-vim.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Vim</category><category>Linux</category></item><item><title>Install Wine Libfaudio0 Error</title><link>https://christitus.com/install-wine-libfaudio0-error/</link><pubDate>Mon, 25 May 2020 13:14:23 -0500</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 25 May 2020 13:14:23 -0500</atom:modified><guid>https://christitus.com/install-wine-libfaudio0-error/</guid><description>&lt;p>This article helps you fix the Libfaudio0 error that you run into when installing Wine on an older Linux debian-based distribution like Linux Mint 19 or Ubuntu 18.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/install-wine-libfaudio0-error.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Linux Mint</category><category>Ubuntu</category><category>Linux</category></item><item><title>Emoji</title><link>https://christitus.com/emoji/</link><pubDate>Thu, 09 Apr 2020 15:35:07 -0500</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 09 Apr 2020 15:35:07 -0500</atom:modified><guid>https://christitus.com/emoji/</guid><description>&lt;p>This article goes over installing emoji support in Linux.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/emoji.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Emoji</category><category>Linux</category></item><item><title>Doom Eternal Linux</title><link>https://christitus.com/doom-eternal-linux/</link><pubDate>Sun, 22 Mar 2020 20:50:39 -0500</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Sun, 22 Mar 2020 20:50:39 -0500</atom:modified><guid>https://christitus.com/doom-eternal-linux/</guid><description>&lt;p>This post is here to help guide you through setting up doom eternal on Linux.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/doom-eternal-linux.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Gaming</category><category>Linux</category></item><item><title>Zsh</title><link>https://christitus.com/zsh/</link><pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Wed, 19 Feb 2020 12:32:44 -0600</atom:modified><guid>https://christitus.com/zsh/</guid><description>&lt;p>In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/zsh.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>ZSH</category><category>Linux</category><category>MacOS</category></item><item><title>Lcars Screensaver</title><link>https://christitus.com/lcars-screensaver/</link><pubDate>Fri, 17 Jan 2020 17:43:17 -0600</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Fri, 17 Jan 2020 17:43:17 -0600</atom:modified><guid>https://christitus.com/lcars-screensaver/</guid><description>&lt;p>This article goes over getting the LCARS screensaver by mewho working in Linux. This Screensaver was originally intended for Windows 9x and this is for fun!&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/lcars-screensaver.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Wine</category><category>Linux</category></item><item><title>BTRFS Guide - Basic Commands, Snapshots, and RAID</title><link>https://christitus.com/btrfs-guide/</link><pubDate>Mon, 13 Jan 2020 16:36:18 -0600</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 13 Jan 2020 16:36:18 -0600</atom:modified><guid>https://christitus.com/btrfs-guide/</guid><description>&lt;p>This guide goes over everything you need to know to get started on BTRFS. With that said we will be going over the basic structure of BTRFS and the things you should and should not do.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/btrfs-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>BTRFS</category><category>Linux</category></item><item><title>Hugo Static Site Guide</title><link>https://christitus.com/hugo-guide/</link><pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Wed, 08 Jan 2020 15:59:19 -0600</atom:modified><guid>https://christitus.com/hugo-guide/</guid><description>&lt;p>This article goes over the basics of hugo and guides you through the process of using a static site generator.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/hugo-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Hugo</category><category>WordPress</category><category>Linux</category><category>Networking</category></item><item><title>LightDM Configuration</title><link>https://christitus.com/lightdm-configuration/</link><pubDate>Wed, 08 Jan 2020 08:09:34 -0600</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Wed, 08 Jan 2020 08:09:34 -0600</atom:modified><guid>https://christitus.com/lightdm-configuration/</guid><description>&lt;p>In this article I go over lightdm configuration. This will teach you how to modify lightdm to choose a default desktop environment, theme, autologin, and even a VNC connection.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/lightdm-configuration.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>LightDM</category><category>Linux</category></item><item><title>How To Setup a VPN Kill Switch Server</title><link>https://christitus.com/vpn-kill-switch/</link><pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 02 Dec 2019 05:31:59 +0000</atom:modified><guid>https://christitus.com/vpn-kill-switch/</guid><description>&lt;p>This will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if you are more familiar with that.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/12/vpn-kill-switch-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Ubuntu</category><category>Ubuntu Server</category><category>Firewall</category><category>Linux</category><category>Networking</category></item><item><title>LVM (Logical Volume Management) – Combine Physical Drives and more!</title><link>https://christitus.com/lvm-guide/</link><pubDate>Fri, 08 Nov 2019 23:06:31 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Fri, 08 Nov 2019 23:06:31 +0000</atom:modified><guid>https://christitus.com/lvm-guide/</guid><description>&lt;p>LVM is a very cool volume management tool. It can be used for a variety of tasks and this guide explains all the things LVM can do. I also do an example video of combining physical hard drives using LVM.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/11/LVM-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Fedora</category><category>LVM</category><category>Linux</category></item><item><title>How to Secure A Web Server</title><link>https://christitus.com/secure-web-server/</link><pubDate>Thu, 10 Oct 2019 13:37:49 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 10 Oct 2019 13:37:49 +0000</atom:modified><guid>https://christitus.com/secure-web-server/</guid><description>&lt;p>In this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just because you secure your server doesn’t mean you can neglect it. I highly recommend monitoring it and adjusting security as needed. Monitoring is required for proper security in my opinion.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/10/secure-website-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Ubuntu</category><category>Ubuntu Server</category><category>Firewall</category><category>Linux</category><category>Networking</category></item><item><title>How to Learn Linux</title><link>https://christitus.com/learn-linux/</link><pubDate>Thu, 10 Oct 2019 01:42:05 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 10 Oct 2019 01:42:05 +0000</atom:modified><guid>https://christitus.com/learn-linux/</guid><description>&lt;p>This article gives you the resources on how to learn Linux. If I am missing a resource, be sure and comment so I can add it.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/10/learn-linux-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Learn Linux</category><category>Linux</category></item><item><title>Custom Kernel in Linux</title><link>https://christitus.com/custom-kernel/</link><pubDate>Sun, 29 Sep 2019 00:32:45 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Sun, 29 Sep 2019 00:32:45 +0000</atom:modified><guid>https://christitus.com/custom-kernel/</guid><description>&lt;p>This Guide walks your through how to install a custom kernel on Linux. I will go over performing this in a Debian-based system and an Arch-based system. Please note that the arch based system requires you to build the kernel yourself and will take much longer.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/09/customkernels-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Linux Kernel</category><category>Linux</category></item><item><title>Linux File System | Directory Structure</title><link>https://christitus.com/linux-file-system/</link><pubDate>Mon, 23 Sep 2019 17:23:00 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 23 Sep 2019 17:23:00 +0000</atom:modified><guid>https://christitus.com/linux-file-system/</guid><description>This article details the Linux File System and it’s directory structure.
-Linux File System – Root / -This is the root directory which should contain only the directories needed at the top level of the file structure /bin – This is where the executable files are located. These files are available to all users, but do not add programs manually here /dev – These are devices in your system – Not Mounted!</description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/09/linux-file-system-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Linux File System</category><category>Linux</category></item><item><title>How to Setup a VPN Server and Clients Using OpenVPN</title><link>https://christitus.com/openvpn-server/</link><pubDate>Sat, 21 Sep 2019 04:45:08 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Sat, 21 Sep 2019 04:45:08 +0000</atom:modified><guid>https://christitus.com/openvpn-server/</guid><description>&lt;p>In this article, I go over how to setup a VPN Server and clients using OpenVPN. this will cover the setup process of the remote machine and then connecting to it via both Linux and Windows client machines.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/09/openvpn.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>OpenVPN</category><category>Linux</category><category>Networking</category></item><item><title>The Ultimate SSH Guide</title><link>https://christitus.com/ssh-guide/</link><pubDate>Wed, 18 Sep 2019 21:55:20 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Wed, 18 Sep 2019 21:55:20 +0000</atom:modified><guid>https://christitus.com/ssh-guide/</guid><description>&lt;p>This is an SSH guide to help you set up, configure, connect, and transfer files using SSH.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/09/ssh-300x187.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>SSH</category><category>Remote Access</category><category>Linux</category><category>Networking</category></item><item><title>Update to the Latest Version of GIMP</title><link>https://christitus.com/latest-version-of-gimp/</link><pubDate>Mon, 16 Sep 2019 00:55:12 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 16 Sep 2019 00:55:12 +0000</atom:modified><guid>https://christitus.com/latest-version-of-gimp/</guid><description>&lt;p>Here are instructions on how to Update to the latest version of GIMP. This is vital to make sure you get the newest and best features for GIMP. The old versions of gimp that come bundled with Ubuntu 18 and prior aren’t nearly as good as Gimp 2.10+.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/09/GIMP.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>GIMP</category><category>Linux</category></item><item><title>Grub Rescue | Repairing your Bootloader</title><link>https://christitus.com/grub-rescue/</link><pubDate>Mon, 01 Apr 2019 22:21:10 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 01 Apr 2019 22:21:10 +0000</atom:modified><guid>https://christitus.com/grub-rescue/</guid><description>&lt;p>Lets go over Grub Rescue and repairing your bootloader. This is a very misunderstood topic and by learn basic syntax you will be able to repair your GRUB very easily. Here are 4 methods of doing a GRUB Rescue.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/04/grub-rescue.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Grub</category><category>Bootloader</category><category>Linux</category></item><item><title>WordPress on Google Cloud Platform</title><link>https://christitus.com/wordpress-google-cloud-platform/</link><pubDate>Thu, 14 Mar 2019 15:23:56 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 14 Mar 2019 15:23:56 +0000</atom:modified><guid>https://christitus.com/wordpress-google-cloud-platform/</guid><description>&lt;p>I am going over hosting WordPress on Google Cloud Platform in this article. This is a step by step guide on how to set up and host a WordPress website using a fresh installation.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/03/google-cloud-platform.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Website</category><category>Google Cloud Platform</category><category>WordPress</category><category>Linux</category></item><item><title>Aptitude Explained</title><link>https://christitus.com/aptitude-explained/</link><pubDate>Tue, 12 Mar 2019 20:35:00 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Tue, 12 Mar 2019 20:35:00 +0000</atom:modified><guid>https://christitus.com/aptitude-explained/</guid><description>&lt;p>In this article, I am going over the aptitude command and explaining all of the commands and usage that goes with its usage.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/03/aptitude-e1570564649126.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Aptitude</category><category>Linux</category></item><item><title>Garmin Express on Linux | Step by Step Guide</title><link>https://christitus.com/garmin-express-linux/</link><pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Fri, 15 Feb 2019 22:20:57 +0000</atom:modified><guid>https://christitus.com/garmin-express-linux/</guid><description>&lt;p>This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/02/garmin-express-icon-1.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Garmin Express</category><category>Wine</category><category>Linux</category></item><item><title>Manjaro Architect Installation Guide</title><link>https://christitus.com/manjaro-architect-installation-guide/</link><pubDate>Mon, 21 Jan 2019 19:51:04 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 21 Jan 2019 19:51:04 +0000</atom:modified><guid>https://christitus.com/manjaro-architect-installation-guide/</guid><description>&lt;p>In this book, I go over step by step the entire Manjaro Architect installation. This guide is suitable for any knowledge level from beginner to expert.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/01/manjaro-e1548100581392.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Manjaro Architect</category><category>Manjaro</category><category>Linux</category></item><item><title>Resize LVM Partition | Fedora 29 | Step by Step Guide</title><link>https://christitus.com/resize-lvm-partition-fedora-29-step-by-step-guide/</link><pubDate>Sat, 17 Nov 2018 19:54:29 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Sat, 17 Nov 2018 19:54:29 +0000</atom:modified><guid>https://christitus.com/resize-lvm-partition-fedora-29-step-by-step-guide/</guid><description>&lt;p>In this guide, I show you how to Resize LVM Partition in Fedora 29. I recently ran out of space and had to clone my install from a 120SSD ssd to a 240 GB SSD.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/11/Selection_008.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Fedora</category><category>LVM</category><category>Linux</category></item><item><title>Logitech C920 Linux Driver | Fix Lag and Disable Auto-Focus</title><link>https://christitus.com/logitech-c920-linux-driver/</link><pubDate>Fri, 09 Nov 2018 20:36:56 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Fri, 09 Nov 2018 20:36:56 +0000</atom:modified><guid>https://christitus.com/logitech-c920-linux-driver/</guid><description>&lt;p>With my webcam, I was having major issues and tried looking for a Logitech C920 Linux Driver, as I have a Logitech C920 Webcam that is very laggy in Linux, but in Windows, I don’t have any issues. I found out that the autofocus and exposure were causing a ton of issues. After following this guide, you will be able to fix this issue.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/11/c920-pro-hd-webcam-refresh.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Logitech</category><category>C920 WebCam</category><category>Linux</category></item><item><title>How to Install Linux for the First Time</title><link>https://christitus.com/install-linux-first-time/</link><pubDate>Thu, 18 Oct 2018 15:23:20 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 18 Oct 2018 15:23:20 +0000</atom:modified><guid>https://christitus.com/install-linux-first-time/</guid><description>&lt;p>This article goes over installing Linux for the first time. I will break it down into 3 parts with a Video Walkthrough. Using this will make it very easy for you to install Linux for the first time.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/10/thumbnail.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Ubuntu</category><category>Linux</category></item><item><title>Why should I switch to Linux from Windows?</title><link>https://christitus.com/linux-switch-video/</link><pubDate>Tue, 16 Oct 2018 17:59:04 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Tue, 16 Oct 2018 17:59:04 +0000</atom:modified><guid>https://christitus.com/linux-switch-video/</guid><description>&lt;p>This will be the first article in a series of Linux articles, I am going over 6 reasons to switch to Linux and 1 big reason not to. Many people ask “Why should I switch to Linux from Windows?” and in this article below I break it down for you.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/10/why-should-I-switch-to-linux.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Learn Linux</category><category>Linux</category></item><item><title>Optimizing Apache Memory Usage using mpm prefork</title><link>https://christitus.com/apache-mpm-prefork/</link><pubDate>Wed, 26 Sep 2018 17:31:24 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Wed, 26 Sep 2018 17:31:24 +0000</atom:modified><guid>https://christitus.com/apache-mpm-prefork/</guid><description>&lt;p>This guide goes over optimizing apache memory usage by configuring mpm prefork module to the best values for your server. Afterword, you should notice substantial increases in performance especially if you are using free micro instances from Google Cloud or AWS.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/09/apache-624x351.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Website</category><category>Linux</category></item><item><title>The Perfect htaccess for WordPress</title><link>https://christitus.com/perfect-htaccess/</link><pubDate>Sun, 23 Sep 2018 20:50:39 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Sun, 23 Sep 2018 20:50:39 +0000</atom:modified><guid>https://christitus.com/perfect-htaccess/</guid><description>&lt;p>This walks you through what your htaccess should look like in a WordPress Installation. I am a minimalist and believe you shouldn’t be using a ton of plugins that slow down your install when most of what you are looking to accomplish can be achieved with this file.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/09/htaccess.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>htaccess</category><category>WordPress</category><category>Website</category><category>Linux</category></item><item><title>Issuing SSL Certs using Let’s Encrypt in Ubuntu</title><link>https://christitus.com/issuing-ssl-certs/</link><pubDate>Thu, 13 Sep 2018 20:49:56 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 13 Sep 2018 20:49:56 +0000</atom:modified><guid>https://christitus.com/issuing-ssl-certs/</guid><description>&lt;p>This article goes over Issuing SSL Certs using Let’s Encrypt in Ubuntu 16.04. The basic steps outlined in the video are adding the repository, installing certbot, issuing a certificate, and enabling SSL.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/09/Letsencrypt.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Ubuntu Server</category><category>Linux</category></item><item><title>Installing Linux Subsystem for Windows 10</title><link>https://christitus.com/installing-linux-subsystem/</link><pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Tue, 11 Sep 2018 19:56:07 +0000</atom:modified><guid>https://christitus.com/installing-linux-subsystem/</guid><description>&lt;p>The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/09/winubuntu.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Powershell</category><category>Ubuntu Server</category><category>Windows 10</category><category>Linux</category><category>Windows</category></item><item><title>Setup an always on VPN in Ubuntu</title><link>https://christitus.com/setup-always-on-vpn/</link><pubDate>Mon, 10 Sep 2018 14:59:11 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 10 Sep 2018 14:59:11 +0000</atom:modified><guid>https://christitus.com/setup-always-on-vpn/</guid><description>&lt;p>This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/09/VPN-624x200.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>VPN</category><category>Ubuntu Server</category><category>Linux</category></item><item><title>Remove Asterisk from Linux server (ubuntu/centos/debian/rhel)</title><link>https://christitus.com/remove-asterisk/</link><pubDate>Fri, 17 Aug 2018 15:58:36 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Fri, 17 Aug 2018 15:58:36 +0000</atom:modified><guid>https://christitus.com/remove-asterisk/</guid><description>&lt;p>The following removal instructions go over how to completely remove Asterisk from your Linux Instance.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2018/08/Asterisk_003.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Asterisk</category><category>Linux</category></item><item><title>Python script to print out specific results from an API JSON call</title><link>https://christitus.com/api-json-call/</link><pubDate>Tue, 28 Nov 2017 22:03:53 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Tue, 28 Nov 2017 22:03:53 +0000</atom:modified><guid>https://christitus.com/api-json-call/</guid><description>&lt;p>The following is a Python script to print out specific results from an API JSON call from a website. This basic syntax will allow you to create a value to use.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2017/11/jsonapi-624x195.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Python</category><category>Linux</category></item><item><title>Report Nvidia-smi Temperature to Nagios</title><link>https://christitus.com/nvidia-smi-nagios/</link><pubDate>Sat, 24 Jun 2017 04:14:45 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Sat, 24 Jun 2017 04:14:45 +0000</atom:modified><guid>https://christitus.com/nvidia-smi-nagios/</guid><description>&lt;p>Here is a custom script that reports the nvidia-smi temperature of the Nvidia cards in your system using NRPE. Conversely,  NRPE performs much better than NCPA and my protocol of choice.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2017/06/Nagios-Logo.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Nagios</category><category>Linux</category></item><item><title>Troubleshooting Nagios 4 Core Installation</title><link>https://christitus.com/troubleshooting-nagios/</link><pubDate>Wed, 21 Jun 2017 17:13:44 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Wed, 21 Jun 2017 17:13:44 +0000</atom:modified><guid>https://christitus.com/troubleshooting-nagios/</guid><description>&lt;p>Use the following command to verify you have all your config and command files correct when troubleshooting Nagios core installation. This will give you a readout of any configuration errors, thus giving you the ability to fix it on the fly.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2017/06/troubleshooting-nagios-624x484.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Nagios</category><category>Linux</category></item><item><title>Cloud migration hosting in Google, Amazon, or Microsoft</title><link>https://christitus.com/cloud-migration/</link><pubDate>Mon, 27 Feb 2017 21:03:20 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 27 Feb 2017 21:03:20 +0000</atom:modified><guid>https://christitus.com/cloud-migration/</guid><description>&lt;h3 id="moving-to-the-cloud">Moving to the Cloud&lt;/h3>
-&lt;p>The following article outlines what it takes for a cloud migration to Google Cloud Compute, Amazon Web Services, or Microsoft Azure means. Most businesses want to move to the “cloud” but have no idea what that means.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2017/02/datacenter.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Business</category><category>Cloud Migration</category><category>Linux</category><category>Windows Server</category></item><item><title>Create Swap file on Cloud VM (AWS, GCloud, or Azure)</title><link>https://christitus.com/create-swap-file/</link><pubDate>Tue, 14 Feb 2017 21:16:13 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Tue, 14 Feb 2017 21:16:13 +0000</atom:modified><guid>https://christitus.com/create-swap-file/</guid><description>&lt;p>Use the commands below to create swap file on a micro instance with a Linux operating system. This creates a 2GB Swap file to help alleviate low system ram. Consequently, this is great for those using micro instances in the cloud that have under 1 GB of memory.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2017/02/swapfile.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>AWS</category><category>Google Cloud Platform</category><category>Linux</category></item><item><title>Move Website from Linux to IIS</title><link>https://christitus.com/move-website-linux-iis/</link><pubDate>Sat, 26 Dec 2015 05:41:50 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Sat, 26 Dec 2015 05:41:50 +0000</atom:modified><guid>https://christitus.com/move-website-linux-iis/</guid><description>&lt;p>This guide goes over how to Move Website from Linux to IIS. If you’re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2015/12/move-wordpress-site.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Windows 10</category><category>IIS</category><category>Linux</category><category>Windows Server</category></item><item><title>FTP Credentials Required for WordPress Update to Plugins/Themes</title><link>https://christitus.com/ftp-credentials-required/</link><pubDate>Thu, 03 Dec 2015 22:47:50 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 03 Dec 2015 22:47:50 +0000</atom:modified><guid>https://christitus.com/ftp-credentials-required/</guid><description>&lt;p>If you are getting errors on a WordPress update that say you need FTP credentials, your apache install doesn’t have rights to do the changes. You could install vsftpd, but it is MUCH easier to just grant apache access to your WordPress.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2015/12/ftp-creds.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Linux</category></item><item><title>Check External IP in Linux Server</title><link>https://christitus.com/check-external-ip/</link><pubDate>Mon, 14 Sep 2015 18:33:12 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Mon, 14 Sep 2015 18:33:12 +0000</atom:modified><guid>https://christitus.com/check-external-ip/</guid><description>&lt;p>All these commands check external IP in Linux Terminal for any Linux system.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2015/09/ipaddress.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Linux</category></item><item><title>Using the find command Linux Terminal</title><link>https://christitus.com/find-command-linux-terminal/</link><pubDate>Fri, 21 Feb 2014 20:56:09 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Fri, 21 Feb 2014 20:56:09 +0000</atom:modified><guid>https://christitus.com/find-command-linux-terminal/</guid><description>&lt;p>Here is the syntax for using the find command Linux terminal. The following commands are great to have in your back pocket when looking for specific files or directories.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2014/02/putty-terminals.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>Linux</category></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Linux on Chris Titus Tech</title>
+    <link>https://christitus.com/categories/linux/</link>
+    <description>Recent content in Linux on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 01 Mar 2021 14:53:09 -0600</lastBuildDate>
+    
+        <atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>GRUB Bootloader Themes</title>
+        <link>https://christitus.com/bootloader-themes/</link>
+        <pubDate>Mon, 01 Mar 2021 14:53:09 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 01 Mar 2021 14:53:09 -0600</atom:modified>
+        <guid>https://christitus.com/bootloader-themes/</guid>
+        <description>&lt;p&gt;Do you dual boot often? Well make the Bootloader Selection Screen Awesome! Here are my top 5 GRUB Bootloader themes.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2021-thumbs/bootloader-themes.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Ubuntu</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>2020 Buyers Guide</title>
+        <link>https://christitus.com/2020-buyers-guide/</link>
+        <pubDate>Fri, 20 Nov 2020 13:46:56 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 20 Nov 2020 13:46:56 -0600</atom:modified>
+        <guid>https://christitus.com/2020-buyers-guide/</guid>
+        <description>&lt;p&gt;Looking for a Tech Gift this holiday season? Here are the things I have my eye on and are worth considering.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/2020-buyers-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+            
+              <category>macOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Linux MacOS</title>
+        <link>https://christitus.com/linux-macos/</link>
+        <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 05 Oct 2020 13:03:31 -0500</atom:modified>
+        <guid>https://christitus.com/linux-macos/</guid>
+        <description>&lt;p&gt;This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. &lt;em&gt;Version 20+ is required&lt;/em&gt;&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/linux-macos.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Ubuntu</category>
+            
+          
+            
+              <category>PopOS</category>
+            
+          
+            
+              <category>LinuxMint</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Disable Snaps</title>
+        <link>https://christitus.com/disable-snaps/</link>
+        <pubDate>Tue, 08 Sep 2020 13:44:58 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 08 Sep 2020 13:44:58 -0500</atom:modified>
+        <guid>https://christitus.com/disable-snaps/</guid>
+        <description>&lt;p&gt;This goes over how to Disable Snaps and making sure it doesn&amp;rsquo;t automatically reinstall.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/disable-snaps.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Ubuntu</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Everything You Need to Know About Crypto</title>
+        <link>https://christitus.com/crypto/</link>
+        <pubDate>Thu, 03 Sep 2020 11:33:12 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 03 Sep 2020 11:33:12 -0500</atom:modified>
+        <guid>https://christitus.com/crypto/</guid>
+        <description>&lt;p&gt;This article goes over everything you need to know about crypto in 2020.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/crypto.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Cryptocurrency</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>How to Use SSH with Github</title>
+        <link>https://christitus.com/ssh-github/</link>
+        <pubDate>Thu, 03 Sep 2020 10:57:46 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 03 Sep 2020 10:57:46 -0500</atom:modified>
+        <guid>https://christitus.com/ssh-github/</guid>
+        <description>&lt;p&gt;Setting Up SSH Authentication with GitHub for Secure Access with 2FA GitHub Accounts&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/github.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>GitHub</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Common Computer Issues</title>
+        <link>https://christitus.com/common-computer-issues/</link>
+        <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 28 Aug 2020 05:42:25 -0500</atom:modified>
+        <guid>https://christitus.com/common-computer-issues/</guid>
+        <description>&lt;p&gt;These are all the issues we discussed on a live stream. I took all the community questions and made this webpage for them.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/common-computer-issues.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>PowerShell</category>
+            
+          
+            
+              <category>Xorg</category>
+            
+          
+            
+              <category>Linux Kernel</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Geforce Now Linux</title>
+        <link>https://christitus.com/geforce-now-linux/</link>
+        <pubDate>Fri, 21 Aug 2020 14:45:41 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 21 Aug 2020 14:45:41 -0500</atom:modified>
+        <guid>https://christitus.com/geforce-now-linux/</guid>
+        <description>&lt;p&gt;You can now use Geforce Now on your Linux machine with this quick little trick.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/geforce-now-linux.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>GeForceNow</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Secure Linux</title>
+        <link>https://christitus.com/secure-linux/</link>
+        <pubDate>Tue, 18 Aug 2020 13:02:25 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 18 Aug 2020 13:02:25 -0500</atom:modified>
+        <guid>https://christitus.com/secure-linux/</guid>
+        <description>&lt;p&gt;This article covers basic security and settings I do with every Linux installation.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/secure-linux.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Security</category>
+            
+          
+            
+              <category>Virus</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Raspberry Pi Laptop</title>
+        <link>https://christitus.com/raspberry-pi-laptop/</link>
+        <pubDate>Wed, 12 Aug 2020 10:19:20 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 12 Aug 2020 10:19:20 -0500</atom:modified>
+        <guid>https://christitus.com/raspberry-pi-laptop/</guid>
+        <description>&lt;p&gt;This post goes over the CrowPi 2 Laptop. This is a modular laptop for the raspberry pi that is simply amazing and showcases all that you can do with the pi.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/raspberry-pi-laptop.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Raspberrypi</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>The Ultimate Linux Gaming Guide</title>
+        <link>https://christitus.com/ultimate-linux-gaming-guide/</link>
+        <pubDate>Tue, 14 Jul 2020 14:27:23 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 14 Jul 2020 14:27:23 -0500</atom:modified>
+        <guid>https://christitus.com/ultimate-linux-gaming-guide/</guid>
+        <description>&lt;p&gt;This guide goes over setting up your Linux system for gaming. I will include multiple setup instructions for various Linux distributions.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/ultimate-linux-gaming-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Linux Gaming</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Change your Desktop Wallpaper</title>
+        <link>https://christitus.com/change-wallpaper/</link>
+        <pubDate>Wed, 08 Jul 2020 14:52:13 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 08 Jul 2020 14:52:13 -0500</atom:modified>
+        <guid>https://christitus.com/change-wallpaper/</guid>
+        <description>&lt;p&gt;This article shows you how to automatically change your wallpaper on Windows, macOS, and Linux.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/change-wallpaper.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>wallpaper</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+            
+              <category>macOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Custom Vim</title>
+        <link>https://christitus.com/custom-vim/</link>
+        <pubDate>Thu, 04 Jun 2020 15:05:41 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 04 Jun 2020 15:05:41 -0500</atom:modified>
+        <guid>https://christitus.com/custom-vim/</guid>
+        <description>&lt;p&gt;This article goes over customizing VIM and making a custom vim installation.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/custom-vim.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Vim</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Install Wine Libfaudio0 Error</title>
+        <link>https://christitus.com/install-wine-libfaudio0-error/</link>
+        <pubDate>Mon, 25 May 2020 13:14:23 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 25 May 2020 13:14:23 -0500</atom:modified>
+        <guid>https://christitus.com/install-wine-libfaudio0-error/</guid>
+        <description>&lt;p&gt;This article helps you fix the Libfaudio0 error that you run into when installing Wine on an older Linux debian-based distribution like Linux Mint 19 or Ubuntu 18.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/install-wine-libfaudio0-error.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Linux Mint</category>
+            
+          
+            
+              <category>Ubuntu</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Emoji</title>
+        <link>https://christitus.com/emoji/</link>
+        <pubDate>Thu, 09 Apr 2020 15:35:07 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 09 Apr 2020 15:35:07 -0500</atom:modified>
+        <guid>https://christitus.com/emoji/</guid>
+        <description>&lt;p&gt;This article goes over installing emoji support in Linux.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/emoji.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Emoji</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Doom Eternal Linux</title>
+        <link>https://christitus.com/doom-eternal-linux/</link>
+        <pubDate>Sun, 22 Mar 2020 20:50:39 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sun, 22 Mar 2020 20:50:39 -0500</atom:modified>
+        <guid>https://christitus.com/doom-eternal-linux/</guid>
+        <description>&lt;p&gt;This post is here to help guide you through setting up doom eternal on Linux.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/doom-eternal-linux.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Gaming</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Zsh</title>
+        <link>https://christitus.com/zsh/</link>
+        <pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 19 Feb 2020 12:32:44 -0600</atom:modified>
+        <guid>https://christitus.com/zsh/</guid>
+        <description>&lt;p&gt;In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/zsh.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>ZSH</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Lcars Screensaver</title>
+        <link>https://christitus.com/lcars-screensaver/</link>
+        <pubDate>Fri, 17 Jan 2020 17:43:17 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 17 Jan 2020 17:43:17 -0600</atom:modified>
+        <guid>https://christitus.com/lcars-screensaver/</guid>
+        <description>&lt;p&gt;This article goes over getting the LCARS screensaver by mewho working in Linux. This Screensaver was originally intended for Windows 9x and this is for fun!&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/lcars-screensaver.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Wine</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>BTRFS Guide - Basic Commands, Snapshots, and RAID</title>
+        <link>https://christitus.com/btrfs-guide/</link>
+        <pubDate>Mon, 13 Jan 2020 16:36:18 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 13 Jan 2020 16:36:18 -0600</atom:modified>
+        <guid>https://christitus.com/btrfs-guide/</guid>
+        <description>&lt;p&gt;This guide goes over everything you need to know to get started on BTRFS. With that said we will be going over the basic structure of BTRFS and the things you should and should not do.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/btrfs-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>BTRFS</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Hugo Static Site Guide</title>
+        <link>https://christitus.com/hugo-guide/</link>
+        <pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 08 Jan 2020 15:59:19 -0600</atom:modified>
+        <guid>https://christitus.com/hugo-guide/</guid>
+        <description>&lt;p&gt;This article goes over the basics of hugo and guides you through the process of using a static site generator.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/hugo-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Hugo</category>
+            
+          
+            
+              <category>WordPress</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Networking</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>LightDM Configuration</title>
+        <link>https://christitus.com/lightdm-configuration/</link>
+        <pubDate>Wed, 08 Jan 2020 08:09:34 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 08 Jan 2020 08:09:34 -0600</atom:modified>
+        <guid>https://christitus.com/lightdm-configuration/</guid>
+        <description>&lt;p&gt;In this article I go over lightdm configuration. This will teach you how to modify lightdm to choose a default desktop environment, theme, autologin, and even a VNC connection.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/lightdm-configuration.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>LightDM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>How To Setup a VPN Kill Switch Server</title>
+        <link>https://christitus.com/vpn-kill-switch/</link>
+        <pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 02 Dec 2019 05:31:59 +0000</atom:modified>
+        <guid>https://christitus.com/vpn-kill-switch/</guid>
+        <description>&lt;p&gt;This will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if you are more familiar with that.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/12/vpn-kill-switch-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Ubuntu</category>
+            
+          
+            
+              <category>Ubuntu Server</category>
+            
+          
+            
+              <category>Firewall</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Networking</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>LVM (Logical Volume Management) – Combine Physical Drives and more!</title>
+        <link>https://christitus.com/lvm-guide/</link>
+        <pubDate>Fri, 08 Nov 2019 23:06:31 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 08 Nov 2019 23:06:31 +0000</atom:modified>
+        <guid>https://christitus.com/lvm-guide/</guid>
+        <description>&lt;p&gt;LVM is a very cool volume management tool. It can be used for a variety of tasks and this guide explains all the things LVM can do. I also do an example video of combining physical hard drives using LVM.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/11/LVM-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Fedora</category>
+            
+          
+            
+              <category>LVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>How to Secure A Web Server</title>
+        <link>https://christitus.com/secure-web-server/</link>
+        <pubDate>Thu, 10 Oct 2019 13:37:49 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 10 Oct 2019 13:37:49 +0000</atom:modified>
+        <guid>https://christitus.com/secure-web-server/</guid>
+        <description>&lt;p&gt;In this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just because you secure your server doesn’t mean you can neglect it. I highly recommend monitoring it and adjusting security as needed. Monitoring is required for proper security in my opinion.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/10/secure-website-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Ubuntu</category>
+            
+          
+            
+              <category>Ubuntu Server</category>
+            
+          
+            
+              <category>Firewall</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Networking</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>How to Learn Linux</title>
+        <link>https://christitus.com/learn-linux/</link>
+        <pubDate>Thu, 10 Oct 2019 01:42:05 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 10 Oct 2019 01:42:05 +0000</atom:modified>
+        <guid>https://christitus.com/learn-linux/</guid>
+        <description>&lt;p&gt;This article gives you the resources on how to learn Linux. If I am missing a resource, be sure and comment so I can add it.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/10/learn-linux-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Learn Linux</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Custom Kernel in Linux</title>
+        <link>https://christitus.com/custom-kernel/</link>
+        <pubDate>Sun, 29 Sep 2019 00:32:45 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sun, 29 Sep 2019 00:32:45 +0000</atom:modified>
+        <guid>https://christitus.com/custom-kernel/</guid>
+        <description>&lt;p&gt;This Guide walks your through how to install a custom kernel on Linux. I will go over performing this in a Debian-based system and an Arch-based system. Please note that the arch based system requires you to build the kernel yourself and will take much longer.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/09/customkernels-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Linux Kernel</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Linux File System | Directory Structure</title>
+        <link>https://christitus.com/linux-file-system/</link>
+        <pubDate>Mon, 23 Sep 2019 17:23:00 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 23 Sep 2019 17:23:00 +0000</atom:modified>
+        <guid>https://christitus.com/linux-file-system/</guid>
+        <description>This article details the Linux File System and it’s directory structure.
+Linux File System – Root  / -This is the root directory which should contain only the directories needed at the top level of the file structure /bin – This is where the executable files are located. These files are available to all users, but do not add programs manually here /dev – These are devices in your system – Not Mounted!</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/09/linux-file-system-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Linux File System</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>How to Setup a VPN Server and Clients Using OpenVPN</title>
+        <link>https://christitus.com/openvpn-server/</link>
+        <pubDate>Sat, 21 Sep 2019 04:45:08 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sat, 21 Sep 2019 04:45:08 +0000</atom:modified>
+        <guid>https://christitus.com/openvpn-server/</guid>
+        <description>&lt;p&gt;In this article, I go over how to setup a VPN Server and clients using OpenVPN. this will cover the setup process of the remote machine and then connecting to it via both Linux and Windows client machines.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/09/openvpn.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>OpenVPN</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Networking</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>The Ultimate SSH Guide</title>
+        <link>https://christitus.com/ssh-guide/</link>
+        <pubDate>Wed, 18 Sep 2019 21:55:20 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 18 Sep 2019 21:55:20 +0000</atom:modified>
+        <guid>https://christitus.com/ssh-guide/</guid>
+        <description>&lt;p&gt;This is an SSH guide to help you set up, configure, connect, and transfer files using SSH.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/09/ssh-300x187.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>SSH</category>
+            
+          
+            
+              <category>Remote Access</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Networking</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Update to the Latest Version of GIMP</title>
+        <link>https://christitus.com/latest-version-of-gimp/</link>
+        <pubDate>Mon, 16 Sep 2019 00:55:12 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 16 Sep 2019 00:55:12 +0000</atom:modified>
+        <guid>https://christitus.com/latest-version-of-gimp/</guid>
+        <description>&lt;p&gt;Here are instructions on how to Update to the latest version of GIMP. This is vital to make sure you get the newest and best features for GIMP. The old versions of gimp that come bundled with Ubuntu 18 and prior aren’t nearly as good as Gimp 2.10+.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/09/GIMP.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>GIMP</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Grub Rescue | Repairing your Bootloader</title>
+        <link>https://christitus.com/grub-rescue/</link>
+        <pubDate>Mon, 01 Apr 2019 22:21:10 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 01 Apr 2019 22:21:10 +0000</atom:modified>
+        <guid>https://christitus.com/grub-rescue/</guid>
+        <description>&lt;p&gt;Lets go over Grub Rescue and repairing your bootloader. This is a very misunderstood topic and by learn basic syntax you will be able to repair your GRUB very easily. Here are 4 methods of doing a GRUB Rescue.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/04/grub-rescue.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Grub</category>
+            
+          
+            
+              <category>Bootloader</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>WordPress on Google Cloud Platform</title>
+        <link>https://christitus.com/wordpress-google-cloud-platform/</link>
+        <pubDate>Thu, 14 Mar 2019 15:23:56 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 14 Mar 2019 15:23:56 +0000</atom:modified>
+        <guid>https://christitus.com/wordpress-google-cloud-platform/</guid>
+        <description>&lt;p&gt;I am going over hosting WordPress on Google Cloud Platform in this article. This is a step by step guide on how to set up and host a WordPress website using a fresh installation.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/03/google-cloud-platform.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Website</category>
+            
+          
+            
+              <category>Google Cloud Platform</category>
+            
+          
+            
+              <category>WordPress</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Aptitude Explained</title>
+        <link>https://christitus.com/aptitude-explained/</link>
+        <pubDate>Tue, 12 Mar 2019 20:35:00 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 12 Mar 2019 20:35:00 +0000</atom:modified>
+        <guid>https://christitus.com/aptitude-explained/</guid>
+        <description>&lt;p&gt;In this article, I am going over the aptitude command and explaining all of the commands and usage that goes with its usage.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/03/aptitude.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Aptitude</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Garmin Express on Linux | Step by Step Guide</title>
+        <link>https://christitus.com/garmin-express-linux/</link>
+        <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 15 Feb 2019 22:20:57 +0000</atom:modified>
+        <guid>https://christitus.com/garmin-express-linux/</guid>
+        <description>&lt;p&gt;This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/02/garmin-express-icon-1.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Garmin Express</category>
+            
+          
+            
+              <category>Wine</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Manjaro Architect Installation Guide</title>
+        <link>https://christitus.com/manjaro-architect-installation-guide/</link>
+        <pubDate>Mon, 21 Jan 2019 19:51:04 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 21 Jan 2019 19:51:04 +0000</atom:modified>
+        <guid>https://christitus.com/manjaro-architect-installation-guide/</guid>
+        <description>&lt;p&gt;In this book, I go over step by step the entire Manjaro Architect installation. This guide is suitable for any knowledge level from beginner to expert.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/01/manjaro.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Manjaro Architect</category>
+            
+          
+            
+              <category>Manjaro</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Resize LVM Partition | Fedora 29 | Step by Step Guide</title>
+        <link>https://christitus.com/resize-lvm-partition-fedora-29-step-by-step-guide/</link>
+        <pubDate>Sat, 17 Nov 2018 19:54:29 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sat, 17 Nov 2018 19:54:29 +0000</atom:modified>
+        <guid>https://christitus.com/resize-lvm-partition-fedora-29-step-by-step-guide/</guid>
+        <description>&lt;p&gt;In this guide, I show you how to Resize LVM Partition in Fedora 29. I recently ran out of space and had to clone my install from a 120SSD ssd to a 240 GB SSD.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/11/Selection_008.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Fedora</category>
+            
+          
+            
+              <category>LVM</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Logitech C920 Linux Driver | Fix Lag and Disable Auto-Focus</title>
+        <link>https://christitus.com/logitech-c920-linux-driver/</link>
+        <pubDate>Fri, 09 Nov 2018 20:36:56 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 09 Nov 2018 20:36:56 +0000</atom:modified>
+        <guid>https://christitus.com/logitech-c920-linux-driver/</guid>
+        <description>&lt;p&gt;With my webcam, I was having major issues and tried looking for a Logitech C920 Linux Driver, as I have a Logitech C920 Webcam that is very laggy in Linux, but in Windows, I don’t have any issues. I found out that the autofocus and exposure were causing a ton of issues. After following this guide, you will be able to fix this issue.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/11/c920-pro-hd-webcam-refresh.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Logitech</category>
+            
+          
+            
+              <category>C920 WebCam</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>How to Install Linux for the First Time</title>
+        <link>https://christitus.com/install-linux-first-time/</link>
+        <pubDate>Thu, 18 Oct 2018 15:23:20 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 18 Oct 2018 15:23:20 +0000</atom:modified>
+        <guid>https://christitus.com/install-linux-first-time/</guid>
+        <description>&lt;p&gt;This article goes over installing Linux for the first time. I will break it down into 3 parts with a Video Walkthrough. Using this will make it very easy for you to install Linux for the first time.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/10/thumbnail.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Ubuntu</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Why should I switch to Linux from Windows?</title>
+        <link>https://christitus.com/linux-switch-video/</link>
+        <pubDate>Tue, 16 Oct 2018 17:59:04 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 16 Oct 2018 17:59:04 +0000</atom:modified>
+        <guid>https://christitus.com/linux-switch-video/</guid>
+        <description>&lt;p&gt;This will be the first article in a series of Linux articles, I am going over 6 reasons to switch to Linux and 1 big reason not to. Many people ask “Why should I switch to Linux from Windows?” and in this article below I break it down for you.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/10/why-should-I-switch-to-linux.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Learn Linux</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Optimizing Apache Memory Usage using mpm prefork</title>
+        <link>https://christitus.com/apache-mpm-prefork/</link>
+        <pubDate>Wed, 26 Sep 2018 17:31:24 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 26 Sep 2018 17:31:24 +0000</atom:modified>
+        <guid>https://christitus.com/apache-mpm-prefork/</guid>
+        <description>&lt;p&gt;This guide goes over optimizing apache memory usage by configuring mpm prefork module to the best values for your server. Afterword, you should notice substantial increases in performance especially if you are using free micro instances from Google Cloud or AWS.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/09/apache.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Website</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>The Perfect htaccess for WordPress</title>
+        <link>https://christitus.com/perfect-htaccess/</link>
+        <pubDate>Sun, 23 Sep 2018 20:50:39 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sun, 23 Sep 2018 20:50:39 +0000</atom:modified>
+        <guid>https://christitus.com/perfect-htaccess/</guid>
+        <description>&lt;p&gt;This walks you through what your htaccess should look like in a WordPress Installation. I am a minimalist and believe you shouldn’t be using a ton of plugins that slow down your install when most of what you are looking to accomplish can be achieved with this file.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/09/htaccess.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>htaccess</category>
+            
+          
+            
+              <category>WordPress</category>
+            
+          
+            
+              <category>Website</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Issuing SSL Certs using Let’s Encrypt in Ubuntu</title>
+        <link>https://christitus.com/issuing-ssl-certs/</link>
+        <pubDate>Thu, 13 Sep 2018 20:49:56 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 13 Sep 2018 20:49:56 +0000</atom:modified>
+        <guid>https://christitus.com/issuing-ssl-certs/</guid>
+        <description>&lt;p&gt;This article goes over Issuing SSL Certs using Let’s Encrypt in Ubuntu 16.04. The basic steps outlined in the video are adding the repository, installing certbot, issuing a certificate, and enabling SSL.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/09/Letsencrypt.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Ubuntu Server</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Installing Linux Subsystem for Windows 10</title>
+        <link>https://christitus.com/installing-linux-subsystem/</link>
+        <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 11 Sep 2018 19:56:07 +0000</atom:modified>
+        <guid>https://christitus.com/installing-linux-subsystem/</guid>
+        <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/09/winubuntu.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Powershell</category>
+            
+          
+            
+              <category>Ubuntu Server</category>
+            
+          
+            
+              <category>Windows 10</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Setup an always on VPN in Ubuntu</title>
+        <link>https://christitus.com/setup-always-on-vpn/</link>
+        <pubDate>Mon, 10 Sep 2018 14:59:11 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 10 Sep 2018 14:59:11 +0000</atom:modified>
+        <guid>https://christitus.com/setup-always-on-vpn/</guid>
+        <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/09/VPN.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>VPN</category>
+            
+          
+            
+              <category>Ubuntu Server</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Remove Asterisk from Linux server (ubuntu/centos/debian/rhel)</title>
+        <link>https://christitus.com/remove-asterisk/</link>
+        <pubDate>Fri, 17 Aug 2018 15:58:36 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 17 Aug 2018 15:58:36 +0000</atom:modified>
+        <guid>https://christitus.com/remove-asterisk/</guid>
+        <description>&lt;p&gt;The following removal instructions go over how to completely remove Asterisk from your Linux Instance.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2018/08/Asterisk_003.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Asterisk</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Python script to print out specific results from an API JSON call</title>
+        <link>https://christitus.com/api-json-call/</link>
+        <pubDate>Tue, 28 Nov 2017 22:03:53 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 28 Nov 2017 22:03:53 +0000</atom:modified>
+        <guid>https://christitus.com/api-json-call/</guid>
+        <description>&lt;p&gt;The following is a Python script to print out specific results from an API JSON call from a website. This basic syntax will allow you to create a value to use.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2017/11/jsonapi.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Python</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Report Nvidia-smi Temperature to Nagios</title>
+        <link>https://christitus.com/nvidia-smi-nagios/</link>
+        <pubDate>Sat, 24 Jun 2017 04:14:45 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sat, 24 Jun 2017 04:14:45 +0000</atom:modified>
+        <guid>https://christitus.com/nvidia-smi-nagios/</guid>
+        <description>&lt;p&gt;Here is a custom script that reports the nvidia-smi temperature of the Nvidia cards in your system using NRPE. Conversely,  NRPE performs much better than NCPA and my protocol of choice.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2017/06/Nagios-Logo.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Nagios</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Troubleshooting Nagios 4 Core Installation</title>
+        <link>https://christitus.com/troubleshooting-nagios/</link>
+        <pubDate>Wed, 21 Jun 2017 17:13:44 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 21 Jun 2017 17:13:44 +0000</atom:modified>
+        <guid>https://christitus.com/troubleshooting-nagios/</guid>
+        <description>&lt;p&gt;Use the following command to verify you have all your config and command files correct when troubleshooting Nagios core installation. This will give you a readout of any configuration errors, thus giving you the ability to fix it on the fly.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2017/06/troubleshooting-nagios.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Nagios</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Cloud migration hosting in Google, Amazon, or Microsoft</title>
+        <link>https://christitus.com/cloud-migration/</link>
+        <pubDate>Mon, 27 Feb 2017 21:03:20 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 27 Feb 2017 21:03:20 +0000</atom:modified>
+        <guid>https://christitus.com/cloud-migration/</guid>
+        <description>&lt;h3 id=&#34;moving-to-the-cloud&#34;&gt;Moving to the Cloud&lt;/h3&gt;
+&lt;p&gt;The following article outlines what it takes for a cloud migration to Google Cloud Compute, Amazon Web Services, or Microsoft Azure means. Most businesses want to move to the “cloud” but have no idea what that means.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2017/02/datacenter.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Business</category>
+            
+          
+            
+              <category>Cloud Migration</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows Server</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Create Swap file on Cloud VM (AWS, GCloud, or Azure)</title>
+        <link>https://christitus.com/create-swap-file/</link>
+        <pubDate>Tue, 14 Feb 2017 21:16:13 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 14 Feb 2017 21:16:13 +0000</atom:modified>
+        <guid>https://christitus.com/create-swap-file/</guid>
+        <description>&lt;p&gt;Use the commands below to create swap file on a micro instance with a Linux operating system. This creates a 2GB Swap file to help alleviate low system ram. Consequently, this is great for those using micro instances in the cloud that have under 1 GB of memory.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2017/02/swapfile.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>AWS</category>
+            
+          
+            
+              <category>Google Cloud Platform</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Move Website from Linux to IIS</title>
+        <link>https://christitus.com/move-website-linux-iis/</link>
+        <pubDate>Sat, 26 Dec 2015 05:41:50 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sat, 26 Dec 2015 05:41:50 +0000</atom:modified>
+        <guid>https://christitus.com/move-website-linux-iis/</guid>
+        <description>&lt;p&gt;This guide goes over how to Move Website from Linux to IIS. If you’re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2015/12/move-wordpress-site.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Windows 10</category>
+            
+          
+            
+              <category>IIS</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows Server</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>FTP Credentials Required for WordPress Update to Plugins/Themes</title>
+        <link>https://christitus.com/ftp-credentials-required/</link>
+        <pubDate>Thu, 03 Dec 2015 22:47:50 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 03 Dec 2015 22:47:50 +0000</atom:modified>
+        <guid>https://christitus.com/ftp-credentials-required/</guid>
+        <description>&lt;p&gt;If you are getting errors on a WordPress update that say you need FTP credentials, your apache install doesn’t have rights to do the changes. You could install vsftpd, but it is MUCH easier to just grant apache access to your WordPress.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2015/12/ftp-creds.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Check External IP in Linux Server</title>
+        <link>https://christitus.com/check-external-ip/</link>
+        <pubDate>Mon, 14 Sep 2015 18:33:12 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 14 Sep 2015 18:33:12 +0000</atom:modified>
+        <guid>https://christitus.com/check-external-ip/</guid>
+        <description>&lt;p&gt;All these commands check external IP in Linux Terminal for any Linux system.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2015/09/ipaddress.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Using the find command Linux Terminal</title>
+        <link>https://christitus.com/find-command-linux-terminal/</link>
+        <pubDate>Fri, 21 Feb 2014 20:56:09 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 21 Feb 2014 20:56:09 +0000</atom:modified>
+        <guid>https://christitus.com/find-command-linux-terminal/</guid>
+        <description>&lt;p&gt;Here is the syntax for using the find command Linux terminal. The following commands are great to have in your back pocket when looking for specific files or directories.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2014/02/putty-terminals.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

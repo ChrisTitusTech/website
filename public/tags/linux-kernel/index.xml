@@ -1,1 +1,104 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Linux Kernel on Chris Titus Tech</title><link>https://christitus.com/tags/linux-kernel/</link><description>Recent content in Linux Kernel on Chris Titus Tech</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>contact@christitus.com (Chris Titus)</managingEditor><webMaster>contact@christitus.com (Chris Titus)</webMaster><copyright>©{year}, All Rights Reserved</copyright><lastBuildDate>Sun, 29 Sep 2019 00:32:45 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/linux-kernel/index.xml" rel="self" type="application/rss+xml"/><item><title>Custom Kernel in Linux</title><link>https://christitus.com/custom-kernel/</link><pubDate>Sun, 29 Sep 2019 00:32:45 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Sun, 29 Sep 2019 00:32:45 +0000</atom:modified><guid>https://christitus.com/custom-kernel/</guid><description>&lt;p>This Guide walks your through how to install a custom kernel on Linux. I will go over performing this in a Debian-based system and an Arch-based system. Please note that the arch based system requires you to build the kernel yourself and will take much longer.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/09/customkernels-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Linux Kernel</category><category>Linux</category></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Linux Kernel on Chris Titus Tech</title>
+    <link>https://christitus.com/tags/linux-kernel/</link>
+    <description>Recent content in Linux Kernel on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 28 Aug 2020 05:42:25 -0500</lastBuildDate>
+    
+        <atom:link href="https://christitus.com/tags/linux-kernel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Common Computer Issues</title>
+        <link>https://christitus.com/common-computer-issues/</link>
+        <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 28 Aug 2020 05:42:25 -0500</atom:modified>
+        <guid>https://christitus.com/common-computer-issues/</guid>
+        <description>&lt;p&gt;These are all the issues we discussed on a live stream. I took all the community questions and made this webpage for them.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/common-computer-issues.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>PowerShell</category>
+            
+          
+            
+              <category>Xorg</category>
+            
+          
+            
+              <category>Linux Kernel</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Custom Kernel in Linux</title>
+        <link>https://christitus.com/custom-kernel/</link>
+        <pubDate>Sun, 29 Sep 2019 00:32:45 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sun, 29 Sep 2019 00:32:45 +0000</atom:modified>
+        <guid>https://christitus.com/custom-kernel/</guid>
+        <description>&lt;p&gt;This Guide walks your through how to install a custom kernel on Linux. I will go over performing this in a Debian-based system and an Arch-based system. Please note that the arch based system requires you to build the kernel yourself and will take much longer.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/09/customkernels-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Linux Kernel</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

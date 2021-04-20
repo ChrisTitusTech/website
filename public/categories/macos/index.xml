@@ -1,1 +1,358 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>MacOS on Chris Titus Tech</title><link>https://christitus.com/categories/macos/</link><description>Recent content in MacOS on Chris Titus Tech</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>contact@christitus.com (Chris Titus)</managingEditor><webMaster>contact@christitus.com (Chris Titus)</webMaster><copyright>©{year}, All Rights Reserved</copyright><lastBuildDate>Sat, 27 Jun 2020 19:44:42 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/macos/index.xml" rel="self" type="application/rss+xml"/><item><title>Opencore Mac</title><link>https://christitus.com/opencore-mac/</link><pubDate>Sat, 27 Jun 2020 19:44:42 -0500</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Sat, 27 Jun 2020 19:44:42 -0500</atom:modified><guid>https://christitus.com/opencore-mac/</guid><description>&lt;p>This goes over how to install macOS on pretty much any piece of hardware.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/opencore-mac.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>OpenCore</category><category>macOS</category></item><item><title>Zsh</title><link>https://christitus.com/zsh/</link><pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Wed, 19 Feb 2020 12:32:44 -0600</atom:modified><guid>https://christitus.com/zsh/</guid><description>&lt;p>In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2020-thumbs/zsh.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>ZSH</category><category>Linux</category><category>MacOS</category></item><item><title>Hackintosh Ryzen Install</title><link>https://christitus.com/hackintosh-ryzen-install/</link><pubDate>Tue, 29 Oct 2019 01:13:21 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Tue, 29 Oct 2019 01:13:21 +0000</atom:modified><guid>https://christitus.com/hackintosh-ryzen-install/</guid><description>&lt;p>Here is the basic install instruction for the Hackintosh Ryzen install that I used on my Ryzen 2700 with an RX 580.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2019/10/hackintosh-Install-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content><category>Hackintosh</category><category>MacOS</category></item><item><title>Fix for Kernel Panic in Mac OSX</title><link>https://christitus.com/kernel-panic-mac-osx/</link><pubDate>Tue, 24 Jan 2012 22:55:18 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Tue, 24 Jan 2012 22:55:18 +0000</atom:modified><guid>https://christitus.com/kernel-panic-mac-osx/</guid><description>&lt;p>Follow these steps to fix a kernel panic in Mac OSX. However, if this doesn’t fix the issue, there is a good chance the motherboard is damaged and you need to send it to Apple.&lt;/p></description><dc:creator>Chris Titus</dc:creator><media:content url="https://christitus.com//images/2012/01/kernal-panic-mac-osx.png" medium="image"><media:title type="html">featured image</media:title></media:content><category>MacOS</category></item><item><title>Release and Renew IP in OS X</title><link>https://christitus.com/release-and-renew-ip-in-os-x/</link><pubDate>Thu, 29 Sep 2011 18:46:43 +0000</pubDate><author>contact@christitus.com (Chris Titus)</author><atom:modified>Thu, 29 Sep 2011 18:46:43 +0000</atom:modified><guid>https://christitus.com/release-and-renew-ip-in-os-x/</guid><description>&lt;p>I recently had some issues where a bridged virtual machine in osx would disconnect my osx side network connection. A simple release and renew would fix this.&lt;/p></description><dc:creator>Chris Titus</dc:creator><category>MacOS</category></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>MacOS on Chris Titus Tech</title>
+    <link>https://christitus.com/categories/macos/</link>
+    <description>Recent content in MacOS on Chris Titus Tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
+    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 14 Dec 2020 17:25:22 -0600</lastBuildDate>
+    
+        <atom:link href="https://christitus.com/categories/macos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Macos Sysadmin Tips</title>
+        <link>https://christitus.com/macos-sysadmin-tips/</link>
+        <pubDate>Mon, 14 Dec 2020 17:25:22 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 14 Dec 2020 17:25:22 -0600</atom:modified>
+        <guid>https://christitus.com/macos-sysadmin-tips/</guid>
+        <description>&lt;p&gt;This comes from a reader that was a Sysadmin and transitioned from Linux to MacOS because of a visual impairment.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/macos-sysadmin-tips.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>sysadmin</category>
+            
+          
+        
+        
+          
+            
+              <category>macos</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>2020 Buyers Guide</title>
+        <link>https://christitus.com/2020-buyers-guide/</link>
+        <pubDate>Fri, 20 Nov 2020 13:46:56 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 20 Nov 2020 13:46:56 -0600</atom:modified>
+        <guid>https://christitus.com/2020-buyers-guide/</guid>
+        <description>&lt;p&gt;Looking for a Tech Gift this holiday season? Here are the things I have my eye on and are worth considering.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/2020-buyers-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+            
+              <category>macOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Linux MacOS</title>
+        <link>https://christitus.com/linux-macos/</link>
+        <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 05 Oct 2020 13:03:31 -0500</atom:modified>
+        <guid>https://christitus.com/linux-macos/</guid>
+        <description>&lt;p&gt;This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. &lt;em&gt;Version 20+ is required&lt;/em&gt;&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/linux-macos.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Ubuntu</category>
+            
+          
+            
+              <category>PopOS</category>
+            
+          
+            
+              <category>LinuxMint</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Common Computer Issues</title>
+        <link>https://christitus.com/common-computer-issues/</link>
+        <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Fri, 28 Aug 2020 05:42:25 -0500</atom:modified>
+        <guid>https://christitus.com/common-computer-issues/</guid>
+        <description>&lt;p&gt;These are all the issues we discussed on a live stream. I took all the community questions and made this webpage for them.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/common-computer-issues.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>PowerShell</category>
+            
+          
+            
+              <category>Xorg</category>
+            
+          
+            
+              <category>Linux Kernel</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Change your Desktop Wallpaper</title>
+        <link>https://christitus.com/change-wallpaper/</link>
+        <pubDate>Wed, 08 Jul 2020 14:52:13 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 08 Jul 2020 14:52:13 -0500</atom:modified>
+        <guid>https://christitus.com/change-wallpaper/</guid>
+        <description>&lt;p&gt;This article shows you how to automatically change your wallpaper on Windows, macOS, and Linux.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/change-wallpaper.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>wallpaper</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+            
+              <category>macOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Opencore Mac</title>
+        <link>https://christitus.com/opencore-mac/</link>
+        <pubDate>Sat, 27 Jun 2020 19:44:42 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Sat, 27 Jun 2020 19:44:42 -0500</atom:modified>
+        <guid>https://christitus.com/opencore-mac/</guid>
+        <description>&lt;p&gt;This goes over how to install macOS on pretty much any piece of hardware.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/opencore-mac.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>OpenCore</category>
+            
+          
+        
+        
+          
+            
+              <category>macOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Zsh</title>
+        <link>https://christitus.com/zsh/</link>
+        <pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 19 Feb 2020 12:32:44 -0600</atom:modified>
+        <guid>https://christitus.com/zsh/</guid>
+        <description>&lt;p&gt;In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2020-thumbs/zsh.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>ZSH</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Hackintosh Ryzen Install</title>
+        <link>https://christitus.com/hackintosh-ryzen-install/</link>
+        <pubDate>Tue, 29 Oct 2019 01:13:21 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 29 Oct 2019 01:13:21 +0000</atom:modified>
+        <guid>https://christitus.com/hackintosh-ryzen-install/</guid>
+        <description>&lt;p&gt;Here is the basic install instruction for the Hackintosh Ryzen install that I used on my Ryzen 2700 with an RX 580.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2019/10/hackintosh-Install-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Hackintosh</category>
+            
+          
+        
+        
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Fix for Kernel Panic in Mac OSX</title>
+        <link>https://christitus.com/kernel-panic-mac-osx/</link>
+        <pubDate>Tue, 24 Jan 2012 22:55:18 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Tue, 24 Jan 2012 22:55:18 +0000</atom:modified>
+        <guid>https://christitus.com/kernel-panic-mac-osx/</guid>
+        <description>&lt;p&gt;Follow these steps to fix a kernel panic in Mac OSX. However, if this doesn’t fix the issue, there is a good chance the motherboard is damaged and you need to send it to Apple.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2012/01/kernal-panic-mac-osx.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Release and Renew IP in OS X</title>
+        <link>https://christitus.com/release-and-renew-ip-in-os-x/</link>
+        <pubDate>Thu, 29 Sep 2011 18:46:43 +0000</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Thu, 29 Sep 2011 18:46:43 +0000</atom:modified>
+        <guid>https://christitus.com/release-and-renew-ip-in-os-x/</guid>
+        <description>&lt;p&gt;I recently had some issues where a bridged virtual machine in osx would disconnect my osx side network connection. A simple release and renew would fix this.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+          
+            
+              <category>MacOS</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
