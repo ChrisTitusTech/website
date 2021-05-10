@@ -8,7 +8,6 @@ categories:
   - Linux
 tags:
   - Rocky Linux
-draft: true
 ---
 This guide goes over setting up KDE on Rocky Linux from a base server install with no GUI. 
 <!--more-->
@@ -39,7 +38,7 @@ _Note: If you can't install PowerTools with config-manager, you can manually ena
 ```
 sudo dnf update -y
 sudo dnf install xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps -y
-sudo dnf install plasma-desktop sddm -y
+sudo dnf install plasma-desktop kscreen sddm kde-gtk-config dolphin konsole kate -y
 ```
 
 ### Set Graphical Interface on Startup
@@ -48,6 +47,63 @@ sudo dnf install plasma-desktop sddm -y
 sudo systemctl set-default graphical.target
 sudo systemctl enable sddm
 ```
+
+_Note: If using GTK Apps, I highly recommend building and installing `Kvantum` from `git clone https://github.com/tsujan/Kvantum.git`_
+
+#### NVIDIA Cards ONLY
+
+If you have an nvidia card it can be tricky to install so I recommend doing it before Xorg is started and you have a GUI. 
+
+1. First install Dev tools below with dkms and kernel-devel
+
+```
+sudo dnf groupinstall "Development Tools"
+sudo dnf install kernel-devel epel-release
+sudo dnf install dkms
+```
+
+2. Download NVIDIA Drivers from <https://www.nvidia.com/en-us/drivers/unix/>
+
+3. Disable nouveau by editing `/etc/default/grub`
+
+```
+GRUB_CMDLINE_LINUX="crashkernel=auto rhgb quiet nouveau.modeset=0"
+```
+
+Write out the changes (Note Choose BIOS OR EFI... NOT BOTH!)
+
+```
+BIOS:
+$ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+EFI:
+$ sudo grub2-mkconfig -o /boot/efi/EFI/rocky/grub.cfg
+```
+
+4. (GUI Only) If you booted into KDE or GUI interface from TTY2 (Ctrl+Alt+F2) login and type `sudo systemctl isolate multi-user.target`
+
+5. Now Install NVIDIA and reboot `sudo bash NVIDIA-Linux-x86_64-*`
+
+### Setup your Development Tools for Builds
+
+```
+sudo dnf groupinstall "Development Tools"
+sudo dnf install cmake gcc-c++ libX11-devel libXext-devel qt5-qtx11extras-devel qt5-qtbase-devel qt5-qtsvg-devel qt5-qttools-devel kf5-kwindowsystem-devel make procps-ng curl file git
+```
+
+Install Homebrew
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+_Note: Installer messed up and put it in `/home/linuxbrew/.linuxbrew` I moved this to my home folder and linked the brew executable to `~/bin`_
+
+Add Homebrew to the end bash or zsh rc file
+
+```
+eval $(~/.linuxbrew/bin/brew shellenv)
+```
+
 
 ### Install Tools of your Choice
 
@@ -59,6 +115,35 @@ Examples:
 ```
 sudo dnf install terminator firefox zsh
 ```
+
+#### VSCodium on Rocky Linux 
+
+Source: <https://github.com/VSCodium/vscodium>
+
+```
+sudo rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=gitlab.com_paulcarroty_vscodium_repo\nbaseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg" |sudo tee -a /etc/yum.repos.d/vscodium.repo
+sudo dnf install codium
+```
+
+#### New Packages with AppImage or Flatpak
+
+Install flatpak with `sudo dnf install flatpak`
+
+See What package are availiable: <https://flathub.org/home>
+
+Install the flathub repo on Rocky Linux `flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+
+GIMP 2.10 `sudo flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref`  
+Steam `sudo flatpak install flathub com.valvesoftware.Steam`
+
+## The Rocky Difference
+
+*Security by default* - Be aware this uses Enforced SELinux and Firewalld on install. This means applications will more often than not be sandboxed and will block all incoming traffic
+
+*Stability in mind* Yes, the packages are old by default but it means they stable
+
+*Productivity Machine* No constant updates, it just works...
 
 ## Chris Titus Tech
 
