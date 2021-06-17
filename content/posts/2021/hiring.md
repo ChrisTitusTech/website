@@ -14,7 +14,7 @@ I'm hiring for an entry level technical position in Dallas, TX near the Galleria
 
 ## Tech Support Job Purpose
 
-Offer support and technical assistance to customers who are using software, hardware, or other computer systems and need help completing tasks or troubleshooting problems through diagnostic tests and remote access to their computers.
+Offer support and technical assistance to customers who are using software, hardware, or other computer systems and need help completing tasks or troubleshooting problems. You will be on-site and need to be self-sufficiant.
 
 ## Job Duties
 
@@ -29,6 +29,12 @@ Offer support and technical assistance to customers who are using software, hard
  - Help Desk Skills and Qualifications
  - Strong Computer Skills and the Ability to Troubleshoot and Diagnose Problems, Familiarity with both PC and Mac Hardware and Software, Experience with Network Repairs and Analysis, Good Customer Service Skills, Ability to Communicate Effectively to help customers fix their issues and feel satisfied with the experience, Writing and Editing Skills to aid in writing and updating manuals, Education in Computer Repairs and how to Troubleshoot Problems (some jobs may require a degree from a university or technical school), and Specific Knowledge of other required Computer Systems for different work environments.
 
+## Requirements
+
+ - Technically proficiant
+ - Great people skills
+ - In-Person (Commute will be to Galleria Dallas Area)
+ 
 ## Inquiries
 
 Send any resumes to contact@christitus.com
