@@ -14,7 +14,7 @@
     <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
     <webMaster>contact@christitus.com (Chris Titus)</webMaster>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 20 Apr 2021 10:02:56 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jun 2021 21:18:51 -0500</lastBuildDate>
     
         <atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -25,7 +25,7 @@
       <item>
         <title>Linux</title>
         <link>https://christitus.com/categories/linux/</link>
-        <pubDate>Tue, 20 Apr 2021 10:02:56 -0500</pubDate>
+        <pubDate>Wed, 16 Jun 2021 21:18:51 -0500</pubDate>
         <author>contact@christitus.com (Chris Titus)</author>
         
         <guid>https://christitus.com/categories/linux/</guid>
@@ -43,7 +43,7 @@
       <item>
         <title>Windows</title>
         <link>https://christitus.com/categories/windows/</link>
-        <pubDate>Wed, 20 Jan 2021 10:23:43 -0600</pubDate>
+        <pubDate>Wed, 16 Jun 2021 21:18:51 -0500</pubDate>
         <author>contact@christitus.com (Chris Titus)</author>
         
         <guid>https://christitus.com/categories/windows/</guid>

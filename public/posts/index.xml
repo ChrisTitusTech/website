@@ -14,13 +14,77 @@
     <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
     <webMaster>contact@christitus.com (Chris Titus)</webMaster>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 20 Apr 2021 10:02:56 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jun 2021 21:18:51 -0500</lastBuildDate>
     
         <atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Hiring for a Tech Job in Dallas</title>
+        <link>https://christitus.com/hiring/</link>
+        <pubDate>Wed, 16 Jun 2021 21:18:51 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Wed, 16 Jun 2021 21:18:51 -0500</atom:modified>
+        <guid>https://christitus.com/hiring/</guid>
+        <description>&lt;p&gt;I&amp;rsquo;m hiring for an entry level technical position in Dallas, TX near the Galleria Area.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2021-thumbs/hiring.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Tech Job</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+            
+              <category>Windows</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>Rocky Linux</title>
+        <link>https://christitus.com/rocky-linux/</link>
+        <pubDate>Mon, 03 May 2021 12:12:16 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        <atom:modified>Mon, 03 May 2021 12:12:16 -0500</atom:modified>
+        <guid>https://christitus.com/rocky-linux/</guid>
+        <description>&lt;p&gt;This guide goes over setting up KDE on Rocky Linux from a base server install with no GUI.&lt;/p&gt;</description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        <media:content url="https://christitus.com//images/2021-thumbs/rocky-linux.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>Rocky Linux</category>
+            
+          
+        
+        
+          
+            
+              <category>Linux</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>Creating a Website on Raspberry Pi</title>
@@ -84,11 +148,11 @@
       
       <item>
         <title>Ultimate Windows 10 Install ISO</title>
-        <link>https://christitus.com/Ultimate-Windows-10-Install-ISO/</link>
+        <link>https://christitus.com/ultimate-windows-10-install-iso/</link>
         <pubDate>Wed, 20 Jan 2021 10:23:43 -0600</pubDate>
         <author>contact@christitus.com (Chris Titus)</author>
         <atom:modified>Wed, 20 Jan 2021 10:23:43 -0600</atom:modified>
-        <guid>https://christitus.com/Ultimate-Windows-10-Install-ISO/</guid>
+        <guid>https://christitus.com/ultimate-windows-10-install-iso/</guid>
         <description>&lt;p&gt;This goes over creating the best installation media possible for a fresh Windows 10&lt;/p&gt;</description>
         
         <dc:creator>Chris Titus</dc:creator>
@@ -114,11 +178,11 @@
       
       <item>
         <title>Windows 10 Optimization Guide</title>
-        <link>https://christitus.com/Windows-10-Optimization-Guide/</link>
+        <link>https://christitus.com/windows-10-optimization-guide/</link>
         <pubDate>Wed, 30 Dec 2020 14:34:52 -0600</pubDate>
         <author>contact@christitus.com (Chris Titus)</author>
         <atom:modified>Wed, 30 Dec 2020 14:34:52 -0600</atom:modified>
-        <guid>https://christitus.com/Windows-10-Optimization-Guide/</guid>
+        <guid>https://christitus.com/windows-10-optimization-guide/</guid>
         <description>&lt;p&gt;This guide goes over using a Custom ISO, Removing Windows 10 Components, and Optimizing Windows 10 Settings.&lt;/p&gt;</description>
         
         <dc:creator>Chris Titus</dc:creator>
