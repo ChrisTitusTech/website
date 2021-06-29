@@ -34,6 +34,8 @@ Windows Registry Editor Version 5.00
 "BypassSecureBootCheck"=dword:00000001
 ```
 
+Download Reg File here: <https://christitus.com/files/win11bypass.zip>
+
 *REBOOT AFTER MODIFICATIONS MADE*
 
 ![regedit](/images/2021/06-win11upgrade/regedit.png)
@@ -45,8 +47,6 @@ Now you can simply finish your insider build sign up and then click update
 Once it finishes updating you should see a screen to update to the latest Windows 11 build (22000.52) or Greater
 
 ![winver](/images/2021/06-win11upgrade/winver.png)
-
-Download Reg File here: <https://christitus.com/files/win11bypass.zip>
 
 ## Chris Titus Tech
 
