@@ -46,6 +46,8 @@ Once it finishes updating you should see a screen to update to the latest Window
 
 ![winver](/images/2021/06-win11upgrade/winver.png)
 
+Download Reg File here: <https://christitus.com/files/win11bypass.zip>
+
 ## Chris Titus Tech
 
 #### Social
