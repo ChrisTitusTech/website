@@ -12,6 +12,12 @@ tags:
 This is a guide going over updating any PC to Windows 11 that "doesn't meet requirements" or doesn't use Secure Boot or has a TPM 2.0 chip. 
 <!--more-->
 
+## Methods
+
+1. Download appraiserres.dll from Windows 10 install and replace this file in the Windows 11 Sources directory (Windows 11 ISO required)
+2. Use Registry edits below to upgrade your PC in the insider channel. This will be patched out before official release. Video showing regedit: <https://youtu.be/fk5B-a7vZ_w>
+3. Bypass the requirement prompt by using Command Prompt. Here is a video showing fresh install: <https://youtu.be/wK40EFgzmqM>
+
 ## Upgrade Path
 
 The path for upgrading to 11 requires you to have an activated Windows 10 PC and be subscribed to the insider builds.
