@@ -14,6 +14,12 @@ tags:
 ---
 In this article, we will clean up Windows 10. This will include debloat, startup maintenance, system tweaks, and privacy settings. These 3 stages are broken down below and will help maintain a healthy Windows 10 system. I&#8217;d recommend re-running these steps every 6 months. <!--more-->
 
+## July 2021 Update - CTT Official Debloat Launched
+
+Check out the updated debloat and utility toolbox here: <https://christitus.com/debloat-windows-10-2020/>
+
+Old Content is below with an older method of debloating Windows 10. 
+
 ## Step 1: Debloat Windows 10
 
 We will be utilizing PowerShell to clean up Windows 10 and get rid of a bunch of useless bloat that is included with it.
