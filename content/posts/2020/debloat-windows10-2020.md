@@ -12,7 +12,7 @@ tags:
 This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC. 
 <!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved.
 
-## January 2021 Update
+## July 2021 Update
 
 If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: <https://github.com/ChrisTitusTech/win10script>
 
@@ -20,6 +20,7 @@ If you want to just run this on any system, you can easily copy and paste this i
 
 *December 2020 Feature: GUI added - Select what you want!*
 *January 2021 Feature: 10 Bug Fixes and Network Optimizations added*
+*July 2021 Updates: 30+ Bug Fixes and Undo Options added*
 
 ```PowerShell
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
@@ -27,15 +28,13 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
 
 ### What this script can do
 
-- Installs Chocolatey, Notepad++, Irfanview, VLC, Java, and asks if you want Adobe Reader or Brave. 
-- Removes all Windows Store Apps EXCEPT office, xbox, and WSL. 
+- Installs any program listed that you click on using WinGet
 - Removed Telemetry
 - Disables Cortana
 - Deletes various schedules tasks that rebloat the system
-- Removes Other Bloatware (Candy Crush, etc.)
 - Fixes problems that other scripts causes (lock screen and personalization options restricted)
 
-Based on User feedback, this no longer uninstalls OneDrive or Office. 
+Based on User feedback Microsoft Store and Windows Defender is no longer touched. 
 
 ### Toolbox Walkthrough Video
 
