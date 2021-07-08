@@ -14,13 +14,31 @@
     <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
     <webMaster>contact@christitus.com (Chris Titus)</webMaster>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 16 Jun 2021 21:18:51 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 29 Jun 2021 11:21:54 -0500</lastBuildDate>
     
         <atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Windows 11</title>
+        <link>https://christitus.com/tags/windows-11/</link>
+        <pubDate>Tue, 29 Jun 2021 11:21:54 -0500</pubDate>
+        <author>contact@christitus.com (Chris Titus)</author>
+        
+        <guid>https://christitus.com/tags/windows-11/</guid>
+        <description></description>
+        
+        <dc:creator>Chris Titus</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Tech Job</title>
