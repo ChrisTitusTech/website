@@ -31,7 +31,7 @@ Offer support and technical assistance to customers who are using software, hard
 
 ## Requirements
 
- - Technically proficiant
+ - Technically proficient
  - Great people skills
  - In-Person (Commute will be to Galleria Dallas Area)
  
