@@ -15,8 +15,7 @@ This goes over switching the window manager of KDE to bspwm.
 ## Dependency Installs
 
 ```bash
-apt-get update && apt update
-apt install bspwm
+sudo apt install bspwm
 ```
 
 ## Configuration 
