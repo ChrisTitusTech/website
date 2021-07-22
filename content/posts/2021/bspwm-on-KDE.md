@@ -8,10 +8,18 @@ categories:
   - Linux
 tags:
   - KDE
-draft: true
 ---
 This goes over switching the window manager of KDE to bspwm. 
 <!--more-->
+
+## Dependency Installs
+
+```bash
+apt-get update && apt update
+apt install bspwm
+```
+
+## Configuration 
 
 Create three files with the following contents
 
@@ -23,6 +31,20 @@ wget -O ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/ChrisTitusTech
 sudo wget -O /usr/share/xsessions/plasma-bspwm.desktop https://raw.githubusercontent.com/ChrisTitusTech/BSPWM-on-KDE/main/plasma-bspwm.desktop
 ```
 
+## Documentation
+
+/usr/share/xsessions/plasma-bspwm.desktop
+
+```
+[Desktop Entry]          
+Type=XSession              
+Exec=env KDEWM=/usr/bin/bspwm /usr/bin/startplasma-x11
+TryExec=/usr/bin/startplasma-x11
+DesktopNames=KDE         
+Name=Plasma bspwm 
+```
+
+bspwmrc and sxhkdrc are using both the stock example files @ `/usr/share/doc/bspwm/examples`
 
 ## Chris Titus Tech
 
