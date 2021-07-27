@@ -8,6 +8,7 @@ categories:
   - Windows
 tags:
   - Tech Job
+draft: true
 ---
 I'm hiring for an entry level technical position in Dallas, TX near the Galleria Area.
 <!--more-->
