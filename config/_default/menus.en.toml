@@ -10,7 +10,7 @@
     name = "Store"
     pre = "<i class='fa fa-heart'></i>"
     url = "https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2"
-    weight = 9
+    weight = 5
 
 [[main]]
     name = "Members"
@@ -75,7 +75,25 @@
     parent = "Social"
 
 [[main]]
-    name = "YouTube"
+    name = "YouTube Channels"
+    post = ""
+    pre = "<i class='fa fa-heart'></i>"
+    weight = 6
+    
+[[main]]
+    name = "Chris Titus Tech"
     url = "https://youtube.com/c/ChrisTitusTech"
     hrefTargetBlank = true
-    parent = "Social"
+    parent = "YouTube Channels"
+
+[[main]]
+    name = "Titus Tech Talk"
+    url = "https://youtube.com/c/ChrisTitusTechStreams"
+    hrefTargetBlank = true
+    parent = "YouTube Channels"
+
+[[main]]
+    name = "Chris Titus Crypto"
+    url = "https://www.youtube.com/channel/UC31U-ll2Q1niJ2QIhKlfpZA"
+    hrefTargetBlank = true
+    parent = "YouTube Channels"

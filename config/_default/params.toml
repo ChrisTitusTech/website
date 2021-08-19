@@ -52,7 +52,7 @@ organization = ""
 link = ""
 
 # sidebar
-enableBio = true # in home page sidebar
+enableBio = false # in home page sidebar
 enableBioImage = true # in home page sidebar
 enableSidebar = true # Set to false to create the full width of the content.
 enableSidebarTags = false # if you want to use tags.
@@ -137,15 +137,15 @@ commento = false
   email = "mailto:contact@christitus.com"
   phone = ""
   facebook = ""
-  twitter = "https://twitter.com/christitustech"
-  github = "https://github.com/ChrisTitusTech"
+  twitter = ""
+  github = ""
   stack-overflow = ""
-  instagram = "https://www.instagram.com/christitustech/"
+  instagram = ""
   google-plus = ""
-  youtube = "https://www.youtube.com/c/ChrisTitusTech"
+  youtube = ""
   medium = ""
   tumblr = ""
-  linkedin = "https://www.linkedin.com/in/ctitus/"
+  linkedin = ""
   pinterest = ""
   stack-exchange = ""
   telegram = ""
@@ -164,7 +164,7 @@ commento = false
   dev-to = ""
   gitea = ""
   google-scholar = ""
-  twitch = "https://www.twitch.tv/christitustech"
+  twitch = ""
 
 [donationOptions]
   enable = false # if set, the donation button will show up on the single page.
