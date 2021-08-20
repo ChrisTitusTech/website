@@ -6,7 +6,30 @@
 <hr class="hr-fade sidebar-hr"/>
 <a href="https://christitus.com/recommendations/"><h4>Recommended Products</h4></a>
 <hr class="hr-fade sidebar-hr"/>
+<p id="twitchembed"></p>
+<p id="display"></p>
 
+<script>
+$.getJSON('https://api.twitch.tv/kraken/streams/christitustech?client_id=eev3lnafhhpw2yb63opcoqlhw29kyy', function(data) {
+if (data.stream) {
+     document.getElementById("twitchembed").innerHTML = "<iframe src='http://www.twitch.tv/christitustech/embed' frameborder='0' scrolling='no' height='100%' width='100%'></iframe>";
+} else {
+     document.getElementById("twitchembed").innerHTML = "<h4>NOT LIVE</h4>";
+}
+});
+
+$.getJSON('https://api.twitch.tv/kraken/streams/christitustech?client_id=eev3lnafhhpw2yb63opcoqlhw29kyy', function(channel) {
+
+if (channel["stream"] == null) { 
+    document.getElementById("display").innerHTML = "<h4>NOT LIVE</h4>";
+
+} else {
+    document.getElementById("display").innerHTML = "<h4>LIVE NOW</h4>";
+
+}
+});
+</script>
+<hr class="hr-fade sidebar-hr"/>
   
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- sidebar -->
