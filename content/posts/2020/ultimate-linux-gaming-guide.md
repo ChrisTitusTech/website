@@ -49,7 +49,7 @@ sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i3
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa -y
 sudo apt update
-sudo apt install nvidia-driver-450 libnvidia-gl-450 libnvidia-gl-450:i386 libvulkan1 libvulkan1:i386 -y
+sudo apt install nvidia-driver-495 libnvidia-gl-495 libnvidia-gl-495:i386 libvulkan1 libvulkan1:i386 -y
 ```
 
 *Note: Not working? Are you using a recent nVidia card? I recommend at least GTX 900 Series or Above!
