@@ -9,7 +9,6 @@ categories:
   - Linux
 tags:
   - Ubuntu
-featured: true
 ---
 Do you dual boot often? Well make the Bootloader Selection Screen Awesome! Here are my top 5 GRUB Bootloader themes. 
 <!--more-->

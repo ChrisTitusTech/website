@@ -1,16 +1,28 @@
 ---
-title: "Debloat Windows 10 in 2021"
+title: "Debloat Windows 10 in 2022"
 
 date: 2020-06-11T16:04:48-05:00
 url: /debloat-windows-10-2020/
-image: images/2020-thumbs/debloat-windows-10-2020.jpg
+image: images/2022-thumbs/cleanup-windows-2022.jpg
 categories:
   - Windows
 tags:
   - Microsoft Store
+featured: true
 ---
 This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC. 
 <!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved.
+
+## April 2022 Update
+
+- Added new options to get Windows 10/7 Options in Windows 11
+- Service optimizations to reduce process count
+- Added more tweak settings and misc. fixes
+
+New shorter command! (_old command still works though..._)
+```
+iwr -useb https://git.io/JJ8R4 | iex
+```
 
 ## July 2021 Update
 
