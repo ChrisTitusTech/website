@@ -37,7 +37,7 @@ contact_form_action = "#" # contact form works with : https://formspree.io
 copyright = ""
 
 # search *** true or false (if Search is disable Menu will align in Right) ***
-search = true
+search = false
 header_search_layout = "expanded" # "expanded" or "popupable"
 # Menu align *** "left", "right" or "center" (if Search is disable Menu will align in Right) ***
 menu_align = "center"
