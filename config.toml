@@ -180,7 +180,7 @@ name = "Home"
 
 [[Languages.en.menu.main]]
 weight = 2
-url = "https://portal.christitus.com/"
+url = "https://portal.christitus.com/Downloads"
 name = "Downloads"
 
 [[Languages.en.menu.main]]
