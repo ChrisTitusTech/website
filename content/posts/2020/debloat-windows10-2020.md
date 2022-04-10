@@ -1,5 +1,5 @@
 ---
-title: "Debloat Windows 10 in 2022"
+title: "Debloat Windows in 2022"
 
 date: 2020-06-11T16:04:48-05:00
 url: /debloat-windows-10-2020/

@@ -3,11 +3,12 @@ title: "The Ultimate Linux Gaming Guide"
 
 date: 2020-07-14T14:27:23-05:00
 url: /ultimate-linux-gaming-guide/
-image: images/2020-thumbs/ultimate-linux-gaming-guide.jpg
+image: images/2020/gaming-guide/gaming.jpg
 categories:
   - Linux
 tags:
   - Linux Gaming
+featured: true
 ---
 This guide goes over setting up your Linux system for gaming. I will include multiple setup instructions for various Linux distributions.  
 <!--more-->

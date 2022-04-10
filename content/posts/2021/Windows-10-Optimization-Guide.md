@@ -8,7 +8,6 @@ categories:
   - Windows
 tags:
   - Powershell
-featured: true
 ---
 This guide goes over using a Custom ISO, Removing Windows 10 Components, and Optimizing Windows 10 Settings. 
 <!--more-->
