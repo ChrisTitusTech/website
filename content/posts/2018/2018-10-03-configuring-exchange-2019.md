@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-10-03T15:45:56+00:00
 url: /configuring-exchange-2019/
-image: /images/2018/10/Exchange-Server-2019.jpg
+image: images/2018/10/Exchange-Server-2019.jpg
 categories:
   - Windows Server
 tags:
@@ -48,27 +48,18 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
 
 I absolutely love Exchange 2019 due to the vast amount of improvements, that said, I am still bummed that they continue to not support DKIM through exchange server. Installing and configuring exchange 2019 was the easiest experience I&#8217;ve had to date, which is saying a lot! Overall I am liking the direction Microsoft is taking with the server line of products and I believe it will continue to have a very bright future, as long as they don&#8217;t do something stupid like including the Microsoft store.
 
-## Chris Titus Tech
+## CTT Extra Content
 
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
+- [ChrisTitus.com Downloads Section][1] (_CC Only_)
+  1. Digital Downloads with Guides and Pre-Built Images
+  2. Monthly Members Only Video
+  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
 - [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
+  1. Monthly Members Only Video
+  2. YouTube Emojis for Comments and Live Chat
+  3. YouTube Badges that changes based on membership time for comments and chat.
+  4. All YouTube comments are highlighted when I review comments daily. 
+  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
  [2]: https://christitus.com/join

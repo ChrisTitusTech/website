@@ -1,58 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Windows 11 on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/windows-11/</link>
-    <description>Recent content in Windows 11 on Chris Titus Tech</description>
+    <title>Windows 11 on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/windows-11/</link>
+    <description>Recent content in Windows 11 on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 29 Jun 2021 11:21:54 -0500</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/windows-11/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Jun 2021 11:21:54 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/windows-11/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update Any PC to Windows 11</title>
+      <link>https://demo.gethugothemes.com/northendlab/update-any-pc-to-windows11/</link>
+      <pubDate>Tue, 29 Jun 2021 11:21:54 -0500</pubDate>
       
-      <item>
-        <title>Update Any PC to Windows 11</title>
-        <link>https://christitus.com/update-any-pc-to-windows11/</link>
-        <pubDate>Tue, 29 Jun 2021 11:21:54 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 29 Jun 2021 11:21:54 -0500</atom:modified>
-        <guid>https://christitus.com/update-any-pc-to-windows11/</guid>
-        <description>&lt;p&gt;This is a guide going over updating any PC to Windows 11 that &amp;ldquo;doesn&amp;rsquo;t meet requirements&amp;rdquo; or doesn&amp;rsquo;t use Secure Boot or has a TPM 2.0 chip.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2021-thumbs/update-any-pc-to-windows11.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Windows 11</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/update-any-pc-to-windows11/</guid>
+      <description>&lt;p&gt;This is a guide going over updating any PC to Windows 11 that &amp;ldquo;doesn&amp;rsquo;t meet requirements&amp;rdquo; or doesn&amp;rsquo;t use Secure Boot or has a TPM 2.0 chip.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

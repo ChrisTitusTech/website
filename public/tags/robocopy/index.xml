@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Robocopy on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/robocopy/</link>
+    <description>Recent content in Robocopy on Northendlab | Creative Blog Template</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Jan 2022 17:39:34 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/robocopy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Robocopy - Copying files the right way in Windows</title>
+      <link>https://demo.gethugothemes.com/northendlab/robocopy/</link>
+      <pubDate>Wed, 19 Jan 2022 17:39:34 -0600</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/northendlab/robocopy/</guid>
+      <description>&lt;p&gt;This guide shows how to copy files in windows when dealing with large volumes of files and very long file paths past 255 characters.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

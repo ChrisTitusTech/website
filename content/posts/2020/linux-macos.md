@@ -3,7 +3,7 @@ title: "Linux MacOS"
 
 date: 2020-10-05T13:03:31-05:00
 url: /linux-macos/
-image: /images/2020-thumbs/linux-macos.jpg
+image: images/2020-thumbs/linux-macos.jpg
 categories:
   - Linux
   - MacOS
@@ -27,11 +27,11 @@ _Source Files in this project_
 
 ### Dependency Installs
 
-```bash
+```
 sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
 ```
 
-```bash
+```
 git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
 mkdir ~/.themes
 mkdir ~/.icons
@@ -42,7 +42,7 @@ sudo mv ~/MacOS/walls/* /usr/share/backgrounds/
 
 ### Gnome Tweaks
 
-```bash
+```
 gsettings set org.gnome.mutter center-new-windows 'true'
 gsettings set org.gnome.desktop.wm.preferences button-layout 'close,minimize,maximize:'
 gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-dark"
@@ -54,7 +54,7 @@ gsettings get org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backg
 ```
 
 ### Albert Search and Cairo Dock
-```bash
+```
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
 echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
 sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc"
@@ -87,27 +87,18 @@ Install the Following Extensions
 - Disable Ubuntu Dock (Not Needed on PopOS)
 - Dynamic Panel Transparency - Background Tab - Max Opacity 100 - Min Opacity 50
 
-## Chris Titus Tech
+## CTT Extra Content
 
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
+- [ChrisTitus.com Downloads Section][1] (_CC Only_)
+  1. Digital Downloads with Guides and Pre-Built Images
+  2. Monthly Members Only Video
+  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
 - [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
+  1. Monthly Members Only Video
+  2. YouTube Emojis for Comments and Live Chat
+  3. YouTube Badges that changes based on membership time for comments and chat.
+  4. All YouTube comments are highlighted when I review comments daily. 
+  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
  [2]: https://christitus.com/join

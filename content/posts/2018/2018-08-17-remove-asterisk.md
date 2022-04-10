@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-08-17T15:58:36+00:00
 url: /remove-asterisk/
-image: /images/2018/08/Asterisk_003.png
+image: images/2018/08/Asterisk_003.png
 categories:
   - Linux
 tags:
@@ -66,27 +66,18 @@ reboot
 
 These instructions should work on any Linux Based system and it shouldn&#8217;t matter if it is Red Hat based or Debian based. 
 
-## Chris Titus Tech
+## CTT Extra Content
 
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
+- [ChrisTitus.com Downloads Section][1] (_CC Only_)
+  1. Digital Downloads with Guides and Pre-Built Images
+  2. Monthly Members Only Video
+  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
 - [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
+  1. Monthly Members Only Video
+  2. YouTube Emojis for Comments and Live Chat
+  3. YouTube Badges that changes based on membership time for comments and chat.
+  4. All YouTube comments are highlighted when I review comments daily. 
+  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
  [2]: https://christitus.com/join

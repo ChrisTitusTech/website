@@ -1,58 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/python/</link>
-    <description>Recent content in Python on Chris Titus Tech</description>
+    <title>Python on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/python/</link>
+    <description>Recent content in Python on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 28 Nov 2017 22:03:53 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Nov 2017 22:03:53 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python script to print out specific results from an API JSON call</title>
+      <link>https://demo.gethugothemes.com/northendlab/api-json-call/</link>
+      <pubDate>Tue, 28 Nov 2017 22:03:53 +0000</pubDate>
       
-      <item>
-        <title>Python script to print out specific results from an API JSON call</title>
-        <link>https://christitus.com/api-json-call/</link>
-        <pubDate>Tue, 28 Nov 2017 22:03:53 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 28 Nov 2017 22:03:53 +0000</atom:modified>
-        <guid>https://christitus.com/api-json-call/</guid>
-        <description>&lt;p&gt;The following is a Python script to print out specific results from an API JSON call from a website. This basic syntax will allow you to create a value to use.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2017/11/jsonapi.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Python</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/api-json-call/</guid>
+      <description>&lt;p&gt;The following is a Python script to print out specific results from an API JSON call from a website. This basic syntax will allow you to create a value to use.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

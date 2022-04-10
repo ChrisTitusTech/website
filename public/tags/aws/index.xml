@@ -1,62 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AWS on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/aws/</link>
-    <description>Recent content in AWS on Chris Titus Tech</description>
+    <title>AWS on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/aws/</link>
+    <description>Recent content in AWS on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 14 Feb 2017 21:16:13 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Feb 2017 21:16:13 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Swap file on Cloud VM (AWS, GCloud, or Azure)</title>
+      <link>https://demo.gethugothemes.com/northendlab/create-swap-file/</link>
+      <pubDate>Tue, 14 Feb 2017 21:16:13 +0000</pubDate>
       
-      <item>
-        <title>Create Swap file on Cloud VM (AWS, GCloud, or Azure)</title>
-        <link>https://christitus.com/create-swap-file/</link>
-        <pubDate>Tue, 14 Feb 2017 21:16:13 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 14 Feb 2017 21:16:13 +0000</atom:modified>
-        <guid>https://christitus.com/create-swap-file/</guid>
-        <description>&lt;p&gt;Use the commands below to create swap file on a micro instance with a Linux operating system. This creates a 2GB Swap file to help alleviate low system ram. Consequently, this is great for those using micro instances in the cloud that have under 1 GB of memory.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2017/02/swapfile.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>AWS</category>
-            
-          
-            
-              <category>Google Cloud Platform</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/create-swap-file/</guid>
+      <description>&lt;p&gt;Use the commands below to create swap file on a micro instance with a Linux operating system. This creates a 2GB Swap file to help alleviate low system ram. Consequently, this is great for those using micro instances in the cloud that have under 1 GB of memory.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

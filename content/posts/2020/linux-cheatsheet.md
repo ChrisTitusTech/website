@@ -3,7 +3,7 @@ title: "Linux Cheatsheet"
 
 date: 2020-09-25T11:04:34-05:00
 url: /linux-cheatsheet/
-image: /images/2020-thumbs/linux-cheatsheet.jpg
+image: images/2020-thumbs/linux-cheatsheet.jpg
 categories:
   - Linux
   - Windows
@@ -17,7 +17,7 @@ Here is a cheatsheet of commands that every Linux user should know or have on ha
 
 ## Display System Information
 
-```bash
+```
 uname -sr # Display kernel release information
 uptime # How long has the computer been booted
 hostname # Show system host name
@@ -28,7 +28,7 @@ whoami # Shows current username
 
 ## Hardware Information
 
-```bash
+```
 dmesg # Display messages in kernel ring buffer
 cat /proc/cpuinfo # Display CPU information
 free -h # Display free and used memory ( -h for human readable, -m for MB, -g for GB.)
@@ -40,7 +40,7 @@ hdparm -i /dev/sda # Show info about disk sda
 
 ## Performance Monitoring
 
-```bash
+```
 top # Display and manage the top processes
 htop # Interactive process viewer
 iostat 1 # I/O statistics
@@ -52,7 +52,7 @@ watch df -h # Execute "df -h", showing periodic updates
 
 ## User Management
 
-```bash
+```
 id # Display the user and group ids of your current user
 groupadd test # Create a group named "test"
 useradd -m titus # Create the account and create the user's home directory
@@ -61,7 +61,7 @@ usermod -aG autologin titus # Add the titus account to the autologin group
 
 ## File Management
 
-```bash
+```
 # List all files in a long listing (detailed) format
 ls -al
 
@@ -310,27 +310,18 @@ cd
 cd /etc
 
 
-## Chris Titus Tech
+## CTT Extra Content
 
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
+- [ChrisTitus.com Downloads Section][1] (_CC Only_)
+  1. Digital Downloads with Guides and Pre-Built Images
+  2. Monthly Members Only Video
+  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
 - [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
+  1. Monthly Members Only Video
+  2. YouTube Emojis for Comments and Live Chat
+  3. YouTube Badges that changes based on membership time for comments and chat.
+  4. All YouTube comments are highlighted when I review comments daily. 
+  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
  [2]: https://christitus.com/join

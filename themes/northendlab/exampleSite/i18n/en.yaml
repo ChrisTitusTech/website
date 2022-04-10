@@ -1,0 +1,89 @@
+- id: search_placeholder
+  translation: Type & Hit Enter...
+
+- id: our_instagram
+  translation: Our Instagram
+
+- id: name
+  translation: Your Name
+
+- id: email
+  translation: Email Address
+
+- id: subject
+  translation: Subject
+
+- id: message
+  translation: Your Message Here
+
+- id: send_message
+  translation: Send Message
+
+- id: search_result_for
+  translation: Search results for
+
+- id: you_may_also_like
+  translation: You May Also Like
+
+- id: most_recent_post
+  translation: Our Most Recent Post
+
+- id: written_by
+  translation: Written By
+
+- id: read_more
+  translation: Read More
+  
+- id: read_article
+  translation: Read Article
+
+- id: showing_posts_from
+  translation: Showing posts from
+
+- id: home
+  translation: Home
+
+- id: search
+  translation: Search
+
+- id: categories
+  translation: Categories
+
+- id: tags
+  translation: Tags
+
+- id: social
+  translation: Social
+
+- id: copyright-text
+  translation: Designed & Developed By
+
+- id: popular_categories
+  translation: Popular Categories
+
+- id: about_me
+  translation: About Me
+
+- id: featured_post
+  translation: Featured Post
+
+- id: subscribe_newsletter
+  translation: Never Miss A News
+
+- id: subscribe
+  translation: Subscribe Now
+
+- id: requisition
+  translation: Requisition
+
+- id: time_period
+  translation: Time Period
+
+- id: visit_website
+  translation: Visit Website
+
+- id: added
+  translation: Added
+
+- id: post_related_to
+  translation: Posts related to

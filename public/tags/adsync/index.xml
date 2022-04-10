@@ -1,66 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ADSync on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/adsync/</link>
-    <description>Recent content in ADSync on Chris Titus Tech</description>
+    <title>ADSync on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/adsync/</link>
+    <description>Recent content in ADSync on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 07 Oct 2016 14:01:26 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/adsync/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Oct 2016 14:01:26 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/adsync/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Force active directory sync to Office 365 with Azure ADSync</title>
+      <link>https://demo.gethugothemes.com/northendlab/force-active-directory-sync/</link>
+      <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
       
-      <item>
-        <title>Force active directory sync to Office 365 with Azure ADSync</title>
-        <link>https://christitus.com/force-active-directory-sync/</link>
-        <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Fri, 07 Oct 2016 14:01:26 +0000</atom:modified>
-        <guid>https://christitus.com/force-active-directory-sync/</guid>
-        <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2016/10/ActiveDirecotry2.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>ADSync</category>
-            
-          
-            
-              <category>Office365</category>
-            
-          
-            
-              <category>Powershell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows Server</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/force-active-directory-sync/</guid>
+      <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

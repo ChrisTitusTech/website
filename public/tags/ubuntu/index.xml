@@ -1,278 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ubuntu on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/ubuntu/</link>
-    <description>Recent content in Ubuntu on Chris Titus Tech</description>
+    <title>Ubuntu on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 01 Mar 2021 14:53:09 -0600</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Mar 2021 14:53:09 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GRUB Bootloader Themes</title>
+      <link>https://demo.gethugothemes.com/northendlab/bootloader-themes/</link>
+      <pubDate>Mon, 01 Mar 2021 14:53:09 -0600</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/northendlab/bootloader-themes/</guid>
+      <description>&lt;p&gt;Do you dual boot often? Well make the Bootloader Selection Screen Awesome! Here are my top 5 GRUB Bootloader themes.&lt;/p&gt;</description>
+    </item>
     
-        <atom:link href="https://christitus.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux MacOS</title>
+      <link>https://demo.gethugothemes.com/northendlab/linux-macos/</link>
+      <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/northendlab/linux-macos/</guid>
+      <description>&lt;p&gt;This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. &lt;em&gt;Version 20+ is required&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     
+    <item>
+      <title>Disable Snaps</title>
+      <link>https://demo.gethugothemes.com/northendlab/disable-snaps/</link>
+      <pubDate>Tue, 08 Sep 2020 13:44:58 -0500</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/northendlab/disable-snaps/</guid>
+      <description>&lt;p&gt;This goes over how to Disable Snaps and making sure it doesn&amp;rsquo;t automatically reinstall.&lt;/p&gt;</description>
+    </item>
     
+    <item>
+      <title>Install Wine Libfaudio0 Error</title>
+      <link>https://demo.gethugothemes.com/northendlab/install-wine-libfaudio0-error/</link>
+      <pubDate>Mon, 25 May 2020 13:14:23 -0500</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/northendlab/install-wine-libfaudio0-error/</guid>
+      <description>&lt;p&gt;This article helps you fix the Libfaudio0 error that you run into when installing Wine on an older Linux debian-based distribution like Linux Mint 19 or Ubuntu 18.&lt;/p&gt;</description>
+    </item>
     
-
+    <item>
+      <title>How To Setup a VPN Kill Switch Server</title>
+      <link>https://demo.gethugothemes.com/northendlab/vpn-kill-switch/</link>
+      <pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate>
       
-      <item>
-        <title>GRUB Bootloader Themes</title>
-        <link>https://christitus.com/bootloader-themes/</link>
-        <pubDate>Mon, 01 Mar 2021 14:53:09 -0600</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 01 Mar 2021 14:53:09 -0600</atom:modified>
-        <guid>https://christitus.com/bootloader-themes/</guid>
-        <description>&lt;p&gt;Do you dual boot often? Well make the Bootloader Selection Screen Awesome! Here are my top 5 GRUB Bootloader themes.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2021-thumbs/bootloader-themes.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://demo.gethugothemes.com/northendlab/vpn-kill-switch/</guid>
+      <description>&lt;p&gt;This will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if you are more familiar with that.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Secure A Web Server</title>
+      <link>https://demo.gethugothemes.com/northendlab/secure-web-server/</link>
+      <pubDate>Thu, 10 Oct 2019 13:37:49 +0000</pubDate>
       
-      <item>
-        <title>Linux MacOS</title>
-        <link>https://christitus.com/linux-macos/</link>
-        <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 05 Oct 2020 13:03:31 -0500</atom:modified>
-        <guid>https://christitus.com/linux-macos/</guid>
-        <description>&lt;p&gt;This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. &lt;em&gt;Version 20+ is required&lt;/em&gt;&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/linux-macos.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu</category>
-            
-          
-            
-              <category>PopOS</category>
-            
-          
-            
-              <category>LinuxMint</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>MacOS</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://demo.gethugothemes.com/northendlab/secure-web-server/</guid>
+      <description>&lt;p&gt;In this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just because you secure your server doesn’t mean you can neglect it. I highly recommend monitoring it and adjusting security as needed. Monitoring is required for proper security in my opinion.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Install Linux for the First Time</title>
+      <link>https://demo.gethugothemes.com/northendlab/install-linux-first-time/</link>
+      <pubDate>Thu, 18 Oct 2018 15:23:20 +0000</pubDate>
       
-      <item>
-        <title>Disable Snaps</title>
-        <link>https://christitus.com/disable-snaps/</link>
-        <pubDate>Tue, 08 Sep 2020 13:44:58 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 08 Sep 2020 13:44:58 -0500</atom:modified>
-        <guid>https://christitus.com/disable-snaps/</guid>
-        <description>&lt;p&gt;This goes over how to Disable Snaps and making sure it doesn&amp;rsquo;t automatically reinstall.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/disable-snaps.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Install Wine Libfaudio0 Error</title>
-        <link>https://christitus.com/install-wine-libfaudio0-error/</link>
-        <pubDate>Mon, 25 May 2020 13:14:23 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 25 May 2020 13:14:23 -0500</atom:modified>
-        <guid>https://christitus.com/install-wine-libfaudio0-error/</guid>
-        <description>&lt;p&gt;This article helps you fix the Libfaudio0 error that you run into when installing Wine on an older Linux debian-based distribution like Linux Mint 19 or Ubuntu 18.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/install-wine-libfaudio0-error.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Linux Mint</category>
-            
-          
-            
-              <category>Ubuntu</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>How To Setup a VPN Kill Switch Server</title>
-        <link>https://christitus.com/vpn-kill-switch/</link>
-        <pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 02 Dec 2019 05:31:59 +0000</atom:modified>
-        <guid>https://christitus.com/vpn-kill-switch/</guid>
-        <description>&lt;p&gt;This will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if you are more familiar with that.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2019/12/vpn-kill-switch-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu</category>
-            
-          
-            
-              <category>Ubuntu Server</category>
-            
-          
-            
-              <category>Firewall</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>Networking</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>How to Secure A Web Server</title>
-        <link>https://christitus.com/secure-web-server/</link>
-        <pubDate>Thu, 10 Oct 2019 13:37:49 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Thu, 10 Oct 2019 13:37:49 +0000</atom:modified>
-        <guid>https://christitus.com/secure-web-server/</guid>
-        <description>&lt;p&gt;In this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just because you secure your server doesn’t mean you can neglect it. I highly recommend monitoring it and adjusting security as needed. Monitoring is required for proper security in my opinion.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2019/10/secure-website-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu</category>
-            
-          
-            
-              <category>Ubuntu Server</category>
-            
-          
-            
-              <category>Firewall</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>Networking</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>How to Install Linux for the First Time</title>
-        <link>https://christitus.com/install-linux-first-time/</link>
-        <pubDate>Thu, 18 Oct 2018 15:23:20 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Thu, 18 Oct 2018 15:23:20 +0000</atom:modified>
-        <guid>https://christitus.com/install-linux-first-time/</guid>
-        <description>&lt;p&gt;This article goes over installing Linux for the first time. I will break it down into 3 parts with a Video Walkthrough. Using this will make it very easy for you to install Linux for the first time.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/10/thumbnail.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/install-linux-first-time/</guid>
+      <description>&lt;p&gt;This article goes over installing Linux for the first time. I will break it down into 3 parts with a Video Walkthrough. Using this will make it very easy for you to install Linux for the first time.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

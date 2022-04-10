@@ -1,66 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Windows Search on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/windows-search/</link>
-    <description>Recent content in Windows Search on Chris Titus Tech</description>
+    <title>Windows Search on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/windows-search/</link>
+    <description>Recent content in Windows Search on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 17 Oct 2018 15:22:41 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/windows-search/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Oct 2018 15:22:41 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/windows-search/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Change Cortana Search</title>
+      <link>https://demo.gethugothemes.com/northendlab/change-cortana-search/</link>
+      <pubDate>Wed, 17 Oct 2018 15:22:41 +0000</pubDate>
       
-      <item>
-        <title>How To Change Cortana Search</title>
-        <link>https://christitus.com/change-cortana-search/</link>
-        <pubDate>Wed, 17 Oct 2018 15:22:41 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Wed, 17 Oct 2018 15:22:41 +0000</atom:modified>
-        <guid>https://christitus.com/change-cortana-search/</guid>
-        <description>&lt;p&gt;This article goes over how to change Cortana search engine to display results in chrome instead of Microsoft Edge. Afterward, the second part requires you to install a chrome extension to search in Google instead of Bing.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/10/change-cortana-search.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Cortana</category>
-            
-          
-            
-              <category>Windows Search</category>
-            
-          
-            
-              <category>Windows 10</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/change-cortana-search/</guid>
+      <description>&lt;p&gt;This article goes over how to change Cortana search engine to display results in chrome instead of Microsoft Edge. Afterward, the second part requires you to install a chrome extension to search in Google instead of Bing.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

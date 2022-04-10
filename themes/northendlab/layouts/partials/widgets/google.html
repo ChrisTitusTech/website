@@ -1,0 +1,19 @@
+{{ "<!-- Search -->" | safeHTML }}
+{{ if site.Params.googlead.enable }}
+{{ with site.Params.googlead }}
+<div class="widget">
+  <h5 class="widget-title"><span>Google Ad</span></h5>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6679678361432308"
+     data-ad-slot="2001915683"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+{{ end }}
+{{ end }}

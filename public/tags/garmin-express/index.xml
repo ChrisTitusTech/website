@@ -1,62 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Garmin Express on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/garmin-express/</link>
-    <description>Recent content in Garmin Express on Chris Titus Tech</description>
+    <title>Garmin Express on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/garmin-express/</link>
+    <description>Recent content in Garmin Express on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 15 Feb 2019 22:20:57 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/garmin-express/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Feb 2019 22:20:57 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/garmin-express/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Garmin Express on Linux | Step by Step Guide</title>
+      <link>https://demo.gethugothemes.com/northendlab/garmin-express-linux/</link>
+      <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
       
-      <item>
-        <title>Garmin Express on Linux | Step by Step Guide</title>
-        <link>https://christitus.com/garmin-express-linux/</link>
-        <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Fri, 15 Feb 2019 22:20:57 +0000</atom:modified>
-        <guid>https://christitus.com/garmin-express-linux/</guid>
-        <description>&lt;p&gt;This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2019/02/garmin-express-icon-1.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Garmin Express</category>
-            
-          
-            
-              <category>Wine</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/garmin-express-linux/</guid>
+      <description>&lt;p&gt;This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

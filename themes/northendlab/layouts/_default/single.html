@@ -1,0 +1,97 @@
+{{ define "main" }}
+
+<!-- checking blog -->
+{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+
+{{ $sidebar := site.Params.sidebar }}
+{{ $has_sidebar := or (eq $sidebar `left`) (eq $sidebar `right`)}}
+{{ $widget:= site.Params.widgets.sidebar }}
+
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- left sidebar -->
+      {{ if eq $sidebar "left" }}
+      <aside class="col-lg-4 order-2 order-lg-1">
+        <div class="{{ if eq $sidebar `left` }}pl-lg-4{{ end }}{{ if eq $sidebar `right` }}pr-lg-4{{ end }}">
+          {{- partial "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) -}}
+        </div>
+      </aside>
+      {{ end }}
+      <!-- /left sidebar -->
+
+      <div class="{{ if $has_sidebar }}col-lg-8{{ else }}col-lg-10{{ end }} {{ if eq $sidebar `left` }}order-1 order-lg-2{{ end }}">
+        <div class="block shadow mb-4">
+          <h2>{{ .Title | markdownify }}</h2>
+          <div class="mb-4 mt-3 post-meta">
+            <a href="{{ `author/` | absLangURL }}{{ .Params.Author | urlize | lower }}">{{ .Params.Author | title }}</a> <span class="mx-2">|</span>
+            {{ .PublishDate.Format "Jan 2, 2006" }}<span class="mx-2">|</span> {{ range .Params.Categories }}
+            <a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a>
+            {{ end }}
+          </div>
+          {{ if .Params.Image }}
+          <!--img loading="lazy" src="{{ .Params.Image | absURL }}" class="img-fluid w-100 mb-4" alt="{{ .Title | markdownify }}"-->
+          {{ end }}
+
+          <img src="{{ .Params.image | absURL }}">
+
+
+          <div class="content mb-5">
+            {{ .Content }}
+          </div>
+          <div class="mb-3 post-meta">
+            {{range .Params.Tags }} <a class="bg-light py-2 px-3" href="{{ `tags/` | absLangURL}}{{ . | urlize | lower }}">#{{ . | title }}</a>
+            {{ end }}
+          </div>
+        </div>
+
+        <div class="block shadow">
+          {{ $related := site.RegularPages.Related . | first 5 }}
+          {{ with $related }}
+          <h3 class="mb-3">See Also</h3>
+          <ul class="list-unstyled related-post-list">
+            {{ range . }}
+            <li><a class="d-inline-block py-1 text-dark" href="{{ .RelPermalink }}"><small class="fas fa-external-link-alt mr-2"></small>{{.Title}}</a></li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </div>
+
+        {{ if site.DisqusShortname}}
+        <div class="block shadow mt-4">
+          <!-- comments -->
+          {{ template "_internal/disqus.html" . }}
+        </div>
+        {{ end }}
+      </div>
+
+      <!-- right sidebar -->
+      {{ if eq $sidebar "right" }}
+      <aside class="col-lg-4 mt-5 mt-lg-0">
+        <div class="{{ if eq $sidebar `left` }}pr-lg-4{{ end }}{{ if eq $sidebar `right` }}pl-lg-4{{ end }}">
+          {{- partial "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) -}}
+        </div>
+      </aside>
+      {{ end }}
+      <!-- /right sidebar -->
+    </div>
+  </div>
+</section>
+
+{{ else }}
+
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="content">
+          {{.Content}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
+
+{{ end }}

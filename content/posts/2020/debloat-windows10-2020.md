@@ -3,7 +3,7 @@ title: "Debloat Windows 10 in 2021"
 
 date: 2020-06-11T16:04:48-05:00
 url: /debloat-windows-10-2020/
-image: /images/2020-thumbs/debloat-windows-10-2020.jpg
+image: images/2020-thumbs/debloat-windows-10-2020.jpg
 categories:
   - Windows
 tags:
@@ -22,7 +22,7 @@ If you want to just run this on any system, you can easily copy and paste this i
 *January 2021 Feature: 10 Bug Fixes and Network Optimizations added*
 *July 2021 Updates: 30+ Bug Fixes and Undo Options added*
 
-```PowerShell
+```
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
 ```
 
@@ -43,7 +43,7 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 ## User Requested Restore Scripts
 
-```PowerShell
+```
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JTbKD'))
 ```
 
@@ -75,27 +75,18 @@ Recommended Options:
   
 I generally always enable Dark Mode and Install 3.5 .NET but that is entirely my personal preference. 
   
-## Chris Titus Tech
+## CTT Extra Content
 
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
+- [ChrisTitus.com Downloads Section][1] (_CC Only_)
+  1. Digital Downloads with Guides and Pre-Built Images
+  2. Monthly Members Only Video
+  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
 - [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
+  1. Monthly Members Only Video
+  2. YouTube Emojis for Comments and Live Chat
+  3. YouTube Badges that changes based on membership time for comments and chat.
+  4. All YouTube comments are highlighted when I review comments daily. 
+  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
  [2]: https://christitus.com/join

@@ -3,7 +3,7 @@ title: "The Ultimate Linux Gaming Guide"
 
 date: 2020-07-14T14:27:23-05:00
 url: /ultimate-linux-gaming-guide/
-image: /images/2020-thumbs/ultimate-linux-gaming-guide.jpg
+image: images/2020-thumbs/ultimate-linux-gaming-guide.jpg
 categories:
   - Linux
 tags:
@@ -195,21 +195,19 @@ ulimit -Hn
 If this returns more than 500,000 than ESYNC IS ENABLED! If not, proceed with these instructions:  
 Change the following files and add this line to the bottom
 
-{{< boxmd >}}
-
 `/etc/systemd/system.conf` & `/etc/systemd/user.conf`
 
 ```
 DefaultLimitNOFILE=524288
 ```
 
-{{< /boxmd >}}{{< boxmd >}}`/etc/security/limits.conf`
+`/etc/security/limits.conf`
 
 ```
 username hard nofile 524288
 ```
 
-*Note: Change username to your username!!!*{{< /boxmd >}}
+*Note: Change username to your username!!!*
 
 ***
 ![gamemode](/images/2020/gaming-guide/gamemode.jpg)
@@ -289,27 +287,18 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 Doing these tweaks or just some of them will make a drastic difference when it comes to Gaming on Linux. I personally use all of the tweaks, but sometimes I end up not using the Custom kernel if I have issues with drivers like nvidia sometimes does not like it.
 
-## Chris Titus Tech
+## CTT Extra Content
 
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
+- [ChrisTitus.com Downloads Section][1] (_CC Only_)
+  1. Digital Downloads with Guides and Pre-Built Images
+  2. Monthly Members Only Video
+  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
 - [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
+  1. Monthly Members Only Video
+  2. YouTube Emojis for Comments and Live Chat
+  3. YouTube Badges that changes based on membership time for comments and chat.
+  4. All YouTube comments are highlighted when I review comments daily. 
+  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
  [2]: https://christitus.com/join

@@ -1,62 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vssadmin on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/vssadmin/</link>
-    <description>Recent content in vssadmin on Chris Titus Tech</description>
+    <title>vssadmin on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/vssadmin/</link>
+    <description>Recent content in vssadmin on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 25 Oct 2018 15:34:24 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/vssadmin/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Thu, 25 Oct 2018 15:34:24 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/vssadmin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clearing out Orphaned Shadow Copies</title>
+      <link>https://demo.gethugothemes.com/northendlab/orphaned-shadow-copies/</link>
+      <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
       
-      <item>
-        <title>Clearing out Orphaned Shadow Copies</title>
-        <link>https://christitus.com/orphaned-shadow-copies/</link>
-        <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Thu, 25 Oct 2018 15:34:24 +0000</atom:modified>
-        <guid>https://christitus.com/orphaned-shadow-copies/</guid>
-        <description>&lt;p&gt;In this article, I go over how to get rid of Orphaned Shadow Copies that do not get cleared out by issuing: &lt;code&gt;vssadmin shadows delete /all&lt;/code&gt;&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/10/shadow-copy-banner.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>vssadmin</category>
-            
-          
-            
-              <category>Shadow Copies</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows Server</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/orphaned-shadow-copies/</guid>
+      <description>&lt;p&gt;In this article, I go over how to get rid of Orphaned Shadow Copies that do not get cleared out by issuing: &lt;code&gt;vssadmin shadows delete /all&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

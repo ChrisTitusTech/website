@@ -1,58 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ADB on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/adb/</link>
-    <description>Recent content in ADB on Chris Titus Tech</description>
+    <title>ADB on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/adb/</link>
+    <description>Recent content in ADB on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 21 Jun 2020 20:01:50 -0500</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/adb/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jun 2020 20:01:50 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/adb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debloat Android</title>
+      <link>https://demo.gethugothemes.com/northendlab/debloat-android/</link>
+      <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
       
-      <item>
-        <title>Debloat Android</title>
-        <link>https://christitus.com/debloat-android/</link>
-        <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Sun, 21 Jun 2020 20:01:50 -0500</atom:modified>
-        <guid>https://christitus.com/debloat-android/</guid>
-        <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/debloat-android.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>ADB</category>
-            
-          
-        
-        
-          
-            
-              <category>Android</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/debloat-android/</guid>
+      <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

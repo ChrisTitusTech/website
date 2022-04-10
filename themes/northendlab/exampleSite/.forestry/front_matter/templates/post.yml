@@ -1,0 +1,30 @@
+---
+label: posts
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: image
+  label: image
+- type: text
+  name: author
+  label: author
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: description
+  label: description
+  description: This is meta description
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: tags
+  label: tags
+- type: boolean
+  name: featured
+  label: featured
+  description: true for featured post &amp; false for regular post

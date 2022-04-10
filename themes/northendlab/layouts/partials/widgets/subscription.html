@@ -1,0 +1,14 @@
+{{ "<!-- Search -->" | safeHTML }}
+{{ if site.Params.subscription.enable }}
+{{ with site.Params.subscription }}
+<div class="widget">
+  <h5 class="widget-title"><span>Newsletter</span></h5>
+  <form action="https://portal.christitus.com/email_lists/103855/subscriptions" accept-charset="UTF-8" method="post" target="_blank"
+  class="widget-search">
+    <input class="mb-3 form-control rounded-0" id="search-query" name="s" type="search" type="email" name="email" required="required" placeholder="Email" />
+    <button type="submit" class="btn btn-primary btn-block rounded-0" name="subscribe">Subscribe</button>
+    <!--input type="submit" value="Sign me up!" /-->
+    </form>
+</div>
+{{ end }}
+{{ end }}

@@ -1,58 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Raspberry Pi on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/raspberry-pi/</link>
-    <description>Recent content in Raspberry Pi on Chris Titus Tech</description>
+    <title>Raspberry Pi on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/raspberry-pi/</link>
+    <description>Recent content in Raspberry Pi on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 20 Apr 2021 10:02:56 -0500</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Apr 2021 10:02:56 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a Website on Raspberry Pi</title>
+      <link>https://demo.gethugothemes.com/northendlab/pi-website/</link>
+      <pubDate>Tue, 20 Apr 2021 10:02:56 -0500</pubDate>
       
-      <item>
-        <title>Creating a Website on Raspberry Pi</title>
-        <link>https://christitus.com/pi-website/</link>
-        <pubDate>Tue, 20 Apr 2021 10:02:56 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 20 Apr 2021 10:02:56 -0500</atom:modified>
-        <guid>https://christitus.com/pi-website/</guid>
-        <description>&lt;p&gt;This is a guide on how to create a website on a Raspberry Pi. This will teach you the basics of using a LAMP stack.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2021-thumbs/pi-website.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Raspberry Pi</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/pi-website/</guid>
+      <description>&lt;p&gt;This is a guide on how to create a website on a Raspberry Pi. This will teach you the basics of using a LAMP stack.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

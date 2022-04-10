@@ -1,58 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TicWatch on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/ticwatch/</link>
-    <description>Recent content in TicWatch on Chris Titus Tech</description>
+    <title>TicWatch on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/ticwatch/</link>
+    <description>Recent content in TicWatch on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 27 Aug 2020 09:49:33 -0500</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/ticwatch/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Aug 2020 09:49:33 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/ticwatch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix Ticwatch Lag</title>
+      <link>https://demo.gethugothemes.com/northendlab/fix-ticwatch-lag/</link>
+      <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
       
-      <item>
-        <title>Fix Ticwatch Lag</title>
-        <link>https://christitus.com/fix-ticwatch-lag/</link>
-        <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Thu, 27 Aug 2020 09:49:33 -0500</atom:modified>
-        <guid>https://christitus.com/fix-ticwatch-lag/</guid>
-        <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/fix-ticwatch-lag.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>TicWatch</category>
-            
-          
-        
-        
-          
-            
-              <category>Android</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/fix-ticwatch-lag/</guid>
+      <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

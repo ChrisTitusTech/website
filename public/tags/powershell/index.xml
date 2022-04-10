@@ -1,410 +1,110 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Powershell on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/powershell/</link>
-    <description>Recent content in Powershell on Chris Titus Tech</description>
+    <title>Powershell on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/powershell/</link>
+    <description>Recent content in Powershell on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 30 Dec 2020 14:34:52 -0600</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Dec 2020 14:34:52 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 10 Optimization Guide</title>
+      <link>https://demo.gethugothemes.com/northendlab/Windows-10-Optimization-Guide/</link>
+      <pubDate>Wed, 30 Dec 2020 14:34:52 -0600</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/northendlab/Windows-10-Optimization-Guide/</guid>
+      <description>&lt;p&gt;This guide goes over using a Custom ISO, Removing Windows 10 Components, and Optimizing Windows 10 Settings.&lt;/p&gt;</description>
+    </item>
     
-        <atom:link href="https://christitus.com/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Common Computer Issues</title>
+      <link>https://demo.gethugothemes.com/northendlab/common-computer-issues/</link>
+      <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/northendlab/common-computer-issues/</guid>
+      <description>&lt;p&gt;These are all the issues we discussed on a live stream. I took all the community questions and made this webpage for them.&lt;/p&gt;</description>
+    </item>
     
+    <item>
+      <title>Windows 10 Scripts</title>
+      <link>https://demo.gethugothemes.com/northendlab/windows-10-scripts/</link>
+      <pubDate>Fri, 14 Aug 2020 11:43:17 -0500</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/northendlab/windows-10-scripts/</guid>
+      <description>&lt;p&gt;Three Windows 10 Scripts&lt;/p&gt;</description>
+    </item>
     
+    <item>
+      <title>Ultimate Windows Setup Guide</title>
+      <link>https://demo.gethugothemes.com/northendlab/ultimate-windows-setup-guide/</link>
+      <pubDate>Mon, 27 Jul 2020 14:26:59 -0500</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/northendlab/ultimate-windows-setup-guide/</guid>
+      <description>&lt;p&gt;This guide will walk you through a fresh Windows installation and debloat the services, tasks, and apps that are running in the background.&lt;/p&gt;</description>
+    </item>
     
-
+    <item>
+      <title>How to Create a Windows Service</title>
+      <link>https://demo.gethugothemes.com/northendlab/create-windows-service/</link>
+      <pubDate>Mon, 15 Jun 2020 23:33:56 -0500</pubDate>
       
-      <item>
-        <title>Windows 10 Optimization Guide</title>
-        <link>https://christitus.com/windows-10-optimization-guide/</link>
-        <pubDate>Wed, 30 Dec 2020 14:34:52 -0600</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Wed, 30 Dec 2020 14:34:52 -0600</atom:modified>
-        <guid>https://christitus.com/windows-10-optimization-guide/</guid>
-        <description>&lt;p&gt;This guide goes over using a Custom ISO, Removing Windows 10 Components, and Optimizing Windows 10 Settings.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2021-thumbs/Windows-10-Optimization-Guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Powershell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://demo.gethugothemes.com/northendlab/create-windows-service/</guid>
+      <description>&lt;p&gt;This article goes over how to create a windows service.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Clean Up Windows 10</title>
+      <link>https://demo.gethugothemes.com/northendlab/clean-up-windows-10/</link>
+      <pubDate>Mon, 14 Oct 2019 20:08:01 +0000</pubDate>
       
-      <item>
-        <title>Common Computer Issues</title>
-        <link>https://christitus.com/common-computer-issues/</link>
-        <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Fri, 28 Aug 2020 05:42:25 -0500</atom:modified>
-        <guid>https://christitus.com/common-computer-issues/</guid>
-        <description>&lt;p&gt;These are all the issues we discussed on a live stream. I took all the community questions and made this webpage for them.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/common-computer-issues.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>PowerShell</category>
-            
-          
-            
-              <category>Xorg</category>
-            
-          
-            
-              <category>Linux Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>Windows</category>
-            
-          
-            
-              <category>MacOS</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://demo.gethugothemes.com/northendlab/clean-up-windows-10/</guid>
+      <description>&lt;p&gt;In this article, we will clean up Windows 10. This will include debloat, startup maintenance, system tweaks, and privacy settings. These 3 stages are broken down below and will help maintain a healthy Windows 10 system. I’d recommend re-running these steps every 6 months.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing Linux Subsystem for Windows 10</title>
+      <link>https://demo.gethugothemes.com/northendlab/installing-linux-subsystem/</link>
+      <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
       
-      <item>
-        <title>Windows 10 Scripts</title>
-        <link>https://christitus.com/windows-10-scripts/</link>
-        <pubDate>Fri, 14 Aug 2020 11:43:17 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Fri, 14 Aug 2020 11:43:17 -0500</atom:modified>
-        <guid>https://christitus.com/windows-10-scripts/</guid>
-        <description>&lt;p&gt;Three Windows 10 Scripts&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/windows-10-scripts.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>PowerShell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://demo.gethugothemes.com/northendlab/installing-linux-subsystem/</guid>
+      <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Debloat Windows 10</title>
+      <link>https://demo.gethugothemes.com/northendlab/debloat-windows-10/</link>
+      <pubDate>Sun, 09 Sep 2018 17:08:58 +0000</pubDate>
       
-      <item>
-        <title>Ultimate Windows Setup Guide</title>
-        <link>https://christitus.com/ultimate-windows-setup-guide/</link>
-        <pubDate>Mon, 27 Jul 2020 14:26:59 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 27 Jul 2020 14:26:59 -0500</atom:modified>
-        <guid>https://christitus.com/ultimate-windows-setup-guide/</guid>
-        <description>&lt;p&gt;This guide will walk you through a fresh Windows installation and debloat the services, tasks, and apps that are running in the background.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/ultimate-windows-setup-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Powershell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://demo.gethugothemes.com/northendlab/debloat-windows-10/</guid>
+      <description>&lt;p&gt;Trying to Debloat Windows 10 is getting ridiculous and as a system admin it is soul crushing to see all that performance go to waste on the botched attempt by Microsoft to do an Appstore and its apps (I’m looking at you Candy Crush). Luckily some admins have worked tirelessly to give us a solution that works considerably well. Lets Start!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Changing file permissions using PowerShell</title>
+      <link>https://demo.gethugothemes.com/northendlab/changing-file-permissions/</link>
+      <pubDate>Thu, 14 Jun 2018 15:46:23 +0000</pubDate>
       
-      <item>
-        <title>How to Create a Windows Service</title>
-        <link>https://christitus.com/create-windows-service/</link>
-        <pubDate>Mon, 15 Jun 2020 23:33:56 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 15 Jun 2020 23:33:56 -0500</atom:modified>
-        <guid>https://christitus.com/create-windows-service/</guid>
-        <description>&lt;p&gt;This article goes over how to create a windows service.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/create-windows-service.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>PowerShell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://demo.gethugothemes.com/northendlab/changing-file-permissions/</guid>
+      <description>&lt;p&gt;Use the following script for changing file permissions using PowerShell. I use this script when command line takeown and icacls fail. Obviously, run from an elevated PowerShell prompt or by typing ‘powershell’ from elevated cmd.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Exclude shared mailboxes from Dynamic Distribution Group</title>
+      <link>https://demo.gethugothemes.com/northendlab/exclude-shared-mailboxes-exchange/</link>
+      <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
       
-      <item>
-        <title>Clean Up Windows 10</title>
-        <link>https://christitus.com/clean-up-windows-10/</link>
-        <pubDate>Mon, 14 Oct 2019 20:08:01 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 14 Oct 2019 20:08:01 +0000</atom:modified>
-        <guid>https://christitus.com/clean-up-windows-10/</guid>
-        <description>&lt;p&gt;In this article, we will clean up Windows 10. This will include debloat, startup maintenance, system tweaks, and privacy settings. These 3 stages are broken down below and will help maintain a healthy Windows 10 system. I’d recommend re-running these steps every 6 months.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2019/10/cleanup-win10-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Windows 10</category>
-            
-          
-            
-              <category>PowerShell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://demo.gethugothemes.com/northendlab/exclude-shared-mailboxes-exchange/</guid>
+      <description>&lt;p&gt;This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Force active directory sync to Office 365 with Azure ADSync</title>
+      <link>https://demo.gethugothemes.com/northendlab/force-active-directory-sync/</link>
+      <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
       
-      <item>
-        <title>Installing Linux Subsystem for Windows 10</title>
-        <link>https://christitus.com/installing-linux-subsystem/</link>
-        <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 11 Sep 2018 19:56:07 +0000</atom:modified>
-        <guid>https://christitus.com/installing-linux-subsystem/</guid>
-        <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/09/winubuntu.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Powershell</category>
-            
-          
-            
-              <category>Ubuntu Server</category>
-            
-          
-            
-              <category>Windows 10</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Debloat Windows 10</title>
-        <link>https://christitus.com/debloat-windows-10/</link>
-        <pubDate>Sun, 09 Sep 2018 17:08:58 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Sun, 09 Sep 2018 17:08:58 +0000</atom:modified>
-        <guid>https://christitus.com/debloat-windows-10/</guid>
-        <description>&lt;p&gt;Trying to Debloat Windows 10 is getting ridiculous and as a system admin it is soul crushing to see all that performance go to waste on the botched attempt by Microsoft to do an Appstore and its apps (I’m looking at you Candy Crush). Luckily some admins have worked tirelessly to give us a solution that works considerably well. Lets Start!&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/09/remove-win10-bloatware.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>PowerShell</category>
-            
-          
-            
-              <category>Windows 10</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Changing file permissions using PowerShell</title>
-        <link>https://christitus.com/changing-file-permissions/</link>
-        <pubDate>Thu, 14 Jun 2018 15:46:23 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Thu, 14 Jun 2018 15:46:23 +0000</atom:modified>
-        <guid>https://christitus.com/changing-file-permissions/</guid>
-        <description>&lt;p&gt;Use the following script for changing file permissions using PowerShell. I use this script when command line takeown and icacls fail. Obviously, run from an elevated PowerShell prompt or by typing ‘powershell’ from elevated cmd.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/06/changing-file-permissions.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Powershell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Exclude shared mailboxes from Dynamic Distribution Group</title>
-        <link>https://christitus.com/exclude-shared-mailboxes-exchange/</link>
-        <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 31 Oct 2016 20:29:26 +0000</atom:modified>
-        <guid>https://christitus.com/exclude-shared-mailboxes-exchange/</guid>
-        <description>&lt;p&gt;This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2014/01/logo-Exchange-Color.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Exchange Online</category>
-            
-          
-            
-              <category>Exchange Server</category>
-            
-          
-            
-              <category>Powershell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows Server</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Force active directory sync to Office 365 with Azure ADSync</title>
-        <link>https://christitus.com/force-active-directory-sync/</link>
-        <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Fri, 07 Oct 2016 14:01:26 +0000</atom:modified>
-        <guid>https://christitus.com/force-active-directory-sync/</guid>
-        <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2016/10/ActiveDirecotry2.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>ADSync</category>
-            
-          
-            
-              <category>Office365</category>
-            
-          
-            
-              <category>Powershell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows Server</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/force-active-directory-sync/</guid>
+      <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

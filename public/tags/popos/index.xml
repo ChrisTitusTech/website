@@ -1,70 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PopOS on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/popos/</link>
-    <description>Recent content in PopOS on Chris Titus Tech</description>
+    <title>PopOS on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/popos/</link>
+    <description>Recent content in PopOS on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 05 Oct 2020 13:03:31 -0500</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/popos/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Oct 2020 13:03:31 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/popos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux MacOS</title>
+      <link>https://demo.gethugothemes.com/northendlab/linux-macos/</link>
+      <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
       
-      <item>
-        <title>Linux MacOS</title>
-        <link>https://christitus.com/linux-macos/</link>
-        <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 05 Oct 2020 13:03:31 -0500</atom:modified>
-        <guid>https://christitus.com/linux-macos/</guid>
-        <description>&lt;p&gt;This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. &lt;em&gt;Version 20+ is required&lt;/em&gt;&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/linux-macos.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu</category>
-            
-          
-            
-              <category>PopOS</category>
-            
-          
-            
-              <category>LinuxMint</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>MacOS</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/linux-macos/</guid>
+      <description>&lt;p&gt;This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. &lt;em&gt;Version 20+ is required&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

@@ -1,82 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>YouTube on Chris Titus Tech</title>
-    <link>https://christitus.com/categories/youtube/</link>
-    <description>Recent content in YouTube on Chris Titus Tech</description>
+    <title>YouTube on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/categories/youtube/</link>
+    <description>Recent content in YouTube on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 08 Sep 2020 15:05:58 -0500</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/categories/youtube/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Sep 2020 15:05:58 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/categories/youtube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The 2020 Studio Build</title>
+      <link>https://demo.gethugothemes.com/northendlab/studio-build/</link>
+      <pubDate>Tue, 08 Sep 2020 15:05:58 -0500</pubDate>
       
-      <item>
-        <title>The 2020 Studio Build</title>
-        <link>https://christitus.com/studio-build/</link>
-        <pubDate>Tue, 08 Sep 2020 15:05:58 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 08 Sep 2020 15:05:58 -0500</atom:modified>
-        <guid>https://christitus.com/studio-build/</guid>
-        <description>&lt;p&gt;This goes over the entire studio build and redesign of 2020.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/studio-build.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-        
-          
-            
-              <category>YouTube</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://demo.gethugothemes.com/northendlab/studio-build/</guid>
+      <description>&lt;p&gt;This goes over the entire studio build and redesign of 2020.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>BigDaddyLinux Interview</title>
+      <link>https://demo.gethugothemes.com/northendlab/bigdaddylinux-interview/</link>
+      <pubDate>Wed, 04 Sep 2019 23:25:17 +0000</pubDate>
       
-      <item>
-        <title>BigDaddyLinux Interview</title>
-        <link>https://christitus.com/bigdaddylinux-interview/</link>
-        <pubDate>Wed, 04 Sep 2019 23:25:17 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Wed, 04 Sep 2019 23:25:17 +0000</atom:modified>
-        <guid>https://christitus.com/bigdaddylinux-interview/</guid>
-        <description>&lt;p&gt;I had a great time chatting with Rocco from BDL and loved his interview style. I didn’t realize we talked for an hour and half, but had an absolute blast and will definitely jump in on some more of his live streams. Here is the interview:&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2019/09/bigdaddy.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Interview</category>
-            
-          
-        
-        
-          
-            
-              <category>YouTube</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/bigdaddylinux-interview/</guid>
+      <description>&lt;p&gt;I had a great time chatting with Rocco from BDL and loved his interview style. I didn’t realize we talked for an hour and half, but had an absolute blast and will definitely jump in on some more of his live streams. Here is the interview:&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

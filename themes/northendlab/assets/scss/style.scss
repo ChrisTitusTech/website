@@ -1,0 +1,24 @@
+{{ with site.Params.variables }}
+// Color Variables
+$primary-color: {{.primary_color}};
+$secondary-color: {{.secondary_color}};
+$text-color: {{.text_color}};
+$text-color-dark: {{.text_color_dark}};
+$body-color: {{.body_color}};
+$border-color: {{.border_color}};
+$black: {{.black}};
+$white: {{.white}};
+$light: {{.light}};
+
+// Font Variables
+$primary-font: '{{ replaceRE ":wght@[0-9;]+" "" .primary_font }}', sans-serif;
+$secondary-font: '{{ replaceRE ":wght@[0-9;]+" "" .secondary_font }}', sans-serif;
+$icon-font: '{{.icon_font}}';
+{{ end }}
+
+@import 'mixins';
+@import 'typography';
+@import 'buttons';
+@import 'common';
+@import 'templates/navigation.scss';
+@import 'templates/main.scss';

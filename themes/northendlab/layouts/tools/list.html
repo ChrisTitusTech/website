@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-4 mb-md-0">
+        <div class="position-sticky" style="top:110px">
+          <div class="tools-filter-btn btn-group btn-group-toggle justify-content-center d-flex flex-column" data-toggle="buttons">
+            <label class="btn active mb-2 text-left">
+              <input type="radio" name="shuffle-filter" value="all" checked="checked" />All Tools
+            </label>
+            {{ $categories := slice }}
+            {{ range .Data.Pages }}
+            {{ range .Params.categories }}
+            {{ $categories = $categories | append . }}
+            {{ end }}
+            {{ end }}
+            {{ range ( $categories | uniq ) }}
+            <label class="btn mb-2 text-left">
+              <input type="radio" name="shuffle-filter" value="{{ . | urlize }}" />{{ . }}
+            </label>
+            {{ end }}
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-9">
+        <div class="row shuffle-wrapper">
+          {{ range .Data.Pages }}
+          <div class="col-lg-6 mb-4 pb-2 shuffle-item" data-groups="[{{range $index, $element:= .Params.categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]">
+            <div class="card border-0 shadow">
+              <a href="{{ .Permalink }}" aria-label="{{ .Params.description }}"><img loading="lazy" src="{{.Params.thumbnail | absURL }}" alt="thumbnail-image" class="card-img-top"></a>
+              <div class="card-body">
+                <h4 class="mb-3"><a class="text-dark" href="{{ .Permalink }}" aria-label="{{ .Params.description }}">{{ .Params.title }}</a></h4>
+                <p class="mb-2">{{ .Params.description | truncate 90 }}</p>
+                <a href="{{ .Permalink }}" class="btn btn-transparent" aria-label="{{ .Params.description }}">Read More</a>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,74 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Xorg on Chris Titus Tech</title>
-    <link>https://christitus.com/tags/xorg/</link>
-    <description>Recent content in Xorg on Chris Titus Tech</description>
+    <title>Xorg on Northendlab | Creative Blog Template</title>
+    <link>https://demo.gethugothemes.com/northendlab/tags/xorg/</link>
+    <description>Recent content in Xorg on Northendlab | Creative Blog Template</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 28 Aug 2020 05:42:25 -0500</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/xorg/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Aug 2020 05:42:25 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/xorg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Common Computer Issues</title>
+      <link>https://demo.gethugothemes.com/northendlab/common-computer-issues/</link>
+      <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
       
-      <item>
-        <title>Common Computer Issues</title>
-        <link>https://christitus.com/common-computer-issues/</link>
-        <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Fri, 28 Aug 2020 05:42:25 -0500</atom:modified>
-        <guid>https://christitus.com/common-computer-issues/</guid>
-        <description>&lt;p&gt;These are all the issues we discussed on a live stream. I took all the community questions and made this webpage for them.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/common-computer-issues.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>PowerShell</category>
-            
-          
-            
-              <category>Xorg</category>
-            
-          
-            
-              <category>Linux Kernel</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>Windows</category>
-            
-          
-            
-              <category>MacOS</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://demo.gethugothemes.com/northendlab/common-computer-issues/</guid>
+      <description>&lt;p&gt;These are all the issues we discussed on a live stream. I took all the community questions and made this webpage for them.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

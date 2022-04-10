@@ -3,7 +3,7 @@ title: "Ultimate Windows Setup Guide"
 
 date: 2020-07-27T14:26:59-05:00
 url: /ultimate-windows-setup-guide/
-image: /images/2020-thumbs/ultimate-windows-setup-guide.jpg
+image: images/2020-thumbs/ultimate-windows-setup-guide.jpg
 categories:
   - Windows
 tags:
@@ -16,7 +16,7 @@ tags:
 
 ![OneCommand](/images/onecommand.png)
 
-```powershell
+```
 powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')"
 ```
 
@@ -117,27 +117,18 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 This script will be great for most users out there without losing much if any functionality. I typically run this on every system I setup, but I encourage you to fork this project and make the customizations that you need. Anything is possible, and everything can be automated. Save yourself hours of time and learn how to use not only this script, but using PowerShell.
 
-## Chris Titus Tech
+## CTT Extra Content
 
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
+- [ChrisTitus.com Downloads Section][1] (_CC Only_)
+  1. Digital Downloads with Guides and Pre-Built Images
+  2. Monthly Members Only Video
+  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
 - [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
+  1. Monthly Members Only Video
+  2. YouTube Emojis for Comments and Live Chat
+  3. YouTube Badges that changes based on membership time for comments and chat.
+  4. All YouTube comments are highlighted when I review comments daily. 
+  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
 
  [1]: https://portal.christitus.com
  [2]: https://christitus.com/join
