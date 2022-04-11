@@ -31,12 +31,12 @@ Then we change the stock repositories in the linux environment so that we can ea
 
 **Install Text Editor**
 ```
-sudo apt update && sudo apt install gedit
+sudo apt update && sudo apt install nano
 ```
 
 **Edit the download repos so we can install more**
 ```
-sudo gedit /etc/apt/sources.list
+sudo nano /etc/apt/sources.list
 ```
 
 **Edit the file to look like this:**
@@ -105,3 +105,8 @@ The remaining programs can be installed using any Linux guide that is based arou
 ## Conclusion
 
 ChromeOS has some amazing use cases, but is definitely not for everyone. I have a couple old low powered computers that I can repurpose with ChromeOS to bring them new life, but I will not be daily driving it on my main machine. 
+
+### Walkthrough Video
+
+[![30daychromeosvid](https://img.youtube.com/vi/fVRZlqmGrUk/0.jpg)](https://www.youtube.com/watch?v=fVRZlqmGrUk)  
+_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
