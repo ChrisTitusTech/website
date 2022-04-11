@@ -9,7 +9,7 @@
       </div>
       {{ with site.Params.banner.image }}
       <div class="col-lg-4 col-md-4 col-sm-6 order-0 order-lg-1 mb-5 mb-lg-0">
-        <img loading="lazy" src="{{ . | absURL }}" alt="{{ site.Title }}">
+        <img loading="lazy" class="w-100" src="{{ . | absURL }}" alt="{{ site.Title }}">
       </div>
       {{ end }}
     </div>

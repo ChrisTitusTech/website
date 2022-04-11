@@ -140,7 +140,7 @@ link = "https://www.linkedin.com/in/ctitus/"
 [Languages.en.banner]
 bg_image = "images/bannerbackground.png"
 title = "<strong>Chris Titus Tech</strong><br>How To Articles, <br>Image Downloads,<br> Tech Guides."
-image = "images/operating systems.png"
+image = "images/operating systems.jpg"
 
 ######################## About Me Widget ###############################
 [Languages.en.about_me]
