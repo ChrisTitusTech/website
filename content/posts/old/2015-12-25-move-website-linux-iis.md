@@ -27,20 +27,6 @@ With that down setting up IIS is also extremely simple now, which is quite surpr
 
 Using the Web Platform Install you can just select whatever install you want (WordPress for me) and click install. It grabs all the dependencies and installs them for you, and from here I had a fresh WordPress install. I did a simple import and changed a couple of settings that were reset and was back up and running. Overall a simple migration, and pretty happy with IIS 10 (What happened to IIS 9 we will never know&#8230;)
 
-## CTT Extra Content
-
-- [ChrisTitus.com Downloads Section][1] (_CC Only_)
-  1. Digital Downloads with Guides and Pre-Built Images
-  2. Monthly Members Only Video
-  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  1. Monthly Members Only Video
-  2. YouTube Emojis for Comments and Live Chat
-  3. YouTube Badges that changes based on membership time for comments and chat.
-  4. All YouTube comments are highlighted when I review comments daily. 
-  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join [5]: https://dev.mysql.com/downloads/mysql/
+ [5]: https://dev.mysql.com/downloads/mysql/
  [6]: https://go.microsoft.com/fwlink/?LinkID=286266
 

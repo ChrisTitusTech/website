@@ -30,18 +30,3 @@ In this article, I go over how to get rid of Orphaned Shadow Copies that do not
 
 In conclusion, this issue has become less of an issue with the newer versions of Windows Server, but can still rear its ugly head from time to time. It&#8217;s important that you keep these pruned and functional, due to the fact a large number of shadow copies will bloat your server. This also can cause massive performance issues that will lock up a server. It is very important that you keep these manageable and functional for each server instance. In the day and age where virtualization has become so prevalent, you shouldn&#8217;t need many shadow copies.
 
-## CTT Extra Content
-
-- [ChrisTitus.com Downloads Section][1] (_CC Only_)
-  1. Digital Downloads with Guides and Pre-Built Images
-  2. Monthly Members Only Video
-  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  1. Monthly Members Only Video
-  2. YouTube Emojis for Comments and Live Chat
-  3. YouTube Badges that changes based on membership time for comments and chat.
-  4. All YouTube comments are highlighted when I review comments daily. 
-  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

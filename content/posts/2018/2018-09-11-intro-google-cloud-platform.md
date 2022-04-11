@@ -27,18 +27,3 @@ Allows gcloud commands from command prompt
 
 Now that we know how to use Google Cloud Platform, go out and build up your first system. I highly recommend starting with an Ubuntu server, since they have the best community support for starters, and install a web server to host a website. I found this incredibly easy, especially compared to AWS or Azure. If you want to see any follow-up topics on Google Cloud Platform, let me know below, and I will work on creating more content explaining it. If you are in business, I highly recommend you look at Google Cloud Platform for a backup server and use a VPN to connect your on-site servers. This works seamlessly and is very affordable for a cloud solution.
 
-## CTT Extra Content
-
-- [ChrisTitus.com Downloads Section][1] (_CC Only_)
-  1. Digital Downloads with Guides and Pre-Built Images
-  2. Monthly Members Only Video
-  3. $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  1. Monthly Members Only Video
-  2. YouTube Emojis for Comments and Live Chat
-  3. YouTube Badges that changes based on membership time for comments and chat.
-  4. All YouTube comments are highlighted when I review comments daily. 
-  5. $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join
