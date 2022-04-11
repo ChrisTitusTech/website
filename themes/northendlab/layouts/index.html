@@ -9,7 +9,7 @@
       </div>
       {{ with site.Params.banner.image }}
       <div class="col-lg-4 col-md-4 col-sm-6 order-0 order-lg-1 mb-5 mb-lg-0">
-        <img loading="lazy" class="w-100" src="{{ . | absURL }}" alt="{{ site.Title }}">
+        <img class="w-100" src="{{ . | absURL }}" alt="{{ site.Title }}">
       </div>
       {{ end }}
     </div>
@@ -27,7 +27,7 @@
           <article class="card-overlapped col mb-5">
             <div class="badge">Featured</div>
             {{ if .Params.image }}
-            <img loading="lazy" class="w-100" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+            <img class="w-100" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
             {{ end }}
             <div class="card-block">
               <h2 class="h4 mb-4"><a class="post-title" href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
