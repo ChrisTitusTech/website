@@ -67,7 +67,7 @@ Razer has a bunch of cool features, but also has a great open source project cal
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 - Raspberry Pi 4 8GB Kit - $105 - <https://amzn.to/2K7CuBR>
-- Raspberry Pi 4 Image - $5 - <https://portal.christitus.com/tituspi> OR Build it yourself <https://github.com/ChrisTitusTech/TitusPi>
+- Raspberry Pi 4 Image - $5 - <https://www.cttstore.com/tituspi> OR Build it yourself <https://github.com/ChrisTitusTech/TitusPi>
 
 ## Audio/Video Production Stuff
 

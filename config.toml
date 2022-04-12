@@ -181,28 +181,28 @@ name = "Home"
 
 [[Languages.en.menu.main]]
 weight = 2
-url = "https://portal.christitus.com/downloads"
+url = "https://www.cttstore.com/downloads"
 name = "Downloads"
 
 [[Languages.en.menu.main]]
 weight = 3
-url = "https://portal.christitus.com/login"
+url = "https://www.cttstore.com/login"
 name = "Members"
 hasChildren = true
 
 [[Languages.en.menu.main]]
     name = "Latest Videos"
-    url = "https://portal.christitus.com/community/topics/27931"
+    url = "https://www.cttstore.com/community/topics/27931"
     parent = "Members"
 
 [[Languages.en.menu.main]]
     name = "Members Videos"
-    url = "https://portal.christitus.com/community/topics/9021"
+    url = "https://www.cttstore.com/community/topics/9021"
     parent = "Members"
 
 [[Languages.en.menu.main]]
     name = "Sign Up"
-    url = "https://portal.christitus.com/chris-titus-tech-membership"
+    url = "https://www.cttstore.com/chris-titus-tech-membership"
     parent = "Members"
 
 [[Languages.en.menu.main]]
