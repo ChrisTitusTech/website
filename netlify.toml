@@ -17,7 +17,13 @@ package = "@netlify/plugin-sitemap"
 
 [[redirects]]
   from = "https://store.christitus.com/*"
-  to = "https://portal.christitus.com/Downloads"
+  to = "https://portal.christitus.com/downloads"
+  status = 301
+  force = true
+
+  [[redirects]]
+  from = "https://www.christitus.com/downloads"
+  to = "https://portal.christitus.com/downloads"
   status = 301
   force = true
 
