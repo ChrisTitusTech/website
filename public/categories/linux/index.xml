@@ -5,9 +5,18 @@
     <link>https://christitus.com/categories/linux/</link>
     <description>Recent content in Linux on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 11 Jan 2022 09:52:18 -0600</lastBuildDate><atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jan 2022 16:28:59 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Setup Qemu in Archlinux</title>
+      <title>Setup Qemu in Debian Linux</title>
+      <link>https://christitus.com/vm-setup-in-linux/</link>
+      <pubDate>Wed, 12 Jan 2022 16:28:59 -0500</pubDate>
+      
+      <guid>https://christitus.com/vm-setup-in-linux/</guid>
+      <description>&lt;p&gt;This is guide on setting up QEMU in Debian Linux.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setup Qemu in Arch Linux</title>
       <link>https://christitus.com/setup-qemu-in-archlinux/</link>
       <pubDate>Tue, 11 Jan 2022 09:52:18 -0600</pubDate>
       

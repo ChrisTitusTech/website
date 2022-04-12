@@ -1,5 +1,5 @@
 ---
-title: "Setup Qemu in Archlinux"
+title: "Setup Qemu in Arch Linux"
 
 date: 2022-01-11T09:52:18-06:00
 url: /setup-qemu-in-archlinux/
@@ -7,7 +7,7 @@ image: images/2022-thumbs/qemu.jpg
 categories:
   - Linux  
 tags:
-  - Arch Linux
+  - Arch
 ---
 <!--more-->
 

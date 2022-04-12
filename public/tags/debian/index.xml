@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/debian/</link>
+    <description>Recent content in Debian on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 12 Jan 2022 16:28:59 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Qemu in Debian Linux</title>
+      <link>https://christitus.com/vm-setup-in-linux/</link>
+      <pubDate>Wed, 12 Jan 2022 16:28:59 -0500</pubDate>
+      
+      <guid>https://christitus.com/vm-setup-in-linux/</guid>
+      <description>&lt;p&gt;This is guide on setting up QEMU in Debian Linux.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

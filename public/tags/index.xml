@@ -25,11 +25,20 @@
     </item>
     
     <item>
-      <title>Arch Linux</title>
-      <link>https://christitus.com/tags/arch-linux/</link>
+      <title>Debian</title>
+      <link>https://christitus.com/tags/debian/</link>
+      <pubDate>Wed, 12 Jan 2022 16:28:59 -0500</pubDate>
+      
+      <guid>https://christitus.com/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arch</title>
+      <link>https://christitus.com/tags/arch/</link>
       <pubDate>Tue, 11 Jan 2022 09:52:18 -0600</pubDate>
       
-      <guid>https://christitus.com/tags/arch-linux/</guid>
+      <guid>https://christitus.com/tags/arch/</guid>
       <description></description>
     </item>
     
