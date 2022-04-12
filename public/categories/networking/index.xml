@@ -1,108 +1,107 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Networking on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/categories/networking/</link>
-    <description>Recent content in Networking on Northendlab | Creative Blog Template</description>
+    <title>Networking on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/categories/networking/</link>
+    <description>Recent content in Networking on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jan 2022 17:39:34 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/categories/networking/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jan 2022 17:39:34 -0600</lastBuildDate><atom:link href="https://christitus.com/categories/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Robocopy - Copying files the right way in Windows</title>
-      <link>https://demo.gethugothemes.com/northendlab/robocopy/</link>
+      <link>https://christitus.com/robocopy/</link>
       <pubDate>Wed, 19 Jan 2022 17:39:34 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/robocopy/</guid>
+      <guid>https://christitus.com/robocopy/</guid>
       <description>&lt;p&gt;This guide shows how to copy files in windows when dealing with large volumes of files and very long file paths past 255 characters.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo Static Site Guide</title>
-      <link>https://demo.gethugothemes.com/northendlab/hugo-guide/</link>
+      <link>https://christitus.com/hugo-guide/</link>
       <pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/hugo-guide/</guid>
+      <guid>https://christitus.com/hugo-guide/</guid>
       <description>&lt;p&gt;This article goes over the basics of hugo and guides you through the process of using a static site generator.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How To Setup a VPN Kill Switch Server</title>
-      <link>https://demo.gethugothemes.com/northendlab/vpn-kill-switch/</link>
+      <link>https://christitus.com/vpn-kill-switch/</link>
       <pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/vpn-kill-switch/</guid>
+      <guid>https://christitus.com/vpn-kill-switch/</guid>
       <description>&lt;p&gt;This will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if you are more familiar with that.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to Secure A Web Server</title>
-      <link>https://demo.gethugothemes.com/northendlab/secure-web-server/</link>
+      <link>https://christitus.com/secure-web-server/</link>
       <pubDate>Thu, 10 Oct 2019 13:37:49 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/secure-web-server/</guid>
+      <guid>https://christitus.com/secure-web-server/</guid>
       <description>&lt;p&gt;In this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just because you secure your server doesn’t mean you can neglect it. I highly recommend monitoring it and adjusting security as needed. Monitoring is required for proper security in my opinion.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to Setup a VPN Server and Clients Using OpenVPN</title>
-      <link>https://demo.gethugothemes.com/northendlab/openvpn-server/</link>
+      <link>https://christitus.com/openvpn-server/</link>
       <pubDate>Sat, 21 Sep 2019 04:45:08 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/openvpn-server/</guid>
+      <guid>https://christitus.com/openvpn-server/</guid>
       <description>&lt;p&gt;In this article, I go over how to setup a VPN Server and clients using OpenVPN. this will cover the setup process of the remote machine and then connecting to it via both Linux and Windows client machines.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Ultimate SSH Guide</title>
-      <link>https://demo.gethugothemes.com/northendlab/ssh-guide/</link>
+      <link>https://christitus.com/ssh-guide/</link>
       <pubDate>Wed, 18 Sep 2019 21:55:20 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/ssh-guide/</guid>
+      <guid>https://christitus.com/ssh-guide/</guid>
       <description>&lt;p&gt;This is an SSH guide to help you set up, configure, connect, and transfer files using SSH.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Disable Windows Firewall Properly</title>
-      <link>https://demo.gethugothemes.com/northendlab/disable-windows-firewall-properly/</link>
+      <link>https://christitus.com/disable-windows-firewall-properly/</link>
       <pubDate>Sat, 06 Oct 2018 17:20:22 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/disable-windows-firewall-properly/</guid>
+      <guid>https://christitus.com/disable-windows-firewall-properly/</guid>
       <description>&lt;p&gt;This walkthrough goes over how to Disable Windows Firewall while not affecting other programs that rely on this service. It’s important that you **DO NOT **disable the service, due to the fact it can cause issues with Microsoft Office and other products.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Moving Unifi Access Point to another Unifi Controller</title>
-      <link>https://demo.gethugothemes.com/northendlab/moving-unifi-access-point/</link>
+      <link>https://christitus.com/moving-unifi-access-point/</link>
       <pubDate>Thu, 21 Jun 2018 15:57:35 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/moving-unifi-access-point/</guid>
+      <guid>https://christitus.com/moving-unifi-access-point/</guid>
       <description>&lt;p&gt;This walkthrough goes over moving Unifi access point to another Unifi controller. To remove APs from a Unifi Controller you need to reset the APs and then either discover them or manually SSH set-inform the devices.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to choose DNS Server by benchmarking them</title>
-      <link>https://demo.gethugothemes.com/northendlab/benchmark-dns-server/</link>
+      <link>https://christitus.com/benchmark-dns-server/</link>
       <pubDate>Thu, 09 Mar 2017 17:35:18 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/benchmark-dns-server/</guid>
+      <guid>https://christitus.com/benchmark-dns-server/</guid>
       <description>&lt;p&gt;By default, your DNS Server is set to your ISP’s DNS and this SLOWS down your internet, due to the fact, they are poorly managed and have horrid performance. This shows you how to choose the fastest DNS Server, but results will vary depending on the location. Running this benchmark will tell you which ones are the best to use.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Updating LDAP Credentials for Netscaler VPX 1000</title>
-      <link>https://demo.gethugothemes.com/northendlab/update-netscaler-vpx/</link>
+      <link>https://christitus.com/update-netscaler-vpx/</link>
       <pubDate>Sat, 12 Nov 2016 15:13:18 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/update-netscaler-vpx/</guid>
+      <guid>https://christitus.com/update-netscaler-vpx/</guid>
       <description>&lt;p&gt;This article shows you how to update LDAP credentials on the Netscaler VPX 1000. It goes over logging in, editing virtual server, and applying settings.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Encore Bandit II/III Connection Instructions</title>
-      <link>https://demo.gethugothemes.com/northendlab/encore-bandit-connection/</link>
+      <link>https://christitus.com/encore-bandit-connection/</link>
       <pubDate>Thu, 17 Mar 2016 14:52:31 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/encore-bandit-connection/</guid>
+      <guid>https://christitus.com/encore-bandit-connection/</guid>
       <description>&lt;p&gt;These steps will show you how to connect to the encore bandit devices. I recently configured both a bandit II and a bandit III device for using a VPN over satellite. The devices are configured through a 9-pin serial port they call the “Supervisory Port”. I use a basic serial to USB adapter and putty to connect. All the white papers for this device are good, but the setup and login are not as clear as you would think, that said, below are the following steps I used to connect.&lt;/p&gt;</description>
     </item>
     

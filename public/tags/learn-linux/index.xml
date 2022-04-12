@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Learn Linux on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/learn-linux/</link>
-    <description>Recent content in Learn Linux on Northendlab | Creative Blog Template</description>
+    <title>Learn Linux on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/learn-linux/</link>
+    <description>Recent content in Learn Linux on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 10 Oct 2019 01:42:05 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/learn-linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Oct 2019 01:42:05 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/learn-linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Learn Linux</title>
-      <link>https://demo.gethugothemes.com/northendlab/learn-linux/</link>
+      <link>https://christitus.com/learn-linux/</link>
       <pubDate>Thu, 10 Oct 2019 01:42:05 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/learn-linux/</guid>
+      <guid>https://christitus.com/learn-linux/</guid>
       <description>&lt;p&gt;This article gives you the resources on how to learn Linux. If I am missing a resource, be sure and comment so I can add it.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Why should I switch to Linux from Windows?</title>
-      <link>https://demo.gethugothemes.com/northendlab/linux-switch-video/</link>
+      <link>https://christitus.com/linux-switch-video/</link>
       <pubDate>Tue, 16 Oct 2018 17:59:04 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/linux-switch-video/</guid>
+      <guid>https://christitus.com/linux-switch-video/</guid>
       <description>&lt;p&gt;This will be the first article in a series of Linux articles, I am going over 6 reasons to switch to Linux and 1 big reason not to. Many people ask “Why should I switch to Linux from Windows?” and in this article below I break it down for you.&lt;/p&gt;</description>
     </item>
     

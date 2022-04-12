@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wallpaper on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/wallpaper/</link>
-    <description>Recent content in wallpaper on Northendlab | Creative Blog Template</description>
+    <title>wallpaper on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/wallpaper/</link>
+    <description>Recent content in wallpaper on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jul 2020 14:52:13 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/wallpaper/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jul 2020 14:52:13 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/wallpaper/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Change your Desktop Wallpaper</title>
-      <link>https://demo.gethugothemes.com/northendlab/change-wallpaper/</link>
+      <link>https://christitus.com/change-wallpaper/</link>
       <pubDate>Wed, 08 Jul 2020 14:52:13 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/change-wallpaper/</guid>
+      <guid>https://christitus.com/change-wallpaper/</guid>
       <description>&lt;p&gt;This article shows you how to automatically change your wallpaper on Windows, macOS, and Linux.&lt;/p&gt;</description>
     </item>
     

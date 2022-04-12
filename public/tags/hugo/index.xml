@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/hugo/</link>
-    <description>Recent content in Hugo on Northendlab | Creative Blog Template</description>
+    <title>Hugo on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/hugo/</link>
+    <description>Recent content in Hugo on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 15:59:19 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jan 2020 15:59:19 -0600</lastBuildDate><atom:link href="https://christitus.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo Static Site Guide</title>
-      <link>https://demo.gethugothemes.com/northendlab/hugo-guide/</link>
+      <link>https://christitus.com/hugo-guide/</link>
       <pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/hugo-guide/</guid>
+      <guid>https://christitus.com/hugo-guide/</guid>
       <description>&lt;p&gt;This article goes over the basics of hugo and guides you through the process of using a static site generator.&lt;/p&gt;</description>
     </item>
     

@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LVM on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/lvm/</link>
-    <description>Recent content in LVM on Northendlab | Creative Blog Template</description>
+    <title>LVM on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/lvm/</link>
+    <description>Recent content in LVM on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 08 Nov 2019 23:06:31 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/lvm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Nov 2019 23:06:31 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/lvm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LVM (Logical Volume Management) – Combine Physical Drives and more!</title>
-      <link>https://demo.gethugothemes.com/northendlab/lvm-guide/</link>
+      <link>https://christitus.com/lvm-guide/</link>
       <pubDate>Fri, 08 Nov 2019 23:06:31 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/lvm-guide/</guid>
+      <guid>https://christitus.com/lvm-guide/</guid>
       <description>&lt;p&gt;LVM is a very cool volume management tool. It can be used for a variety of tasks and this guide explains all the things LVM can do. I also do an example video of combining physical hard drives using LVM.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Resize LVM Partition | Fedora 29 | Step by Step Guide</title>
-      <link>https://demo.gethugothemes.com/northendlab/resize-lvm-partition-fedora-29-step-by-step-guide/</link>
+      <link>https://christitus.com/resize-lvm-partition-fedora-29-step-by-step-guide/</link>
       <pubDate>Sat, 17 Nov 2018 19:54:29 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/resize-lvm-partition-fedora-29-step-by-step-guide/</guid>
+      <guid>https://christitus.com/resize-lvm-partition-fedora-29-step-by-step-guide/</guid>
       <description>&lt;p&gt;In this guide, I show you how to Resize LVM Partition in Fedora 29. I recently ran out of space and had to clone my install from a 120SSD ssd to a 240 GB SSD.&lt;/p&gt;</description>
     </item>
     

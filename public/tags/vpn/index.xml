@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>VPN on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/vpn/</link>
-    <description>Recent content in VPN on Northendlab | Creative Blog Template</description>
+    <title>VPN on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/vpn/</link>
+    <description>Recent content in VPN on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 10 Sep 2018 14:59:11 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Sep 2018 14:59:11 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup an always on VPN in Ubuntu</title>
-      <link>https://demo.gethugothemes.com/northendlab/setup-always-on-vpn/</link>
+      <link>https://christitus.com/setup-always-on-vpn/</link>
       <pubDate>Mon, 10 Sep 2018 14:59:11 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/setup-always-on-vpn/</guid>
+      <guid>https://christitus.com/setup-always-on-vpn/</guid>
       <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;</description>
     </item>
     

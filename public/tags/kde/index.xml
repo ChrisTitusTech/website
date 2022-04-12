@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>KDE on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/kde/</link>
-    <description>Recent content in KDE on Northendlab | Creative Blog Template</description>
+    <title>KDE on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/kde/</link>
+    <description>Recent content in KDE on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 20 Jul 2021 14:46:40 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/kde/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jul 2021 14:46:40 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/kde/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bspwm on KDE</title>
-      <link>https://demo.gethugothemes.com/northendlab/bspwm-on-KDE/</link>
+      <link>https://christitus.com/bspwm-on-KDE/</link>
       <pubDate>Tue, 20 Jul 2021 14:46:40 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/bspwm-on-KDE/</guid>
+      <guid>https://christitus.com/bspwm-on-KDE/</guid>
       <description>&lt;p&gt;This goes over switching the window manager of KDE to bspwm.&lt;/p&gt;</description>
     </item>
     

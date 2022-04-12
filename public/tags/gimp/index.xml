@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GIMP on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/gimp/</link>
-    <description>Recent content in GIMP on Northendlab | Creative Blog Template</description>
+    <title>GIMP on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/gimp/</link>
+    <description>Recent content in GIMP on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 16 Sep 2019 00:55:12 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/gimp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Sep 2019 00:55:12 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/gimp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Update to the Latest Version of GIMP</title>
-      <link>https://demo.gethugothemes.com/northendlab/latest-version-of-gimp/</link>
+      <link>https://christitus.com/latest-version-of-gimp/</link>
       <pubDate>Mon, 16 Sep 2019 00:55:12 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/latest-version-of-gimp/</guid>
+      <guid>https://christitus.com/latest-version-of-gimp/</guid>
       <description>&lt;p&gt;Here are instructions on how to Update to the latest version of GIMP. This is vital to make sure you get the newest and best features for GIMP. The old versions of gimp that come bundled with Ubuntu 18 and prior aren’t nearly as good as Gimp 2.10+.&lt;/p&gt;</description>
     </item>
     

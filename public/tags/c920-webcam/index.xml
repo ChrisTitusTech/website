@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C920 WebCam on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/c920-webcam/</link>
-    <description>Recent content in C920 WebCam on Northendlab | Creative Blog Template</description>
+    <title>C920 WebCam on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/c920-webcam/</link>
+    <description>Recent content in C920 WebCam on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 09 Nov 2018 20:36:56 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/c920-webcam/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Nov 2018 20:36:56 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/c920-webcam/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Logitech C920 Linux Driver | Fix Lag and Disable Auto-Focus</title>
-      <link>https://demo.gethugothemes.com/northendlab/logitech-c920-linux-driver/</link>
+      <link>https://christitus.com/logitech-c920-linux-driver/</link>
       <pubDate>Fri, 09 Nov 2018 20:36:56 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/logitech-c920-linux-driver/</guid>
+      <guid>https://christitus.com/logitech-c920-linux-driver/</guid>
       <description>&lt;p&gt;With my webcam, I was having major issues and tried looking for a Logitech C920 Linux Driver, as I have a Logitech C920 Webcam that is very laggy in Linux, but in Windows, I don’t have any issues. I found out that the autofocus and exposure were causing a ton of issues. After following this guide, you will be able to fix this issue.&lt;/p&gt;</description>
     </item>
     

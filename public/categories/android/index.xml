@@ -1,54 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Android on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/categories/android/</link>
-    <description>Recent content in Android on Northendlab | Creative Blog Template</description>
+    <title>Android on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/categories/android/</link>
+    <description>Recent content in Android on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2020 09:49:33 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Aug 2020 09:49:33 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fix Ticwatch Lag</title>
-      <link>https://demo.gethugothemes.com/northendlab/fix-ticwatch-lag/</link>
+      <link>https://christitus.com/fix-ticwatch-lag/</link>
       <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/fix-ticwatch-lag/</guid>
+      <guid>https://christitus.com/fix-ticwatch-lag/</guid>
       <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to Speed Up Your Amazon Fire Tablet</title>
-      <link>https://demo.gethugothemes.com/northendlab/amazon-fire-debloat/</link>
+      <link>https://christitus.com/amazon-fire-debloat/</link>
       <pubDate>Tue, 21 Jul 2020 12:37:54 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/amazon-fire-debloat/</guid>
+      <guid>https://christitus.com/amazon-fire-debloat/</guid>
       <description>&lt;p&gt;This Guide goes over over debloating amazon fire tablets and getting Google Store and regular tablet functionality out of them.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Debloat Android</title>
-      <link>https://demo.gethugothemes.com/northendlab/debloat-android/</link>
+      <link>https://christitus.com/debloat-android/</link>
       <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/debloat-android/</guid>
+      <guid>https://christitus.com/debloat-android/</guid>
       <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Degoogle Apps</title>
-      <link>https://demo.gethugothemes.com/northendlab/degoogle-apps/</link>
+      <link>https://christitus.com/degoogle-apps/</link>
       <pubDate>Tue, 02 Jun 2020 21:28:09 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/degoogle-apps/</guid>
+      <guid>https://christitus.com/degoogle-apps/</guid>
       <description>&lt;p&gt;This article goes over the apps that work and don&amp;rsquo;t work with a Degoogled phone without google play services installed&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Get rid of Amazon Fire Launcher without root access</title>
-      <link>https://demo.gethugothemes.com/northendlab/amazon-fire-launcher/</link>
+      <link>https://christitus.com/amazon-fire-launcher/</link>
       <pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/amazon-fire-launcher/</guid>
+      <guid>https://christitus.com/amazon-fire-launcher/</guid>
       <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;</description>
     </item>
     

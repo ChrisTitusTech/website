@@ -1,63 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>XCP-ng on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/xcp-ng/</link>
-    <description>Recent content in XCP-ng on Northendlab | Creative Blog Template</description>
+    <title>XCP-ng on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/xcp-ng/</link>
+    <description>Recent content in XCP-ng on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 11 Oct 2018 17:14:47 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/xcp-ng/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Oct 2018 17:14:47 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/xcp-ng/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Install Xen Orchestra</title>
-      <link>https://demo.gethugothemes.com/northendlab/how-to-install-xen-orchestra/</link>
+      <link>https://christitus.com/how-to-install-xen-orchestra/</link>
       <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/how-to-install-xen-orchestra/</guid>
+      <guid>https://christitus.com/how-to-install-xen-orchestra/</guid>
       <description>&lt;p&gt;This article shows you how to install Xen Orchestra and use the interface via the web. XOA is a very powerful addition to XenServer as it brings auto-updates and making it easier to manage entire farms.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Create iSCSI SR in XenServer</title>
-      <link>https://demo.gethugothemes.com/northendlab/create-iscsi-sr/</link>
+      <link>https://christitus.com/create-iscsi-sr/</link>
       <pubDate>Tue, 09 Oct 2018 16:18:46 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/create-iscsi-sr/</guid>
+      <guid>https://christitus.com/create-iscsi-sr/</guid>
       <description>&lt;p&gt;This guide goes over how to Create iSCSI SR on Xen to connect to an iSCSI target. Here is the step-by-step and a video walkthrough, which includes setting up iSCSI in FreeNAS.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>XCP-ng / XenServer – Your First Virtual Machine Installation</title>
-      <link>https://demo.gethugothemes.com/northendlab/xenserver-xcp-ng-first-vm-install/</link>
+      <link>https://christitus.com/xenserver-xcp-ng-first-vm-install/</link>
       <pubDate>Sun, 09 Sep 2018 18:54:21 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/xenserver-xcp-ng-first-vm-install/</guid>
+      <guid>https://christitus.com/xenserver-xcp-ng-first-vm-install/</guid>
       <description>&lt;p&gt;This video goes through setting up a Virtual Machine in XenServer / XCP-ng in a lab environment. If you want to experiment with in detail with XenServer, I highly recommend you download XCP-ng from their &lt;a href=&#34;https://xcp-ng.org&#34;&gt;official website&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Reattach LVM after a reinstalling XenServer</title>
-      <link>https://demo.gethugothemes.com/northendlab/reattach-lvm-xenserver/</link>
+      <link>https://christitus.com/reattach-lvm-xenserver/</link>
       <pubDate>Wed, 03 Aug 2016 16:18:32 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/reattach-lvm-xenserver/</guid>
+      <guid>https://christitus.com/reattach-lvm-xenserver/</guid>
       <description>&lt;p&gt;This article describes how to reattach LVM or a local Storage repository on XenServer. The XenServer database has become corrupt or your XenServer does not see the local SR.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>XenServer tapdisk experienced an error</title>
-      <link>https://demo.gethugothemes.com/northendlab/xenserver-tapdisk-error/</link>
+      <link>https://christitus.com/xenserver-tapdisk-error/</link>
       <pubDate>Wed, 03 Aug 2016 16:12:57 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/xenserver-tapdisk-error/</guid>
+      <guid>https://christitus.com/xenserver-tapdisk-error/</guid>
       <description>&lt;p&gt;When re-attaching a SR on a fresh VM, I ran into this XenServer tapdisk error. I ran the following from XenServer console to eject all CD drives on that host. I was then able to start the VM with the old image.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Citrix XenCenter error “Could not create SSL/TLS Secure Channel”</title>
-      <link>https://demo.gethugothemes.com/northendlab/citrix-xencenter-error-ssl-secure-channel/</link>
+      <link>https://christitus.com/citrix-xencenter-error-ssl-secure-channel/</link>
       <pubDate>Wed, 13 Jul 2016 14:24:04 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/citrix-xencenter-error-ssl-secure-channel/</guid>
+      <guid>https://christitus.com/citrix-xencenter-error-ssl-secure-channel/</guid>
       <description>&lt;p&gt;Running the following commands will fix the XenCenter Error. You are typically encountering this error because Windows 10 requires stronger encryption, consequently, this is prevalent on older XenServer installations. I encountered this on XenServer 6.0.&lt;/p&gt;</description>
     </item>
     

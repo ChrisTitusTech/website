@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Windows Search on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/windows-search/</link>
-    <description>Recent content in Windows Search on Northendlab | Creative Blog Template</description>
+    <title>Windows Search on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/windows-search/</link>
+    <description>Recent content in Windows Search on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 17 Oct 2018 15:22:41 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/windows-search/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Oct 2018 15:22:41 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/windows-search/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How To Change Cortana Search</title>
-      <link>https://demo.gethugothemes.com/northendlab/change-cortana-search/</link>
+      <link>https://christitus.com/change-cortana-search/</link>
       <pubDate>Wed, 17 Oct 2018 15:22:41 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/change-cortana-search/</guid>
+      <guid>https://christitus.com/change-cortana-search/</guid>
       <description>&lt;p&gt;This article goes over how to change Cortana search engine to display results in chrome instead of Microsoft Edge. Afterward, the second part requires you to install a chrome extension to search in Google instead of Bing.&lt;/p&gt;</description>
     </item>
     

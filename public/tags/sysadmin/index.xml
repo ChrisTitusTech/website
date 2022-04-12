@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sysadmin on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/sysadmin/</link>
-    <description>Recent content in sysadmin on Northendlab | Creative Blog Template</description>
+    <title>sysadmin on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/sysadmin/</link>
+    <description>Recent content in sysadmin on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 14 Dec 2020 17:25:22 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Dec 2020 17:25:22 -0600</lastBuildDate><atom:link href="https://christitus.com/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Macos Sysadmin Tips</title>
-      <link>https://demo.gethugothemes.com/northendlab/macos-sysadmin-tips/</link>
+      <link>https://christitus.com/macos-sysadmin-tips/</link>
       <pubDate>Mon, 14 Dec 2020 17:25:22 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/macos-sysadmin-tips/</guid>
+      <guid>https://christitus.com/macos-sysadmin-tips/</guid>
       <description>&lt;p&gt;This comes from a reader that was a Sysadmin and transitioned from Linux to MacOS because of a visual impairment.&lt;/p&gt;</description>
     </item>
     

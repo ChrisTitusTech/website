@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Microsoft Store on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/microsoft-store/</link>
-    <description>Recent content in Microsoft Store on Northendlab | Creative Blog Template</description>
+    <title>Microsoft Store on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/microsoft-store/</link>
+    <description>Recent content in Microsoft Store on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2020 16:04:48 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/microsoft-store/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Jun 2020 16:04:48 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/microsoft-store/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Debloat Windows 10 in 2021</title>
-      <link>https://demo.gethugothemes.com/northendlab/debloat-windows-10-2020/</link>
+      <title>Debloat Windows in 2022</title>
+      <link>https://christitus.com/debloat-windows-10-2020/</link>
       <pubDate>Thu, 11 Jun 2020 16:04:48 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/debloat-windows-10-2020/</guid>
+      <guid>https://christitus.com/debloat-windows-10-2020/</guid>
       <description>&lt;p&gt;This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC.&lt;/p&gt;</description>
     </item>
     

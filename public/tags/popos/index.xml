@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PopOS on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/popos/</link>
-    <description>Recent content in PopOS on Northendlab | Creative Blog Template</description>
+    <title>PopOS on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/popos/</link>
+    <description>Recent content in PopOS on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 05 Oct 2020 13:03:31 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/popos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Oct 2020 13:03:31 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/popos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux MacOS</title>
-      <link>https://demo.gethugothemes.com/northendlab/linux-macos/</link>
+      <link>https://christitus.com/linux-macos/</link>
       <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/linux-macos/</guid>
+      <guid>https://christitus.com/linux-macos/</guid>
       <description>&lt;p&gt;This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. &lt;em&gt;Version 20+ is required&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     

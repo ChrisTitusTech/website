@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TicWatch on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/ticwatch/</link>
-    <description>Recent content in TicWatch on Northendlab | Creative Blog Template</description>
+    <title>TicWatch on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/ticwatch/</link>
+    <description>Recent content in TicWatch on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2020 09:49:33 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/ticwatch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Aug 2020 09:49:33 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/ticwatch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fix Ticwatch Lag</title>
-      <link>https://demo.gethugothemes.com/northendlab/fix-ticwatch-lag/</link>
+      <link>https://christitus.com/fix-ticwatch-lag/</link>
       <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/fix-ticwatch-lag/</guid>
+      <guid>https://christitus.com/fix-ticwatch-lag/</guid>
       <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;</description>
     </item>
     

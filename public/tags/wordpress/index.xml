@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>WordPress on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/wordpress/</link>
-    <description>Recent content in WordPress on Northendlab | Creative Blog Template</description>
+    <title>WordPress on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/wordpress/</link>
+    <description>Recent content in WordPress on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 15:59:19 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jan 2020 15:59:19 -0600</lastBuildDate><atom:link href="https://christitus.com/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo Static Site Guide</title>
-      <link>https://demo.gethugothemes.com/northendlab/hugo-guide/</link>
+      <link>https://christitus.com/hugo-guide/</link>
       <pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/hugo-guide/</guid>
+      <guid>https://christitus.com/hugo-guide/</guid>
       <description>&lt;p&gt;This article goes over the basics of hugo and guides you through the process of using a static site generator.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>WordPress on Google Cloud Platform</title>
-      <link>https://demo.gethugothemes.com/northendlab/wordpress-google-cloud-platform/</link>
+      <link>https://christitus.com/wordpress-google-cloud-platform/</link>
       <pubDate>Thu, 14 Mar 2019 15:23:56 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/wordpress-google-cloud-platform/</guid>
+      <guid>https://christitus.com/wordpress-google-cloud-platform/</guid>
       <description>&lt;p&gt;I am going over hosting WordPress on Google Cloud Platform in this article. This is a step by step guide on how to set up and host a WordPress website using a fresh installation.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>The Perfect htaccess for WordPress</title>
-      <link>https://demo.gethugothemes.com/northendlab/perfect-htaccess/</link>
+      <link>https://christitus.com/perfect-htaccess/</link>
       <pubDate>Sun, 23 Sep 2018 20:50:39 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/perfect-htaccess/</guid>
+      <guid>https://christitus.com/perfect-htaccess/</guid>
       <description>&lt;p&gt;This walks you through what your htaccess should look like in a WordPress Installation. I am a minimalist and believe you shouldn’t be using a ton of plugins that slow down your install when most of what you are looking to accomplish can be achieved with this file.&lt;/p&gt;</description>
     </item>
     

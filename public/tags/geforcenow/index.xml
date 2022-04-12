@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GeForceNow on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/geforcenow/</link>
-    <description>Recent content in GeForceNow on Northendlab | Creative Blog Template</description>
+    <title>GeForceNow on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/geforcenow/</link>
+    <description>Recent content in GeForceNow on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2020 14:45:41 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/geforcenow/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Aug 2020 14:45:41 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/geforcenow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Geforce Now Linux</title>
-      <link>https://demo.gethugothemes.com/northendlab/geforce-now-linux/</link>
+      <link>https://christitus.com/geforce-now-linux/</link>
       <pubDate>Fri, 21 Aug 2020 14:45:41 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/geforce-now-linux/</guid>
+      <guid>https://christitus.com/geforce-now-linux/</guid>
       <description>&lt;p&gt;You can now use Geforce Now on your Linux machine with this quick little trick.&lt;/p&gt;</description>
     </item>
     

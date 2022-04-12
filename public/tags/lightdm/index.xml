@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LightDM on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/lightdm/</link>
-    <description>Recent content in LightDM on Northendlab | Creative Blog Template</description>
+    <title>LightDM on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/lightdm/</link>
+    <description>Recent content in LightDM on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 08:09:34 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/lightdm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jan 2020 08:09:34 -0600</lastBuildDate><atom:link href="https://christitus.com/tags/lightdm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LightDM Configuration</title>
-      <link>https://demo.gethugothemes.com/northendlab/lightdm-configuration/</link>
+      <link>https://christitus.com/lightdm-configuration/</link>
       <pubDate>Wed, 08 Jan 2020 08:09:34 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/lightdm-configuration/</guid>
+      <guid>https://christitus.com/lightdm-configuration/</guid>
       <description>&lt;p&gt;In this article I go over lightdm configuration. This will teach you how to modify lightdm to choose a default desktop environment, theme, autologin, and even a VNC connection.&lt;/p&gt;</description>
     </item>
     

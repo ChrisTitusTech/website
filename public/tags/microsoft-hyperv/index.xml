@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Microsoft HyperV on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/microsoft-hyperv/</link>
-    <description>Recent content in Microsoft HyperV on Northendlab | Creative Blog Template</description>
+    <title>Microsoft HyperV on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/microsoft-hyperv/</link>
+    <description>Recent content in Microsoft HyperV on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 07 Sep 2018 21:33:35 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/microsoft-hyperv/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Sep 2018 21:33:35 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/microsoft-hyperv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Virtualization Introduction</title>
-      <link>https://demo.gethugothemes.com/northendlab/virtualization-introduction/</link>
+      <link>https://christitus.com/virtualization-introduction/</link>
       <pubDate>Fri, 07 Sep 2018 21:33:35 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/virtualization-introduction/</guid>
+      <guid>https://christitus.com/virtualization-introduction/</guid>
       <description>&lt;p&gt;This is a virtualization introduction and when you should be using it. In the follow-up videos, I will go into using the hypervisor, creating VMs and maintenance.&lt;/p&gt;</description>
     </item>
     

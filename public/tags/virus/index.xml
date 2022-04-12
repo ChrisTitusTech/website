@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Virus on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/virus/</link>
-    <description>Recent content in Virus on Northendlab | Creative Blog Template</description>
+    <title>Virus on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/virus/</link>
+    <description>Recent content in Virus on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2020 13:02:25 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/virus/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Aug 2020 13:02:25 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/virus/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Secure Linux</title>
-      <link>https://demo.gethugothemes.com/northendlab/secure-linux/</link>
+      <link>https://christitus.com/secure-linux/</link>
       <pubDate>Tue, 18 Aug 2020 13:02:25 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/secure-linux/</guid>
+      <guid>https://christitus.com/secure-linux/</guid>
       <description>&lt;p&gt;This article covers basic security and settings I do with every Linux installation.&lt;/p&gt;</description>
     </item>
     

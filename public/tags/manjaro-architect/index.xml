@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Manjaro Architect on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/manjaro-architect/</link>
-    <description>Recent content in Manjaro Architect on Northendlab | Creative Blog Template</description>
+    <title>Manjaro Architect on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/manjaro-architect/</link>
+    <description>Recent content in Manjaro Architect on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 21 Jan 2019 19:51:04 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/manjaro-architect/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Jan 2019 19:51:04 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/manjaro-architect/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Manjaro Architect Installation Guide</title>
-      <link>https://demo.gethugothemes.com/northendlab/manjaro-architect-installation-guide/</link>
+      <link>https://christitus.com/manjaro-architect-installation-guide/</link>
       <pubDate>Mon, 21 Jan 2019 19:51:04 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/manjaro-architect-installation-guide/</guid>
+      <guid>https://christitus.com/manjaro-architect-installation-guide/</guid>
       <description>&lt;p&gt;In this book, I go over step by step the entire Manjaro Architect installation. This guide is suitable for any knowledge level from beginner to expert.&lt;/p&gt;</description>
     </item>
     

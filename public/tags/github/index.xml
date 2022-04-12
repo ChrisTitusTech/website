@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GitHub on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/github/</link>
-    <description>Recent content in GitHub on Northendlab | Creative Blog Template</description>
+    <title>GitHub on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/github/</link>
+    <description>Recent content in GitHub on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2020 10:57:46 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Sep 2020 10:57:46 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Use SSH with Github</title>
-      <link>https://demo.gethugothemes.com/northendlab/ssh-github/</link>
+      <link>https://christitus.com/ssh-github/</link>
       <pubDate>Thu, 03 Sep 2020 10:57:46 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/ssh-github/</guid>
+      <guid>https://christitus.com/ssh-github/</guid>
       <description>&lt;p&gt;Setting Up SSH Authentication with GitHub for Secure Access with 2FA GitHub Accounts&lt;/p&gt;</description>
     </item>
     

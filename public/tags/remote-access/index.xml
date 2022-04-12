@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Remote Access on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/remote-access/</link>
-    <description>Recent content in Remote Access on Northendlab | Creative Blog Template</description>
+    <title>Remote Access on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/remote-access/</link>
+    <description>Recent content in Remote Access on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 18 Sep 2019 21:55:20 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/remote-access/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Sep 2019 21:55:20 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/remote-access/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Ultimate SSH Guide</title>
-      <link>https://demo.gethugothemes.com/northendlab/ssh-guide/</link>
+      <link>https://christitus.com/ssh-guide/</link>
       <pubDate>Wed, 18 Sep 2019 21:55:20 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/ssh-guide/</guid>
+      <guid>https://christitus.com/ssh-guide/</guid>
       <description>&lt;p&gt;This is an SSH guide to help you set up, configure, connect, and transfer files using SSH.&lt;/p&gt;</description>
     </item>
     

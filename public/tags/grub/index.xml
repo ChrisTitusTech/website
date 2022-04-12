@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Grub on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/grub/</link>
-    <description>Recent content in Grub on Northendlab | Creative Blog Template</description>
+    <title>Grub on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/grub/</link>
+    <description>Recent content in Grub on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2019 22:21:10 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Apr 2019 22:21:10 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/grub/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Grub Rescue | Repairing your Bootloader</title>
-      <link>https://demo.gethugothemes.com/northendlab/grub-rescue/</link>
+      <link>https://christitus.com/grub-rescue/</link>
       <pubDate>Mon, 01 Apr 2019 22:21:10 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/grub-rescue/</guid>
+      <guid>https://christitus.com/grub-rescue/</guid>
       <description>&lt;p&gt;Lets go over Grub Rescue and repairing your bootloader. This is a very misunderstood topic and by learn basic syntax you will be able to repair your GRUB very easily. Here are 4 methods of doing a GRUB Rescue.&lt;/p&gt;</description>
     </item>
     

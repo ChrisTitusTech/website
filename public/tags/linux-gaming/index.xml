@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux Gaming on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/linux-gaming/</link>
-    <description>Recent content in Linux Gaming on Northendlab | Creative Blog Template</description>
+    <title>Linux Gaming on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/linux-gaming/</link>
+    <description>Recent content in Linux Gaming on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2020 14:27:23 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/linux-gaming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jul 2020 14:27:23 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/linux-gaming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Ultimate Linux Gaming Guide</title>
-      <link>https://demo.gethugothemes.com/northendlab/ultimate-linux-gaming-guide/</link>
+      <link>https://christitus.com/ultimate-linux-gaming-guide/</link>
       <pubDate>Tue, 14 Jul 2020 14:27:23 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/ultimate-linux-gaming-guide/</guid>
+      <guid>https://christitus.com/ultimate-linux-gaming-guide/</guid>
       <description>&lt;p&gt;This guide goes over setting up your Linux system for gaming. I will include multiple setup instructions for various Linux distributions.&lt;/p&gt;</description>
     </item>
     

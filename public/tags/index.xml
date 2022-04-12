@@ -1,882 +1,881 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/</link>
-    <description>Recent content in Tags on Northendlab | Creative Blog Template</description>
+    <title>Tags on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/</link>
+    <description>Recent content in Tags on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jan 2022 17:39:34 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Apr 2022 08:48:13 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crosh</title>
+      <link>https://christitus.com/tags/crosh/</link>
+      <pubDate>Mon, 11 Apr 2022 08:48:13 -0500</pubDate>
+      
+      <guid>https://christitus.com/tags/crosh/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Robocopy</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/robocopy/</link>
+      <link>https://christitus.com/tags/robocopy/</link>
       <pubDate>Wed, 19 Jan 2022 17:39:34 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/robocopy/</guid>
+      <guid>https://christitus.com/tags/robocopy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Arch Linux</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/arch-linux/</link>
+      <link>https://christitus.com/tags/arch-linux/</link>
       <pubDate>Tue, 11 Jan 2022 09:52:18 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/arch-linux/</guid>
+      <guid>https://christitus.com/tags/arch-linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft Edge</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/microsoft-edge/</link>
+      <link>https://christitus.com/tags/microsoft-edge/</link>
       <pubDate>Fri, 06 Aug 2021 11:55:48 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/microsoft-edge/</guid>
+      <guid>https://christitus.com/tags/microsoft-edge/</guid>
       <description></description>
     </item>
     
     <item>
       <title>KDE</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/kde/</link>
+      <link>https://christitus.com/tags/kde/</link>
       <pubDate>Tue, 20 Jul 2021 14:46:40 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/kde/</guid>
+      <guid>https://christitus.com/tags/kde/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows 11</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/windows-11/</link>
+      <link>https://christitus.com/tags/windows-11/</link>
       <pubDate>Tue, 29 Jun 2021 11:21:54 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/windows-11/</guid>
+      <guid>https://christitus.com/tags/windows-11/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rocky Linux</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/rocky-linux/</link>
+      <link>https://christitus.com/tags/rocky-linux/</link>
       <pubDate>Mon, 03 May 2021 12:12:16 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/rocky-linux/</guid>
+      <guid>https://christitus.com/tags/rocky-linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raspberry Pi</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/raspberry-pi/</link>
+      <link>https://christitus.com/tags/raspberry-pi/</link>
       <pubDate>Tue, 20 Apr 2021 10:02:56 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/raspberry-pi/</guid>
+      <guid>https://christitus.com/tags/raspberry-pi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/ubuntu/</link>
+      <link>https://christitus.com/tags/ubuntu/</link>
       <pubDate>Mon, 01 Mar 2021 14:53:09 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/ubuntu/</guid>
+      <guid>https://christitus.com/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ISO</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/iso/</link>
+      <link>https://christitus.com/tags/iso/</link>
       <pubDate>Wed, 20 Jan 2021 10:23:43 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/iso/</guid>
+      <guid>https://christitus.com/tags/iso/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Powershell</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/powershell/</link>
+      <link>https://christitus.com/tags/powershell/</link>
       <pubDate>Wed, 30 Dec 2020 14:34:52 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/powershell/</guid>
+      <guid>https://christitus.com/tags/powershell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sysadmin</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/sysadmin/</link>
+      <link>https://christitus.com/tags/sysadmin/</link>
       <pubDate>Mon, 14 Dec 2020 17:25:22 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/sysadmin/</guid>
+      <guid>https://christitus.com/tags/sysadmin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LinuxMint</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/linuxmint/</link>
+      <link>https://christitus.com/tags/linuxmint/</link>
       <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/linuxmint/</guid>
+      <guid>https://christitus.com/tags/linuxmint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PopOS</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/popos/</link>
+      <link>https://christitus.com/tags/popos/</link>
       <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/popos/</guid>
+      <guid>https://christitus.com/tags/popos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cryptocurrency</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/cryptocurrency/</link>
+      <link>https://christitus.com/tags/cryptocurrency/</link>
       <pubDate>Thu, 03 Sep 2020 11:33:12 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/cryptocurrency/</guid>
+      <guid>https://christitus.com/tags/cryptocurrency/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitHub</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/github/</link>
+      <link>https://christitus.com/tags/github/</link>
       <pubDate>Thu, 03 Sep 2020 10:57:46 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/github/</guid>
+      <guid>https://christitus.com/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux Kernel</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/linux-kernel/</link>
+      <link>https://christitus.com/tags/linux-kernel/</link>
       <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/linux-kernel/</guid>
+      <guid>https://christitus.com/tags/linux-kernel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Xorg</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/xorg/</link>
+      <link>https://christitus.com/tags/xorg/</link>
       <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/xorg/</guid>
+      <guid>https://christitus.com/tags/xorg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TicWatch</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/ticwatch/</link>
+      <link>https://christitus.com/tags/ticwatch/</link>
       <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/ticwatch/</guid>
+      <guid>https://christitus.com/tags/ticwatch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GeForceNow</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/geforcenow/</link>
+      <link>https://christitus.com/tags/geforcenow/</link>
       <pubDate>Fri, 21 Aug 2020 14:45:41 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/geforcenow/</guid>
+      <guid>https://christitus.com/tags/geforcenow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Security</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/security/</link>
+      <link>https://christitus.com/tags/security/</link>
       <pubDate>Tue, 18 Aug 2020 13:02:25 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/security/</guid>
+      <guid>https://christitus.com/tags/security/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Virus</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/virus/</link>
+      <link>https://christitus.com/tags/virus/</link>
       <pubDate>Tue, 18 Aug 2020 13:02:25 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/virus/</guid>
+      <guid>https://christitus.com/tags/virus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Raspberrypi</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/raspberrypi/</link>
+      <link>https://christitus.com/tags/raspberrypi/</link>
       <pubDate>Wed, 12 Aug 2020 10:19:20 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/raspberrypi/</guid>
+      <guid>https://christitus.com/tags/raspberrypi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Amazon Fire</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/amazon-fire/</link>
+      <link>https://christitus.com/tags/amazon-fire/</link>
       <pubDate>Tue, 21 Jul 2020 12:37:54 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/amazon-fire/</guid>
+      <guid>https://christitus.com/tags/amazon-fire/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux Gaming</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/linux-gaming/</link>
+      <link>https://christitus.com/tags/linux-gaming/</link>
       <pubDate>Tue, 14 Jul 2020 14:27:23 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/linux-gaming/</guid>
+      <guid>https://christitus.com/tags/linux-gaming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wallpaper</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/wallpaper/</link>
+      <link>https://christitus.com/tags/wallpaper/</link>
       <pubDate>Wed, 08 Jul 2020 14:52:13 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/wallpaper/</guid>
+      <guid>https://christitus.com/tags/wallpaper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OpenCore</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/opencore/</link>
+      <link>https://christitus.com/tags/opencore/</link>
       <pubDate>Sat, 27 Jun 2020 19:44:42 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/opencore/</guid>
+      <guid>https://christitus.com/tags/opencore/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ADB</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/adb/</link>
+      <link>https://christitus.com/tags/adb/</link>
       <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/adb/</guid>
+      <guid>https://christitus.com/tags/adb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft Store</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/microsoft-store/</link>
+      <link>https://christitus.com/tags/microsoft-store/</link>
       <pubDate>Thu, 11 Jun 2020 16:04:48 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/microsoft-store/</guid>
+      <guid>https://christitus.com/tags/microsoft-store/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows Update</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/windows-update/</link>
+      <link>https://christitus.com/tags/windows-update/</link>
       <pubDate>Sun, 07 Jun 2020 10:50:19 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/windows-update/</guid>
+      <guid>https://christitus.com/tags/windows-update/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vim</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/vim/</link>
+      <link>https://christitus.com/tags/vim/</link>
       <pubDate>Thu, 04 Jun 2020 15:05:41 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/vim/</guid>
+      <guid>https://christitus.com/tags/vim/</guid>
       <description></description>
     </item>
     
     <item>
       <title>F-Droid</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/f-droid/</link>
+      <link>https://christitus.com/tags/f-droid/</link>
       <pubDate>Tue, 02 Jun 2020 21:28:09 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/f-droid/</guid>
+      <guid>https://christitus.com/tags/f-droid/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux Mint</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/linux-mint/</link>
+      <link>https://christitus.com/tags/linux-mint/</link>
       <pubDate>Mon, 25 May 2020 13:14:23 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/linux-mint/</guid>
+      <guid>https://christitus.com/tags/linux-mint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Emoji</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/emoji/</link>
+      <link>https://christitus.com/tags/emoji/</link>
       <pubDate>Thu, 09 Apr 2020 15:35:07 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/emoji/</guid>
+      <guid>https://christitus.com/tags/emoji/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gaming</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/gaming/</link>
+      <link>https://christitus.com/tags/gaming/</link>
       <pubDate>Sun, 22 Mar 2020 20:50:39 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/gaming/</guid>
+      <guid>https://christitus.com/tags/gaming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ZSH</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/zsh/</link>
+      <link>https://christitus.com/tags/zsh/</link>
       <pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/zsh/</guid>
+      <guid>https://christitus.com/tags/zsh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wine</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/wine/</link>
+      <link>https://christitus.com/tags/wine/</link>
       <pubDate>Fri, 17 Jan 2020 17:43:17 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/wine/</guid>
+      <guid>https://christitus.com/tags/wine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>BTRFS</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/btrfs/</link>
+      <link>https://christitus.com/tags/btrfs/</link>
       <pubDate>Mon, 13 Jan 2020 16:36:18 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/btrfs/</guid>
+      <guid>https://christitus.com/tags/btrfs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/hugo/</link>
+      <link>https://christitus.com/tags/hugo/</link>
       <pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/hugo/</guid>
+      <guid>https://christitus.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WordPress</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/wordpress/</link>
+      <link>https://christitus.com/tags/wordpress/</link>
       <pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/wordpress/</guid>
+      <guid>https://christitus.com/tags/wordpress/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LightDM</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/lightdm/</link>
+      <link>https://christitus.com/tags/lightdm/</link>
       <pubDate>Wed, 08 Jan 2020 08:09:34 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/lightdm/</guid>
+      <guid>https://christitus.com/tags/lightdm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Firewall</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/firewall/</link>
+      <link>https://christitus.com/tags/firewall/</link>
       <pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/firewall/</guid>
+      <guid>https://christitus.com/tags/firewall/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu Server</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/ubuntu-server/</link>
+      <link>https://christitus.com/tags/ubuntu-server/</link>
       <pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/ubuntu-server/</guid>
+      <guid>https://christitus.com/tags/ubuntu-server/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fedora</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/fedora/</link>
+      <link>https://christitus.com/tags/fedora/</link>
       <pubDate>Fri, 08 Nov 2019 23:06:31 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/fedora/</guid>
+      <guid>https://christitus.com/tags/fedora/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LVM</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/lvm/</link>
+      <link>https://christitus.com/tags/lvm/</link>
       <pubDate>Fri, 08 Nov 2019 23:06:31 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/lvm/</guid>
+      <guid>https://christitus.com/tags/lvm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hackintosh</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/hackintosh/</link>
+      <link>https://christitus.com/tags/hackintosh/</link>
       <pubDate>Tue, 29 Oct 2019 01:13:21 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/hackintosh/</guid>
+      <guid>https://christitus.com/tags/hackintosh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows 10</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/windows-10/</link>
+      <link>https://christitus.com/tags/windows-10/</link>
       <pubDate>Mon, 14 Oct 2019 20:08:01 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/windows-10/</guid>
+      <guid>https://christitus.com/tags/windows-10/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learn Linux</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/learn-linux/</link>
+      <link>https://christitus.com/tags/learn-linux/</link>
       <pubDate>Thu, 10 Oct 2019 01:42:05 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/learn-linux/</guid>
+      <guid>https://christitus.com/tags/learn-linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux File System</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/linux-file-system/</link>
+      <link>https://christitus.com/tags/linux-file-system/</link>
       <pubDate>Mon, 23 Sep 2019 17:23:00 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/linux-file-system/</guid>
+      <guid>https://christitus.com/tags/linux-file-system/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OpenVPN</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/openvpn/</link>
+      <link>https://christitus.com/tags/openvpn/</link>
       <pubDate>Sat, 21 Sep 2019 04:45:08 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/openvpn/</guid>
+      <guid>https://christitus.com/tags/openvpn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Remote Access</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/remote-access/</link>
+      <link>https://christitus.com/tags/remote-access/</link>
       <pubDate>Wed, 18 Sep 2019 21:55:20 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/remote-access/</guid>
+      <guid>https://christitus.com/tags/remote-access/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSH</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/ssh/</link>
+      <link>https://christitus.com/tags/ssh/</link>
       <pubDate>Wed, 18 Sep 2019 21:55:20 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/ssh/</guid>
+      <guid>https://christitus.com/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GIMP</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/gimp/</link>
+      <link>https://christitus.com/tags/gimp/</link>
       <pubDate>Mon, 16 Sep 2019 00:55:12 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/gimp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Interview</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/interview/</link>
-      <pubDate>Wed, 04 Sep 2019 23:25:17 +0000</pubDate>
-      
-      <guid>https://demo.gethugothemes.com/northendlab/tags/interview/</guid>
+      <guid>https://christitus.com/tags/gimp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bootloader</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/bootloader/</link>
+      <link>https://christitus.com/tags/bootloader/</link>
       <pubDate>Mon, 01 Apr 2019 22:21:10 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/bootloader/</guid>
+      <guid>https://christitus.com/tags/bootloader/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Grub</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/grub/</link>
+      <link>https://christitus.com/tags/grub/</link>
       <pubDate>Mon, 01 Apr 2019 22:21:10 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/grub/</guid>
+      <guid>https://christitus.com/tags/grub/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Google Cloud Platform</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/google-cloud-platform/</link>
+      <link>https://christitus.com/tags/google-cloud-platform/</link>
       <pubDate>Thu, 14 Mar 2019 15:23:56 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/google-cloud-platform/</guid>
+      <guid>https://christitus.com/tags/google-cloud-platform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Website</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/website/</link>
+      <link>https://christitus.com/tags/website/</link>
       <pubDate>Thu, 14 Mar 2019 15:23:56 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/website/</guid>
+      <guid>https://christitus.com/tags/website/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aptitude</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/aptitude/</link>
+      <link>https://christitus.com/tags/aptitude/</link>
       <pubDate>Tue, 12 Mar 2019 20:35:00 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/aptitude/</guid>
+      <guid>https://christitus.com/tags/aptitude/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Garmin Express</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/garmin-express/</link>
+      <link>https://christitus.com/tags/garmin-express/</link>
       <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/garmin-express/</guid>
+      <guid>https://christitus.com/tags/garmin-express/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Manjaro</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/manjaro/</link>
+      <link>https://christitus.com/tags/manjaro/</link>
       <pubDate>Mon, 21 Jan 2019 19:51:04 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/manjaro/</guid>
+      <guid>https://christitus.com/tags/manjaro/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Manjaro Architect</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/manjaro-architect/</link>
+      <link>https://christitus.com/tags/manjaro-architect/</link>
       <pubDate>Mon, 21 Jan 2019 19:51:04 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/manjaro-architect/</guid>
+      <guid>https://christitus.com/tags/manjaro-architect/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C920 WebCam</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/c920-webcam/</link>
+      <link>https://christitus.com/tags/c920-webcam/</link>
       <pubDate>Fri, 09 Nov 2018 20:36:56 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/c920-webcam/</guid>
+      <guid>https://christitus.com/tags/c920-webcam/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Logitech</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/logitech/</link>
+      <link>https://christitus.com/tags/logitech/</link>
       <pubDate>Fri, 09 Nov 2018 20:36:56 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/logitech/</guid>
+      <guid>https://christitus.com/tags/logitech/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shadow Copies</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/shadow-copies/</link>
+      <link>https://christitus.com/tags/shadow-copies/</link>
       <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/shadow-copies/</guid>
+      <guid>https://christitus.com/tags/shadow-copies/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vssadmin</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/vssadmin/</link>
+      <link>https://christitus.com/tags/vssadmin/</link>
       <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/vssadmin/</guid>
+      <guid>https://christitus.com/tags/vssadmin/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>FreeBSD</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/freebsd/</link>
+      <title>FreeNAS</title>
+      <link>https://christitus.com/tags/freenas/</link>
       <pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/freebsd/</guid>
+      <guid>https://christitus.com/tags/freenas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Plex</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/plex/</link>
+      <link>https://christitus.com/tags/plex/</link>
       <pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/plex/</guid>
+      <guid>https://christitus.com/tags/plex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cortana</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/cortana/</link>
+      <link>https://christitus.com/tags/cortana/</link>
       <pubDate>Wed, 17 Oct 2018 15:22:41 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/cortana/</guid>
+      <guid>https://christitus.com/tags/cortana/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows Search</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/windows-search/</link>
+      <link>https://christitus.com/tags/windows-search/</link>
       <pubDate>Wed, 17 Oct 2018 15:22:41 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/windows-search/</guid>
+      <guid>https://christitus.com/tags/windows-search/</guid>
       <description></description>
     </item>
     
     <item>
       <title>XCP-ng</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/xcp-ng/</link>
+      <link>https://christitus.com/tags/xcp-ng/</link>
       <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/xcp-ng/</guid>
+      <guid>https://christitus.com/tags/xcp-ng/</guid>
       <description></description>
     </item>
     
     <item>
       <title>XenOrchestra</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/xenorchestra/</link>
+      <link>https://christitus.com/tags/xenorchestra/</link>
       <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/xenorchestra/</guid>
+      <guid>https://christitus.com/tags/xenorchestra/</guid>
       <description></description>
     </item>
     
     <item>
       <title>XenServer</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/xenserver/</link>
+      <link>https://christitus.com/tags/xenserver/</link>
       <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/xenserver/</guid>
+      <guid>https://christitus.com/tags/xenserver/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Benchmark</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/benchmark/</link>
+      <link>https://christitus.com/tags/benchmark/</link>
       <pubDate>Fri, 05 Oct 2018 20:28:58 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/benchmark/</guid>
+      <guid>https://christitus.com/tags/benchmark/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exchange 2019</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/exchange-2019/</link>
+      <link>https://christitus.com/tags/exchange-2019/</link>
       <pubDate>Wed, 03 Oct 2018 15:45:56 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/exchange-2019/</guid>
+      <guid>https://christitus.com/tags/exchange-2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows Server 2016 Core</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/windows-server-2016-core/</link>
+      <link>https://christitus.com/tags/windows-server-2016-core/</link>
       <pubDate>Fri, 28 Sep 2018 19:42:47 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/windows-server-2016-core/</guid>
+      <guid>https://christitus.com/tags/windows-server-2016-core/</guid>
       <description></description>
     </item>
     
     <item>
       <title>htaccess</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/htaccess/</link>
+      <link>https://christitus.com/tags/htaccess/</link>
       <pubDate>Sun, 23 Sep 2018 20:50:39 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/htaccess/</guid>
+      <guid>https://christitus.com/tags/htaccess/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Google Chrome</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/google-chrome/</link>
+      <link>https://christitus.com/tags/google-chrome/</link>
       <pubDate>Wed, 12 Sep 2018 20:49:44 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/google-chrome/</guid>
+      <guid>https://christitus.com/tags/google-chrome/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VPN</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/vpn/</link>
+      <link>https://christitus.com/tags/vpn/</link>
       <pubDate>Mon, 10 Sep 2018 14:59:11 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/vpn/</guid>
+      <guid>https://christitus.com/tags/vpn/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft HyperV</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/microsoft-hyperv/</link>
+      <link>https://christitus.com/tags/microsoft-hyperv/</link>
       <pubDate>Fri, 07 Sep 2018 21:33:35 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/microsoft-hyperv/</guid>
+      <guid>https://christitus.com/tags/microsoft-hyperv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VMWare ESXi</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/vmware-esxi/</link>
+      <link>https://christitus.com/tags/vmware-esxi/</link>
       <pubDate>Fri, 07 Sep 2018 21:33:35 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/vmware-esxi/</guid>
+      <guid>https://christitus.com/tags/vmware-esxi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Asterisk</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/asterisk/</link>
+      <link>https://christitus.com/tags/asterisk/</link>
       <pubDate>Fri, 17 Aug 2018 15:58:36 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/asterisk/</guid>
+      <guid>https://christitus.com/tags/asterisk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/docker/</link>
+      <link>https://christitus.com/tags/docker/</link>
       <pubDate>Thu, 21 Jun 2018 19:36:03 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/docker/</guid>
+      <guid>https://christitus.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Unifi</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/unifi/</link>
+      <link>https://christitus.com/tags/unifi/</link>
       <pubDate>Thu, 21 Jun 2018 15:57:35 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/unifi/</guid>
+      <guid>https://christitus.com/tags/unifi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/python/</link>
+      <link>https://christitus.com/tags/python/</link>
       <pubDate>Tue, 28 Nov 2017 22:03:53 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/python/</guid>
+      <guid>https://christitus.com/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microsoft SQL</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/microsoft-sql/</link>
+      <link>https://christitus.com/tags/microsoft-sql/</link>
       <pubDate>Thu, 31 Aug 2017 17:00:08 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/microsoft-sql/</guid>
+      <guid>https://christitus.com/tags/microsoft-sql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nagios</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/nagios/</link>
+      <link>https://christitus.com/tags/nagios/</link>
       <pubDate>Sat, 24 Jun 2017 04:14:45 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/nagios/</guid>
+      <guid>https://christitus.com/tags/nagios/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Business</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/business/</link>
+      <link>https://christitus.com/tags/business/</link>
       <pubDate>Mon, 27 Feb 2017 21:03:20 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/business/</guid>
+      <guid>https://christitus.com/tags/business/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloud Migration</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/cloud-migration/</link>
+      <link>https://christitus.com/tags/cloud-migration/</link>
       <pubDate>Mon, 27 Feb 2017 21:03:20 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/cloud-migration/</guid>
+      <guid>https://christitus.com/tags/cloud-migration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/aws/</link>
+      <link>https://christitus.com/tags/aws/</link>
       <pubDate>Tue, 14 Feb 2017 21:16:13 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/aws/</guid>
+      <guid>https://christitus.com/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Citrix</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/citrix/</link>
+      <link>https://christitus.com/tags/citrix/</link>
       <pubDate>Sat, 12 Nov 2016 15:13:18 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/citrix/</guid>
+      <guid>https://christitus.com/tags/citrix/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NetScaler</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/netscaler/</link>
+      <link>https://christitus.com/tags/netscaler/</link>
       <pubDate>Sat, 12 Nov 2016 15:13:18 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/netscaler/</guid>
+      <guid>https://christitus.com/tags/netscaler/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exchange Online</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/exchange-online/</link>
+      <link>https://christitus.com/tags/exchange-online/</link>
       <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/exchange-online/</guid>
+      <guid>https://christitus.com/tags/exchange-online/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exchange Server</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/exchange-server/</link>
+      <link>https://christitus.com/tags/exchange-server/</link>
       <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/exchange-server/</guid>
+      <guid>https://christitus.com/tags/exchange-server/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ADSync</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/adsync/</link>
+      <link>https://christitus.com/tags/adsync/</link>
       <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/adsync/</guid>
+      <guid>https://christitus.com/tags/adsync/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Office365</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/office365/</link>
+      <link>https://christitus.com/tags/office365/</link>
       <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/office365/</guid>
+      <guid>https://christitus.com/tags/office365/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IIS</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/iis/</link>
+      <link>https://christitus.com/tags/iis/</link>
       <pubDate>Sat, 26 Dec 2015 05:41:50 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/iis/</guid>
+      <guid>https://christitus.com/tags/iis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GFI MailArchiver</title>
-      <link>https://demo.gethugothemes.com/northendlab/tags/gfi-mailarchiver/</link>
+      <link>https://christitus.com/tags/gfi-mailarchiver/</link>
       <pubDate>Fri, 06 Mar 2015 23:56:01 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/tags/gfi-mailarchiver/</guid>
+      <guid>https://christitus.com/tags/gfi-mailarchiver/</guid>
       <description></description>
     </item>
     

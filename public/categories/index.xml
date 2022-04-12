@@ -1,108 +1,98 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/categories/</link>
-    <description>Recent content in Categories on Northendlab | Creative Blog Template</description>
+    <title>Categories on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/categories/</link>
+    <description>Recent content in Categories on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jan 2022 17:39:34 -0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Apr 2022 08:48:13 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ChromeOS</title>
+      <link>https://christitus.com/categories/chromeos/</link>
+      <pubDate>Mon, 11 Apr 2022 08:48:13 -0500</pubDate>
+      
+      <guid>https://christitus.com/categories/chromeos/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Networking</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/networking/</link>
+      <link>https://christitus.com/categories/networking/</link>
       <pubDate>Wed, 19 Jan 2022 17:39:34 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/categories/networking/</guid>
+      <guid>https://christitus.com/categories/networking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/windows/</link>
+      <link>https://christitus.com/categories/windows/</link>
       <pubDate>Wed, 19 Jan 2022 17:39:34 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/categories/windows/</guid>
+      <guid>https://christitus.com/categories/windows/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/linux/</link>
+      <link>https://christitus.com/categories/linux/</link>
       <pubDate>Tue, 11 Jan 2022 09:52:18 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/categories/linux/</guid>
+      <guid>https://christitus.com/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MacOS</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/macos/</link>
+      <link>https://christitus.com/categories/macos/</link>
       <pubDate>Mon, 14 Dec 2020 17:25:22 -0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/categories/macos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>YouTube</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/youtube/</link>
-      <pubDate>Tue, 08 Sep 2020 15:05:58 -0500</pubDate>
-      
-      <guid>https://demo.gethugothemes.com/northendlab/categories/youtube/</guid>
+      <guid>https://christitus.com/categories/macos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Android</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/android/</link>
+      <link>https://christitus.com/categories/android/</link>
       <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/categories/android/</guid>
+      <guid>https://christitus.com/categories/android/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows Server</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/windows-server/</link>
+      <link>https://christitus.com/categories/windows-server/</link>
       <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/categories/windows-server/</guid>
+      <guid>https://christitus.com/categories/windows-server/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>FreeNAS</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/freenas/</link>
+      <title>FreeBSD</title>
+      <link>https://christitus.com/categories/freebsd/</link>
       <pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/categories/freenas/</guid>
+      <guid>https://christitus.com/categories/freebsd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Virtualization</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/virtualization/</link>
+      <link>https://christitus.com/categories/virtualization/</link>
       <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/categories/virtualization/</guid>
+      <guid>https://christitus.com/categories/virtualization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hardware</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/hardware/</link>
+      <link>https://christitus.com/categories/hardware/</link>
       <pubDate>Fri, 05 Oct 2018 20:28:58 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/categories/hardware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Software</title>
-      <link>https://demo.gethugothemes.com/northendlab/categories/software/</link>
-      <pubDate>Wed, 12 Sep 2018 20:49:44 +0000</pubDate>
-      
-      <guid>https://demo.gethugothemes.com/northendlab/categories/software/</guid>
+      <guid>https://christitus.com/categories/hardware/</guid>
       <description></description>
     </item>
     

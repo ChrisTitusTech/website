@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Benchmark on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/benchmark/</link>
-    <description>Recent content in Benchmark on Northendlab | Creative Blog Template</description>
+    <title>Benchmark on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/benchmark/</link>
+    <description>Recent content in Benchmark on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 05 Oct 2018 20:28:58 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/benchmark/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Oct 2018 20:28:58 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/benchmark/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SATA vs SAS vs NVMe Performance Breakdown</title>
-      <link>https://demo.gethugothemes.com/northendlab/sata-vs-sas-vs-nvme/</link>
+      <link>https://christitus.com/sata-vs-sas-vs-nvme/</link>
       <pubDate>Fri, 05 Oct 2018 20:28:58 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/sata-vs-sas-vs-nvme/</guid>
+      <guid>https://christitus.com/sata-vs-sas-vs-nvme/</guid>
       <description>&lt;p&gt;This is a quick breakdown of the differences between SATA vs SAS vs NVMe. After looking at the performance below, you will be able to decide which one best suits your needs.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Using IOMeter to determine hard drive performance</title>
-      <link>https://demo.gethugothemes.com/northendlab/using-iometer/</link>
+      <link>https://christitus.com/using-iometer/</link>
       <pubDate>Fri, 14 Sep 2018 16:50:46 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/using-iometer/</guid>
+      <guid>https://christitus.com/using-iometer/</guid>
       <description>&lt;p&gt;Using IOMeter will give you a great benchmark on any hard drives and network drives you have. I use this quite often as you can see the effects of new hardware, introducing Link-Aggregation, or troubleshooting drives to determine if they are losing performance.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>How to choose DNS Server by benchmarking them</title>
-      <link>https://demo.gethugothemes.com/northendlab/benchmark-dns-server/</link>
+      <link>https://christitus.com/benchmark-dns-server/</link>
       <pubDate>Thu, 09 Mar 2017 17:35:18 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/benchmark-dns-server/</guid>
+      <guid>https://christitus.com/benchmark-dns-server/</guid>
       <description>&lt;p&gt;By default, your DNS Server is set to your ISP’s DNS and this SLOWS down your internet, due to the fact, they are poorly managed and have horrid performance. This shows you how to choose the fastest DNS Server, but results will vary depending on the location. Running this benchmark will tell you which ones are the best to use.&lt;/p&gt;</description>
     </item>
     

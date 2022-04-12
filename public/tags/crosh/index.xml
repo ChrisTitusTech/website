@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crosh on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/crosh/</link>
+    <description>Recent content in Crosh on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 11 Apr 2022 08:48:13 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/crosh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>30 Days in ChromeOS</title>
+      <link>https://christitus.com/30days-chromeos/</link>
+      <pubDate>Mon, 11 Apr 2022 08:48:13 -0500</pubDate>
+      
+      <guid>https://christitus.com/30days-chromeos/</guid>
+      <description>&lt;p&gt;This article details how I survived 30 days in ChromeOS as a poweruser. I don&amp;rsquo;t use Chrome Browser and I don&amp;rsquo;t enjoy using Andorid apps. This is how I used ChromeOS like a desktop instead of a mobile phone. No, I didn&amp;rsquo;t enable developer mode for this.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

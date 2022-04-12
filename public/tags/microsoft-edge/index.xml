@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Microsoft Edge on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/microsoft-edge/</link>
-    <description>Recent content in Microsoft Edge on Northendlab | Creative Blog Template</description>
+    <title>Microsoft Edge on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/microsoft-edge/</link>
+    <description>Recent content in Microsoft Edge on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 06 Aug 2021 11:55:48 -0500</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/microsoft-edge/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Aug 2021 11:55:48 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/microsoft-edge/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Uninstall Microsoft Edge</title>
-      <link>https://demo.gethugothemes.com/northendlab/uninstall-edge/</link>
+      <link>https://christitus.com/uninstall-edge/</link>
       <pubDate>Fri, 06 Aug 2021 11:55:48 -0500</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/uninstall-edge/</guid>
+      <guid>https://christitus.com/uninstall-edge/</guid>
       <description>&lt;p&gt;This goes over Removing Microsoft Edge Chromium edition and keeping it removed.&lt;/p&gt;</description>
     </item>
     

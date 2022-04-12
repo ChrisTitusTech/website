@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/python/</link>
-    <description>Recent content in Python on Northendlab | Creative Blog Template</description>
+    <title>Python on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/python/</link>
+    <description>Recent content in Python on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 28 Nov 2017 22:03:53 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Nov 2017 22:03:53 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python script to print out specific results from an API JSON call</title>
-      <link>https://demo.gethugothemes.com/northendlab/api-json-call/</link>
+      <link>https://christitus.com/api-json-call/</link>
       <pubDate>Tue, 28 Nov 2017 22:03:53 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/api-json-call/</guid>
+      <guid>https://christitus.com/api-json-call/</guid>
       <description>&lt;p&gt;The following is a Python script to print out specific results from an API JSON call from a website. This basic syntax will allow you to create a value to use.&lt;/p&gt;</description>
     </item>
     

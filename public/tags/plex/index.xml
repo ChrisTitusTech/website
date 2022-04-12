@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Plex on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/plex/</link>
-    <description>Recent content in Plex on Northendlab | Creative Blog Template</description>
+    <title>Plex on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/plex/</link>
+    <description>Recent content in Plex on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 23 Oct 2018 19:14:03 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/plex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Oct 2018 19:14:03 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/plex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install Plex plugin in FreeNAS</title>
-      <link>https://demo.gethugothemes.com/northendlab/install-plex-plugin-freenas/</link>
+      <link>https://christitus.com/install-plex-plugin-freenas/</link>
       <pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/install-plex-plugin-freenas/</guid>
+      <guid>https://christitus.com/install-plex-plugin-freenas/</guid>
       <description>&lt;p&gt;This is an in-depth installation and configuration of the Plex plugin in FreeNAS 11.2. I detail the installation of plex on FreeNAS Jail and configuration of using a share as a Plex mount point.&lt;/p&gt;</description>
     </item>
     

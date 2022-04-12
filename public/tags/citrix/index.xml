@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Citrix on Northendlab | Creative Blog Template</title>
-    <link>https://demo.gethugothemes.com/northendlab/tags/citrix/</link>
-    <description>Recent content in Citrix on Northendlab | Creative Blog Template</description>
+    <title>Citrix on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/citrix/</link>
+    <description>Recent content in Citrix on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 12 Nov 2016 15:13:18 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/northendlab/tags/citrix/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Nov 2016 15:13:18 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/citrix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Updating LDAP Credentials for Netscaler VPX 1000</title>
-      <link>https://demo.gethugothemes.com/northendlab/update-netscaler-vpx/</link>
+      <link>https://christitus.com/update-netscaler-vpx/</link>
       <pubDate>Sat, 12 Nov 2016 15:13:18 +0000</pubDate>
       
-      <guid>https://demo.gethugothemes.com/northendlab/update-netscaler-vpx/</guid>
+      <guid>https://christitus.com/update-netscaler-vpx/</guid>
       <description>&lt;p&gt;This article shows you how to update LDAP credentials on the Netscaler VPX 1000. It goes over logging in, editing virtual server, and applying settings.&lt;/p&gt;</description>
     </item>
     
