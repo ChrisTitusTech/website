@@ -50,7 +50,7 @@ sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i3
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa -y
 sudo apt update
-sudo apt install nvidia-driver-450 libnvidia-gl-450 libnvidia-gl-450:i386 libvulkan1 libvulkan1:i386 -y
+sudo apt install nvidia-driver-495 libnvidia-gl-495 libnvidia-gl-495:i386 libvulkan1 libvulkan1:i386 -y
 ```
 
 *Note: Not working? Are you using a recent nVidia card? I recommend at least GTX 900 Series or Above!
@@ -287,4 +287,3 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 ## Conclusion
 
 Doing these tweaks or just some of them will make a drastic difference when it comes to Gaming on Linux. I personally use all of the tweaks, but sometimes I end up not using the Custom kernel if I have issues with drivers like nvidia sometimes does not like it.
-
