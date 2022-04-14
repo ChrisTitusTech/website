@@ -1,178 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Android on Chris Titus Tech</title>
+    <title>Android on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/categories/android/</link>
-    <description>Recent content in Android on Chris Titus Tech</description>
+    <description>Recent content in Android on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 27 Aug 2020 09:49:33 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2020 09:49:33 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix Ticwatch Lag</title>
+      <link>https://christitus.com/fix-ticwatch-lag/</link>
+      <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
+      
+      <guid>https://christitus.com/fix-ticwatch-lag/</guid>
+      <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;</description>
+    </item>
     
-        <atom:link href="https://christitus.com/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Speed Up Your Amazon Fire Tablet</title>
+      <link>https://christitus.com/amazon-fire-debloat/</link>
+      <pubDate>Tue, 21 Jul 2020 12:37:54 -0500</pubDate>
+      
+      <guid>https://christitus.com/amazon-fire-debloat/</guid>
+      <description>&lt;p&gt;This Guide goes over over debloating amazon fire tablets and getting Google Store and regular tablet functionality out of them.&lt;/p&gt;</description>
+    </item>
     
+    <item>
+      <title>Debloat Android</title>
+      <link>https://christitus.com/debloat-android/</link>
+      <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
+      
+      <guid>https://christitus.com/debloat-android/</guid>
+      <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;</description>
+    </item>
     
+    <item>
+      <title>Degoogle Apps</title>
+      <link>https://christitus.com/degoogle-apps/</link>
+      <pubDate>Tue, 02 Jun 2020 21:28:09 -0500</pubDate>
+      
+      <guid>https://christitus.com/degoogle-apps/</guid>
+      <description>&lt;p&gt;This article goes over the apps that work and don&amp;rsquo;t work with a Degoogled phone without google play services installed&lt;/p&gt;</description>
+    </item>
     
-
+    <item>
+      <title>Get rid of Amazon Fire Launcher without root access</title>
+      <link>https://christitus.com/amazon-fire-launcher/</link>
+      <pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate>
       
-      <item>
-        <title>Fix Ticwatch Lag</title>
-        <link>https://christitus.com/fix-ticwatch-lag/</link>
-        <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Thu, 27 Aug 2020 09:49:33 -0500</atom:modified>
-        <guid>https://christitus.com/fix-ticwatch-lag/</guid>
-        <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/fix-ticwatch-lag.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>TicWatch</category>
-            
-          
-        
-        
-          
-            
-              <category>Android</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>How to Speed Up Your Amazon Fire Tablet</title>
-        <link>https://christitus.com/amazon-fire-debloat/</link>
-        <pubDate>Tue, 21 Jul 2020 12:37:54 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 21 Jul 2020 12:37:54 -0500</atom:modified>
-        <guid>https://christitus.com/amazon-fire-debloat/</guid>
-        <description>&lt;p&gt;This Guide goes over over debloating amazon fire tablets and getting Google Store and regular tablet functionality out of them.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/amazon-fire-debloat.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Amazon Fire</category>
-            
-          
-        
-        
-          
-            
-              <category>Android</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Debloat Android</title>
-        <link>https://christitus.com/debloat-android/</link>
-        <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Sun, 21 Jun 2020 20:01:50 -0500</atom:modified>
-        <guid>https://christitus.com/debloat-android/</guid>
-        <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/debloat-android.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>ADB</category>
-            
-          
-        
-        
-          
-            
-              <category>Android</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Degoogle Apps</title>
-        <link>https://christitus.com/degoogle-apps/</link>
-        <pubDate>Tue, 02 Jun 2020 21:28:09 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 02 Jun 2020 21:28:09 -0500</atom:modified>
-        <guid>https://christitus.com/degoogle-apps/</guid>
-        <description>&lt;p&gt;This article goes over the apps that work and don&amp;rsquo;t work with a Degoogled phone without google play services installed&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/degoogle-apps.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>F-Droid</category>
-            
-          
-        
-        
-          
-            
-              <category>Android</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Get rid of Amazon Fire Launcher without root access</title>
-        <link>https://christitus.com/amazon-fire-launcher/</link>
-        <pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 10 Jul 2017 21:46:28 +0000</atom:modified>
-        <guid>https://christitus.com/amazon-fire-launcher/</guid>
-        <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>Amazon Fire</category>
-            
-          
-        
-        
-          
-            
-              <category>Android</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/amazon-fire-launcher/</guid>
+      <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

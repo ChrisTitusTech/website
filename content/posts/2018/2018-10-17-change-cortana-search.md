@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-10-17T15:22:41+00:00
 url: /change-cortana-search/
-image: /images/2018/10/change-cortana-search.jpg
+image: images/2018/10/change-cortana-search.jpg
 categories:
   - Windows
 tags:
@@ -35,27 +35,3 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 In the end, you need to watch out for Windows updates. Anytime Windows does a major update, be prepared to repeat the process above, as it will reset it to Edge. Therefore, I&#8217;d bookmark the Chrometana Pro page or this one as you will be coming back to do this about twice a year. If you don&#8217;t want to do this, you can always switch to Linux. Consequently, I have written an article about the pro&#8217;s and con&#8217;s of such a switch and I highly recommend the switch if you are able.
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

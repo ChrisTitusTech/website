@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-09-26T17:31:24+00:00
 url: /apache-mpm-prefork/
-image: /images/2018/09/apache.jpg
+image: images/2018/09/apache.jpg
 categories:
   - Linux
 tags:
@@ -57,27 +57,3 @@ Comparatively, a microserver with 600-700 MB of ram and shared CPU you will be 
 [![apache-yt](https://img.youtube.com/vi/uGugeHVEeiU/0.jpg)](https://www.youtube.com/watch?v=uGugeHVEeiU)  
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

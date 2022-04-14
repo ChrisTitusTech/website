@@ -3,7 +3,7 @@ title: "How to Speed Up Your Amazon Fire Tablet"
 
 date: 2020-07-21T12:37:54-05:00
 url: /amazon-fire-debloat/
-image: /images/2020-thumbs/amazon-fire-debloat.jpg
+image: images/2020-thumbs/amazon-fire-debloat.jpg
 categories:
   - Android 
 tags:
@@ -25,7 +25,7 @@ This Guide goes over over debloating amazon fire tablets and getting Google Stor
 - USB Debugging Enabled in Developer Tools
 - Compatibility:
 
-{{< notice info >}}
+```
 Amazon Fire 8/8+ (2020)
 Amazon Fire 10 (2019)
 Amazon Fire 7 (2019)
@@ -39,7 +39,7 @@ Amazon Fire HD8 (2015)
 Amazon Fire HD7 (2015)
 Amazon Fire HD7 (2014)
 Amazon Fire HD6 (2014)
-{{< /notice >}}
+```
 
 ## Enabling Developer Mode
 
@@ -98,15 +98,13 @@ After doing this plug your tablet in to your computer and tap authorize device. 
 - Remove Lockscreen Ads
   - This setups an automation sequence that constantly scans and removes amazon ads. Here are the detailed instructions:
 
-{{< notice info >}}
-<ul><li>Click Remove Lockscreen Ads in Amazon Fire Toolbox</li>
-<li>Launch Automate Settings</li>
-<li>Check "Run on system startup"</li>
-<li>Import Adblocker script into Automate
-<ul><li><i>To import: Click Import from 3 dots on right, Select SD Card and click "Amazon Lockscreen Ads Remover V4.5" from root</i></li></ul></li>
-<li>Return to Home screen of Automate and click the Ads Remover</li>
-<li>Done!</li>
-{{< /notice >}}
+- Click Remove Lockscreen Ads in Amazon Fire Toolbox
+- Launch Automate Settings
+- Check "Run on system startup"
+- Import Adblocker script into Automate
+  - To import: Click Import from 3 dots on right, Select SD Card and click "Amazon Lockscreen Ads Remover V4.5" from root
+- Return to Home screen of Automate and click the Ads Remover
+
 
 #### Optional Items on Second Menu
 
@@ -128,27 +126,3 @@ After doing this plug your tablet in to your computer and tap authorize device. 
 
 This tool is a fantastic way to debloat a new fire tablet and get greater functionality from it. The added utilities I rarely use, but can be very nice for some users.
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

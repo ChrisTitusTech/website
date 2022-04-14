@@ -3,7 +3,7 @@ title: "Secure Linux"
 
 date: 2020-08-18T13:02:25-05:00
 url: /secure-linux/
-image: /images/2020-thumbs/secure-linux.jpg
+image: images/2020-thumbs/secure-linux.jpg
 categories:
   - Linux
 tags:
@@ -17,7 +17,7 @@ This article covers basic security and settings I do with every Linux installati
 
 ![drovorub](/images/2020/drovorub/drovorub.jpg)
 
-```bash
+```
 touch testfile
 echo “ASDFZXCV:hf:testfile” > /dev/zero
 ```
@@ -25,7 +25,7 @@ echo “ASDFZXCV:hf:testfile” > /dev/zero
 
 ### Check for unsigned kernel modules
 
-```bash
+```
 for mod in $(lsmod | tail -n +2 | cut -d' ' -f1); do modinfo ${mod} | grep -q "signature" || echo "no signature for module: ${mod}" ; done
 ```
 *If you see vbox or nvidia modules, these are for VirtualBox and NVidia Drivers respectively*
@@ -38,7 +38,7 @@ Secure Boot forces checks for kernel module signatures and is good not only for 
 
 ### Easy Way to Install
 
-```bash
+```
 sudo mokutil --enable-validation # Remember the password!
 sudo mokutil --sb-state # Checks if Secure Boot is enabled
 ```
@@ -64,27 +64,3 @@ Other things I'd recommend not mentioned... SELinux! Look it up because it is am
 
 This is not a all inclusive guide on securing your Linux system, but it is a good starting point that I do on pretty much every computer. I highly recommend you take these instructions and expand them to suit your needs. 
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

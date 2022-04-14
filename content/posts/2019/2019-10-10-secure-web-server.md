@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-10-10T13:37:49+00:00
 url: /secure-web-server/
-image: /images/2019/10/secure-website-300x169.jpg
+image: images/2019/10/secure-website-300x169.jpg
 categories:
   - Linux
   - Networking
@@ -23,7 +23,7 @@ In this article, I show you all the steps needed to secure a web server and impr
 
 **Install UFW**  
 
-```Bash
+```
 sudo apt-get update  
 sudo apt-get install ufw  
 sudo ufw limit 22/tcp  
@@ -37,7 +37,7 @@ sudo ufw enable
 
 **Do Global blocks**   
 
-```Bash
+```
 sudo ufw default deny incoming  
 sudo ufw default allow outgoing
 ```
@@ -53,7 +53,7 @@ sudo ufw default allow outgoing
 #### Method 1:
 
 **Transfer pub ssh key to server**  
-```Bash
+```
 scp ~/.ssh/id_rsa.pub user@server.com:~
 cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
@@ -90,7 +90,7 @@ nospoof on
 
 ## Install Fail2Ban
 
-```Bash
+```
 sudo apt install fail2ban
 sudo systemctl enable fail2ban
 sudo systemctl start fail2ban
@@ -107,27 +107,3 @@ You will now have completed the basics of a secure web server!
 [![secure web server](https://img.youtube.com/vi/7pJKBL9x6bY/0.jpg)](https://www.youtube.com/watch?v=7pJKBL9x6bY)  
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

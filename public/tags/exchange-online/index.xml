@@ -1,100 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Exchange Online on Chris Titus Tech</title>
+    <title>Exchange Online on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/tags/exchange-online/</link>
-    <description>Recent content in Exchange Online on Chris Titus Tech</description>
+    <description>Recent content in Exchange Online on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 31 Oct 2016 20:29:26 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/exchange-online/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <lastBuildDate>Mon, 31 Oct 2016 20:29:26 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/exchange-online/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exclude shared mailboxes from Dynamic Distribution Group</title>
+      <link>https://christitus.com/exclude-shared-mailboxes-exchange/</link>
+      <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
       
-      <item>
-        <title>Exclude shared mailboxes from Dynamic Distribution Group</title>
-        <link>https://christitus.com/exclude-shared-mailboxes-exchange/</link>
-        <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 31 Oct 2016 20:29:26 +0000</atom:modified>
-        <guid>https://christitus.com/exclude-shared-mailboxes-exchange/</guid>
-        <description>&lt;p&gt;This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2014/01/logo-Exchange-Color.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Exchange Online</category>
-            
-          
-            
-              <category>Exchange Server</category>
-            
-          
-            
-              <category>Powershell</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows Server</category>
-            
-          
-        
-        
-      </item>
+      <guid>https://christitus.com/exclude-shared-mailboxes-exchange/</guid>
+      <description>&lt;p&gt;This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Prevent autodiscover on Exchange server after an Office 365 Migration</title>
+      <link>https://christitus.com/prevent-autodiscover-exchange-server/</link>
+      <pubDate>Mon, 04 Jul 2016 16:44:02 +0000</pubDate>
       
-      <item>
-        <title>Prevent autodiscover on Exchange server after an Office 365 Migration</title>
-        <link>https://christitus.com/prevent-autodiscover-exchange-server/</link>
-        <pubDate>Mon, 04 Jul 2016 16:44:02 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 04 Jul 2016 16:44:02 +0000</atom:modified>
-        <guid>https://christitus.com/prevent-autodiscover-exchange-server/</guid>
-        <description>&lt;p&gt;This article teaches you how to prevent autodiscover from happening on Exchange Server. This is important on an Office 365 migration when you still need to keep your local exchange server from resolving.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2016/07/autodiscover-redirect-prompt.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Exchange Online</category>
-            
-          
-            
-              <category>Exchange Server</category>
-            
-          
-        
-        
-          
-            
-              <category>Windows Server</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/prevent-autodiscover-exchange-server/</guid>
+      <description>&lt;p&gt;This article teaches you how to prevent autodiscover from happening on Exchange Server. This is important on an Office 365 migration when you still need to keep your local exchange server from resolving.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

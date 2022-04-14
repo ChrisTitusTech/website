@@ -1,62 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Manjaro on Chris Titus Tech</title>
+    <title>Manjaro on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/tags/manjaro/</link>
-    <description>Recent content in Manjaro on Chris Titus Tech</description>
+    <description>Recent content in Manjaro on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 21 Jan 2019 19:51:04 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/manjaro/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <lastBuildDate>Mon, 21 Jan 2019 19:51:04 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/manjaro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manjaro Architect Installation Guide</title>
+      <link>https://christitus.com/manjaro-architect-installation-guide/</link>
+      <pubDate>Mon, 21 Jan 2019 19:51:04 +0000</pubDate>
       
-      <item>
-        <title>Manjaro Architect Installation Guide</title>
-        <link>https://christitus.com/manjaro-architect-installation-guide/</link>
-        <pubDate>Mon, 21 Jan 2019 19:51:04 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 21 Jan 2019 19:51:04 +0000</atom:modified>
-        <guid>https://christitus.com/manjaro-architect-installation-guide/</guid>
-        <description>&lt;p&gt;In this book, I go over step by step the entire Manjaro Architect installation. This guide is suitable for any knowledge level from beginner to expert.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2019/01/manjaro.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Manjaro Architect</category>
-            
-          
-            
-              <category>Manjaro</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/manjaro-architect-installation-guide/</guid>
+      <description>&lt;p&gt;In this book, I go over step by step the entire Manjaro Architect installation. This guide is suitable for any knowledge level from beginner to expert.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

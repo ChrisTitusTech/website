@@ -3,7 +3,7 @@ title: "Common Computer Issues"
 
 date: 2020-08-28T05:42:25-05:00
 url: /common-computer-issues/
-image: /images/2020-thumbs/common-computer-issues.jpg
+image: images/2020-thumbs/common-computer-issues.jpg
 categories:
   - Linux
   - Windows
@@ -31,7 +31,7 @@ Solution for Display constantly resetting or getting incorrectly configured
 - Xorg Custom Settings
   - When display render is launched it will automatically configure each display to these specification from `/etc/X11/xorg.conf.d/10-monitor.conf`
 
-```bash
+```
 # /etc/X11/xorg.conf.d/10-monitor.conf
 Section "Monitor"
 ### Monitor Identity - Typically HDMI-0 or DisplayPort-0
@@ -56,7 +56,7 @@ EndSection
 
 Sample xrandr script:
 
-```bash
+```
 #!/bin/bash
 xrandr --output HDMI-1 --off --output HDMI-2 --auto
 ```
@@ -79,7 +79,7 @@ There are so many solutions for this one:
 
 Analyze systemd and figure out why... (`systemd-analyze`)
 
-```bash
+```
 systemd-analyze blame
              10.667s apt-daily.service
               1.127s apt-daily-upgrade.service
@@ -163,7 +163,7 @@ Run Application in Terminal and look at the errors. Chances are it is missing a 
 
 Chances are you ran a powershell script (maybe mine...) and you are now locked out of changing the lock screen on your Windows Box. Run this command in powershell to gain control of your lock screen again:
 
-```powershell
+```
 Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization" -Name "NoLockScreen" -ErrorAction SilentlyContinue
 ```
 
@@ -175,31 +175,7 @@ You can also open up Start - Run - `gpedit.msc` and then go to All Settings and 
 
 Open Up PowerShell Admin (Right Click Start Button)
 
-```PowerShell
+```
 %systemroot%\SysWOW64\OneDriveSetup.exe
 ```
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

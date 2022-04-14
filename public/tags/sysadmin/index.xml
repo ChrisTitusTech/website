@@ -1,58 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sysadmin on Chris Titus Tech</title>
+    <title>sysadmin on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/tags/sysadmin/</link>
-    <description>Recent content in sysadmin on Chris Titus Tech</description>
+    <description>Recent content in sysadmin on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 14 Dec 2020 17:25:22 -0600</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <lastBuildDate>Mon, 14 Dec 2020 17:25:22 -0600</lastBuildDate><atom:link href="https://christitus.com/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Macos Sysadmin Tips</title>
+      <link>https://christitus.com/macos-sysadmin-tips/</link>
+      <pubDate>Mon, 14 Dec 2020 17:25:22 -0600</pubDate>
       
-      <item>
-        <title>Macos Sysadmin Tips</title>
-        <link>https://christitus.com/macos-sysadmin-tips/</link>
-        <pubDate>Mon, 14 Dec 2020 17:25:22 -0600</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 14 Dec 2020 17:25:22 -0600</atom:modified>
-        <guid>https://christitus.com/macos-sysadmin-tips/</guid>
-        <description>&lt;p&gt;This comes from a reader that was a Sysadmin and transitioned from Linux to MacOS because of a visual impairment.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/macos-sysadmin-tips.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>sysadmin</category>
-            
-          
-        
-        
-          
-            
-              <category>macos</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/macos-sysadmin-tips/</guid>
+      <description>&lt;p&gt;This comes from a reader that was a Sysadmin and transitioned from Linux to MacOS because of a visual impairment.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

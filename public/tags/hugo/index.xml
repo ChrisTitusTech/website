@@ -1,66 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Chris Titus Tech</title>
+    <title>Hugo on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/tags/hugo/</link>
-    <description>Recent content in Hugo on Chris Titus Tech</description>
+    <description>Recent content in Hugo on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 08 Jan 2020 15:59:19 -0600</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <lastBuildDate>Wed, 08 Jan 2020 15:59:19 -0600</lastBuildDate><atom:link href="https://christitus.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Static Site Guide</title>
+      <link>https://christitus.com/hugo-guide/</link>
+      <pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate>
       
-      <item>
-        <title>Hugo Static Site Guide</title>
-        <link>https://christitus.com/hugo-guide/</link>
-        <pubDate>Wed, 08 Jan 2020 15:59:19 -0600</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Wed, 08 Jan 2020 15:59:19 -0600</atom:modified>
-        <guid>https://christitus.com/hugo-guide/</guid>
-        <description>&lt;p&gt;This article goes over the basics of hugo and guides you through the process of using a static site generator.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/hugo-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Hugo</category>
-            
-          
-            
-              <category>WordPress</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>Networking</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/hugo-guide/</guid>
+      <description>&lt;p&gt;This article goes over the basics of hugo and guides you through the process of using a static site generator.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

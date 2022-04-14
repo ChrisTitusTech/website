@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2012-01-24T22:55:18+00:00
 url: /kernel-panic-mac-osx/
-image: /images/2012/01/kernal-panic-mac-osx.png
+image: images/2012/01/kernal-panic-mac-osx.png
 categories:
   - MacOS
 
@@ -52,27 +52,3 @@ _IF THE ABOVE STEPS DOES NOT WORK THEN PLEASE FOLLOW THE BELOW TROUBLESHOOTING S
 
 If you get a repair disk error, you will need to back up any data you can, and reformat the entire hard disk. Once you don&#8217;t get a kernel panic in Mac OSX any longer you will be able to restore from time machine. However, if you continue to have issues, you will need to ship it back to Apple for a logic board replacement.
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

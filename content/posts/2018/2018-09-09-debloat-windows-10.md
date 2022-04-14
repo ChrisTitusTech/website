@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-09-09T17:08:58+00:00
 url: /debloat-windows-10/
-image: /images/2018/09/remove-win10-bloatware.jpg
+image: images/2018/09/remove-win10-bloatware.jpg
 categories:
   - Windows
 tags:
@@ -20,7 +20,7 @@ If you are coming here from the YouTube video I have taken all the scripts below
 
 If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below! 
 
-```PowerShell
+```
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
 ```
 
@@ -50,27 +50,3 @@ Based on User feedback, this no longer uninstalls OneDrive or Office.
 [![Debloat Windows 10](https://img.youtube.com/vi/q4ziE5Am0pM/0.jpg)](https://www.youtube.com/watch?v=q4ziE5Am0pM)  
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

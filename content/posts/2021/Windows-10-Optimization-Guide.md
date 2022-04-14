@@ -3,7 +3,7 @@ title: "Windows 10 Optimization Guide"
 
 date: 2020-12-30T14:34:52-06:00
 url: /Windows-10-Optimization-Guide/
-image: /images/2021-thumbs/Windows-10-Optimization-Guide.jpg
+image: images/2021-thumbs/Windows-10-Optimization-Guide.jpg
 categories:
   - Windows
 tags:
@@ -87,7 +87,7 @@ _Note: File Names change and will be different from above!_
 
 To finish things off we do some custom tweaks with the Official CTT Windows 10 Toolbox. This is something I have been customizing for years and refining every single month to work on any Windows 10 Installation. 
 
-```PowerShell
+```
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
 ```
 
@@ -136,27 +136,3 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 24. Program Compatibility Assistant Service
 25. Enterprise App Management Service
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

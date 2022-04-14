@@ -1,0 +1,14 @@
+---
+label: author
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: image
+  label: image
+- type: text
+  name: description
+  label: description
+  description: Author details here

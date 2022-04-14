@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2017-06-24T04:14:45+00:00
 url: /nvidia-smi-nagios/
-image: /images/2017/06/Nagios-Logo.jpg
+image: images/2017/06/Nagios-Logo.jpg
 categories:
   - Linux
 tags:
@@ -63,27 +63,3 @@ esac`
 
 You will need to modify this as the nvidia-smi tool will be updated in the future and the grep command will have to be reconfigured if due to any output changes.
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

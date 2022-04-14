@@ -1,5 +1,5 @@
 [context.production.environment]
-  HUGO_VERSION = "0.75.1"
+  HUGO_VERSION = "0.80.0"
 
   [[plugins]]
 package = "@netlify/plugin-sitemap"
@@ -12,10 +12,18 @@ package = "@netlify/plugin-sitemap"
     # By Glob pattern
     '**/page/**'
   ]
+[build.environment]
+  HUGO_VERSION = "0.80.0"
 
 [[redirects]]
   from = "https://store.christitus.com/*"
-  to = "https://portal.christitus.com/e3532423-ee96-4ebd-b228-7bb9f9b1d9b2"
+  to = "https://www.cttstore.com/downloads"
+  status = 301
+  force = true
+
+  [[redirects]]
+  from = "https://www.christitus.com/downloads"
+  to = "https://www.cttstore.com/downloads"
   status = 301
   force = true
 

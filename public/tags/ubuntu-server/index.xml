@@ -1,218 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ubuntu Server on Chris Titus Tech</title>
+    <title>Ubuntu Server on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/tags/ubuntu-server/</link>
-    <description>Recent content in Ubuntu Server on Chris Titus Tech</description>
+    <description>Recent content in Ubuntu Server on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 02 Dec 2019 05:31:59 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2019 05:31:59 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/ubuntu-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Setup a VPN Kill Switch Server</title>
+      <link>https://christitus.com/vpn-kill-switch/</link>
+      <pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate>
+      
+      <guid>https://christitus.com/vpn-kill-switch/</guid>
+      <description>&lt;p&gt;This will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if you are more familiar with that.&lt;/p&gt;</description>
+    </item>
     
-        <atom:link href="https://christitus.com/tags/ubuntu-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Secure A Web Server</title>
+      <link>https://christitus.com/secure-web-server/</link>
+      <pubDate>Thu, 10 Oct 2019 13:37:49 +0000</pubDate>
+      
+      <guid>https://christitus.com/secure-web-server/</guid>
+      <description>&lt;p&gt;In this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just because you secure your server doesn’t mean you can neglect it. I highly recommend monitoring it and adjusting security as needed. Monitoring is required for proper security in my opinion.&lt;/p&gt;</description>
+    </item>
     
+    <item>
+      <title>Issuing SSL Certs using Let’s Encrypt in Ubuntu</title>
+      <link>https://christitus.com/issuing-ssl-certs/</link>
+      <pubDate>Thu, 13 Sep 2018 20:49:56 +0000</pubDate>
+      
+      <guid>https://christitus.com/issuing-ssl-certs/</guid>
+      <description>&lt;p&gt;This article goes over Issuing SSL Certs using Let’s Encrypt in Ubuntu 16.04. The basic steps outlined in the video are adding the repository, installing certbot, issuing a certificate, and enabling SSL.&lt;/p&gt;</description>
+    </item>
     
+    <item>
+      <title>Installing Linux Subsystem for Windows 10</title>
+      <link>https://christitus.com/installing-linux-subsystem/</link>
+      <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
+      
+      <guid>https://christitus.com/installing-linux-subsystem/</guid>
+      <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;</description>
+    </item>
     
-
+    <item>
+      <title>Setup an always on VPN in Ubuntu</title>
+      <link>https://christitus.com/setup-always-on-vpn/</link>
+      <pubDate>Mon, 10 Sep 2018 14:59:11 +0000</pubDate>
       
-      <item>
-        <title>How To Setup a VPN Kill Switch Server</title>
-        <link>https://christitus.com/vpn-kill-switch/</link>
-        <pubDate>Mon, 02 Dec 2019 05:31:59 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 02 Dec 2019 05:31:59 +0000</atom:modified>
-        <guid>https://christitus.com/vpn-kill-switch/</guid>
-        <description>&lt;p&gt;This will show you how to set up a VPN Kill Switch so all traffic will come from that server. For this server, I am using CentOS, but you can easily use Ubuntu server if you are more familiar with that.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2019/12/vpn-kill-switch-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu</category>
-            
-          
-            
-              <category>Ubuntu Server</category>
-            
-          
-            
-              <category>Firewall</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>Networking</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>How to Secure A Web Server</title>
-        <link>https://christitus.com/secure-web-server/</link>
-        <pubDate>Thu, 10 Oct 2019 13:37:49 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Thu, 10 Oct 2019 13:37:49 +0000</atom:modified>
-        <guid>https://christitus.com/secure-web-server/</guid>
-        <description>&lt;p&gt;In this article, I show you all the steps needed to secure a web server and improve your security. I recommend doing all of these things on every installation. Also, just because you secure your server doesn’t mean you can neglect it. I highly recommend monitoring it and adjusting security as needed. Monitoring is required for proper security in my opinion.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2019/10/secure-website-300x169.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu</category>
-            
-          
-            
-              <category>Ubuntu Server</category>
-            
-          
-            
-              <category>Firewall</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>Networking</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Issuing SSL Certs using Let’s Encrypt in Ubuntu</title>
-        <link>https://christitus.com/issuing-ssl-certs/</link>
-        <pubDate>Thu, 13 Sep 2018 20:49:56 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Thu, 13 Sep 2018 20:49:56 +0000</atom:modified>
-        <guid>https://christitus.com/issuing-ssl-certs/</guid>
-        <description>&lt;p&gt;This article goes over Issuing SSL Certs using Let’s Encrypt in Ubuntu 16.04. The basic steps outlined in the video are adding the repository, installing certbot, issuing a certificate, and enabling SSL.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/09/Letsencrypt.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Ubuntu Server</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Installing Linux Subsystem for Windows 10</title>
-        <link>https://christitus.com/installing-linux-subsystem/</link>
-        <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Tue, 11 Sep 2018 19:56:07 +0000</atom:modified>
-        <guid>https://christitus.com/installing-linux-subsystem/</guid>
-        <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/09/winubuntu.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Powershell</category>
-            
-          
-            
-              <category>Ubuntu Server</category>
-            
-          
-            
-              <category>Windows 10</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-            
-              <category>Windows</category>
-            
-          
-        
-        
-      </item>
-      
-      <item>
-        <title>Setup an always on VPN in Ubuntu</title>
-        <link>https://christitus.com/setup-always-on-vpn/</link>
-        <pubDate>Mon, 10 Sep 2018 14:59:11 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 10 Sep 2018 14:59:11 +0000</atom:modified>
-        <guid>https://christitus.com/setup-always-on-vpn/</guid>
-        <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/09/VPN.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>VPN</category>
-            
-          
-            
-              <category>Ubuntu Server</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/setup-always-on-vpn/</guid>
+      <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

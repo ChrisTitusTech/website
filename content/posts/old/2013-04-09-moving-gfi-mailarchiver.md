@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2013-04-09T16:39:37+00:00
 url: /moving-gfi-mailarchiver/
-image: /images/2013/04/gfi.png
+image: images/2013/04/gfi.png
 categories:
   - Windows Server
 tags:
@@ -31,27 +31,3 @@ _Please Note: DO NOT re-install GFI before moving SQL Databases from_ the second
   * I had to switch to SQL authentication because my old archive store kept popping up errors.
   * A very long process, because of the massive amount of emails in this archiver. Depending on the business it can take a few days or weeks!
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

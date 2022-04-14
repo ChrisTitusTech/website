@@ -1,62 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>VPN on Chris Titus Tech</title>
+    <title>VPN on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/tags/vpn/</link>
-    <description>Recent content in VPN on Chris Titus Tech</description>
+    <description>Recent content in VPN on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 10 Sep 2018 14:59:11 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <lastBuildDate>Mon, 10 Sep 2018 14:59:11 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup an always on VPN in Ubuntu</title>
+      <link>https://christitus.com/setup-always-on-vpn/</link>
+      <pubDate>Mon, 10 Sep 2018 14:59:11 +0000</pubDate>
       
-      <item>
-        <title>Setup an always on VPN in Ubuntu</title>
-        <link>https://christitus.com/setup-always-on-vpn/</link>
-        <pubDate>Mon, 10 Sep 2018 14:59:11 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 10 Sep 2018 14:59:11 +0000</atom:modified>
-        <guid>https://christitus.com/setup-always-on-vpn/</guid>
-        <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/09/VPN.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>VPN</category>
-            
-          
-            
-              <category>Ubuntu Server</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/setup-always-on-vpn/</guid>
+      <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

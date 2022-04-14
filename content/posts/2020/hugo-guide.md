@@ -3,7 +3,7 @@ title: "Hugo Static Site Guide"
 
 date: 2020-01-08T15:59:19-06:00
 url: /hugo-guide/
-image: /images/2020-thumbs/hugo-guide.jpg
+image: images/2020-thumbs/hugo-guide.jpg
 categories:
   - Linux
   - Networking
@@ -198,7 +198,7 @@ title: "{{ replace .Name "-" " " | title }}"
 
 date: {{ .Date }}
 url: /{{ .Name }}/
-image: /images/2020-thumbs/{{ .Name }}.jpg
+image: images/2020-thumbs/{{ .Name }}.jpg
 categories:
   - Linux
   - Windows
@@ -209,30 +209,7 @@ draft: true
 ---
 <!--more-->
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join```
+```
 Now everytime I run `hugo new posts/newpost.md` it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase. 
 
 ## Video Walkthrough
@@ -242,27 +219,3 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 ## Conclusion
 This has changed my life and has made it so I can make posts like this one for people to follow. This entire post took me about an hour to write and would have take twice as long if I were to do it in WordPress. 
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

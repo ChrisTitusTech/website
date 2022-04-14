@@ -1,58 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Google Chrome on Chris Titus Tech</title>
+    <title>Google Chrome on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/tags/google-chrome/</link>
-    <description>Recent content in Google Chrome on Chris Titus Tech</description>
+    <description>Recent content in Google Chrome on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 12 Sep 2018 20:49:44 +0000</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/google-chrome/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <lastBuildDate>Wed, 12 Sep 2018 20:49:44 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/google-chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Chrome missing www and how to fix it</title>
+      <link>https://christitus.com/google-chrome-update-69-address-bar-and-how-to-fix-it/</link>
+      <pubDate>Wed, 12 Sep 2018 20:49:44 +0000</pubDate>
       
-      <item>
-        <title>Google Chrome missing www and how to fix it</title>
-        <link>https://christitus.com/google-chrome-update-69-address-bar-and-how-to-fix-it/</link>
-        <pubDate>Wed, 12 Sep 2018 20:49:44 +0000</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Wed, 12 Sep 2018 20:49:44 +0000</atom:modified>
-        <guid>https://christitus.com/google-chrome-update-69-address-bar-and-how-to-fix-it/</guid>
-        <description>&lt;p&gt;Chrome started rolling out update 69 at the beginning of this month (September 2018) causing a missing www in the address bar. There are two things this update did that you need to be aware of.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2018/09/chrome.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Google Chrome</category>
-            
-          
-        
-        
-          
-            
-              <category>Software</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/google-chrome-update-69-address-bar-and-how-to-fix-it/</guid>
+      <description>&lt;p&gt;Chrome started rolling out update 69 at the beginning of this month (September 2018) causing a missing www in the address bar. There are two things this update did that you need to be aware of.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

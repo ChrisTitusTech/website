@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2012-07-26T20:31:21+00:00
 url: /exchange-primary-domain-controller/
-image: /images/2012/07/hosted-exchange-logo1.png
+image: images/2012/07/hosted-exchange-logo1.png
 categories:
   - Windows Server
 tags:
@@ -29,27 +29,3 @@ pause
 
 I hope this helps you and keeps your server running until you are able to install it on another server. That said, try to avoid installing exchange on primary domain controller at all costs. You will avoid so many headaches by doing this.
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

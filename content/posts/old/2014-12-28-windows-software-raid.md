@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2014-12-28T22:53:22+00:00
 url: /windows-software-raid/
-image: /images/2014/12/RAID1.jpg
+image: images/2014/12/RAID1.jpg
 categories:
   - Windows
 
@@ -31,27 +31,3 @@ The following solutions are how you&#8217;d fix the issue:
 
 In closing, this will get rid of your raid and give you the ability to repurpose these disks as you see fit. In the above experience, I still had my data on both disks so I just formatted one and repurposed it for other functions.
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

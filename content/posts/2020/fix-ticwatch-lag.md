@@ -3,7 +3,7 @@ title: "Fix Ticwatch Lag"
 
 date: 2020-08-27T09:49:33-05:00
 url: /fix-ticwatch-lag/
-image: /images/2020-thumbs/fix-ticwatch-lag.jpg
+image: images/2020-thumbs/fix-ticwatch-lag.jpg
 categories:
   - Android
 tags:
@@ -41,7 +41,7 @@ This removes all the mobvoi crap that is junking up your watch.
   - *Verify you see your watch!*
 - Run the following commands to remove all the bloat:
 
-```bash
+```
 adb shell
 pm uninstall -k --user 0 com.mobvoi.wear.account.aw
 pm uninstall -k --user 0 com.mobvoi.companion.aw
@@ -61,27 +61,3 @@ Screenshot
 
 Now with all the garbage gone you can use all the other apps that are well maintained and optimized. You will notice that your watch is no longer lagging and it runs just like any other good wearable. 
 
-## Chris Titus Tech
-
-#### Social
-
-- Twitter - <https://twitter.com/christitustech>
-- YouTube - <https://youtube.com/c/ChrisTitusTech>
-- Twitch - <https://twitch.tv/christitustech>
-- Odysee / LBRY (Privacy) - <https://christitus.com/lbry>
-
-#### Exclusive Content
-
-- [ChrisTitus.com Members Section][1] (_CC Only_)
-  - Digital Downloads with Guides and Pre-Built Images
-  - Monthly Members Only Video
-  - $5 Per Month (_100% of Proceeds goes to Chris Titus Tech_)
-- [YouTube Chris Titus Tech Membership][2] (_All Payments Accepted_)
-  - Monthly Members Only Video
-  - YouTube Emojis for Comments and Live Chat
-  - YouTube Badges that changes based on membership time for comments and chat.
-  - All YouTube comments are highlighted when I review comments daily. 
-  - $4.99 Per Month (_70% of the Proceeds goes to Chris Titus Tech_)
-
- [1]: https://portal.christitus.com
- [2]: https://christitus.com/join

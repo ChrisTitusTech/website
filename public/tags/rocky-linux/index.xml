@@ -1,58 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rocky Linux on Chris Titus Tech</title>
+    <title>Rocky Linux on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/tags/rocky-linux/</link>
-    <description>Recent content in Rocky Linux on Chris Titus Tech</description>
+    <description>Recent content in Rocky Linux on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 03 May 2021 12:12:16 -0500</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/rocky-linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <lastBuildDate>Mon, 03 May 2021 12:12:16 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/rocky-linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rocky Linux</title>
+      <link>https://christitus.com/rocky-linux/</link>
+      <pubDate>Mon, 03 May 2021 12:12:16 -0500</pubDate>
       
-      <item>
-        <title>Rocky Linux</title>
-        <link>https://christitus.com/rocky-linux/</link>
-        <pubDate>Mon, 03 May 2021 12:12:16 -0500</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 03 May 2021 12:12:16 -0500</atom:modified>
-        <guid>https://christitus.com/rocky-linux/</guid>
-        <description>&lt;p&gt;This guide goes over setting up KDE on Rocky Linux from a base server install with no GUI.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2021-thumbs/rocky-linux.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>Rocky Linux</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/rocky-linux/</guid>
+      <description>&lt;p&gt;This guide goes over setting up KDE on Rocky Linux from a base server install with no GUI.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>

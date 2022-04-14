@@ -1,58 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" 
-  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-  xmlns:dc="http://purl.org/dc/elements/1.1/" 
-  xmlns:atom="http://www.w3.org/2005/Atom" 
-  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
-  xmlns:media="http://search.yahoo.com/mrss/">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BTRFS on Chris Titus Tech</title>
+    <title>BTRFS on Chris Titus Tech | Tech Content Creator</title>
     <link>https://christitus.com/tags/btrfs/</link>
-    <description>Recent content in BTRFS on Chris Titus Tech</description>
+    <description>Recent content in BTRFS on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <managingEditor>contact@christitus.com (Chris Titus)</managingEditor>
-    <webMaster>contact@christitus.com (Chris Titus)</webMaster>
-    <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 13 Jan 2020 16:36:18 -0600</lastBuildDate>
-    
-        <atom:link href="https://christitus.com/tags/btrfs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-
+    <lastBuildDate>Mon, 13 Jan 2020 16:36:18 -0600</lastBuildDate><atom:link href="https://christitus.com/tags/btrfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BTRFS Guide - Basic Commands, Snapshots, and RAID</title>
+      <link>https://christitus.com/btrfs-guide/</link>
+      <pubDate>Mon, 13 Jan 2020 16:36:18 -0600</pubDate>
       
-      <item>
-        <title>BTRFS Guide - Basic Commands, Snapshots, and RAID</title>
-        <link>https://christitus.com/btrfs-guide/</link>
-        <pubDate>Mon, 13 Jan 2020 16:36:18 -0600</pubDate>
-        <author>contact@christitus.com (Chris Titus)</author>
-        <atom:modified>Mon, 13 Jan 2020 16:36:18 -0600</atom:modified>
-        <guid>https://christitus.com/btrfs-guide/</guid>
-        <description>&lt;p&gt;This guide goes over everything you need to know to get started on BTRFS. With that said we will be going over the basic structure of BTRFS and the things you should and should not do.&lt;/p&gt;</description>
-        
-        <dc:creator>Chris Titus</dc:creator>
-        <media:content url="https://christitus.com//images/2020-thumbs/btrfs-guide.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-              <category>BTRFS</category>
-            
-          
-        
-        
-          
-            
-              <category>Linux</category>
-            
-          
-        
-        
-      </item>
-      
-
+      <guid>https://christitus.com/btrfs-guide/</guid>
+      <description>&lt;p&gt;This guide goes over everything you need to know to get started on BTRFS. With that said we will be going over the basic structure of BTRFS and the things you should and should not do.&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>
