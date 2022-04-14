@@ -24,6 +24,8 @@ unsafe= true
 [params]
 # logo
 logo = "images/logo.png"
+logoWidth = 235
+logoHeight = 97
 # favicon
 favicon = "images/favicon.png"
 # meta data
