@@ -1,5 +1,5 @@
 ---
-title: "Obsidian"
+title: "My Obsidian Setup"
 date: 2022-04-22T08:32:54-05:00
 url: /obsidian/
 image: images/2022-thumbs/obsidian.jpg
