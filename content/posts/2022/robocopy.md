@@ -57,4 +57,7 @@ Notable Options with Robocopy
 
 I don't recommend using backup, restartable mode, or jobs. Jobs typically miss options and 3rd party solution like veeam are FAR better for backups than robocopy EVER will be. 
 
+### Walkthrough Video
 
+[![30daychromeosvid](https://img.youtube.com/vi/0q3rGK_IMZg/0.jpg)](https://www.youtube.com/watch?v=0q3rGK_IMZg)  
+_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_

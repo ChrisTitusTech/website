@@ -28,7 +28,9 @@ Open Obsidian Settings
 
 ## Kanban Plugin
 ![kanban settings](/images/2022/04-obsidian/kanban-settings.png)
+
 `Click on settings cog for your board`
+
 _NOT the settings for the obsidian program_
 
 **Set your default template, Note folder to put new files in, and lane width.**
@@ -49,3 +51,7 @@ This is for progress bar, or if you want to do filters, tags, yaml headers, and 
 `="![progress](https://progress-bar.dev/" + round(length(filter(this.file.tasks.completed, (t) => t = true)) / length(this.file.tasks.text) * 100) + "/)"`
 ```
 
+### Walkthrough Video
+
+[![30daychromeosvid](https://img.youtube.com/vi/zGCv6aDDfP8/0.jpg)](https://www.youtube.com/watch?v=zGCv6aDDfP8)  
+_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
