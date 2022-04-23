@@ -6,7 +6,7 @@ date: 2018-09-19T15:29:33+00:00
 ---
 Last updated: September 19, 2018
 
-Please read these Terms of Service (&#8220;Terms&#8221;, &#8220;Terms of Service&#8221;) carefully before using the https://www.christitus.com website (the &#8220;Service&#8221;) operated by Chris Titus Tech (&#8220;us&#8221;, &#8220;we&#8221;, or &#8220;our&#8221;).
+Please read these Terms of Service (&#8220;Terms&#8221;, &#8220;Terms of Service&#8221;) carefully before using the https://christitus.com website (the &#8220;Service&#8221;) operated by Chris Titus Tech (&#8220;us&#8221;, &#8220;we&#8221;, or &#8220;our&#8221;).
 
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
 
