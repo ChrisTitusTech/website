@@ -28,8 +28,20 @@ package = "@netlify/plugin-sitemap"
   force = true
 
 [[redirects]]
+  from = "https://christitus.com/win"
+  to = "https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/winutil.ps1"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://www.christitus.com/downloads"
   to = "https://www.cttstore.com/downloads"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.christitus.com/windows-toolbox"
+  to = "https://www.cttstore.com/windows-toolbox"
   status = 301
   force = true
 
