@@ -12,7 +12,65 @@
       <pubDate>Mon, 05 Oct 2020 13:03:31 -0500</pubDate>
       
       <guid>https://christitus.com/linux-macos/</guid>
-      <description>&lt;p&gt;This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. &lt;em&gt;Version 20+ is required&lt;/em&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. &lt;em&gt;Version 20+ is required&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Source Files in this project&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gnome-look.org/p/1148692/&#34;&gt;https://www.gnome-look.org/p/1148692/&lt;/a&gt; - Capitine Cursors&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pling.com/p/1403328/&#34;&gt;https://www.pling.com/p/1403328/&lt;/a&gt; - WhiteSur GTK Theme&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pling.com/p/1399044/&#34;&gt;https://www.pling.com/p/1399044/&lt;/a&gt; - BigSur Icon Theme&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/PRATAP-KUMAR/focalgdm3&#34;&gt;https://github.com/PRATAP-KUMAR/focalgdm3&lt;/a&gt; - Login Theme&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://albertlauncher.github.io/docs/installing/&#34;&gt;https://albertlauncher.github.io/docs/installing/&lt;/a&gt; - Albert&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pling.com/p/1401527/&#34;&gt;https://www.pling.com/p/1401527/&lt;/a&gt; - Cairo Dock&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;h3 id=&#34;dependency-installs&#34;&gt;Dependency Installs&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
+mkdir ~/.themes
+mkdir ~/.icons
+mv ~/MacOS/themes/* ~/.themes
+mv ~/MacOS/icons/* ~/.icons
+sudo mv ~/MacOS/walls/* /usr/share/backgrounds/
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;gnome-tweaks&#34;&gt;Gnome Tweaks&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;gsettings set org.gnome.mutter center-new-windows &#39;true&#39;
+gsettings set org.gnome.desktop.wm.preferences button-layout &#39;close,minimize,maximize:&#39;
+gsettings set org.gnome.desktop.interface gtk-theme &amp;quot;WhiteSur-dark&amp;quot;
+gsettings set org.gnome.desktop.wm.preferences theme &amp;quot;WhiteSur-dark&amp;quot;
+gsettings set org.gnome.desktop.interface icon-theme &#39;BigSur&#39;
+gsettings set org.gnome.desktop.interface cursor-theme &#39;capitaine-cursors-light&#39;
+gsettings set org.gnome.desktop.background picture-uri &#39;file:///usr/share/backgrounds/macOS-BS3.jpg&#39;
+gsettings get org.gnome.desktop.screensaver picture-uri &#39;file:///usr/share/backgrounds/macOS-BS1.jpg&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;albert-search-and-cairo-dock&#34;&gt;Albert Search and Cairo Dock&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+echo &#39;deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /&#39; | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O &amp;quot;/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc&amp;quot;
+sudo apt update
+sudo apt install albert cairo-dock cairo-dock-plug-ins -y
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Launch Albert&lt;/li&gt;
+&lt;li&gt;Set Hotkey - Meta + F&lt;/li&gt;
+&lt;li&gt;Set Theme Arc Dark Blue&lt;/li&gt;
+&lt;li&gt;Enable Albert Extensions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;gnome-extensions&#34;&gt;Gnome Extensions&lt;/h3&gt;
+&lt;p&gt;Enable Extensions by visiting &lt;a href=&#34;https://extensions.gnome.org/&#34;&gt;https://extensions.gnome.org/&lt;/a&gt; install add-on and reload browser&lt;/p&gt;
+&lt;p&gt;Install the Following Extensions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User Themes - &lt;a href=&#34;https://extensions.gnome.org/extension/19/user-themes/&#34;&gt;https://extensions.gnome.org/extension/19/user-themes/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Frippery Move Clock - &lt;a href=&#34;https://extensions.gnome.org/extension/2/move-clock/&#34;&gt;https://extensions.gnome.org/extension/2/move-clock/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Dynamic Panel Transparency - &lt;a href=&#34;https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/&#34;&gt;https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Panel OSD - &lt;a href=&#34;https://extensions.gnome.org/extension/708/panel-osd/&#34;&gt;https://extensions.gnome.org/extension/708/panel-osd/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;manual-extension-configurations&#34;&gt;Manual Extension Configurations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Panel OSD - Change Horizontal and Vertical to 98&lt;/li&gt;
+&lt;li&gt;Cairo Dock - Set to Startup Applications&lt;/li&gt;
+&lt;li&gt;Cairo Dock Themes - Import all gz files to Cairo configure in ~/MacOS/cairo&lt;/li&gt;
+&lt;li&gt;Cairo Dock Configure - Turn of Icon effects and animations and hide dock when overlapping windows&lt;/li&gt;
+&lt;li&gt;Cairo Dock Launchpad - Add Custom Launchpad Shortcut &lt;code&gt;dbus-send --session --type=method_call --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:&#39;Main.shellDBusService.ShowApplications();&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Disable Ubuntu Dock (Not Needed on PopOS)&lt;/li&gt;
+&lt;li&gt;Dynamic Panel Transparency - Background Tab - Max Opacity 100 - Min Opacity 50&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

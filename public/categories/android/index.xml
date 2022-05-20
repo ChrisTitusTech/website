@@ -12,7 +12,67 @@
       <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
       
       <guid>https://christitus.com/fix-ticwatch-lag/</guid>
-      <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Install ADB Tools&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows - &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-windows.zip&#34;&gt;https://dl.google.com/android/repository/platform-tools-latest-windows.zip&lt;/a&gt; or &lt;code&gt;choco install adb&lt;/code&gt; &lt;em&gt;Chocolatey Users Only&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Linux - &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-linux.zip&#34;&gt;https://dl.google.com/android/repository/platform-tools-latest-linux.zip&lt;/a&gt; or &lt;code&gt;sudo apt install adb&lt;/code&gt; Debian or &lt;code&gt;yay -S adb&lt;/code&gt; Arch&lt;/li&gt;
+&lt;li&gt;MacOS - &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-darwin.zip&#34;&gt;https://dl.google.com/android/repository/platform-tools-latest-darwin.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable Developer Tools on TicWatch&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Under settings - Click About&lt;/li&gt;
+&lt;li&gt;Click the Build number 7 times to enable developer tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable Wi-fi Debugging in Developer Tools&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Under settings - Click Developer Tools
+&lt;ul&gt;
+&lt;li&gt;Enable ADB Debugging&lt;/li&gt;
+&lt;li&gt;Enable ADB Debugging Wi-fi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;note-ensure-both-the-watch-and-computer-are-on-the-same-wifi-network&#34;&gt;Note: Ensure both the Watch and Computer are on the same Wifi network&lt;/h4&gt;
+&lt;h2 id=&#34;removing-ticwatch-bloat&#34;&gt;Removing TicWatch Bloat&lt;/h2&gt;
+&lt;p&gt;This removes all the mobvoi crap that is junking up your watch.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connect to your watch
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb connect IP_ADDRESS:5555&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Check Devices
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb devices&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Verify you see your watch!&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Run the following commands to remove all the bloat:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;adb shell
+pm uninstall -k --user 0 com.mobvoi.wear.account.aw
+pm uninstall -k --user 0 com.mobvoi.companion.aw
+pm uninstall -k --user 0 com.mobvoi.ticwatch.cmodel.c2.male
+pm uninstall -k --user 0 com.mobvoi.wear.appsservice
+pm uninstall -k --user 0 com.mobvoi.wear.fitness.aw
+pm uninstall -k --user 0 com.mobvoi.wear.health.aw
+pm uninstall -k --user 0 com.mobvoi.wear.privacy.aw
+pm uninstall -k --user 0 com.mobvoi.wear.system.aw
+pm uninstall -k --user 0 com.mobvoi.wear.watchface.aw
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Screenshot&lt;br&gt;
+&lt;img src=&#34;https://christitus.com/images/2020/ticwatch.jpg&#34; alt=&#34;ticwatch&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;using-google-fit-and-other-wearos-apps&#34;&gt;Using Google Fit and other WearOS Apps&lt;/h2&gt;
+&lt;p&gt;Now with all the garbage gone you can use all the other apps that are well maintained and optimized. You will notice that your watch is no longer lagging and it runs just like any other good wearable.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -21,7 +81,174 @@
       <pubDate>Tue, 21 Jul 2020 12:37:54 -0500</pubDate>
       
       <guid>https://christitus.com/amazon-fire-debloat/</guid>
-      <description>&lt;p&gt;This Guide goes over over debloating amazon fire tablets and getting Google Store and regular tablet functionality out of them.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This Guide goes over over debloating amazon fire tablets and getting Google Store and regular tablet functionality out of them.&lt;/p&gt;
+&lt;h2 id=&#34;tools-and-sources-used&#34;&gt;Tools and Sources Used&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debloat Amazon Fire (XDA Developers): &lt;a href=&#34;https://forum.xda-developers.com/hd8-hd10/development/official-amazon-fire-toolbox-v1-0-t3889604&#34;&gt;Amazon Fire Toolbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Screenshare Any Android Device (GitHub Project): &lt;a href=&#34;https://github.com/Genymobile/scrcpy&#34;&gt;scrcpy&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;YouTube Video Link for scrcpy: &lt;a href=&#34;https://youtu.be/VMQfH2Qkuss&#34;&gt;https://youtu.be/VMQfH2Qkuss&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;No Root Required&lt;/li&gt;
+&lt;li&gt;Developer Mode Unlocked&lt;/li&gt;
+&lt;li&gt;USB Debugging Enabled in Developer Tools&lt;/li&gt;
+&lt;li&gt;Compatibility:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Amazon Fire 8/8+ (2020)
+Amazon Fire 10 (2019)
+Amazon Fire 7 (2019)
+Amazon Fire 8 (2018)
+Amazon Fire 10 (2017)
+Amazon Fire 8 (2017)
+Amazon Fire 7 (2017)
+Amazon Fire HD8 (2016)
+Amazon Fire HD10 (2015)
+Amazon Fire HD8 (2015)
+Amazon Fire HD7 (2015)
+Amazon Fire HD7 (2014)
+Amazon Fire HD6 (2014)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;enabling-developer-mode&#34;&gt;Enabling Developer Mode&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/debloat-amazon/dev-tools.jpg&#34; alt=&#34;Dev Tools&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Settings &amp;gt; Device Options &amp;gt; About Fire Tablet and tap on the Serial Number until you unlock Developer Options&lt;/li&gt;
+&lt;li&gt;Settings &amp;gt; Device Options &amp;gt; Developer Tools and enable USB Debugging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;After doing this plug your tablet in to your computer and tap authorize device. If you don&amp;rsquo;t see authorization prompt, change USB mode to file transfer or it may already be authorized from a past attempt. Check the Toolbox app in the next step to verify.&lt;/p&gt;
+&lt;h2 id=&#34;amazon-fire-toolbox-usage&#34;&gt;Amazon Fire Toolbox Usage&lt;/h2&gt;
+&lt;h3 id=&#34;main-menu&#34;&gt;Main Menu&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/debloat-amazon/toolbox.png&#34; alt=&#34;Toolbox&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;options-you-need&#34;&gt;Options you need&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Manage Everything Amazon
+&lt;ul&gt;
+&lt;li&gt;Disable all amazon apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Custom Launcher
+&lt;ul&gt;
+&lt;li&gt;Change to Nova Launcher from Amazon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Google Services (Manage)
+&lt;ul&gt;
+&lt;li&gt;Install Google Play and Google Sign-In&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;optional-features-on-main-menu&#34;&gt;Optional Features on Main Menu&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;ADB Shell
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Command Line for ADB&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hybrid Apps
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Installing Netflix or Disney- Not needed when using Google Store&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lockscreen Wallpaper
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Doesn&amp;rsquo;t remove ads - Done with another package&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Density Modifier
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Changes DPI&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Google Assistant
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Uses Google Assistant instead of Alexa&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Modify System Settings
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Disable automatic system/app updates, and turn off Over the Air updates&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Power Options
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Power Off, Reboot, Bootloader Selection&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;second-menu&#34;&gt;Second Menu&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/debloat-amazon/toolbox2.jpg&#34; alt=&#34;Toolbox2&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;recommended-options&#34;&gt;Recommended Options&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Remove Lockscreen Ads&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This setups an automation sequence that constantly scans and removes amazon ads. Here are the detailed instructions:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click Remove Lockscreen Ads in Amazon Fire Toolbox&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Launch Automate Settings&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check &amp;ldquo;Run on system startup&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Import Adblocker script into Automate&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To import: Click Import from 3 dots on right, Select SD Card and click &amp;ldquo;Amazon Lockscreen Ads Remover V4.5&amp;rdquo; from root&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Return to Home screen of Automate and click the Ads Remover&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;optional-items-on-second-menu&#34;&gt;Optional Items on Second Menu&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Parental Control Hide&lt;/li&gt;
+&lt;li&gt;System Backup
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Excellent backup and restore tool for your tablet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Push and Pull
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;File Transfer to and from tablet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;User Management
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Add Accounts for Google, LinkedIn, Patreon, etc.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;YouTube Clients
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;APK files for Vanced and other YouTube alternative apps&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Screen Capturing
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Record or Screenshot on your tablet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sideload Apps
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Select APK files to upload OR search for APK files on internet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This tool is a fantastic way to debloat a new fire tablet and get greater functionality from it. The added utilities I rarely use, but can be very nice for some users.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,7 +257,69 @@
       <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
       
       <guid>https://christitus.com/debloat-android/</guid>
-      <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;
+&lt;h2 id=&#34;pre-requisites-for-using-adb&#34;&gt;Pre-Requisites for Using ADB&lt;/h2&gt;
+&lt;p&gt;Setup all of the following to use ADB&lt;/p&gt;
+&lt;h3 id=&#34;setup-computer-with-adb-platform-tools&#34;&gt;Setup Computer with ADB Platform Tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows Install with Chocolatey &lt;code&gt;choco install adb&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Linux Install with Terminal &lt;code&gt;sudo apt-get install android-tools-adb android-tools-fastboot&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;MacOS Install with Homebrew
+&lt;ul&gt;
+&lt;li&gt;Homebrew install - &lt;code&gt;ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ADB Homebrew Install - &lt;code&gt;brew cask install android-platform-tools&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;setup-phone-for-adb-debugging&#34;&gt;Setup Phone for ADB Debugging&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Settings, and select “About”.&lt;/li&gt;
+&lt;li&gt;Tap on “Build number” seven times.&lt;/li&gt;
+&lt;li&gt;Go back, and select “Developer options”.&lt;/li&gt;
+&lt;li&gt;Scroll down, and check the “Android debugging” or “USB debugging” entry under “Debugging”.&lt;/li&gt;
+&lt;li&gt;Plug your device into your computer.&lt;/li&gt;
+&lt;li&gt;On the computer, open up a terminal/command prompt and type adb devices.&lt;/li&gt;
+&lt;li&gt;A dialog should show on your device, asking you to allow usb debugging. Check “always allow”, and choose “OK”.
+&lt;ul&gt;
+&lt;li&gt;Note: If you don&amp;rsquo;t see this prompt on you device change the usb connection to MTP or File Transfer on the device&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;adb-commands---these-only-work-when-device-is-booted&#34;&gt;ADB Commands - These only work when device is booted&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb devices&lt;/code&gt; - shows all connected adb devices&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb shell&lt;/code&gt; - launches a shell on the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb shell pm list packages&lt;/code&gt; - list all installed packages on the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb shell pm list packages -3&amp;quot;|cut -f 2 -d &amp;quot;:&lt;/code&gt; - lists all user installed packages&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb push &amp;lt;local&amp;gt; &amp;lt;remote&amp;gt;&lt;/code&gt; - pushes the file &lt;local&gt; to &lt;remote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb pull &amp;lt;remote&amp;gt; [&amp;lt;local&amp;gt;]&lt;/code&gt; - pulls the file &lt;remote&gt; to &lt;local&gt;. If &lt;local&gt; isn’t specified, it will pull to the current folder.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb logcat&lt;/code&gt; - allows you to view the device log in real-time. You can use adb logcat -b radio to view radio logs, and adb logcat -C to view logs in colour&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb install &amp;lt;file&amp;gt;&lt;/code&gt; - installs the given .apk file to your device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb uninstall com.packagename&lt;/code&gt; - uninstalls package from shell pm list packages
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: if you encounter &amp;ldquo;[DELETE_FAILED_INTERNAL_ERROR]&amp;rdquo; type this to bypass:&lt;/em&gt; &lt;code&gt;adb shell pm uninstall --user 0 &amp;lt;appname&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot&lt;/code&gt; - reboots system&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot bootloader&lt;/code&gt; - reboots to bootloader&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot recovery&lt;/code&gt; - reboots into recovery mode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot fastboot&lt;/code&gt; - reboots into fastboot mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fastboot-commands---these-commands-work-when-device-is-in-bootloader-and-fastboot-mode&#34;&gt;Fastboot Commands - These commands work when device is in Bootloader and Fastboot Mode&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fastboot devices&lt;/code&gt; - shows all connected devices&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot reboot&lt;/code&gt; - reboots device - can add bootloader, recovery, and fastboot&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot oem device-info&lt;/code&gt; - shows oem bootloader status (unlocked or locked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot oem unlock&lt;/code&gt; - unlocks oem phones - &lt;em&gt;note: aosp and unlocked phones don&amp;rsquo;t need this&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flashing unlock&lt;/code&gt; - unlocks system for custom rom in pixel and other phones&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flashing unlock_critical&lt;/code&gt; - unlocks bootloader and system partitions - &lt;em&gt;note: this isn&amp;rsquo;t generally needed&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot format:ext4 userdata&lt;/code&gt; - format userdata on device - &lt;em&gt;note: this will erase your entire device&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot boot recovery.img&lt;/code&gt; - test recovery image without flashing&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash recovery recovery.img&lt;/code&gt; - flash recovery image then run &lt;code&gt;fastboot reboot recovery&lt;/code&gt; to boot into it.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash boot boot.img&lt;/code&gt; - flash boot image - this is the kernel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot -w&lt;/code&gt; - wipes device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot update &amp;lt;/path/to/your/Rom.zip&amp;gt;&lt;/code&gt; - flashes zip to the device&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -39,7 +328,191 @@
       <pubDate>Tue, 02 Jun 2020 21:28:09 -0500</pubDate>
       
       <guid>https://christitus.com/degoogle-apps/</guid>
-      <description>&lt;p&gt;This article goes over the apps that work and don&amp;rsquo;t work with a Degoogled phone without google play services installed&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article goes over the apps that work and don&amp;rsquo;t work with a Degoogled phone without google play services installed&lt;/p&gt;
+&lt;h2 id=&#34;aurora-store-apps-google-play-store-apks&#34;&gt;Aurora Store Apps (Google Play Store apks)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;App Name&lt;/th&gt;
+&lt;th&gt;State&lt;/th&gt;
+&lt;th&gt;Warnings&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Coinbase&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GoPro&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Keep Notes&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Google App&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Maps&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Google App&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Photos&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Google App&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kasa&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Login Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LastPass&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Crash on Startup&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lichess&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lyft&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;GPS and Google Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Microsoft Outlook&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Patreon&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ring&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Robinhood&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SKED&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SimpliSafe&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spotify&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None - Except On Initial Login&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Starbucks&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Steam&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stride&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Synology Drive&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Synology Memories&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Uber&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;GPS and Google Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Yi Home&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;**Note: Uber and Lyft can be used via mobile site. ex: &lt;a href=&#34;https://m.uber.com&#34;&gt;https://m.uber.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;f-droid-apps-free-and-open-source&#34;&gt;F-Droid Apps (Free and Open Source)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;App Name&lt;/th&gt;
+&lt;th&gt;Alternative To&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Files&lt;/td&gt;
+&lt;td&gt;Android Files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ImagePipe&lt;/td&gt;
+&lt;td&gt;Google Photos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Import Contacts&lt;/td&gt;
+&lt;td&gt;Google Contacts&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lemmy&lt;/td&gt;
+&lt;td&gt;Reddit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NewPipe&lt;/td&gt;
+&lt;td&gt;YouTube&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OSMAnd&lt;/td&gt;
+&lt;td&gt;Google Maps&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OpenVPN for Android&lt;/td&gt;
+&lt;td&gt;OpenVPN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Personal DNS Filtering&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Slide&lt;/td&gt;
+&lt;td&gt;Reddit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Twidere&lt;/td&gt;
+&lt;td&gt;Twitter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Twire&lt;/td&gt;
+&lt;td&gt;Twitch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;**Note: ImagePipe shrinks photos and does basic edits. I sync my photos with Synology Memories.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,7 +521,48 @@
       <pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate>
       
       <guid>https://christitus.com/amazon-fire-launcher/</guid>
-      <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;
+&lt;p&gt;The process to use Google Services and Googles Store instead is a bit involved but entirely doable on the Fire Tablets without having to root it. From then on, you don’t have to navigate the out of date and limited Amazon App Store.&lt;/p&gt;
+&lt;h3 id=&#34;here-is-the-process&#34;&gt;Here is the process:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable ADP USB Debugging (Settings -&amp;gt; Device -&amp;gt; Tap Serial 10 Times -&amp;gt; Select Developer options -&amp;gt; Turn ADP Debugging ON)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/07/ADP-Enable.png&#34; alt=&#34;ADP Enable&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable Downloads from Unknown Sources (Settings -&amp;gt; Security -&amp;gt; Allow Unknown Sources ON)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/07/Unknown-Sources.png&#34; alt=&#34;Unknown Sources&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Google Play Services
+&lt;ul&gt;
+&lt;li&gt;Plug Device into USB on Computer and run the Supertool as Administrator
+&lt;ul&gt;
+&lt;li&gt;On Tablet Select Always Allow this computer and press OK&lt;/li&gt;
+&lt;li&gt;Download this zip file &lt;a href=&#34;http://rootjunkysdl.com/files/?dir=Amazon%20Fire%205th%20gen/SuperTool&#34;&gt;http://rootjunkysdl.com/files/?dir=Amazon%20Fire%205th%20gen/SuperTool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Run 1-Amazon-Fire-5th-gen.bat&lt;/li&gt;
+&lt;li&gt;Select Install Google Play Services/Framework&lt;/li&gt;
+&lt;li&gt;Wait for it to Finish and Close the program&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Launch Google Play using Search on Home Screen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/07/Search-Play.png&#34; alt=&#34;Search Play&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sign-in to Google&lt;/li&gt;
+&lt;li&gt;Update Google Play Services (Note: you can type Google Play Services in or launch update from the notifications tray — This will take 5-10 minutes to update)&lt;/li&gt;
+&lt;li&gt;Install Nova Launcher from Play next&lt;/li&gt;
+&lt;li&gt;Download the following APK to change the Amazon Fire’s Default Launcher. Afterward, on the tablet open Google Chrome or Amazon Silk Browser enter this address: &lt;a href=&#34;http://bit.ly/amalaunch&#34;&gt;http://bit.ly/amalaunch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: This is the shortlink for https://github.com/BaronKiko/LauncherHijackV2/releases/download/2.1/LauncherHijackV2.1.apk Github project. It is open source and I encourage you to look over the project on your PC so you aren’t blindly installing things on your tablet.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install the HijackLauncherV2.apk and Open it&lt;/li&gt;
+&lt;li&gt;Select Nova Launcher in the App and hit Ok at the prompt&lt;/li&gt;
+&lt;li&gt;Go back to settings -&amp;gt; Accessibility -&amp;gt;To detect home button press -&amp;gt; Switch to On&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/07/HijackLauncher.png&#34; alt=&#34;Hijack Launcher&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Finished, Enjoy being able to use Google Services on your Amazon Fire!&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -12,7 +12,48 @@
       <pubDate>Fri, 17 Aug 2018 15:58:36 +0000</pubDate>
       
       <guid>https://christitus.com/remove-asterisk/</guid>
-      <description>&lt;p&gt;The following removal instructions go over how to completely remove Asterisk from your Linux Instance.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The following removal instructions go over how to completely remove Asterisk from your Linux Instance.&lt;/p&gt;
+&lt;h2 id=&#34;remove-and-reinstall-instructions&#34;&gt;REMOVE AND REINSTALL INSTRUCTIONS&lt;/h2&gt;
+&lt;p&gt;Here is how to remove Asterisk from a Linux server and reinstall from source.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pre-requirements: Download source, configure, make menuselect, and make. All done with root (use su) Example:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;su&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;###ENTER ROOT PASSWORD###&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;mkdir ~/build
+cd ~/build
+wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
+tar -xvf asterisk-14-current.tar.gz
+cd asterisk-14
+./contrib/scripts/install_prereq install
+./configure --with-jansson-bundled ##Note: you may not need jansson-bundled so omit this if needed##
+make menuselect
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;###Select any needed addons: MP3, etc.###&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;make&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Note: you can install asterisk 13, 15, or custom git asterisk branch (i.e. gvsip) instead of Asterisk-14 tar&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Once you have the project built, you now need to clean the old asterisk out and reboot&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;make uninstall&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;###OR to clean EVERYTHING###&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;make uninstall-all&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Once this is complete I like to reboot, and then run a &lt;strong&gt;make install&lt;/strong&gt; to install the different version of asterisk.&lt;/p&gt;
+&lt;h2 id=&#34;full-removal-no-reinstall&#34;&gt;FULL REMOVAL NO REINSTALL&lt;/h2&gt;
+&lt;p&gt;Now let’s say you just want to remove Asterisk and just don’t want it anymore. Well, that is far simpler. Just run the following commands and it will be gone forever&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;killall -9 safe_asterisk
+killall -9 asterisk
+systemctl disable asterisk ##Note: depending on the install this may not be enabled or was set to run via @reboot cron or daemon service - Mileage will vary##
+rm -rf /etc/asterisk
+rm -rf /var/log/asterisk
+rm -rf /var/lib/asterisk
+rm -rf /var/lib64/asterisk
+rm -rf /var/spool/asterisk
+rm -rf /usr/lib/asterisk
+rm -rf /usr/lib64/asterisk
+reboot
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;These instructions should work on any Linux Based system and it shouldn’t matter if it is Red Hat based or Debian based.&lt;/p&gt;</description>
     </item>
     
   </channel>

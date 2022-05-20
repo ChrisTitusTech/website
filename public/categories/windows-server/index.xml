@@ -12,7 +12,33 @@
       <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
       
       <guid>https://christitus.com/orphaned-shadow-copies/</guid>
-      <description>&lt;p&gt;In this article, I go over how to get rid of Orphaned Shadow Copies that do not get cleared out by issuing: &lt;code&gt;vssadmin shadows delete /all&lt;/code&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, I go over how to get rid of Orphaned Shadow Copies that do not get cleared out by issuing: &lt;code&gt;vssadmin shadows delete /all&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;steps-to-clear-out-all-orphaned-shadow-copies&#34;&gt;Steps to clear out all orphaned shadow copies&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vssadmin shadows delete /all&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vssadmin shadows list&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;verify orphaned shadow copies still exist&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Use the following command to resize shadow storage, consequently, clears out any shadow copies on that drive
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;vssadmin Resize ShadowStorage /For=C: /On=C: /MaxSize=300MB&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: Repeat this for each drive with orphaned shadow copies&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Afterward, do a shadows list to verify the shadow copies have been cleared out
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;This process can take a very long time for large drives with a lot of shadow copies.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;With all that finished, reset your shadow copies to either unbounded or 50-100 GB if you have space.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2018/10/shadow-copies.png&#34; alt=&#34;server-vss&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In conclusion, this issue has become less of an issue with the newer versions of Windows Server, but can still rear its ugly head from time to time. It’s important that you keep these pruned and functional, due to the fact a large number of shadow copies will bloat your server. This also can cause massive performance issues that will lock up a server. It is very important that you keep these manageable and functional for each server instance. In the day and age where virtualization has become so prevalent, you shouldn’t need many shadow copies.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -21,7 +47,34 @@
       <pubDate>Wed, 03 Oct 2018 15:45:56 +0000</pubDate>
       
       <guid>https://christitus.com/configuring-exchange-2019/</guid>
-      <description>&lt;p&gt;This article goes over what it takes for installing and configuring exchange 2019. This step-by-step guide shows you the requirements, installation steps, and basic configuration.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article goes over what it takes for installing and configuring exchange 2019. This step-by-step guide shows you the requirements, installation steps, and basic configuration.&lt;/p&gt;
+&lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Microsoft recommends 128 GB of memory. If in a medium size environment (100-1000 users) 32-64 GB will be sufficient.&lt;/li&gt;
+&lt;li&gt;Microsoft Windows Server 2012 R2/2016/2019&lt;/li&gt;
+&lt;li&gt;Co-Existence with Exchange 2013/2016 that are up-to-date&lt;/li&gt;
+&lt;li&gt;30 GB of free disk space, however, you should have plenty of TBs of storage available for the mailbox stores.&lt;/li&gt;
+&lt;li&gt;NTFS based file system&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;notable-improvements&#34;&gt;Notable Improvements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Exchange 2019 has the ability to now be installed on server core 2019.&lt;/li&gt;
+&lt;li&gt;Exchange Admin Console – https://server/ecp – Refined and matches Office 365 layout&lt;/li&gt;
+&lt;li&gt;Outlook Web Access has more features and a better look&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;things-i-wished-exchange-2019-had&#34;&gt;Things I wished Exchange 2019 had&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DKIM&lt;/strong&gt;… seriously, WTF Microsoft. Office 365 has this, therefore exchange 2019 should have this!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installing-exchange-2019&#34;&gt;Installing Exchange 2019&lt;/h2&gt;
+&lt;p&gt;This was a breeze, with only 2 pre-requirements missing on a server 2016 stock install. The only configuration during setup was the role (mailbox or edge) and naming the exchange organization. Check out this video below to see the time lapse install:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/xmDOdkOKQxQ&#34;&gt;https://youtu.be/xmDOdkOKQxQ&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;configuring-exchange-2019&#34;&gt;Configuring Exchange 2019&lt;/h2&gt;
+&lt;p&gt;Again, this was very easy with only a couple options needed before I was operational. Using only a mailbox role with no edge you only need to add your domain, send connector, and set an email address for mailboxes. Here is the basic configuration video:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/9n6JlEUS5fw&#34;&gt;https://youtu.be/9n6JlEUS5fw&lt;/a&gt;&lt;br&gt;
+_Note: Do not forget to add the MX, SPF, DMARC records where your domain registrar DNS resides. _&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I absolutely love Exchange 2019 due to the vast amount of improvements, that said, I am still bummed that they continue to not support DKIM through exchange server. Installing and configuring exchange 2019 was the easiest experience I’ve had to date, which is saying a lot! Overall I am liking the direction Microsoft is taking with the server line of products and I believe it will continue to have a very bright future, as long as they don’t do something stupid like including the Microsoft store.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,7 +83,25 @@
       <pubDate>Fri, 28 Sep 2018 19:42:47 +0000</pubDate>
       
       <guid>https://christitus.com/configuring-windows-server-2016-core/</guid>
-      <description>&lt;p&gt;This guide walks you through how to installing and configuring windows server 2016 core, afterward you will easily be able to add one to your environment with very little resources. Start off by using the video guide over the installation process. Once done, check the bullets below to help walk you through doing it in your infrastructure.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This guide walks you through how to installing and configuring windows server 2016 core, afterward you will easily be able to add one to your environment with very little resources. Start off by using the video guide over the installation process. Once done, check the bullets below to help walk you through doing it in your infrastructure.&lt;/p&gt;
+&lt;h4 id=&#34;remote-server-administration-tools-for-windows-10&#34;&gt;Remote Server Administration Tools for Windows 10&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/download/details.aspx?id=45520&#34;&gt;https://www.microsoft.com/en-us/download/details.aspx?id=45520&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2018/09/windows-server-2016.png&#34; alt=&#34;configure-core&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;steps-toconfiguring-windows-server-2016-core&#34;&gt;Steps to configuring windows server 2016 core&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Run &lt;code&gt;sconfig&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Configure Static IP&lt;/li&gt;
+&lt;li&gt;Set Computer Name&lt;/li&gt;
+&lt;li&gt;Join to Domain&lt;/li&gt;
+&lt;li&gt;Set Windows Update Settings to Download ONLY&lt;/li&gt;
+&lt;li&gt;Download and Install all Updates&lt;/li&gt;
+&lt;li&gt;Enable Remote Desktop and Remote Management&lt;/li&gt;
+&lt;li&gt;Change Telemetry to Security&lt;/li&gt;
+&lt;li&gt;Activate Windows&lt;/li&gt;
+&lt;li&gt;Reboot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;connecting-remotely-to-server-2016-core&#34;&gt;Connecting Remotely to Server 2016 Core&lt;/h3&gt;
+&lt;p&gt;Finally, we can now go back to our workstation and start utilizing and configuring windows server 2016 core. Once you have launched server manager verify you can connect after adding your server. Please note, this may take about 10-30 seconds so be patient after you add the server and look for any error messages. If you are adding this to the same domain and subnet, you should automatically connect with no issue.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,7 +110,14 @@
       <pubDate>Wed, 20 Jun 2018 20:30:49 +0000</pubDate>
       
       <guid>https://christitus.com/windows-server-2016-core-remote/</guid>
-      <description>&lt;p&gt;This walkthrough shows you how to remotely access Window Server 2016 Core in PowerShell. Windows Server 2016 Core is a great minimal install of windows server but doesn’t come with any desktop experience. This means we will be doing everything via command prompt or PowerShell for the initial setup. The great thing is you use Powershell and RSAT from a Windows 10 machine and working on the server is a snap. You get the ease of administration and the reliability and compact design of Core.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This walkthrough shows you how to remotely access Window Server 2016 Core in PowerShell. Windows Server 2016 Core is a great minimal install of windows server but doesn’t come with any desktop experience. This means we will be doing everything via command prompt or PowerShell for the initial setup. The great thing is you use Powershell and RSAT from a Windows 10 machine and working on the server is a snap. You get the ease of administration and the reliability and compact design of Core.&lt;/p&gt;
+&lt;h2 id=&#34;enable-psremote-powershell-remote&#34;&gt;Enable PSRemote (Powershell Remote)&lt;/h2&gt;
+&lt;p&gt;On Host – Windows Server 2016 Core&lt;br&gt;
+&lt;code&gt;Enable-PSRemoting -Force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Your Workstation &lt;br&gt;
+&lt;code&gt;Enter-PSSession -ComputerName 10.0.0.2&lt;/code&gt; &lt;br&gt;
+&lt;em&gt;Note: you can use netbios name here as well&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For any troubleshooting we will need to do make sure the initial setup is done by typing, &lt;code&gt;sconfig&lt;/code&gt; once this has been completed you will have set the static IP, opened remote access, activated windows, and ran windows update.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,7 +126,31 @@
       <pubDate>Thu, 31 Aug 2017 17:00:08 +0000</pubDate>
       
       <guid>https://christitus.com/taking-databases-offline-sql-query/</guid>
-      <description>&lt;p&gt;The following SQL query is for taking databases offline, drop the offline databases, or bring them all back online. This affects every database in your SQL instance, so be very careful when using these. The following three queries will save you a considerable amount of time if repurposing an instance.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The following SQL query is for taking databases offline, drop the offline databases, or bring them all back online. This affects every database in your SQL instance, so be very careful when using these. The following three queries will save you a considerable amount of time if repurposing an instance.&lt;/p&gt;
+&lt;h2 id=&#34;taking-databases-offline-and-then-dropping-them&#34;&gt;Taking databases offline and then dropping them&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;use master;
+declare @nsql nvarchar(max);
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
+&#39;ALTER DATABASE [&#39;+name+&#39;] SET OFFLINE WITH NO_WAIT;&#39;
+from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
+exec (@nsql)`
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once all databases are offline you can drop them to clear out the entire instance with this SQL query.&lt;br&gt;
+&lt;em&gt;Note: This is extremely destructive so please use this with care.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;warning-running-this-will-destroy-all-databases&#34;&gt;&lt;em&gt;WARNING&lt;/em&gt; Running this WILL DESTROY ALL DATABASES!!!&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;use master;
+declare @nsql nvarchar(max);
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
+&#39;DROP DATABASE [&#39;+name+&#39;];&#39;
+from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
+exec (@nsql)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;use-the-following-sql-query-to-take-all-databases-online&#34;&gt;Use the following SQL query to take all databases online&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;use master;
+declare @nsql nvarchar(max);
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
+&#39;ALTER DATABASE [&#39;+name+&#39;] SET ONLINE WITH NO_WAIT;&#39;
+from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
+exec (@nsql)
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -58,7 +160,23 @@
       
       <guid>https://christitus.com/cloud-migration/</guid>
       <description>&lt;h3 id=&#34;moving-to-the-cloud&#34;&gt;Moving to the Cloud&lt;/h3&gt;
-&lt;p&gt;The following article outlines what it takes for a cloud migration to Google Cloud Compute, Amazon Web Services, or Microsoft Azure means. Most businesses want to move to the “cloud” but have no idea what that means.&lt;/p&gt;</description>
+&lt;p&gt;The following article outlines what it takes for a cloud migration to Google Cloud Compute, Amazon Web Services, or Microsoft Azure means. Most businesses want to move to the “cloud” but have no idea what that means.&lt;/p&gt;
+&lt;p&gt;If you’re a small business you typically have a couple computers scattered around with one storage device. If you’re a medium or large business you probably already have several servers at a location in a contract. Moving to the cloud is often pitched to businesses using Software-as-a-Service replacing the current system with a web application that runs through your browser. While this is ideal, in most instances it isn’t practical. So you keep paying for a bloated IT infrastructure that is dated, isn’t as reliable, and unable to change with your business needs.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/02/pc-solution.png&#34; alt=&#34;PC Solution&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;performing-a-cloud-migration&#34;&gt;Performing a Cloud Migration&lt;/h3&gt;
+&lt;p&gt;Leverage Google Cloud Compute, Amazon Web Services, or Microsoft Azure to perform a cloud migration. Moving your servers will often end up costing between $100 – $400 per server a month depending on your environment. When you factor in that there is no capital expenditure, maintenance, or power costs this is a far cheaper solution than your current environment. You also gain a &lt;strong&gt;SUBSTANTIAL&lt;/strong&gt; increase in flexibility, performance, and reliability. So why hasn’t everyone transitioned to these services?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/02/tangled.png&#34; alt=&#34;tangled&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;migration-pains&#34;&gt;Migration Pains&lt;/h3&gt;
+&lt;p&gt;The main issue is getting a cloud migration completed. It’s hard to find businesses, technicians, or engineers that will do the migration. In the end, you should be paying these companies directly.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pitfalls&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Contracting a company that uses their own hardware and you pay them for substandard service and equipment on a monthly basis.&lt;/li&gt;
+&lt;li&gt;Under-estimating the extended downtime that is required for moving to these services. If you have 30+ servers it will take months for preparation, transfer time, and deployment.&lt;/li&gt;
+&lt;li&gt;Degraded service if you have to work in a hybrid environment. Working through a VPN for an extended time that it takes to complete the full migration.&lt;/li&gt;
+&lt;li&gt;Mass Storage – Most of the cost of using these services come from storage, and typically it’s not till you hit the petabytes that you’d run into ROI issues. As a general rule of thumb, anything less than 1000 Terabytes is more cost-effective using these services.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;I think every business should be leveraging this technology. The larger the business the harder the cloud migration will be. Small businesses I’ve done in the course of a day, whereas larger businesses take considerably longer. Stay the course and keep searching for talent capable of helping with this transition. I enjoy using all three of these major players in the market, however, for Website Hosting and Linux boxes I like Google Cloud Compute the most, and for businesses already running Office 365 Microsoft Azure makes for the easiest transition.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -67,7 +185,17 @@
       <pubDate>Mon, 31 Oct 2016 20:29:26 +0000</pubDate>
       
       <guid>https://christitus.com/exclude-shared-mailboxes-exchange/</guid>
-      <description>&lt;p&gt;This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don’t get spam in them.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2016/10/exclude-shared-mailboxes.png&#34; alt=&#34;Exclude Shared Mailboxes&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
+&lt;h4 id=&#34;connect-to-o365-in-ps&#34;&gt;Connect to O365 in PS:&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;$UserCredential = Get-Credential
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+Import-PSSession $Session
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;exclude-shared-mailboxes-with-this-filter-command&#34;&gt;Exclude Shared Mailboxes with this filter command:&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;set-DynamicDistributionGroup -Name &amp;quot;all@yourcompany.com&amp;quot;  -RecipientFilter {((RecipientType -eq &#39;UserMailbox&#39;) -and -not (RecipientTypeDetailsValue -eq &#39;SharedMailbox&#39;))}&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Afterward, Verify in Exchange Admin Console. You always want to prevent your shared mailboxes from getting spammed in a distribution group. Consequently, I’d highly recommend setting a requirement to send to-these dynamic mailboxes. This will prevent every employee from sending emails to everyone, which will be a bad thing.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -76,7 +204,10 @@
       <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
       
       <guid>https://christitus.com/force-active-directory-sync/</guid>
-      <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”
+Start-ADSyncSyncCycle -PolicyType Delta
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is great for forcing a sync of time-sensitive distribution list updates or user updates. If you find yourself doing this frequently make a PowerShell script for ease of access.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -85,7 +216,14 @@
       <pubDate>Wed, 03 Aug 2016 23:19:49 +0000</pubDate>
       
       <guid>https://christitus.com/winsxs-free-space-server/</guid>
-      <description>&lt;p&gt;Run the following commands if you are running low on C: drive space. Generally, this is caused by windows updates and you need to clear WinSxS free space. Do this in your PowerShell prompt and you will free up a substantial amount of space.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Run the following commands if you are running low on C: drive space. Generally, this is caused by windows updates and you need to clear WinSxS free space. Do this in your PowerShell prompt and you will free up a substantial amount of space.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Please Note: You have to run updates on Windows Server 2008 if you are far behind and these commands don’t exist!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;MASTER CLEANUP: (Run this First)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Dism.exe /online /Cleanup-Image /SPSuperseded&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;FOLLOWUP:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Windows 2008 Use: Dism.exe /online /Cleanup-Image /StartComponentCleanup
+Windows 2012 Use: Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -94,7 +232,45 @@
       <pubDate>Thu, 21 Jul 2016 13:31:35 +0000</pubDate>
       
       <guid>https://christitus.com/target-account-name-domain-controller-error/</guid>
-      <description>&lt;p&gt;This article explains how to fix the “Target account name is incorrect” error you are getting on your domain controllers. This usually stems from a system administrator doing a snapshot revert on the Domain Controller which messes up the KDC service and domain replication. It also can happen if you had a DC offline for a long time 30+ days.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article explains how to fix the “Target account name is incorrect” error you are getting on your domain controllers. This usually stems from a system administrator doing a snapshot revert on the Domain Controller which messes up the KDC service and domain replication. It also can happen if you had a DC offline for a long time 30+ days.&lt;/p&gt;
+&lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Stop and disable the Key Distribution Center (KDC) service on the troubled domain controller&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;net stop kdc
+sc config &amp;quot;kdc&amp;quot; start= disabled
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Please Note: space is REQUIRED after start=&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;Alternatively, you can do this from the Services Panel&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Purge the ticket cache on the local domain controller.
+&lt;code&gt;klist purge&lt;/code&gt;&lt;br&gt;
+_Note: you can use &lt;code&gt;klist tickets&lt;/code&gt; to view tickets before purging them&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Afterward, Reboot Troubled Domain Controller&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reset the troubled domain controller’s account password to the primary domain controller (PDC) emulator master using netdom /resetpwd. Find PDC using: netdom query fsmo&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;netdom /RESETPWD /s:pdcserver.domain.local /ud:domain\Administrator /pd:*&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Synchronize the domain directory partition of the replication partner with the PDC emulator master&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;repadmin /kcc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once more, Reboot the Troubled DC and start and enable the KDC on the local domain controller:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;sc config &amp;quot;kdc&amp;quot; start= auto
+net start KDC
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Typically I wait about 5-10 minutes after this and start doing checks to see if it is now replicating properly. You can also force a replicate using repadmin /replicate but usually not necessary. In the end, make sure you check to make you aren’t getting the “Target account name is incorrect” error anymore.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -103,7 +279,20 @@
       <pubDate>Mon, 04 Jul 2016 16:44:02 +0000</pubDate>
       
       <guid>https://christitus.com/prevent-autodiscover-exchange-server/</guid>
-      <description>&lt;p&gt;This article teaches you how to prevent autodiscover from happening on Exchange Server. This is important on an Office 365 migration when you still need to keep your local exchange server from resolving.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article teaches you how to prevent autodiscover from happening on Exchange Server. This is important on an Office 365 migration when you still need to keep your local exchange server from resolving.&lt;/p&gt;
+&lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
+&lt;p&gt;First change your local DNS&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;autodiscover.yourdomain.com cname autodiscover.office365.com&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;(Option 1)Next, you need to disable SCP site-wide. I did this performing a GPO Registry edit.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\AutoDiscover&lt;/code&gt;&lt;br&gt;
+Notex.0 in the above registry path corresponds to the Outlook version (16.0 = Outlook 2016, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).&lt;br&gt;
+&lt;code&gt;ExcludeScpLookup DWORD 1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;(Option 2)Now you can also do this with a Reg file. Name it SCPDisable.reg&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Windows Registry Editor Version 5.00  
+[HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Outlook\AutoDiscover]  
+&amp;quot;ExcludeScpLookup&amp;quot;=dword:00000001`
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above is Office 2010, Notice the 14.0, and make sure you change it to the version you have.&lt;/p&gt;
+&lt;p&gt;Now simply create a new profile and your domain should now point to Office 365 by default.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -112,7 +301,11 @@
       <pubDate>Mon, 04 Jul 2016 16:32:21 +0000</pubDate>
       
       <guid>https://christitus.com/grant-full-access-public-folders/</guid>
-      <description>&lt;p&gt;This post goes over how to grant full access to all public folders for a user in Microsoft Exchange. I recently was migrating all public folders from an Exchange 2010 to Office 365 Environment and didn’t have access to some of the folders. Consequently, this solution saved me a lot of time from doing it through a GUI.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post goes over how to grant full access to all public folders for a user in Microsoft Exchange. I recently was migrating all public folders from an Exchange 2010 to Office 365 Environment and didn’t have access to some of the folders. Consequently, this solution saved me a lot of time from doing it through a GUI.&lt;/p&gt;
+&lt;h3 id=&#34;command&#34;&gt;Command&lt;/h3&gt;
+&lt;p&gt;Enter the following in Exchange Management Shell:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Get-PublicFolder –Identity &amp;quot;\Root Folder Name&amp;quot; -Recurse | Add-PublicFolderAdministrativePermission -User &amp;quot;ctitus&amp;quot; -AccessRights AllExtendedRights&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This will recurse the root folder and grant all rights to the user you specify.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -121,7 +314,13 @@
       <pubDate>Sat, 26 Dec 2015 05:41:50 +0000</pubDate>
       
       <guid>https://christitus.com/move-website-linux-iis/</guid>
-      <description>&lt;p&gt;This guide goes over how to Move Website from Linux to IIS. If you’re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This guide goes over how to Move Website from Linux to IIS. If you’re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.&lt;/p&gt;
+&lt;h3 id=&#34;migration&#34;&gt;Migration&lt;/h3&gt;
+&lt;p&gt;The database migration from MySQL to MS SQL is actually pretty easy since you just push it through a large query, but I didn’t really want to mess with it, so I stuck with MySQL.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.mysql.com/downloads/mysql/&#34;&gt;Download and Install MySQL for Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With that down setting up IIS is also extremely simple now, which is quite surprising given how unfriendly IIS 6 was. The interface is pretty much the same, so you can do it the way you have always known, but now they have added multiple friendly tools in the form of &lt;strong&gt;Microsoft WebMatrix&lt;/strong&gt; and &lt;strong&gt;Web Platform Installer&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://go.microsoft.com/fwlink/?LinkID=286266&#34;&gt;Download Microsoft WebMatrix (official Microsoft Link)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Using the Web Platform Install you can just select whatever install you want (WordPress for me) and click install. It grabs all the dependencies and installs them for you, and from here I had a fresh WordPress install. I did a simple import and changed a couple of settings that were reset and was back up and running. Overall a simple migration, and pretty happy with IIS 10 (What happened to IIS 9 we will never know…)&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -130,7 +329,36 @@
       <pubDate>Tue, 24 Mar 2015 18:43:46 +0000</pubDate>
       
       <guid>https://christitus.com/idrac-dell-server/</guid>
-      <description>&lt;p&gt;I recently had a server freeze up when I wasn’t on-site and needed to power cycle it. I had configured iDrac before but it was not responsive. Here are some useful commands that can configure, reboot, and reset the iDrac function on Dell Servers. The commands below are run from a command prompt on the server (unless otherwise stated) in the (C:\Program Files\Dell\SysMgt\idrac) path.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I recently had a server freeze up when I wasn’t on-site and needed to power cycle it. I had configured iDrac before but it was not responsive. Here are some useful commands that can configure, reboot, and reset the iDrac function on Dell Servers. The commands below are run from a command prompt on the server (unless otherwise stated) in the (C:\Program Files\Dell\SysMgt\idrac) path.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2015/03/idrac.png&#34; alt=&#34;iDrac&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Remote Commands (Workstation or another server)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;racadm -r -u -p&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Example: &lt;code&gt;racadm -r 10.1.1.1 -u root -p calvin getsysinfo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;DEFAULT USER: root&lt;/p&gt;
+&lt;p&gt;DEFAULT PASS: calvin&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;iDrac Information&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;racadm getsysinfo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reset and Factory Defaults&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;racadm racreset&lt;/code&gt; (soft Reset)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;racadm racresetcfg&lt;/code&gt; (Hard Reset – Resets IP/Account settings back to factory default)&lt;/p&gt;
+&lt;p&gt;NOTE: Resets Default IP &amp;gt; 192.168.0.120&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Network Setup&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;racadm config -g cfgLanNetworking -o cfgNicEnable 1
+racadm config -g cfgLanNetworking -o cfgNicIpAddress 192.168.0.120
+racadm config -g cfgLanNetworking -o cfgNicNetmask 255.255.255.0
+racadm config -g cfgLanNetworking -o cfgNicGateway 192.168.0.120
+racadm config -g cfgLanNetworking -o cfgNicUseDHCP 0
+racadm config -g cfgLanNetworking -o cfgDNSServersFromDHCP 0
+racadm config -g cfgLanNetworking -o cfgDNSServer1 192.168.0.5
+racadm config -g cfgLanNetworking -o cfgDNSServer2 192.168.0.6
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;User Setup&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;racadm config -g cfgUserAdmin -o cfgUserAdminUserName -i 2 john
+racadm config -g cfgUserAdmin -o cfgUserAdminPassword -i 2 123456
+racadm config -g cfgUserAdmin -o cfgUserAdminEnable -i 2 1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To verify the new user, use one of the following commands:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;racadm getconfig -u john
+racadm getconfig –g cfgUserAdmin –i 2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;From here you will use your web browser to enter the iDrac configuration GUI and finish setting up SMTP servers, alerts and other things. I only recommend the above from command line since it gives direct access when the web browser isn’t functions due to bad IP address or invalid username.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -139,7 +367,23 @@
       <pubDate>Fri, 06 Mar 2015 23:56:01 +0000</pubDate>
       
       <guid>https://christitus.com/gfi-archiver-resource-usage/</guid>
-      <description>&lt;p&gt;Does your GFI Archiver resource usage SQL process ballon over 8GB? If so, the following procedure will reduce usage by about half and fix many performance issues.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Does your GFI Archiver resource usage SQL process ballon over 8GB? If so, the following procedure will reduce usage by about half and fix many performance issues.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Stop all MailArchiver and SQL services&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a backup of ..MailArchiverStoreDataproduct.config&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit product.config and add the following key within the &lt;code&gt;&amp;lt;AppSettings&amp;gt;&lt;/code&gt; section: &lt;code&gt;&amp;lt;add key=&amp;quot;MaxPoolSize&amp;quot; value=&amp;quot;20&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Re-start the services&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;*Note GFI has built-in scripts made to stop all NON-SQL services. Run the Stop script then stop SQL Server Instance, When starting start SQL Server Service before running a start script. The scripts default location are: ..MailArchiver\Tools\Scripts&lt;/p&gt;
+&lt;p&gt;After performing this procedure the SQL Server Process is now under 4GB or cut in half from their previous usage. In closing, this type of tweak is vital especially if you are running out of resources on the source server or you are running into performance problems within GFI Archiver.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -148,7 +392,42 @@
       <pubDate>Mon, 09 Dec 2013 21:33:37 +0000</pubDate>
       
       <guid>https://christitus.com/outlook-security-certificate/</guid>
-      <description>&lt;p&gt;The following article fixes the Outlook security certificate error your users get when they connect to your exchange server internally. This is typically from installing a 3rd party SSL Certificate.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The following article fixes the Outlook security certificate error your users get when they connect to your exchange server internally. This is typically from installing a 3rd party SSL Certificate.&lt;/p&gt;
+&lt;p&gt;(Original Article Link: &lt;a href=&#34;http://community.spiceworks.com/how_to/show/48384-outlook-the-name-of-the-security-certificate-is-invalid-or-does-not-match-the-name-of-the-site&#34;&gt;http://community.spiceworks.com/how_to/show/48384-outlook-the-name-of-the-security-certificate-is-invalid-or-does-not-match-the-name-of-the-site&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Issue: Outlook anywhere works fine with third party cert, but internal Outlook clients get cert error with NETBIOS name of Exchange server.&lt;/p&gt;
+&lt;p&gt;Example: &lt;code&gt;https://NetBIOS_name.contoso.com/autodiscover/autodiscover.xml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Note: I tested this on Exchange 2010 as well.&lt;/p&gt;
+&lt;h3 id=&#34;outlook-security-certificate-resolution&#34;&gt;Outlook Security Certificate Resolution&lt;/h3&gt;
+&lt;p&gt;Change the URLs for the appropriate Exchange 2007 components. To do this, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Start the Exchange Management Shell.&lt;/li&gt;
+&lt;li&gt;Change the Autodiscover URL in the Service Connection Point. The Service Connection Point is stored in the Active Directory directory service. To change this URL, type the following command, and then press Enter:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;`Set-ClientAccessServer -Identity CAS_Server_Name -AutodiscoverServiceInternalUri https://mail.contoso.com/autodiscover/autodiscover.xml`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Change the InternalUrl attribute of the EWS. To do this, type the following command, and then press Enter:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;`Set-WebServicesVirtualDirectory -Identity &amp;quot;CAS_Server_NameEWS (Default Web Site)&amp;quot; -InternalUrl https://mail.contoso.com/ews/exchange.asmx`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Change the InternalUrl attribute for Web-based Offline Address Book distribution. To do this, type the following command, and then press Enter:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;`Set-OABVirtualDirectory -Identity &amp;quot;CAS_Server_nameoab (Default Web Site)&amp;quot; -InternalUrl https://mail.contoso.com/oab`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Change the InternalUrl attribute of the UM Web service. To do this, type the following command, and then press Enter:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;`Set-UMVirtualDirectory -Identity &amp;quot;CAS_Server_Nameunifiedmessaging (Default Web Site)&amp;quot; -InternalUrl https://mail.contoso.com/unifiedmessaging/service.asmx`
+
+ _Note: The command in step 5 is required only in an Exchange 2007 environment._ This command no longer exists in an Exchange 2010 environment. Instead, the WebServices URL is used for this purpose.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Open IIS Manager.&lt;/li&gt;
+&lt;li&gt;Expand the local computer, and then expand Application Pools.&lt;/li&gt;
+&lt;li&gt;Right-click MSExchangeAutodiscoverAppPool, and then click Recycle.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now that you have finished, you will not see anymore certificate popups. I highly recommend issuing a proper certificate if possible, but this typically happens when your active directory is not resolvable from the outside world. Such as &lt;code&gt;contsco.local&lt;/code&gt; instead of &lt;code&gt;microsoft.com&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -157,7 +436,14 @@
       <pubDate>Mon, 15 Apr 2013 21:46:08 +0000</pubDate>
       
       <guid>https://christitus.com/rename-folders-mapped-drive/</guid>
-      <description>This error message is displayed and I cannot rename folders on the mapped drive.</description>
+      <description>&lt;p&gt;This error message is displayed and I cannot rename folders on the mapped drive. By making a group policy change I was able to make this error go away.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;The drive that this file or folder is stored on does not allow long file names, or names containing blanks or any of the following characters: / : , ; * ? &amp;lt; &amp;gt; |&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;solution-create-a-gpo-to-fix&#34;&gt;Solution: Create a GPO to fix&lt;/h2&gt;
+&lt;p&gt;To resolve this problem, turn off Fast Logon Optimization. I recommend creating a GPO in your domain controller to achieve this. If its an isolated instance to one PC, you can use gpedit.msc to enforce it on that one PC.&lt;/p&gt;
+&lt;h3 id=&#34;group-policy-settings-to-change&#34;&gt;Group Policy Settings to Change&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Computer Configuration\Administrative Templates\System\Logon\Always wait for the network at computer startup and logon
+User Configuration\Administrative Templates\System\Scripts\Run logon scripts synchronously
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -166,7 +452,13 @@
       <pubDate>Tue, 09 Apr 2013 16:50:22 +0000</pubDate>
       
       <guid>https://christitus.com/mais-queue-folder/</guid>
-      <description>&lt;p&gt;The Import service can get stuck and this will stop all the mail in the MAIS Queue Folder. These are the emails that have not been processed and added to GFI Archiver yet, so do not delete them. Below is the fix on how I restored the import service and processed all the stuck email.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The Import service can get stuck and this will stop all the mail in the MAIS Queue Folder. These are the emails that have not been processed and added to GFI Archiver yet, so do not delete them. Below is the fix on how I restored the import service and processed all the stuck email.&lt;/p&gt;
+&lt;h2 id=&#34;the-fix&#34;&gt;The Fix&lt;/h2&gt;
+&lt;p&gt;Deleted all files &lt;strong&gt;EXCEPT&lt;/strong&gt; for *.eml from &lt;code&gt;C:\Program Files (x86)\GFIMailArchiver\MAIS\Queue&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Renamed all *.eml files to *.txt (Command Prompt: ren *.eml *.txt)&lt;/p&gt;
+&lt;p&gt;Move all files to &lt;code&gt;C:\Program Files (x86)\GFIMailArchiver\MAIS\Pickup&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;in-closing&#34;&gt;In Closing&lt;/h2&gt;
+&lt;p&gt;This will force GFI Mailarchiver to reprocess all these emails. I’d highly recommend doing all these operations from a command prompt as the sheer number of files in the folders can potentially lock up your server when using a Graphic User Interface. Once you restart your processes wait for the MAIS Queue Folder to reduce in size before checking again.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -175,7 +467,19 @@
       <pubDate>Tue, 09 Apr 2013 16:39:37 +0000</pubDate>
       
       <guid>https://christitus.com/moving-gfi-mailarchiver/</guid>
-      <description>&lt;p&gt;The following walkthrough shows you the process of moving GFI MailArchiver to another server.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The following walkthrough shows you the process of moving GFI MailArchiver to another server.&lt;/p&gt;
+&lt;p&gt;These KB articles will assist you in the moving and migration of this server. The process is very involved and requires copying all the data files over to the new server. Afterward, backing up every single SQL database (archive store) and detaching/copying them. From there you reattach the stores and reinstall GFI MailArchiver on the new server.&lt;/p&gt;
+&lt;h4 id=&#34;here-is-the-article-describing-the-data-file-moves-andre-installationon-the-new-server&#34;&gt;Here is the Article describing the data file moves and re-installation on the new server.&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Please Note: DO NOT re-install GFI before moving SQL Databases from&lt;/em&gt; the second &lt;em&gt;article unless you plan on leaving SQL on old server!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://kb.gfi.com/articles/SkyNet_Article/Is-it-possible-to-move-MailArchiver-to-a-new-server?retURL=%2Fapex%2FSupportHome&amp;amp;popup=true&#34;&gt;http://kb.gfi.com/articles/SkyNet_Article/Is-it-possible-to-move-MailArchiver-to-a-new-server?retURL=%2Fapex%2FSupportHome&amp;amp;popup=true&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;this-articledescribes-the-actual-sql-server-move&#34;&gt;This Article describes the actual SQL Server Move&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;http://kb.gfi.com/articles/SkyNet_Article/How-to-move-a-GFI-MailArchiver-database-from-one-Microsoft-SQL-Server-to-another?retURL=%2Fapex%2FSupportHome&amp;amp;popup=true&#34;&gt;http://kb.gfi.com/articles/SkyNet_Article/How-to-move-a-GFI-MailArchiver-database-from-one-Microsoft-SQL-Server-to-another?retURL=%2Fapex%2FSupportHome&amp;amp;popup=true&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/moving-gfi-mailarchiver/moving-gfi-mailarchiver-2/&#34; alt=&#34;Moving GFI MailArchiver&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;installation-notes&#34;&gt;Installation Notes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I had to switch to SQL authentication because my old archive store kept popping up errors.&lt;/li&gt;
+&lt;li&gt;A very long process, because of the massive amount of emails in this archiver. Depending on the business it can take a few days or weeks!&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -184,7 +488,27 @@
       <pubDate>Tue, 09 Apr 2013 16:24:26 +0000</pubDate>
       
       <guid>https://christitus.com/configuring-sql-authentication/</guid>
-      <description>&lt;p&gt;Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: This article is taken from &lt;a href=&#34;http://kb.gfi.com/articles/SkyNet_Article/How-to-configure-SQL-Server-2005-2008-to-accept-SQL-Authentication&#34;&gt;http://kb.gfi.com/articles/SkyNet_Article/How-to-configure-SQL-Server-2005-2008-to-accept-SQL-Authentication&lt;/a&gt; and all credit goes to them for the writing. I’m posting it here simply as a reference in case&lt;/em&gt; there _site changes the above link. _&lt;/p&gt;
+&lt;h3 id=&#34;fix-authentication-in-gfi-reportcenter&#34;&gt;Fix Authentication in GFI ReportCenter&lt;/h3&gt;
+&lt;p&gt;In order to use SQL Server authentication, you must first configure your server using the steps below.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Right-click on the server node and select ‘Properties’&lt;/li&gt;
+&lt;li&gt;Select ‘Security’ from the left menu under ‘Select a page’&lt;/li&gt;
+&lt;li&gt;Under ‘Server Authentication’, select the ‘SQL Server and Windows Authentication mode option’&lt;/li&gt;
+&lt;li&gt;Click ‘OK’ to close the dialog&lt;/li&gt;
+&lt;li&gt;Right click on the server node and choose ‘Restart’ for the changes to take effect&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;sql-server-authentication-login&#34;&gt;SQL Server authentication login&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;In the server node expand ‘Security’ and ‘Logins’&lt;/li&gt;
+&lt;li&gt;Right click on the login name and select ‘Properties’&lt;/li&gt;
+&lt;li&gt;Enter a password and confirm the password for the login&lt;/li&gt;
+&lt;li&gt;Select ‘Status’ from the left menu under ‘Select a page’&lt;/li&gt;
+&lt;li&gt;Set the ‘Login’ option to ‘Enabled’&lt;/li&gt;
+&lt;li&gt;Click ‘OK’ to close the dialog&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once you have walked through configuring SQL authentication, you can now change your instance to the type you need.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -193,7 +517,22 @@
       <pubDate>Thu, 04 Apr 2013 19:04:14 +0000</pubDate>
       
       <guid>https://christitus.com/update-is-pending/</guid>
-      <description>&lt;p&gt;When installing a program I kept getting the prompt below that an update is pending. Even after a restart, this would display, therefore I changed these registry keys to clear up the issue.&lt;/p&gt;</description>
+      <description>&lt;p&gt;When installing a program I kept getting the prompt below that an update is pending. Even after a restart, this would display, therefore I changed these registry keys to clear up the issue.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Microsoft Server setup cannot continue because a restart from a previous installation or update is pending.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;the-fix-for-an-update-is-pending&#34;&gt;The Fix for an update is pending&lt;/h2&gt;
+&lt;p&gt;The following Registry keys control this error message. If you have rebooted and are still experiencing this issue, clear out these keys and relaunch your installer.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Updates\UpdateExeVolatile
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\ControlSession Manager\PendingFileRenameOperations
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Setup MSI displays an error message if one of the following conditions is true:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The value of the **UpdateExeVolatile **registry key is anything other than 0.&lt;/li&gt;
+&lt;li&gt;The **PendingFileRenameOperations **registry key has any value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;microsoft-knowledgebase-article&#34;&gt;Microsoft Knowledgebase article&lt;/h3&gt;
+&lt;p&gt;You can read this article about regedit.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://technet.microsoft.com/en-us/library/cc164360(v=exchg.80).aspx&#34;&gt;http://technet.microsoft.com/en-us/library/cc164360(v=exchg.80).aspx&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -202,7 +541,19 @@
       <pubDate>Thu, 26 Jul 2012 20:31:21 +0000</pubDate>
       
       <guid>https://christitus.com/exchange-primary-domain-controller/</guid>
-      <description>&lt;p&gt;If you had the misfortune of installing Exchange on Primary Domain Controller you will experience some pain when doing a reboot. Typically it will take 10-15 minutes before it restarts and up to 30 minutes to start the Microsoft Exchange Information Store. Consequently, what is really happening in the background is the IS service is being terminated incorrectly on shutdown and the store is left in a “DIRTY” shutdown state. This is very bad on several levels and can cause the Store to corrupt and not start at all, which can be catastrophic.&lt;/p&gt;</description>
+      <description>&lt;p&gt;If you had the misfortune of installing Exchange on Primary Domain Controller you will experience some pain when doing a reboot. Typically it will take 10-15 minutes before it restarts and up to 30 minutes to start the Microsoft Exchange Information Store. Consequently, what is really happening in the background is the IS service is being terminated incorrectly on shutdown and the store is left in a “DIRTY” shutdown state. This is very bad on several levels and can cause the Store to corrupt and not start at all, which can be catastrophic.&lt;/p&gt;
+&lt;p&gt;Luckily, it’s a simple fix and all you have to do is shut down the services before restarting. Below is a script that does it automatically. So, just plug it into a .cmd or .bat file and run.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@ECHO OFF
+ECHO ARE YOU SURE YOU WANT TO RESTART SERVER??
+pause
+net stop msexchangeadtopology /y
+net stop msftesql-exchange /y
+net stop msexchangeis /y
+net stop msexchangesa /y
+net stop iisadmin /y
+ECHO DONE STOPING SERVICES REBOOT NOW!
+pause
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I hope this helps you and keeps your server running until you are able to install it on another server. That said, try to avoid installing exchange on primary domain controller at all costs. You will avoid so many headaches by doing this.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -211,7 +562,44 @@
       <pubDate>Wed, 23 Mar 2011 15:35:23 +0000</pubDate>
       
       <guid>https://christitus.com/disable-outlook-anywhere-in-group-policy-object-gpo/</guid>
-      <description>By default the standard outlk12.adm templates do not come with a configuration of Outlook Anywhere.</description>
+      <description>&lt;p&gt;By default the standard outlk12.adm templates do not come with a configuration of Outlook Anywhere. You can configure the “&lt;strong&gt;Configure Outlook Anywhere user interface options&lt;/strong&gt;” options to disable or grey out the settings. However, this DOES NOT disable Outlook anywhere, just user interaction with it.&lt;/p&gt;
+&lt;p&gt;You will need to download a new administrative template that Microsoft released in this &lt;a href=&#34;http://support.microsoft.com/kb/961112&#34;&gt;hotfix&lt;/a&gt;. If you don’t like reading Microsoft’s wonderful support site instructions or Microsoft changes their support site after this blog post, here is the file and instructions paraphrased.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Download Add-On Outlook Anywhere Administrative Template here…&lt;a href=&#34;http://localhost/images/2011/03/article-961112.zip&#34;&gt;article-961112&lt;/a&gt; (unzip to reveal article-961112.adm file).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the Group Policy Object Editor add the Article-961112.adm file:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Right-click Administrative Templates and click Add/Remove Templates.&lt;/p&gt;
+&lt;p&gt;In the Add/Remove Templates dialog box click Add.&lt;/p&gt;
+&lt;p&gt;In the Policy Templates dialog box locate and select the Article-961112.adm file. Click Open.&lt;/p&gt;
+&lt;p&gt;Click Close in the Add/Remove Templates dialog box.&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Under User Configuration in Administrative Templates expand the policy node labeled Article 961112 Policy Settings. (Note: You may see this under Classic Administrative Templates in a sub-menu)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select the Outlook Anywhere (RPC/HTTP) node to list the following policies under the Setting column in the right-pane:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;RPC/HTTP Connection Flags -&amp;gt; Set to Enabled -&amp;gt; No Flags&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Proxy Server Name -&amp;gt; Do not change&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Only Connect if Proxy Server certificate has this principle name -&amp;gt; Do not change&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Proxy authentication Setting -&amp;gt; Do not change&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Double-click each policy to configure the appropriate RPC/HTTP setting for your Outlook clients.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
@@ -220,7 +608,14 @@
       <pubDate>Tue, 22 Mar 2011 21:59:02 +0000</pubDate>
       
       <guid>https://christitus.com/target-specific-people-or-computers-with-item-level-targeting-in-gpos/</guid>
-      <description>&lt;p&gt;Using Group Policy Objects can be a huge time saver, but if used improperly can be a big headache. Once you’ve messed around with GPO settings enough, you quickly figure out that you need to create new GPOs for specific programs, events, etc… that are not all in one GPO. This gives you a lot more flexibility and makes it very easy to track down troublesome GPO related issues when done properly.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Using Group Policy Objects can be a huge time saver, but if used improperly can be a big headache. Once you’ve messed around with GPO settings enough, you quickly figure out that you need to create new GPOs for specific programs, events, etc… that are not all in one GPO. This gives you a lot more flexibility and makes it very easy to track down troublesome GPO related issues when done properly.&lt;/p&gt;
+&lt;p&gt;Now lets say you create a Power Savings GPO that you want to apply only to computers that meet certain conditions. WMI, Security, and Site Filtering are all too broad for this task, and you want to use Item-Level Targeting. After you create your Group Policy Object you will need to add this setting to the GPO.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;In Group Policy Management Settings&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;-User Configuration -&amp;gt; Preferences -&amp;gt; Control Panel -&amp;gt; Regional Options&lt;/p&gt;
+&lt;p&gt;-Right-Click and Select New&lt;/p&gt;
+&lt;p&gt;-Navigate to Common Tab&lt;/p&gt;
+&lt;p&gt;-Check Item-Level Targeting and Press Targeting…&lt;/p&gt;
+&lt;p&gt;From here you will be able to select tons of critaria that you want to meet for your GPO. This can be system requirements to install a program, or only select certain Operating Systems. You can also add is not tags that will rule out any computer that meet that criteria. The options are limitless and its very easy to incorporate in your GPO. Personally, I never use the often complicated and time consuming WMI Filters anymore.&lt;/p&gt;</description>
     </item>
     
   </channel>

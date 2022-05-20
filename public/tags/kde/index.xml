@@ -12,7 +12,27 @@
       <pubDate>Tue, 20 Jul 2021 14:46:40 -0500</pubDate>
       
       <guid>https://christitus.com/bspwm-on-KDE/</guid>
-      <description>&lt;p&gt;This goes over switching the window manager of KDE to bspwm.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This goes over switching the window manager of KDE to bspwm.&lt;/p&gt;
+&lt;h2 id=&#34;dependency-installs&#34;&gt;Dependency Installs&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt install bspwm
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+&lt;p&gt;Create three files with the following contents&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir -p ~/.config/bspwm
+mkdir -p ~/.config/sxhkd
+wget -O ~/.config/bspwm/bspwmrc https://raw.githubusercontent.com/ChrisTitusTech/BSPWM-on-KDE/main/bspwmrc
+wget -O ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/ChrisTitusTech/BSPWM-on-KDE/main/sxhkdrc
+chmod +x ~/.config/bspwm/bspwmrc
+chmod +x ~/.config/sxhkd/sxhkdrc
+sudo wget -O /usr/share/xsessions/plasma-bspwm.desktop https://raw.githubusercontent.com/ChrisTitusTech/BSPWM-on-KDE/main/plasma-bspwm.desktop
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;/usr/share/xsessions/plasma-bspwm.desktop&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Desktop Entry]          
+Type=XSession              
+Exec=env KDEWM=/usr/bin/bspwm /usr/bin/startplasma-x11
+TryExec=/usr/bin/startplasma-x11
+DesktopNames=KDE         
+Name=Plasma bspwm 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;bspwmrc and sxhkdrc are using both the stock example files @ &lt;code&gt;/usr/share/doc/bspwm/examples&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

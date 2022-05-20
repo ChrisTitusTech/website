@@ -12,7 +12,78 @@
       <pubDate>Fri, 17 Jan 2020 17:43:17 -0600</pubDate>
       
       <guid>https://christitus.com/lcars-screensaver/</guid>
-      <description>&lt;p&gt;This article goes over getting the LCARS screensaver by mewho working in Linux. This Screensaver was originally intended for Windows 9x and this is for fun!&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article goes over getting the LCARS screensaver by mewho working in Linux. This Screensaver was originally intended for Windows 9x and this is for fun!&lt;/p&gt;
+&lt;h2 id=&#34;installation-and-testing&#34;&gt;Installation and Testing&lt;/h2&gt;
+&lt;p&gt;First download the System47 Screensaver from mewho.com&lt;br&gt;
+&lt;a href=&#34;https://mewho.com/system47/download1.htm&#34;&gt;LCARS Download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Unzip the system47.zip&lt;/p&gt;
+&lt;p&gt;Create a WINE bottle for the Screensaver to run in from terminal:&lt;br&gt;
+&lt;code&gt;WINEARCH=win32 WINEPREFIX=/home/$USER/.lcars winecfg&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Change the Windows Version to Windows XP&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Run the System47.exe in wine to install the screensaver&lt;br&gt;
+&lt;code&gt;WINEPREFIX=~/.lcars wine &#39;~/Downloads/system47 v2.2_setup.exe.exe&#39;&lt;/code&gt;&lt;br&gt;
+Install the Screen saver and quit&lt;/p&gt;
+&lt;p&gt;Test the Screensaver in wine&lt;br&gt;
+&lt;code&gt;WINEPREFIX=~/.lcars wine &#39;/home/$USER/.lcars/drive_c/windows/system32/System47.scr&#39; /s&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;creating-screensaver-service&#34;&gt;Creating Screensaver Service&lt;/h2&gt;
+&lt;p&gt;Creating the screensaver service is done in three sections: service dependencies installation, script creation, and systemd service.&lt;/p&gt;
+&lt;h4 id=&#34;dependencies-to-install&#34;&gt;Dependencies to install&lt;/h4&gt;
+&lt;p&gt;Arch-based Installs &lt;code&gt;yay -S xscreensaver xprintidle&lt;/code&gt;&lt;br&gt;
+Debian-based Installs &lt;code&gt;apt install xscreensaver xprintidle&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;script-creation&#34;&gt;Script Creation&lt;/h4&gt;
+&lt;p&gt;Create lcars.sh in your home directory (&lt;em&gt;replace titus with your user&lt;/em&gt;)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
+
+export DISPLAY=:0
+# Wanted trigger timeout in milliseconds.
+IDLE_TIME=$((5*60*1000))
+
+# Sequence to execute when timeout triggers.
+trigger_cmd() {
+    WINEPREFIX=/home/titus/.lcars wine &#39;/home/titus/.lcars/drive_c/windows/system32/System47.scr&#39; /s
+}
+
+sleep_time=$IDLE_TIME
+triggered=false
+
+# ceil() instead of floor()
+while sleep $(((sleep_time+999)/1000)); do
+    idle=$(xprintidle)
+    if [ $idle -ge $IDLE_TIME ]; then
+        if ! $triggered; then
+            trigger_cmd
+            triggered=true
+            sleep_time=$IDLE_TIME
+        fi
+    else
+        triggered=false
+        # Give 100 ms buffer to avoid frantic loops shortly before triggers.
+        sleep_time=$((IDLE_TIME-idle+100))
+    fi
+done
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;service-creation&#34;&gt;Service Creation&lt;/h4&gt;
+&lt;p&gt;Create lcars.service (&lt;code&gt;sudo nano /etc/systemd/system/lcars.service&lt;/code&gt;)
+&lt;em&gt;change titus to your user&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Screensaver
+
+[Service]
+User=titus
+Type=simple
+ExecStart=/bin/bash /home/titus/lcars.sh
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Reload service daemon &lt;code&gt;sudo systemctl daemon-reload&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start lcars service to test &lt;code&gt;sudo systemctl start lcars&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Verify service is running &lt;code&gt;sudo systemctl status lcars&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Enable on startup &lt;code&gt;sudo systemctl enable lcars&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=J2zasJz5vuA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/J2zasJz5vuA/0.jpg&#34; alt=&#34;hugo guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -21,7 +92,29 @@
       <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
       
       <guid>https://christitus.com/garmin-express-linux/</guid>
-      <description>&lt;p&gt;This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p&gt;
+&lt;h2 id=&#34;linux-package-requirements&#34;&gt;Linux Package Requirements:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;wine-devel &lt;em&gt;Note:3.19 or higher&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;winetricks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation-steps&#34;&gt;Installation Steps&lt;/h2&gt;
+&lt;p&gt;First we start by creating a wineprefix and installing our prerequisites from terminal:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WINEARCH=win32 WINEPREFIX=/home/$USER/GarminExpress winetricks dotnet452 vcrun2010 corefonts&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;WINEARCH=win32 WINEPREFIX=/home/$USER/GarminExpress winetricks win7&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: You will be prompted during the setup for .NET installation just hit next and finish. Also, I like to seperate win7 after the prerequisites are setup to make sure the wineprefix runs in Windows 7 mode.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;With that out of the  way we need to download and install our GarminExpress.exe Setup executable. I downloaded mine from &lt;a href=&#34;https://www.garmin.com/en-US/software/express&#34;&gt;https://www.garmin.com/en-US/software/express&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Run the GarminExpress.exe file in our wine prefix&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WINEPREFIX=/home/$USER/GarminExpress wine explorer /desktop=garmin,1366x768 /home/$USER/Downloads/GarminExpress.exe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: If you downloaded the GarminExpress.exe to another location replace it above&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Modify your shortcut to be the following command&lt;/p&gt;
+&lt;p&gt;WINEPREFIX=/home/ctitus/GarminExpress wine explorer /desktop=garmin,1366x768 &amp;lsquo;/home/ctitus/GarminExpress/drive_c/Program Files/Garmin/Express/express.exe&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;Upon Launch you should see this screen which should recognize your Garmin device&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/02/Selection_012.png&#34; alt=&#34;Garmin Express on Linux&#34;&gt;&lt;/p&gt;
+&lt;p&gt;With all this done you will be able to launch Garmin Express on Linux.&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=hg01Z6VCox0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/hg01Z6VCox0/0.jpg&#34; alt=&#34;garminexpress-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

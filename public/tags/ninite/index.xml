@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ninite on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/ninite/</link>
+    <description>Recent content in ninite on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 May 2022 13:07:19 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/ninite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Ultimate Windows Utility</title>
+      <link>https://christitus.com/windows-tool/</link>
+      <pubDate>Fri, 13 May 2022 13:07:19 -0500</pubDate>
+      
+      <guid>https://christitus.com/windows-tool/</guid>
+      <description>&lt;p&gt;This is a tool that has evolved over several years and achieves much more than just debloating a Windows install. I have expanded it to install the programs you select, which is a bigger selection than ninite. The classic debloat is there, but also includes a tweaks section with quality of life features. To round out everything, I have included my recommended settings for Windows update that I use in a variety of businesses. Misuse of this utility can break your install so please be careful and I do not provide any help or assistance should this happen!&lt;/p&gt;
+&lt;h2 id=&#34;one-command---download-and-usage&#34;&gt;One Command - Download and Usage&lt;/h2&gt;
+&lt;p&gt;From an Elevated (Run as Administrator) PowerShell prompt&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;iwr -useb https://christitus.com/win | iex
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;parts-of-utility&#34;&gt;Parts of Utility&lt;/h2&gt;
+&lt;p&gt;There are four main parts of this utility but I can expand this to an infinite number of tabs if expansion is needed and will probably happen in the future. As of the writing of this article there is 4 main parts: install, debloat, features and old panels, and windows updates. Let me breakdown what each part does and what you should use.&lt;/p&gt;
+&lt;h3 id=&#34;install&#34;&gt;Install&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/winutil/screen-install.png&#34; alt=&#34;install&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The install is basically a better version of ninite that many people use. It leverages Microsoft&amp;rsquo;s winget utility to not only install tons of software that you select with a check-mark, but also gives you the ability to upgrade all the software quickly. By using this utility you will save hours on the install, but also make it very easy to keep all your programs up to date.&lt;/p&gt;
+&lt;h3 id=&#34;debloat&#34;&gt;Debloat&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/winutil/screen-debloat.png&#34; alt=&#34;debloat&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Debloating windows is always a moving target and there are many utilities out there. Many of them are too heavy handed in my opinion. This takes a more minimal approach that should not damage your Windows install. At the top there are three buttons Desktop, Laptop, and Minimal. These are curated selections based on my recommendations&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Desktop&lt;/strong&gt; - This is for Desktops &lt;em&gt;DUH&lt;/em&gt;, but it will disable features like power throttling and many services will be set to not auto start. This will give your desktop the best performance without any downside.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Laptop&lt;/strong&gt; - This one is just like desktop but doesn&amp;rsquo;t mess with power settings as we don&amp;rsquo;t want to kill our laptops battery.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Minimal&lt;/strong&gt; - This one will just do the absolute basic privacy / security settings. Very minor optimizations will also be made.&lt;/p&gt;
+&lt;p&gt;I must warn you to NOT use all the settings at once, or simple remove everything from the MS Store. Many times this will debloat the install but will BREAK the MS Store or uninstall any games / apps that were installed using it. This is why this option is never selected, but I left it there for those that really want to remove it. I personally do NOT recommend this, but I understand those that want to remove it&lt;/p&gt;
+&lt;p&gt;Note: This part of the utility can break an install if used carelessly, but it does make a restore point so if you have a lot problems with it, you can use System Restore to rollback the changes or the Undo All option. THIS IS SOFTWARE IS PROVIDE WITHOUT ANY WARRANTY AND I AM NOT RESPONSIBLE FOR ANY MISUSE.&lt;/p&gt;
+&lt;h3 id=&#34;features-and-legacy-win-panels&#34;&gt;Features and Legacy Win Panels&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/winutil/screen-features.png&#34; alt=&#34;features&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This tab makes it easier to enable built-in features that are off by default. Many new installs need these and I wanted to make it easier than going through and manually installing them one by one.&lt;/p&gt;
+&lt;p&gt;There is also the old school legacy panels that I use on a daily basis. I still find these to be more efficient than the new panels that Microsoft has put in Windows 10 and 11.&lt;/p&gt;
+&lt;h3 id=&#34;windows-updates&#34;&gt;Windows Updates&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/winutil/screen-updates.png&#34; alt=&#34;updates&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Windows updates set to defaults are crazy. They install and download at weird times and often update far too much. I give 2 options my recommended one that only installs security updates and allowing features updates after they have been proven over 1 year.&lt;/p&gt;
+&lt;p&gt;However, there is a disable all button. I do NOT recommend doing this, but is there for people that have specific software that they don&amp;rsquo;t update and don&amp;rsquo;t want their windows install changing at all. This is NOT secure, but often more stable and why you&amp;rsquo;d want to do something like this.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=1111111&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/1111111/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

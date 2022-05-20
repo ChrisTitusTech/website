@@ -35,7 +35,7 @@ mainSections = ["posts"]
 contact_form_action = "#" # contact form works with : https://formspree.io
 # copyright
 copyright = ""
-
+rssLimit = 20
 # search *** true or false (if Search is disable Menu will align in Right) ***
 search = true
 

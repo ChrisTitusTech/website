@@ -12,7 +12,31 @@
       <pubDate>Wed, 19 Feb 2020 12:32:44 -0600</pubDate>
       
       <guid>https://christitus.com/zsh/</guid>
-      <description>&lt;p&gt;In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In this article, I go over my implementation of ZSH, which is a better shell alternative to BASH.&lt;/p&gt;
+&lt;h2 id=&#34;why-zsh&#34;&gt;Why ZSH?&lt;/h2&gt;
+&lt;p&gt;ZSH is an amazing shell that just makes everything a bit easier from auto suggestions, completing tasks you do regularly considerably faster.&lt;/p&gt;
+&lt;h2 id=&#34;before-you-begin-dependencies&#34;&gt;Before you Begin: Dependencies&lt;/h2&gt;
+&lt;p&gt;I built a resource for those starting out with my Github @ &lt;a href=&#34;https://github.com/ChrisTitusTech/zsh&#34;&gt;https://github.com/ChrisTitusTech/zsh&lt;/a&gt; and will be using many files from the project.&lt;/p&gt;
+&lt;p&gt;Packages needed before you start:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;zsh - ZSH Shell&lt;/li&gt;
+&lt;li&gt;zsh-syntax-highlighting - syntax highlighting for ZSH in standard repos&lt;/li&gt;
+&lt;li&gt;autojump - jump to directories with j or jc for child or jo to open in file manager&lt;/li&gt;
+&lt;li&gt;zsh-autosuggestions - Suggestions based on your history&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;initial-setup-of-zsh&#34;&gt;Initial Setup of ZSH&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;touch &amp;quot;$HOME/.cache/zshhistory&amp;quot;
+#-- Setup Alias in $HOME/zsh/aliasrc
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo &#39;source ~/powerlevel10k/powerlevel10k.zsh-theme&#39; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;complete-switch-from-bash-to-zsh&#34;&gt;Complete Switch from BASH to ZSH&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;chsh $USER
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Then type &lt;code&gt;/bin/zsh&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;OR&lt;/em&gt; Edit &lt;code&gt;/etc/passwd&lt;/code&gt; and change /bin/bash to /bin/zsh&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/zsh-passwd.png&#34; alt=&#34;ZSH Switch&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gGmBUfMaWMU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/gGmBUfMaWMU/0.jpg&#34; alt=&#34;zsh guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -12,7 +12,50 @@
       <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
       
       <guid>https://christitus.com/how-to-install-xen-orchestra/</guid>
-      <description>&lt;p&gt;This article shows you how to install Xen Orchestra and use the interface via the web. XOA is a very powerful addition to XenServer as it brings auto-updates and making it easier to manage entire farms.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article shows you how to install Xen Orchestra and use the interface via the web. XOA is a very powerful addition to XenServer as it brings auto-updates and making it easier to manage entire farms.&lt;/p&gt;
+&lt;h2 id=&#34;step-by-step-guide&#34;&gt;Step-by-Step Guide&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Login to your XenServer via PuTTy OR through XenCenter console&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;bash -c &amp;quot;$(curl -s http://xoa.io/deploy)&amp;quot;&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Enter a new IP where you will access XOA from web&lt;/li&gt;
+&lt;li&gt;Wait for this to finish you will see XOA VM popup&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Note: This may take a couple hours if XOA servers are downloading slow. I highly recommend downloading offline installer if installing on multiple servers.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Once Complete, PuTTy to XOA VM (IP Address from prior install)
+&lt;ul&gt;
+&lt;li&gt;login with username/password: xoa&lt;/li&gt;
+&lt;li&gt;set new password for console&lt;/li&gt;
+&lt;li&gt;register xoa from username and password that you used on their website &lt;a href=&#34;https://xen-orchestra.com/&#34;&gt;https://xen-orchestra.com/&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo xoa-updater --register&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;now run the updater to check for any upgrades
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo xoa-updater &amp;amp;#8211;upgrade&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;reboot if any upgrades were performed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Open Browser, Login to XOA
+&lt;ul&gt;
+&lt;li&gt;login username &lt;code&gt;admin@admin.net&lt;/code&gt; password &lt;code&gt;admin&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add your XenServers – If you only have 1 pool, you only need to add your pool master
+&lt;ul&gt;
+&lt;li&gt;Remember: if you are using default self-signed certificates on XenServer enable “unauthorized certificates” and then click disconnected&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Enjoy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=QU28LQ1CX7Q&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/QU28LQ1CX7Q/0.jpg&#34; alt=&#34;xenorchestra-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I hope you enjoyed this walkthrough of how to install Xen Orchestra and if you have any feedback let me know below. In closing, I really like this product and think it is a great addition to the XenServer and a much-needed improvement over what Citrix offers.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -21,7 +64,33 @@
       <pubDate>Tue, 09 Oct 2018 16:18:46 +0000</pubDate>
       
       <guid>https://christitus.com/create-iscsi-sr/</guid>
-      <description>&lt;p&gt;This guide goes over how to Create iSCSI SR on Xen to connect to an iSCSI target. Here is the step-by-step and a video walkthrough, which includes setting up iSCSI in FreeNAS.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This guide goes over how to Create iSCSI SR on Xen to connect to an iSCSI target. Here is the step-by-step and a video walkthrough, which includes setting up iSCSI in FreeNAS.&lt;/p&gt;
+&lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiple XenServers (2+) in a Pool&lt;/li&gt;
+&lt;li&gt;iSCSI target (Check out FreeNAS in the video below for setting one up)&lt;/li&gt;
+&lt;li&gt;At LEAST a gigabit environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2018/10/xen-iscsi-sr.png&#34; alt=&#34;xen-iscsi&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-by-step-guide-to-create-iscsi-sr&#34;&gt;Step-by-Step Guide to Create iSCSI SR&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Open and Connect to XenCenter / XCP-ng Center&lt;/li&gt;
+&lt;li&gt;Select Pool and Click New Storage&lt;/li&gt;
+&lt;li&gt;Make sure iSCSI is selected&lt;/li&gt;
+&lt;li&gt;Name Storage&lt;/li&gt;
+&lt;li&gt;Select either provisioning methods&lt;/li&gt;
+&lt;li&gt;Enter IP Address / Authentication (if needed) / Click Scan Target Host&lt;/li&gt;
+&lt;li&gt;Pick IQN / LUN from your storage device
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: When Selecting&lt;/em&gt; IQN_, make sure you select your SAN if you are using a dedicated network_&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Finish&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=mn17fHzn2XQ&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/mn17fHzn2XQ/0.jpg&#34; alt=&#34;iscsi-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In the end, we now have a centralized storage system that all our hosts can put their VMs on. This is key for using high availability, Xen Orchestra, and quick migrations. Remember to use the community-driven XenServer @ &lt;a href=&#34;https://xcp-ng.org/&#34;&gt;https://xcp-ng.org/&lt;/a&gt;, therefore you can get all the enterprise features of XenServer in your lab environment.&lt;/p&gt;</description>
     </item>
     
   </channel>

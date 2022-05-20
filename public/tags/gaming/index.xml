@@ -12,7 +12,28 @@
       <pubDate>Sun, 22 Mar 2020 20:50:39 -0500</pubDate>
       
       <guid>https://christitus.com/doom-eternal-linux/</guid>
-      <description>&lt;p&gt;This post is here to help guide you through setting up doom eternal on Linux.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This post is here to help guide you through setting up doom eternal on Linux.&lt;/p&gt;
+&lt;h1 id=&#34;requirements&#34;&gt;Requirements&lt;/h1&gt;
+&lt;p&gt;We will be using Glorious Eggroll&amp;rsquo;s version of proton which is very easy to install and update with an update script. You can manually install this if you don&amp;rsquo;t want to do the &amp;ldquo;easy way&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;custom-proton-ge-edition-install&#34;&gt;Custom Proton GE Edition Install&lt;/h2&gt;
+&lt;p&gt;Run the following commands:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget https://raw.githubusercontent.com/flubberding/ProtonUpdater/master/cproton.sh
+sudo chmod a+x cproton.sh
+sh cproton.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You will be prompted if you want to update it just type yes.&lt;br&gt;
+This will install the new GE proton into the ~/.steam/root/compatibility.d (arch) and ~/.steam/compatibility.d (debian) respectively.&lt;/p&gt;
+&lt;h2 id=&#34;modifying-steam-launch-options&#34;&gt;Modifying Steam Launch Options&lt;/h2&gt;
+&lt;p&gt;By default, the default settings will still make it so you are unable to launch the game. I found using the following in steam launch options not only fixes the problems but makes it perform better and get you to the title screen faster.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;RADV_PERFTEST=llvm PROTON_NO_ESYNC=1 %command% +in_terminal 1 +com_skipIntroVideo 1 +com_skipKeyPressOnLoadScreens 1 +com_skipSignInManager 1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you still encounter issues install the AMDVLK package &lt;a href=&#34;https://github.com/GPUOpen-Drivers/AMDVLK&#34;&gt;https://github.com/GPUOpen-Drivers/AMDVLK&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: Nvidia card users can&amp;rsquo;t use this package and are currently having issues with Doom&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=g3UPxd8iUsU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/g3UPxd8iUsU/0.jpg&#34; alt=&#34;doom guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;All testing was done with a Linux box using an AMD Radeon RX580. Refer to the video above for a look at the performance. I have noticed a lot of people online complaining that they are still having performance problems, but all of them seem to be nVidia users.&lt;br&gt;
+All these fixes should be merged in to the official version of proton in a couple months and you shouldn&amp;rsquo;t need to do any of this once this is done.&lt;/p&gt;
+&lt;p&gt;Have Fun and Game On!&lt;/p&gt;</description>
     </item>
     
   </channel>

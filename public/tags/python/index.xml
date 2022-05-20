@@ -12,7 +12,18 @@
       <pubDate>Tue, 28 Nov 2017 22:03:53 +0000</pubDate>
       
       <guid>https://christitus.com/api-json-call/</guid>
-      <description>&lt;p&gt;The following is a Python script to print out specific results from an API JSON call from a website. This basic syntax will allow you to create a value to use.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The following is a Python script to print out specific results from an API JSON call from a website. This basic syntax will allow you to create a value to use.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import json, urllib2 # Import libraries we will be using
+url = urllib2.urlopen(&#39;http://baseurl.com:port/api.json&#39;) # Pull webpage into a variable
+result = json.load(url) # Format the URL for JSON
+allhash = result[&#39;hashrate&#39;][&#39;total&#39;] # Pull a specific array of values
+checkhash= allhash[0] # Specify a single value in the array
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;making-an-api-json-call&#34;&gt;Making an API JSON call&lt;/h2&gt;
+&lt;p&gt;Using this basic script this will make a call from the JSON API on a website. I wanted a specific value 2 levels down. To determine which value you want to grab remember { open bracket will expand a level and a } close bracket will go back a level.&lt;/p&gt;
+&lt;p&gt;For instance, using this api.json&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{&amp;quot;hashrate&amp;quot;:{&amp;quot;threads&amp;quot;:[[632.8,629.7,631.0],[531.6,524.6,518.4],[631.9,628.6,625.0],[501.6,520.4,512.0]],&amp;quot;total&amp;quot;:[2297.8,2303.2,2286.4],&amp;quot;highest&amp;quot;:2339.2},&amp;quot;results&amp;quot;:{&amp;quot;diff_current&amp;quot;:100001,&amp;quot;shares_good&amp;quot;:281,&amp;quot;shares_total&amp;quot;:301,&amp;quot;avg_time&amp;quot;:49.9,&amp;quot;hashes_total&amp;quot;:32000515,&amp;quot;best&amp;quot;:[11141633,10328800,8258255,8129845,4476110,3954464,3795403,3425658,3208501,3130523],&amp;quot;error_log&amp;quot;:[{&amp;quot;count&amp;quot;:18,&amp;quot;last_seen&amp;quot;:1511905084,&amp;quot;text&amp;quot;:&amp;quot;Job not found.&amp;quot;}]},&amp;quot;connection&amp;quot;:{&amp;quot;pool&amp;quot;: &amp;quot;cryptonight.usa.nicehash.com:3355&amp;quot;,&amp;quot;uptime&amp;quot;:15018,&amp;quot;ping&amp;quot;:109,&amp;quot;error_log&amp;quot;:[]}}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;in-closing&#34;&gt;In Closing&lt;/h3&gt;
+&lt;p&gt;Using the above API readout you can see I go into the hashrate brackets and pull the values for “total”. This creates an array and not a single string. So to make a call for the second value in “total” you would change the python code from allhash[0] to allhash[1]. You can use this to print out the values from the script, put them in a variable to be displayed on a website, or use it in a Nagios script for monitoring. The options are limitless.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -12,7 +12,43 @@
       <pubDate>Thu, 04 Jun 2020 15:05:41 -0500</pubDate>
       
       <guid>https://christitus.com/custom-vim/</guid>
-      <description>&lt;p&gt;This article goes over customizing VIM and making a custom vim installation.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article goes over customizing VIM and making a custom vim installation.&lt;/p&gt;
+&lt;p&gt;This is my custom vim that I am constantly updating via GitHub and clone this to every installation I have. Let&amp;rsquo;s go over the install, config, and usage.&lt;/p&gt;
+&lt;h2 id=&#34;installation-of-vim&#34;&gt;Installation of VIM&lt;/h2&gt;
+&lt;h3 id=&#34;adding-vim-plug&#34;&gt;Adding VIM-plug&lt;/h3&gt;
+&lt;p&gt;The first thing I do is install vim-plug from junegunn that has makes a lot of vim-based plugins. Here is the repository that I am using for this: &lt;a href=&#34;https://github.com/junegunn/vim-plug&#34;&gt;https://github.com/junegunn/vim-plug&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;installation&#34;&gt;Installation&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;using-my-custom-vimrc&#34;&gt;Using My Custom .vimrc&lt;/h3&gt;
+&lt;p&gt;This is the main repository that has all of my customization to VIM. &lt;a href=&#34;https://github.com/ChrisTitusTech/myvim&#34;&gt;https://github.com/ChrisTitusTech/myvim&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;installation-1&#34;&gt;Installation&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;cd ~
+wget https://raw.githubusercontent.com/ChrisTitusTech/myvim/master/.vimrc
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;configuration-of-vim&#34;&gt;Configuration of VIM&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Launch VIM&lt;/li&gt;
+&lt;li&gt;Type :PlugInstall&lt;/li&gt;
+&lt;li&gt;Exit (Shift+ZZ)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;overview-of-plugins&#34;&gt;Overview of Plugins&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s go over all the plugins that were just installed. Feel free to edit the .vimrc to your needs.&lt;/p&gt;
+&lt;h4 id=&#34;lightline&#34;&gt;LightLine&lt;/h4&gt;
+&lt;p&gt;This plugin adds a nice look to the bottom part of vim and adding a colored line that is now displayed and changes when VIM enters different modes.&lt;/p&gt;
+&lt;h4 id=&#34;onedark&#34;&gt;OneDark&lt;/h4&gt;
+&lt;p&gt;This is a theme for VIM that adds a greater contrast and dark theme to vim. This makes text and everything inside easier to read.&lt;/p&gt;
+&lt;h4 id=&#34;fzf-fuzzy-search&#34;&gt;FZF (Fuzzy Search)&lt;/h4&gt;
+&lt;p&gt;This adds greater functionality to search that allows you to search for partial matches easier. See full syntax here: &lt;a href=&#34;https://github.com/junegunn/fzf#usage&#34;&gt;https://github.com/junegunn/fzf#usage&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;goyo&#34;&gt;GoYo&lt;/h4&gt;
+&lt;p&gt;This plugin removes all the numbers and formatting and makes it easier when writing documents in VIM. From Normal Mode - I made the hotkey Ctrl+\ to enter this special format.&lt;/p&gt;
+&lt;h4 id=&#34;undotree&#34;&gt;UndoTree&lt;/h4&gt;
+&lt;p&gt;UndoTree is an amazing plugin that makes it easy to see everything you have done in your session. Simply press F5 from Normal mode and you will see the entire all your recent changes and undo them.&lt;/p&gt;
+&lt;h4 id=&#34;nerdtree&#34;&gt;NerdTree&lt;/h4&gt;
+&lt;p&gt;NerdTree is a file management plugin. This hotkey is Ctrl+o and opens up a file tree on the left side for you switch files&lt;/p&gt;
+&lt;h4 id=&#34;vimwiki&#34;&gt;VimWiki&lt;/h4&gt;
+&lt;p&gt;VimWiki adds syntax formatting for markdown and is a fantastic plugin to have if you many markdown files.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;There is still a ton of other edits I need to make to this VIM and will be a work in progress for many years. Everyday I learn something new and powerful with VIM and if you can think about what you want, I am sure VIM will be able to accommodate that. Future additions that I am looking at is SpellCheck, VIM Tabs, and general improvements to the .vimrc file. My vimrc file currently has a lot of the most common tweaks, longer history, sorting, file numbering, and removal of auto comment formatting, However there is still a of things to improve. So come and check back often as I will update this project as it progresses.&lt;/p&gt;</description>
     </item>
     
   </channel>

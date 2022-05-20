@@ -12,7 +12,31 @@
       <pubDate>Thu, 31 Aug 2017 17:00:08 +0000</pubDate>
       
       <guid>https://christitus.com/taking-databases-offline-sql-query/</guid>
-      <description>&lt;p&gt;The following SQL query is for taking databases offline, drop the offline databases, or bring them all back online. This affects every database in your SQL instance, so be very careful when using these. The following three queries will save you a considerable amount of time if repurposing an instance.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The following SQL query is for taking databases offline, drop the offline databases, or bring them all back online. This affects every database in your SQL instance, so be very careful when using these. The following three queries will save you a considerable amount of time if repurposing an instance.&lt;/p&gt;
+&lt;h2 id=&#34;taking-databases-offline-and-then-dropping-them&#34;&gt;Taking databases offline and then dropping them&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;use master;
+declare @nsql nvarchar(max);
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
+&#39;ALTER DATABASE [&#39;+name+&#39;] SET OFFLINE WITH NO_WAIT;&#39;
+from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
+exec (@nsql)`
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once all databases are offline you can drop them to clear out the entire instance with this SQL query.&lt;br&gt;
+&lt;em&gt;Note: This is extremely destructive so please use this with care.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;warning-running-this-will-destroy-all-databases&#34;&gt;&lt;em&gt;WARNING&lt;/em&gt; Running this WILL DESTROY ALL DATABASES!!!&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;use master;
+declare @nsql nvarchar(max);
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
+&#39;DROP DATABASE [&#39;+name+&#39;];&#39;
+from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
+exec (@nsql)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;use-the-following-sql-query-to-take-all-databases-online&#34;&gt;Use the following SQL query to take all databases online&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;use master;
+declare @nsql nvarchar(max);
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
+&#39;ALTER DATABASE [&#39;+name+&#39;] SET ONLINE WITH NO_WAIT;&#39;
+from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
+exec (@nsql)
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -21,7 +45,23 @@
       <pubDate>Fri, 06 Mar 2015 23:56:01 +0000</pubDate>
       
       <guid>https://christitus.com/gfi-archiver-resource-usage/</guid>
-      <description>&lt;p&gt;Does your GFI Archiver resource usage SQL process ballon over 8GB? If so, the following procedure will reduce usage by about half and fix many performance issues.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Does your GFI Archiver resource usage SQL process ballon over 8GB? If so, the following procedure will reduce usage by about half and fix many performance issues.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Stop all MailArchiver and SQL services&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a backup of ..MailArchiverStoreDataproduct.config&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit product.config and add the following key within the &lt;code&gt;&amp;lt;AppSettings&amp;gt;&lt;/code&gt; section: &lt;code&gt;&amp;lt;add key=&amp;quot;MaxPoolSize&amp;quot; value=&amp;quot;20&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Re-start the services&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;*Note GFI has built-in scripts made to stop all NON-SQL services. Run the Stop script then stop SQL Server Instance, When starting start SQL Server Service before running a start script. The scripts default location are: ..MailArchiver\Tools\Scripts&lt;/p&gt;
+&lt;p&gt;After performing this procedure the SQL Server Process is now under 4GB or cut in half from their previous usage. In closing, this type of tweak is vital especially if you are running out of resources on the source server or you are running into performance problems within GFI Archiver.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,7 +70,27 @@
       <pubDate>Tue, 09 Apr 2013 16:24:26 +0000</pubDate>
       
       <guid>https://christitus.com/configuring-sql-authentication/</guid>
-      <description>&lt;p&gt;Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: This article is taken from &lt;a href=&#34;http://kb.gfi.com/articles/SkyNet_Article/How-to-configure-SQL-Server-2005-2008-to-accept-SQL-Authentication&#34;&gt;http://kb.gfi.com/articles/SkyNet_Article/How-to-configure-SQL-Server-2005-2008-to-accept-SQL-Authentication&lt;/a&gt; and all credit goes to them for the writing. I’m posting it here simply as a reference in case&lt;/em&gt; there _site changes the above link. _&lt;/p&gt;
+&lt;h3 id=&#34;fix-authentication-in-gfi-reportcenter&#34;&gt;Fix Authentication in GFI ReportCenter&lt;/h3&gt;
+&lt;p&gt;In order to use SQL Server authentication, you must first configure your server using the steps below.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Right-click on the server node and select ‘Properties’&lt;/li&gt;
+&lt;li&gt;Select ‘Security’ from the left menu under ‘Select a page’&lt;/li&gt;
+&lt;li&gt;Under ‘Server Authentication’, select the ‘SQL Server and Windows Authentication mode option’&lt;/li&gt;
+&lt;li&gt;Click ‘OK’ to close the dialog&lt;/li&gt;
+&lt;li&gt;Right click on the server node and choose ‘Restart’ for the changes to take effect&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;sql-server-authentication-login&#34;&gt;SQL Server authentication login&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;In the server node expand ‘Security’ and ‘Logins’&lt;/li&gt;
+&lt;li&gt;Right click on the login name and select ‘Properties’&lt;/li&gt;
+&lt;li&gt;Enter a password and confirm the password for the login&lt;/li&gt;
+&lt;li&gt;Select ‘Status’ from the left menu under ‘Select a page’&lt;/li&gt;
+&lt;li&gt;Set the ‘Login’ option to ‘Enabled’&lt;/li&gt;
+&lt;li&gt;Click ‘OK’ to close the dialog&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once you have walked through configuring SQL authentication, you can now change your instance to the type you need.&lt;/p&gt;</description>
     </item>
     
   </channel>

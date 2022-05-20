@@ -12,7 +12,28 @@
       <pubDate>Wed, 17 Oct 2018 15:22:41 +0000</pubDate>
       
       <guid>https://christitus.com/change-cortana-search/</guid>
-      <description>&lt;p&gt;This article goes over how to change Cortana search engine to display results in chrome instead of Microsoft Edge. Afterward, the second part requires you to install a chrome extension to search in Google instead of Bing.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article goes over how to change Cortana search engine to display results in chrome instead of Microsoft Edge. Afterward, the second part requires you to install a chrome extension to search in Google instead of Bing.&lt;/p&gt;
+&lt;h2 id=&#34;links-from-video&#34;&gt;Links from Video&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sylveon/SearchWithMyBrowser&#34;&gt;https://github.com/sylveon/SearchWithMyBrowser&lt;/a&gt; – GitHub Source and Compile Instructions&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge&#34;&gt;https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge&lt;/a&gt; – Windows Store Link from Developer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/chrometana-pro-redirect-c/lllggmgeiphnciplalhefnbpddbadfdi&#34;&gt;https://chrome.google.com/webstore/detail/chrometana-pro-redirect-c/lllggmgeiphnciplalhefnbpddbadfdi&lt;/a&gt; – Chrometana Pro Google Store Extension&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;steps-to-change-cortana-search-updated&#34;&gt;Steps to Change Cortana Search (Updated)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Open up Chrometana Pro Google Store Extension and Install (Link Above)&lt;/li&gt;
+&lt;li&gt;Install EdgeDeflector (On Page after Extension Installed)
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: SearchWithMyBrowser is no longer needed as EdgeDeflector takes its place&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Open Webpage and select EdgeDeflector.exe for default open with application&lt;/li&gt;
+&lt;li&gt;Done!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Vw-JA89brSg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Vw-JA89brSg/0.jpg&#34; alt=&#34;freenas-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In the end, you need to watch out for Windows updates. Anytime Windows does a major update, be prepared to repeat the process above, as it will reset it to Edge. Therefore, I’d bookmark the Chrometana Pro page or this one as you will be coming back to do this about twice a year. If you don’t want to do this, you can always switch to Linux. Consequently, I have written an article about the pro’s and con’s of such a switch and I highly recommend the switch if you are able.&lt;/p&gt;</description>
     </item>
     
   </channel>

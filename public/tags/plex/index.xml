@@ -12,7 +12,46 @@
       <pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate>
       
       <guid>https://christitus.com/install-plex-plugin-freenas/</guid>
-      <description>&lt;p&gt;This is an in-depth installation and configuration of the Plex plugin in FreeNAS 11.2. I detail the installation of plex on FreeNAS Jail and configuration of using a share as a Plex mount point.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is an in-depth installation and configuration of the Plex plugin in FreeNAS 11.2. I detail the installation of plex on FreeNAS Jail and configuration of using a share as a Plex mount point.&lt;/p&gt;
+&lt;h2 id=&#34;plex-plugin-in-freenas-steps&#34;&gt;Plex plugin in FreeNAS Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Install Plex Plugin
+&lt;ul&gt;
+&lt;li&gt;Under Plugins -&amp;gt; Availiable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set Static IP
+&lt;ul&gt;
+&lt;li&gt;Interface em0 (or your interface name), Static IP for Plex Server, and Netmask (/24 is 255.255.255.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Stop Plugin&lt;/li&gt;
+&lt;li&gt;Edit Plex Jail – Mount Point – &lt;em&gt;Note: This is only used if you want a share to add movies to your plex from another computer&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;Set Source Share (/mnt/sharename/) and Set Destination (I selected the media folder in the jail directory)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Edit Plex Jail – Edit Confiuration
+&lt;ol&gt;
+&lt;li&gt;Check VNET and Berkeley Packet Filter&lt;/li&gt;
+&lt;li&gt;Set Default IPv4 Route to your Gateway or Router (Ex. 192.168.1.1)&lt;/li&gt;
+&lt;li&gt;Next&lt;/li&gt;
+&lt;li&gt;Select “allow:raw_sockets”&lt;/li&gt;
+&lt;li&gt;Click save in the bottom left&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Launch Management from Plugin Menu&lt;/li&gt;
+&lt;li&gt;Name your Server&lt;/li&gt;
+&lt;li&gt;Enter your Destination folder from Jail Mount Point (Ex. /media/)&lt;/li&gt;
+&lt;li&gt;Finish!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;p&gt;Install Plex on FreeNAS Video: &lt;a href=&#34;https://www.youtube.com/watch?v=99fQNbuAOlg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/99fQNbuAOlg/0.jpg&#34; alt=&#34;freenas-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;br&gt;
+Install FreeNAS Video: &lt;a href=&#34;https://youtu.be/G2-s1_OkHGA&#34;&gt;https://youtu.be/G2-s1_OkHGA&lt;/a&gt;&lt;br&gt;
+Setup FreeNAS Video: &lt;a href=&#34;https://youtu.be/JexkrpeM_WA&#34;&gt;https://youtu.be/JexkrpeM_WA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In closing, This guide will get Plex up and running on your FreeNAS without much hassle. I highly recommend this setup as ZFS is far superior to a RAID setup and makes sure that your data stays stable and reliable. Consequently, I find that my Plex server does run considerably faster in this configuration than it ever did when it was on my Windows 10 machine.&lt;/p&gt;
+&lt;p&gt;For general setup, configuration, and hardware setup, please refer to my guide @ &lt;a href=&#34;https://christitus.com/setup-freenas-11/&#34;&gt;https://christitus.com/setup-freenas-11/&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

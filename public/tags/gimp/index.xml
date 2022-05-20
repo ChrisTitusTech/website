@@ -12,7 +12,16 @@
       <pubDate>Mon, 16 Sep 2019 00:55:12 +0000</pubDate>
       
       <guid>https://christitus.com/latest-version-of-gimp/</guid>
-      <description>&lt;p&gt;Here are instructions on how to Update to the latest version of GIMP. This is vital to make sure you get the newest and best features for GIMP. The old versions of gimp that come bundled with Ubuntu 18 and prior aren’t nearly as good as Gimp 2.10+.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Here are instructions on how to Update to the latest version of GIMP. This is vital to make sure you get the newest and best features for GIMP. The old versions of gimp that come bundled with Ubuntu 18 and prior aren’t nearly as good as Gimp 2.10+.&lt;/p&gt;
+&lt;p&gt;Start by launching terminal and adding the GIMP repository&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo add-apt-repository ppa:otto-kesselgulasch/gimp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Verify the apt updates and if it doesn’t run the following command&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now simply install GIMP and it will automatically update to the latest version of GIMP from now on&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install gimp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Here is a video walkthrough of install special GIMP scripts as well if you want to unlock the complete capabilities of GIMP.&lt;br&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=CysfnD7dYwM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/CysfnD7dYwM/0.jpg&#34; alt=&#34;gimp-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

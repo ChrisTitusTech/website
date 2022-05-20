@@ -12,7 +12,10 @@
       <pubDate>Fri, 07 Sep 2018 21:33:35 +0000</pubDate>
       
       <guid>https://christitus.com/virtualization-introduction/</guid>
-      <description>&lt;p&gt;This is a virtualization introduction and when you should be using it. In the follow-up videos, I will go into using the hypervisor, creating VMs and maintenance.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a virtualization introduction and when you should be using it. In the follow-up videos, I will go into using the hypervisor, creating VMs and maintenance.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=T0nywDkf1IE&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/T0nywDkf1IE/0.jpg&#34; alt=&#34;Virtualization Introduction&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Now that you understand what it is and if you want to start getting your feet wet, please check out my other video to start installing your hypervisor and launching your first virtual machine [here][1]. I highly recommend starting out with VMware as it used the most. It also has the most material online if looking for virtualization introduction videos and how to guides.&lt;/p&gt;</description>
     </item>
     
   </channel>

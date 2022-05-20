@@ -12,7 +12,13 @@
       <pubDate>Mon, 25 May 2020 13:14:23 -0500</pubDate>
       
       <guid>https://christitus.com/install-wine-libfaudio0-error/</guid>
-      <description>&lt;p&gt;This article helps you fix the Libfaudio0 error that you run into when installing Wine on an older Linux debian-based distribution like Linux Mint 19 or Ubuntu 18.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article helps you fix the Libfaudio0 error that you run into when installing Wine on an older Linux debian-based distribution like Linux Mint 19 or Ubuntu 18.&lt;/p&gt;
+&lt;p&gt;Fix the dependancy error by downloading the following packages&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/amd64/libfaudio0_19.07-0~bionic_amd64.deb
+wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/i386/libfaudio0_19.07-0~bionic_i386.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once these are downloaded you need to installed them with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo dpkg -i libfaudio0_19.07-0~bionic_amd64.deb libfaudio0_19.07-0~bionic_i386.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now that we have fixed the dependency error you can proceed with your wine-staging installation. Not this is mainly an error for bleeding edge version of wine from the WineHQ PPA.&lt;/p&gt;</description>
     </item>
     
   </channel>

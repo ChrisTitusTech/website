@@ -5,7 +5,34 @@
     <link>https://christitus.com/categories/</link>
     <description>Recent content in Categories on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 Apr 2022 08:48:13 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 May 2022 13:07:19 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows</title>
+      <link>https://christitus.com/categories/windows/</link>
+      <pubDate>Fri, 13 May 2022 13:07:19 -0500</pubDate>
+      
+      <guid>https://christitus.com/categories/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://christitus.com/categories/linux/</link>
+      <pubDate>Mon, 25 Apr 2022 17:04:25 -0500</pubDate>
+      
+      <guid>https://christitus.com/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MacOS</title>
+      <link>https://christitus.com/categories/macos/</link>
+      <pubDate>Fri, 22 Apr 2022 08:32:54 -0500</pubDate>
+      
+      <guid>https://christitus.com/categories/macos/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ChromeOS</title>
       <link>https://christitus.com/categories/chromeos/</link>
@@ -21,33 +48,6 @@
       <pubDate>Wed, 19 Jan 2022 17:39:34 -0600</pubDate>
       
       <guid>https://christitus.com/categories/networking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>https://christitus.com/categories/windows/</link>
-      <pubDate>Wed, 19 Jan 2022 17:39:34 -0600</pubDate>
-      
-      <guid>https://christitus.com/categories/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://christitus.com/categories/linux/</link>
-      <pubDate>Wed, 12 Jan 2022 16:28:59 -0500</pubDate>
-      
-      <guid>https://christitus.com/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MacOS</title>
-      <link>https://christitus.com/categories/macos/</link>
-      <pubDate>Mon, 14 Dec 2020 17:25:22 -0600</pubDate>
-      
-      <guid>https://christitus.com/categories/macos/</guid>
       <description></description>
     </item>
     

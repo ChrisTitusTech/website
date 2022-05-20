@@ -12,7 +12,27 @@
       <pubDate>Fri, 06 Aug 2021 11:55:48 -0500</pubDate>
       
       <guid>https://christitus.com/uninstall-edge/</guid>
-      <description>&lt;p&gt;This goes over Removing Microsoft Edge Chromium edition and keeping it removed.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This goes over Removing Microsoft Edge Chromium edition and keeping it removed.&lt;/p&gt;
+&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;Microsoft Edge has taken over PDF viewer, and other default web tasks. Even when manually removing it will reinstall via windows updates.&lt;/p&gt;
+&lt;h2 id=&#34;removing-the-base-install&#34;&gt;Removing the Base Install&lt;/h2&gt;
+&lt;p&gt;We first need to find the Edge install of the chromium edition in your Program Files.&lt;/p&gt;
+&lt;p&gt;Location:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Program Files (x86)\Microsoft\Edge\Application\
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The setup program is what we need to uninstall edge. Go to the location above and drill down from the number and Install folder&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Program Files (x86)\Microsoft\Edge\Application\92.0.902.62\Installer
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once you find your path you can now uninstall edge with the following command &lt;em&gt;(Note: YOURS WILL BE DIFFERENT!)&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Program Files (x86)\Microsoft\Edge\Application\92.0.902.62\Installer\setup.exe --uninstall --system-level --verbose-logging --force-uninstall
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;keep-it-from-coming-back-for-now&#34;&gt;Keep it from coming back&amp;hellip; for now&lt;/h2&gt;
+&lt;p&gt;You now need to add a registry entry. The following location &lt;code&gt;Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EdgeUpdate&lt;/code&gt; needs to be added with a DWORD called &lt;code&gt;DoNotUpdateToEdgeWithChromium&lt;/code&gt; with a value of &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can do this with a simply reg file. (&lt;code&gt;stopedge.reg&lt;/code&gt;)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EdgeUpdate]
+&amp;quot;DoNotUpdateToEdgeWithChromium&amp;quot;=dword:00000001
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Create this file or download the file @ &lt;a href=&#34;https://christitus.com/files/stopedge.zip&#34;&gt;https://christitus.com/files/stopedge.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Run this to prevent edge reinstallation. &lt;em&gt;Note: Microsoft will kill this workaround in the future and force edge on you&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

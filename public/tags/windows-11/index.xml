@@ -12,7 +12,32 @@
       <pubDate>Tue, 29 Jun 2021 11:21:54 -0500</pubDate>
       
       <guid>https://christitus.com/update-any-pc-to-windows11/</guid>
-      <description>&lt;p&gt;This is a guide going over updating any PC to Windows 11 that &amp;ldquo;doesn&amp;rsquo;t meet requirements&amp;rdquo; or doesn&amp;rsquo;t use Secure Boot or has a TPM 2.0 chip.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a guide going over updating any PC to Windows 11 that &amp;ldquo;doesn&amp;rsquo;t meet requirements&amp;rdquo; or doesn&amp;rsquo;t use Secure Boot or has a TPM 2.0 chip.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Download appraiserres.dll from Windows 10 install and replace this file in the Windows 11 Sources directory (Windows 11 ISO required)&lt;/li&gt;
+&lt;li&gt;Use Registry edits below to upgrade your PC in the insider channel. This will be patched out before official release. Video showing regedit: &lt;a href=&#34;https://youtu.be/fk5B-a7vZ_w&#34;&gt;https://youtu.be/fk5B-a7vZ_w&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bypass the requirement prompt by using Command Prompt. Here is a video showing fresh install: &lt;a href=&#34;https://youtu.be/wK40EFgzmqM&#34;&gt;https://youtu.be/wK40EFgzmqM&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;upgrade-path&#34;&gt;Upgrade Path&lt;/h2&gt;
+&lt;p&gt;The path for upgrading to 11 requires you to have an activated Windows 10 PC and be subscribed to the insider builds.&lt;/p&gt;
+&lt;p&gt;Insider builds can be registerd for use @ &lt;a href=&#34;https://insider.windows.com/&#34;&gt;https://insider.windows.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;system-modifications&#34;&gt;System Modifications&lt;/h2&gt;
+&lt;p&gt;Windows 11 does checks for TPM and Secure boot before it allows the upgrade process to start. However, these can be bypassed.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: It is important to understand Microsoft can at ANY TIME enforce these rules or ignore these modifications which means you would NO LONGER recieve updates&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Here is the registry edits that need to be made: (win11bypass.reg)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig]
+&amp;quot;BypassTPMCheck&amp;quot;=dword:00000001
+&amp;quot;BypassSecureBootCheck&amp;quot;=dword:00000001
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Download Reg File here: &lt;a href=&#34;https://christitus.com/files/win11bypass.zip&#34;&gt;https://christitus.com/files/win11bypass.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;REBOOT AFTER MODIFICATIONS MADE&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2021/06-win11upgrade/regedit.png&#34; alt=&#34;regedit&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;upgrade&#34;&gt;Upgrade&lt;/h2&gt;
+&lt;p&gt;Now you can simply finish your insider build sign up and then click update&lt;/p&gt;
+&lt;p&gt;Once it finishes updating you should see a screen to update to the latest Windows 11 build (22000.52) or Greater&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2021/06-win11upgrade/winver.png&#34; alt=&#34;winver&#34;&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
