@@ -135,7 +135,9 @@ link = "https://github.com/christitustech"
 [[params.social]]
 icon = "fab fa-linkedin" # Fontawesome icon pack https://fontawesome.com/icons
 link = "https://www.linkedin.com/in/ctitus/"
-
+[[params.social]]
+icon = "fas fa-rss" # Fontawesome icon pack https://fontawesome.com/icons
+link = "https://christitus.com/rss"
 
 ####################### Banner #######################################
 [Languages.en.banner]
