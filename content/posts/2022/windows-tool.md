@@ -65,6 +65,6 @@ However, there is a disable all button. I do NOT recommend doing this, but is th
 
 ## Walkthrough Video
 
-[![youtube-video](https://img.youtube.com/vi/1111111/0.jpg)](https://www.youtube.com/watch?v=1111111)
+[![youtube-video](https://img.youtube.com/vi/tPRv-ATUBe4/0.jpg)](https://www.youtube.com/watch?v=tPRv-ATUBe4)
 
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
