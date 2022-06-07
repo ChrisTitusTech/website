@@ -20,17 +20,17 @@
 &lt;p&gt;Go ahead and walkthrough the rest of the install&lt;/p&gt;
 &lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
 &lt;h3 id=&#34;enable-powertools-and-rpmfusion-repositories&#34;&gt;Enable PowerTools and RPMFusion Repositories&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo dnf upgrade -y
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo dnf upgrade -y
 sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm
 sudo dnf config-manager --set-enabled PowerTools
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: If you can&amp;rsquo;t install PowerTools with config-manager, you can manually enable it through the repo file in &lt;code&gt;/etc/yum.repos.d&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo dnf update -y
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo dnf update -y
 sudo dnf install xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps -y
 sudo dnf install plasma-desktop kscreen sddm kde-gtk-config dolphin konsole kate -y
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;set-graphical-interface-on-startup&#34;&gt;Set Graphical Interface on Startup&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo systemctl set-default graphical.target
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo systemctl set-default graphical.target
 sudo systemctl enable sddm
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: If using GTK Apps, I highly recommend building and installing &lt;code&gt;Kvantum&lt;/code&gt; from &lt;code&gt;git clone https://github.com/tsujan/Kvantum.git&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h4 id=&#34;nvidia-cards-only&#34;&gt;NVIDIA Cards ONLY&lt;/h4&gt;
@@ -38,7 +38,7 @@ sudo systemctl enable sddm
 &lt;ol&gt;
 &lt;li&gt;First install Dev tools below with dkms and kernel-devel&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;sudo dnf groupinstall &amp;quot;Development Tools&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo dnf groupinstall &amp;#34;Development Tools&amp;#34;
 sudo dnf install kernel-devel epel-release
 sudo dnf install dkms
 &lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
@@ -49,9 +49,9 @@ sudo dnf install dkms
 &lt;p&gt;Disable nouveau by editing &lt;code&gt;/etc/default/grub&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;GRUB_CMDLINE_LINUX=&amp;quot;crashkernel=auto rhgb quiet nouveau.modeset=0&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;GRUB_CMDLINE_LINUX=&amp;#34;crashkernel=auto rhgb quiet nouveau.modeset=0&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Write out the changes (Note Choose BIOS OR EFI&amp;hellip; NOT BOTH!)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;BIOS:
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;BIOS:
 $ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 EFI:
 $ sudo grub2-mkconfig -o /boot/efi/EFI/rocky/grub.cfg
@@ -64,22 +64,22 @@ $ sudo grub2-mkconfig -o /boot/efi/EFI/rocky/grub.cfg
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;setup-your-development-tools-for-builds&#34;&gt;Setup your Development Tools for Builds&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo dnf groupinstall &amp;quot;Development Tools&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo dnf groupinstall &amp;#34;Development Tools&amp;#34;
 sudo dnf install cmake gcc-c++ libX11-devel libXext-devel qt5-qtx11extras-devel qt5-qtbase-devel qt5-qtsvg-devel qt5-qttools-devel kf5-kwindowsystem-devel make procps-ng curl file git
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install Homebrew&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/bin/bash -c &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: Installer messed up and put it in &lt;code&gt;/home/linuxbrew/.linuxbrew&lt;/code&gt; I moved this to my home folder and linked the brew executable to &lt;code&gt;~/bin&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Add Homebrew to the end bash or zsh rc file&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;eval $(~/.linuxbrew/bin/brew shellenv)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;eval $(~/.linuxbrew/bin/brew shellenv)
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;install-tools-of-your-choice&#34;&gt;Install Tools of your Choice&lt;/h3&gt;
 &lt;p&gt;This is a base install so you will need a file explorer, terminal, browser, etc.&lt;/p&gt;
 &lt;p&gt;Choose whatever you want!&lt;/p&gt;
 &lt;p&gt;Examples:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo dnf install terminator firefox zsh
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo dnf install terminator firefox zsh
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;vscodium-on-rocky-linux&#34;&gt;VSCodium on Rocky Linux&lt;/h4&gt;
 &lt;p&gt;Source: &lt;a href=&#34;https://github.com/VSCodium/vscodium&#34;&gt;https://github.com/VSCodium/vscodium&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
-printf &amp;quot;[gitlab.com_paulcarroty_vscodium_repo]\nname=gitlab.com_paulcarroty_vscodium_repo\nbaseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg&amp;quot; |sudo tee -a /etc/yum.repos.d/vscodium.repo
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo rpm --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+printf &amp;#34;[gitlab.com_paulcarroty_vscodium_repo]\nname=gitlab.com_paulcarroty_vscodium_repo\nbaseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg&amp;#34; |sudo tee -a /etc/yum.repos.d/vscodium.repo
 sudo dnf install codium
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;new-packages-with-appimage-or-flatpak&#34;&gt;New Packages with AppImage or Flatpak&lt;/h4&gt;
 &lt;p&gt;Install flatpak with &lt;code&gt;sudo dnf install flatpak&lt;/code&gt;&lt;/p&gt;

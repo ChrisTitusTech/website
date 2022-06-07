@@ -21,14 +21,14 @@
 &lt;li&gt;Added more tweak settings and misc. fixes&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;New shorter command! (&lt;em&gt;old command still works though&amp;hellip;&lt;/em&gt;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;iwr -useb https://git.io/JJ8R4 | iex
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;iwr -useb https://git.io/JJ8R4 | iex
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;july-2021-update&#34;&gt;July 2021 Update&lt;/h2&gt;
 &lt;p&gt;If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: &lt;a href=&#34;https://github.com/ChrisTitusTech/win10script&#34;&gt;https://github.com/ChrisTitusTech/win10script&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below!&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;December 2020 Feature: GUI added - Select what you want!&lt;/em&gt;
 &lt;em&gt;January 2021 Feature: 10 Bug Fixes and Network Optimizations added&lt;/em&gt;
 &lt;em&gt;July 2021 Updates: 30+ Bug Fixes and Undo Options added&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://git.io/JJ8R4&#39;))
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;))
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;what-this-script-can-do&#34;&gt;What this script can do&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Installs any program listed that you click on using WinGet&lt;/li&gt;
@@ -42,7 +42,7 @@
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=V27McA7ch6w&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/V27McA7ch6w/0.jpg&#34; alt=&#34;win10toolbox&#34;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;user-requested-restore-scripts&#34;&gt;User Requested Restore Scripts&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://git.io/JTbKD&#39;))
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JTbKD&amp;#39;))
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This restore script pops up a GUI that lets you restore what you want to FACTORY DEFAULTS!&lt;/p&gt;
 &lt;p&gt;Current Lineup:&lt;/p&gt;
 &lt;ul&gt;

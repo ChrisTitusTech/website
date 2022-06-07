@@ -31,10 +31,10 @@ Source: &lt;a href=&#34;https://projects.raspberrypi.org/en/projects/lamp-web-se
 &lt;li&gt;Click Write&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;install-dependencies&#34;&gt;Install Dependencies&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get install apache2 php mariadb-server php-mysql -y
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get install apache2 php mariadb-server php-mysql -y
 sudo service apache2 restart
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;install-wordpress&#34;&gt;Install Wordpress&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;cd /var/www/html/
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd /var/www/html/
 sudo rm *
 sudo wget http://wordpress.org/latest.tar.gz
 sudo tar xzf latest.tar.gz
@@ -42,7 +42,7 @@ sudo mv wordpress/* .
 sudo rm -rf wordpress latest.tar.gz
 sudo chown -R www-data: .
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;setup-wordpress-database&#34;&gt;Setup WordPress Database&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;sudo mysql_secure_installation
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo mysql_secure_installation
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;You will be asked Enter current password for root (enter for none): — press Enter.&lt;/li&gt;
 &lt;li&gt;Type in Y and press Enter to Set root password?.&lt;/li&gt;
@@ -55,8 +55,8 @@ sudo chown -R www-data: .
 &lt;p&gt;&lt;em&gt;When complete, you will see the message All done! and Thanks for using MariaDB!.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Login to MySQL with &lt;code&gt;sudo mysql -uroot -p&lt;/code&gt; and enter the password you set above.&lt;/p&gt;
 &lt;p&gt;You will see the terminal prompt change and you can enter the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;create database wordpress;
-GRANT ALL PRIVILEGES ON wordpress.* TO &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;YOURPASSWORD&#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;create database wordpress;
+GRANT ALL PRIVILEGES ON wordpress.* TO &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;YOURPASSWORD&amp;#39;;
 FLUSH PRIVILEGES;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;IMPORTANT: Exit SQL Prompt with &lt;code&gt;Ctrl + D&lt;/code&gt; and change &lt;code&gt;YOURPASSWORD&lt;/code&gt; above to your password!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Reboot with &lt;code&gt;sudo reboot&lt;/code&gt;&lt;/p&gt;
@@ -74,10 +74,10 @@ FLUSH PRIVILEGES;
 &lt;li&gt;Select the &lt;em&gt;Post name&lt;/em&gt; option and click &lt;em&gt;Save Changes&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;From &lt;em&gt;SSH or Terminal on the RPI&lt;/em&gt; you need to enter the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo a2enmod rewrite
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo a2enmod rewrite
 sudo nano /etc/apache2/sites-available/000-default.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;000-default.conf edits (Add this midway in the file)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;Directory &amp;quot;/var/www/html&amp;quot;&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Directory &amp;#34;/var/www/html&amp;#34;&amp;gt;
     AllowOverride All
 &amp;lt;/Directory&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Save the File by press Ctrl + O and Exit with Ctrl + X&lt;/p&gt;

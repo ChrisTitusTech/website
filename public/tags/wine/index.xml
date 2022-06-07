@@ -33,7 +33,7 @@ Install the Screen saver and quit&lt;/p&gt;
 Debian-based Installs &lt;code&gt;apt install xscreensaver xprintidle&lt;/code&gt;&lt;/p&gt;
 &lt;h4 id=&#34;script-creation&#34;&gt;Script Creation&lt;/h4&gt;
 &lt;p&gt;Create lcars.sh in your home directory (&lt;em&gt;replace titus with your user&lt;/em&gt;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/sh
 
 export DISPLAY=:0
 # Wanted trigger timeout in milliseconds.
@@ -41,7 +41,7 @@ IDLE_TIME=$((5*60*1000))
 
 # Sequence to execute when timeout triggers.
 trigger_cmd() {
-    WINEPREFIX=/home/titus/.lcars wine &#39;/home/titus/.lcars/drive_c/windows/system32/System47.scr&#39; /s
+    WINEPREFIX=/home/titus/.lcars wine &amp;#39;/home/titus/.lcars/drive_c/windows/system32/System47.scr&amp;#39; /s
 }
 
 sleep_time=$IDLE_TIME
@@ -65,7 +65,7 @@ done
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;service-creation&#34;&gt;Service Creation&lt;/h4&gt;
 &lt;p&gt;Create lcars.service (&lt;code&gt;sudo nano /etc/systemd/system/lcars.service&lt;/code&gt;)
 &lt;em&gt;change titus to your user&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Unit]
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Unit]
 Description=Screensaver
 
 [Service]

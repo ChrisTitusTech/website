@@ -59,7 +59,7 @@
 &lt;/li&gt;
 &lt;li&gt;Run the following commands to remove all the bloat:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;adb shell
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adb shell
 pm uninstall -k --user 0 com.mobvoi.wear.account.aw
 pm uninstall -k --user 0 com.mobvoi.companion.aw
 pm uninstall -k --user 0 com.mobvoi.ticwatch.cmodel.c2.male

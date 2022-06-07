@@ -26,20 +26,20 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;# /etc/X11/xorg.conf.d/10-monitor.conf
-Section &amp;quot;Monitor&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# /etc/X11/xorg.conf.d/10-monitor.conf
+Section &amp;#34;Monitor&amp;#34;
 ### Monitor Identity - Typically HDMI-0 or DisplayPort-0
-    Identifier    &amp;quot;HDMI1&amp;quot; 
-    Option        &amp;quot;PreferredMode&amp;quot; &amp;quot;1920x1080&amp;quot;
-    Option        &amp;quot;TargetRefresh&amp;quot; &amp;quot;60&amp;quot;
+    Identifier    &amp;#34;HDMI1&amp;#34; 
+    Option        &amp;#34;PreferredMode&amp;#34; &amp;#34;1920x1080&amp;#34;
+    Option        &amp;#34;TargetRefresh&amp;#34; &amp;#34;60&amp;#34;
 
 ### Positioning the Monitor
 ## Basic
-    Option &amp;quot;LeftOf or RightOf or Above or Below&amp;quot; &amp;quot;DisplayPort-0&amp;quot;    
+    Option &amp;#34;LeftOf or RightOf or Above or Below&amp;#34; &amp;#34;DisplayPort-0&amp;#34;    
 ## Advanced
-    Option        &amp;quot;Position&amp;quot; &amp;quot;1680 0&amp;quot; #Note you can always set both to 0 0 to mirror
+    Option        &amp;#34;Position&amp;#34; &amp;#34;1680 0&amp;#34; #Note you can always set both to 0 0 to mirror
 ## Disable a Monitor
-     Option        &amp;quot;Disable&amp;quot; &amp;quot;true&amp;quot;
+     Option        &amp;#34;Disable&amp;#34; &amp;#34;true&amp;#34;
 EndSection 
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;Autorandr - Automatic monitor settings
@@ -54,7 +54,7 @@ EndSection
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Sample xrandr script:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
 xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: You can use the tool &lt;em&gt;arandr&lt;/em&gt; to grab the proper display script&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;windowslinuxmacos---flashing-images-to-sd-card-or-usb&#34;&gt;Windows/Linux/MacOS - Flashing Images to SD-Card or USB&lt;/h2&gt;
@@ -76,7 +76,7 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;/ul&gt;
 &lt;h2 id=&#34;linux---boot-time-high-for-kde&#34;&gt;Linux - Boot Time High for KDE&lt;/h2&gt;
 &lt;p&gt;Analyze systemd and figure out why&amp;hellip; (&lt;code&gt;systemd-analyze&lt;/code&gt;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;systemd-analyze blame
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemd-analyze blame
              10.667s apt-daily.service
               1.127s apt-daily-upgrade.service
               1.053s dev-mapper-neon\x2d\x2dvg\x2droot.device
@@ -151,12 +151,12 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;p&gt;Run Application in Terminal and look at the errors. Chances are it is missing a dependency.&lt;/p&gt;
 &lt;h2 id=&#34;windows---these-settings-are-managed-by-your-organization&#34;&gt;Windows - &amp;ldquo;these settings are managed by your organization&amp;rdquo;&lt;/h2&gt;
 &lt;p&gt;Chances are you ran a powershell script (maybe mine&amp;hellip;) and you are now locked out of changing the lock screen on your Windows Box. Run this command in powershell to gain control of your lock screen again:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Remove-ItemProperty -Path &amp;quot;HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization&amp;quot; -Name &amp;quot;NoLockScreen&amp;quot; -ErrorAction SilentlyContinue
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Remove-ItemProperty -Path &amp;#34;HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization&amp;#34; -Name &amp;#34;NoLockScreen&amp;#34; -ErrorAction SilentlyContinue
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;
 &lt;p&gt;You can also open up Start - Run - &lt;code&gt;gpedit.msc&lt;/code&gt; and then go to All Settings and look for enabled features and set them to &lt;em&gt;Not Configured&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;windows---reinstall-onedrive&#34;&gt;Windows - Reinstall OneDrive&lt;/h2&gt;
 &lt;p&gt;Open Up PowerShell Admin (Right Click Start Button)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;%systemroot%\SysWOW64\OneDriveSetup.exe
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;%systemroot%\SysWOW64\OneDriveSetup.exe
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     

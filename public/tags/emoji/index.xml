@@ -22,19 +22,19 @@ Debian Install &lt;code&gt;sudo apt install noto-fonts-emoji&lt;/code&gt;&lt;/p&
 &lt;p&gt;While just having the above package will give most emoji support there are some sites that still won&amp;rsquo;t display properly add the following file to the fontsconfig files in your config. &lt;em&gt;Note: If ~/.config/fontsconfig doesn&amp;rsquo;t exists create the folder&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Minimal Install with only emoji fonts&lt;br&gt;
 &lt;code&gt;~/.config/fontconfig/conf.d/01-emoji.conf&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;
-&amp;lt;!DOCTYPE fontconfig SYSTEM &amp;quot;fonts.dtd&amp;quot;&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34;?&amp;gt;
+&amp;lt;!DOCTYPE fontconfig SYSTEM &amp;#34;fonts.dtd&amp;#34;&amp;gt;
 &amp;lt;fontconfig&amp;gt;
   &amp;lt;!-- Use Google Emojis --&amp;gt;
-  &amp;lt;match target=&amp;quot;pattern&amp;quot;&amp;gt;
-    &amp;lt;test qual=&amp;quot;any&amp;quot; name=&amp;quot;family&amp;quot;&amp;gt;&amp;lt;string&amp;gt;Segoe UI Emoji&amp;lt;/string&amp;gt;&amp;lt;/test&amp;gt;
-    &amp;lt;edit name=&amp;quot;family&amp;quot; mode=&amp;quot;assign&amp;quot; binding=&amp;quot;same&amp;quot;&amp;gt;&amp;lt;string&amp;gt;Noto Color Emoji&amp;lt;/string&amp;gt;&amp;lt;/edit&amp;gt;
+  &amp;lt;match target=&amp;#34;pattern&amp;#34;&amp;gt;
+    &amp;lt;test qual=&amp;#34;any&amp;#34; name=&amp;#34;family&amp;#34;&amp;gt;&amp;lt;string&amp;gt;Segoe UI Emoji&amp;lt;/string&amp;gt;&amp;lt;/test&amp;gt;
+    &amp;lt;edit name=&amp;#34;family&amp;#34; mode=&amp;#34;assign&amp;#34; binding=&amp;#34;same&amp;#34;&amp;gt;&amp;lt;string&amp;gt;Noto Color Emoji&amp;lt;/string&amp;gt;&amp;lt;/edit&amp;gt;
   &amp;lt;/match&amp;gt;
 &amp;lt;/fontconfig&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Big Install with sans-serif, serif, and monospace replaced System-wide&lt;br&gt;
 &lt;code&gt;/etc/fonts/conf.d/02-emoji.conf&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot;?&amp;gt;
-  &amp;lt;!DOCTYPE fontconfig SYSTEM &amp;quot;fonts.dtd&amp;quot;&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34;?&amp;gt;
+  &amp;lt;!DOCTYPE fontconfig SYSTEM &amp;#34;fonts.dtd&amp;#34;&amp;gt;
   &amp;lt;fontconfig&amp;gt;
 
    &amp;lt;alias&amp;gt;

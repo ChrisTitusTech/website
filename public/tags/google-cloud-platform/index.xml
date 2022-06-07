@@ -19,7 +19,7 @@
 Setup Project and VM (micro)&lt;/em&gt;&lt;br&gt;
 &lt;code&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-2-install-swap&#34;&gt;Step 2: Install Swap&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo fallocate -l 1G /swapfile  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo fallocate -l 1G /swapfile  
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576  
 sudo chmod 600 /swapfile  
 sudo mkswap /swapfile  
@@ -28,7 +28,7 @@ sudo nano /etc/fstab
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;/swapfile swap swap defaults 0 0&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/apache2.png&#34; alt=&#34;apache2&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-3-install-lamp-stack-linux-apache-mysql-and-php&#34;&gt;Step 3: Install LAMP Stack (Linux, Apache, MySQL, and PHP)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install tasksel
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install tasksel
 sudo tasksel install lamp-server
 sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/Internet_Line-20-512.png&#34; alt=&#34;Internet_Line-20-512&#34;&gt;&lt;/p&gt;
@@ -36,12 +36,12 @@ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 &lt;p&gt;&lt;strong&gt;Setup DNS&lt;/strong&gt;&lt;br&gt;
 -Go to your web domain registrar and create A record pointing to your new server&lt;br&gt;
 &lt;strong&gt;Configure Apache conf for website&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;Directory /var/www/example.com&amp;gt;  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Directory /var/www/example.com&amp;gt;  
         Require all granted  
 &amp;lt;/Directory&amp;gt;  
 &amp;lt;VirtualHost *:80&amp;gt;  
-        ServerName &amp;lt;a rel=&amp;quot;noreferrer noopener&amp;quot; target=&amp;quot;_blank&amp;quot; href=&amp;quot;http://example.com/&amp;quot;&amp;gt;example.com&amp;lt;/a&amp;gt;  
-        ServerAlias &amp;lt;a rel=&amp;quot;noreferrer noopener&amp;quot; target=&amp;quot;_blank&amp;quot; href=&amp;quot;http://www.example.com/&amp;quot;&amp;gt;www.example.com&amp;lt;/a&amp;gt;  
+        ServerName &amp;lt;a rel=&amp;#34;noreferrer noopener&amp;#34; target=&amp;#34;_blank&amp;#34; href=&amp;#34;http://example.com/&amp;#34;&amp;gt;example.com&amp;lt;/a&amp;gt;  
+        ServerAlias &amp;lt;a rel=&amp;#34;noreferrer noopener&amp;#34; target=&amp;#34;_blank&amp;#34; href=&amp;#34;http://www.example.com/&amp;#34;&amp;gt;www.example.com&amp;lt;/a&amp;gt;  
         ServerAdmin webmaster@localhost  
         DocumentRoot /var/www/example.com  
 &amp;lt;/VirtualHost&amp;gt;
@@ -52,13 +52,13 @@ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/san.png&#34; alt=&#34;san&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-5-prep-database-and-php&#34;&gt;Step 5: Prep Database and PHP&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Create database&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ mysql -u root  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ mysql -u root  
 &amp;gt; CREATE DATABASE wordpress;  
-&amp;gt; GRANT ALL ON wordpress.* TO &#39;wordpressuser&#39; IDENTIFIED BY &#39;Secure1234!&#39;;  
+&amp;gt; GRANT ALL ON wordpress.* TO &amp;#39;wordpressuser&amp;#39; IDENTIFIED BY &amp;#39;Secure1234!&amp;#39;;  
 &amp;gt; quit  
 $ mysql_secure_installation
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Edit /etc/php/7.2/apache2/php.ini&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;max\_input\_time = 30  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;max\_input\_time = 30  
 upload\_max\_filesize = 20M  
 post\_max\_size = 21M
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/WordPress-Logo-Download-PNG.png&#34; alt=&#34;WordPress-Logo-Download-PNG&#34;&gt;&lt;/p&gt;
@@ -105,7 +105,7 @@ post\_max\_size = 21M
       <description>&lt;p&gt;Use the commands below to create swap file on a micro instance with a Linux operating system. This creates a 2GB Swap file to help alleviate low system ram. Consequently, this is great for those using micro instances in the cloud that have under 1 GB of memory.&lt;/p&gt;
 &lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
 &lt;p&gt;Run the following from your SSH window&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo fallocate -l 2G /swapfile
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo fallocate -l 2G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile

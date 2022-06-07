@@ -39,7 +39,7 @@
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/04-obsidian/homepage.png&#34; alt=&#34;homepage plugin&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;dataview-plugin&#34;&gt;Dataview Plugin&lt;/h2&gt;
 &lt;p&gt;This is for progress bar, or if you want to do filters, tags, yaml headers, and other sorting techniques. It does WAY more than I use it for at the moment. Since I&amp;rsquo;m limiting my notes to maybe 10-20 notes I don&amp;rsquo;t need the other stuff, but it is there incase I expand. For now, I will use the following code in my templates to add a progress bar that tracks any checkboxes and how many are checked compared to total.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;`=&amp;quot;![progress](https://progress-bar.dev/&amp;quot; + round(length(filter(this.file.tasks.completed, (t) =&amp;gt; t = true)) / length(this.file.tasks.text) * 100) + &amp;quot;/)&amp;quot;`
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;`=&amp;#34;![progress](https://progress-bar.dev/&amp;#34; + round(length(filter(this.file.tasks.completed, (t) =&amp;gt; t = true)) / length(this.file.tasks.text) * 100) + &amp;#34;/)&amp;#34;`
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zGCv6aDDfP8&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/zGCv6aDDfP8/0.jpg&#34; alt=&#34;30daychromeosvid&#34;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>

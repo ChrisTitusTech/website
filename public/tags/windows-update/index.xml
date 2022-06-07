@@ -17,7 +17,7 @@
 &lt;h2 id=&#34;install-the-windows-subsystem-for-linux&#34;&gt;Install the Windows Subsystem for Linux&lt;/h2&gt;
 &lt;p&gt;Before installing any Linux distributions on Windows, you must enable the &amp;ldquo;Windows Subsystem for Linux&amp;rdquo; optional feature.&lt;br&gt;
 &lt;strong&gt;Open PowerShell as Administrator and run:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To only install WSL 1, you should now restart your machine and move on to Install your Linux distribution of choice, otherwise wait to restart and move on to update to WSL 2. Read more about Comparing WSL 2 and WSL 1.&lt;/p&gt;
 &lt;h2 id=&#34;update-to-wsl-2&#34;&gt;Update to WSL 2&lt;/h2&gt;
 &lt;p&gt;To update to WSL 2, you must meet the follow criteria:&lt;/p&gt;
@@ -28,11 +28,11 @@
 &lt;/ul&gt;
 &lt;p&gt;Before installing WSL 2, you must enable the &amp;ldquo;Virtual Machine Platform&amp;rdquo; optional feature.&lt;br&gt;
 &lt;strong&gt;Open PowerShell as Administrator and run:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Restart your machine to complete the WSL install and update to WSL 2.&lt;/p&gt;
 &lt;h3 id=&#34;set-wsl-2-as-your-default-version&#34;&gt;Set WSL 2 as your default version&lt;/h3&gt;
 &lt;p&gt;Run the following command in Powershell to set WSL 2 as the default version when installing a new Linux distribution:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;wsl --set-default-version 2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;wsl --set-default-version 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: The update from WSL 1 to WSL 2 may take several minutes to complete depending on the size of your targeted distribution.&lt;/em&gt;&lt;/p&gt;
 &lt;h4 id=&#34;troubleshooting-wsl-2-set-default-error&#34;&gt;Troubleshooting WSL 2 set-default error&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&#34;../images/2020/wsl/wsl-kernel.png&#34; alt=&#34;wsl-kernel&#34;&gt;&lt;br&gt;
@@ -63,12 +63,12 @@ You will then need to create a user account and password for your new Linux dist
 &lt;img src=&#34;../images/2020/wsl/wsl-prompt.png&#34; alt=&#34;wsl-prompt&#34;&gt;&lt;br&gt;
 Set your distribution version to WSL 1 or WSL 2&lt;br&gt;
 You can check the WSL version assigned to each of the Linux distributions you have installed by opening the PowerShell command line and entering the command (only available in Windows Build 19041 or higher): &lt;code&gt;wsl -l -v&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;wsl --list --verbose
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;wsl --list --verbose
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To set a distribution to be backed by either version of WSL please run:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;wsl --set-version &amp;lt;distribution name&amp;gt; &amp;lt;versionNumber&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;wsl --set-version &amp;lt;distribution name&amp;gt; &amp;lt;versionNumber&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Make sure to replace &lt;distribution name&gt; with the actual name of your distribution and &lt;versionNumber&gt; with the number &amp;lsquo;1&amp;rsquo; or &amp;lsquo;2&amp;rsquo;. You can change back to WSL 1 at anytime by running the same command as above but replacing the &amp;lsquo;2&amp;rsquo; with a &amp;lsquo;1&amp;rsquo;.&lt;br&gt;
 Additionally, if you want to make WSL 2 your default architecture you can do so with this command:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;wsl --set-default-version 2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;wsl --set-default-version 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: This will set the version of any new distribution installed to WSL 2.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;troubleshooting-installation&#34;&gt;Troubleshooting installation&lt;/h2&gt;
 &lt;p&gt;Below are related errors and suggested fixes. Refer to the WSL troubleshooting page for other common errors and their solutions.&lt;/p&gt;

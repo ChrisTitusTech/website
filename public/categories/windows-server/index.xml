@@ -128,26 +128,26 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
       <guid>https://christitus.com/taking-databases-offline-sql-query/</guid>
       <description>&lt;p&gt;The following SQL query is for taking databases offline, drop the offline databases, or bring them all back online. This affects every database in your SQL instance, so be very careful when using these. The following three queries will save you a considerable amount of time if repurposing an instance.&lt;/p&gt;
 &lt;h2 id=&#34;taking-databases-offline-and-then-dropping-them&#34;&gt;Taking databases offline and then dropping them&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;use master;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use master;
 declare @nsql nvarchar(max);
-select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
-&#39;ALTER DATABASE [&#39;+name+&#39;] SET OFFLINE WITH NO_WAIT;&#39;
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&amp;#39;&amp;#39;)+
+&amp;#39;ALTER DATABASE [&amp;#39;+name+&amp;#39;] SET OFFLINE WITH NO_WAIT;&amp;#39;
 from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
 exec (@nsql)`
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once all databases are offline you can drop them to clear out the entire instance with this SQL query.&lt;br&gt;
 &lt;em&gt;Note: This is extremely destructive so please use this with care.&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;warning-running-this-will-destroy-all-databases&#34;&gt;&lt;em&gt;WARNING&lt;/em&gt; Running this WILL DESTROY ALL DATABASES!!!&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;use master;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use master;
 declare @nsql nvarchar(max);
-select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
-&#39;DROP DATABASE [&#39;+name+&#39;];&#39;
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&amp;#39;&amp;#39;)+
+&amp;#39;DROP DATABASE [&amp;#39;+name+&amp;#39;];&amp;#39;
 from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
 exec (@nsql)
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;use-the-following-sql-query-to-take-all-databases-online&#34;&gt;Use the following SQL query to take all databases online&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;use master;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use master;
 declare @nsql nvarchar(max);
-select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
-&#39;ALTER DATABASE [&#39;+name+&#39;] SET ONLINE WITH NO_WAIT;&#39;
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&amp;#39;&amp;#39;)+
+&amp;#39;ALTER DATABASE [&amp;#39;+name+&amp;#39;] SET ONLINE WITH NO_WAIT;&amp;#39;
 from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
 exec (@nsql)
 &lt;/code&gt;&lt;/pre&gt;</description>
@@ -189,7 +189,7 @@ exec (@nsql)
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2016/10/exclude-shared-mailboxes.png&#34; alt=&#34;Exclude Shared Mailboxes&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
 &lt;h4 id=&#34;connect-to-o365-in-ps&#34;&gt;Connect to O365 in PS:&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$UserCredential = Get-Credential
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$UserCredential = Get-Credential
 $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
 Import-PSSession $Session
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;exclude-shared-mailboxes-with-this-filter-command&#34;&gt;Exclude Shared Mailboxes with this filter command:&lt;/h4&gt;
@@ -205,7 +205,7 @@ Import-PSSession $Session
       
       <guid>https://christitus.com/force-active-directory-sync/</guid>
       <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”
 Start-ADSyncSyncCycle -PolicyType Delta
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is great for forcing a sync of time-sensitive distribution list updates or user updates. If you find yourself doing this frequently make a PowerShell script for ease of access.&lt;/p&gt;</description>
     </item>
@@ -221,7 +221,7 @@ Start-ADSyncSyncCycle -PolicyType Delta
 &lt;p&gt;MASTER CLEANUP: (Run this First)&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Dism.exe /online /Cleanup-Image /SPSuperseded&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;FOLLOWUP:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Windows 2008 Use: Dism.exe /online /Cleanup-Image /StartComponentCleanup
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows 2008 Use: Dism.exe /online /Cleanup-Image /StartComponentCleanup
 Windows 2012 Use: Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
@@ -237,8 +237,8 @@ Windows 2012 Use: Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetB
 &lt;ul&gt;
 &lt;li&gt;Stop and disable the Key Distribution Center (KDC) service on the troubled domain controller&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;net stop kdc
-sc config &amp;quot;kdc&amp;quot; start= disabled
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;net stop kdc
+sc config &amp;#34;kdc&amp;#34; start= disabled
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Please Note: space is REQUIRED after start=&lt;/em&gt;&lt;br&gt;
 &lt;em&gt;Alternatively, you can do this from the Services Panel&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -268,7 +268,7 @@ _Note: you can use &lt;code&gt;klist tickets&lt;/code&gt; to view tickets before
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;sc config &amp;quot;kdc&amp;quot; start= auto
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sc config &amp;#34;kdc&amp;#34; start= auto
 net start KDC
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Typically I wait about 5-10 minutes after this and start doing checks to see if it is now replicating properly. You can also force a replicate using repadmin /replicate but usually not necessary. In the end, make sure you check to make you aren’t getting the “Target account name is incorrect” error anymore.&lt;/p&gt;</description>
     </item>
@@ -288,9 +288,9 @@ net start KDC
 Notex.0 in the above registry path corresponds to the Outlook version (16.0 = Outlook 2016, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).&lt;br&gt;
 &lt;code&gt;ExcludeScpLookup DWORD 1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;(Option 2)Now you can also do this with a Reg file. Name it SCPDisable.reg&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Windows Registry Editor Version 5.00  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows Registry Editor Version 5.00  
 [HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Outlook\AutoDiscover]  
-&amp;quot;ExcludeScpLookup&amp;quot;=dword:00000001`
+&amp;#34;ExcludeScpLookup&amp;#34;=dword:00000001`
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above is Office 2010, Notice the 14.0, and make sure you change it to the version you have.&lt;/p&gt;
 &lt;p&gt;Now simply create a new profile and your domain should now point to Office 365 by default.&lt;/p&gt;</description>
     </item>
@@ -343,7 +343,7 @@ Notex.0 in the above registry path corresponds to the Outlook version (16.0 = Ou
 &lt;p&gt;&lt;code&gt;racadm racresetcfg&lt;/code&gt; (Hard Reset – Resets IP/Account settings back to factory default)&lt;/p&gt;
 &lt;p&gt;NOTE: Resets Default IP &amp;gt; 192.168.0.120&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Network Setup&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;racadm config -g cfgLanNetworking -o cfgNicEnable 1
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;racadm config -g cfgLanNetworking -o cfgNicEnable 1
 racadm config -g cfgLanNetworking -o cfgNicIpAddress 192.168.0.120
 racadm config -g cfgLanNetworking -o cfgNicNetmask 255.255.255.0
 racadm config -g cfgLanNetworking -o cfgNicGateway 192.168.0.120
@@ -352,11 +352,11 @@ racadm config -g cfgLanNetworking -o cfgDNSServersFromDHCP 0
 racadm config -g cfgLanNetworking -o cfgDNSServer1 192.168.0.5
 racadm config -g cfgLanNetworking -o cfgDNSServer2 192.168.0.6
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;User Setup&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;racadm config -g cfgUserAdmin -o cfgUserAdminUserName -i 2 john
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;racadm config -g cfgUserAdmin -o cfgUserAdminUserName -i 2 john
 racadm config -g cfgUserAdmin -o cfgUserAdminPassword -i 2 123456
 racadm config -g cfgUserAdmin -o cfgUserAdminEnable -i 2 1
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To verify the new user, use one of the following commands:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;racadm getconfig -u john
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;racadm getconfig -u john
 racadm getconfig –g cfgUserAdmin –i 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;From here you will use your web browser to enter the iDrac configuration GUI and finish setting up SMTP servers, alerts and other things. I only recommend the above from command line since it gives direct access when the web browser isn’t functions due to bad IP address or invalid username.&lt;/p&gt;</description>
     </item>
@@ -441,7 +441,7 @@ racadm getconfig –g cfgUserAdmin –i 2
 &lt;h2 id=&#34;solution-create-a-gpo-to-fix&#34;&gt;Solution: Create a GPO to fix&lt;/h2&gt;
 &lt;p&gt;To resolve this problem, turn off Fast Logon Optimization. I recommend creating a GPO in your domain controller to achieve this. If its an isolated instance to one PC, you can use gpedit.msc to enforce it on that one PC.&lt;/p&gt;
 &lt;h3 id=&#34;group-policy-settings-to-change&#34;&gt;Group Policy Settings to Change&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Computer Configuration\Administrative Templates\System\Logon\Always wait for the network at computer startup and logon
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Computer Configuration\Administrative Templates\System\Logon\Always wait for the network at computer startup and logon
 User Configuration\Administrative Templates\System\Scripts\Run logon scripts synchronously
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
@@ -523,7 +523,7 @@ User Configuration\Administrative Templates\System\Scripts\Run logon scripts syn
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;the-fix-for-an-update-is-pending&#34;&gt;The Fix for an update is pending&lt;/h2&gt;
 &lt;p&gt;The following Registry keys control this error message. If you have rebooted and are still experiencing this issue, clear out these keys and relaunch your installer.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Updates\UpdateExeVolatile
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Updates\UpdateExeVolatile
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\ControlSession Manager\PendingFileRenameOperations
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Setup MSI displays an error message if one of the following conditions is true:&lt;/p&gt;
 &lt;ul&gt;
@@ -543,7 +543,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\ControlSession Manager\PendingFileRe
       <guid>https://christitus.com/exchange-primary-domain-controller/</guid>
       <description>&lt;p&gt;If you had the misfortune of installing Exchange on Primary Domain Controller you will experience some pain when doing a reboot. Typically it will take 10-15 minutes before it restarts and up to 30 minutes to start the Microsoft Exchange Information Store. Consequently, what is really happening in the background is the IS service is being terminated incorrectly on shutdown and the store is left in a “DIRTY” shutdown state. This is very bad on several levels and can cause the Store to corrupt and not start at all, which can be catastrophic.&lt;/p&gt;
 &lt;p&gt;Luckily, it’s a simple fix and all you have to do is shut down the services before restarting. Below is a script that does it automatically. So, just plug it into a .cmd or .bat file and run.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@ECHO OFF
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;@ECHO OFF
 ECHO ARE YOU SURE YOU WANT TO RESTART SERVER??
 pause
 net stop msexchangeadtopology /y

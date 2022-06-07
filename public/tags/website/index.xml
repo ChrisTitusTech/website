@@ -19,7 +19,7 @@
 Setup Project and VM (micro)&lt;/em&gt;&lt;br&gt;
 &lt;code&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-2-install-swap&#34;&gt;Step 2: Install Swap&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo fallocate -l 1G /swapfile  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo fallocate -l 1G /swapfile  
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576  
 sudo chmod 600 /swapfile  
 sudo mkswap /swapfile  
@@ -28,7 +28,7 @@ sudo nano /etc/fstab
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;/swapfile swap swap defaults 0 0&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/apache2.png&#34; alt=&#34;apache2&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-3-install-lamp-stack-linux-apache-mysql-and-php&#34;&gt;Step 3: Install LAMP Stack (Linux, Apache, MySQL, and PHP)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install tasksel
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install tasksel
 sudo tasksel install lamp-server
 sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/Internet_Line-20-512.png&#34; alt=&#34;Internet_Line-20-512&#34;&gt;&lt;/p&gt;
@@ -36,12 +36,12 @@ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 &lt;p&gt;&lt;strong&gt;Setup DNS&lt;/strong&gt;&lt;br&gt;
 -Go to your web domain registrar and create A record pointing to your new server&lt;br&gt;
 &lt;strong&gt;Configure Apache conf for website&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;Directory /var/www/example.com&amp;gt;  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Directory /var/www/example.com&amp;gt;  
         Require all granted  
 &amp;lt;/Directory&amp;gt;  
 &amp;lt;VirtualHost *:80&amp;gt;  
-        ServerName &amp;lt;a rel=&amp;quot;noreferrer noopener&amp;quot; target=&amp;quot;_blank&amp;quot; href=&amp;quot;http://example.com/&amp;quot;&amp;gt;example.com&amp;lt;/a&amp;gt;  
-        ServerAlias &amp;lt;a rel=&amp;quot;noreferrer noopener&amp;quot; target=&amp;quot;_blank&amp;quot; href=&amp;quot;http://www.example.com/&amp;quot;&amp;gt;www.example.com&amp;lt;/a&amp;gt;  
+        ServerName &amp;lt;a rel=&amp;#34;noreferrer noopener&amp;#34; target=&amp;#34;_blank&amp;#34; href=&amp;#34;http://example.com/&amp;#34;&amp;gt;example.com&amp;lt;/a&amp;gt;  
+        ServerAlias &amp;lt;a rel=&amp;#34;noreferrer noopener&amp;#34; target=&amp;#34;_blank&amp;#34; href=&amp;#34;http://www.example.com/&amp;#34;&amp;gt;www.example.com&amp;lt;/a&amp;gt;  
         ServerAdmin webmaster@localhost  
         DocumentRoot /var/www/example.com  
 &amp;lt;/VirtualHost&amp;gt;
@@ -52,13 +52,13 @@ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/san.png&#34; alt=&#34;san&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-5-prep-database-and-php&#34;&gt;Step 5: Prep Database and PHP&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Create database&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ mysql -u root  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ mysql -u root  
 &amp;gt; CREATE DATABASE wordpress;  
-&amp;gt; GRANT ALL ON wordpress.* TO &#39;wordpressuser&#39; IDENTIFIED BY &#39;Secure1234!&#39;;  
+&amp;gt; GRANT ALL ON wordpress.* TO &amp;#39;wordpressuser&amp;#39; IDENTIFIED BY &amp;#39;Secure1234!&amp;#39;;  
 &amp;gt; quit  
 $ mysql_secure_installation
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Edit /etc/php/7.2/apache2/php.ini&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;max\_input\_time = 30  
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;max\_input\_time = 30  
 upload\_max\_filesize = 20M  
 post\_max\_size = 21M
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/WordPress-Logo-Download-PNG.png&#34; alt=&#34;WordPress-Logo-Download-PNG&#34;&gt;&lt;/p&gt;
@@ -114,7 +114,7 @@ post\_max\_size = 21M
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2018/09/apache2.png&#34; alt=&#34;apache2&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;my-settings-server-instance-standard-1-dedicated-vcpu-with-35-gb-of-memory&#34;&gt;My Settings: Server Instance (Standard) 1 dedicated vCPU with 3.5 GB of Memory&lt;/h4&gt;
 &lt;p&gt;Please note that the below settings is done from a stock apache configuration. With all things considered these values are very conservative and therefore can be used if you are hosting with these specs or greater. In future articles I’ll go through disabling un-needed modules to reduce apache’s footprint, thus allowing you to increase these numbers.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# prefork MPM
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# prefork MPM
 # StartServers: number of server processes to start
 # MinSpareServers: minimum number of server processes which are kept spare
 # MaxSpareServers: maximum number of server processes which are kept spare
@@ -146,7 +146,7 @@ MaxConnectionsPerChild 2000
 &lt;p&gt;Therefore, this htaccess will contain bad bot blocker, security optimizations, force https, and a variety of other optimizations. This will save you from installing about 5-10 plugins that would slow down your website.&lt;/p&gt;
 &lt;h2 id=&#34;the-htaccess-file-to-rule-them-all&#34;&gt;The .htaccess file to rule them all&lt;/h2&gt;
 &lt;h5 id=&#34;basic-wordpress-part&#34;&gt;Basic WordPress part&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;# BEGIN WordPress
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# BEGIN WordPress
 &amp;lt;IfModule mod_rewrite.c&amp;gt;
 RewriteEngine On
 RewriteBase /
@@ -157,7 +157,7 @@ RewriteRule . /index.php [L]
 &amp;lt;/IfModule&amp;gt;
 # END WordPress
 &lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;secure-the-wordpressinstall&#34;&gt;Secure the WordPress install&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;# Allow mod_rewrite in htaccess
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Allow mod_rewrite in htaccess
 Options +FollowSymLinks
 # Disable directory browsing
 Options All -Indexes
@@ -177,14 +177,14 @@ order allow,deny
 deny from all
 &amp;lt;/files&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;force-https-and-set-time-zones&#34;&gt;Force HTTPS and Set Time Zones&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;# Force HTTPS
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Force HTTPS
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://christitus.com/$1 [R,L]
 # Set Central Time Zone
 SetEnv TZ America/Chicago
 &lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;miscellaneous-optimizations&#34;&gt;Miscellaneous Optimizations&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;IfModule mod_rewrite.c&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;IfModule mod_rewrite.c&amp;gt;
 &amp;lt;IfModule mod_negotiation.c&amp;gt;
 Options -MultiViews
 &amp;lt;/IfModule&amp;gt;
@@ -201,25 +201,25 @@ RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 &amp;lt;/IfModule&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;expires-header-configuration&#34;&gt;Expires Header Configuration&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;# BEGIN Expires
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# BEGIN Expires
 &amp;lt;ifModule mod_expires.c&amp;gt;
 ExpiresActive On
-ExpiresDefault &amp;quot;access 2 days&amp;quot;
-ExpiresByType text/html &amp;quot;access plus 3 seconds&amp;quot;
-ExpiresByType image/gif &amp;quot;access plus 2419200 seconds&amp;quot;
-ExpiresByType image/jpeg &amp;quot;access plus 2419200 seconds&amp;quot;
-ExpiresByType image/jpg &amp;quot;access plus 2419200 seconds&amp;quot;
-ExpiresByType image/png &amp;quot;access plus 2419200 seconds&amp;quot;
-ExpiresByType text/css &amp;quot;access plus 2419200 seconds&amp;quot;
-ExpiresByType text/javascript &amp;quot;access plus 2419200 seconds&amp;quot;
-ExpiresByType application/x-javascript &amp;quot;access plus 2419200 seconds&amp;quot;
-ExpiresByType application/x-shockwave-flash &amp;quot;access 1 month&amp;quot;
-ExpiresByType application/pdf &amp;quot;access 1 month&amp;quot;
-ExpiresByType image/x-icon &amp;quot;access 1 year&amp;quot;
+ExpiresDefault &amp;#34;access 2 days&amp;#34;
+ExpiresByType text/html &amp;#34;access plus 3 seconds&amp;#34;
+ExpiresByType image/gif &amp;#34;access plus 2419200 seconds&amp;#34;
+ExpiresByType image/jpeg &amp;#34;access plus 2419200 seconds&amp;#34;
+ExpiresByType image/jpg &amp;#34;access plus 2419200 seconds&amp;#34;
+ExpiresByType image/png &amp;#34;access plus 2419200 seconds&amp;#34;
+ExpiresByType text/css &amp;#34;access plus 2419200 seconds&amp;#34;
+ExpiresByType text/javascript &amp;#34;access plus 2419200 seconds&amp;#34;
+ExpiresByType application/x-javascript &amp;#34;access plus 2419200 seconds&amp;#34;
+ExpiresByType application/x-shockwave-flash &amp;#34;access 1 month&amp;#34;
+ExpiresByType application/pdf &amp;#34;access 1 month&amp;#34;
+ExpiresByType image/x-icon &amp;#34;access 1 year&amp;#34;
 &amp;lt;/ifModule&amp;gt;
 # END Expires
 &lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;compression-optimization&#34;&gt;Compression Optimization&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;IfModule mod_deflate.c&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;IfModule mod_deflate.c&amp;gt;
 AddOutputFilterByType DEFLATE text/html
 AddOutputFilterByType DEFLATE text/css
 AddOutputFilterByType DEFLATE text/javascript
@@ -246,234 +246,234 @@ AddOutputFilterByType DEFLATE font/eot
 AddOutputFilterByType DEFLATE font/woff
 AddOutputFilterByType DEFLATE font/woff2
 AddOutputFilterByType DEFLATE font/opentype
-# For Olders Browsers Which Can&#39;t Handle Compression
+# For Olders Browsers Which Can&amp;#39;t Handle Compression
 BrowserMatch ^Mozilla/4 gzip-only-text/html
 BrowserMatch ^Mozilla/4\.0[678] no-gzip
 BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 &amp;lt;/IfModule&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;bad-bot-and-vulnerability-blockers&#34;&gt;Bad Bot and Vulnerability blockers&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;# Block Bad Bots &amp;amp; Scrapers
-SetEnvIfNoCase User-Agent &amp;quot;Aboundex&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;80legs&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;360Spider&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Java&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Cogentbot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Alexibot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^asterias&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^attach&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^BackDoorBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^BackWeb&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Bandit&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^BatchFTP&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Bigfoot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Black.Hole&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^BlackWidow&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^BlowFish&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^BotALot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Buddy&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^BuiltBotTough&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Bullseye&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^BunnySlippers&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Cegbfeieh&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^CheeseBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^CherryPicker&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^ChinaClaw&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Collector&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Copier&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^CopyRightCheck&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^cosmos&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Crescent&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Custo&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^AIBOT&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^DISCo&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^DIIbot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^DittoSpyder&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Download\ Demon&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Download\ Devil&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Download\ Wonder&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^dragonfly&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Drip&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^eCatch&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^EasyDL&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^ebingbong&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^EirGrabber&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^EmailCollector&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^EmailSiphon&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^EmailWolf&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^EroCrawler&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Exabot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Express\ WebPictures&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Extractor&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^EyeNetIE&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Foobot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^flunky&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^FrontPage&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Go-Ahead-Got-It&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^gotit&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^GrabNet&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Grafula&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Harvest&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^hloader&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^HMView&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^HTTrack&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^humanlinks&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^IlseBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Image\ Stripper&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Image\ Sucker&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Indy\ Library&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^InfoNaviRobot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^InfoTekies&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Intelliseek&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^InterGET&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Internet\ Ninja&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Iria&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Jakarta&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^JennyBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^JetCar&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^JOC&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^JustView&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Jyxobot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Kenjin.Spider&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Keyword.Density&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^larbin&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^LexiBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^lftp&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^libWeb/clsHTTP&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^likse&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^LinkextractorPro&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^LinkScan/8.1a.Unix&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^LNSpiderguy&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^LinkWalker&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^lwp-trivial&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^LWP::Simple&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Magnet&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Mag-Net&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^MarkWatch&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Mass\ Downloader&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Mata.Hari&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Memo&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Microsoft.URL&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Microsoft\ URL\ Control&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^MIDown\ tool&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^MIIxpc&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Mirror&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Missigua\ Locator&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Mister\ PiX&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^moget&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Mozilla/3.Mozilla/2.01&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Mozilla.*NEWT&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NAMEPROTECT&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Navroad&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NearSite&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NetAnts&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Netcraft&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NetMechanic&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NetSpider&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Net\ Vampire&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NetZIP&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NextGenSearchBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NG&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NICErsPRO&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^niki-bot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NimbleCrawler&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Ninja&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^NPbot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Octopus&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Offline\ Explorer&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Offline\ Navigator&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Openfind&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^OutfoxBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^PageGrabber&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Papa\ Foto&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^pavuk&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^pcBrowser&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^PHP\ version\ tracker&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Pockey&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^ProPowerBot/2.14&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^ProWebWalker&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^psbot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Pump&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^QueryN.Metasearch&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^RealDownload&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Reaper&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Recorder&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^ReGet&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^RepoMonkey&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^RMA&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Siphon&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^SiteSnagger&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^SlySearch&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^SmartDownload&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Snake&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Snapbot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Snoopy&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^sogou&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^SpaceBison&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^SpankBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^spanner&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Sqworm&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Stripper&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Sucker&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^SuperBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^SuperHTTP&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Surfbot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^suzuran&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Szukacz/1.4&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^tAkeOut&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Teleport&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Telesoft&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^TurnitinBot/1.5&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^The.Intraformant&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^TheNomad&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^TightTwatBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Titan&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^True_Robot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^turingos&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^TurnitinBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^URLy.Warning&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Vacuum&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^VCI&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^VoidEYE&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Web\ Image\ Collector&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Web\ Sucker&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebAuto&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebBandit&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Webclipping.com&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebCopier&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebEMailExtrac.*&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebEnhancer&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebFetch&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebGo\ IS&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Web.Image.Collector&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebLeacher&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebmasterWorldForumBot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebReaper&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebSauger&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Website\ eXtractor&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Website\ Quester&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Webster&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebStripper&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebWhacker&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WebZIP&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;Whacker&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Widow&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WISENutbot&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WWWOFFLE&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^WWW-Collector-E&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Xaldon&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Xenu&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Zeus&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;ZmEu&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;^Zyborg&amp;quot; bad_bot
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Block Bad Bots &amp;amp; Scrapers
+SetEnvIfNoCase User-Agent &amp;#34;Aboundex&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;80legs&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;360Spider&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Java&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Cogentbot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Alexibot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^asterias&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^attach&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^BackDoorBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^BackWeb&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Bandit&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^BatchFTP&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Bigfoot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Black.Hole&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^BlackWidow&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^BlowFish&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^BotALot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Buddy&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^BuiltBotTough&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Bullseye&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^BunnySlippers&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Cegbfeieh&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^CheeseBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^CherryPicker&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^ChinaClaw&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Collector&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Copier&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^CopyRightCheck&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^cosmos&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Crescent&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Custo&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^AIBOT&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^DISCo&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^DIIbot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^DittoSpyder&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Download\ Demon&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Download\ Devil&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Download\ Wonder&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^dragonfly&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Drip&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^eCatch&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^EasyDL&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^ebingbong&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^EirGrabber&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^EmailCollector&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^EmailSiphon&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^EmailWolf&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^EroCrawler&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Exabot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Express\ WebPictures&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Extractor&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^EyeNetIE&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Foobot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^flunky&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^FrontPage&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Go-Ahead-Got-It&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^gotit&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^GrabNet&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Grafula&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Harvest&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^hloader&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^HMView&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^HTTrack&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^humanlinks&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^IlseBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Image\ Stripper&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Image\ Sucker&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Indy\ Library&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^InfoNaviRobot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^InfoTekies&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Intelliseek&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^InterGET&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Internet\ Ninja&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Iria&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Jakarta&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^JennyBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^JetCar&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^JOC&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^JustView&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Jyxobot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Kenjin.Spider&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Keyword.Density&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^larbin&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^LexiBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^lftp&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^libWeb/clsHTTP&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^likse&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^LinkextractorPro&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^LinkScan/8.1a.Unix&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^LNSpiderguy&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^LinkWalker&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^lwp-trivial&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^LWP::Simple&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Magnet&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Mag-Net&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^MarkWatch&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Mass\ Downloader&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Mata.Hari&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Memo&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Microsoft.URL&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Microsoft\ URL\ Control&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^MIDown\ tool&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^MIIxpc&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Mirror&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Missigua\ Locator&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Mister\ PiX&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^moget&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Mozilla/3.Mozilla/2.01&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Mozilla.*NEWT&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NAMEPROTECT&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Navroad&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NearSite&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NetAnts&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Netcraft&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NetMechanic&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NetSpider&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Net\ Vampire&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NetZIP&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NextGenSearchBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NG&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NICErsPRO&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^niki-bot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NimbleCrawler&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Ninja&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^NPbot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Octopus&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Offline\ Explorer&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Offline\ Navigator&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Openfind&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^OutfoxBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^PageGrabber&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Papa\ Foto&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^pavuk&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^pcBrowser&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^PHP\ version\ tracker&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Pockey&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^ProPowerBot/2.14&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^ProWebWalker&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^psbot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Pump&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^QueryN.Metasearch&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^RealDownload&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Reaper&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Recorder&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^ReGet&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^RepoMonkey&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^RMA&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Siphon&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^SiteSnagger&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^SlySearch&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^SmartDownload&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Snake&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Snapbot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Snoopy&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^sogou&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^SpaceBison&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^SpankBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^spanner&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Sqworm&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Stripper&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Sucker&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^SuperBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^SuperHTTP&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Surfbot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^suzuran&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Szukacz/1.4&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^tAkeOut&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Teleport&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Telesoft&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^TurnitinBot/1.5&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^The.Intraformant&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^TheNomad&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^TightTwatBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Titan&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^True_Robot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^turingos&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^TurnitinBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^URLy.Warning&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Vacuum&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^VCI&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^VoidEYE&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Web\ Image\ Collector&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Web\ Sucker&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebAuto&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebBandit&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Webclipping.com&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebCopier&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebEMailExtrac.*&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebEnhancer&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebFetch&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebGo\ IS&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Web.Image.Collector&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebLeacher&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebmasterWorldForumBot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebReaper&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebSauger&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Website\ eXtractor&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Website\ Quester&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Webster&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebStripper&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebWhacker&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WebZIP&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Whacker&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Widow&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WISENutbot&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WWWOFFLE&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^WWW-Collector-E&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Xaldon&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Xenu&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Zeus&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;ZmEu&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;^Zyborg&amp;#34; bad_bot
 
 # Vulnerability Scanners
-SetEnvIfNoCase User-Agent &amp;quot;Acunetix&amp;quot; bad_bot
-SetEnvIfNoCase User-Agent &amp;quot;FHscan&amp;quot; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;Acunetix&amp;#34; bad_bot
+SetEnvIfNoCase User-Agent &amp;#34;FHscan&amp;#34; bad_bot
 # Aggressive Chinese Search Engine
-#SetEnvIfNoCase User-Agent &amp;quot;Baiduspider&amp;quot; bad_bot
+#SetEnvIfNoCase User-Agent &amp;#34;Baiduspider&amp;#34; bad_bot
 # Aggressive Russian Search Engine
 # Uncomment to disable this search engine
-# SetEnvIfNoCase User-Agent &amp;quot;Yandex&amp;quot; bad_bot`
+# SetEnvIfNoCase User-Agent &amp;#34;Yandex&amp;#34; bad_bot`
 
 &amp;lt;Limit GET POST HEAD&amp;gt;
 Order Allow,Deny

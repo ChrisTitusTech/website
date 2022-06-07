@@ -15,27 +15,27 @@
       <description>&lt;p&gt;This is guide on setting up QEMU in Debian Linux.&lt;/p&gt;
 &lt;h2 id=&#34;check-virtualization-extension&#34;&gt;Check Virtualization Extension&lt;/h2&gt;
 &lt;p&gt;Run this command to make sure you&amp;rsquo;ve enabled virtualization in on your computer. It should be above 0&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;titus@debian:~$  egrep -c &#39;(vmx|svm)&#39; /proc/cpuinfo
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;titus@debian:~$  egrep -c &amp;#39;(vmx|svm)&amp;#39; /proc/cpuinfo
 12
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If the output is zero then go to bios settings and enable VT-x (Virtualization Technology Extension) for Intel processor and AMD-V for AMD processor.&lt;/p&gt;
 &lt;h2 id=&#34;install-qemu-and-virtual-machine-manager&#34;&gt;Install QEMU and Virtual Machine Manager&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;titus@debian:~$ sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;titus@debian:~$ sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Verify that Libvirtd service is started&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;titus@debian:~$ sudo systemctl status libvirtd.service
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;titus@debian:~$ sudo systemctl status libvirtd.service
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/libvirtd-service.png&#34; alt=&#34;libvirtd-service&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;start-default-network-for-networking&#34;&gt;Start Default Network for Networking&lt;/h2&gt;
 &lt;p&gt;VIRSH is a command to directly interact with our VMs from terminal. We use it to list networks, vm-status and various other tools when we need to make tweaks. Here is how we start the default and make it auto-start after reboot.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;titus@debian:~$ sudo virsh net-start default
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;titus@debian:~$ sudo virsh net-start default
 Network default started
 titus@debian:~$ sudo virsh net-autostart default
 Network default marked as autostarted
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check status with:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;titus@debian:~$ sudo virsh net-list --all
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;titus@debian:~$ sudo virsh net-list --all
  Name      State      Autostart   Persistent
 ----------------------------------------------
  default   active       yes          yes
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;add-user-to-libvirt-to-allow-access-to-vms&#34;&gt;Add User to libvirt to Allow Access to VMs&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;titus@debian:~$ sudo adduser titus libvirt
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;titus@debian:~$ sudo adduser titus libvirt
 titus@debian:~$ sudo adduser titus libvirt-qemu
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Reboot and you are Finished!&lt;/p&gt;
 &lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;

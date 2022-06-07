@@ -14,26 +14,26 @@
       <guid>https://christitus.com/taking-databases-offline-sql-query/</guid>
       <description>&lt;p&gt;The following SQL query is for taking databases offline, drop the offline databases, or bring them all back online. This affects every database in your SQL instance, so be very careful when using these. The following three queries will save you a considerable amount of time if repurposing an instance.&lt;/p&gt;
 &lt;h2 id=&#34;taking-databases-offline-and-then-dropping-them&#34;&gt;Taking databases offline and then dropping them&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;use master;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use master;
 declare @nsql nvarchar(max);
-select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
-&#39;ALTER DATABASE [&#39;+name+&#39;] SET OFFLINE WITH NO_WAIT;&#39;
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&amp;#39;&amp;#39;)+
+&amp;#39;ALTER DATABASE [&amp;#39;+name+&amp;#39;] SET OFFLINE WITH NO_WAIT;&amp;#39;
 from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
 exec (@nsql)`
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once all databases are offline you can drop them to clear out the entire instance with this SQL query.&lt;br&gt;
 &lt;em&gt;Note: This is extremely destructive so please use this with care.&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;warning-running-this-will-destroy-all-databases&#34;&gt;&lt;em&gt;WARNING&lt;/em&gt; Running this WILL DESTROY ALL DATABASES!!!&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;use master;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use master;
 declare @nsql nvarchar(max);
-select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
-&#39;DROP DATABASE [&#39;+name+&#39;];&#39;
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&amp;#39;&amp;#39;)+
+&amp;#39;DROP DATABASE [&amp;#39;+name+&amp;#39;];&amp;#39;
 from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
 exec (@nsql)
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;use-the-following-sql-query-to-take-all-databases-online&#34;&gt;Use the following SQL query to take all databases online&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;use master;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;use master;
 declare @nsql nvarchar(max);
-select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&#39;&#39;)+
-&#39;ALTER DATABASE [&#39;+name+&#39;] SET ONLINE WITH NO_WAIT;&#39;
+select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),&amp;#39;&amp;#39;)+
+&amp;#39;ALTER DATABASE [&amp;#39;+name+&amp;#39;] SET ONLINE WITH NO_WAIT;&amp;#39;
 from master..sysdatabases where sid &amp;lt;&amp;gt; 0x01
 exec (@nsql)
 &lt;/code&gt;&lt;/pre&gt;</description>

@@ -19,7 +19,7 @@
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/geforcenow/options.jpg&#34; alt=&#34;options.jpg&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;add-chrome-os-user-agent&#34;&gt;Add Chrome OS User Agent&lt;/h2&gt;
 &lt;p&gt;Add the User Agent String:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Mozilla/5.0 (X11; CrOS x86_64 13099.85.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.110 Safari/537.36
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Mozilla/5.0 (X11; CrOS x86_64 13099.85.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.110 Safari/537.36
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/geforcenow/agentid.jpg&#34; alt=&#34;agentid.jpg&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;switch-agent-and-launch&#34;&gt;Switch Agent and Launch&lt;/h2&gt;
 &lt;ul&gt;

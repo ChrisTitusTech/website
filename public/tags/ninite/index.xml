@@ -15,7 +15,7 @@
       <description>&lt;p&gt;This is a tool that has evolved over several years and achieves much more than just debloating a Windows install. I have expanded it to install the programs you select, which is a bigger selection than ninite. The classic debloat is there, but also includes a tweaks section with quality of life features. To round out everything, I have included my recommended settings for Windows update that I use in a variety of businesses. Misuse of this utility can break your install so please be careful and I do not provide any help or assistance should this happen!&lt;/p&gt;
 &lt;h2 id=&#34;one-command---download-and-usage&#34;&gt;One Command - Download and Usage&lt;/h2&gt;
 &lt;p&gt;From an Elevated (Run as Administrator) PowerShell prompt&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;iwr -useb https://christitus.com/win | iex
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;iwr -useb https://christitus.com/win | iex
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;parts-of-utility&#34;&gt;Parts of Utility&lt;/h2&gt;
 &lt;p&gt;There are four main parts of this utility but I can expand this to an infinite number of tabs if expansion is needed and will probably happen in the future. As of the writing of this article there is 4 main parts: install, debloat, features and old panels, and windows updates. Let me breakdown what each part does and what you should use.&lt;/p&gt;
 &lt;h3 id=&#34;install&#34;&gt;Install&lt;/h3&gt;

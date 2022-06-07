@@ -155,7 +155,7 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;h2 id=&#34;october-2020-update&#34;&gt;October 2020 Update&lt;/h2&gt;
 &lt;p&gt;If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: &lt;a href=&#34;https://github.com/ChrisTitusTech/win10script&#34;&gt;https://github.com/ChrisTitusTech/win10script&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below!&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://git.io/JJ8R4&#39;))
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;))
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;What this script does&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Installs Chocolatey, Notepad++, Irfanview, VLC, Java, and asks if you want Adobe Reader or Brave.&lt;/li&gt;
@@ -242,7 +242,7 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;example output:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;diskpart
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;diskpart
 select disk 0
 list vol
 select vol 0 &amp;amp;lt;---500 MB Partition
@@ -256,13 +256,13 @@ exit
 &lt;ul&gt;
 &lt;li&gt;Rebuild new system reserved partition with EFI and regular boot files&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;bcdboot c:\Windows /s &amp;lt;boot letter of System Reserved Partion&amp;gt;: /f ALL
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bcdboot c:\Windows /s &amp;lt;boot letter of System Reserved Partion&amp;gt;: /f ALL
 bcdboot c:\Windows /s G: /f ALL
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;Now we can finally rebuild the bcd and master boot record like you see in so many online guides&lt;/li&gt;
 &lt;li&gt;You can verify the system is seeing the windows installation by doing a bootrec /scanos and then be running through the rest of the commands to do the rest of the repairs&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;bootrec /scanos &amp;lt;---Verify it sees the windows install
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bootrec /scanos &amp;lt;---Verify it sees the windows install
 bootrec /fixmbr
 bootrec /fixboot &amp;lt;----Pick the installation will mirror /scanos bootrec /rebuildbcd
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
@@ -284,8 +284,8 @@ bootrec /fixboot &amp;lt;----Pick the installation will mirror /scanos bootrec /
 &lt;ul&gt;
 &lt;li&gt;Open up command prompt as administrator and type the following&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;net stop spooler
-del /Q /F /S &amp;quot;%systemroot%\System32\Spool\Printers\*.*&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;net stop spooler
+del /Q /F /S &amp;#34;%systemroot%\System32\Spool\Printers\*.*&amp;#34;
 net start spooler
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Now check task manager again and verify the Spooler subsystem app is now at 0% usage. Alternatively, you can disable the spooler service in services (Start -&amp;gt; Run -&amp;gt; Type: services.msc) and this will make sure it doesn’t run, however, it also means you can’t print.&lt;/p&gt;</description>
@@ -300,8 +300,8 @@ net start spooler
       <description>&lt;p&gt;The following script shows you how to launch a startup program to run as administrator in Windows 10. This fixes many programs that require elevation and you don’t want to launch manually every time.&lt;/p&gt;
 &lt;p&gt;Almost every online tutorial I came across said to run it as a scheduled task. This is very cumbersome and I hate it, however using the following method is easier and saves you time.&lt;/p&gt;
 &lt;p&gt;Create a Text file in shell:startup and put the following in it.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Set WshShell = CreateObject(&amp;quot;WScript.Shell&amp;quot; ) 
-WshShell.Run chr(34) &amp;amp; &amp;quot;C:\Program Files (x86)\File\Program.exe&amp;quot; &amp;amp; Chr(34), 0 
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Set WshShell = CreateObject(&amp;#34;WScript.Shell&amp;#34; ) 
+WshShell.Run chr(34) &amp;amp; &amp;#34;C:\Program Files (x86)\File\Program.exe&amp;#34; &amp;amp; Chr(34), 0 
 Set WshShell = Nothing
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now save the file as ProgramName.vbs&lt;/p&gt;
 &lt;p&gt;You are done! Reboot and see that program launch.&lt;/p&gt;</description>

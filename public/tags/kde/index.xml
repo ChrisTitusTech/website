@@ -14,10 +14,10 @@
       <guid>https://christitus.com/bspwm-on-KDE/</guid>
       <description>&lt;p&gt;This goes over switching the window manager of KDE to bspwm.&lt;/p&gt;
 &lt;h2 id=&#34;dependency-installs&#34;&gt;Dependency Installs&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install bspwm
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install bspwm
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
 &lt;p&gt;Create three files with the following contents&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mkdir -p ~/.config/bspwm
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir -p ~/.config/bspwm
 mkdir -p ~/.config/sxhkd
 wget -O ~/.config/bspwm/bspwmrc https://raw.githubusercontent.com/ChrisTitusTech/BSPWM-on-KDE/main/bspwmrc
 wget -O ~/.config/sxhkd/sxhkdrc https://raw.githubusercontent.com/ChrisTitusTech/BSPWM-on-KDE/main/sxhkdrc
@@ -26,7 +26,7 @@ chmod +x ~/.config/sxhkd/sxhkdrc
 sudo wget -O /usr/share/xsessions/plasma-bspwm.desktop https://raw.githubusercontent.com/ChrisTitusTech/BSPWM-on-KDE/main/plasma-bspwm.desktop
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
 &lt;p&gt;/usr/share/xsessions/plasma-bspwm.desktop&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Desktop Entry]          
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Desktop Entry]          
 Type=XSession              
 Exec=env KDEWM=/usr/bin/bspwm /usr/bin/startplasma-x11
 TryExec=/usr/bin/startplasma-x11

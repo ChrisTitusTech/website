@@ -39,7 +39,7 @@
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/04-obsidian/homepage.png&#34; alt=&#34;homepage plugin&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;dataview-plugin&#34;&gt;Dataview Plugin&lt;/h2&gt;
 &lt;p&gt;This is for progress bar, or if you want to do filters, tags, yaml headers, and other sorting techniques. It does WAY more than I use it for at the moment. Since I&amp;rsquo;m limiting my notes to maybe 10-20 notes I don&amp;rsquo;t need the other stuff, but it is there incase I expand. For now, I will use the following code in my templates to add a progress bar that tracks any checkboxes and how many are checked compared to total.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;`=&amp;quot;![progress](https://progress-bar.dev/&amp;quot; + round(length(filter(this.file.tasks.completed, (t) =&amp;gt; t = true)) / length(this.file.tasks.text) * 100) + &amp;quot;/)&amp;quot;`
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;`=&amp;#34;![progress](https://progress-bar.dev/&amp;#34; + round(length(filter(this.file.tasks.completed, (t) =&amp;gt; t = true)) / length(this.file.tasks.text) * 100) + &amp;#34;/)&amp;#34;`
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zGCv6aDDfP8&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/zGCv6aDDfP8/0.jpg&#34; alt=&#34;30daychromeosvid&#34;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
@@ -185,26 +185,26 @@ Razer has a bunch of cool features, but also has a great open source project cal
 &lt;/ul&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;h3 id=&#34;dependency-installs&#34;&gt;Dependency Installs&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
 mkdir ~/.themes
 mkdir ~/.icons
 mv ~/MacOS/themes/* ~/.themes
 mv ~/MacOS/icons/* ~/.icons
 sudo mv ~/MacOS/walls/* /usr/share/backgrounds/
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;gnome-tweaks&#34;&gt;Gnome Tweaks&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;gsettings set org.gnome.mutter center-new-windows &#39;true&#39;
-gsettings set org.gnome.desktop.wm.preferences button-layout &#39;close,minimize,maximize:&#39;
-gsettings set org.gnome.desktop.interface gtk-theme &amp;quot;WhiteSur-dark&amp;quot;
-gsettings set org.gnome.desktop.wm.preferences theme &amp;quot;WhiteSur-dark&amp;quot;
-gsettings set org.gnome.desktop.interface icon-theme &#39;BigSur&#39;
-gsettings set org.gnome.desktop.interface cursor-theme &#39;capitaine-cursors-light&#39;
-gsettings set org.gnome.desktop.background picture-uri &#39;file:///usr/share/backgrounds/macOS-BS3.jpg&#39;
-gsettings get org.gnome.desktop.screensaver picture-uri &#39;file:///usr/share/backgrounds/macOS-BS1.jpg&#39;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gsettings set org.gnome.mutter center-new-windows &amp;#39;true&amp;#39;
+gsettings set org.gnome.desktop.wm.preferences button-layout &amp;#39;close,minimize,maximize:&amp;#39;
+gsettings set org.gnome.desktop.interface gtk-theme &amp;#34;WhiteSur-dark&amp;#34;
+gsettings set org.gnome.desktop.wm.preferences theme &amp;#34;WhiteSur-dark&amp;#34;
+gsettings set org.gnome.desktop.interface icon-theme &amp;#39;BigSur&amp;#39;
+gsettings set org.gnome.desktop.interface cursor-theme &amp;#39;capitaine-cursors-light&amp;#39;
+gsettings set org.gnome.desktop.background picture-uri &amp;#39;file:///usr/share/backgrounds/macOS-BS3.jpg&amp;#39;
+gsettings get org.gnome.desktop.screensaver picture-uri &amp;#39;file:///usr/share/backgrounds/macOS-BS1.jpg&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;albert-search-and-cairo-dock&#34;&gt;Albert Search and Cairo Dock&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
-echo &#39;deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /&#39; | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
-sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O &amp;quot;/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+echo &amp;#39;deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /&amp;#39; | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O &amp;#34;/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc&amp;#34;
 sudo apt update
 sudo apt install albert cairo-dock cairo-dock-plug-ins -y
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
@@ -254,20 +254,20 @@ sudo apt install albert cairo-dock cairo-dock-plug-ins -y
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;# /etc/X11/xorg.conf.d/10-monitor.conf
-Section &amp;quot;Monitor&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# /etc/X11/xorg.conf.d/10-monitor.conf
+Section &amp;#34;Monitor&amp;#34;
 ### Monitor Identity - Typically HDMI-0 or DisplayPort-0
-    Identifier    &amp;quot;HDMI1&amp;quot; 
-    Option        &amp;quot;PreferredMode&amp;quot; &amp;quot;1920x1080&amp;quot;
-    Option        &amp;quot;TargetRefresh&amp;quot; &amp;quot;60&amp;quot;
+    Identifier    &amp;#34;HDMI1&amp;#34; 
+    Option        &amp;#34;PreferredMode&amp;#34; &amp;#34;1920x1080&amp;#34;
+    Option        &amp;#34;TargetRefresh&amp;#34; &amp;#34;60&amp;#34;
 
 ### Positioning the Monitor
 ## Basic
-    Option &amp;quot;LeftOf or RightOf or Above or Below&amp;quot; &amp;quot;DisplayPort-0&amp;quot;    
+    Option &amp;#34;LeftOf or RightOf or Above or Below&amp;#34; &amp;#34;DisplayPort-0&amp;#34;    
 ## Advanced
-    Option        &amp;quot;Position&amp;quot; &amp;quot;1680 0&amp;quot; #Note you can always set both to 0 0 to mirror
+    Option        &amp;#34;Position&amp;#34; &amp;#34;1680 0&amp;#34; #Note you can always set both to 0 0 to mirror
 ## Disable a Monitor
-     Option        &amp;quot;Disable&amp;quot; &amp;quot;true&amp;quot;
+     Option        &amp;#34;Disable&amp;#34; &amp;#34;true&amp;#34;
 EndSection 
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;Autorandr - Automatic monitor settings
@@ -282,7 +282,7 @@ EndSection
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Sample xrandr script:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
 xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: You can use the tool &lt;em&gt;arandr&lt;/em&gt; to grab the proper display script&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;windowslinuxmacos---flashing-images-to-sd-card-or-usb&#34;&gt;Windows/Linux/MacOS - Flashing Images to SD-Card or USB&lt;/h2&gt;
@@ -304,7 +304,7 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;/ul&gt;
 &lt;h2 id=&#34;linux---boot-time-high-for-kde&#34;&gt;Linux - Boot Time High for KDE&lt;/h2&gt;
 &lt;p&gt;Analyze systemd and figure out why&amp;hellip; (&lt;code&gt;systemd-analyze&lt;/code&gt;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;systemd-analyze blame
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemd-analyze blame
              10.667s apt-daily.service
               1.127s apt-daily-upgrade.service
               1.053s dev-mapper-neon\x2d\x2dvg\x2droot.device
@@ -379,12 +379,12 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;p&gt;Run Application in Terminal and look at the errors. Chances are it is missing a dependency.&lt;/p&gt;
 &lt;h2 id=&#34;windows---these-settings-are-managed-by-your-organization&#34;&gt;Windows - &amp;ldquo;these settings are managed by your organization&amp;rdquo;&lt;/h2&gt;
 &lt;p&gt;Chances are you ran a powershell script (maybe mine&amp;hellip;) and you are now locked out of changing the lock screen on your Windows Box. Run this command in powershell to gain control of your lock screen again:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Remove-ItemProperty -Path &amp;quot;HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization&amp;quot; -Name &amp;quot;NoLockScreen&amp;quot; -ErrorAction SilentlyContinue
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Remove-ItemProperty -Path &amp;#34;HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization&amp;#34; -Name &amp;#34;NoLockScreen&amp;#34; -ErrorAction SilentlyContinue
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;
 &lt;p&gt;You can also open up Start - Run - &lt;code&gt;gpedit.msc&lt;/code&gt; and then go to All Settings and look for enabled features and set them to &lt;em&gt;Not Configured&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;windows---reinstall-onedrive&#34;&gt;Windows - Reinstall OneDrive&lt;/h2&gt;
 &lt;p&gt;Open Up PowerShell Admin (Right Click Start Button)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;%systemroot%\SysWOW64\OneDriveSetup.exe
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;%systemroot%\SysWOW64\OneDriveSetup.exe
 &lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
@@ -405,7 +405,7 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;h2 id=&#34;change-wallpaper-in-mac-os&#34;&gt;Change Wallpaper in Mac OS&lt;/h2&gt;
 &lt;p&gt;GitHub Project: &lt;a href=&#34;https://github.com/ChrisTitusTech/wallpaper-reddit&#34;&gt;https://github.com/ChrisTitusTech/wallpaper-reddit&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;install-macos-dependancies&#34;&gt;Install MacOS Dependancies&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;xcode-select --install
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;xcode-select --install
 sudo easy_install pip
 sudo pip install --upgrade pip
 pip install pillow
@@ -415,7 +415,7 @@ pip install pillow
 &lt;li&gt;Script for Changing MacOS Wallpaper - &lt;a href=&#34;https://github.com/scriptingosx/desktoppr/releases&#34;&gt;https://github.com/scriptingosx/desktoppr/releases&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;install-macos-program&#34;&gt;Install MacOS Program&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;cd ~
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd ~
 git clone https://github.com/ChrisTitusTech/wallpaper-reddit.git
 cd wallpaper-reddit
 sudo python3 setup.py install
@@ -440,7 +440,7 @@ Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;/usr/local/bin/wallpaper-reddit --startup
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/usr/local/bin/wallpaper-reddit --startup
 /usr/local/bin/desktoppr ~/Pictures/Wallpapers/wallpaper.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;Save it somewhere: a file called your_name.app will be created)&lt;/li&gt;
@@ -456,7 +456,7 @@ Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 &lt;li&gt;Arch: &lt;code&gt;sudo pacman -S python-pillow&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;install-linux-program&#34;&gt;Install Linux Program&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;cd ~
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd ~
 git clone https://github.com/ChrisTitusTech/wallpaper-reddit.git
 cd wallpaper-reddit
 sudo python3 setup.py install
@@ -467,7 +467,7 @@ Config files are located at &lt;code&gt;~/.config/wallpaper-reddit&lt;/code&gt;
 Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;running-on-linux-startup&#34;&gt;Running on Linux Startup&lt;/h3&gt;
 &lt;p&gt;There is plenty of ways to have this automatically change the wallpaper on startup, however, I like to use the method by adding it at the &lt;code&gt;/etc/profile&lt;/code&gt; EOF (End of File). Here is an example.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/usr/local/bin/wallpaper-reddit --save
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/usr/local/bin/wallpaper-reddit --save
 /usr/local/bin/wallpaper-reddit --startup
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;--save&lt;/code&gt; &lt;em&gt;option flag will save the current wallpaper to the default directory in the config file (&lt;code&gt;~/Pictures/Wallpapers/&lt;/code&gt;). Remove this line if you don&amp;rsquo;t want to save past wallpapers.&lt;/em&gt;
 &lt;code&gt;--startup&lt;/code&gt; &lt;em&gt;option flag will wait til internet access is established and then download the wallpaper from reddit&lt;/em&gt;&lt;/p&gt;
@@ -557,12 +557,12 @@ AMD CPUs can technically work, but will require more tinkering and are more diff
 &lt;li&gt;zsh-autosuggestions - Suggestions based on your history&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;initial-setup-of-zsh&#34;&gt;Initial Setup of ZSH&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;touch &amp;quot;$HOME/.cache/zshhistory&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;touch &amp;#34;$HOME/.cache/zshhistory&amp;#34;
 #-- Setup Alias in $HOME/zsh/aliasrc
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo &#39;source ~/powerlevel10k/powerlevel10k.zsh-theme&#39; &amp;gt;&amp;gt; ~/.zshrc
+echo &amp;#39;source ~/powerlevel10k/powerlevel10k.zsh-theme&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;complete-switch-from-bash-to-zsh&#34;&gt;Complete Switch from BASH to ZSH&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;chsh $USER
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chsh $USER
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Then type &lt;code&gt;/bin/zsh&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;OR&lt;/em&gt; Edit &lt;code&gt;/etc/passwd&lt;/code&gt; and change /bin/bash to /bin/zsh&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/zsh-passwd.png&#34; alt=&#34;ZSH Switch&#34;&gt;&lt;/p&gt;

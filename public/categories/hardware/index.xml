@@ -135,7 +135,7 @@
 &lt;p&gt;&lt;code&gt;racadm racresetcfg&lt;/code&gt; (Hard Reset – Resets IP/Account settings back to factory default)&lt;/p&gt;
 &lt;p&gt;NOTE: Resets Default IP &amp;gt; 192.168.0.120&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Network Setup&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;racadm config -g cfgLanNetworking -o cfgNicEnable 1
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;racadm config -g cfgLanNetworking -o cfgNicEnable 1
 racadm config -g cfgLanNetworking -o cfgNicIpAddress 192.168.0.120
 racadm config -g cfgLanNetworking -o cfgNicNetmask 255.255.255.0
 racadm config -g cfgLanNetworking -o cfgNicGateway 192.168.0.120
@@ -144,11 +144,11 @@ racadm config -g cfgLanNetworking -o cfgDNSServersFromDHCP 0
 racadm config -g cfgLanNetworking -o cfgDNSServer1 192.168.0.5
 racadm config -g cfgLanNetworking -o cfgDNSServer2 192.168.0.6
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;User Setup&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;racadm config -g cfgUserAdmin -o cfgUserAdminUserName -i 2 john
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;racadm config -g cfgUserAdmin -o cfgUserAdminUserName -i 2 john
 racadm config -g cfgUserAdmin -o cfgUserAdminPassword -i 2 123456
 racadm config -g cfgUserAdmin -o cfgUserAdminEnable -i 2 1
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To verify the new user, use one of the following commands:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;racadm getconfig -u john
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;racadm getconfig -u john
 racadm getconfig –g cfgUserAdmin –i 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;From here you will use your web browser to enter the iDrac configuration GUI and finish setting up SMTP servers, alerts and other things. I only recommend the above from command line since it gives direct access when the web browser isn’t functions due to bad IP address or invalid username.&lt;/p&gt;</description>
     </item>

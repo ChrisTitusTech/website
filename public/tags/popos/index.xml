@@ -24,26 +24,26 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;h3 id=&#34;dependency-installs&#34;&gt;Dependency Installs&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
 mkdir ~/.themes
 mkdir ~/.icons
 mv ~/MacOS/themes/* ~/.themes
 mv ~/MacOS/icons/* ~/.icons
 sudo mv ~/MacOS/walls/* /usr/share/backgrounds/
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;gnome-tweaks&#34;&gt;Gnome Tweaks&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;gsettings set org.gnome.mutter center-new-windows &#39;true&#39;
-gsettings set org.gnome.desktop.wm.preferences button-layout &#39;close,minimize,maximize:&#39;
-gsettings set org.gnome.desktop.interface gtk-theme &amp;quot;WhiteSur-dark&amp;quot;
-gsettings set org.gnome.desktop.wm.preferences theme &amp;quot;WhiteSur-dark&amp;quot;
-gsettings set org.gnome.desktop.interface icon-theme &#39;BigSur&#39;
-gsettings set org.gnome.desktop.interface cursor-theme &#39;capitaine-cursors-light&#39;
-gsettings set org.gnome.desktop.background picture-uri &#39;file:///usr/share/backgrounds/macOS-BS3.jpg&#39;
-gsettings get org.gnome.desktop.screensaver picture-uri &#39;file:///usr/share/backgrounds/macOS-BS1.jpg&#39;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gsettings set org.gnome.mutter center-new-windows &amp;#39;true&amp;#39;
+gsettings set org.gnome.desktop.wm.preferences button-layout &amp;#39;close,minimize,maximize:&amp;#39;
+gsettings set org.gnome.desktop.interface gtk-theme &amp;#34;WhiteSur-dark&amp;#34;
+gsettings set org.gnome.desktop.wm.preferences theme &amp;#34;WhiteSur-dark&amp;#34;
+gsettings set org.gnome.desktop.interface icon-theme &amp;#39;BigSur&amp;#39;
+gsettings set org.gnome.desktop.interface cursor-theme &amp;#39;capitaine-cursors-light&amp;#39;
+gsettings set org.gnome.desktop.background picture-uri &amp;#39;file:///usr/share/backgrounds/macOS-BS3.jpg&amp;#39;
+gsettings get org.gnome.desktop.screensaver picture-uri &amp;#39;file:///usr/share/backgrounds/macOS-BS1.jpg&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;albert-search-and-cairo-dock&#34;&gt;Albert Search and Cairo Dock&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
-echo &#39;deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /&#39; | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
-sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O &amp;quot;/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+echo &amp;#39;deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /&amp;#39; | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O &amp;#34;/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc&amp;#34;
 sudo apt update
 sudo apt install albert cairo-dock cairo-dock-plug-ins -y
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;

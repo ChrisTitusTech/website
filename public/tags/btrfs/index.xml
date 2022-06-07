@@ -26,7 +26,7 @@
 &lt;p&gt;After this is complete you can now write data to your BTRFS volume and use all it capabilities.&lt;/p&gt;
 &lt;p&gt;Basic BTRFS Layout&lt;br&gt;
 &lt;em&gt;Note: Top Level 5 is root and isn&amp;rsquo;t a btrfs subvolume that can do snapshots and other btrfs features and therefore should not be mounted&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;toplevel root level 5
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;toplevel root level 5
   +-- root\@ level 256 (subvolume root mounted at / id varies)
   +-- root\.snapshots level 256 (typical snapshot subvolume)
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;basic-commands&#34;&gt;Basic Commands&lt;/h2&gt;

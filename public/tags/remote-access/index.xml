@@ -22,12 +22,12 @@
 &lt;h3 id=&#34;arch&#34;&gt;Arch&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;sudo pacman -S openssh&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;run-ssh-server-on-startup&#34;&gt;Run SSH server on startup&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;sudo systemctl start ssh
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo systemctl start ssh
 sudo systemctl enable ssh
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;**Note: sshd instead of ssh for arch&lt;/p&gt;
 &lt;h2 id=&#34;configure-ssh&#34;&gt;Configure SSH&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Make sure ufw isn’t blocking ssh and enable it for passthrough.&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo ufw allow ssh
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo ufw allow ssh
 sudo ufw limit ssh
 sudo ufw enable  
 sudo ufw status

@@ -163,7 +163,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;output&#34;&gt;Output:&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;PV /dev/sda3 VG VG_XenStorage-39baf126-a535-549f-58d6-feeda55f7801 lvm2 [66.87 GB / 57.87 GB free]
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;PV /dev/sda3 VG VG_XenStorage-39baf126-a535-549f-58d6-feeda55f7801 lvm2 [66.87 GB / 57.87 GB free]
 Total: 1 [66.87 GB] / in use: 1 [66.87 GB] / in no VG: 0 [0 ]
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note the output above, the VG name of the local drive /dev/sda3 is VG_XenStorage-39baf126-a535-549f-58d6-feeda55f7801 . The VG name contains the SR UUID that resides on this storage media. In this case, the UUID is 39baf126-a535-549f-58d6-feeda55f7801.&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -178,7 +178,7 @@ Total: 1 [66.87 GB] / in use: 1 [66.87 GB] / in no VG: 0 [0 ]
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5 id=&#34;output-1&#34;&gt;Output:&lt;/h5&gt;
-&lt;pre&gt;&lt;code&gt;total 0
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;total 0
 lrwxrwxrwx 1 root root 9 Jan 15 09:44 scsi-SATA_ST3500320AS_9QM13WP2 -&amp;gt; ../../sdb
 lrwxrwxrwx 1 root root 10 Jan 15 09:44 scsi-SATA_ST3500320AS_9QM13WP2-part1 -&amp;gt; ../../sdb1
 lrwxrwxrwx 1 root root 9 Jan 15 09:44 scsi-SATA_ST380815AS_6QZ5Z1AM -&amp;gt; ../../sda
@@ -193,7 +193,7 @@ lrwxrwxrwx 1 root root 10 Jan 15 09:44 scsi-SATA_ST380815AS_6QZ5Z1AM-part3 -&amp
 &lt;p&gt;&lt;code&gt;xe host-list&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;uuid ( RO) : 83f2c775-57fc-457b-9f98-2b9b0a7dbcb5
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;uuid ( RO) : 83f2c775-57fc-457b-9f98-2b9b0a7dbcb5
 name-label ( RW): xenserver1
 name-description ( RO): Default install of XenServer
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
@@ -236,9 +236,9 @@ name-description ( RO): Default install of XenServer
 &lt;ul&gt;
 &lt;li&gt;Putty in using SSH&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;service xapissl stop
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;service xapissl stop
 mv /etc/xensource/xapi-ssl.pem /etc/xensource/xapi-ssl.pem.bak
-/opt/xensource/libexec/generate_ssl_cert &amp;quot;/etc/xensource/xapi-ssl.pem&amp;quot; &#39;10.100.0.40&#39;
+/opt/xensource/libexec/generate_ssl_cert &amp;#34;/etc/xensource/xapi-ssl.pem&amp;#34; &amp;#39;10.100.0.40&amp;#39;
 service xapissl start
 xe-toolstack-restart
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Where you see 10.100.0.40 this is the IP of your XenServer that you are connecting to (not VM ips). Once you run this it reissues the cert and you will be able to properly connect. I’ve seen this on Windows 10 Systems since they force the higher level encryption, however,  If this doesn’t resolve the XenCenter error let me know.&lt;/p&gt;</description>

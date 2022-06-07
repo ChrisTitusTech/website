@@ -26,7 +26,7 @@
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/01-Robocopy/start-menu.png&#34; alt=&#34;start-menu&#34;&gt;&lt;/p&gt;
 &lt;p&gt;From this interface you can now run Robocopy.&lt;/p&gt;
 &lt;p&gt;Basic Syntax:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;C:\&amp;gt; robocopy &amp;quot;Source Directory&amp;quot; &amp;quot;Destination Directory&amp;quot; /e /w:5 /r:2 /COPY:DATSOU /DCOPY:DAT /MT
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;C:\&amp;gt; robocopy &amp;#34;Source Directory&amp;#34; &amp;#34;Destination Directory&amp;#34; /e /w:5 /r:2 /COPY:DATSOU /DCOPY:DAT /MT
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Full syntax can be shown with &lt;code&gt;robocopy /?&lt;/code&gt; but be careful with /MIR and move style copies as this can overwrite and erase existing files in the destination directory.&lt;/p&gt;
 &lt;p&gt;Notable Options with Robocopy&lt;/p&gt;
 &lt;ul&gt;

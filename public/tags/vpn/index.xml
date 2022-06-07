@@ -21,7 +21,7 @@
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=tHEd3fFfGpM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/tHEd3fFfGpM/0.jpg&#34; alt=&#34;Setup VPN in Ubuntu with commentary&#34;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;vpn-setup-commands&#34;&gt;VPN setup commands:&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;sudo su
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo su
 apt-get install openvpn -y
 cd /etc/openvpn
 wget https://www.privateinternetaccess.com...
@@ -32,20 +32,20 @@ nano .secrets
 &lt;p&gt;p1234567      ###PASTE YOUR INFO###&lt;br&gt;
 MyPIAPassword ###PASTE YOUR INFO###&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;chmod 600 .secrets
-mv &#39;US Texas.ovpn&#39; texas.conf
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chmod 600 .secrets
+mv &amp;#39;US Texas.ovpn&amp;#39; texas.conf
 nano texas.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;auth-user-pass .secrets ###CHANGE THIS LINE###&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;systemctl start openvpn@texas
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemctl start openvpn@texas
 systemctl status openvpn@texas
 nano /etc/default/openvpn ###UNCOMMENT AUTOSTART
 reboot
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;diagnostic-commands&#34;&gt;Diagnostic Commands&lt;/h2&gt;
 &lt;p&gt;Once complete, find the external IP as that is needed to make sure it is working. If your VPN is failing to connect I recommend using tail on the syslog so consequently, you can find any issues that are stopping the connection.&lt;/p&gt;
 &lt;h2 id=&#34;extra-tools&#34;&gt;Extra Tools&lt;/h2&gt;
-&lt;p&gt;Find External IP: dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F&#39;&amp;quot;&#39; &amp;lsquo;{ print $2}&amp;rsquo;
+&lt;p&gt;Find External IP: dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F&amp;rsquo;&amp;quot;&amp;rsquo; &amp;lsquo;{ print $2}&amp;rsquo;
 Debug as necessary: tail -f /var/log/syslog|grep ovpn`&lt;/p&gt;
 &lt;p&gt;In closing, make sure you always use a VPN when you are concerned about your privacy. I’ve also set these up on Linux boxes between offices and it makes for a great inexpensive site-to-site VPN. Therefore, you don’t have to spend tons of money on proprietary gateways that go out of date in a couple years.&lt;/p&gt;</description>
     </item>

@@ -20,7 +20,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;###ENTER ROOT PASSWORD###&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;mkdir ~/build
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;mkdir ~/build
 cd ~/build
 wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14-current.tar.gz
 tar -xvf asterisk-14-current.tar.gz
@@ -42,7 +42,7 @@ make menuselect
 &lt;p&gt;Once this is complete I like to reboot, and then run a &lt;strong&gt;make install&lt;/strong&gt; to install the different version of asterisk.&lt;/p&gt;
 &lt;h2 id=&#34;full-removal-no-reinstall&#34;&gt;FULL REMOVAL NO REINSTALL&lt;/h2&gt;
 &lt;p&gt;Now let’s say you just want to remove Asterisk and just don’t want it anymore. Well, that is far simpler. Just run the following commands and it will be gone forever&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;killall -9 safe_asterisk
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;killall -9 safe_asterisk
 killall -9 asterisk
 systemctl disable asterisk ##Note: depending on the install this may not be enabled or was set to run via @reboot cron or daemon service - Mileage will vary##
 rm -rf /etc/asterisk

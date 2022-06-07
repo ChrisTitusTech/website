@@ -59,7 +59,7 @@
 &lt;/li&gt;
 &lt;li&gt;Run the following commands to remove all the bloat:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;adb shell
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adb shell
 pm uninstall -k --user 0 com.mobvoi.wear.account.aw
 pm uninstall -k --user 0 com.mobvoi.companion.aw
 pm uninstall -k --user 0 com.mobvoi.ticwatch.cmodel.c2.male
@@ -98,7 +98,7 @@ pm uninstall -k --user 0 com.mobvoi.wear.watchface.aw
 &lt;li&gt;USB Debugging Enabled in Developer Tools&lt;/li&gt;
 &lt;li&gt;Compatibility:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;Amazon Fire 8/8+ (2020)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Amazon Fire 8/8+ (2020)
 Amazon Fire 10 (2019)
 Amazon Fire 7 (2019)
 Amazon Fire 8 (2018)

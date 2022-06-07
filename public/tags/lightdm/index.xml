@@ -29,7 +29,7 @@ For disabling GDM (Gnome Systems) type &lt;code&gt;sudo systemctl disable gdm&lt
 &lt;p&gt;I will go over the 4 sections in the configuration that most will want to change or modify.&lt;/p&gt;
 &lt;h3 id=&#34;changing-the-theme&#34;&gt;Changing the Theme&lt;/h3&gt;
 &lt;p&gt;lightdm.conf&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Seat:*]
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Seat:*]
 #type=local
 #pam-service=lightdm
 #pam-autologin-service=lightdm-autologin
@@ -53,7 +53,7 @@ greeter-session=lightdm-slick-greeter ### CHANGE THIS
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install what ever theme you want, this is called a greeter in lightdm, and then change the line above. After the changes are made you can either reboot or type &lt;code&gt;sudo systemctl restart lightdm&lt;/code&gt; &lt;em&gt;Please Note: This will log you out&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;changing-the-default-desktop-environment&#34;&gt;Changing the Default Desktop Environment&lt;/h3&gt;
 &lt;p&gt;lightdm.conf&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[Seat:*]
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Seat:*]
 #type=local
 #pam-service=lightdm
 #pam-autologin-service=lightdm-autologin
@@ -84,7 +84,7 @@ For complete listing of user sessions type: &lt;code&gt;ls /usr/share/xsessions/
 &lt;h3 id=&#34;autologin-with-lightdm&#34;&gt;AutoLogin with LightDM&lt;/h3&gt;
 &lt;p&gt;Change the following part of the file to autologin. &lt;em&gt;Note: This does pose a security risk and should never be done in a business&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;lightdm.conf Under &lt;code&gt;[Seat:*]&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;autologin-guest=false
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;autologin-guest=false
 autologin-user=username
 autologin-user-timeout=0
 autologin-in-background=false
@@ -93,7 +93,7 @@ autologin-in-background=false
 &lt;h3 id=&#34;vnc-connection&#34;&gt;VNC Connection&lt;/h3&gt;
 &lt;p&gt;At the buttom of the lightdm.conf file you will see VNC connection information. This information uses the &lt;code&gt;tigervnc&lt;/code&gt; package and also is done using secure channel. This means you must establish a SSH connection with a portforward before you can connect to VNC. Example: &lt;code&gt;ssh 192.168.69.10 -L 9901:localhost:5901&lt;/code&gt; This establishes ssh and port forwards your local port 9901 to 5901 of the remote machine. Then you could launch VNC viewer with &lt;code&gt;vncviewer localhost:9901&lt;/code&gt;. Even though this says localhost it is forwarding the request through SSH to the remote machine.&lt;/p&gt;
 &lt;p&gt;Now with that framework lets look at the conf file:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#
 # VNC Server configuration
 #
 # enabled = True if VNC connections should be allowed
@@ -113,7 +113,7 @@ autologin-in-background=false
 #height=768
 #depth=8
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The main things to change here are &lt;code&gt;enabled=true&lt;/code&gt; &lt;code&gt;width - height - depth&lt;/code&gt; and then you are off. My typical defaults would look like the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[VNCServer]
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[VNCServer]
 enabled=true
 command=Xvnc
 port=5900
