@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Websites on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/websites/</link>
+    <description>Recent content in Websites on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 11 Jun 2022 15:07:10 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/websites/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Future Internet</title>
+      <link>https://christitus.com/future-internet/</link>
+      <pubDate>Sat, 11 Jun 2022 15:07:10 -0500</pubDate>
+      
+      <guid>https://christitus.com/future-internet/</guid>
+      <description>&lt;p&gt;Renewing website domains, paying for web hosting, and having them expire are all going to be a thing of the past. 
+Using IPFS (Inter-planetary File System) is a way to store websites decentralized and without any money. How fast or how slow it will be, is determined by how popular it is with IPFS nodes. 
+This guide shows how to host a website, owning a web domain forever, and redirecting these domains to traditional website hosts.&lt;/p&gt;
+&lt;h2 id=&#34;ipfs---a-better-storage-system&#34;&gt;IPFS - A Better Storage System&lt;/h2&gt;
+&lt;p&gt;IPFS is absolutely amazing as you can run a node on anything and share your files. If they are used by other people then they will populate to their nodes and I&amp;rsquo;ve shared and used video files over 1 GB in size! The main issue is there isn&amp;rsquo;t many browsers that support IPFS and it is slower than normal storage right now. However, you never have to worry about hosting costs and as long as the content is accessed by others on a regular basis it will live forever!&lt;/p&gt;
+&lt;h3 id=&#34;improving-ipfs-in-brave-browser&#34;&gt;Improving IPFS in Brave Browser&lt;/h3&gt;
+&lt;p&gt;I highly recommend using IPFS Companion if you plan on doing this regularly. You don&amp;rsquo;t have to run your own node, but can that is up to you. Using this add-on will help resolve IPFS addresses much faster even in Gateway only mode.&lt;/p&gt;
+&lt;p&gt;Enable IPFS Companion Extension&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.ipfs.io/install/ipfs-companion/&#34;&gt;https://docs.ipfs.io/install/ipfs-companion/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After installing IPFS Companion change the following brave settings under Settings -&amp;gt; IPFS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable IPFS Public Gateway Fallback (Not Required, but recommended)&lt;/li&gt;
+&lt;li&gt;Enable IPFS Companion 
+&lt;img src=&#34;https://christitus.com/images/2022/future-internet/ipfs-settings.png&#34; alt=&#34;ipfs-settings&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Enable Blockchain domains - The Unstoppable Domains extension (In the future, this should be baked into many browsers. Brave natively supports .crypto)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://unstoppabledomains.com/extension&#34;&gt;https://unstoppabledomains.com/extension&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;blockchains---not-all-created-equal&#34;&gt;Blockchains - Not all created equal&lt;/h2&gt;
+&lt;p&gt;The technology powering blockchains are amazing, but most just care about the monetary gain. I&amp;rsquo;m more interested in actually using the blockchain and where all the meta data lives for decentralized web or Web3. So what blockchains have I used for this? Lets review:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ethereum was one of the original ones that is incredible slow and expensive. I feel like this has turned from a usable blockchain into something only millionaires can use. Maybe this will change in the future, but right now it isn&amp;rsquo;t usable because of the cost to submit transactions. ENS Domains uses ethereum.&lt;/li&gt;
+&lt;li&gt;Polygon is a bridge blockchain that drastically improves upon what ethereum started. Fees are non-existent and is very functional. Transfer times are generally about a minute. This is currently what unstoppable domains uses.&lt;/li&gt;
+&lt;li&gt;Solana is not something I recommend, but is considered the fastest blockchain out there. However, It has crashed multiple times and halted completely. I am also skeptical that is even decentralized with the problems it has had. It is very easy to work on and something to watch.&lt;/li&gt;
+&lt;li&gt;Cardano is probably my favorite out of all these blockchains for the future. It is very decentralized, transactions can be as fast as 20 seconds and up to a couple minutes. Its roadmap is probably the most promising blockchain with future transactions hitting upwards of 10,000+ transactions per second in a decentralized format. Another possible chain that can be used in the future.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;buying-websites-forever&#34;&gt;Buying Websites Forever&lt;/h2&gt;
+&lt;p&gt;Currently ens domains requires renewing websites, while unstoppable domains provides them forever. This entire space is exploding, so getting a good name is becoming more and more difficult just like the traditional web. There is a very healthy resale market on Opensea.io that folks are using to squat or resell domains purchased through unstoppable domains. If adoption keeps moving this direction, we will soon see some pretty ridiculous prices on domain names. Buying direct from unstoppable domains ranges from $10 to $100 per domain name, depending on domain ending. 
+&lt;img src=&#34;https://christitus.com/images/2022/future-internet/domains.png&#34; alt=&#34;domains&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here is discount link for unstoppable if you are interested in picking up a domain: &lt;a href=&#34;https://unstoppabledomains.pxf.io/MX3zVM&#34;&gt;https://unstoppabledomains.pxf.io/MX3zVM&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;uploading-static-sites&#34;&gt;Uploading Static Sites&lt;/h2&gt;
+&lt;p&gt;Hosting your website through unstoppable domains is pretty easy, but just know you are limited on size if using their uploader. They have a 20 MB Limit!&lt;/p&gt;
+&lt;p&gt;So for large static sites, simply put them all on a IPFS node local or remote and copy the IPFS hash into unstoppable domains to host ANY size of website.&lt;/p&gt;
+&lt;p&gt;I personally build my entire static site using hugo because its free / open source. You can then simply upload to IPFS the entire /public folder once you do this. If you are going to go this route, I&amp;rsquo;d recommend hosting an IPFS node so you can avoid the upload process entirely!&lt;/p&gt;
+&lt;h2 id=&#34;redirect-to-traditional-website&#34;&gt;Redirect to Traditional Website&lt;/h2&gt;
+&lt;p&gt;The simplist way to do this is with a meta redirect using a standard index.html (PLAIN TEXT ONLY!)&lt;/p&gt;
+&lt;p&gt;index.html&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;HTML Meta Tag&amp;lt;/title&amp;gt;
+    &amp;lt;meta http-equiv = &amp;#34;refresh&amp;#34; content = &amp;#34;1; url = YOUR WEBSITE URL HERE&amp;#34; /&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+      &amp;lt;p&amp;gt;YOUR WEBSITE DESCRIPTION HERE &amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=GERBV2Bv-A4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/GERBV2Bv-A4/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

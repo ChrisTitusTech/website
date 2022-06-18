@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-05-13T13:07:19-05:00</lastmod>
+    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
-    <lastmod>2022-05-13T13:07:19-05:00</lastmod>
+    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/future-internet/</loc>
+    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/linux/</loc>
+    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/posts/</loc>
+    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/websites/</loc>
+    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/windows/</loc>
+    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/debloat-windows/</loc>
     <lastmod>2022-05-13T13:07:19-05:00</lastmod>
@@ -14,25 +32,13 @@
     <loc>https://christitus.com/tags/ninite/</loc>
     <lastmod>2022-05-13T13:07:19-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-05-13T13:07:19-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/</loc>
-    <lastmod>2022-05-13T13:07:19-05:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/windows-tool/</loc>
-    <lastmod>2022-05-13T13:07:19-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/windows/</loc>
     <lastmod>2022-05-13T13:07:19-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/chezmoi/</loc>
     <lastmod>2022-04-25T17:04:25-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/chezmoi/</loc>
-    <lastmod>2022-04-25T17:04:25-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/linux/</loc>
     <lastmod>2022-04-25T17:04:25-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/categories/macos/</loc>
@@ -281,10 +287,10 @@
     <loc>https://christitus.com/tags/gaming/</loc>
     <lastmod>2020-03-22T20:50:39-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/tags/zsh/</loc>
+    <loc>https://christitus.com/zsh/</loc>
     <lastmod>2020-02-19T12:32:44-06:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/zsh/</loc>
+    <loc>https://christitus.com/tags/zsh/</loc>
     <lastmod>2020-02-19T12:32:44-06:00</lastmod>
   </url><url>
     <loc>https://christitus.com/archive/</loc>
