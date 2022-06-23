@@ -8,7 +8,6 @@ categories:
   - Windows
 tags:
   - AntiVirus
-draft: true
 ---
 To many advanced users, Antivirus IS worthless. That is because it uses system resources and provides more annoyances than benefits. However, for many users it is required as they will not know what is a virus or not. 
 <!--more-->
