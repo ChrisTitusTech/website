@@ -46,7 +46,7 @@ Code Signing is the practice of using cryptographic keys to sign EXE files like 
 
 Good antivirus programs will NOT flag my EXE when I used a code signing key. However, if I don't sign the EXE it will flag it as a virus. So, why doesn't everyone use a code signing key? It's expensive. Roughly it is $100 a year for the "basic" code signing and to bypass Microsoft SmartScreen for "enhanced" code signing it will set you back almost $275 a year. Feels kinda like extortion, but I can appreciate that I now have a digital signature for my exe so folks know it came from me. 
 
-Let's move on to the easiest way to abscure your exe to bypass Antivirus.
+Let's move on to the easiest way to obscure your exe to bypass Antivirus.
 
 ### Encrypted Files can not be scanned for viruses
 
@@ -63,8 +63,8 @@ The biggest factors to look at when considering antivirus is System Impact and H
 
 ESET NOD32 Antivirus is the best I've found. They were one of the original antivirus programs with NOD32's creation in 1987 and ESET being founded by the developers of NOD32 in 1992. The basic antivirus is fast has very little passive performance loss and fantastic detection rates. I recommend just doing the basic [NOD32 Antivirus](https://www.jdoqocy.com/click-100287975-15083621)
 
-## Walkthrough Video
+## Walkthrough Video - Release date: 06-25-22
 
-[![youtube-video](https://img.youtube.com/vi/1111111/0.jpg)](https://www.youtube.com/watch?v=1111111)
+[![youtube-video](https://img.youtube.com/vi/UXT17bQ2W2Q/0.jpg)](https://www.youtube.com/watch?v=UXT17bQ2W2Q)
 
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
