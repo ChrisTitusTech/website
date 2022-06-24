@@ -2,11 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://christitus.com/tags/antivirus/</loc>
+    <lastmod>2022-06-22T16:44:33-05:00</lastmod>
+  </url><url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
+    <lastmod>2022-06-22T16:44:33-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
-    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
+    <lastmod>2022-06-22T16:44:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/antivirus-worthless/</loc>
+    <lastmod>2022-06-22T16:44:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/posts/</loc>
+    <lastmod>2022-06-22T16:44:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-06-22T16:44:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/windows/</loc>
+    <lastmod>2022-06-22T16:44:33-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/future-internet/</loc>
     <lastmod>2022-06-11T15:07:10-05:00</lastmod>
@@ -14,16 +29,7 @@
     <loc>https://christitus.com/categories/linux/</loc>
     <lastmod>2022-06-11T15:07:10-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/</loc>
-    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/tags/websites/</loc>
-    <lastmod>2022-06-11T15:07:10-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/windows/</loc>
     <lastmod>2022-06-11T15:07:10-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/debloat-windows/</loc>
@@ -287,10 +293,10 @@
     <loc>https://christitus.com/tags/gaming/</loc>
     <lastmod>2020-03-22T20:50:39-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/zsh/</loc>
+    <loc>https://christitus.com/tags/zsh/</loc>
     <lastmod>2020-02-19T12:32:44-06:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/tags/zsh/</loc>
+    <loc>https://christitus.com/zsh/</loc>
     <lastmod>2020-02-19T12:32:44-06:00</lastmod>
   </url><url>
     <loc>https://christitus.com/archive/</loc>
