@@ -63,7 +63,7 @@ The biggest factors to look at when considering antivirus is System Impact and H
 
 ESET NOD32 Antivirus is the best I've found. They were one of the original antivirus programs with NOD32's creation in 1987 and ESET being founded by the developers of NOD32 in 1992. The basic antivirus is fast has very little passive performance loss and fantastic detection rates. I recommend just doing the basic [NOD32 Antivirus](https://www.jdoqocy.com/click-100287975-15083621)
 
-## Walkthrough Video - Release date: 06-25-22
+## Walkthrough Video
 
 [![youtube-video](https://img.youtube.com/vi/UXT17bQ2W2Q/0.jpg)](https://www.youtube.com/watch?v=UXT17bQ2W2Q)
 
