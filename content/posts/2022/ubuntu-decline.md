@@ -50,6 +50,6 @@ It cuts it losses with snaps and starts streamlining their distro. Gone are the 
 
 ## Walkthrough Video
 
-[![youtube-video](https://img.youtube.com/vi/1111111/0.jpg)](https://www.youtube.com/watch?v=1111111)
+[![youtube-video](https://img.youtube.com/vi/pMfqCzbSmQU/0.jpg)](https://www.youtube.com/watch?v=pMfqCzbSmQU)
 
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_

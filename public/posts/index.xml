@@ -5,7 +5,44 @@
     <link>https://christitus.com/posts/</link>
     <description>Recent content in Posts on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 22 Jun 2022 16:44:33 -0500</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jun 2022 15:52:45 -0500</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu&#39;s Decline</title>
+      <link>https://christitus.com/ubuntu-decline/</link>
+      <pubDate>Mon, 27 Jun 2022 15:52:45 -0500</pubDate>
+      
+      <guid>https://christitus.com/ubuntu-decline/</guid>
+      <description>&lt;p&gt;When Ubuntu came on the scene in 2004, it made desktop Linux viable to many with its ease of use and friendly layout. Instead of constantly improving this and becoming the &amp;ldquo;King of All Distributions&amp;rdquo; it took a very different path. While I still use Ubuntu server with some caveats, I will NOT use Ubuntu Desktop.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/ubuntu-decline/ubuntu.png&#34; alt=&#34;ubuntu&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-ubuntu-does-right&#34;&gt;What Ubuntu does right&lt;/h2&gt;
+&lt;p&gt;Before we roast Ubuntu and its decline, we need to understand why they rose to the top. Not only did they make Linux desktop easy, but they did the same in the server realm as well. They also made highly successful and well designed products for Linux, like the Unity Desktop Environment. They were one of the first to also make it easy for us to use nVidia cards on our systems without much fuss.&lt;/p&gt;
+&lt;h2 id=&#34;the-things-that-lead-to-the-decline&#34;&gt;The things that lead to the decline&lt;/h2&gt;
+&lt;p&gt;This is not going to be an exhaustive list, but rather the large things they have done to ensure their downfall and what has caused many to leave Ubuntu to never return.&lt;/p&gt;
+&lt;h3 id=&#34;snaps&#34;&gt;Snaps&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/ubuntu-decline/snaps.png&#34; alt=&#34;snaps&#34;&gt;&lt;/p&gt;
+&lt;p&gt;By far the biggest issue with Ubuntu is Snaps. They created a universal package manager that can work on any system. Sounds amazing, right? WRONG! The two biggest issues are simple: Its slow as hell and closed source.&lt;/p&gt;
+&lt;p&gt;How is it slow? Well, it can take upwards of 10-15 seconds to launch Firefox snap, which is a web browser that would normally take MAYBE 1-2 seconds. What the hell Canonical!?! It&amp;rsquo;s obviously not ready, so why are forcing everyone to use snaps? Do they just not like users? Do they think their users are just too stupid to know its this slow?&lt;/p&gt;
+&lt;p&gt;Closed Source. This can be summed up to there is only one place to download packages, Canonical. Want to open up a Snap store for a competing distribution? Too bad, its closed source. Is this the worst thing about it? No, but why bother with it when there are better solutions like AppImage and Flatpak which ARE open source?&lt;/p&gt;
+&lt;h3 id=&#34;spyware&#34;&gt;Spyware&lt;/h3&gt;
+&lt;p&gt;Back in Ubuntu 14 they were submitting search results to Canonical. Then in Ubuntu 16 they introduced a bundled amazon store which they were compensated for. Too many this was just simply spyware on their distribution. A blatant cash grab if you will&amp;hellip; However, to me it screams of desperation. They want or need money and this was the easiest way to accomplish this. Apple and Microsoft does this&amp;hellip; why not Canonical? The answer is surprisingly simple, many users ran from big tech for privacy and why choose Ubuntu when their are so many better distributions.&lt;/p&gt;
+&lt;h3 id=&#34;lack-of-commitment&#34;&gt;Lack of commitment&lt;/h3&gt;
+&lt;p&gt;The last reason many users have given up on Ubuntu is it just feels like Canonical is padding their balance sheet for an eventual buyout from some biggest tech firm. The days of innovation are over and they have killed so many projects that no one trusts them anymore. It has been eroded away by not listening to the community, doing things not in the best interest of their users, and abandoning many, many projects. Here is the short list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu Touch&lt;/li&gt;
+&lt;li&gt;Unity Desktop Environment&lt;/li&gt;
+&lt;li&gt;Mir Display Manager&lt;/li&gt;
+&lt;li&gt;Ubuntu One (Cloud services)&lt;/li&gt;
+&lt;li&gt;PPA Repos - .DEB Packages being phased out from Software Centre&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-future&#34;&gt;The Future&lt;/h2&gt;
+&lt;p&gt;The future of Ubuntu Desktop is pretty bleak. It feels like we are watching it circle the toilet bowl to be forever gone in a few years. I want to give two outcomes&amp;hellip;&lt;/p&gt;
+&lt;p&gt;It continues down this path, forcing everyone to use snaps and fades to irrelevance until the entire desktop offering is discontinued.&lt;/p&gt;
+&lt;p&gt;It cuts it losses with snaps and starts streamlining their distro. Gone are the days of slow boot times and bloated distribution installs. It reverts to what it began as&amp;hellip; a user friendly and easy to user distribution that just works.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=pMfqCzbSmQU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/pMfqCzbSmQU/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Is Antivirus Worthless?</title>
       <link>https://christitus.com/antivirus-worthless/</link>

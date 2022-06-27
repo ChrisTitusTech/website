@@ -5,7 +5,16 @@
     <link>https://christitus.com/tags/</link>
     <description>Recent content in Tags on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 22 Jun 2022 16:44:33 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Jun 2022 15:52:45 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu</title>
+      <link>https://christitus.com/tags/ubuntu/</link>
+      <pubDate>Mon, 27 Jun 2022 15:52:45 -0500</pubDate>
+      
+      <guid>https://christitus.com/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>AntiVirus</title>
       <link>https://christitus.com/tags/antivirus/</link>
@@ -138,15 +147,6 @@
       <pubDate>Tue, 20 Apr 2021 10:02:56 -0500</pubDate>
       
       <guid>https://christitus.com/tags/raspberry-pi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://christitus.com/tags/ubuntu/</link>
-      <pubDate>Mon, 01 Mar 2021 14:53:09 -0600</pubDate>
-      
-      <guid>https://christitus.com/tags/ubuntu/</guid>
       <description></description>
     </item>
     
