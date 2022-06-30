@@ -90,9 +90,9 @@ This is a RHEL (Red Hat Enterprise Linux) based distribution. It strikes a balan
 So the best distribution is the one that suits your needs and preferences. Instead of the one size fits all approach of Mac and Windows, Linux takes a completely different approach. Learn the above and try out the different options and you will make the perfect system for your needs. You will also understand why all the top 5 distros and other Linux garbage on the internet is worthless. That is because there is no perfect distro, however there is the perfect distro for YOU! It just so happens that it is different for each user and you have the options that no other system on earth give you with Linux.
 
 
-## Walkthrough Video - Not Released Yet
+## Walkthrough Video
 
-[![youtube-video](https://img.youtube.com/vi/1111111/0.jpg)](https://www.youtube.com/watch?v=1111111)
+[![youtube-video](https://img.youtube.com/vi/dL05DoJ0qsQ/0.jpg)](https://www.youtube.com/watch?v=dL05DoJ0qsQ)
 
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
