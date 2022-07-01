@@ -8,7 +8,7 @@ categories:
   - Windows
 tags:
   - Microsoft Store
-featured: true
+
 ---
 This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC. 
 <!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved.
