@@ -40,6 +40,10 @@ body.dark-mode header.sticky-top {
     background: rgb(255, 255, 255);
 }
 
+header.nav-bg {
+    visibility: hidden;
+}
+
 body.dark-mode a.px-3 {
     color: $text_color_dark;
 }
