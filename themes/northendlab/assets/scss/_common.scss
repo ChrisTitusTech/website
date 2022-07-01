@@ -107,23 +107,23 @@ select {
 }
 
 .bg-primary {
-  background: $primary-color !important;
+  background: $primary-color;
 }
 
 .bg-secondary {
-  background: $secondary-color !important;
+  background: $secondary-color;
 }
 
 .bg-light{
-  background: $light !important;
+  background: $light; //remove  !important
 }
 
 a.bg-light:hover{
-  background: rgba($light, .2) !important;
+  background: rgba($light, .2);
 }
 
 .text-primary {
-  color: $primary-color !important;
+  color: $primary-color;
 }
 
 .text-color {

@@ -23,9 +23,9 @@ unsafe= true
 ######################### Default Parameters ###########################
 [params]
 # logo
-logo = "images/logo.png"
-logoWidth = 235
-logoHeight = 97
+logo = "images/navlogo.png"
+logoWidth = 121
+logoHeight = 50
 # favicon
 favicon = "images/favicon.png"
 # meta data
@@ -54,7 +54,7 @@ google_tag_manager = "GTM-5JNJ8NL" # example: G-XXXXXXXXXX
 ######################## Site Variables #########################
 [params.variables]
 # Color Variables
-primary_color = "#47c4f1"#E8505B"
+primary_color = "#47c4f1"
 secondary_color = "#9AC4F8"
 text_color = "#666666"
 text_color_dark = "#222222"

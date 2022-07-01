@@ -22,3 +22,64 @@ $icon-font: '{{.icon_font}}';
 @import 'common';
 @import 'templates/navigation.scss';
 @import 'templates/main.scss';
+
+body.dark-mode, 
+body.dark-mode main * {
+    background: rgb(45, 45, 45);
+    color: #f5f5f5;
+}
+
+body.dark-mode p,body.dark-mode .paragraph {
+    font-weight: 400;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-family: $primary-font;
+}
+//sticky top non scroll bg
+body.dark-mode header.sticky-top {
+    background: rgb(255, 255, 255);
+}
+
+body.dark-mode a.px-3 {
+    color: $text_color_dark;
+}
+
+body.dark-mode .col-lg-8,body.dark-mode li.list-inline-item,body.dark-mode div.widget,body.dark-mode .card-block,body.dark-mode .col-md-6 * {
+    background: rgb(55, 55, 55);
+}
+
+body.dark-mode a {
+    color: #f5f5f5;
+    &:hover{
+      text-decoration: underline;
+      color: $primary-color;
+    }
+}
+
+body.dark-mode a.text-dark {
+    color: #f5f5f5 !important;
+    &:hover{
+      text-decoration: underline;
+      color: $primary-color;
+    }
+}
+
+body.dark-mode a.dropdown-item,body.dark-mode a.nav-link {
+    color: $text_color_dark;
+    &:hover{
+      text-decoration: underline;
+      color: $primary-color;
+    }
+}
+
+body.dark-mode h1,body.dark-mode h2,body.dark-mode h3,body.dark-mode h4,body.dark-mode h5,body.dark-mode h6 {
+    color: #f9f9f9;
+    font-family: $primary-font;
+    font-weight: 600;
+    line-height: 1.2;
+    a{
+        &:hover{
+        text-decoration: none;
+        }
+    }
+}
