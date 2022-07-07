@@ -13,6 +13,11 @@
 	{{ partial "gtm-noscript.html" . }}
   {{- block "main" . }}
   {{- end }}
+  <!-- Copy Code Titus -->
+  {{ if (findRE "pre.*?" .Content 1) }}
+  <script src="/js/code-copy.js"></script>
+  {{ end  }}
+  <!-- END Titus Mod-->
   {{ partialCached "footer.html" . }}
   {{ partialCached "script.html" . }}
 </body>
