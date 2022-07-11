@@ -26,12 +26,12 @@
 &lt;p&gt;Windows 11 does checks for TPM and Secure boot before it allows the upgrade process to start. However, these can be bypassed.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: It is important to understand Microsoft can at ANY TIME enforce these rules or ignore these modifications which means you would NO LONGER recieve updates&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Here is the registry edits that need to be made: (win11bypass.reg)&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows Registry Editor Version 5.00
-
-[HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig]
-&amp;#34;BypassTPMCheck&amp;#34;=dword:00000001
-&amp;#34;BypassSecureBootCheck&amp;#34;=dword:00000001
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Download Reg File here: &lt;a href=&#34;https://christitus.com/files/win11bypass.zip&#34;&gt;https://christitus.com/files/win11bypass.zip&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;BypassTPMCheck&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;BypassSecureBootCheck&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Download Reg File here: &lt;a href=&#34;https://christitus.com/files/win11bypass.zip&#34;&gt;https://christitus.com/files/win11bypass.zip&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;REBOOT AFTER MODIFICATIONS MADE&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2021/06-win11upgrade/regedit.png&#34; alt=&#34;regedit&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;upgrade&#34;&gt;Upgrade&lt;/h2&gt;

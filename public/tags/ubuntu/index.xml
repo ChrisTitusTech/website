@@ -53,10 +53,10 @@
 &lt;h2 id=&#34;all-in-one-pack&#34;&gt;All-In-One Pack&lt;/h2&gt;
 &lt;p&gt;This Pack is everything below so you can swap between them. It is a custom script I made so I can choose any of my favorite bootloaders below. This may not include original project updates as they happen, so check the source links below if one of the themes doesn&amp;rsquo;t work for you!&lt;/p&gt;
 &lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
-cd Top-5-Bootloader-Themes
-sudo ./install.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cyberre&#34;&gt;CyberRE&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd Top-5-Bootloader-Themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ./install.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cyberre&#34;&gt;CyberRE&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2021/02-bootloader/cyberre.jpg&#34; alt=&#34;CyberRE&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Source: &lt;a href=&#34;https://www.gnome-look.org/p/1420727/&#34;&gt;https://www.gnome-look.org/p/1420727/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;cyberpunk&#34;&gt;CyberPunk&lt;/h2&gt;
@@ -91,29 +91,29 @@ sudo ./install.sh
 &lt;/ul&gt;
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;h3 id=&#34;dependency-installs&#34;&gt;Dependency Installs&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
-mkdir ~/.themes
-mkdir ~/.icons
-mv ~/MacOS/themes/* ~/.themes
-mv ~/MacOS/icons/* ~/.icons
-sudo mv ~/MacOS/walls/* /usr/share/backgrounds/
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;gnome-tweaks&#34;&gt;Gnome Tweaks&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gsettings set org.gnome.mutter center-new-windows &amp;#39;true&amp;#39;
-gsettings set org.gnome.desktop.wm.preferences button-layout &amp;#39;close,minimize,maximize:&amp;#39;
-gsettings set org.gnome.desktop.interface gtk-theme &amp;#34;WhiteSur-dark&amp;#34;
-gsettings set org.gnome.desktop.wm.preferences theme &amp;#34;WhiteSur-dark&amp;#34;
-gsettings set org.gnome.desktop.interface icon-theme &amp;#39;BigSur&amp;#39;
-gsettings set org.gnome.desktop.interface cursor-theme &amp;#39;capitaine-cursors-light&amp;#39;
-gsettings set org.gnome.desktop.background picture-uri &amp;#39;file:///usr/share/backgrounds/macOS-BS3.jpg&amp;#39;
-gsettings get org.gnome.desktop.screensaver picture-uri &amp;#39;file:///usr/share/backgrounds/macOS-BS1.jpg&amp;#39;
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;albert-search-and-cairo-dock&#34;&gt;Albert Search and Cairo Dock&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
-echo &amp;#39;deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /&amp;#39; | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
-sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O &amp;#34;/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc&amp;#34;
-sudo apt update
-sudo apt install albert cairo-dock cairo-dock-plug-ins -y
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install git gnome-shell-extensions chrome-gnome-shell gnome-tweak-tool -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/ChrisTitusTech/Linux-MacOS-GNOME.git ~/MacOS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir ~/.themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir ~/.icons
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv ~/MacOS/themes/* ~/.themes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv ~/MacOS/icons/* ~/.icons
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mv ~/MacOS/walls/* /usr/share/backgrounds/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;gnome-tweaks&#34;&gt;Gnome Tweaks&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings set org.gnome.mutter center-new-windows &amp;#39;true&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings set org.gnome.desktop.wm.preferences button-layout &amp;#39;close,minimize,maximize:&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings set org.gnome.desktop.interface gtk-theme &amp;#34;WhiteSur-dark&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings set org.gnome.desktop.wm.preferences theme &amp;#34;WhiteSur-dark&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings set org.gnome.desktop.interface icon-theme &amp;#39;BigSur&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings set org.gnome.desktop.interface cursor-theme &amp;#39;capitaine-cursors-light&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings set org.gnome.desktop.background picture-uri &amp;#39;file:///usr/share/backgrounds/macOS-BS3.jpg&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gsettings get org.gnome.desktop.screensaver picture-uri &amp;#39;file:///usr/share/backgrounds/macOS-BS1.jpg&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;albert-search-and-cairo-dock&#34;&gt;Albert Search and Cairo Dock&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#39;deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /&amp;#39; | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O &amp;#34;/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install albert cairo-dock cairo-dock-plug-ins -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Launch Albert&lt;/li&gt;
 &lt;li&gt;Set Hotkey - Meta + F&lt;/li&gt;
 &lt;li&gt;Set Theme Arc Dark Blue&lt;/li&gt;
@@ -148,14 +148,14 @@ sudo apt install albert cairo-dock cairo-dock-plug-ins -y
       <guid>https://christitus.com/disable-snaps/</guid>
       <description>&lt;p&gt;This goes over how to Disable Snaps and making sure it doesn&amp;rsquo;t automatically reinstall.&lt;/p&gt;
 &lt;h2 id=&#34;list-and-uninstall-snaps&#34;&gt;List and Uninstall Snaps&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;snap list # This shows you what snaps are installed
-sudo snap remove program # Fill in all snaps listed above
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;purge-snaps-and-block-reinstall&#34;&gt;Purge Snaps and Block Reinstall&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt purge snapd
-sudo apt-mark hold snapd
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;verify-uninstall&#34;&gt;Verify Uninstall&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;apt list --install | grep snap
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Check your Output for any snap packages&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;snap list # This shows you what snaps are installed
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap remove program # Fill in all snaps listed above
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;purge-snaps-and-block-reinstall&#34;&gt;Purge Snaps and Block Reinstall&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt purge snapd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-mark hold snapd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;verify-uninstall&#34;&gt;Verify Uninstall&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt list --install | grep snap
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check your Output for any snap packages&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -166,11 +166,11 @@ sudo apt-mark hold snapd
       <guid>https://christitus.com/install-wine-libfaudio0-error/</guid>
       <description>&lt;p&gt;This article helps you fix the Libfaudio0 error that you run into when installing Wine on an older Linux debian-based distribution like Linux Mint 19 or Ubuntu 18.&lt;/p&gt;
 &lt;p&gt;Fix the dependancy error by downloading the following packages&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/amd64/libfaudio0_19.07-0~bionic_amd64.deb
-wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/i386/libfaudio0_19.07-0~bionic_i386.deb
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once these are downloaded you need to installed them with&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo dpkg -i libfaudio0_19.07-0~bionic_amd64.deb libfaudio0_19.07-0~bionic_i386.deb
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now that we have fixed the dependency error you can proceed with your wine-staging installation. Not this is mainly an error for bleeding edge version of wine from the WineHQ PPA.&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/amd64/libfaudio0_19.07-0~bionic_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/i386/libfaudio0_19.07-0~bionic_i386.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once these are downloaded you need to installed them with&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -i libfaudio0_19.07-0~bionic_amd64.deb libfaudio0_19.07-0~bionic_i386.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now that we have fixed the dependency error you can proceed with your wine-staging installation. Not this is mainly an error for bleeding edge version of wine from the WineHQ PPA.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -254,47 +254,47 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;h1 id=&#34;secure-a-web-server-steps&#34;&gt;Secure A Web Server Steps&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/10/firewall-png-577x359.png&#34; alt=&#34;firewall-png-577&amp;amp;#215;359&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Install UFW&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get update  
-sudo apt-get install ufw  
-sudo ufw limit 22/tcp  
-sudo ufw allow 80/tcp  
-sudo ufw allow 443/tcp  
-sudo ufw enable
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Verify&lt;/strong&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install ufw  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw limit 22/tcp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw allow 80/tcp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw allow 443/tcp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw enable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Verify&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;sudo ufw status&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Do Global blocks&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo ufw default deny incoming  
-sudo ufw default allow outgoing
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/09/ssh.png&#34; alt=&#34;ssh&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw default deny incoming  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw default allow outgoing
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/09/ssh.png&#34; alt=&#34;ssh&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;change-ssh-to-key&#34;&gt;Change SSH to Key&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Remote Machine&lt;/strong&gt;: &lt;code&gt;ssh-keygen -t rsa&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;transfer-to-server&#34;&gt;Transfer to Server&lt;/h3&gt;
 &lt;h4 id=&#34;method-1&#34;&gt;Method 1:&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;Transfer pub ssh key to server&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;scp ~/.ssh/id_rsa.pub user@server.com:~
-cat ~/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;method-2&#34;&gt;Method 2:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp ~/.ssh/id_rsa.pub user@server.com:~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat ~/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;method-2&#34;&gt;Method 2:&lt;/h4&gt;
 &lt;p&gt;Copy key and place in authorized_key file in one command&lt;br&gt;
 &lt;code&gt;ssh-copy-id -i ~/.ssh/id_rsa.pub user@server.com&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;secure-a-web-server-disabling-password-auth-through-ssh&#34;&gt;Secure a Web Server Disabling Password Auth through SSH&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Change the following lines in /etc/sshd_config&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ChallengeResponseAuthentication no
-PasswordAuthentication no
-UsePAM no
-PermitRootLogin no
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;edit-etcsysctlconf&#34;&gt;Edit /etc/sysctl.conf&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ChallengeResponseAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;UsePAM no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitRootLogin no
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;edit-etcsysctlconf&#34;&gt;Edit /etc/sysctl.conf&lt;/h2&gt;
 &lt;p&gt;Enable security features&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/10/settings.png&#34; alt=&#34;settings&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;prevent-ip-spoof-etchostconf&#34;&gt;Prevent IP Spoof /etc/host.conf&lt;/h2&gt;
 &lt;p&gt;Change File to mirror below:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;​order bind,hosts
-multi on
-nospoof on
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;install-fail2ban&#34;&gt;Install Fail2Ban&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install fail2ban
-sudo systemctl enable fail2ban
-sudo systemctl start fail2ban
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;check-listening-ports&#34;&gt;Check Listening Ports&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;​order bind,hosts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multi on
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nospoof on
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-fail2ban&#34;&gt;Install Fail2Ban&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install fail2ban
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl enable fail2ban
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl start fail2ban
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;check-listening-ports&#34;&gt;Check Listening Ports&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;netstat -tunlp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You will now have completed the basics of a secure web server!&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;

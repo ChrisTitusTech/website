@@ -68,8 +68,8 @@ Reboot and Run&lt;br&gt;
 &lt;p&gt;&lt;em&gt;Note: File Names change and will be different from above!&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;optimizing-windows-10-settings&#34;&gt;Optimizing Windows 10 Settings&lt;/h2&gt;
 &lt;p&gt;To finish things off we do some custom tweaks with the Official CTT Windows 10 Toolbox. This is something I have been customizing for years and refining every single month to work on any Windows 10 Installation.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;))
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;what-this-script-can-do&#34;&gt;What this script can do&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;what-this-script-can-do&#34;&gt;What this script can do&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Installs Chocolatey, Notepad++, Irfanview, VLC, Java, and asks if you want Adobe Reader or Brave.&lt;/li&gt;
 &lt;li&gt;Removes all Windows Store Apps EXCEPT office, xbox, and WSL.&lt;/li&gt;
@@ -133,22 +133,22 @@ Reboot and Run&lt;br&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# /etc/X11/xorg.conf.d/10-monitor.conf
-Section &amp;#34;Monitor&amp;#34;
-### Monitor Identity - Typically HDMI-0 or DisplayPort-0
-    Identifier    &amp;#34;HDMI1&amp;#34; 
-    Option        &amp;#34;PreferredMode&amp;#34; &amp;#34;1920x1080&amp;#34;
-    Option        &amp;#34;TargetRefresh&amp;#34; &amp;#34;60&amp;#34;
-
-### Positioning the Monitor
-## Basic
-    Option &amp;#34;LeftOf or RightOf or Above or Below&amp;#34; &amp;#34;DisplayPort-0&amp;#34;    
-## Advanced
-    Option        &amp;#34;Position&amp;#34; &amp;#34;1680 0&amp;#34; #Note you can always set both to 0 0 to mirror
-## Disable a Monitor
-     Option        &amp;#34;Disable&amp;#34; &amp;#34;true&amp;#34;
-EndSection 
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# /etc/X11/xorg.conf.d/10-monitor.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Section &amp;#34;Monitor&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### Monitor Identity - Typically HDMI-0 or DisplayPort-0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Identifier    &amp;#34;HDMI1&amp;#34; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Option        &amp;#34;PreferredMode&amp;#34; &amp;#34;1920x1080&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Option        &amp;#34;TargetRefresh&amp;#34; &amp;#34;60&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### Positioning the Monitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Basic
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Option &amp;#34;LeftOf or RightOf or Above or Below&amp;#34; &amp;#34;DisplayPort-0&amp;#34;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Advanced
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Option        &amp;#34;Position&amp;#34; &amp;#34;1680 0&amp;#34; #Note you can always set both to 0 0 to mirror
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Disable a Monitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     Option        &amp;#34;Disable&amp;#34; &amp;#34;true&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;EndSection 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Autorandr - Automatic monitor settings
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/phillipberndt/autorandr&#34;&gt;https://github.com/phillipberndt/autorandr&lt;/a&gt; - This automatically selects a display configuration based on connected devices&lt;/li&gt;
@@ -161,9 +161,9 @@ EndSection
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Sample xrandr script:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/bin/bash
-xrandr --output HDMI-1 --off --output HDMI-2 --auto
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: You can use the tool &lt;em&gt;arandr&lt;/em&gt; to grab the proper display script&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;xrandr --output HDMI-1 --off --output HDMI-2 --auto
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: You can use the tool &lt;em&gt;arandr&lt;/em&gt; to grab the proper display script&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;windowslinuxmacos---flashing-images-to-sd-card-or-usb&#34;&gt;Windows/Linux/MacOS - Flashing Images to SD-Card or USB&lt;/h2&gt;
 &lt;p&gt;There are so many solutions for this one:&lt;/p&gt;
 &lt;ul&gt;
@@ -183,19 +183,19 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;/ul&gt;
 &lt;h2 id=&#34;linux---boot-time-high-for-kde&#34;&gt;Linux - Boot Time High for KDE&lt;/h2&gt;
 &lt;p&gt;Analyze systemd and figure out why&amp;hellip; (&lt;code&gt;systemd-analyze&lt;/code&gt;)&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;systemd-analyze blame
-             10.667s apt-daily.service
-              1.127s apt-daily-upgrade.service
-              1.053s dev-mapper-neon\x2d\x2dvg\x2droot.device
-               793ms lvm2-pvscan@8:3.service
-               622ms boot.mount
-               613ms snapd.service
-               267ms minidlna.service
-               217ms NetworkManager.service
-               200ms nvidia-persistenced.service
-               196ms upower.service
-               189ms systemd-logind.service
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: Also try &lt;code&gt;systemd-analyze critical-chain&lt;/code&gt; or &lt;code&gt;systemd-analyze plot &amp;gt; boot.svg&lt;/code&gt; as this shows the chain of the startup&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemd-analyze blame
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;             10.667s apt-daily.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              1.127s apt-daily-upgrade.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              1.053s dev-mapper-neon\x2d\x2dvg\x2droot.device
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               793ms lvm2-pvscan@8:3.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               622ms boot.mount
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               613ms snapd.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               267ms minidlna.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               217ms NetworkManager.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               200ms nvidia-persistenced.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               196ms upower.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               189ms systemd-logind.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: Also try &lt;code&gt;systemd-analyze critical-chain&lt;/code&gt; or &lt;code&gt;systemd-analyze plot &amp;gt; boot.svg&lt;/code&gt; as this shows the chain of the startup&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;linux---usb-port-stops-working&#34;&gt;Linux - USB Port stops working&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Check to see if device shows on &lt;code&gt;lsusb&lt;/code&gt;&lt;/li&gt;
@@ -258,13 +258,13 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;p&gt;Run Application in Terminal and look at the errors. Chances are it is missing a dependency.&lt;/p&gt;
 &lt;h2 id=&#34;windows---these-settings-are-managed-by-your-organization&#34;&gt;Windows - &amp;ldquo;these settings are managed by your organization&amp;rdquo;&lt;/h2&gt;
 &lt;p&gt;Chances are you ran a powershell script (maybe mine&amp;hellip;) and you are now locked out of changing the lock screen on your Windows Box. Run this command in powershell to gain control of your lock screen again:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Remove-ItemProperty -Path &amp;#34;HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization&amp;#34; -Name &amp;#34;NoLockScreen&amp;#34; -ErrorAction SilentlyContinue
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;OR&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Remove-ItemProperty -Path &amp;#34;HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization&amp;#34; -Name &amp;#34;NoLockScreen&amp;#34; -ErrorAction SilentlyContinue
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OR&lt;/p&gt;
 &lt;p&gt;You can also open up Start - Run - &lt;code&gt;gpedit.msc&lt;/code&gt; and then go to All Settings and look for enabled features and set them to &lt;em&gt;Not Configured&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;windows---reinstall-onedrive&#34;&gt;Windows - Reinstall OneDrive&lt;/h2&gt;
 &lt;p&gt;Open Up PowerShell Admin (Right Click Start Button)&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;%systemroot%\SysWOW64\OneDriveSetup.exe
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;%systemroot%\SysWOW64\OneDriveSetup.exe
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -277,11 +277,11 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/onecommand.png&#34; alt=&#34;OneCommand&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;regular-no-onedrive-indexing-and-defender&#34;&gt;Regular (No OneDrive, Indexing, and Defender)&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;powershell -nop -c &amp;#34;iex(New-Object Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;)&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powershell -nop -c &amp;#34;iex(New-Object Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;minimal-only-targets-bloatwaretelemetry&#34;&gt;Minimal (Only Targets Bloatware/Telemetry)&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;powershell -nop -c &amp;#34;iex(New-Object Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ5qc&amp;#39;)&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powershell -nop -c &amp;#34;iex(New-Object Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ5qc&amp;#39;)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;ltsc-style-debloat&#34;&gt;LTSC Style Debloat&lt;/h2&gt;
 &lt;p&gt;(&lt;em&gt;WARNING: WILL UNINSTALL LOTS OF STUFF&lt;/em&gt;)&lt;br&gt;
 &lt;a href=&#34;https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ultra-ltsc.ps1&#34;&gt;https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ultra-ltsc.ps1&lt;/a&gt;&lt;/p&gt;
@@ -299,8 +299,8 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
       <description>&lt;p&gt;This guide will walk you through a fresh Windows installation and debloat the services, tasks, and apps that are running in the background.&lt;/p&gt;
 &lt;h2 id=&#34;one-command-to-do-everything&#34;&gt;One Command to Do Everything&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/onecommand.png&#34; alt=&#34;OneCommand&#34;&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;powershell -nop -c &amp;#34;iex(New-Object Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;)&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;github-project-for-debloating-optimization-and-installing-programs&#34;&gt;GitHub Project for Debloating, Optimization, and Installing Programs&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powershell -nop -c &amp;#34;iex(New-Object Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github-project-for-debloating-optimization-and-installing-programs&#34;&gt;GitHub Project for Debloating, Optimization, and Installing Programs&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/github.png&#34; alt=&#34;github&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ChrisTitusTech/win10script/tree/master&#34;&gt;https://github.com/ChrisTitusTech/win10script/tree/master&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This project was using many of the aspects of other debloat scripts, but I combined system admin scripts with it that I use to configure workstations at businesses. I also added Chocolatey package manager to the script for easy program installations.&lt;/p&gt;
@@ -363,16 +363,16 @@ xrandr --output HDMI-1 --off --output HDMI-2 --auto
 &lt;li&gt;Installing Adobe, Chocolatey, Notepad++, MPC-HC, and 7-Zip&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Comment any thing you don&amp;rsquo;t want out&amp;hellip; Example:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;########## NOTE THE # SIGNS! These disable lines This example shows UACLow being set and Disabling SMB1
-### Security Tweaks ###
-&amp;#34;SetUACLow&amp;#34;,                  # &amp;#34;SetUACHigh&amp;#34;,
-&amp;#34;DisableSMB1&amp;#34;,                # &amp;#34;EnableSMB1&amp;#34;,
-
-########## NOW LETS SWAP THESE VALUES AND ENABLE SMB1 and Set UAC to HIGH
-### Security Tweaks ###
-&amp;#34;SetUACHigh&amp;#34;,
-&amp;#34;EnableSMB1&amp;#34;,
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;########## NOTE THE # SIGNS! These disable lines This example shows UACLow being set and Disabling SMB1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### Security Tweaks ###
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;SetUACLow&amp;#34;,                  # &amp;#34;SetUACHigh&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableSMB1&amp;#34;,                # &amp;#34;EnableSMB1&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;########## NOW LETS SWAP THESE VALUES AND ENABLE SMB1 and Set UAC to HIGH
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### Security Tweaks ###
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;SetUACHigh&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;EnableSMB1&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Tfd7BXCo9Xk&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Tfd7BXCo9Xk/0.jpg&#34; alt=&#34;vidwalk&#34;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
@@ -417,8 +417,8 @@ You will download this exe and rename it to your needs. It is configured by the 
 &lt;li&gt;Open up a command prompt and run the following to install a service stub (default install location used in this example):&lt;/li&gt;
 &lt;li&gt;You may substitute &amp;ldquo;EQBC Service&amp;rdquo; with whatever name you would like to give to the service for display purposes&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;#34;C:\Program Files\Windows Resource Kits\Tools\instsrv.exe&amp;#34; &amp;#34;New Service&amp;#34; &amp;#34;C:\Program Files\Windows Resource Kits\Tools\srvany.exe&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;C:\Program Files\Windows Resource Kits\Tools\instsrv.exe&amp;#34; &amp;#34;New Service&amp;#34; &amp;#34;C:\Program Files\Windows Resource Kits\Tools\srvany.exe&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Run regedit to edit the Windows registry, and navigate to the following registry key: &lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\New Service&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;From the Edit menu, select New, select Key, and name the new key Parameters&lt;/li&gt;
 &lt;li&gt;Highlight the Parameters key&lt;/li&gt;
@@ -510,8 +510,8 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;h2 id=&#34;october-2020-update&#34;&gt;October 2020 Update&lt;/h2&gt;
 &lt;p&gt;If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: &lt;a href=&#34;https://github.com/ChrisTitusTech/win10script&#34;&gt;https://github.com/ChrisTitusTech/win10script&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below!&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;))
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;What this script does&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What this script does&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Installs Chocolatey, Notepad++, Irfanview, VLC, Java, and asks if you want Adobe Reader or Brave.&lt;/li&gt;
 &lt;li&gt;Removes all Windows Store Apps EXCEPT office, xbox, and WSL.&lt;/li&gt;
@@ -552,26 +552,26 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;h2 id=&#34;the-script&#34;&gt;The Script&lt;/h2&gt;
 &lt;p&gt;Change $folder to the base directory you want for changing permissions. &lt;br&gt;
 &lt;em&gt;Please note, you can use network UNC paths for this or a simple C:.&lt;/em&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$folder = &amp;#34;\\homeserver\users\&amp;#34;
-$users = get-childitem $folder
-Foreach ($user in $users) {
-$acl = Get-Acl $user.FullName
-$acl.SetOwner([System.Security.Principal.NTAccount]&amp;#34;$user&amp;#34;)
-set-acl $user.FullName $acl -Verbose
-$subFolders = Get-ChildItem $user.FullName -Directory -Recurse
-Foreach ($subFolder in $subFolders) {
-$acl = Get-Acl $subFolder.FullName
-$acl.SetOwner([System.Security.Principal.NTAccount]&amp;#34;$user&amp;#34;)
-set-acl $subFolder.FullName $acl -Verbose
-}
-$subFiles = Get-ChildItem $user.FullName -File -Recurse
-Foreach ($subFile in $subFiles) {
-$acl = Get-Acl $subFile.FullName
-$acl.SetOwner([System.Security.Principal.NTAccount]&amp;#34;$user&amp;#34;)
-set-acl $subFile.FullName $acl -Verbose
-}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I’ve never had takeown fail on local disks, but I have found that I needed to resort to using a PowerShell script when doing this through a network location. It’s a very powerful script, however always be careful when running this. Be sure to always test this in a subdirectory first. This can be catastrophic for a company with millions of files and folder to reset the permission on, therefore be very careful!&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$folder = &amp;#34;\\homeserver\users\&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$users = get-childitem $folder
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Foreach ($user in $users) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$acl = Get-Acl $user.FullName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$acl.SetOwner([System.Security.Principal.NTAccount]&amp;#34;$user&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set-acl $user.FullName $acl -Verbose
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$subFolders = Get-ChildItem $user.FullName -Directory -Recurse
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Foreach ($subFolder in $subFolders) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$acl = Get-Acl $subFolder.FullName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$acl.SetOwner([System.Security.Principal.NTAccount]&amp;#34;$user&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set-acl $subFolder.FullName $acl -Verbose
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$subFiles = Get-ChildItem $user.FullName -File -Recurse
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Foreach ($subFile in $subFiles) {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$acl = Get-Acl $subFile.FullName
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$acl.SetOwner([System.Security.Principal.NTAccount]&amp;#34;$user&amp;#34;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set-acl $subFile.FullName $acl -Verbose
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I’ve never had takeown fail on local disks, but I have found that I needed to resort to using a PowerShell script when doing this through a network location. It’s a very powerful script, however always be careful when running this. Be sure to always test this in a subdirectory first. This can be catastrophic for a company with millions of files and folder to reset the permission on, therefore be very careful!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -584,10 +584,10 @@ set-acl $subFile.FullName $acl -Verbose
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2016/10/exclude-shared-mailboxes.png&#34; alt=&#34;Exclude Shared Mailboxes&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
 &lt;h4 id=&#34;connect-to-o365-in-ps&#34;&gt;Connect to O365 in PS:&lt;/h4&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$UserCredential = Get-Credential
-$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-Import-PSSession $Session
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;exclude-shared-mailboxes-with-this-filter-command&#34;&gt;Exclude Shared Mailboxes with this filter command:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$UserCredential = Get-Credential
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Import-PSSession $Session
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;exclude-shared-mailboxes-with-this-filter-command&#34;&gt;Exclude Shared Mailboxes with this filter command:&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;set-DynamicDistributionGroup -Name &amp;quot;all@yourcompany.com&amp;quot;  -RecipientFilter {((RecipientType -eq &#39;UserMailbox&#39;) -and -not (RecipientTypeDetailsValue -eq &#39;SharedMailbox&#39;))}&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;Afterward, Verify in Exchange Admin Console. You always want to prevent your shared mailboxes from getting spammed in a distribution group. Consequently, I’d highly recommend setting a requirement to send to-these dynamic mailboxes. This will prevent every employee from sending emails to everyone, which will be a bad thing.&lt;/p&gt;</description>
@@ -600,9 +600,9 @@ Import-PSSession $Session
       
       <guid>https://christitus.com/force-active-directory-sync/</guid>
       <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”
-Start-ADSyncSyncCycle -PolicyType Delta
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is great for forcing a sync of time-sensitive distribution list updates or user updates. If you find yourself doing this frequently make a PowerShell script for ease of access.&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Start-ADSyncSyncCycle -PolicyType Delta
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is great for forcing a sync of time-sensitive distribution list updates or user updates. If you find yourself doing this frequently make a PowerShell script for ease of access.&lt;/p&gt;</description>
     </item>
     
   </channel>

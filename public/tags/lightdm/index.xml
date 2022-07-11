@@ -29,99 +29,99 @@ For disabling GDM (Gnome Systems) type &lt;code&gt;sudo systemctl disable gdm&lt
 &lt;p&gt;I will go over the 4 sections in the configuration that most will want to change or modify.&lt;/p&gt;
 &lt;h3 id=&#34;changing-the-theme&#34;&gt;Changing the Theme&lt;/h3&gt;
 &lt;p&gt;lightdm.conf&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Seat:*]
-#type=local
-#pam-service=lightdm
-#pam-autologin-service=lightdm-autologin
-#pam-greeter-service=lightdm-greeter
-#xserver-command=X
-#xmir-command=Xmir
-#xserver-config=
-#xserver-layout=
-#xserver-allow-tcp=false
-#xserver-share=true
-#xserver-hostname=
-#xserver-display-number=
-#xdmcp-manager=
-#xdmcp-port=177
-#xdmcp-key=
-greeter-session=lightdm-slick-greeter ### CHANGE THIS 
-#greeter-hide-users=false
-#greeter-allow-guest=true
-#greeter-show-manual-login=false
-#greeter-show-remote-login=true
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Install what ever theme you want, this is called a greeter in lightdm, and then change the line above. After the changes are made you can either reboot or type &lt;code&gt;sudo systemctl restart lightdm&lt;/code&gt; &lt;em&gt;Please Note: This will log you out&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Seat:*]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#type=local
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#pam-service=lightdm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#pam-autologin-service=lightdm-autologin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#pam-greeter-service=lightdm-greeter
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-command=X
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xmir-command=Xmir
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-config=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-layout=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-allow-tcp=false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-share=true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-hostname=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-display-number=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xdmcp-manager=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xdmcp-port=177
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xdmcp-key=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;greeter-session=lightdm-slick-greeter ### CHANGE THIS 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#greeter-hide-users=false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#greeter-allow-guest=true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#greeter-show-manual-login=false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#greeter-show-remote-login=true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install what ever theme you want, this is called a greeter in lightdm, and then change the line above. After the changes are made you can either reboot or type &lt;code&gt;sudo systemctl restart lightdm&lt;/code&gt; &lt;em&gt;Please Note: This will log you out&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;changing-the-default-desktop-environment&#34;&gt;Changing the Default Desktop Environment&lt;/h3&gt;
 &lt;p&gt;lightdm.conf&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[Seat:*]
-#type=local
-#pam-service=lightdm
-#pam-autologin-service=lightdm-autologin
-#pam-greeter-service=lightdm-greeter
-#xserver-command=X
-#xmir-command=Xmir
-#xserver-config=
-#xserver-layout=
-#xserver-allow-tcp=false
-#xserver-share=true
-#xserver-hostname=
-#xserver-display-number=
-#xdmcp-manager=
-#xdmcp-port=177
-#xdmcp-key=
-greeter-session=lightdm-slick-greeter
-#greeter-hide-users=false
-#greeter-allow-guest=true
-#greeter-show-manual-login=false
-#greeter-show-remote-login=true
-user-session=default ################ CHANGE THIS
-#allow-user-switching=true
-#allow-guest=true
-#guest-session=
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To specify a specific desktop environment you need to change the user-session line to be your desktop environment. For example I use the awesome window manager for mine and I put &lt;code&gt;user-session=awesome&lt;/code&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Seat:*]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#type=local
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#pam-service=lightdm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#pam-autologin-service=lightdm-autologin
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#pam-greeter-service=lightdm-greeter
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-command=X
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xmir-command=Xmir
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-config=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-layout=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-allow-tcp=false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-share=true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-hostname=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xserver-display-number=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xdmcp-manager=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xdmcp-port=177
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#xdmcp-key=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;greeter-session=lightdm-slick-greeter
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#greeter-hide-users=false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#greeter-allow-guest=true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#greeter-show-manual-login=false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#greeter-show-remote-login=true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;user-session=default ################ CHANGE THIS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#allow-user-switching=true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#allow-guest=true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#guest-session=
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To specify a specific desktop environment you need to change the user-session line to be your desktop environment. For example I use the awesome window manager for mine and I put &lt;code&gt;user-session=awesome&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: If you don&amp;rsquo;t know the name, the desktop environment list can be found with listing .desktop file from /usr/share/xsessions/*.desktop&lt;/em&gt;&lt;br&gt;
 For complete listing of user sessions type: &lt;code&gt;ls /usr/share/xsessions/*.desktop&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;autologin-with-lightdm&#34;&gt;AutoLogin with LightDM&lt;/h3&gt;
 &lt;p&gt;Change the following part of the file to autologin. &lt;em&gt;Note: This does pose a security risk and should never be done in a business&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;lightdm.conf Under &lt;code&gt;[Seat:*]&lt;/code&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;autologin-guest=false
-autologin-user=username
-autologin-user-timeout=0
-autologin-in-background=false
-#autologin-session=
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I generally uncomment the following lines above and just change this line &lt;code&gt;autologin-user=username&lt;/code&gt; and then it will autologin that user on the next reboot. &lt;em&gt;Note: You can use the &lt;code&gt;autologin-guest&lt;/code&gt; instead of user to have it autologin as a guest account.&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;autologin-guest=false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;autologin-user=username
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;autologin-user-timeout=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;autologin-in-background=false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#autologin-session=
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I generally uncomment the following lines above and just change this line &lt;code&gt;autologin-user=username&lt;/code&gt; and then it will autologin that user on the next reboot. &lt;em&gt;Note: You can use the &lt;code&gt;autologin-guest&lt;/code&gt; instead of user to have it autologin as a guest account.&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;vnc-connection&#34;&gt;VNC Connection&lt;/h3&gt;
 &lt;p&gt;At the buttom of the lightdm.conf file you will see VNC connection information. This information uses the &lt;code&gt;tigervnc&lt;/code&gt; package and also is done using secure channel. This means you must establish a SSH connection with a portforward before you can connect to VNC. Example: &lt;code&gt;ssh 192.168.69.10 -L 9901:localhost:5901&lt;/code&gt; This establishes ssh and port forwards your local port 9901 to 5901 of the remote machine. Then you could launch VNC viewer with &lt;code&gt;vncviewer localhost:9901&lt;/code&gt;. Even though this says localhost it is forwarding the request through SSH to the remote machine.&lt;/p&gt;
 &lt;p&gt;Now with that framework lets look at the conf file:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#
-# VNC Server configuration
-#
-# enabled = True if VNC connections should be allowed
-# command = Command to run Xvnc server with
-# port = TCP/IP port to listen for connections on
-# listen-address = Host/address to listen for VNC connections (use all addresses if not present)
-# width = Width of display to use
-# height = Height of display to use
-# depth = Color depth of display to use
-#
-[VNCServer]
-#enabled=false
-#command=Xvnc
-#port=5900
-#listen-address=
-#width=1024
-#height=768
-#depth=8
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The main things to change here are &lt;code&gt;enabled=true&lt;/code&gt; &lt;code&gt;width - height - depth&lt;/code&gt; and then you are off. My typical defaults would look like the following:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[VNCServer]
-enabled=true
-command=Xvnc
-port=5900
-#listen-address=
-width=1920
-height=1080
-depth=16
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# VNC Server configuration
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# enabled = True if VNC connections should be allowed
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# command = Command to run Xvnc server with
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# port = TCP/IP port to listen for connections on
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# listen-address = Host/address to listen for VNC connections (use all addresses if not present)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# width = Width of display to use
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# height = Height of display to use
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# depth = Color depth of display to use
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[VNCServer]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#enabled=false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#command=Xvnc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#port=5900
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#listen-address=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#width=1024
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#height=768
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#depth=8
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The main things to change here are &lt;code&gt;enabled=true&lt;/code&gt; &lt;code&gt;width - height - depth&lt;/code&gt; and then you are off. My typical defaults would look like the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[VNCServer]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;enabled=true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;command=Xvnc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;port=5900
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#listen-address=
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;width=1920
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;height=1080
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;depth=16
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=_dYqisDIcC0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/_dYqisDIcC0/0.jpg&#34; alt=&#34;lightdm guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
     </item>

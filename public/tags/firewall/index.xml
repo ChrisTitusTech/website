@@ -87,47 +87,47 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;h1 id=&#34;secure-a-web-server-steps&#34;&gt;Secure A Web Server Steps&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/10/firewall-png-577x359.png&#34; alt=&#34;firewall-png-577&amp;amp;#215;359&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Install UFW&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt-get update  
-sudo apt-get install ufw  
-sudo ufw limit 22/tcp  
-sudo ufw allow 80/tcp  
-sudo ufw allow 443/tcp  
-sudo ufw enable
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Verify&lt;/strong&gt;&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install ufw  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw limit 22/tcp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw allow 80/tcp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw allow 443/tcp  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw enable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Verify&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;sudo ufw status&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Do Global blocks&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo ufw default deny incoming  
-sudo ufw default allow outgoing
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/09/ssh.png&#34; alt=&#34;ssh&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw default deny incoming  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw default allow outgoing
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/09/ssh.png&#34; alt=&#34;ssh&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;change-ssh-to-key&#34;&gt;Change SSH to Key&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Remote Machine&lt;/strong&gt;: &lt;code&gt;ssh-keygen -t rsa&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;transfer-to-server&#34;&gt;Transfer to Server&lt;/h3&gt;
 &lt;h4 id=&#34;method-1&#34;&gt;Method 1:&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;Transfer pub ssh key to server&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;scp ~/.ssh/id_rsa.pub user@server.com:~
-cat ~/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;method-2&#34;&gt;Method 2:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scp ~/.ssh/id_rsa.pub user@server.com:~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat ~/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;method-2&#34;&gt;Method 2:&lt;/h4&gt;
 &lt;p&gt;Copy key and place in authorized_key file in one command&lt;br&gt;
 &lt;code&gt;ssh-copy-id -i ~/.ssh/id_rsa.pub user@server.com&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;secure-a-web-server-disabling-password-auth-through-ssh&#34;&gt;Secure a Web Server Disabling Password Auth through SSH&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Change the following lines in /etc/sshd_config&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ChallengeResponseAuthentication no
-PasswordAuthentication no
-UsePAM no
-PermitRootLogin no
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;edit-etcsysctlconf&#34;&gt;Edit /etc/sysctl.conf&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ChallengeResponseAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PasswordAuthentication no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;UsePAM no
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PermitRootLogin no
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;edit-etcsysctlconf&#34;&gt;Edit /etc/sysctl.conf&lt;/h2&gt;
 &lt;p&gt;Enable security features&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/10/settings.png&#34; alt=&#34;settings&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;prevent-ip-spoof-etchostconf&#34;&gt;Prevent IP Spoof /etc/host.conf&lt;/h2&gt;
 &lt;p&gt;Change File to mirror below:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;​order bind,hosts
-multi on
-nospoof on
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;install-fail2ban&#34;&gt;Install Fail2Ban&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install fail2ban
-sudo systemctl enable fail2ban
-sudo systemctl start fail2ban
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;check-listening-ports&#34;&gt;Check Listening Ports&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;​order bind,hosts
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;multi on
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nospoof on
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-fail2ban&#34;&gt;Install Fail2Ban&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install fail2ban
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl enable fail2ban
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl start fail2ban
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;check-listening-ports&#34;&gt;Check Listening Ports&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;netstat -tunlp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You will now have completed the basics of a secure web server!&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;

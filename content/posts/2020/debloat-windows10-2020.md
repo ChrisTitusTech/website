@@ -10,18 +10,20 @@ tags:
   - Microsoft Store
 
 ---
-This goes over debloating and slimming down Windows 10 so you get maximum performance from your PC. 
-<!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved.
+This goes over debloating and slimming down Windows 10 and 11 so you get maximum performance from your PC. 
+<!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved. I've also made a newer post going over the all the changes @ <https://christitus.com/windows-tool>
 
 ## April 2022 Update
 
 - Added new options to get Windows 10/7 Options in Windows 11
 - Service optimizations to reduce process count
 - Added more tweak settings and misc. fixes
+- GUI Redesign
+- new Github <https://github.com/ChrisTitusTech/winutil>
 
-New shorter command! (_old command still works though..._)
+New command! 
 ```
-iwr -useb https://git.io/JJ8R4 | iex
+iwr -useb https://christitus/win | iex
 ```
 
 ## July 2021 Update
@@ -30,9 +32,7 @@ If you are coming here from the YouTube video I have taken all the scripts below
 
 If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below! 
 
-*December 2020 Feature: GUI added - Select what you want!*
-*January 2021 Feature: 10 Bug Fixes and Network Optimizations added*
-*July 2021 Updates: 30+ Bug Fixes and Undo Options added*
+*OLD PROJECT - DEPRECATED*
 
 ```
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))

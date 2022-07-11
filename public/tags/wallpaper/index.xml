@@ -23,21 +23,21 @@
 &lt;h2 id=&#34;change-wallpaper-in-mac-os&#34;&gt;Change Wallpaper in Mac OS&lt;/h2&gt;
 &lt;p&gt;GitHub Project: &lt;a href=&#34;https://github.com/ChrisTitusTech/wallpaper-reddit&#34;&gt;https://github.com/ChrisTitusTech/wallpaper-reddit&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;install-macos-dependancies&#34;&gt;Install MacOS Dependancies&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;xcode-select --install
-sudo easy_install pip
-sudo pip install --upgrade pip
-pip install pillow
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;needed-desktop-wallpaper-script-package&#34;&gt;Needed Desktop Wallpaper Script Package&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xcode-select --install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo easy_install pip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pip install --upgrade pip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install pillow
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;needed-desktop-wallpaper-script-package&#34;&gt;Needed Desktop Wallpaper Script Package&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Install Swift Tools on MacOS 13 (Required for High Sierra or Earlier) - &lt;a href=&#34;https://support.apple.com/kb/DL1998&#34;&gt;https://support.apple.com/kb/DL1998&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Script for Changing MacOS Wallpaper - &lt;a href=&#34;https://github.com/scriptingosx/desktoppr/releases&#34;&gt;https://github.com/scriptingosx/desktoppr/releases&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;install-macos-program&#34;&gt;Install MacOS Program&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd ~
-git clone https://github.com/ChrisTitusTech/wallpaper-reddit.git
-cd wallpaper-reddit
-sudo python3 setup.py install
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;macos-usage&#34;&gt;MacOS Usage&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/ChrisTitusTech/wallpaper-reddit.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd wallpaper-reddit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo python3 setup.py install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;macos-usage&#34;&gt;MacOS Usage&lt;/h3&gt;
 &lt;p&gt;You can run this anytime by typing in terminal &lt;code&gt;wallpaper-reddit [subreddits]&lt;/code&gt;&lt;br&gt;
 Binaries are located at &lt;code&gt;/usr/local/bin/wallpaper-reddit&lt;/code&gt;
 Config files are located at &lt;code&gt;~/.config/wallpaper-reddit&lt;/code&gt;
@@ -58,9 +58,9 @@ Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/usr/local/bin/wallpaper-reddit --startup
-/usr/local/bin/desktoppr ~/Pictures/Wallpapers/wallpaper.jpg
-&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/wallpaper-reddit --startup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/desktoppr ~/Pictures/Wallpapers/wallpaper.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Save it somewhere: a file called your_name.app will be created)&lt;/li&gt;
 &lt;li&gt;Go to System Preferences → Users and Groups → Login items&lt;/li&gt;
 &lt;li&gt;Add this newly-created app&lt;/li&gt;
@@ -74,20 +74,20 @@ Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 &lt;li&gt;Arch: &lt;code&gt;sudo pacman -S python-pillow&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;install-linux-program&#34;&gt;Install Linux Program&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd ~
-git clone https://github.com/ChrisTitusTech/wallpaper-reddit.git
-cd wallpaper-reddit
-sudo python3 setup.py install
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;linux-usage&#34;&gt;Linux Usage&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/ChrisTitusTech/wallpaper-reddit.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd wallpaper-reddit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo python3 setup.py install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;linux-usage&#34;&gt;Linux Usage&lt;/h3&gt;
 &lt;p&gt;You can run this anytime by typing in terminal &lt;code&gt;wallpaper-reddit [subreddits]&lt;/code&gt;&lt;br&gt;
 Binaries are located at &lt;code&gt;/usr/local/bin/wallpaper-reddit&lt;/code&gt;
 Config files are located at &lt;code&gt;~/.config/wallpaper-reddit&lt;/code&gt;
 Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;running-on-linux-startup&#34;&gt;Running on Linux Startup&lt;/h3&gt;
 &lt;p&gt;There is plenty of ways to have this automatically change the wallpaper on startup, however, I like to use the method by adding it at the &lt;code&gt;/etc/profile&lt;/code&gt; EOF (End of File). Here is an example.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/usr/local/bin/wallpaper-reddit --save
-/usr/local/bin/wallpaper-reddit --startup
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;--save&lt;/code&gt; &lt;em&gt;option flag will save the current wallpaper to the default directory in the config file (&lt;code&gt;~/Pictures/Wallpapers/&lt;/code&gt;). Remove this line if you don&amp;rsquo;t want to save past wallpapers.&lt;/em&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/wallpaper-reddit --save
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/wallpaper-reddit --startup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;--save&lt;/code&gt; &lt;em&gt;option flag will save the current wallpaper to the default directory in the config file (&lt;code&gt;~/Pictures/Wallpapers/&lt;/code&gt;). Remove this line if you don&amp;rsquo;t want to save past wallpapers.&lt;/em&gt;
 &lt;code&gt;--startup&lt;/code&gt; &lt;em&gt;option flag will wait til internet access is established and then download the wallpaper from reddit&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;wallpaper-reddit-config-file-settings&#34;&gt;Wallpaper-reddit Config File Settings&lt;/h2&gt;
 &lt;p&gt;The config file is in &lt;code&gt;~/.config/wallpaper-reddit&lt;/code&gt;, and will be created automatically. Currently, the GNOME, XFCE, MATE, Unity, and Cinnamon Desktop Environments should be automatically detected and the program should set the wallpaper without any extra work. However, due to the varying nature of window managers, it is possible, even likely, that you may have to specify a custom command to set your wallpaper. The program will prompt you for this if this is the case; the exact command can be researched per desktop environment. If your desktop environment is not supported, leave the set command blank and it will auto download to the &lt;code&gt;~/Pictures/Wallpapers/&lt;/code&gt; directory as wallpaper.jpg for the daily wallpaper.&lt;/p&gt;

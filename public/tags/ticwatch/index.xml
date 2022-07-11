@@ -59,17 +59,17 @@
 &lt;/li&gt;
 &lt;li&gt;Run the following commands to remove all the bloat:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;adb shell
-pm uninstall -k --user 0 com.mobvoi.wear.account.aw
-pm uninstall -k --user 0 com.mobvoi.companion.aw
-pm uninstall -k --user 0 com.mobvoi.ticwatch.cmodel.c2.male
-pm uninstall -k --user 0 com.mobvoi.wear.appsservice
-pm uninstall -k --user 0 com.mobvoi.wear.fitness.aw
-pm uninstall -k --user 0 com.mobvoi.wear.health.aw
-pm uninstall -k --user 0 com.mobvoi.wear.privacy.aw
-pm uninstall -k --user 0 com.mobvoi.wear.system.aw
-pm uninstall -k --user 0 com.mobvoi.wear.watchface.aw
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Screenshot&lt;br&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.account.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.companion.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.ticwatch.cmodel.c2.male
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.appsservice
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.fitness.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.health.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.privacy.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.system.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.watchface.aw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Screenshot&lt;br&gt;
 &lt;img src=&#34;https://christitus.com/images/2020/ticwatch.jpg&#34; alt=&#34;ticwatch&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;using-google-fit-and-other-wearos-apps&#34;&gt;Using Google Fit and other WearOS Apps&lt;/h2&gt;
 &lt;p&gt;Now with all the garbage gone you can use all the other apps that are well maintained and optimized. You will notice that your watch is no longer lagging and it runs just like any other good wearable.&lt;/p&gt;</description>

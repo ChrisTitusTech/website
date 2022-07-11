@@ -22,16 +22,16 @@
 &lt;h3 id=&#34;arch&#34;&gt;Arch&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;sudo pacman -S openssh&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;run-ssh-server-on-startup&#34;&gt;Run SSH server on startup&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo systemctl start ssh
-sudo systemctl enable ssh
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;**Note: sshd instead of ssh for arch&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl start ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl enable ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;**Note: sshd instead of ssh for arch&lt;/p&gt;
 &lt;h2 id=&#34;configure-ssh&#34;&gt;Configure SSH&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Make sure ufw isn’t blocking ssh and enable it for passthrough.&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo ufw allow ssh
-sudo ufw limit ssh
-sudo ufw enable  
-sudo ufw status
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;options-for-etcsshsshd_config&#34;&gt;Options for /etc/ssh/sshd_config&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw allow ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw limit ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw enable  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;options-for-etcsshsshd_config&#34;&gt;Options for /etc/ssh/sshd_config&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;PasswordAuthentication yes/no&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;* No should be used when facing the internet and key authentication must be used for security&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;AllowTcpForwarding yes&lt;/code&gt;&lt;br&gt;

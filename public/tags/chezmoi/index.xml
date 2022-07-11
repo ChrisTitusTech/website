@@ -26,21 +26,21 @@
 &lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
 &lt;p&gt;First we install Chezmoi to the /bin folder. I recommend system wide below but you can also do the install to &lt;code&gt;~/.local/bin&lt;/code&gt; if you only want to install for current user&lt;/p&gt;
 &lt;p&gt;System-wide install &lt;code&gt;/bin&lt;/code&gt; &lt;em&gt;Recommended&lt;/em&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;su
-cd /
-sh -c &amp;#34;$(curl -fsLS chezmoi.io/get)&amp;#34;
-exit
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;User install &lt;code&gt;~/.local/bin&lt;/code&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cd ~/.local
-sh -c &amp;#34;$(curl -fsLS chezmoi.io/get)&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: Most systems have ~/.local/bin, however a few do not&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;su
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh -c &amp;#34;$(curl -fsLS chezmoi.io/get)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;User install &lt;code&gt;~/.local/bin&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~/.local
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh -c &amp;#34;$(curl -fsLS chezmoi.io/get)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: Most systems have ~/.local/bin, however a few do not&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;setting-up-config-repository&#34;&gt;Setting up config repository&lt;/h2&gt;
 &lt;p&gt;First Setup a new repository for your config files on GitHub&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/chezmoi/new-repo.png&#34; alt=&#34;new-repo.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I called mine &amp;ldquo;dotfiles&amp;rdquo; &lt;a href=&#34;https://github.com/ChrisTitusTech/dotfiles&#34;&gt;https://github.com/ChrisTitusTech/dotfiles&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;We now simply initialize chezmoi with that new GitHub repository&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chezmoi init https://github.com/ChrisTitusTech/dotfiles
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;adding-files-and-applying-changes&#34;&gt;Adding files and Applying changes&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chezmoi init https://github.com/ChrisTitusTech/dotfiles
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;adding-files-and-applying-changes&#34;&gt;Adding files and Applying changes&lt;/h2&gt;
 &lt;p&gt;chezmoi uses a git based aliases to add files and merge them. To add something to your dotconfigs you&amp;rsquo;d simply do this command as an example: &lt;code&gt;chezmoi add .bashrc&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;This copies the file to the working directory ~/.local/share/chezmoi and allows it to be a part of your repository. Just like the name suggests, the working directory is where you should be doing all your edits once they are added.&lt;/p&gt;
 &lt;p&gt;Once you edit your file you need to &amp;ldquo;apply&amp;rdquo; it back to its home so they are used with &lt;code&gt;chezmoi apply&lt;/code&gt;&lt;/p&gt;

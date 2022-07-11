@@ -16,10 +16,10 @@
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2016/10/exclude-shared-mailboxes.png&#34; alt=&#34;Exclude Shared Mailboxes&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
 &lt;h4 id=&#34;connect-to-o365-in-ps&#34;&gt;Connect to O365 in PS:&lt;/h4&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$UserCredential = Get-Credential
-$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-Import-PSSession $Session
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;exclude-shared-mailboxes-with-this-filter-command&#34;&gt;Exclude Shared Mailboxes with this filter command:&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$UserCredential = Get-Credential
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Import-PSSession $Session
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;exclude-shared-mailboxes-with-this-filter-command&#34;&gt;Exclude Shared Mailboxes with this filter command:&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;set-DynamicDistributionGroup -Name &amp;quot;all@yourcompany.com&amp;quot;  -RecipientFilter {((RecipientType -eq &#39;UserMailbox&#39;) -and -not (RecipientTypeDetailsValue -eq &#39;SharedMailbox&#39;))}&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;Afterward, Verify in Exchange Admin Console. You always want to prevent your shared mailboxes from getting spammed in a distribution group. Consequently, I’d highly recommend setting a requirement to send to-these dynamic mailboxes. This will prevent every employee from sending emails to everyone, which will be a bad thing.&lt;/p&gt;</description>
@@ -40,10 +40,10 @@ Import-PSSession $Session
 Notex.0 in the above registry path corresponds to the Outlook version (16.0 = Outlook 2016, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).&lt;br&gt;
 &lt;code&gt;ExcludeScpLookup DWORD 1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;(Option 2)Now you can also do this with a Reg file. Name it SCPDisable.reg&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows Registry Editor Version 5.00  
-[HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Outlook\AutoDiscover]  
-&amp;#34;ExcludeScpLookup&amp;#34;=dword:00000001`
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The above is Office 2010, Notice the 14.0, and make sure you change it to the version you have.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Outlook\AutoDiscover]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ExcludeScpLookup&amp;#34;=dword:00000001`
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above is Office 2010, Notice the 14.0, and make sure you change it to the version you have.&lt;/p&gt;
 &lt;p&gt;Now simply create a new profile and your domain should now point to Office 365 by default.&lt;/p&gt;</description>
     </item>
     

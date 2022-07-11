@@ -25,13 +25,13 @@
 &lt;li&gt;zsh-autosuggestions - Suggestions based on your history&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;initial-setup-of-zsh&#34;&gt;Initial Setup of ZSH&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;touch &amp;#34;$HOME/.cache/zshhistory&amp;#34;
-#-- Setup Alias in $HOME/zsh/aliasrc
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo &amp;#39;source ~/powerlevel10k/powerlevel10k.zsh-theme&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;complete-switch-from-bash-to-zsh&#34;&gt;Complete Switch from BASH to ZSH&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;chsh $USER
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Then type &lt;code&gt;/bin/zsh&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch &amp;#34;$HOME/.cache/zshhistory&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#-- Setup Alias in $HOME/zsh/aliasrc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#39;source ~/powerlevel10k/powerlevel10k.zsh-theme&amp;#39; &amp;gt;&amp;gt; ~/.zshrc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;complete-switch-from-bash-to-zsh&#34;&gt;Complete Switch from BASH to ZSH&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chsh $USER
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Then type &lt;code&gt;/bin/zsh&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;OR&lt;/em&gt; Edit &lt;code&gt;/etc/passwd&lt;/code&gt; and change /bin/bash to /bin/zsh&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/zsh-passwd.png&#34; alt=&#34;ZSH Switch&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;

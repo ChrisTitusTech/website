@@ -36,106 +36,106 @@ Debian-Based Users: &lt;code&gt;sudo apt install hugo&lt;/code&gt;&lt;br&gt;
 &lt;p&gt;I first started to change the &lt;em&gt;social widget&lt;/em&gt; by adding YouTube and Twitch from the following file &lt;code&gt;siteroot/themes/mainroad/layouts/partials/widgets/social.html&lt;/code&gt;.&lt;br&gt;
 The Most challengeing Part of this was the SVG files used by mainroad. However, once I figured out the SVG format can be edited in a simple text editor and I mirrored the size and types from the existing SVG files they showed up.&lt;/p&gt;
 &lt;p&gt;Here are the Edits I made to &lt;em&gt;social.html&lt;/em&gt;:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{- with .Site.Params.widgets.social.twitch }}
-		&amp;lt;div class=&amp;#34;widget-social__item widget__item&amp;#34;&amp;gt;
-			&amp;lt;a class=&amp;#34;widget-social__link widget__link btn&amp;#34; title=&amp;#34;Twitch&amp;#34; rel=&amp;#34;noopener noreferrer&amp;#34; href=&amp;#34;https://twitch.tv/{{ . }}&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;
-				{{ partial &amp;#34;svg/twitch.svg&amp;#34; (dict &amp;#34;class&amp;#34; &amp;#34;widget-social__link-icon&amp;#34;) }}
-				&amp;lt;span&amp;gt;Twitch Live Streams&amp;lt;/span&amp;gt;
-			&amp;lt;/a&amp;gt;
-		&amp;lt;/div&amp;gt;
-		{{- end }}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Basically after getting the SVG setup and putting the twitch.svg and youtube.svg in this path &lt;code&gt;siteroot/mainroad/layouts/partials/svg&lt;/code&gt; I was able to get the Social widget exactly how I wanted.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- with .Site.Params.widgets.social.twitch }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&amp;lt;div class=&amp;#34;widget-social__item widget__item&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&amp;lt;a class=&amp;#34;widget-social__link widget__link btn&amp;#34; title=&amp;#34;Twitch&amp;#34; rel=&amp;#34;noopener noreferrer&amp;#34; href=&amp;#34;https://twitch.tv/{{ . }}&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				{{ partial &amp;#34;svg/twitch.svg&amp;#34; (dict &amp;#34;class&amp;#34; &amp;#34;widget-social__link-icon&amp;#34;) }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;				&amp;lt;span&amp;gt;Twitch Live Streams&amp;lt;/span&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;			&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		{{- end }}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Basically after getting the SVG setup and putting the twitch.svg and youtube.svg in this path &lt;code&gt;siteroot/mainroad/layouts/partials/svg&lt;/code&gt; I was able to get the Social widget exactly how I wanted.&lt;/p&gt;
 &lt;h5 id=&#34;tags-widget&#34;&gt;Tags Widget&lt;/h5&gt;
 &lt;p&gt;Next up was fixing the tags on the sidebar. They were blocky and quite ugly, where I wanted a traditional tag cloud that you see on many other sites to help users navigate your content. So I began looking at other projects that had the proper code. I found the following code snippit:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{ if not (eq (len $.Site.Taxonomies.tags) 0) }}
-    {{ $fontUnit := &amp;#34;rem&amp;#34; }}
-    {{ $largestFontSize := 2.0 }}
-    {{ $largestFontSize := 2.5 }}
-    {{ $smallestFontSize := 1.0 }}
-    {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
-    {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
-    {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
-    {{ $spread := sub $max $min }}
-    {{ $fontStep := div $fontSpread $spread }}
-&amp;lt;div class=&amp;#34;widget-taglist widget&amp;#34;&amp;gt;
-  &amp;lt;h4 class=&amp;#34;widget__title&amp;#34;&amp;gt;{{ T &amp;#34;tags_title&amp;#34; }}&amp;lt;/h4&amp;gt;
-   &amp;lt;div class=&amp;#34;widget__content&amp;#34;&amp;gt;
-    &amp;lt;div id=&amp;#34;tag-cloud&amp;#34; style=&amp;#34;padding: 5px 15px&amp;#34;&amp;gt;
-        {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-            {{ $currentTagCount := len $taxonomy.Pages }}
-            {{ $currentFontSize := (add $smallestFontSize (mul (sub $currentTagCount $min) $fontStep) ) }}
-            {{ $count := len $taxonomy.Pages }}
-            {{ $weigth := div (sub (math.Log $count) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
-            {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth) ) }}
-            &amp;lt;!--Current font size: {{$currentFontSize}}--&amp;gt;
-            &amp;lt;a href=&amp;#34;{{ &amp;#34;/tags/&amp;#34; | relLangURL }}{{ $name | urlize }}&amp;#34; style=&amp;#34;font-size:{{$currentFontSize}}{{$fontUnit}}&amp;#34;&amp;gt;{{ $name }}&amp;lt;/a&amp;gt;
-        {{ end }}
-    &amp;lt;/div&amp;gt;
-  &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-{{ end }}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After replacing &lt;code&gt;siteroot/themes/mainroad/layouts/partials/widgets/taglist.html&lt;/code&gt; with the following code. The tag cloud was complete.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ if not (eq (len $.Site.Taxonomies.tags) 0) }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ $fontUnit := &amp;#34;rem&amp;#34; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ $largestFontSize := 2.0 }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ $largestFontSize := 2.5 }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ $smallestFontSize := 1.0 }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ $spread := sub $max $min }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ $fontStep := div $fontSpread $spread }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;div class=&amp;#34;widget-taglist widget&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;lt;h4 class=&amp;#34;widget__title&amp;#34;&amp;gt;{{ T &amp;#34;tags_title&amp;#34; }}&amp;lt;/h4&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &amp;lt;div class=&amp;#34;widget__content&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;lt;div id=&amp;#34;tag-cloud&amp;#34; style=&amp;#34;padding: 5px 15px&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {{ $currentTagCount := len $taxonomy.Pages }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {{ $currentFontSize := (add $smallestFontSize (mul (sub $currentTagCount $min) $fontStep) ) }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {{ $count := len $taxonomy.Pages }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {{ $weigth := div (sub (math.Log $count) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth) ) }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;lt;!--Current font size: {{$currentFontSize}}--&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &amp;lt;a href=&amp;#34;{{ &amp;#34;/tags/&amp;#34; | relLangURL }}{{ $name | urlize }}&amp;#34; style=&amp;#34;font-size:{{$currentFontSize}}{{$fontUnit}}&amp;#34;&amp;gt;{{ $name }}&amp;lt;/a&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        {{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After replacing &lt;code&gt;siteroot/themes/mainroad/layouts/partials/widgets/taglist.html&lt;/code&gt; with the following code. The tag cloud was complete.&lt;/p&gt;
 &lt;h4 id=&#34;headerfooter-modification&#34;&gt;Header/Footer Modification&lt;/h4&gt;
 &lt;p&gt;Replacing the Header and footer was extremely easy as it is just plain HTML. The files are located in &lt;code&gt;siteroot/themes/mainroad/layouts/partials/header.html or footer.html&lt;/code&gt;. You can leave the stock, but I wanted to add a privacy policy and terms of service to be compliant.&lt;/p&gt;
 &lt;h4 id=&#34;table-of-contents-changes&#34;&gt;Table of Contents Changes&lt;/h4&gt;
 &lt;p&gt;I replaced the title &amp;ldquo;PAGE CONTENTS&amp;rdquo; with share buttons using a share-buttons.html I created. This could all be done in the post-toc.html file, but I wanted to keep it modular and not make too many edits to the theme. Here were my changes:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;siteroot/themes/mainroad/layouts/partials/post-toc.html&lt;/em&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{ if .Param &amp;#34;toc&amp;#34; }}
-&amp;lt;div class=&amp;#34;post__toc toc&amp;#34;&amp;gt;
-	&amp;lt;div class=&amp;#34;toc__title&amp;#34;&amp;gt;{{ partial &amp;#34;share-buttons.html&amp;#34; . }}&amp;lt;/div&amp;gt;
-	&amp;lt;div class=&amp;#34;toc__menu&amp;#34;&amp;gt;
-		{{ .TableOfContents }}
-	&amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-{{ end }}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: I added the &lt;code&gt;{{ partial &amp;quot;share-buttons.html&amp;quot; . }}&lt;/code&gt; to this and removed PAGE CONTENTS text&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ if .Param &amp;#34;toc&amp;#34; }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;div class=&amp;#34;post__toc toc&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&amp;lt;div class=&amp;#34;toc__title&amp;#34;&amp;gt;{{ partial &amp;#34;share-buttons.html&amp;#34; . }}&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&amp;lt;div class=&amp;#34;toc__menu&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		{{ .TableOfContents }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: I added the &lt;code&gt;{{ partial &amp;quot;share-buttons.html&amp;quot; . }}&lt;/code&gt; to this and removed PAGE CONTENTS text&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;/siteroot/layouts/partials/share-buttons.html&lt;/em&gt; - NEW FILE&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{ $pageurl := .Permalink }}
-
-&amp;lt;style&amp;gt;
-#share-buttons {display: inline-block; vertical-align: middle; }
-#share-buttons:after {content: &amp;#34;&amp;#34;; display: block; clear: both;}
-#share-buttons &amp;gt; div {
-position: relative;
-text-align: left; 
-height: 36px; 
-width: 32px; 
-float: left; 
-text-align: center;
-}
-#share-buttons &amp;gt; div &amp;gt; svg {height: 16px; fill: #d5d5d5; margin-top: 10px;}
-#share-buttons &amp;gt; div:hover {cursor: pointer;}
-#share-buttons &amp;gt; div.facebook:hover &amp;gt; svg {fill: #3B5998;}
-#share-buttons &amp;gt; div.twitter:hover &amp;gt; svg {fill: #55ACEE;}
-#share-buttons &amp;gt; div.linkedin:hover &amp;gt; svg {fill: #0077b5;}
-#share-buttons &amp;gt; div.pinterest:hover &amp;gt; svg {fill: #CB2027;}
-#share-buttons &amp;gt; div.mail:hover &amp;gt; svg {fill: #7D7D7D;}
-#share-buttons &amp;gt; div.instagram:hover &amp;gt; svg {fill: #C73B92;}
-#share-buttons &amp;gt; div.facebook &amp;gt; svg {height: 18px; margin-top: 9px;}
-#share-buttons &amp;gt; div.twitter &amp;gt; svg {height: 20px; margin-top: 8px;}
-#share-buttons &amp;gt; div.linkedin &amp;gt; svg {height: 19px; margin-top: 7px;}
-#share-buttons &amp;gt; div.pinterest &amp;gt; svg {height: 20px; margin-top: 9px;}
-#share-buttons &amp;gt; div.mail &amp;gt; svg {height: 14px; margin-top: 11px;}
-&amp;lt;/style&amp;gt;
-
-&amp;lt;span style=&amp;#34;color: silver;&amp;#34;&amp;gt;Share on: &amp;lt;/span&amp;gt;&amp;lt;div id=&amp;#34;share-buttons&amp;#34;&amp;gt;
-&amp;lt;div class=&amp;#34;facebook&amp;#34; title=&amp;#34;Share this on Facebook&amp;#34; onclick=&amp;#34;window.open(&amp;#39;http://www.facebook.com/share.php?u={{ $pageurl }}&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;div class=&amp;#34;twitter&amp;#34; title=&amp;#34;Share this on Twitter&amp;#34; onclick=&amp;#34;window.open(&amp;#39;http://twitter.com/home?status={{ $pageurl }}&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;div class=&amp;#34;linkedin&amp;#34; title=&amp;#34;Share this on Linkedin&amp;#34; onclick=&amp;#34;window.open(&amp;#39;https://www.linkedin.com/shareArticle?mini=true&amp;amp;url={{ $pageurl }}&amp;amp;title=&amp;amp;summary=&amp;amp;source=&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;
-{{ if .Params.image }}&amp;lt;div class=&amp;#34;pinterest&amp;#34; title=&amp;#34;Share this on Pinterest&amp;#34; onclick=&amp;#34;window.open(&amp;#39;https://pinterest.com/pin/create/button/?url=&amp;amp;media={{ .Params.image }}&amp;amp;description=&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M256 597q0-108 37.5-203.5t103.5-166.5 152-123 185-78 202-26q158 0 294 66.5t221 193.5 85 287q0 96-19 188t-60 177-100 149.5-145 103-189 38.5q-68 0-135-32t-96-88q-10 39-28 112.5t-23.5 95-20.5 71-26 71-32 62.5-46 77.5-62 86.5l-14 5-9-10q-15-157-15-188 0-92 21.5-206.5t66.5-287.5 52-203q-32-65-32-169 0-83 52-156t132-73q61 0 95 40.5t34 102.5q0 66-44 191t-44 187q0 63 45 104.5t109 41.5q55 0 102-25t78.5-68 56-95 38-110.5 20-111 6.5-99.5q0-173-109.5-269.5t-285.5-96.5q-200 0-334 129.5t-134 328.5q0 44 12.5 85t27 65 27 45.5 12.5 30.5q0 28-15 73t-37 45q-2 0-17-3-51-15-90.5-56t-61-94.5-32.5-108-11-106.5z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;{{ end }}
-&amp;lt;div class=&amp;#34;mail&amp;#34; title=&amp;#34;Share this through Email&amp;#34; onclick=&amp;#34;window.open(&amp;#39;mailto:?&amp;amp;body={{ $pageurl }}&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;adding-adsense-and-custom-scripts-to-all-pages&#34;&gt;Adding AdSense and Custom Scripts to All Pages&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ $pageurl := .Permalink }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;style&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons {display: inline-block; vertical-align: middle; }
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons:after {content: &amp;#34;&amp;#34;; display: block; clear: both;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;position: relative;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;text-align: left; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;height: 36px; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;width: 32px; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;float: left; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;text-align: center;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div &amp;gt; svg {height: 16px; fill: #d5d5d5; margin-top: 10px;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div:hover {cursor: pointer;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.facebook:hover &amp;gt; svg {fill: #3B5998;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.twitter:hover &amp;gt; svg {fill: #55ACEE;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.linkedin:hover &amp;gt; svg {fill: #0077b5;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.pinterest:hover &amp;gt; svg {fill: #CB2027;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.mail:hover &amp;gt; svg {fill: #7D7D7D;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.instagram:hover &amp;gt; svg {fill: #C73B92;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.facebook &amp;gt; svg {height: 18px; margin-top: 9px;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.twitter &amp;gt; svg {height: 20px; margin-top: 8px;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.linkedin &amp;gt; svg {height: 19px; margin-top: 7px;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.pinterest &amp;gt; svg {height: 20px; margin-top: 9px;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#share-buttons &amp;gt; div.mail &amp;gt; svg {height: 14px; margin-top: 11px;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/style&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;span style=&amp;#34;color: silver;&amp;#34;&amp;gt;Share on: &amp;lt;/span&amp;gt;&amp;lt;div id=&amp;#34;share-buttons&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;div class=&amp;#34;facebook&amp;#34; title=&amp;#34;Share this on Facebook&amp;#34; onclick=&amp;#34;window.open(&amp;#39;http://www.facebook.com/share.php?u={{ $pageurl }}&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;div class=&amp;#34;twitter&amp;#34; title=&amp;#34;Share this on Twitter&amp;#34; onclick=&amp;#34;window.open(&amp;#39;http://twitter.com/home?status={{ $pageurl }}&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;div class=&amp;#34;linkedin&amp;#34; title=&amp;#34;Share this on Linkedin&amp;#34; onclick=&amp;#34;window.open(&amp;#39;https://www.linkedin.com/shareArticle?mini=true&amp;amp;url={{ $pageurl }}&amp;amp;title=&amp;amp;summary=&amp;amp;source=&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ if .Params.image }}&amp;lt;div class=&amp;#34;pinterest&amp;#34; title=&amp;#34;Share this on Pinterest&amp;#34; onclick=&amp;#34;window.open(&amp;#39;https://pinterest.com/pin/create/button/?url=&amp;amp;media={{ .Params.image }}&amp;amp;description=&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M256 597q0-108 37.5-203.5t103.5-166.5 152-123 185-78 202-26q158 0 294 66.5t221 193.5 85 287q0 96-19 188t-60 177-100 149.5-145 103-189 38.5q-68 0-135-32t-96-88q-10 39-28 112.5t-23.5 95-20.5 71-26 71-32 62.5-46 77.5-62 86.5l-14 5-9-10q-15-157-15-188 0-92 21.5-206.5t66.5-287.5 52-203q-32-65-32-169 0-83 52-156t132-73q61 0 95 40.5t34 102.5q0 66-44 191t-44 187q0 63 45 104.5t109 41.5q55 0 102-25t78.5-68 56-95 38-110.5 20-111 6.5-99.5q0-173-109.5-269.5t-285.5-96.5q-200 0-334 129.5t-134 328.5q0 44 12.5 85t27 65 27 45.5 12.5 30.5q0 28-15 73t-37 45q-2 0-17-3-51-15-90.5-56t-61-94.5-32.5-108-11-106.5z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;div class=&amp;#34;mail&amp;#34; title=&amp;#34;Share this through Email&amp;#34; onclick=&amp;#34;window.open(&amp;#39;mailto:?&amp;amp;body={{ $pageurl }}&amp;#39;);&amp;#34;&amp;gt;&amp;lt;svg viewBox=&amp;#34;0 0 1792 1792&amp;#34; xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34;&amp;gt;&amp;lt;path d=&amp;#34;M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z&amp;#34;/&amp;gt;&amp;lt;/svg&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;adding-adsense-and-custom-scripts-to-all-pages&#34;&gt;Adding AdSense and Custom Scripts to All Pages&lt;/h4&gt;
 &lt;p&gt;To add specific scripts to all pages, such as AdSense, you will need to modify &lt;code&gt;siteroot/themes/mainroad/_defaults/baseof.html&lt;/code&gt;. I added the following before the &lt;code&gt;&amp;lt;/head&amp;gt;&lt;/code&gt; of this file to populate AdSense. You could put Analytics in here as well, but it isn&amp;rsquo;t needed since mainroad theme has the option in &lt;code&gt;config.toml&lt;/code&gt;. Here are my modifications:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;baseof.html&lt;/em&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{- if not .Site.IsServer }}
-		{{ template &amp;#34;_internal/google_analytics_async.html&amp;#34; . }}
-		{{ partial &amp;#34;adsense-auto.html&amp;#34; . }}
-	{{- end }}
-&amp;lt;/head&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;siteroot/layouts/partials/adsense-auto.html&lt;/em&gt; - NEW FILE&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;script data-ad-client=&amp;#34;ca-pub-000000000000000&amp;#34; async src=&amp;#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;_Note: Make sure to use your &lt;em&gt;ca-pub-IDGOESHERE&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- if not .Site.IsServer }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		{{ template &amp;#34;_internal/google_analytics_async.html&amp;#34; . }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		{{ partial &amp;#34;adsense-auto.html&amp;#34; . }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	{{- end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/head&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;siteroot/layouts/partials/adsense-auto.html&lt;/em&gt; - NEW FILE&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;script data-ad-client=&amp;#34;ca-pub-000000000000000&amp;#34; async src=&amp;#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;_Note: Make sure to use your &lt;em&gt;ca-pub-IDGOESHERE&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;configuration-of-configtoml&#34;&gt;Configuration of config.toml&lt;/h3&gt;
 &lt;p&gt;In your siteroot you will see this file that you will need to configure. Most users will simply edit this and away they go. Everything in this file worked pretty darn well. There was a couple spots that tripped me up which I will go over now.&lt;/p&gt;
 &lt;h4 id=&#34;baseurl&#34;&gt;BaseURL&lt;/h4&gt;
@@ -144,48 +144,48 @@ text-align: center;
 &lt;p&gt;All of these options worked perfectly and I had no issues.&lt;/p&gt;
 &lt;h4 id=&#34;menu&#34;&gt;Menu&lt;/h4&gt;
 &lt;p&gt;The last problem I had was the menu at the top of my theme. I soon learned there was a syntax to the config.toml file that I missed. I simply added this to the bottom and changed the weight to sort the menu properly. Here is that code snippit:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[menu]
-
-  [[menu.main]]
-    identifier = &amp;#34;home&amp;#34;
-    name = &amp;#34;Home&amp;#34;
-    pre = &amp;#34;&amp;lt;i class=&amp;#39;fa fa-heart&amp;#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;#34;
-    url = &amp;#34;/&amp;#34;
-    weight = -110
-
-  [[menu.main]]
-    name = &amp;#34;Donate&amp;#34;
-    post = &amp;#34;&amp;#34;
-    pre = &amp;#34;&amp;lt;i class=&amp;#39;fa fa-road&amp;#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;#34;
-    url = &amp;#34;https://www.patreon.com/christitustech&amp;#34;
-    weight = -105
-
-  [[menu.main]]
-    name = &amp;#34;Remote Support&amp;#34;
-    post = &amp;#34;&amp;#34;
-    pre = &amp;#34;&amp;lt;i class=&amp;#39;fa fa-road&amp;#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;#34;
-    url = &amp;#34;https://download.teamviewer.com/download/TeamViewerQS.exe&amp;#34;
-    weight = -100
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: I added external site links and a proper home button&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[menu]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [[menu.main]]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    identifier = &amp;#34;home&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    name = &amp;#34;Home&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    pre = &amp;#34;&amp;lt;i class=&amp;#39;fa fa-heart&amp;#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    url = &amp;#34;/&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    weight = -110
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [[menu.main]]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    name = &amp;#34;Donate&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    post = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    pre = &amp;#34;&amp;lt;i class=&amp;#39;fa fa-road&amp;#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    url = &amp;#34;https://www.patreon.com/christitustech&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    weight = -105
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  [[menu.main]]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    name = &amp;#34;Remote Support&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    post = &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    pre = &amp;#34;&amp;lt;i class=&amp;#39;fa fa-road&amp;#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    url = &amp;#34;https://download.teamviewer.com/download/TeamViewerQS.exe&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    weight = -100
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: I added external site links and a proper home button&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;templates-to-optimze-my-workflow&#34;&gt;Templates to Optimze My Workflow&lt;/h3&gt;
 &lt;p&gt;This is where HUGO really shines and saves me a TON of time compared to WordPress and the like. Simply modifying the &lt;code&gt;siteroot/archetypes/default.md&lt;/code&gt; file to put all the things I normally have in a post. Here is what I use:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;default.md&lt;/em&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;---
-title: &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34;
-
-date: {{ .Date }}
-url: /{{ .Name }}/
-image: images/2020-thumbs/{{ .Name }}.jpg
-categories:
-  - Linux
-  - Windows
-  - Networking
-tags:
-  - Ubuntu
-draft: true
----
-&amp;lt;!--more--&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now everytime I run &lt;code&gt;hugo new posts/newpost.md&lt;/code&gt; it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: &amp;#34;{{ replace .Name &amp;#34;-&amp;#34; &amp;#34; &amp;#34; | title }}&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: {{ .Date }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;url: /{{ .Name }}/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;image: images/2020-thumbs/{{ .Name }}.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;categories:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - Linux
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - Windows
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - Networking
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tags:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - Ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;draft: true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;!--more--&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now everytime I run &lt;code&gt;hugo new posts/newpost.md&lt;/code&gt; it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=6JaBian3vgI&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/6JaBian3vgI/0.jpg&#34; alt=&#34;hugo guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
@@ -206,49 +206,49 @@ draft: true
 Setup Project and VM (micro)&lt;/em&gt;&lt;br&gt;
 &lt;code&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-2-install-swap&#34;&gt;Step 2: Install Swap&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo fallocate -l 1G /swapfile  
-sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576  
-sudo chmod 600 /swapfile  
-sudo mkswap /swapfile  
-sudo swapon /swapfile  
-sudo nano /etc/fstab  
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;/swapfile swap swap defaults 0 0&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo fallocate -l 1G /swapfile  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod 600 /swapfile  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mkswap /swapfile  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo swapon /swapfile  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nano /etc/fstab  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;/swapfile swap swap defaults 0 0&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/apache2.png&#34; alt=&#34;apache2&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-3-install-lamp-stack-linux-apache-mysql-and-php&#34;&gt;Step 3: Install LAMP Stack (Linux, Apache, MySQL, and PHP)&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install tasksel
-sudo tasksel install lamp-server
-sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/Internet_Line-20-512.png&#34; alt=&#34;Internet_Line-20-512&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install tasksel
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo tasksel install lamp-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/Internet_Line-20-512.png&#34; alt=&#34;Internet_Line-20-512&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-4-configure-domain&#34;&gt;Step 4: Configure Domain&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Setup DNS&lt;/strong&gt;&lt;br&gt;
 -Go to your web domain registrar and create A record pointing to your new server&lt;br&gt;
 &lt;strong&gt;Configure Apache conf for website&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;Directory /var/www/example.com&amp;gt;  
-        Require all granted  
-&amp;lt;/Directory&amp;gt;  
-&amp;lt;VirtualHost *:80&amp;gt;  
-        ServerName &amp;lt;a rel=&amp;#34;noreferrer noopener&amp;#34; target=&amp;#34;_blank&amp;#34; href=&amp;#34;http://example.com/&amp;#34;&amp;gt;example.com&amp;lt;/a&amp;gt;  
-        ServerAlias &amp;lt;a rel=&amp;#34;noreferrer noopener&amp;#34; target=&amp;#34;_blank&amp;#34; href=&amp;#34;http://www.example.com/&amp;#34;&amp;gt;www.example.com&amp;lt;/a&amp;gt;  
-        ServerAdmin webmaster@localhost  
-        DocumentRoot /var/www/example.com  
-&amp;lt;/VirtualHost&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;$ mkdir -p /var/www/example.com&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;Directory /var/www/example.com&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        Require all granted  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/Directory&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;VirtualHost *:80&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ServerName &amp;lt;a rel=&amp;#34;noreferrer noopener&amp;#34; target=&amp;#34;_blank&amp;#34; href=&amp;#34;http://example.com/&amp;#34;&amp;gt;example.com&amp;lt;/a&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ServerAlias &amp;lt;a rel=&amp;#34;noreferrer noopener&amp;#34; target=&amp;#34;_blank&amp;#34; href=&amp;#34;http://www.example.com/&amp;#34;&amp;gt;www.example.com&amp;lt;/a&amp;gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ServerAdmin webmaster@localhost  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        DocumentRoot /var/www/example.com  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/VirtualHost&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;$ mkdir -p /var/www/example.com&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;$ a2dissite 000-default.conf&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;$ a2ensite example.com.conf&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;$ systemctl reload apache2&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/san.png&#34; alt=&#34;san&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-5-prep-database-and-php&#34;&gt;Step 5: Prep Database and PHP&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Create database&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ mysql -u root  
-&amp;gt; CREATE DATABASE wordpress;  
-&amp;gt; GRANT ALL ON wordpress.* TO &amp;#39;wordpressuser&amp;#39; IDENTIFIED BY &amp;#39;Secure1234!&amp;#39;;  
-&amp;gt; quit  
-$ mysql_secure_installation
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Edit /etc/php/7.2/apache2/php.ini&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;max\_input\_time = 30  
-upload\_max\_filesize = 20M  
-post\_max\_size = 21M
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/WordPress-Logo-Download-PNG.png&#34; alt=&#34;WordPress-Logo-Download-PNG&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ mysql -u root  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; CREATE DATABASE wordpress;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; GRANT ALL ON wordpress.* TO &amp;#39;wordpressuser&amp;#39; IDENTIFIED BY &amp;#39;Secure1234!&amp;#39;;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt; quit  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ mysql_secure_installation
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Edit /etc/php/7.2/apache2/php.ini&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;max\_input\_time = 30  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;upload\_max\_filesize = 20M  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;post\_max\_size = 21M
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/03/WordPress-Logo-Download-PNG.png&#34; alt=&#34;WordPress-Logo-Download-PNG&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;step-6-install-wordpress-on-google-cloud-platform&#34;&gt;Step 6: Install WordPress on Google Cloud Platform&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://codex.wordpress.org/Installing_WordPress&#34;&gt;https://codex.wordpress.org/Installing_WordPress&lt;/a&gt;&lt;br&gt;
 &lt;code&gt;$ wget https://wordpress.org/latest.tar.gz&lt;/code&gt;&lt;br&gt;
@@ -276,353 +276,353 @@ post\_max\_size = 21M
 &lt;p&gt;Therefore, this htaccess will contain bad bot blocker, security optimizations, force https, and a variety of other optimizations. This will save you from installing about 5-10 plugins that would slow down your website.&lt;/p&gt;
 &lt;h2 id=&#34;the-htaccess-file-to-rule-them-all&#34;&gt;The .htaccess file to rule them all&lt;/h2&gt;
 &lt;h5 id=&#34;basic-wordpress-part&#34;&gt;Basic WordPress part&lt;/h5&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# BEGIN WordPress
-&amp;lt;IfModule mod_rewrite.c&amp;gt;
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-&amp;lt;/IfModule&amp;gt;
-# END WordPress
-&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;secure-the-wordpressinstall&#34;&gt;Secure the WordPress install&lt;/h5&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Allow mod_rewrite in htaccess
-Options +FollowSymLinks
-# Disable directory browsing
-Options All -Indexes
-# Block wp-includes folder and files
-&amp;lt;IfModule mod_rewrite.c&amp;gt;
-RewriteEngine On
-RewriteBase /
-RewriteRule ^wp-admin/includes/ - [F,L]
-RewriteRule !^wp-includes/ - [S=3]
-RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
-RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
-RewriteRule ^wp-includes/theme-compat/ - [F,L]
-&amp;lt;/IfModule&amp;gt;
-# Deny access to wp-config.php file
-&amp;lt;files wp-config.php&amp;gt;
-order allow,deny
-deny from all
-&amp;lt;/files&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;force-https-and-set-time-zones&#34;&gt;Force HTTPS and Set Time Zones&lt;/h5&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Force HTTPS
-RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://christitus.com/$1 [R,L]
-# Set Central Time Zone
-SetEnv TZ America/Chicago
-&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;miscellaneous-optimizations&#34;&gt;Miscellaneous Optimizations&lt;/h5&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;IfModule mod_rewrite.c&amp;gt;
-&amp;lt;IfModule mod_negotiation.c&amp;gt;
-Options -MultiViews
-&amp;lt;/IfModule&amp;gt;
-RewriteEngine On
-# Redirect Trailing Slashes If Not A Folder...
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [L,R=301]
-# Handle Front Controller...
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [L]
-# Handle Authorization Header
-RewriteCond %{HTTP:Authorization} .
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-&amp;lt;/IfModule&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;expires-header-configuration&#34;&gt;Expires Header Configuration&lt;/h5&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# BEGIN Expires
-&amp;lt;ifModule mod_expires.c&amp;gt;
-ExpiresActive On
-ExpiresDefault &amp;#34;access 2 days&amp;#34;
-ExpiresByType text/html &amp;#34;access plus 3 seconds&amp;#34;
-ExpiresByType image/gif &amp;#34;access plus 2419200 seconds&amp;#34;
-ExpiresByType image/jpeg &amp;#34;access plus 2419200 seconds&amp;#34;
-ExpiresByType image/jpg &amp;#34;access plus 2419200 seconds&amp;#34;
-ExpiresByType image/png &amp;#34;access plus 2419200 seconds&amp;#34;
-ExpiresByType text/css &amp;#34;access plus 2419200 seconds&amp;#34;
-ExpiresByType text/javascript &amp;#34;access plus 2419200 seconds&amp;#34;
-ExpiresByType application/x-javascript &amp;#34;access plus 2419200 seconds&amp;#34;
-ExpiresByType application/x-shockwave-flash &amp;#34;access 1 month&amp;#34;
-ExpiresByType application/pdf &amp;#34;access 1 month&amp;#34;
-ExpiresByType image/x-icon &amp;#34;access 1 year&amp;#34;
-&amp;lt;/ifModule&amp;gt;
-# END Expires
-&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;compression-optimization&#34;&gt;Compression Optimization&lt;/h5&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;IfModule mod_deflate.c&amp;gt;
-AddOutputFilterByType DEFLATE text/html
-AddOutputFilterByType DEFLATE text/css
-AddOutputFilterByType DEFLATE text/javascript
-AddOutputFilterByType DEFLATE text/xml
-AddOutputFilterByType DEFLATE text/plain
-AddOutputFilterByType DEFLATE image/x-icon
-AddOutputFilterByType DEFLATE image/svg+xml svg svgz
-AddOutputFilterByType DEFLATE application/rss+xml
-AddOutputFilterByType DEFLATE application/javascript
-AddOutputFilterByType DEFLATE application/x-javascript
-AddOutputFilterByType DEFLATE application/xml
-AddOutputFilterByType DEFLATE application/xhtml+xml
-AddOutputFilterByType DEFLATE application/x-font
-AddOutputFilterByType DEFLATE application/x-font-truetype
-AddOutputFilterByType DEFLATE application/x-font-ttf
-AddOutputFilterByType DEFLATE application/x-font-otf
-AddOutputFilterByType DEFLATE application/x-font-woff
-AddOutputFilterByType DEFLATE application/x-font-woff2
-AddOutputFilterByType DEFLATE application/x-font-opentype
-AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
-AddOutputFilterByType DEFLATE font/ttf
-AddOutputFilterByType DEFLATE font/otf
-AddOutputFilterByType DEFLATE font/eot
-AddOutputFilterByType DEFLATE font/woff
-AddOutputFilterByType DEFLATE font/woff2
-AddOutputFilterByType DEFLATE font/opentype
-# For Olders Browsers Which Can&amp;#39;t Handle Compression
-BrowserMatch ^Mozilla/4 gzip-only-text/html
-BrowserMatch ^Mozilla/4\.0[678] no-gzip
-BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-&amp;lt;/IfModule&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h5 id=&#34;bad-bot-and-vulnerability-blockers&#34;&gt;Bad Bot and Vulnerability blockers&lt;/h5&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Block Bad Bots &amp;amp; Scrapers
-SetEnvIfNoCase User-Agent &amp;#34;Aboundex&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;80legs&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;360Spider&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Java&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Cogentbot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Alexibot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^asterias&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^attach&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^BackDoorBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^BackWeb&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Bandit&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^BatchFTP&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Bigfoot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Black.Hole&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^BlackWidow&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^BlowFish&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^BotALot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Buddy&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^BuiltBotTough&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Bullseye&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^BunnySlippers&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Cegbfeieh&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^CheeseBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^CherryPicker&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^ChinaClaw&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Collector&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Copier&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^CopyRightCheck&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^cosmos&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Crescent&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Custo&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^AIBOT&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^DISCo&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^DIIbot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^DittoSpyder&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Download\ Demon&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Download\ Devil&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Download\ Wonder&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^dragonfly&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Drip&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^eCatch&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^EasyDL&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^ebingbong&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^EirGrabber&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^EmailCollector&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^EmailSiphon&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^EmailWolf&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^EroCrawler&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Exabot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Express\ WebPictures&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Extractor&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^EyeNetIE&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Foobot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^flunky&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^FrontPage&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Go-Ahead-Got-It&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^gotit&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^GrabNet&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Grafula&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Harvest&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^hloader&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^HMView&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^HTTrack&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^humanlinks&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^IlseBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Image\ Stripper&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Image\ Sucker&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Indy\ Library&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^InfoNaviRobot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^InfoTekies&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Intelliseek&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^InterGET&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Internet\ Ninja&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Iria&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Jakarta&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^JennyBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^JetCar&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^JOC&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^JustView&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Jyxobot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Kenjin.Spider&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Keyword.Density&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^larbin&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^LexiBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^lftp&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^libWeb/clsHTTP&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^likse&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^LinkextractorPro&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^LinkScan/8.1a.Unix&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^LNSpiderguy&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^LinkWalker&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^lwp-trivial&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^LWP::Simple&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Magnet&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Mag-Net&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^MarkWatch&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Mass\ Downloader&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Mata.Hari&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Memo&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Microsoft.URL&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Microsoft\ URL\ Control&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^MIDown\ tool&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^MIIxpc&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Mirror&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Missigua\ Locator&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Mister\ PiX&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^moget&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Mozilla/3.Mozilla/2.01&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Mozilla.*NEWT&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NAMEPROTECT&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Navroad&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NearSite&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NetAnts&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Netcraft&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NetMechanic&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NetSpider&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Net\ Vampire&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NetZIP&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NextGenSearchBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NG&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NICErsPRO&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^niki-bot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NimbleCrawler&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Ninja&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^NPbot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Octopus&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Offline\ Explorer&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Offline\ Navigator&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Openfind&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^OutfoxBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^PageGrabber&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Papa\ Foto&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^pavuk&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^pcBrowser&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^PHP\ version\ tracker&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Pockey&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^ProPowerBot/2.14&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^ProWebWalker&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^psbot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Pump&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^QueryN.Metasearch&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^RealDownload&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Reaper&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Recorder&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^ReGet&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^RepoMonkey&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^RMA&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Siphon&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^SiteSnagger&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^SlySearch&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^SmartDownload&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Snake&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Snapbot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Snoopy&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^sogou&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^SpaceBison&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^SpankBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^spanner&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Sqworm&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Stripper&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Sucker&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^SuperBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^SuperHTTP&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Surfbot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^suzuran&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Szukacz/1.4&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^tAkeOut&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Teleport&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Telesoft&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^TurnitinBot/1.5&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^The.Intraformant&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^TheNomad&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^TightTwatBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Titan&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^True_Robot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^turingos&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^TurnitinBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^URLy.Warning&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Vacuum&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^VCI&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^VoidEYE&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Web\ Image\ Collector&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Web\ Sucker&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebAuto&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebBandit&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Webclipping.com&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebCopier&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebEMailExtrac.*&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebEnhancer&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebFetch&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebGo\ IS&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Web.Image.Collector&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebLeacher&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebmasterWorldForumBot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebReaper&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebSauger&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Website\ eXtractor&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Website\ Quester&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Webster&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebStripper&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebWhacker&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WebZIP&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;Whacker&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Widow&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WISENutbot&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WWWOFFLE&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^WWW-Collector-E&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Xaldon&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Xenu&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Zeus&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;ZmEu&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;^Zyborg&amp;#34; bad_bot
-
-# Vulnerability Scanners
-SetEnvIfNoCase User-Agent &amp;#34;Acunetix&amp;#34; bad_bot
-SetEnvIfNoCase User-Agent &amp;#34;FHscan&amp;#34; bad_bot
-# Aggressive Chinese Search Engine
-#SetEnvIfNoCase User-Agent &amp;#34;Baiduspider&amp;#34; bad_bot
-# Aggressive Russian Search Engine
-# Uncomment to disable this search engine
-# SetEnvIfNoCase User-Agent &amp;#34;Yandex&amp;#34; bad_bot`
-
-&amp;lt;Limit GET POST HEAD&amp;gt;
-Order Allow,Deny
-Allow from all
-# Surveillance
-deny from 38.100.19.8/29
-deny from 38.100.21.0/24
-deny from 38.100.41.64/26
-deny from 38.105.71.0/25
-deny from 38.105.83.0/27
-deny from 38.112.21.140/30
-deny from 38.118.42.32/29
-deny from 65.213.208.128/27
-deny from 65.222.176.96/27
-deny from 65.222.185.72/29`
-
-Deny from env=bad_bot
-&amp;lt;/Limit&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;in-closing&#34;&gt;In Closing&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# BEGIN WordPress
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;IfModule mod_rewrite.c&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteEngine On
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteBase /
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule ^index\.php$ - [L]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteCond %{REQUEST_FILENAME} !-f
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteCond %{REQUEST_FILENAME} !-d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule . /index.php [L]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/IfModule&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# END WordPress
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;secure-the-wordpressinstall&#34;&gt;Secure the WordPress install&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Allow mod_rewrite in htaccess
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Options +FollowSymLinks
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Disable directory browsing
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Options All -Indexes
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Block wp-includes folder and files
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;IfModule mod_rewrite.c&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteEngine On
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteBase /
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule ^wp-admin/includes/ - [F,L]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule !^wp-includes/ - [S=3]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule ^wp-includes/[^/]+\.php$ - [F,L]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F,L]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule ^wp-includes/theme-compat/ - [F,L]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/IfModule&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Deny access to wp-config.php file
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;files wp-config.php&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;order allow,deny
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/files&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;force-https-and-set-time-zones&#34;&gt;Force HTTPS and Set Time Zones&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Force HTTPS
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteEngine On
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteCond %{SERVER_PORT} 80
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule ^(.*)$ https://christitus.com/$1 [R,L]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Set Central Time Zone
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnv TZ America/Chicago
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;miscellaneous-optimizations&#34;&gt;Miscellaneous Optimizations&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;IfModule mod_rewrite.c&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;IfModule mod_negotiation.c&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Options -MultiViews
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/IfModule&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteEngine On
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Redirect Trailing Slashes If Not A Folder...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteCond %{REQUEST_FILENAME} !-d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule ^(.*)/$ /$1 [L,R=301]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Handle Front Controller...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteCond %{REQUEST_FILENAME} !-d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteCond %{REQUEST_FILENAME} !-f
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule ^ index.php [L]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Handle Authorization Header
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteCond %{HTTP:Authorization} .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/IfModule&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;expires-header-configuration&#34;&gt;Expires Header Configuration&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# BEGIN Expires
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;ifModule mod_expires.c&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresActive On
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresDefault &amp;#34;access 2 days&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType text/html &amp;#34;access plus 3 seconds&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType image/gif &amp;#34;access plus 2419200 seconds&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType image/jpeg &amp;#34;access plus 2419200 seconds&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType image/jpg &amp;#34;access plus 2419200 seconds&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType image/png &amp;#34;access plus 2419200 seconds&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType text/css &amp;#34;access plus 2419200 seconds&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType text/javascript &amp;#34;access plus 2419200 seconds&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType application/x-javascript &amp;#34;access plus 2419200 seconds&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType application/x-shockwave-flash &amp;#34;access 1 month&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType application/pdf &amp;#34;access 1 month&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExpiresByType image/x-icon &amp;#34;access 1 year&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/ifModule&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# END Expires
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;compression-optimization&#34;&gt;Compression Optimization&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;IfModule mod_deflate.c&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE text/html
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE text/css
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE text/javascript
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE text/xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE text/plain
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE image/x-icon
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE image/svg+xml svg svgz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/rss+xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/javascript
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/x-javascript
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/xhtml+xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/x-font
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/x-font-truetype
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/x-font-ttf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/x-font-otf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/x-font-woff
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/x-font-woff2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/x-font-opentype
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE font/ttf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE font/otf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE font/eot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE font/woff
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE font/woff2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddOutputFilterByType DEFLATE font/opentype
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# For Olders Browsers Which Can&amp;#39;t Handle Compression
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;BrowserMatch ^Mozilla/4 gzip-only-text/html
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;BrowserMatch ^Mozilla/4\.0[678] no-gzip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/IfModule&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;bad-bot-and-vulnerability-blockers&#34;&gt;Bad Bot and Vulnerability blockers&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Block Bad Bots &amp;amp; Scrapers
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Aboundex&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;80legs&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;360Spider&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Java&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Cogentbot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Alexibot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^asterias&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^attach&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^BackDoorBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^BackWeb&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Bandit&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^BatchFTP&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Bigfoot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Black.Hole&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^BlackWidow&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^BlowFish&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^BotALot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Buddy&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^BuiltBotTough&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Bullseye&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^BunnySlippers&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Cegbfeieh&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^CheeseBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^CherryPicker&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^ChinaClaw&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Collector&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Copier&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^CopyRightCheck&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^cosmos&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Crescent&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Custo&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^AIBOT&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^DISCo&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^DIIbot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^DittoSpyder&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Download\ Demon&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Download\ Devil&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Download\ Wonder&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^dragonfly&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Drip&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^eCatch&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^EasyDL&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^ebingbong&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^EirGrabber&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^EmailCollector&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^EmailSiphon&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^EmailWolf&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^EroCrawler&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Exabot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Express\ WebPictures&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Extractor&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^EyeNetIE&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Foobot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^flunky&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^FrontPage&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Go-Ahead-Got-It&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^gotit&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^GrabNet&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Grafula&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Harvest&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^hloader&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^HMView&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^HTTrack&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^humanlinks&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^IlseBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Image\ Stripper&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Image\ Sucker&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Indy\ Library&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^InfoNaviRobot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^InfoTekies&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Intelliseek&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^InterGET&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Internet\ Ninja&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Iria&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Jakarta&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^JennyBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^JetCar&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^JOC&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^JustView&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Jyxobot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Kenjin.Spider&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Keyword.Density&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^larbin&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^LexiBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^lftp&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^libWeb/clsHTTP&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^likse&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^LinkextractorPro&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^LinkScan/8.1a.Unix&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^LNSpiderguy&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^LinkWalker&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^lwp-trivial&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^LWP::Simple&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Magnet&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Mag-Net&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^MarkWatch&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Mass\ Downloader&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Mata.Hari&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Memo&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Microsoft.URL&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Microsoft\ URL\ Control&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^MIDown\ tool&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^MIIxpc&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Mirror&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Missigua\ Locator&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Mister\ PiX&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^moget&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Mozilla/3.Mozilla/2.01&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Mozilla.*NEWT&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NAMEPROTECT&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Navroad&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NearSite&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NetAnts&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Netcraft&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NetMechanic&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NetSpider&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Net\ Vampire&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NetZIP&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NextGenSearchBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NG&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NICErsPRO&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^niki-bot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NimbleCrawler&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Ninja&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^NPbot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Octopus&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Offline\ Explorer&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Offline\ Navigator&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Openfind&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^OutfoxBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^PageGrabber&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Papa\ Foto&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^pavuk&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^pcBrowser&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^PHP\ version\ tracker&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Pockey&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^ProPowerBot/2.14&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^ProWebWalker&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^psbot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Pump&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^QueryN.Metasearch&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^RealDownload&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Reaper&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Recorder&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^ReGet&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^RepoMonkey&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^RMA&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Siphon&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^SiteSnagger&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^SlySearch&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^SmartDownload&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Snake&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Snapbot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Snoopy&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^sogou&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^SpaceBison&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^SpankBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^spanner&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Sqworm&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Stripper&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Sucker&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^SuperBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^SuperHTTP&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Surfbot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^suzuran&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Szukacz/1.4&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^tAkeOut&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Teleport&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Telesoft&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^TurnitinBot/1.5&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^The.Intraformant&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^TheNomad&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^TightTwatBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Titan&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^True_Robot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^turingos&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^TurnitinBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^URLy.Warning&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Vacuum&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^VCI&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^VoidEYE&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Web\ Image\ Collector&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Web\ Sucker&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebAuto&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebBandit&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Webclipping.com&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebCopier&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebEMailExtrac.*&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebEnhancer&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebFetch&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebGo\ IS&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Web.Image.Collector&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebLeacher&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebmasterWorldForumBot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebReaper&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebSauger&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Website\ eXtractor&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Website\ Quester&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Webster&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebStripper&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebWhacker&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WebZIP&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Whacker&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Widow&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WISENutbot&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WWWOFFLE&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^WWW-Collector-E&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Xaldon&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Xenu&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Zeus&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;ZmEu&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;^Zyborg&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Vulnerability Scanners
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;Acunetix&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;SetEnvIfNoCase User-Agent &amp;#34;FHscan&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Aggressive Chinese Search Engine
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#SetEnvIfNoCase User-Agent &amp;#34;Baiduspider&amp;#34; bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Aggressive Russian Search Engine
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Uncomment to disable this search engine
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# SetEnvIfNoCase User-Agent &amp;#34;Yandex&amp;#34; bad_bot`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;Limit GET POST HEAD&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Order Allow,Deny
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Allow from all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Surveillance
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 38.100.19.8/29
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 38.100.21.0/24
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 38.100.41.64/26
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 38.105.71.0/25
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 38.105.83.0/27
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 38.112.21.140/30
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 38.118.42.32/29
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 65.213.208.128/27
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 65.222.176.96/27
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;deny from 65.222.185.72/29`
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Deny from env=bad_bot
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/Limit&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;in-closing&#34;&gt;In Closing&lt;/h2&gt;
 &lt;p&gt;I recommend and personally use all the above settings, however, I broke up each section of my htaccess so you can drop ones you don’t like or want. Pay close attention to the section Force HTTPS as this will force all http traffic to https and you must have a valid SSL Certificate.&lt;/p&gt;</description>
     </item>
     

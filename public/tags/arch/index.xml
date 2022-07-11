@@ -96,17 +96,17 @@ They follow the same syntax as pacman except you run them at a user level and th
       <guid>https://christitus.com/setup-qemu-in-archlinux/</guid>
       <description>&lt;h2 id=&#34;setting-up-virtual-machines-in-qemu-on-arch-linux&#34;&gt;Setting up Virtual Machines in QEMU on Arch Linux&lt;/h2&gt;
 &lt;p&gt;QEMU/KVM Dependancies to install:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;Note: Make sure you update your system with a $ sudo pacman -Syu BEFORE you install the dependencies&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: Make sure you update your system with a $ sudo pacman -Syu BEFORE you install the dependencies&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;make-libvirt-group-for-your-user&#34;&gt;Make Libvirt Group for your user&lt;/h2&gt;
 &lt;p&gt;Edit &lt;code&gt;/etc/libvirt/libvirtd.conf&lt;/code&gt;
 (Change the following Lines)&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;unix_sock_group = &amp;#34;libvirt&amp;#34;
-unix_sock_rw_perms = &amp;#34;0770&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then add your user and create group:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo usermod -a -G libvirt $(whoami)
-newgrp libvirt
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;reboot-and-launch-virt-manager&#34;&gt;Reboot and launch virt-manager!&lt;/h2&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unix_sock_group = &amp;#34;libvirt&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unix_sock_rw_perms = &amp;#34;0770&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then add your user and create group:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -a -G libvirt $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;newgrp libvirt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;reboot-and-launch-virt-manager&#34;&gt;Reboot and launch virt-manager!&lt;/h2&gt;</description>
     </item>
     
   </channel>

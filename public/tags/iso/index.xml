@@ -28,8 +28,8 @@
 &lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;install-drivers&#34;&gt;Install Drivers&lt;/h3&gt;
 &lt;p&gt;Download and extract your drivers with the following Powershell command:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;DISM.exe /Online /Export-Driver /Destination:%HOMEDRIVE%%HOMEPATH%\Downloads\Drivers
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can install ANY inf files to the below directories. &lt;em&gt;EXE and Setup files DO NOT WORK!&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DISM.exe /Online /Export-Driver /Destination:%HOMEDRIVE%%HOMEPATH%\Downloads\Drivers
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can install ANY inf files to the below directories. &lt;em&gt;EXE and Setup files DO NOT WORK!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;If you want to install EVERY DRIVER IN EXISTENCE&amp;hellip; download the offline files using &lt;a href=&#34;https://sdi-tool.org/&#34;&gt;https://sdi-tool.org/&lt;/a&gt; and go into the drivers directory and extract all of the 7z files. This will be time intensive and require about 60 GB or more for the install media&lt;/p&gt;
 &lt;p&gt;Put the inf and driver x64 files here: &lt;code&gt;ToolKit_Directory\Drivers\Install\w10\x64&lt;/code&gt;&lt;br&gt;
 Put the inf and driver x86 files here: &lt;code&gt;ToolKit_Directory\Drivers\Install\w10\x86&lt;/code&gt; &lt;em&gt;Note: Most people don&amp;rsquo;t do 32-bit installs and can skip this&lt;/em&gt;&lt;/p&gt;

@@ -26,8 +26,8 @@
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/01-Robocopy/start-menu.png&#34; alt=&#34;start-menu&#34;&gt;&lt;/p&gt;
 &lt;p&gt;From this interface you can now run Robocopy.&lt;/p&gt;
 &lt;p&gt;Basic Syntax:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;C:\&amp;gt; robocopy &amp;#34;Source Directory&amp;#34; &amp;#34;Destination Directory&amp;#34; /e /w:5 /r:2 /COPY:DATSOU /DCOPY:DAT /MT
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Full syntax can be shown with &lt;code&gt;robocopy /?&lt;/code&gt; but be careful with /MIR and move style copies as this can overwrite and erase existing files in the destination directory.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C:\&amp;gt; robocopy &amp;#34;Source Directory&amp;#34; &amp;#34;Destination Directory&amp;#34; /e /w:5 /r:2 /COPY:DATSOU /DCOPY:DAT /MT
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Full syntax can be shown with &lt;code&gt;robocopy /?&lt;/code&gt; but be careful with /MIR and move style copies as this can overwrite and erase existing files in the destination directory.&lt;/p&gt;
 &lt;p&gt;Notable Options with Robocopy&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;/e - Copy all folders including empty ones&lt;/li&gt;

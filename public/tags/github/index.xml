@@ -16,27 +16,27 @@
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/ssh.png&#34; alt=&#34;ssh&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;creating-ssh-keys&#34;&gt;Creating SSH Keys&lt;/h2&gt;
 &lt;p&gt;Type this in to create GitHub Keys for your computer&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh-keygen -t rsa -b 4096 -C &amp;#34;your_email@example.com&amp;#34;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Notes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa -b 4096 -C &amp;#34;your_email@example.com&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Notes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;I typically save this in ~/.ssh/github&lt;/li&gt;
 &lt;li&gt;You don&amp;rsquo;t have to put a password if you aren&amp;rsquo;t worried about security&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;adding-the-new-key-to-github-and-local-ssh-agent&#34;&gt;Adding the New Key to GitHub and Local SSH-Agent&lt;/h2&gt;
 &lt;p&gt;Type the following on the local machine to add your key to the agent.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;eval &amp;#34;$(ssh-agent -s)&amp;#34;
-ssh-add ~/.ssh/github
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Copy the contents of &lt;code&gt;~/.ssh/github.pub&lt;/code&gt; to the new key field in GitHub. If you have xclip installed type this &lt;code&gt;cat ~/.ssh/github.pub | xclip -sel clip&lt;/code&gt; to copy the contents.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;eval &amp;#34;$(ssh-agent -s)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-add ~/.ssh/github
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Copy the contents of &lt;code&gt;~/.ssh/github.pub&lt;/code&gt; to the new key field in GitHub. If you have xclip installed type this &lt;code&gt;cat ~/.ssh/github.pub | xclip -sel clip&lt;/code&gt; to copy the contents.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/github-ssh.jpg&#34; alt=&#34;github-pub&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;test-github-ssh-access&#34;&gt;Test GitHub SSH Access&lt;/h2&gt;
 &lt;p&gt;Type the following to verify you have completed the setup properly&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;ssh -T git@github.com
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ssh-github-clone-syntax-and-updating-repositories&#34;&gt;SSH GitHub Clone Syntax and Updating Repositories&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -T git@github.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;ssh-github-clone-syntax-and-updating-repositories&#34;&gt;SSH GitHub Clone Syntax and Updating Repositories&lt;/h2&gt;
 &lt;p&gt;Here is how to clone new repositories instead of using https://&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone git@github.com:USERNAME/Repo.git
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Update existing repositories to use SSH instead of https&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git remote set-url origin git@github.com:USERNAME/Repo.git
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone git@github.com:USERNAME/Repo.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Update existing repositories to use SSH instead of https&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:USERNAME/Repo.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This is the best way to clone and push updates to repositories if you have 2-Factor enabled on your GitHub account.&lt;/p&gt;</description>
     </item>
     
