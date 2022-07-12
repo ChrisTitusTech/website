@@ -5,7 +5,247 @@
     <link>https://christitus.com/posts/</link>
     <description>Recent content in Posts on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 28 Jun 2022 17:12:25 -0500</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jul 2022 11:36:33 -0500</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why I Hate Windows Defender</title>
+      <link>https://christitus.com/bad-windows-defender/</link>
+      <pubDate>Mon, 11 Jul 2022 11:36:33 -0500</pubDate>
+      
+      <guid>https://christitus.com/bad-windows-defender/</guid>
+      <description>&lt;p&gt;Windows Defender is often seen as a good antivirus, but I want to inform you of a cost noone sees but developers because of Defender.&lt;/p&gt;
+&lt;h2 id=&#34;is-windows-defender-good&#34;&gt;Is Windows Defender Good?&lt;/h2&gt;
+&lt;p&gt;Yes. It does detect a ton of viruses and have good detection rates as long as you are online, since it relies heavily on its online connection. However, there is a dark side to having Microsoft control this entire part of your PC that we need to go over. The false positives are excessive and I believe it is by design.&lt;/p&gt;
+&lt;h2 id=&#34;the-mafia-for-software-developers&#34;&gt;The Mafia for Software Developers&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022-thumbs/bad-windows-defender.jpg&#34; alt=&#34;bad-defender&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Smartscreen is powered by Windows Defender and you have to buy a $300 A YEAR code signing license with Extended Validation to bypass it. The EV cert is close to the mafia extorting business users for &amp;ldquo;protection&amp;rdquo;. If you don&amp;rsquo;t use Defender, you don&amp;rsquo;t need to worry about smartscreen. Using standard code signing with an external anti-virus will work close to the same as Defender is disabled when you use a 3rd party av.&lt;/p&gt;
+&lt;h3 id=&#34;code-signing-cost&#34;&gt;Code Signing Cost&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cost for 1 year - prices as of 7/11/2022&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;table
+  
+  class=&#39;table &#39;
+
+  
+  title=&#39;&#39;
+  aria-label=&#39;&#39;
+&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+          &lt;th
+            title=&#39;Site&#39;
+            aria-label=&#39;Site&#39;
+            data-th_x=&#39;0&#39;
+            data-id=&#39;0&#39;
+          &gt;Site&lt;/th&gt;
+          &lt;th
+            title=&#39;Extended Validation&#39;
+            aria-label=&#39;Extended Validation&#39;
+            data-th_x=&#39;1&#39;
+            data-id=&#39;1&#39;
+          &gt;Extended Validation&lt;/th&gt;
+          &lt;th
+            title=&#39;Regular Validation&#39;
+            aria-label=&#39;Regular Validation&#39;
+            data-th_x=&#39;2&#39;
+            data-id=&#39;2&#39;
+          &gt;Regular Validation&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;&lt;tbody&gt;
+      
+          &lt;tr
+            
+            data-tr_y=&#39;0&#39;
+          &gt;&lt;td
+                
+                title=&#39;Site&#39;
+                aria-label=&#39;Site&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Comodo&lt;/td&gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;$319&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;2&#39;
+              &gt;$85&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr
+            
+            data-tr_y=&#39;1&#39;
+          &gt;&lt;td
+                
+                title=&#39;Site&#39;
+                aria-label=&#39;Site&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Instant SSL&lt;/td&gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;$299&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;2&#39;
+              &gt;$166&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr
+            
+            data-tr_y=&#39;2&#39;
+          &gt;&lt;td
+                
+                title=&#39;Site&#39;
+                aria-label=&#39;Site&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Sectigo&lt;/td&gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;$399&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;2&#39;
+              &gt;$179&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr
+            
+            data-tr_y=&#39;3&#39;
+          &gt;&lt;td
+                
+                title=&#39;Site&#39;
+                aria-label=&#39;Site&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;DigiCert&lt;/td&gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;$566&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;2&#39;
+              &gt;$404&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;The big question is &amp;ldquo;Why does extended validation cost so much more?&amp;rdquo; and it is simply gatekeeping at its best. Many SSL companies will tell you it is because the &amp;ldquo;vetting process is harder&amp;rdquo;, but I smell bullshit on that. It costs usually double and sometimes more. The only difference is it requires a hardware cryptographic key and Microsoft smartscreen immediately gives it a pass on all scans.&lt;/p&gt;
+
+
+
+&lt;table
+  
+  class=&#39;table &#39;
+
+  
+  title=&#39;&#39;
+  aria-label=&#39;&#39;
+&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+          &lt;th
+            title=&#39;Extended Validation&#39;
+            aria-label=&#39;Extended Validation&#39;
+            data-th_x=&#39;0&#39;
+            data-id=&#39;0&#39;
+          &gt;Extended Validation&lt;/th&gt;
+          &lt;th
+            title=&#39;Regular Validation&#39;
+            aria-label=&#39;Regular Validation&#39;
+            data-th_x=&#39;1&#39;
+            data-id=&#39;1&#39;
+          &gt;Regular Validation&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;&lt;tbody&gt;
+      
+          &lt;tr
+            
+            data-tr_y=&#39;0&#39;
+          &gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Hardware Key&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;Software Key&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr
+            
+            data-tr_y=&#39;1&#39;
+          &gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Smartscreen Bypassed&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;Smartscreen Error&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;I can&amp;rsquo;t find anything in regards to who is really profiting the most of the Extended Validation code signing and if Microsoft is getting a cut since it is basically the only reason to have one. However, the entire situation is a bit suspect and any development person I know loath the process that Extended Validation is.&lt;/p&gt;
+&lt;h2 id=&#34;free-anti-virus-alternatives&#34;&gt;Free Anti-Virus Alternatives&lt;/h2&gt;
+&lt;p&gt;Is there something better than windows defender that is free? I&amp;rsquo;d say &lt;a href=&#34;https://www.bitdefender.com/solutions/free.html&#34;&gt;BitDefender Free&lt;/a&gt; offers superior protection.&lt;/p&gt;
+&lt;p&gt;This is a drastic shift in recommendation for me, because I used to say &amp;ldquo;All Free AV is worthless&amp;rdquo;, but now I see this from a different angle. Don&amp;rsquo;t get me wrong most FREE antivirus is glorified advertising for a paid product that essentially does the same thing. After looking at all the free offerings, I&amp;rsquo;d say BitDefender Free is better than using Defender.&lt;/p&gt;
+&lt;h2 id=&#34;paid-anti-virus&#34;&gt;Paid Anti-Virus&lt;/h2&gt;
+&lt;p&gt;For those that want good detection rates, better privacy, and low overhead. The antivirus I have recommend has stayed the same for years. I recommend &lt;a href=&#34;https://christitus.com/antivirus&#34;&gt;ESET&lt;/a&gt; for this because it is a proven antivirus that isn&amp;rsquo;t as intrusive as the others.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=9P6r7DLS77Q&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/9P6r7DLS77Q/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Choosing the Right Linux Distro</title>
       <link>https://christitus.com/choose-linux-distro/</link>
@@ -2376,7 +2616,7 @@ You will download this exe and rename it to your needs. It is configured by the 
 &lt;li&gt;new Github &lt;a href=&#34;https://github.com/ChrisTitusTech/winutil&#34;&gt;https://github.com/ChrisTitusTech/winutil&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;New command!&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iwr -useb https://christitus/win | iex
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iwr -useb https://christitus.com/win | iex
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;july-2021-update&#34;&gt;July 2021 Update&lt;/h2&gt;
 &lt;p&gt;If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: &lt;a href=&#34;https://github.com/ChrisTitusTech/win10script&#34;&gt;https://github.com/ChrisTitusTech/win10script&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below!&lt;/p&gt;

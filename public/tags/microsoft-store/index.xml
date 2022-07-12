@@ -23,7 +23,7 @@
 &lt;li&gt;new Github &lt;a href=&#34;https://github.com/ChrisTitusTech/winutil&#34;&gt;https://github.com/ChrisTitusTech/winutil&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;New command!&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iwr -useb https://christitus/win | iex
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iwr -useb https://christitus.com/win | iex
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;july-2021-update&#34;&gt;July 2021 Update&lt;/h2&gt;
 &lt;p&gt;If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: &lt;a href=&#34;https://github.com/ChrisTitusTech/win10script&#34;&gt;https://github.com/ChrisTitusTech/win10script&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below!&lt;/p&gt;

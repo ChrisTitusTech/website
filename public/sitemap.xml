@@ -2,16 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://christitus.com/categories/</loc>
+    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/</loc>
+    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/posts/</loc>
+    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/bad-windows-defender/</loc>
+    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/windows/</loc>
+    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/windows-defender/</loc>
+    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+  </url><url>
     <loc>https://christitus.com/tags/arch/</loc>
     <lastmod>2022-06-28T17:12:25-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-06-28T17:12:25-05:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/choose-linux-distro/</loc>
-    <lastmod>2022-06-28T17:12:25-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/</loc>
     <lastmod>2022-06-28T17:12:25-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/debian/</loc>
@@ -21,12 +36,6 @@
     <lastmod>2022-06-28T17:12:25-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/categories/linux/</loc>
-    <lastmod>2022-06-28T17:12:25-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-06-28T17:12:25-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/</loc>
     <lastmod>2022-06-28T17:12:25-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/ubuntu/</loc>
@@ -39,9 +48,6 @@
     <lastmod>2022-06-22T16:44:33-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/antivirus-worthless/</loc>
-    <lastmod>2022-06-22T16:44:33-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/windows/</loc>
     <lastmod>2022-06-22T16:44:33-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/future-internet/</loc>

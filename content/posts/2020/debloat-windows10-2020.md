@@ -23,7 +23,7 @@ This goes over debloating and slimming down Windows 10 and 11 so you get maximum
 
 New command! 
 ```
-iwr -useb https://christitus/win | iex
+iwr -useb https://christitus.com/win | iex
 ```
 
 ## July 2021 Update
