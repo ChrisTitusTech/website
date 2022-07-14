@@ -98,38 +98,7 @@ Bittrex Referral Code: 4KR-KYJ-BQG
 
 #### Yield Companies
 
-![celsius](/images/crypto/celsius.jpg)
-
-For any assets held here you gain interest or "Yield" much like an APY % from a traditional saving account. However, they gain at much higher rates, from 2% to 20%. There are three large companies in this space, crypto.com, Blockfi, and Celsius.network. These companies are less proven, but do give you return for holding your crypto with them. 
-
-BlockFi:
-- More Reputable
-- Direct Checking Account Link
-- Web and Mobile App
-- Monthly Interest Payouts
-
-Celsius
-- Only Crypto can be stored here and very few stable coins in Texas
-- Only Mobile app
-- Weekly Interest Payouts
-
-BlockFi Referral Link: <https://christitus.com/blockfi> *My personal recommendation*
-Celsius No Longer Recommended (No Web App and Poor Customer Service)
-
-## Decentralized Finance Projects
-
-![synthetix](/images/crypto/synthetix.jpg)
-
-This is where all the recent activity has been in the crypto space. I'm a bit skeptical about the longevity of many of these projects. I highly recommend not investing much money in this sector as I think it is a bubble that will pop. That said, there are some bright spots here that could definitely change the world we live in. While the practical application of these aren't quite as refined as I like it is still worth paying attention to. The concepts here are revolutionary, but I expect some bumps in the road along the way.  
-
-Notable Projects:
-- DAI and Compound - Give small yields by holding the coins. Typically between 2-4% returns and these can be done in your wallet like Exodus or with a service like Coinbase.
-- Synthetix - This wraps assets like stocks, gold, and other real world assets in a token. It has a lot of promise, but so far it is very limited. 
-- Uniswap - This is one of the first really successful decentralized exchanges. If you provide Liquidity to its pool you earn a % of the fees charged on the platform.
-- Tokensets - Wrapped assets but with a twist. Both Human and Robot ran sets rebalance a portfolio based on market conditions. Still in its early days, but interesting. 
-- Yearn.finance - Blackbox setup with massive yields upwards of 30%... seems too good to be true and I don't trust it. 
-
-Almost all these DeFi projects are causing massive amount of Ethereum transactions which in turn is causing high transaction fees. Solo yield farming requires you to be making $1000+ transactions so your profits don't get eaten by fees. 
+*2022 Update:* Do NOT use them. Celsius, Voyager Digital, and many others have proven that this method is not only extremely risky, but possibly fraudulent. Be skeptical on any companies that is promising returns by holding assets with them in crypto.
 
 ## Mining Crypto Using a Graphics Card
 
