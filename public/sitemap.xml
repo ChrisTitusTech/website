@@ -3,21 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+    <lastmod>2022-07-19T17:32:28-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
-    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+    <lastmod>2022-07-19T17:32:28-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/debian/</loc>
+    <lastmod>2022-07-19T17:32:28-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/linux/</loc>
+    <lastmod>2022-07-19T17:32:28-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+    <lastmod>2022-07-19T17:32:28-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/stop-using-apt/</loc>
+    <lastmod>2022-07-19T17:32:28-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/</loc>
-    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+    <lastmod>2022-07-19T17:32:28-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/bad-windows-defender/</loc>
-    <lastmod>2022-07-11T11:36:33-05:00</lastmod>
+    <loc>https://christitus.com/tags/ubuntu/</loc>
+    <lastmod>2022-07-19T17:32:28-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/security/</loc>
+    <lastmod>2022-07-15T13:14:39-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/categories/windows/</loc>
+    <lastmod>2022-07-15T13:14:39-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/not-safe-windows/</loc>
+    <lastmod>2022-07-15T13:14:39-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/bad-windows-defender/</loc>
     <lastmod>2022-07-11T11:36:33-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/windows-defender/</loc>
@@ -29,17 +47,8 @@
     <loc>https://christitus.com/choose-linux-distro/</loc>
     <lastmod>2022-06-28T17:12:25-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/tags/debian/</loc>
-    <lastmod>2022-06-28T17:12:25-05:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/tags/fedora/</loc>
     <lastmod>2022-06-28T17:12:25-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/linux/</loc>
-    <lastmod>2022-06-28T17:12:25-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/ubuntu/</loc>
-    <lastmod>2022-06-27T15:52:45-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/ubuntu-decline/</loc>
     <lastmod>2022-06-27T15:52:45-05:00</lastmod>
@@ -207,9 +216,6 @@
     <lastmod>2020-08-21T14:45:41-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/secure-linux/</loc>
-    <lastmod>2020-08-18T13:02:25-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/security/</loc>
     <lastmod>2020-08-18T13:02:25-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/virus/</loc>

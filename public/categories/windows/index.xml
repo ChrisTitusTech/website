@@ -5,7 +5,38 @@
     <link>https://christitus.com/categories/windows/</link>
     <description>Recent content in Windows on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 11 Jul 2022 11:36:33 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jul 2022 13:14:39 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You are NOT safe in Windows</title>
+      <link>https://christitus.com/not-safe-windows/</link>
+      <pubDate>Fri, 15 Jul 2022 13:14:39 -0500</pubDate>
+      
+      <guid>https://christitus.com/not-safe-windows/</guid>
+      <description>&lt;p&gt;Thank you to all the Microsoft Windows users from all the Technicians that work on this operating system. Without your continued use, we wouldn&amp;rsquo;t have jobs.&lt;/p&gt;
+&lt;h2 id=&#34;why-is-windows-not-secure&#34;&gt;Why is Windows NOT secure?&lt;/h2&gt;
+&lt;p&gt;Legacy systems and a fundamental flaw in system design. It is far to easy to get system level access through a variety of methods. Let&amp;rsquo;s go over the systems that you can use to exploit a traditional Windows user, so you know what NOT to do.&lt;/p&gt;
+&lt;h3 id=&#34;powershell&#34;&gt;PowerShell&lt;/h3&gt;
+&lt;p&gt;Powershell is one of the most powerful tools in Windows, but it is at a cost. While it makes it incredibly easy to administrator and make modifications to massive amounts of systems quickly, it can be abused. Pretty much anything you want to do can be accomplished with Powershell. This is most evident in business systems where it is required to administer systems and even Office 365 in the cloud.&lt;/p&gt;
+&lt;h3 id=&#34;task-scheduler&#34;&gt;Task Scheduler&lt;/h3&gt;
+&lt;p&gt;So many processes end up running at a system level in Task scheduler and something the core system relied heavily on. This can not be disabled and is always one of the biggest Achilles heels for Windows. I am often disabling tasks to debloat systems such as auto-submission tools Microsoft uses like Telemetry and even Defender bug reports.&lt;/p&gt;
+&lt;h3 id=&#34;visual-basic---vbs-scripts&#34;&gt;Visual Basic - .vbs scripts&lt;/h3&gt;
+&lt;p&gt;VBS scripts often provide a level of scripting that isn&amp;rsquo;t possible with many other methods. While this is good in business, it is very bad for the end user. I designed a vbs script to migrate on-premises outlook mailboxes to O365 mailboxes so a thousand users wouldn&amp;rsquo;t have to redownload all their emails. However this can easily be abused for those malicious actors out there. Be cautious of this loophole and any vbs script that runs on your system.&lt;/p&gt;
+&lt;h3 id=&#34;group-policy&#34;&gt;Group Policy&lt;/h3&gt;
+&lt;p&gt;Again this is used in many pro+ systems and even if you aren&amp;rsquo;t part of a domain can be abused by using &lt;code&gt;gpedit.msc&lt;/code&gt; to create a local policy that can run scripts, lock user features, and much more. Home users typically don&amp;rsquo;t have this functionally unless a hack is done.&lt;/p&gt;
+&lt;p&gt;If you want Group Polcy as a home user type the following in an elevated to Administrator prompt:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dism /online /norestart /add-package:&amp;#34;%SystemRoot%servicingPackages{{PackageFileName}}**
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;registry&#34;&gt;Registry&lt;/h3&gt;
+&lt;p&gt;So many things can be accomplished with the registry, such as auto login, and various hooks that can happen by just launching your web browser or windows explorer. Registry is basically the brain of windows and can be exploited easily to do pretty much anything.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-protect-yourself&#34;&gt;How to protect yourself&lt;/h2&gt;
+&lt;p&gt;I highly recommend hardening your system with just basic tools that do NOT run in the background, but disable many of the tools above. These tools are wonderful in the right hands, but world ending the wrong ones.&lt;/p&gt;
+&lt;p&gt;A simple free hardening tool on Github will disable many of these attack surfaces and do FAR more than any antivirus or internet security suite can, while also not adding ANY overhead or extra processes to your system.&lt;/p&gt;
+&lt;p&gt;HardenTools to disable services: &lt;a href=&#34;https://github.com/securitywithoutborders/hardentools&#34;&gt;https://github.com/securitywithoutborders/hardentools&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/hardentools.png&#34; alt=&#34;harden&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Bh8HqxxI4pc&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Bh8HqxxI4pc/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Why I Hate Windows Defender</title>
       <link>https://christitus.com/bad-windows-defender/</link>

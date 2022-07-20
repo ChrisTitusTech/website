@@ -57,7 +57,7 @@ sudo nala history undo 1
 
 ## Convert APT to Nala
 
-Add the following to your `~/.bashrc` file:
+Add the following to your `~/.bashrc` AND `/root/.bashrc` file:
 ```
 alias apt='nala'
 ```
@@ -68,7 +68,6 @@ From here you can install programs with apt or nala command and it will always w
 This is everything I want in a package manager and more. My hat is off to the team that came up with all these drastic improvements and it has made my life so much easier on Debian based systems!
 
 ## Walkthrough Video
-_Release Date: July 22, 2022_
 
 [![youtube-video](https://img.youtube.com/vi/oroSkR4Nn_w/0.jpg)](https://www.youtube.com/watch?v=oroSkR4Nn_w)
 

@@ -5,7 +5,46 @@
     <link>https://christitus.com/categories/linux/</link>
     <description>Recent content in Linux on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 28 Jun 2022 17:12:25 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jul 2022 17:32:28 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stop Using APT</title>
+      <link>https://christitus.com/stop-using-apt/</link>
+      <pubDate>Tue, 19 Jul 2022 17:32:28 -0500</pubDate>
+      
+      <guid>https://christitus.com/stop-using-apt/</guid>
+      <description>&lt;p&gt;APT is slow&amp;hellip; single downloading and generally uses slow mirrors as it doesn&amp;rsquo;t optimize them out of the box. It also doesn&amp;rsquo;t have a history so rolling back updates can really suck.&lt;/p&gt;
+&lt;p&gt;Welp, all that is now fixed with &lt;a href=&#34;https://gitlab.com/volian/nala&#34;&gt;Nala&lt;/a&gt; and it is absolutely wonderful. Not only does it fix all that listed above but it makes the updates look beautiful.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/nala/nala.png&#34; alt=&#34;nala-image&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;Add Repository&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;deb http://deb.volian.org/volian/ scar main&amp;#34; | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg &amp;gt; /dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install Nala on any Debian Sid or Ubuntu 22+ with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &amp;amp;&amp;amp; sudo apt install nala
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install on Debian Stable or Ubuntu 21 and below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &amp;amp;&amp;amp; sudo apt install nala-legacy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;update-mirrors&#34;&gt;Update Mirrors&lt;/h2&gt;
+&lt;p&gt;This will drastically speed up your downloads&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nala fetch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Select the mirrors you want from the list. Typically you will want to select three. Here is an example:
+&lt;img src=&#34;https://christitus.com/images/2022/nala/mirror.png&#34; alt=&#34;nala-mirror&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;view-update-history&#34;&gt;View Update History&lt;/h2&gt;
+&lt;p&gt;Nala has a robust history and even an UNDO! These commands are a life saver.&lt;/p&gt;
+&lt;p&gt;View the history:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nala history
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Undo a history (&lt;code&gt;sudo nala history undo ID&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nala history undo 1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;convert-apt-to-nala&#34;&gt;Convert APT to Nala&lt;/h2&gt;
+&lt;p&gt;Add the following to your &lt;code&gt;~/.bashrc&lt;/code&gt; AND &lt;code&gt;/root/.bashrc&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;alias apt=&amp;#39;nala&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;From here you can install programs with apt or nala command and it will always work perfectly!&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This is everything I want in a package manager and more. My hat is off to the team that came up with all these drastic improvements and it has made my life so much easier on Debian based systems!&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=oroSkR4Nn_w&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/oroSkR4Nn_w/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Choosing the Right Linux Distro</title>
       <link>https://christitus.com/choose-linux-distro/</link>
