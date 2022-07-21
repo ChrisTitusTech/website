@@ -20,7 +20,7 @@ Welp, all that is now fixed with [Nala](https://gitlab.com/volian/nala) and it i
 Add Repository
 ```
 echo "deb http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
 ```
 
 Install Nala on any Debian Sid or Ubuntu 22+ with:
@@ -66,6 +66,8 @@ sudo() {
   if [ "$1" = "apt" ]; then
     shift
     command sudo nala "$@"
+  else
+    command sudo "$@"
   fi
 }
 ```
