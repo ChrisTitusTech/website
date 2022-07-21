@@ -62,6 +62,12 @@ Add the following to your `~/.bashrc` AND `/root/.bashrc` file:
 apt() { 
   command nala "$@"
 }
+sudo() {
+  if [ "$1" = "apt" ]; then
+    shift
+    command sudo nala "$@"
+  fi
+}
 ```
 
 From here you can install programs with apt or nala command and it will always work perfectly!
