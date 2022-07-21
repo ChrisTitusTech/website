@@ -14,7 +14,17 @@
       <guid>https://christitus.com/star-trek-os/</guid>
       <description>&lt;p&gt;The LCARS system from Star Trek is a staple in the geek world. Ever since it made its first appearence in the Next Generation TV series in the 90s people have been obsessed with recreating that system. Leave it to Linux to give a functional LCARS recreation for those Star Trek fans out there.&lt;/p&gt;
 &lt;h2 id=&#34;the-lcars-desktop-environment&#34;&gt;The LCARS Desktop Environment&lt;/h2&gt;
-&lt;p&gt;This was created and hosted on &lt;a href=&#34;https://lcarsde.github.io/index.html&#34;&gt;https://lcarsde.github.io/index.html&lt;/a&gt;. The creator made 5 packages that you need to install before you can use it. The entire environment isn&amp;rsquo;t all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design.&lt;/p&gt;
+&lt;p&gt;This was created and hosted on &lt;a href=&#34;https://lcarsde.github.io/index.html&#34;&gt;https://lcarsde.github.io/index.html&lt;/a&gt;. The creator made 5 packages that you need to install before you can use it. The entire environment isn&amp;rsquo;t all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design. This isn&amp;rsquo;t very up to date so I recommend using debian version 10 (buster) for maximum compatibility. Newer version of Debian have issues with the &lt;code&gt;python3-posix-ipc&lt;/code&gt; dependancy.&lt;/p&gt;
+&lt;p&gt;Download base Debian 10 (buster) distro @ &lt;a href=&#34;https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0+nonfree/amd64/iso-cd/firmware-10.12.0-amd64-netinst.iso&#34;&gt;https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0+nonfree/amd64/iso-cd/firmware-10.12.0-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install nothing but base system. No GUI components to keep it light.&lt;/p&gt;
+&lt;h3 id=&#34;install-dependancies&#34;&gt;Install Dependancies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Xorg&lt;/li&gt;
+&lt;li&gt;LightDM&lt;/li&gt;
+&lt;li&gt;Firefox (or other browser)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Set Graphical install &lt;code&gt;sudo systemctl set-default graphical.target&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: There are a ton of different python dependancies and you need to track these down to utilize the full desktop environment&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;my-lcars-script&#34;&gt;My LCARS script&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir lcars-build
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd lcars-build
@@ -24,8 +34,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/application-starter/releases/download/21.1/lcarsde-application-starter_21.1_amd64.deb
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/logout/releases/download/20.1/lcarsde-logout_20.1_amd64.deb
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -i *.deb
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir ~/.config/lcarde/
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /etc/lcarde/* ~/.config/lcarde/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt -f install
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-lcars&#34;&gt;Using LCARS&lt;/h2&gt;
 &lt;p&gt;To use it after installation, you logout of your desktop and select LCARS instead of KDE,GNOME, or whatever your current system is. This is an extremely minimal install so you don&amp;rsquo;t have to worry about it conflicting with your current install.&lt;/p&gt;
 &lt;p&gt;The complete manual is located @ &lt;a href=&#34;https://lcarsde.github.io/manual.html&#34;&gt;https://lcarsde.github.io/manual.html&lt;/a&gt;&lt;/p&gt;
@@ -59,7 +68,18 @@ Example:&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 10             &amp;lt;keys&amp;gt;Lin+B&amp;lt;/keys&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 11             &amp;lt;exec&amp;gt;brave-browser&amp;lt;/exec&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 12         &amp;lt;/binding&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
+&lt;p&gt;You can download my completed images if you don&amp;rsquo;t want to build this yourself @ &lt;a href=&#34;https://cttstore.com/star-trek-os&#34;&gt;https://cttstore.com/star-trek-os&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There is two image formats part of the download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VMDK - Virtual Machine Format - VMWare, Virtualbox, and QEMU will all play this.&lt;/li&gt;
+&lt;li&gt;Clonezilla tar.gz - Image Backup - You can restore this to any machine using clonezilla after unzipping the files to a USB drive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Login Information: 
+User: Kirk
+Pass: 1234
+Hostname: Enterprise&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Release Date: July 22, 2022&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=1111111&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/1111111/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>

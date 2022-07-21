@@ -437,7 +437,17 @@ if (!doNotTrack) {
           <div class="content mb-5">
             <p>The LCARS system from Star Trek is a staple in the geek world. Ever since it made its first appearence in the Next Generation TV series in the 90s people have been obsessed with recreating that system. Leave it to Linux to give a functional LCARS recreation for those Star Trek fans out there.</p>
 <h2 id="the-lcars-desktop-environment">The LCARS Desktop Environment</h2>
-<p>This was created and hosted on <a href="https://lcarsde.github.io/index.html">https://lcarsde.github.io/index.html</a>. The creator made 5 packages that you need to install before you can use it. The entire environment isn&rsquo;t all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design.</p>
+<p>This was created and hosted on <a href="https://lcarsde.github.io/index.html">https://lcarsde.github.io/index.html</a>. The creator made 5 packages that you need to install before you can use it. The entire environment isn&rsquo;t all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design. This isn&rsquo;t very up to date so I recommend using debian version 10 (buster) for maximum compatibility. Newer version of Debian have issues with the <code>python3-posix-ipc</code> dependancy.</p>
+<p>Download base Debian 10 (buster) distro @ <a href="https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0+nonfree/amd64/iso-cd/firmware-10.12.0-amd64-netinst.iso">https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0+nonfree/amd64/iso-cd/firmware-10.12.0-amd64-netinst.iso</a></p>
+<p>Install nothing but base system. No GUI components to keep it light.</p>
+<h3 id="install-dependancies">Install Dependancies</h3>
+<ul>
+<li>Xorg</li>
+<li>LightDM</li>
+<li>Firefox (or other browser)</li>
+</ul>
+<p>Set Graphical install <code>sudo systemctl set-default graphical.target</code></p>
+<p><em>Note: There are a ton of different python dependancies and you need to track these down to utilize the full desktop environment</em></p>
 <h2 id="my-lcars-script">My LCARS script</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mkdir lcars-build
 </span></span><span class="line"><span class="cl">cd lcars-build
@@ -447,8 +457,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">wget https://github.com/lcarsde/application-starter/releases/download/21.1/lcarsde-application-starter_21.1_amd64.deb
 </span></span><span class="line"><span class="cl">wget https://github.com/lcarsde/logout/releases/download/20.1/lcarsde-logout_20.1_amd64.deb
 </span></span><span class="line"><span class="cl">sudo dpkg -i *.deb
-</span></span><span class="line"><span class="cl">mkdir ~/.config/lcarde/
-</span></span><span class="line"><span class="cl">cp /etc/lcarde/* ~/.config/lcarde/
+</span></span><span class="line"><span class="cl">sudo apt -f install
 </span></span></code></pre></div><h2 id="using-lcars">Using LCARS</h2>
 <p>To use it after installation, you logout of your desktop and select LCARS instead of KDE,GNOME, or whatever your current system is. This is an extremely minimal install so you don&rsquo;t have to worry about it conflicting with your current install.</p>
 <p>The complete manual is located @ <a href="https://lcarsde.github.io/manual.html">https://lcarsde.github.io/manual.html</a></p>
@@ -482,7 +491,18 @@ Example:</p>
 </span></span><span class="line"><span class="cl"> 10             &lt;keys&gt;Lin+B&lt;/keys&gt;
 </span></span><span class="line"><span class="cl"> 11             &lt;exec&gt;brave-browser&lt;/exec&gt;
 </span></span><span class="line"><span class="cl"> 12         &lt;/binding&gt;
-</span></span></code></pre></div><h2 id="walkthrough-video">Walkthrough Video</h2>
+</span></span></code></pre></div><h2 id="images">Images</h2>
+<p>You can download my completed images if you don&rsquo;t want to build this yourself @ <a href="https://cttstore.com/star-trek-os">https://cttstore.com/star-trek-os</a></p>
+<p>There is two image formats part of the download</p>
+<ul>
+<li>VMDK - Virtual Machine Format - VMWare, Virtualbox, and QEMU will all play this.</li>
+<li>Clonezilla tar.gz - Image Backup - You can restore this to any machine using clonezilla after unzipping the files to a USB drive.</li>
+</ul>
+<p>Login Information: 
+User: Kirk
+Pass: 1234
+Hostname: Enterprise</p>
+<h2 id="walkthrough-video">Walkthrough Video</h2>
 <p><em>Release Date: July 22, 2022</em></p>
 <p><a href="https://www.youtube.com/watch?v=1111111"><img src="https://img.youtube.com/vi/1111111/0.jpg" alt="youtube-video"></a></p>
 <p><em>Note: YouTube Video - Hold Ctrl + Left Click to open in new window</em></p>
@@ -557,13 +577,18 @@ Example:</p>
 <aside>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#the-lcars-desktop-environment">The LCARS Desktop Environment</a></li>
+    <li><a href="#the-lcars-desktop-environment">The LCARS Desktop Environment</a>
+      <ul>
+        <li><a href="#install-dependancies">Install Dependancies</a></li>
+      </ul>
+    </li>
     <li><a href="#my-lcars-script">My LCARS script</a></li>
     <li><a href="#using-lcars">Using LCARS</a>
       <ul>
         <li><a href="#setting-up-intial-configuration">Setting up intial configuration</a></li>
       </ul>
     </li>
+    <li><a href="#images">Images</a></li>
     <li><a href="#walkthrough-video">Walkthrough Video</a></li>
   </ul>
 </nav>

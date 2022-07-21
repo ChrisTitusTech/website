@@ -14,7 +14,21 @@ The LCARS system from Star Trek is a staple in the geek world. Ever since it mad
 <!--more-->
 
 ## The LCARS Desktop Environment
-This was created and hosted on <https://lcarsde.github.io/index.html>. The creator made 5 packages that you need to install before you can use it. The entire environment isn't all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design. 
+This was created and hosted on <https://lcarsde.github.io/index.html>. The creator made 5 packages that you need to install before you can use it. The entire environment isn't all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design. This isn't very up to date so I recommend using debian version 10 (buster) for maximum compatibility. Newer version of Debian have issues with the `python3-posix-ipc` dependancy. 
+
+Download base Debian 10 (buster) distro @ <https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0+nonfree/amd64/iso-cd/firmware-10.12.0-amd64-netinst.iso>
+
+Install nothing but base system. No GUI components to keep it light.
+
+### Install Dependancies
+
+- Xorg
+- LightDM
+- Firefox (or other browser)
+
+Set Graphical install `sudo systemctl set-default graphical.target` 
+
+*Note: There are a ton of different python dependancies and you need to track these down to utilize the full desktop environment*
 
 ## My LCARS script
 
@@ -27,8 +41,7 @@ wget https://github.com/lcarsde/status-bar/releases/download/22.2/status-bar_22.
 wget https://github.com/lcarsde/application-starter/releases/download/21.1/lcarsde-application-starter_21.1_amd64.deb
 wget https://github.com/lcarsde/logout/releases/download/20.1/lcarsde-logout_20.1_amd64.deb
 sudo dpkg -i *.deb
-mkdir ~/.config/lcarde/
-cp /etc/lcarde/* ~/.config/lcarde/
+sudo apt -f install
 ```
 
 ## Using LCARS
@@ -71,6 +84,19 @@ Example:
  11             <exec>brave-browser</exec>
  12         </binding>
 ```
+
+## Images
+
+You can download my completed images if you don't want to build this yourself @ <https://cttstore.com/star-trek-os>
+
+There is two image formats part of the download
+- VMDK - Virtual Machine Format - VMWare, Virtualbox, and QEMU will all play this.
+- Clonezilla tar.gz - Image Backup - You can restore this to any machine using clonezilla after unzipping the files to a USB drive. Clone Any System walkthrough video @ <https://youtu.be/yQ9NpWZ74BU>
+
+Login Information: 
+- User: Kirk
+- Pass: 1234
+- Hostname: Enterprise
 
 ## Walkthrough Video
 _Release Date: July 22, 2022_
