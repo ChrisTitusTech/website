@@ -10,7 +10,6 @@ categories:
   - Networking
 tags:
   - Ubuntu
-draft: true
 ---
 <!--more-->
 

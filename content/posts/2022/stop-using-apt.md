@@ -59,7 +59,9 @@ sudo nala history undo 1
 
 Add the following to your `~/.bashrc` AND `/root/.bashrc` file:
 ```
-alias apt='nala'
+apt() { 
+  command nala "$@"
+}
 ```
 
 From here you can install programs with apt or nala command and it will always work perfectly!
