@@ -5,7 +5,66 @@
     <link>https://christitus.com/tags/debian/</link>
     <description>Recent content in Debian on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 19 Jul 2022 17:32:28 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Jul 2022 12:07:52 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Star Trek Window Management</title>
+      <link>https://christitus.com/star-trek-os/</link>
+      <pubDate>Thu, 21 Jul 2022 12:07:52 -0500</pubDate>
+      
+      <guid>https://christitus.com/star-trek-os/</guid>
+      <description>&lt;p&gt;The LCARS system from Star Trek is a staple in the geek world. Ever since it made its first appearence in the Next Generation TV series in the 90s people have been obsessed with recreating that system. Leave it to Linux to give a functional LCARS recreation for those Star Trek fans out there.&lt;/p&gt;
+&lt;h2 id=&#34;the-lcars-desktop-environment&#34;&gt;The LCARS Desktop Environment&lt;/h2&gt;
+&lt;p&gt;This was created and hosted on &lt;a href=&#34;https://lcarsde.github.io/index.html&#34;&gt;https://lcarsde.github.io/index.html&lt;/a&gt;. The creator made 5 packages that you need to install before you can use it. The entire environment isn&amp;rsquo;t all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design.&lt;/p&gt;
+&lt;h2 id=&#34;my-lcars-script&#34;&gt;My LCARS script&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir lcars-build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd lcars-build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/lcarswm/releases/download/22.1/lcarswm_22.1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/menu/releases/download/22.1/lcarsde-app-menu_22.1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/status-bar/releases/download/22.2/status-bar_22.2_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/application-starter/releases/download/21.1/lcarsde-application-starter_21.1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/logout/releases/download/20.1/lcarsde-logout_20.1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -i *.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir ~/.config/lcarde/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp /etc/lcarde/* ~/.config/lcarde/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-lcars&#34;&gt;Using LCARS&lt;/h2&gt;
+&lt;p&gt;To use it after installation, you logout of your desktop and select LCARS instead of KDE,GNOME, or whatever your current system is. This is an extremely minimal install so you don&amp;rsquo;t have to worry about it conflicting with your current install.&lt;/p&gt;
+&lt;p&gt;The complete manual is located @ &lt;a href=&#34;https://lcarsde.github.io/manual.html&#34;&gt;https://lcarsde.github.io/manual.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;setting-up-intial-configuration&#34;&gt;Setting up intial configuration&lt;/h3&gt;
+&lt;p&gt;Edit the file @ &lt;code&gt;~/.config/lcarde/status-config.xml&lt;/code&gt; look for these lines and change them to your system:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;widget name=&amp;#34;LcarsdeWifiStatus&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 41         &amp;lt;position x=&amp;#34;4&amp;#34; y=&amp;#34;2&amp;#34; width=&amp;#34;1&amp;#34; height=&amp;#34;1&amp;#34; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 42         &amp;lt;properties&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 43             &amp;lt;!-- Device should correspond to a folder in /sys/class/net that starts with &amp;#34;w&amp;#34; --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 44             &amp;lt;property key=&amp;#34;device&amp;#34; **value=&amp;#34;wlp2s0&amp;#34;** /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 45         &amp;lt;/properties&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 46     &amp;lt;/widget&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 47     &amp;lt;widget name=&amp;#34;LcarsdeEthStatus&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 48         &amp;lt;position x=&amp;#34;4&amp;#34; y=&amp;#34;1&amp;#34; width=&amp;#34;1&amp;#34; height=&amp;#34;1&amp;#34; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 49         &amp;lt;properties&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 50             &amp;lt;!-- Device should correspond to a folder in /sys/class/net that starts with &amp;#34;e&amp;#34; --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 51             &amp;lt;property key=&amp;#34;device&amp;#34; **value=&amp;#34;enp0s20f0u2u3i5&amp;#34;** /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 52         &amp;lt;/properties&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 53     &amp;lt;/widget&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Change the programs to what you use in &lt;code&gt;~/.config/lcarde/settings.xml&lt;/code&gt;
+Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2 &amp;lt;lcarswm&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  3     &amp;lt;key-config&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  4         &amp;lt;!-- keys for executing programs --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  5         &amp;lt;binding&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  6             &amp;lt;keys&amp;gt;Lin+T&amp;lt;/keys&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  7             &amp;lt;exec&amp;gt;kitty&amp;lt;/exec&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  8         &amp;lt;/binding&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  9         &amp;lt;binding&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 10             &amp;lt;keys&amp;gt;Lin+B&amp;lt;/keys&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 11             &amp;lt;exec&amp;gt;brave-browser&amp;lt;/exec&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 12         &amp;lt;/binding&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Release Date: July 22, 2022&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=1111111&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/1111111/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Stop Using APT</title>
       <link>https://christitus.com/stop-using-apt/</link>
@@ -18,7 +77,7 @@
 &lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
 &lt;p&gt;Add Repository&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;deb http://deb.volian.org/volian/ scar main&amp;#34; | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg &amp;gt; /dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install Nala on any Debian Sid or Ubuntu 22+ with:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &amp;amp;&amp;amp; sudo apt install nala
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install on Debian Stable or Ubuntu 21 and below:&lt;/p&gt;
@@ -36,7 +95,17 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nala history undo 1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;convert-apt-to-nala&#34;&gt;Convert APT to Nala&lt;/h2&gt;
 &lt;p&gt;Add the following to your &lt;code&gt;~/.bashrc&lt;/code&gt; AND &lt;code&gt;/root/.bashrc&lt;/code&gt; file:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;alias apt=&amp;#39;nala&amp;#39;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt() { 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  command nala &amp;#34;$@&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo() {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if [ &amp;#34;$1&amp;#34; = &amp;#34;apt&amp;#34; ]; then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    shift
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    command sudo nala &amp;#34;$@&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    command sudo &amp;#34;$@&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  fi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;From here you can install programs with apt or nala command and it will always work perfectly!&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This is everything I want in a package manager and more. My hat is off to the team that came up with all these drastic improvements and it has made my life so much easier on Debian based systems!&lt;/p&gt;
