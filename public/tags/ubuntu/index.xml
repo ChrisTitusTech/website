@@ -73,15 +73,17 @@ Example:&lt;/p&gt;
 &lt;p&gt;There is two image formats part of the download&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;VMDK - Virtual Machine Format - VMWare, Virtualbox, and QEMU will all play this.&lt;/li&gt;
-&lt;li&gt;Clonezilla tar.gz - Image Backup - You can restore this to any machine using clonezilla after unzipping the files to a USB drive.&lt;/li&gt;
+&lt;li&gt;Clonezilla tar.gz - Image Backup - You can restore this to any machine using clonezilla after unzipping the files to a USB drive. Clone Any System walkthrough video @ &lt;a href=&#34;https://youtu.be/yQ9NpWZ74BU&#34;&gt;https://youtu.be/yQ9NpWZ74BU&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Login Information: 
-User: Kirk
-Pass: 1234
-Hostname: Enterprise&lt;/p&gt;
+&lt;p&gt;Login Information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User: Kirk&lt;/li&gt;
+&lt;li&gt;Pass: 1234&lt;/li&gt;
+&lt;li&gt;Hostname: Enterprise&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Release Date: July 22, 2022&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=1111111&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/1111111/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=hbg-QgKOdac&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/hbg-QgKOdac/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
