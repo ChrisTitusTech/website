@@ -5,7 +5,32 @@
     <link>https://christitus.com/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 21 Jul 2022 12:07:52 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jul 2022 10:30:53 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Speedup Linux</title>
+      <link>https://christitus.com/speedup-linux/</link>
+      <pubDate>Sun, 24 Jul 2022 10:30:53 -0500</pubDate>
+      
+      <guid>https://christitus.com/speedup-linux/</guid>
+      <description>&lt;p&gt;Linux by default is meant for servers and actually decreases the performance for greater security. While this great in business, when using Linux as a desktop it is not ideal unless your are serving other devices on your network with that machine.&lt;/p&gt;
+&lt;h2 id=&#34;disable-mitigations&#34;&gt;Disable Mitigations&lt;/h2&gt;
+&lt;p&gt;This will have a substantial increase in performance just by doing disable many mitigations that happen in multi-threaded systems. The more core count you have the greater the performance gain. Some performances increases can be as large as 30%, but the average increase is about 10%.&lt;/p&gt;
+&lt;p&gt;Add this to your &lt;code&gt;/etc/default/grub&lt;/code&gt; under line &lt;code&gt;GRUB_CMDLINE_LINUX=&amp;quot;rhgb quiet&amp;quot;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRUB_CMDLINE_LINUX=&amp;#34;rhgb quiet mitigations=off&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;zswap-for-16gb-or-less-systems&#34;&gt;ZSwap for 16GB or Less Systems&lt;/h2&gt;
+&lt;p&gt;Z Swap is the a neat Linux feature that compresses data that is about to enter your swap file. This causes it to be used quite a bit less and can give a performance uplift to those with a small amount of memory. If you have a system with 32GB or greater, I wouldn&amp;rsquo;t recommend doing this.&lt;/p&gt;
+&lt;p&gt;Add this to your &lt;code&gt;/etc/default/grub&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRUB_CMDLINE_LINUX=&amp;#34;zswap.enabled=1 rhgb quiet mitigations=off&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;systems-older-than-linux-511&#34;&gt;Systems older than Linux 5.11&lt;/h2&gt;
+&lt;p&gt;There is a cool website called &lt;a href=&#34;https://make-linux-fast-again.com/&#34;&gt;https://make-linux-fast-again.com/&lt;/a&gt; that has a massive amount of the flags including the ones used above. However, this is mainly for older Linux installs and why I really don&amp;rsquo;t use it. These are all the flags that website recommends:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off tsx=on tsx_async_abort=off mitigations=off
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;is-this-really-needed&#34;&gt;Is this really needed?&lt;/h2&gt;
+&lt;p&gt;While all this above isn&amp;rsquo;t really needed, it is a really neat way to squeeze a bit performance out of your systems. It is ONLY recommended for those not sharing services and files through your network. It is also NOT recommended for those using Linux in a virtual machine as many of the mitigations are for VM protection. So use this RESPONSIBLY and don&amp;rsquo;t just slap it on every Linux install.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=1111111&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/1111111/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Star Trek Window Management</title>
       <link>https://christitus.com/star-trek-os/</link>
