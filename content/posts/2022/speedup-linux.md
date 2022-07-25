@@ -40,6 +40,6 @@ While all this above isn't really needed, it is a really neat way to squeeze a b
 
 ## Walkthrough Video
 
-[![youtube-video](https://img.youtube.com/vi/1111111/0.jpg)](https://www.youtube.com/watch?v=1111111)
+[![youtube-video](https://img.youtube.com/vi/8XueTkMTNvc/0.jpg)](https://www.youtube.com/watch?v=8XueTkMTNvc)
 
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_

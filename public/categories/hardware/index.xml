@@ -14,10 +14,10 @@
       <guid>https://christitus.com/sata-vs-sas-vs-nvme/</guid>
       <description>&lt;p&gt;This is a quick breakdown of the differences between SATA vs SAS vs NVMe. After looking at the performance below, you will be able to decide which one best suits your needs.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;SATA (Serial Advanced Technology Advancement) 
+&lt;li&gt;SATA (Serial Advanced Technology Advancement)
 * Most common
 * Least reliable
-* Slow 
+* Slow
 * 5400 – 7200 RPM Hard Drives
 * Half duplex (Can’t read and write simultaneously)
 * 6 GB/s connection
