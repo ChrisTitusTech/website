@@ -39,7 +39,6 @@ noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disab
 While all this above isn't really needed, it is a really neat way to squeeze a bit performance out of your systems. It is ONLY recommended for those not sharing services and files through your network. It is also NOT recommended for those using Linux in a virtual machine as many of the mitigations are for VM protection. So use this RESPONSIBLY and don't just slap it on every Linux install. 
 
 ## Walkthrough Video
-
-[![youtube-video](https://img.youtube.com/vi/1111111/0.jpg)](https://www.youtube.com/watch?v=1111111)
+[![youtube-video](https://img.youtube.com/vi/8XueTkMTNvc/0.jpg)](https://www.youtube.com/watch?v=8XueTkMTNvc)
 
 _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
