@@ -5,7 +5,43 @@
     <link>https://christitus.com/categories/linux/</link>
     <description>Recent content in Linux on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 24 Jul 2022 10:30:53 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Jul 2022 21:26:53 -0500</lastBuildDate><atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unlock Steam Deck</title>
+      <link>https://christitus.com/unlock-steam-deck/</link>
+      <pubDate>Wed, 27 Jul 2022 21:26:53 -0500</pubDate>
+      
+      <guid>https://christitus.com/unlock-steam-deck/</guid>
+      <description>&lt;p&gt;This article shows you how to make the steamdeck writable and a full blown desktop that you can install apps on that aren&amp;rsquo;t Flatpak, AppImage, or Snaps. Simply use &lt;code&gt;yay -S packagename&lt;/code&gt; to install the app of your choice.&lt;/p&gt;
+&lt;h2 id=&#34;make-desktop-usable-with-password&#34;&gt;Make Desktop Usable with password&lt;/h2&gt;
+&lt;p&gt;set user password with &lt;code&gt;passwd&lt;/code&gt; which then allows the use of sudo and various commands. By default the deck user comes with NO PASSWORD! without setting the user password you can NOT use &lt;code&gt;sudo&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;making-the-steamdeck-writable&#34;&gt;Making the steamdeck writable&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo steamos-readonly disable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;keyserver hkps://keyserver.ubuntu.com&amp;#34; &amp;gt;&amp;gt; /etc/pacman.d/gnupg/gpg.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman-key --init
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman-key --populate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pacman-key --refresh-keys
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yay -S base-devel
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;signing-issues---package-installs&#34;&gt;Signing Issues - Package Installs&lt;/h2&gt;
+&lt;p&gt;The repositories for holo and steam deck are very interesting. Here are the base repos and what it is using.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/etc/pacman/mirrrorlist&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The main issue is the gnupg signing is completely messed up and often fails when installing packages. This is because the core archlinux-keyring is badly out of date and it will show that any package you are trying to install is out of date, corrupt, or having marginal trust.&lt;/p&gt;
+&lt;p&gt;Obviously changing the repos to official arch ones would fix this, but then that would change the kernel and a variety of other packages. To fix the key signatures the easiest thing is to grab the up to date keyring from the core archlinux repos and manually install it.&lt;/p&gt;
+&lt;p&gt;Download Official archlinux-keyring ZST Package: &lt;a href=&#34;https://archlinux.org/packages/core/any/archlinux-keyring/download&#34;&gt;https://archlinux.org/packages/core/any/archlinux-keyring/download&lt;/a&gt;
+Then install the downloaded ZST file through pacman - Ex. &lt;code&gt;sudo pacman -U archlinux-keyring-20220713-2-any.pkg.tar.zst&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This solves all your signing issues.&lt;/p&gt;
+&lt;h2 id=&#34;making-your-own-steam-deck-htpc&#34;&gt;Making your own Steam Deck HTPC&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/holo.png&#34; alt=&#34;holoiso&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The new steam interface for steam deck is absolutely a home run. It just works with so much functionality and much more when only controling your system with a controller.&lt;/p&gt;
+&lt;p&gt;Check out HOLO-ISO - &lt;a href=&#34;https://github.com/theVakhovskeIsTaken/holoiso&#34;&gt;https://github.com/theVakhovskeIsTaken/holoiso&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;league-of-legends-on-linux--steam&#34;&gt;League of Legends on Linux / Steam&lt;/h2&gt;
+&lt;p&gt;Many also asked about the League of Legends and other riot games on steam deck. Now this can be done on any Linux system, but the way its done changes all the time as Riot isn&amp;rsquo;t very friendly to Linux. From the anti-cheat to the ridiculous launcher, it is always a nightmare to deal with unless the publisher stops smoking the devil&amp;rsquo;s lettuce and actually listens to its customers. Because of the ever changing landscape around these two things stay subscribed to &lt;a href=&#34;https://www.reddit.com/r/leagueoflinux/&#34;&gt;https://www.reddit.com/r/leagueoflinux/&lt;/a&gt; sub reddit. Those guys are working day and night to make sure that LoL keeps playing on Linux and are an amazing community&amp;hellip; UNLIKE most of League communities haha.&lt;/p&gt;
+&lt;h2 id=&#34;steam-deck---unexplored-potential&#34;&gt;Steam Deck - Unexplored Potential&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=8oQdJjxn9EA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/8oQdJjxn9EA/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Speedup Linux</title>
       <link>https://christitus.com/speedup-linux/</link>

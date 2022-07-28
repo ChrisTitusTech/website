@@ -2,28 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://christitus.com/tags/arch/</loc>
-    <lastmod>2022-07-24T10:30:53-05:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-07-24T10:30:53-05:00</lastmod>
+    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
+    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/linux/</loc>
+    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/posts/</loc>
+    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/steam-deck/</loc>
+    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/unlock-steam-deck/</loc>
+    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/arch/</loc>
     <lastmod>2022-07-24T10:30:53-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/fedora/</loc>
     <lastmod>2022-07-24T10:30:53-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/categories/linux/</loc>
-    <lastmod>2022-07-24T10:30:53-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-07-24T10:30:53-05:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/speedup-linux/</loc>
-    <lastmod>2022-07-24T10:30:53-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/</loc>
     <lastmod>2022-07-24T10:30:53-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/ubuntu/</loc>
