@@ -3,21 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
-    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/categories/linux/</loc>
-    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/tags/steam-deck/</loc>
-    <lastmod>2022-07-27T21:26:53-05:00</lastmod>
+    <loc>https://christitus.com/shrink-vmware-vmdk/</loc>
+    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/vmdk/</loc>
+    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/vmware/</loc>
+    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/windows/</loc>
+    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/steam-deck/</loc>
     <lastmod>2022-07-27T21:26:53-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/unlock-steam-deck/</loc>
@@ -45,9 +57,6 @@
     <lastmod>2022-07-19T17:32:28-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/security/</loc>
-    <lastmod>2022-07-15T13:14:39-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/windows/</loc>
     <lastmod>2022-07-15T13:14:39-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/not-safe-windows/</loc>
@@ -326,10 +335,10 @@
     <loc>https://christitus.com/tags/gaming/</loc>
     <lastmod>2020-03-22T20:50:39-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/tags/zsh/</loc>
+    <loc>https://christitus.com/zsh/</loc>
     <lastmod>2020-02-19T12:32:44-06:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/zsh/</loc>
+    <loc>https://christitus.com/tags/zsh/</loc>
     <lastmod>2020-02-19T12:32:44-06:00</lastmod>
   </url><url>
     <loc>https://christitus.com/archive/</loc>

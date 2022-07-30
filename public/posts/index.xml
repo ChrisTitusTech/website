@@ -5,7 +5,22 @@
     <link>https://christitus.com/posts/</link>
     <description>Recent content in Posts on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 27 Jul 2022 21:26:53 -0500</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jul 2022 13:40:50 -0500</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shrink VMWare VMDK File</title>
+      <link>https://christitus.com/shrink-vmware-vmdk/</link>
+      <pubDate>Sat, 30 Jul 2022 13:40:50 -0500</pubDate>
+      
+      <guid>https://christitus.com/shrink-vmware-vmdk/</guid>
+      <description>&lt;p&gt;This goes over reducing the size of a VMDK file using open-vm-tools and is used often in VMWare environments.&lt;/p&gt;
+&lt;h2 id=&#34;tools-needed&#34;&gt;Tools Needed&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;d recommend VMWare Workstation Pro, but you can get away with just using player if you don&amp;rsquo;t have a license.&lt;/p&gt;
+&lt;p&gt;Inside the Guest (Virtual Machine) you need to install &lt;code&gt;open-vm-tools&lt;/code&gt; on Linux which should be in the base repository for most main distributions. If you are using Windows you need to install VMWare-Tools to that install and can be found VMWare Workstation VM Tab -&amp;gt; Manage -&amp;gt; Clean up Disks (Windows ONLY)&lt;/p&gt;
+&lt;h2 id=&#34;command-to-shrink-vmdk-linux-guests&#34;&gt;Command to Shrink VMDK (Linux Guests)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vmware-toolbox-cmd disk shrink /
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>Unlock Steam Deck</title>
       <link>https://christitus.com/unlock-steam-deck/</link>
@@ -1681,7 +1696,7 @@ Razer has a bunch of cool features, but also has a great open source project cal
 &lt;/ul&gt;
 &lt;p&gt;Recommended Wallets:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt;
+&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt; 
 &lt;img src=&#34;https://christitus.com/images/crypto/exodus.png&#34; alt=&#34;exodus&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Other advanced wallets I&amp;rsquo;d recommend come from the official projects or opensource on github.com&lt;/li&gt;
 &lt;/ul&gt;
@@ -2637,11 +2652,11 @@ Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 This knowledge base is fantastic for any information I glaze over or troubleshooting that isn&amp;rsquo;t covered. It is much more indepth than this article, but can be confusing in parts. This article is meant to get you acquainted with OpenCore and fill in any missing gaps.&lt;/p&gt;
 &lt;h2 id=&#34;why-i-use-opencore&#34;&gt;Why I Use OpenCore?&lt;/h2&gt;
 &lt;p&gt;I use opencore for compatibility and everything can be setup in a non macOS environment. It also injects drivers support (kext) differently than past methods and is far more stable.
-This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster.
+This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster. 
 I also find a larger amount of hardware is supported and the finished product is all contained neatly in an EFI partition.&lt;/p&gt;
 &lt;h2 id=&#34;hardware-compatibility&#34;&gt;Hardware Compatibility&lt;/h2&gt;
 &lt;p&gt;Even with OpenCore supporting a lot more hardware there is still some hardware that simply will not work on macOS no matter what you do. Here is a definitive guide &lt;a href=&#34;https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/&#34;&gt;https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/&lt;/a&gt;.
-The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops.
+The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops. 
 AMD CPUs can technically work, but will require more tinkering and are more difficult than the Intel counterparts.&lt;/p&gt;
 &lt;h2 id=&#34;files-and-projects-you-need-to-download-and-what-they-do&#34;&gt;Files and Projects you need to download and what they do&lt;/h2&gt;
 &lt;p&gt;Here is a list of all the files and GitHub projects that are used for OpenCore.&lt;/p&gt;
@@ -5134,10 +5149,10 @@ Setup FreeNAS Video: &lt;a href=&#34;https://www.youtube.com/watch?v=JexkrpeM_WA
       <guid>https://christitus.com/sata-vs-sas-vs-nvme/</guid>
       <description>&lt;p&gt;This is a quick breakdown of the differences between SATA vs SAS vs NVMe. After looking at the performance below, you will be able to decide which one best suits your needs.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;SATA (Serial Advanced Technology Advancement)
+&lt;li&gt;SATA (Serial Advanced Technology Advancement) 
 * Most common
 * Least reliable
-* Slow
+* Slow 
 * 5400 – 7200 RPM Hard Drives
 * Half duplex (Can’t read and write simultaneously)
 * 6 GB/s connection
@@ -5237,7 +5252,7 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
 &lt;li&gt;run the following commands:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;xe pool-ha-disable&lt;/code&gt;&lt;em&gt;Note: If this fails try ha-disable force below&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;xe host-emergency-ha-disable force=true&amp;lt;br /&amp;gt; xe pool-emergency-transition-to-master --force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe host-emergency-ha-disable force=true&amp;lt;br /&amp;gt; xe pool-emergency-transition-to-master --force&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: This will force the pool and slaves to reinitialize with the pool master&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Once the server reboots it should connect&lt;/li&gt;
@@ -5826,10 +5841,10 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RriP3LmuKNA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/RriP3LmuKNA/0.jpg&#34; alt=&#34;WSL&#34;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;powershell-installation-method&#34;&gt;PowerShell Installation Method&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;microsoft-store-installation-method&#34;&gt;Microsoft Store Installation Method&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Open the Microsoft Store&lt;/li&gt;
@@ -6640,7 +6655,7 @@ OR&lt;/li&gt;
 &lt;em&gt;Alternatively, you can do this from the Services Panel&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Purge the ticket cache on the local domain controller.
+&lt;p&gt;Purge the ticket cache on the local domain controller. 
 &lt;code&gt;klist purge&lt;/code&gt;&lt;br&gt;
 _Note: you can use &lt;code&gt;klist tickets&lt;/code&gt; to view tickets before purging them&lt;/p&gt;
 &lt;ul&gt;
