@@ -440,10 +440,24 @@ if (!doNotTrack) {
             <p>This goes over reducing the size of a VMDK file using open-vm-tools and is used often in VMWare environments.</p>
 <h2 id="tools-needed">Tools Needed</h2>
 <p>I&rsquo;d recommend VMWare Workstation Pro, but you can get away with just using player if you don&rsquo;t have a license.</p>
-<p>Inside the Guest (Virtual Machine) you need to install <code>open-vm-tools</code> on Linux which should be in the base repository for most main distributions. If you are using Windows you need to install VMWare-Tools to that install and can be found VMWare Workstation VM Tab -&gt; Manage -&gt; Clean up Disks (Windows ONLY)</p>
-<h2 id="command-to-shrink-vmdk-linux-guests">Command to Shrink VMDK (Linux Guests)</h2>
+<p>Inside the Guest (Virtual Machine) you need to install <code>open-vm-tools</code> on Linux which should be in the base repository for most main distributions.</p>
+<h2 id="shrinking-vmdk">Shrinking VMDK</h2>
+<h3 id="on-guest">On Guest</h3>
+<p>These are done on the GUEST (Inside Virtual Machine)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vmware-toolbox-cmd disk shrink /
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>If you are want to shrink a Windows Guest you need to install VMWare-Tools inside the VM. After the tools are installed, simply click the following in VMWare Workstation <code>VM Tab -&gt; Manage -&gt; Clean up Disks</code> (Windows ONLY)</p>
+<h3 id="on-host">On Host</h3>
+<p>From inside your VMWare Workstation install you will find the following program <code>vmware-vdiskmanager</code> this is where we finalize the vmdk by defragmenting it and doing the final shrink.</p>
+<h4 id="defrag">Defrag</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vmware-vdiskmanager.exe -d /path/to/shrink.vmdk
+</span></span></code></pre></div><h4 id="final-shrink">Final Shrink</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">vmware-vdiskmanager.exe -k /path/to/shrink.vmdk
+</span></span></code></pre></div><h4 id="example">Example</h4>
+<p><img src="/images/2022/vmware-vdisk.jpg" alt="vdisk"></p>
+<h2 id="still-too-big">Still Too Big?</h2>
+<p>If it is still too large, you can simply export the VM to OVF format inside VMWare Workstation. This will create a new vmdk file that will be considerably smaller. You can ignore all the other files it creates.</p>
+<p><code>export to ovf</code></p>
+<p><img src="/images/2022/vmware-ovf.jpg" alt="ovf"></p>
           </div>
           <div class="mb-3 post-meta">
              <a class="bg-light py-2 px-3" href="https://christitus.com/tags/vmware">#VMWare</a>
@@ -501,7 +515,13 @@ if (!doNotTrack) {
     <nav id="TableOfContents">
   <ul>
     <li><a href="#tools-needed">Tools Needed</a></li>
-    <li><a href="#command-to-shrink-vmdk-linux-guests">Command to Shrink VMDK (Linux Guests)</a></li>
+    <li><a href="#shrinking-vmdk">Shrinking VMDK</a>
+      <ul>
+        <li><a href="#on-guest">On Guest</a></li>
+        <li><a href="#on-host">On Host</a></li>
+      </ul>
+    </li>
+    <li><a href="#still-too-big">Still Too Big?</a></li>
   </ul>
 </nav>
 </aside>
