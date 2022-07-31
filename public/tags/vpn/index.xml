@@ -15,11 +15,17 @@
       <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;
 &lt;p&gt;Use my affiliate link to get a Private Internet Access VPN: &lt;a href=&#34;http://www.privateinternetaccess.com/pages/buy-vpn/christitus&#34;&gt;http://www.privateinternetaccess.com/pages/buy-vpn/christitus&lt;/a&gt;. This is a must-have for a dedicated Linux box specifically for privacy concerns.&lt;/p&gt;
 &lt;h3 id=&#34;setup-vpn-in-ubuntu-8211-no-commentary&#34;&gt;Setup VPN in Ubuntu – No Commentary&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=KrNgZPzHNeA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/KrNgZPzHNeA/0.jpg&#34; alt=&#34;Setup VPN no commentary&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/KrNgZPzHNeA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;setup-vpn-in-ubuntu-8211-with-commentary&#34;&gt;Setup VPN in Ubuntu – With Commentary&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=tHEd3fFfGpM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/tHEd3fFfGpM/0.jpg&#34; alt=&#34;Setup VPN in Ubuntu with commentary&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/tHEd3fFfGpM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;vpn-setup-commands&#34;&gt;VPN setup commands:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo su
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install openvpn -y

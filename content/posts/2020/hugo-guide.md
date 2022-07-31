@@ -213,8 +213,7 @@ draft: true
 Now everytime I run `hugo new posts/newpost.md` it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase. 
 
 ## Video Walkthrough
-[![hugo guide](https://img.youtube.com/vi/6JaBian3vgI/0.jpg)](https://www.youtube.com/watch?v=6JaBian3vgI)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube 6JaBian3vgI >}}  
 
 ## Conclusion
 This has changed my life and has made it so I can make posts like this one for people to follow. This entire post took me about an hour to write and would have take twice as long if I were to do it in WordPress. 

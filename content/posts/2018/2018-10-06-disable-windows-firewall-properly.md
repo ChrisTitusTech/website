@@ -32,8 +32,7 @@ This walkthrough goes over how to Disable Windows Firewall while not affecting 
 
 ## Video Guide
 
-[![iscsi-ya](https://img.youtube.com/vi/fvFWFrN-MZQ/0.jpg)](https://www.youtube.com/watch?v=fvFWFrN-MZQ)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube fvFWFrN-MZQ >}}  
 
 
 ### Finishing Up

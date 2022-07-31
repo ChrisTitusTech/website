@@ -39,8 +39,11 @@
 &lt;/ul&gt;
 &lt;p&gt;Based on User feedback Microsoft Store and Windows Defender is no longer touched.&lt;/p&gt;
 &lt;h3 id=&#34;toolbox-walkthrough-video&#34;&gt;Toolbox Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=V27McA7ch6w&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/V27McA7ch6w/0.jpg&#34; alt=&#34;win10toolbox&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/V27McA7ch6w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;user-requested-restore-scripts&#34;&gt;User Requested Restore Scripts&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JTbKD&amp;#39;))
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This restore script pops up a GUI that lets you restore what you want to FACTORY DEFAULTS!&lt;/p&gt;

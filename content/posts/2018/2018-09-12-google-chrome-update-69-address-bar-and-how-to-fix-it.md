@@ -26,8 +26,7 @@ tags:
 
 ## Video Walkthrough
 
-[![chrome](https://img.youtube.com/vi/0O9TzNvVwR0/0.jpg)](https://www.youtube.com/watch?v=0O9TzNvVwR0)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube 0O9TzNvVwR0 >}}  
 
 ## Conclusion 
 

@@ -43,6 +43,5 @@ Learn more about the CrowPi 2 here: [Kickstarter Page](https://www.kickstarter.c
 
 ## Video Walkthrough
 
-[![pi laptop](https://img.youtube.com/vi/uZmiWQbOBDw/0.jpg)](https://www.youtube.com/watch?v=uZmiWQbOBDw)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube uZmiWQbOBDw >}}  
 

@@ -76,6 +76,5 @@ _Note: /dev/sda is the DEVICE&#8230;_**NOT THE PARTITION**.
 
 ## Video Walkthroughs
 
-[![grub-yt](https://img.youtube.com/vi/r7meKJsjqfY/0.jpg)](https://www.youtube.com/watch?v=r7meKJsjqfY)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube r7meKJsjqfY >}}  
 

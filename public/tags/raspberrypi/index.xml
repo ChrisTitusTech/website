@@ -29,8 +29,10 @@
 &lt;p&gt;I love this laptop and am looking forward to making some lesson plans for the upcoming school year to teach my kids about it. This is the perfect product to experiment and learn about a variety of things in technology. Ever since the Raspberry Pi came out, I have been looking for this type of laptop to fill this need of showcasing all that the pi is capable of and the Crow Pi 2 exceeded all my expectations.&lt;/p&gt;
 &lt;p&gt;Learn more about the CrowPi 2 here: &lt;a href=&#34;https://www.kickstarter.com/projects/elecrow/crowpi2-steam-education-platformand-raspberry-pi-laptop&#34;&gt;Kickstarter Page&lt;/a&gt; and &lt;a href=&#34;https://www.elecrow.com/development-kit.html&#34;&gt;Official Site&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=uZmiWQbOBDw&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/uZmiWQbOBDw/0.jpg&#34; alt=&#34;pi laptop&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/uZmiWQbOBDw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
   </channel>

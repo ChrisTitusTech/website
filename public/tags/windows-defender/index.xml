@@ -242,8 +242,10 @@
 &lt;h2 id=&#34;paid-anti-virus&#34;&gt;Paid Anti-Virus&lt;/h2&gt;
 &lt;p&gt;For those that want good detection rates, better privacy, and low overhead. The antivirus I have recommend has stayed the same for years. I recommend &lt;a href=&#34;https://christitus.com/antivirus&#34;&gt;ESET&lt;/a&gt; for this because it is a proven antivirus that isn&amp;rsquo;t as intrusive as the others.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=9P6r7DLS77Q&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/9P6r7DLS77Q/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/9P6r7DLS77Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
   </channel>

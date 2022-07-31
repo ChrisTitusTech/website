@@ -27,8 +27,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;is-this-really-needed&#34;&gt;Is this really needed?&lt;/h2&gt;
 &lt;p&gt;While all this above isn&amp;rsquo;t really needed, it is a really neat way to squeeze a bit performance out of your systems. It is ONLY recommended for those not sharing services and files through your network. It is also NOT recommended for those using Linux in a virtual machine as many of the mitigations are for VM protection. So use this RESPONSIBLY and don&amp;rsquo;t just slap it on every Linux install.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=8XueTkMTNvc&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/8XueTkMTNvc/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/8XueTkMTNvc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -109,8 +111,10 @@ They follow the same syntax as pacman except you run them at a user level and th
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;So the best distribution is the one that suits your needs and preferences. Instead of the one size fits all approach of Mac and Windows, Linux takes a completely different approach. Learn the above and try out the different options and you will make the perfect system for your needs. You will also understand why all the top 5 distros and other Linux garbage on the internet is worthless. That is because there is no perfect distro, however there is the perfect distro for YOU! It just so happens that it is different for each user and you have the options that no other system on earth give you with Linux.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=dL05DoJ0qsQ&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/dL05DoJ0qsQ/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/dL05DoJ0qsQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -159,8 +163,10 @@ They follow the same syntax as pacman except you run them at a user level and th
 &lt;h2 id=&#34;lvm-conclusion&#34;&gt;LVM conclusion&lt;/h2&gt;
 &lt;p&gt;LVM is fantastic for managing a system, but remember that the more drives you make in a volume group that the likely it is to fail. Instead of having one point of failure you can open yourself up for multiple points when making a large system with multiple drives.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=scMkYQxBtJ4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/scMkYQxBtJ4/0.jpg&#34; alt=&#34;lvm guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/scMkYQxBtJ4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>

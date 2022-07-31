@@ -38,6 +38,5 @@ powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io
 
 ## Video Walkthrough
 
-[![pi laptop](https://img.youtube.com/vi/2R28u7o9mls/0.jpg)](https://www.youtube.com/watch?v=2R28u7o9mls)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube 2R28u7o9mls >}}  
 

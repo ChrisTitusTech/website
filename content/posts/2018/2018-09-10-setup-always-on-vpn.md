@@ -18,13 +18,11 @@ Use my affiliate link to get a Private Internet Access VPN: <http://www.privatei
 
 ### Setup VPN in Ubuntu &#8211; No Commentary
 
-[![Setup VPN no commentary](https://img.youtube.com/vi/KrNgZPzHNeA/0.jpg)](https://www.youtube.com/watch?v=KrNgZPzHNeA)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube KrNgZPzHNeA >}}  
 
 ### Setup VPN in Ubuntu &#8211; With Commentary
 
-[![Setup VPN in Ubuntu with commentary](https://img.youtube.com/vi/tHEd3fFfGpM/0.jpg)](https://www.youtube.com/watch?v=tHEd3fFfGpM)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube tHEd3fFfGpM >}}  
 
 ## VPN setup commands:
 

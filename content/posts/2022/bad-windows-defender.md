@@ -54,7 +54,6 @@ For those that want good detection rates, better privacy, and low overhead. The 
 
 ## Walkthrough Video
 
-[![youtube-video](https://img.youtube.com/vi/9P6r7DLS77Q/0.jpg)](https://www.youtube.com/watch?v=9P6r7DLS77Q)
+{{< youtube 9P6r7DLS77Q >}}
 
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 

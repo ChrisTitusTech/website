@@ -104,6 +104,5 @@ You will now have completed the basics of a secure web server!
 
 ## Video Walkthrough
 
-[![secure web server](https://img.youtube.com/vi/7pJKBL9x6bY/0.jpg)](https://www.youtube.com/watch?v=7pJKBL9x6bY)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube 7pJKBL9x6bY >}}  
 

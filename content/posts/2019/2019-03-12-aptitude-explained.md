@@ -94,6 +94,5 @@ These are the same as using the above commands under install, however, you can u
 
 ## Video Walkthrough
 
-[![aptitude-yt](https://img.youtube.com/vi/xca3Ywf54N0/0.jpg)](https://www.youtube.com/watch?v=xca3Ywf54N0)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube xca3Ywf54N0 >}}  
 

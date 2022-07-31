@@ -48,6 +48,5 @@ With all this done you will be able to launch Garmin Express on Linux.
 
 ## Video Walkthrough
 
-[![garminexpress-yt](https://img.youtube.com/vi/hg01Z6VCox0/0.jpg)](https://www.youtube.com/watch?v=hg01Z6VCox0)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube hg01Z6VCox0 >}}  
 

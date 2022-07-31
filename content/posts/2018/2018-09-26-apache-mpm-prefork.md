@@ -54,6 +54,5 @@ Comparatively, a microserver with 600-700 MB of ram and shared CPU you will be 
 
 ### Video Walkthrough
 
-[![apache-yt](https://img.youtube.com/vi/uGugeHVEeiU/0.jpg)](https://www.youtube.com/watch?v=uGugeHVEeiU)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube uGugeHVEeiU >}}  
 

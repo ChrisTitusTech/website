@@ -59,5 +59,4 @@ I don't recommend using backup, restartable mode, or jobs. Jobs typically miss o
 
 ### Walkthrough Video
 
-[![30daychromeosvid](https://img.youtube.com/vi/0q3rGK_IMZg/0.jpg)](https://www.youtube.com/watch?v=0q3rGK_IMZg)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube 0q3rGK_IMZg >}}  

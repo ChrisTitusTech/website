@@ -28,7 +28,6 @@ This article gives you the resources on how to learn Linux. If I am missing a re
 |[Pluralsight (Classroom Style Courses - PAID)](https://christitus.com/pluralsight)|[Lin0xide](https://linoxide.com/)|
 
 Video Overview of Learning Resources
-[![learn linux-yt](https://img.youtube.com/vi/a2qblT7o4mE/0.jpg)](https://www.youtube.com/watch?v=a2qblT7o4mE)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube a2qblT7o4mE >}}  
 
 

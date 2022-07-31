@@ -149,6 +149,5 @@ depth=16
 ```
 
 ## Video Walkthrough
-[![lightdm guide](https://img.youtube.com/vi/_dYqisDIcC0/0.jpg)](https://www.youtube.com/watch?v=_dYqisDIcC0)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube _dYqisDIcC0 >}}  
 

@@ -53,8 +53,11 @@
 &lt;li&gt;Enjoy&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=QU28LQ1CX7Q&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/QU28LQ1CX7Q/0.jpg&#34; alt=&#34;xenorchestra-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/QU28LQ1CX7Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;I hope you enjoyed this walkthrough of how to install Xen Orchestra and if you have any feedback let me know below. In closing, I really like this product and think it is a great addition to the XenServer and a much-needed improvement over what Citrix offers.&lt;/p&gt;</description>
     </item>
     
@@ -88,8 +91,11 @@
 &lt;li&gt;Finish&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=mn17fHzn2XQ&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/mn17fHzn2XQ/0.jpg&#34; alt=&#34;iscsi-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/mn17fHzn2XQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;In the end, we now have a centralized storage system that all our hosts can put their VMs on. This is key for using high availability, Xen Orchestra, and quick migrations. Remember to use the community-driven XenServer @ &lt;a href=&#34;https://xcp-ng.org/&#34;&gt;https://xcp-ng.org/&lt;/a&gt;, therefore you can get all the enterprise features of XenServer in your lab environment.&lt;/p&gt;</description>
     </item>
     
@@ -118,8 +124,11 @@
 &lt;p&gt;&lt;code&gt;service xapi restart&lt;/code&gt; – This restarts a core service&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;xsconsole&lt;/code&gt; – This launches console to check pool, network config, ha, running VMS, etc.&lt;/p&gt;
 &lt;h3 id=&#34;how-to-video-going-over-troubleshooting&#34;&gt;How-To Video going over troubleshooting&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UqsaRixKveA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/UqsaRixKveA/0.jpg&#34; alt=&#34;apache-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/UqsaRixKveA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;This will get your server back up and accessible, however, this disables high availability and will need to be set back up. It’s important to note the cause of an event like this. In my case, the SR I was using to host my VMs was not sufficient and caused the outage. If this happens to you make sure you have a good SAN/NAS for hosting on a Gigabit or above connection. I’d highly recommend a 10Gbs connection or a multipath gigabit connection at the very least.&lt;/p&gt;</description>
     </item>
@@ -132,8 +141,10 @@
       <guid>https://christitus.com/xenserver-xcp-ng-first-vm-install/</guid>
       <description>&lt;p&gt;This video goes through setting up a Virtual Machine in XenServer / XCP-ng in a lab environment. If you want to experiment with in detail with XenServer, I highly recommend you download XCP-ng from their &lt;a href=&#34;https://xcp-ng.org&#34;&gt;official website&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This is a community-powered version of XenServer with ALL FEATURES ENABLED. XenServer from Citrix has recently started going away from its open-source roots and as a result, has begun locking features behind a paywall.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=n-0CWPhxgP0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/n-0CWPhxgP0/0.jpg&#34; alt=&#34;XenServer VM Install&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/n-0CWPhxgP0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -143,8 +154,10 @@
       
       <guid>https://christitus.com/virtualization-introduction/</guid>
       <description>&lt;p&gt;This is a virtualization introduction and when you should be using it. In the follow-up videos, I will go into using the hypervisor, creating VMs and maintenance.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=T0nywDkf1IE&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/T0nywDkf1IE/0.jpg&#34; alt=&#34;Virtualization Introduction&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/T0nywDkf1IE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Now that you understand what it is and if you want to start getting your feet wet, please check out my other video to start installing your hypervisor and launching your first virtual machine [here][1]. I highly recommend starting out with VMware as it used the most. It also has the most material online if looking for virtualization introduction videos and how to guides.&lt;/p&gt;</description>
     </item>
     

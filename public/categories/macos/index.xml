@@ -41,8 +41,10 @@
 &lt;p&gt;This is for progress bar, or if you want to do filters, tags, yaml headers, and other sorting techniques. It does WAY more than I use it for at the moment. Since I&amp;rsquo;m limiting my notes to maybe 10-20 notes I don&amp;rsquo;t need the other stuff, but it is there incase I expand. For now, I will use the following code in my templates to add a progress bar that tracks any checkboxes and how many are checked compared to total.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`=&amp;#34;![progress](https://progress-bar.dev/&amp;#34; + round(length(filter(this.file.tasks.completed, (t) =&amp;gt; t = true)) / length(this.file.tasks.text) * 100) + &amp;#34;/)&amp;#34;`
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zGCv6aDDfP8&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/zGCv6aDDfP8/0.jpg&#34; alt=&#34;30daychromeosvid&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/zGCv6aDDfP8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -139,16 +141,22 @@ Razer has a bunch of cool features, but also has a great open source project cal
 &lt;li&gt;Logitech K780 Multi-Device Wireless Keyboard $100 - &lt;a href=&#34;https://amzn.to/33bKBUO&#34;&gt;https://amzn.to/33bKBUO&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;tituspi&#34;&gt;TitusPi&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wyvS1FxR4ic&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/wyvS1FxR4ic/0.jpg&#34; alt=&#34;studio tour&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/wyvS1FxR4ic&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Raspberry Pi 4 8GB Kit - $105 - &lt;a href=&#34;https://amzn.to/2K7CuBR&#34;&gt;https://amzn.to/2K7CuBR&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Raspberry Pi 4 Image - $5 - &lt;a href=&#34;https://www.cttstore.com/tituspi&#34;&gt;https://www.cttstore.com/tituspi&lt;/a&gt; OR Build it yourself &lt;a href=&#34;https://github.com/ChrisTitusTech/TitusPi&#34;&gt;https://github.com/ChrisTitusTech/TitusPi&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;audiovideo-production-stuff&#34;&gt;Audio/Video Production Stuff&lt;/h2&gt;
 &lt;p&gt;Here is Equipment I use for A/V and recommend to others. Below is a video going over my entire studio setup, but I left out the impractical gear that many wouldn&amp;rsquo;t want.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cuBay8QzYH4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/cuBay8QzYH4/0.jpg&#34; alt=&#34;studio tour&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/cuBay8QzYH4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Camera - M200 - $550 - &lt;a href=&#34;https://amzn.to/32T9qEU&#34;&gt;https://amzn.to/32T9qEU&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Camera Lens - Canon 22M 2.0 - $200 - &lt;a href=&#34;https://amzn.to/3pzW0r0&#34;&gt;https://amzn.to/3pzW0r0&lt;/a&gt;&lt;/li&gt;
@@ -567,8 +575,10 @@ AMD CPUs can technically work, but will require more tinkering and are more diff
 &lt;p&gt;&lt;em&gt;OR&lt;/em&gt; Edit &lt;code&gt;/etc/passwd&lt;/code&gt; and change /bin/bash to /bin/zsh&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/zsh-passwd.png&#34; alt=&#34;ZSH Switch&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gGmBUfMaWMU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/gGmBUfMaWMU/0.jpg&#34; alt=&#34;zsh guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/gGmBUfMaWMU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -660,8 +670,11 @@ ENOCH EDITION : &lt;a href=&#34;https://goo.gl/SVZ4ea&#34;&gt;https://goo.gl/SVZ
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=0O9TzNvVwR0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/0O9TzNvVwR0/0.jpg&#34; alt=&#34;chrome&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/0O9TzNvVwR0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;I typically love a lot of the Google projects and updates they do, but the missing www in the address bar left me a little puzzled and why they thought they needed to do it. On the plus side, I do like the new chrome tabs, so the entire update is not all bad. Also, the changes to default to secure sites has been a long time coming. There are many different reasons for this, but the fact is by forcing webmasters to use SSL and get secure is a good thing. These days non-secure http sites can easily be exploited by a variety of different methods and this is a welcomed change in my opinion.&lt;/p&gt;</description>
     </item>

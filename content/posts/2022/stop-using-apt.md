@@ -79,7 +79,6 @@ This is everything I want in a package manager and more. My hat is off to the te
 
 ## Walkthrough Video
 
-[![youtube-video](https://img.youtube.com/vi/oroSkR4Nn_w/0.jpg)](https://www.youtube.com/watch?v=oroSkR4Nn_w)
+{{< youtube oroSkR4Nn_w >}}
 
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 

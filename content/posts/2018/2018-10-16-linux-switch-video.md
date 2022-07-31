@@ -30,6 +30,5 @@ This will be the first article in a series of Linux articles, I am going over 6 
 
 ## Video Walkthrough
 
-[![linuxswitch-yt](https://img.youtube.com/vi/s5QGZ-DBYGs/0.jpg)](https://www.youtube.com/watch?v=s5QGZ-DBYGs)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube s5QGZ-DBYGs >}}  
 

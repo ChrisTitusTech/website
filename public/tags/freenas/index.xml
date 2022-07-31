@@ -46,9 +46,12 @@
 &lt;li&gt;Finish!&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;Install Plex on FreeNAS Video: &lt;a href=&#34;https://www.youtube.com/watch?v=99fQNbuAOlg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/99fQNbuAOlg/0.jpg&#34; alt=&#34;freenas-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;br&gt;
-Install FreeNAS Video: &lt;a href=&#34;https://youtu.be/G2-s1_OkHGA&#34;&gt;https://youtu.be/G2-s1_OkHGA&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;Install Plex on FreeNAS Video: 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/99fQNbuAOlg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Install FreeNAS Video: &lt;a href=&#34;https://youtu.be/G2-s1_OkHGA&#34;&gt;https://youtu.be/G2-s1_OkHGA&lt;/a&gt;&lt;br&gt;
 Setup FreeNAS Video: &lt;a href=&#34;https://youtu.be/JexkrpeM_WA&#34;&gt;https://youtu.be/JexkrpeM_WA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In closing, This guide will get Plex up and running on your FreeNAS without much hassle. I highly recommend this setup as ZFS is far superior to a RAID setup and makes sure that your data stays stable and reliable. Consequently, I find that my Plex server does run considerably faster in this configuration than it ever did when it was on my Windows 10 machine.&lt;/p&gt;
 &lt;p&gt;For general setup, configuration, and hardware setup, please refer to my guide @ &lt;a href=&#34;https://christitus.com/setup-freenas-11/&#34;&gt;https://christitus.com/setup-freenas-11/&lt;/a&gt;&lt;/p&gt;</description>
@@ -88,10 +91,16 @@ Setup FreeNAS Video: &lt;a href=&#34;https://youtu.be/JexkrpeM_WA&#34;&gt;https:
 &lt;li&gt;Test!&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;installation-video-walkthrough&#34;&gt;Installation Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;Install FreeNAS Video: &lt;a href=&#34;https://www.youtube.com/watch?v=G2-s1_OkHGA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/G2-s1_OkHGA/0.jpg&#34; alt=&#34;installfn-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;br&gt;
-Setup FreeNAS Video: &lt;a href=&#34;https://www.youtube.com/watch?v=JexkrpeM_WA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/JexkrpeM_WA/0.jpg&#34; alt=&#34;setupfn-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Install FreeNAS Video: 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/G2-s1_OkHGA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Setup FreeNAS Video: 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/JexkrpeM_WA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;p&gt;This will get you set up for a reliable network-attached storage in your home environment. Remember once you are finished to clone and image the USB FreeNAS drive. These USB Drives typically only last a couple years, so a backup is a must! In the end, FreeNAS is far more reliable than other commercial NAS products because of ZFS and its versatility.&lt;/p&gt;
 &lt;p&gt;For further configuration, I highly recommend checking out the FreeNAS wiki for using some of its more advanced features.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;http://doc.freenas.org&#34;&gt;http://doc.freenas.org&lt;/a&gt;&lt;/p&gt;

@@ -43,8 +43,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;strong&gt;Modify Applications Menu:&lt;/strong&gt; explorer shell:AppsFolder&lt;br&gt;
 &lt;strong&gt;Change Windows 10 Start Menu:&lt;/strong&gt; shell:StartMenuAllPrograms or shell:Start Menu&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=mWHiP9K8fQ0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/mWHiP9K8fQ0/0.jpg&#34; alt=&#34;secure web server&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/mWHiP9K8fQ0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -72,8 +74,11 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;li&gt;Done!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Vw-JA89brSg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Vw-JA89brSg/0.jpg&#34; alt=&#34;freenas-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Vw-JA89brSg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;In the end, you need to watch out for Windows updates. Anytime Windows does a major update, be prepared to repeat the process above, as it will reset it to Edge. Therefore, I’d bookmark the Chrometana Pro page or this one as you will be coming back to do this about twice a year. If you don’t want to do this, you can always switch to Linux. Consequently, I have written an article about the pro’s and con’s of such a switch and I highly recommend the switch if you are able.&lt;/p&gt;</description>
     </item>
     
@@ -99,8 +104,11 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;li&gt;Name “Allow All”&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;video-guide&#34;&gt;Video Guide&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=fvFWFrN-MZQ&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/fvFWFrN-MZQ/0.jpg&#34; alt=&#34;iscsi-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/fvFWFrN-MZQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;finishing-up&#34;&gt;Finishing Up&lt;/h3&gt;
 &lt;p&gt;By doing this you allow all traffic inbound to this computer, consequently, all outbound traffic is already allowed by default. Therefore, certain programs and services that depend on windows firewall can function properly. In conclusion, this is a far superior way of disabling the built-in firewall in windows without affecting other programs.&lt;/p&gt;</description>
     </item>
@@ -129,8 +137,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
       
       <guid>https://christitus.com/installing-linux-subsystem/</guid>
       <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RriP3LmuKNA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/RriP3LmuKNA/0.jpg&#34; alt=&#34;WSL&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/RriP3LmuKNA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
@@ -183,8 +193,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;/ul&gt;
 &lt;p&gt;[&lt;img src=&#34;https://christitus.com/images/2018/09/debloatwin10cmd.png&#34; alt=&#34;debloatwin10cmd&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=q4ziE5Am0pM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/q4ziE5Am0pM/0.jpg&#34; alt=&#34;Debloat Windows 10&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/q4ziE5Am0pM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -269,8 +281,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;li&gt;Reboot and you are done!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthroughs&#34;&gt;Video Walkthroughs&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=F72D7uL6cZg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/F72D7uL6cZg/0.jpg&#34; alt=&#34;Fix Windows Boot Partition&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/F72D7uL6cZg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>

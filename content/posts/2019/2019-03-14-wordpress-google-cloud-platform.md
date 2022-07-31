@@ -109,8 +109,7 @@ This adds permissions for the Apache server user to use the files in the webpage
 
 ## Video Walkthrough
 
-[![wordpress-yt](https://img.youtube.com/vi/vIJdypOqlL4/0.jpg)](https://www.youtube.com/watch?v=vIJdypOqlL4)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube vIJdypOqlL4 >}}  
 
 In Conclusion, you now have WordPress on Google Cloud Platform. Enjoy the experience and let me know in the comments if you have any issues. 
 

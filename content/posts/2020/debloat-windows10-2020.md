@@ -50,8 +50,7 @@ Based on User feedback Microsoft Store and Windows Defender is no longer touched
 
 ### Toolbox Walkthrough Video
 
-[![win10toolbox](https://img.youtube.com/vi/V27McA7ch6w/0.jpg)](https://www.youtube.com/watch?v=V27McA7ch6w)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube V27McA7ch6w >}}  
 
 ## User Requested Restore Scripts
 

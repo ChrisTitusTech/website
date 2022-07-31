@@ -45,7 +45,6 @@ HardenTools to disable services: <https://github.com/securitywithoutborders/hard
 
 ## Walkthrough Video
 
-[![youtube-video](https://img.youtube.com/vi/Bh8HqxxI4pc/0.jpg)](https://www.youtube.com/watch?v=Bh8HqxxI4pc)
+{{< youtube Bh8HqxxI4pc >}}
 
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 

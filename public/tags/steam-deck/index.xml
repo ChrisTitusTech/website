@@ -38,8 +38,10 @@ Then install the downloaded ZST file through pacman - Ex. &lt;code&gt;sudo pacma
 &lt;h2 id=&#34;league-of-legends-on-linux--steam&#34;&gt;League of Legends on Linux / Steam&lt;/h2&gt;
 &lt;p&gt;Many also asked about the League of Legends and other riot games on steam deck. Now this can be done on any Linux system, but the way its done changes all the time as Riot isn&amp;rsquo;t very friendly to Linux. From the anti-cheat to the ridiculous launcher, it is always a nightmare to deal with unless the publisher stops smoking the devil&amp;rsquo;s lettuce and actually listens to its customers. Because of the ever changing landscape around these two things stay subscribed to &lt;a href=&#34;https://www.reddit.com/r/leagueoflinux/&#34;&gt;https://www.reddit.com/r/leagueoflinux/&lt;/a&gt; sub reddit. Those guys are working day and night to make sure that LoL keeps playing on Linux and are an amazing community&amp;hellip; UNLIKE most of League communities haha.&lt;/p&gt;
 &lt;h2 id=&#34;steam-deck---unexplored-potential&#34;&gt;Steam Deck - Unexplored Potential&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=8oQdJjxn9EA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/8oQdJjxn9EA/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/8oQdJjxn9EA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
   </channel>

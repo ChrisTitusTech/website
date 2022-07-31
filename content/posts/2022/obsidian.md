@@ -53,5 +53,4 @@ This is for progress bar, or if you want to do filters, tags, yaml headers, and 
 
 ### Walkthrough Video
 
-[![30daychromeosvid](https://img.youtube.com/vi/zGCv6aDDfP8/0.jpg)](https://www.youtube.com/watch?v=zGCv6aDDfP8)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube zGCv6aDDfP8 >}}  

@@ -50,7 +50,6 @@ Grub Rescue: <https://www.youtube.com/watch?v=r7meKJsjqfY>
 Kernel Upgrade with UKUU: <https://www.youtube.com/watch?v=fnn_MzosdwA>
 
 ## Video Walkthrough
-[![custom kernel-yt](https://img.youtube.com/vi/nd0MysqLDB0/0.jpg)](https://www.youtube.com/watch?v=nd0MysqLDB0)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube nd0MysqLDB0 >}}  
 
 

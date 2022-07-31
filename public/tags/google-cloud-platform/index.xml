@@ -73,8 +73,11 @@ Setup Project and VM (micro)&lt;/em&gt;&lt;br&gt;
 &lt;p&gt;&lt;code&gt;$ chown -R www-data:www-data /var/www/html/*&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;This adds permissions for the Apache server user to use the files in the webpage directory.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=vIJdypOqlL4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/vIJdypOqlL4/0.jpg&#34; alt=&#34;wordpress-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/vIJdypOqlL4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;In Conclusion, you now have WordPress on Google Cloud Platform. Enjoy the experience and let me know in the comments if you have any issues.&lt;/p&gt;
 &lt;p&gt;I live stream on &lt;a href=&#34;https://twitch.tv/christitustech&#34;&gt;Twitch&lt;/a&gt; and encourage you to drop in and ask a question. I regularly publish on &lt;a href=&#34;https://www.youtube.com/c/ChrisTitusTech&#34;&gt;YouTube&lt;/a&gt; and &lt;a href=&#34;https://christitus.com/&#34;&gt;christitus.com&lt;/a&gt;, but if you need immediate assistance, check out the Terminal Cafe with &lt;a href=&#34;https://christitus.com/discord&#34;&gt;Discord Invite Link&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
@@ -87,8 +90,11 @@ Setup Project and VM (micro)&lt;/em&gt;&lt;br&gt;
       <guid>https://christitus.com/intro-google-cloud-platform/</guid>
       <description>&lt;p&gt;This is an Introduction to Google Cloud Platform and goes over creating your first project and virtual machine. This walkthrough is for beginners that are just getting started with Google Cloud.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=tJyVG-u6RhA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/tJyVG-u6RhA/0.jpg&#34; alt=&#34;WSL&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/tJyVG-u6RhA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;gcloud-commands&#34;&gt;GCloud Commands&lt;/h2&gt;
 &lt;p&gt;Allows gcloud commands from command prompt&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://cloud.google.com/appengine/docs/standard/python/download&#34;&gt;https://cloud.google.com/appengine/docs/standard/python/download&lt;/a&gt;&lt;/p&gt;

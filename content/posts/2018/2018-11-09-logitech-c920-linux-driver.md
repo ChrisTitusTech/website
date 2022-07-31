@@ -57,8 +57,7 @@ Find your C920 Webcam or other webcams you need to switch the default settings o
 
 ### Video Walkthrough
 
-[![iscsi-ya](https://img.youtube.com/vi/7SZBQ5bqaWU/0.jpg)](https://www.youtube.com/watch?v=7SZBQ5bqaWU)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube 7SZBQ5bqaWU >}}  
 
 Now that you know about the Logitech C920 Linux Driver support and how it functions, you can fix it. I hope this helps you as it took me quite a while to hunt down this information.
 

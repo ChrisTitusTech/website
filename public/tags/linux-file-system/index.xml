@@ -44,8 +44,11 @@
 &lt;/ul&gt;
 &lt;p&gt;This details the Linux File System and should give you a better understanding of how to navigate around in not only a Linux system, but any UNIX based OS for that matter.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=roES8iAaJEM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/roES8iAaJEM/0.jpg&#34; alt=&#34;linux file system-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/roES8iAaJEM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 </description>
     </item>
     

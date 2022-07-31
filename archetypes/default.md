@@ -10,7 +10,8 @@ categories:
   - Networking
 tags:
   - Ubuntu
+draft: false
 ---
 <!--more-->
 
-
+{{< tweet user="christitustech" id="1550918768334979078" >}}

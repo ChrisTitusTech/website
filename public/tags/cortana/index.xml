@@ -31,8 +31,11 @@
 &lt;li&gt;Done!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Vw-JA89brSg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Vw-JA89brSg/0.jpg&#34; alt=&#34;freenas-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Vw-JA89brSg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;In the end, you need to watch out for Windows updates. Anytime Windows does a major update, be prepared to repeat the process above, as it will reset it to Edge. Therefore, I’d bookmark the Chrometana Pro page or this one as you will be coming back to do this about twice a year. If you don’t want to do this, you can always switch to Linux. Consequently, I have written an article about the pro’s and con’s of such a switch and I highly recommend the switch if you are able.&lt;/p&gt;</description>
     </item>
     

@@ -281,8 +281,7 @@ sudo chmod +x cproton.sh
 
 ## Video Walkthrough
 
-[![vidwalk](https://img.youtube.com/vi/xvrft9ULvho/0.jpg)](https://www.youtube.com/watch?v=xvrft9ULvho)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube xvrft9ULvho >}}  
 
 ## Conclusion
 

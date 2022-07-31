@@ -47,8 +47,10 @@
 &lt;/ul&gt;
 &lt;p&gt;I don&amp;rsquo;t recommend using backup, restartable mode, or jobs. Jobs typically miss options and 3rd party solution like veeam are FAR better for backups than robocopy EVER will be.&lt;/p&gt;
 &lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=0q3rGK_IMZg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/0q3rGK_IMZg/0.jpg&#34; alt=&#34;30daychromeosvid&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/0q3rGK_IMZg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -232,8 +234,11 @@ The Most challengeing Part of this was the SVG files used by mainroad. However, 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;!--more--&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now everytime I run &lt;code&gt;hugo new posts/newpost.md&lt;/code&gt; it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=6JaBian3vgI&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/6JaBian3vgI/0.jpg&#34; alt=&#34;hugo guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/6JaBian3vgI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This has changed my life and has made it so I can make posts like this one for people to follow. This entire post took me about an hour to write and would have take twice as long if I were to do it in WordPress.&lt;/p&gt;</description>
     </item>
@@ -296,8 +301,11 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;h2 id=&#34;external-program-setup-on-server&#34;&gt;External Program Setup on Server&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../images/2019/12/transmission.png&#34; alt=&#34;install image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;X11 Forwarding&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=auePeI8vZA8&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/auePeI8vZA8/0.jpg&#34; alt=&#34;x11 forwarding&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/auePeI8vZA8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Transmission daemon&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;sudo apt install transmission-daemon&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;sudo systemctl stop transmission-daemon&lt;/code&gt;&lt;br&gt;
@@ -305,8 +313,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;em&gt;*enable rpc and whitelist, add blocklist&lt;/em&gt;&lt;br&gt;
 &lt;code&gt;sudo systemctl start transmission-daemon&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;full-video-walkthrough&#34;&gt;Full Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wc-Ti8UoPoA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/wc-Ti8UoPoA/0.jpg&#34; alt=&#34;vpn kill switch&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/wc-Ti8UoPoA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -363,8 +373,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;netstat -tunlp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You will now have completed the basics of a secure web server!&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=7pJKBL9x6bY&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/7pJKBL9x6bY/0.jpg&#34; alt=&#34;secure web server&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/7pJKBL9x6bY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -420,8 +432,10 @@ Note: &lt;em&gt;Certificates stored in ~/.local/share/networkmanagement/certific
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/09/openvpnconnect.jpg&#34; alt=&#34;openvpnconnect&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Run the program and right click the icon in the tray and connect&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=CBJMl9MILbg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/CBJMl9MILbg/0.jpg&#34; alt=&#34;openvpn-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/CBJMl9MILbg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -476,8 +490,11 @@ Note: &lt;em&gt;Certificates stored in ~/.local/share/networkmanagement/certific
 &lt;p&gt;Xming required for X11 forwarding &lt;a href=&#34;https://sourceforge.net/projects/xming/&#34;&gt;https://sourceforge.net/projects/xming/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Verify X11 Forwarding in PuTTY options&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough-ssh-access&#34;&gt;Video Walkthrough SSH Access&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=w_OwmqjAcn0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/w_OwmqjAcn0/0.jpg&#34; alt=&#34;ssh-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/w_OwmqjAcn0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h1 id=&#34;transfer-files-via-ssh&#34;&gt;Transfer Files via SSH&lt;/h1&gt;
 &lt;p&gt;The difference between SFTP and SCP by default are one is interactive and the other isn’t. SCP is faster, but can’t be resumed where SFTP and slower and can be.&lt;/p&gt;
 &lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
@@ -515,8 +532,11 @@ Remote PC Syntax: &lt;code&gt;username@serverip:/path/to/file&lt;/code&gt;&lt;/p
 &lt;li&gt;Name “Allow All”&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;video-guide&#34;&gt;Video Guide&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=fvFWFrN-MZQ&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/fvFWFrN-MZQ/0.jpg&#34; alt=&#34;iscsi-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/fvFWFrN-MZQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;finishing-up&#34;&gt;Finishing Up&lt;/h3&gt;
 &lt;p&gt;By doing this you allow all traffic inbound to this computer, consequently, all outbound traffic is already allowed by default. Therefore, certain programs and services that depend on windows firewall can function properly. In conclusion, this is a far superior way of disabling the built-in firewall in windows without affecting other programs.&lt;/p&gt;</description>
     </item>

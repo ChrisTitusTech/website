@@ -454,8 +454,11 @@ if (!doNotTrack) {
 <p><code>service xapi restart</code> – This restarts a core service</p>
 <p><code>xsconsole</code> – This launches console to check pool, network config, ha, running VMS, etc.</p>
 <h3 id="how-to-video-going-over-troubleshooting">How-To Video going over troubleshooting</h3>
-<p><a href="https://www.youtube.com/watch?v=UqsaRixKveA"><img src="https://img.youtube.com/vi/UqsaRixKveA/0.jpg" alt="apache-yt"></a><br>
-<em>Note: YouTube Video - Hold Ctrl + Left Click to open in new window</em></p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/UqsaRixKveA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 <h3 id="conclusion">Conclusion</h3>
 <p>This will get your server back up and accessible, however, this disables high availability and will need to be set back up. It’s important to note the cause of an event like this. In my case, the SR I was using to host my VMs was not sufficient and caused the outage. If this happens to you make sure you have a good SAN/NAS for hosting on a Gigabit or above connection. I’d highly recommend a 10Gbs connection or a multipath gigabit connection at the very least.</p>
           </div>

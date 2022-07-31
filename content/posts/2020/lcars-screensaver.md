@@ -91,6 +91,5 @@ WantedBy=multi-user.target
   - Enable on startup `sudo systemctl enable lcars`
 
 ## Video Walkthrough
-[![hugo guide](https://img.youtube.com/vi/J2zasJz5vuA/0.jpg)](https://www.youtube.com/watch?v=J2zasJz5vuA)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube J2zasJz5vuA >}}  
 

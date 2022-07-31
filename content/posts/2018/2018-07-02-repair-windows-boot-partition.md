@@ -73,6 +73,5 @@ bootrec /fixboot <----Pick the installation will mirror /scanos bootrec /rebuild
   * Reboot and you are done!
 
 ## Video Walkthroughs
-[![Fix Windows Boot Partition](https://img.youtube.com/vi/F72D7uL6cZg/0.jpg)](https://www.youtube.com/watch?v=F72D7uL6cZg)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube F72D7uL6cZg >}}  
 

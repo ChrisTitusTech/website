@@ -85,8 +85,7 @@ _*check port by doing head /etc/openvpn/expressvpn.conf_
 ![install image](../images/2019/12/transmission.png)
 
 **X11 Forwarding**  
-[![x11 forwarding](https://img.youtube.com/vi/auePeI8vZA8/0.jpg)](https://www.youtube.com/watch?v=auePeI8vZA8)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube auePeI8vZA8 >}}  
 
 **Transmission daemon**  
 `sudo apt install transmission-daemon`  
@@ -96,6 +95,5 @@ _*enable rpc and whitelist, add blocklist_
 `sudo systemctl start transmission-daemon`
 
 ## Full Video Walkthrough
-[![vpn kill switch](https://img.youtube.com/vi/wc-Ti8UoPoA/0.jpg)](https://www.youtube.com/watch?v=wc-Ti8UoPoA)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube wc-Ti8UoPoA >}}  
 

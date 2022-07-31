@@ -35,8 +35,7 @@ If you still encounter issues install the AMDVLK package [https://github.com/GPU
 *Note: Nvidia card users can't use this package and are currently having issues with Doom*
 
 ## Video Walkthrough
-[![doom guide](https://img.youtube.com/vi/g3UPxd8iUsU/0.jpg)](https://www.youtube.com/watch?v=g3UPxd8iUsU)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube g3UPxd8iUsU >}}  
 
 # Conclusion
 All testing was done with a Linux box using an AMD Radeon RX580. Refer to the video above for a look at the performance. I have noticed a lot of people online complaining that they are still having performance problems, but all of them seem to be nVidia users.  

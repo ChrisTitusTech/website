@@ -47,6 +47,5 @@ Based on User feedback, this no longer uninstalls OneDrive or Office.
 
 ## Video Walkthrough
 
-[![Debloat Windows 10](https://img.youtube.com/vi/q4ziE5Am0pM/0.jpg)](https://www.youtube.com/watch?v=q4ziE5Am0pM)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube q4ziE5Am0pM >}}  
 

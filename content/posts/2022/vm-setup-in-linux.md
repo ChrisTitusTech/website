@@ -56,5 +56,4 @@ Reboot and you are Finished!
 
 ### Walkthrough Video
 
-[![30daychromeosvid](https://img.youtube.com/vi/Kq849CpGd88/0.jpg)](https://www.youtube.com/watch?v=Kq849CpGd88)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube Kq849CpGd88 >}}  

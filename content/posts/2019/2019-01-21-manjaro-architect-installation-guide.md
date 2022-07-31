@@ -18,7 +18,6 @@ In this book, I go over step by step the entire Manjaro Architect installation. 
 Amazon Link: https://amzn.to/2SS8lcb
 
 ## Video Walkthrough
-[![manjaro-yt](https://img.youtube.com/vi/530O4InhR3A/0.jpg)](https://www.youtube.com/watch?v=530O4InhR3A)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube 530O4InhR3A >}}  
 
 

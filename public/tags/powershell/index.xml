@@ -18,8 +18,11 @@
 &lt;p&gt;Easiest Method &lt;em&gt;NTLite&lt;/em&gt; ($30) - &lt;a href=&#34;https://www.ntlite.com/&#34;&gt;https://www.ntlite.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Free Method &lt;em&gt;MSMG Toolkit&lt;/em&gt; - &lt;a href=&#34;https://msmgtoolkit.in/&#34;&gt;https://msmgtoolkit.in/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;How to Make a Custom Windows 10 ISO with &lt;em&gt;MSMG Toolkit&lt;/em&gt; Video&lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=R6XPff38iSc&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/R6XPff38iSc/0.jpg&#34; alt=&#34;customiso&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/R6XPff38iSc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;h3 id=&#34;microsoft-method-for-custom-iso-advanced-users-only&#34;&gt;Microsoft Method for Custom ISO (Advanced Users Only)&lt;/h3&gt;
 &lt;p&gt;Downloading in Installing ADK (Microsoft Image Tools) &lt;a href=&#34;https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install&#34;&gt;https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install&lt;/a&gt;
 Using sysprep from Microsoft &lt;a href=&#34;https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation&#34;&gt;https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation&lt;/a&gt;&lt;/p&gt;
@@ -81,8 +84,11 @@ Reboot and Run&lt;br&gt;
 &lt;/ul&gt;
 &lt;p&gt;Based on User feedback, this no longer uninstalls OneDrive or Office.&lt;/p&gt;
 &lt;h3 id=&#34;toolbox-walkthrough-video&#34;&gt;Toolbox Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=V27McA7ch6w&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/V27McA7ch6w/0.jpg&#34; alt=&#34;win10toolbox&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/V27McA7ch6w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;windows-services-to-disable&#34;&gt;Windows Services to Disable&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Windows Defender &amp;amp; Firewall&lt;/li&gt;
@@ -286,8 +292,10 @@ Reboot and Run&lt;br&gt;
 &lt;p&gt;(&lt;em&gt;WARNING: WILL UNINSTALL LOTS OF STUFF&lt;/em&gt;)&lt;br&gt;
 &lt;a href=&#34;https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ultra-ltsc.ps1&#34;&gt;https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ultra-ltsc.ps1&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=2R28u7o9mls&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/2R28u7o9mls/0.jpg&#34; alt=&#34;pi laptop&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/2R28u7o9mls&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -373,8 +381,11 @@ Reboot and Run&lt;br&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;SetUACHigh&amp;#34;,
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;EnableSMB1&amp;#34;,
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Tfd7BXCo9Xk&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Tfd7BXCo9Xk/0.jpg&#34; alt=&#34;vidwalk&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Tfd7BXCo9Xk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This script will be great for most users out there without losing much if any functionality. I typically run this on every system I setup, but I encourage you to fork this project and make the customizations that you need. Anything is possible, and everything can be automated. Save yourself hours of time and learn how to use not only this script, but using PowerShell.&lt;/p&gt;</description>
     </item>
@@ -473,8 +484,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;strong&gt;Modify Applications Menu:&lt;/strong&gt; explorer shell:AppsFolder&lt;br&gt;
 &lt;strong&gt;Change Windows 10 Start Menu:&lt;/strong&gt; shell:StartMenuAllPrograms or shell:Start Menu&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=mWHiP9K8fQ0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/mWHiP9K8fQ0/0.jpg&#34; alt=&#34;secure web server&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/mWHiP9K8fQ0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -484,8 +497,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
       
       <guid>https://christitus.com/installing-linux-subsystem/</guid>
       <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RriP3LmuKNA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/RriP3LmuKNA/0.jpg&#34; alt=&#34;WSL&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/RriP3LmuKNA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
@@ -538,8 +553,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;/ul&gt;
 &lt;p&gt;[&lt;img src=&#34;https://christitus.com/images/2018/09/debloatwin10cmd.png&#34; alt=&#34;debloatwin10cmd&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=q4ziE5Am0pM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/q4ziE5Am0pM/0.jpg&#34; alt=&#34;Debloat Windows 10&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/q4ziE5Am0pM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>

@@ -95,6 +95,5 @@ I could put RAID 0 here... but honestly you should just use EXT4 or XFS if you a
 
 ## Video Walkthrough
 
-[![btrfs guide](https://img.youtube.com/vi/J2QP4onqJKI/0.jpg)](https://www.youtube.com/watch?v=J2QP4onqJKI)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube J2QP4onqJKI >}}  
 

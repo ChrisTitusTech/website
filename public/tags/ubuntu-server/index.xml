@@ -64,8 +64,11 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;h2 id=&#34;external-program-setup-on-server&#34;&gt;External Program Setup on Server&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../images/2019/12/transmission.png&#34; alt=&#34;install image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;X11 Forwarding&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=auePeI8vZA8&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/auePeI8vZA8/0.jpg&#34; alt=&#34;x11 forwarding&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/auePeI8vZA8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Transmission daemon&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;sudo apt install transmission-daemon&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;sudo systemctl stop transmission-daemon&lt;/code&gt;&lt;br&gt;
@@ -73,8 +76,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;em&gt;*enable rpc and whitelist, add blocklist&lt;/em&gt;&lt;br&gt;
 &lt;code&gt;sudo systemctl start transmission-daemon&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;full-video-walkthrough&#34;&gt;Full Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wc-Ti8UoPoA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/wc-Ti8UoPoA/0.jpg&#34; alt=&#34;vpn kill switch&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/wc-Ti8UoPoA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -131,8 +136,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;netstat -tunlp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You will now have completed the basics of a secure web server!&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=7pJKBL9x6bY&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/7pJKBL9x6bY/0.jpg&#34; alt=&#34;secure web server&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/7pJKBL9x6bY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -143,8 +150,11 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
       <guid>https://christitus.com/issuing-ssl-certs/</guid>
       <description>&lt;p&gt;This article goes over Issuing SSL Certs using Let’s Encrypt in Ubuntu 16.04. The basic steps outlined in the video are adding the repository, installing certbot, issuing a certificate, and enabling SSL.&lt;/p&gt;
 &lt;h4 id=&#34;video-guide&#34;&gt;Video Guide:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yC3GTHJRQuM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/yC3GTHJRQuM/0.jpg&#34; alt=&#34;ssl-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/yC3GTHJRQuM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;p&gt;Let’s Encrypt @ &lt;a href=&#34;https://letsencrypt.org&#34;&gt;https://letsencrypt.org&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Certbot @ &lt;a href=&#34;https://certbot.eff.org&#34;&gt;https://certbot.eff.org&lt;/a&gt;&lt;/p&gt;
@@ -166,8 +176,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
       
       <guid>https://christitus.com/installing-linux-subsystem/</guid>
       <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RriP3LmuKNA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/RriP3LmuKNA/0.jpg&#34; alt=&#34;WSL&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/RriP3LmuKNA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
@@ -191,11 +203,17 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
       <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;
 &lt;p&gt;Use my affiliate link to get a Private Internet Access VPN: &lt;a href=&#34;http://www.privateinternetaccess.com/pages/buy-vpn/christitus&#34;&gt;http://www.privateinternetaccess.com/pages/buy-vpn/christitus&lt;/a&gt;. This is a must-have for a dedicated Linux box specifically for privacy concerns.&lt;/p&gt;
 &lt;h3 id=&#34;setup-vpn-in-ubuntu-8211-no-commentary&#34;&gt;Setup VPN in Ubuntu – No Commentary&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=KrNgZPzHNeA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/KrNgZPzHNeA/0.jpg&#34; alt=&#34;Setup VPN no commentary&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/KrNgZPzHNeA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;setup-vpn-in-ubuntu-8211-with-commentary&#34;&gt;Setup VPN in Ubuntu – With Commentary&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=tHEd3fFfGpM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/tHEd3fFfGpM/0.jpg&#34; alt=&#34;Setup VPN in Ubuntu with commentary&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/tHEd3fFfGpM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;vpn-setup-commands&#34;&gt;VPN setup commands:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo su
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install openvpn -y

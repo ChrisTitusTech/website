@@ -20,8 +20,11 @@
 &lt;p&gt;Now simply install GIMP and it will automatically update to the latest version of GIMP from now on&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sudo apt-get install gimp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Here is a video walkthrough of install special GIMP scripts as well if you want to unlock the complete capabilities of GIMP.&lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=CysfnD7dYwM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/CysfnD7dYwM/0.jpg&#34; alt=&#34;gimp-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/CysfnD7dYwM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description>
     </item>
     
   </channel>

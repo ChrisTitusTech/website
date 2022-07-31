@@ -54,8 +54,9 @@ vmware-vdiskmanager.exe -k /path/to/shrink.vmdk
 
 ## Still Too Big?
 
-If it is still too large, you can simply export the VM to OVF format inside VMWare Workstation. This will create a new vmdk file that will be considerably smaller. You can ignore all the other files it creates.
+If it is still too large, you can simply export the VM to OVF format inside VMWare Workstation. This will create a new vmdk file that will be considerably smaller. OVF is pretty easy to move to VirtualBox and other VM platforms as well. 
 
 `export to ovf`
 
 ![ovf](/images/2022/vmware-ovf.jpg)
+

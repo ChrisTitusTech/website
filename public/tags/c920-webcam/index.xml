@@ -35,8 +35,11 @@
 &lt;p&gt;&lt;code&gt;v4l2-ctl -d /dev/video6 --set-ctrl=exposure_auto=1&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;v4l2-ctl -d /dev/video6 --set-ctrl=focus_auto=0&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=7SZBQ5bqaWU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/7SZBQ5bqaWU/0.jpg&#34; alt=&#34;iscsi-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/7SZBQ5bqaWU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Now that you know about the Logitech C920 Linux Driver support and how it functions, you can fix it. I hope this helps you as it took me quite a while to hunt down this information.&lt;/p&gt;</description>
     </item>
     

@@ -71,6 +71,5 @@ I also tell everyone to use the **recommended settings** as the other settings c
 
 ## Video Walkthrough
 
-[![secure web server](https://img.youtube.com/vi/mWHiP9K8fQ0/0.jpg)](https://www.youtube.com/watch?v=mWHiP9K8fQ0)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube mWHiP9K8fQ0 >}}  
 

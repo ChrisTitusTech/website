@@ -27,8 +27,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;is-this-really-needed&#34;&gt;Is this really needed?&lt;/h2&gt;
 &lt;p&gt;While all this above isn&amp;rsquo;t really needed, it is a really neat way to squeeze a bit performance out of your systems. It is ONLY recommended for those not sharing services and files through your network. It is also NOT recommended for those using Linux in a virtual machine as many of the mitigations are for VM protection. So use this RESPONSIBLY and don&amp;rsquo;t just slap it on every Linux install.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=8XueTkMTNvc&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/8XueTkMTNvc/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/8XueTkMTNvc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -108,8 +110,10 @@ Example:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Release Date: July 22, 2022&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=hbg-QgKOdac&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/hbg-QgKOdac/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/hbg-QgKOdac&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -157,8 +161,10 @@ Example:&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This is everything I want in a package manager and more. My hat is off to the team that came up with all these drastic improvements and it has made my life so much easier on Debian based systems!&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=oroSkR4Nn_w&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/oroSkR4Nn_w/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/oroSkR4Nn_w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -194,8 +200,10 @@ Example:&lt;/p&gt;
 &lt;p&gt;It continues down this path, forcing everyone to use snaps and fades to irrelevance until the entire desktop offering is discontinued.&lt;/p&gt;
 &lt;p&gt;It cuts it losses with snaps and starts streamlining their distro. Gone are the days of slow boot times and bloated distribution installs. It reverts to what it began as&amp;hellip; a user friendly and easy to user distribution that just works.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=pMfqCzbSmQU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/pMfqCzbSmQU/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/pMfqCzbSmQU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -386,8 +394,11 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;h2 id=&#34;external-program-setup-on-server&#34;&gt;External Program Setup on Server&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../images/2019/12/transmission.png&#34; alt=&#34;install image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;X11 Forwarding&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=auePeI8vZA8&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/auePeI8vZA8/0.jpg&#34; alt=&#34;x11 forwarding&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/auePeI8vZA8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Transmission daemon&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;sudo apt install transmission-daemon&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;sudo systemctl stop transmission-daemon&lt;/code&gt;&lt;br&gt;
@@ -395,8 +406,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;em&gt;*enable rpc and whitelist, add blocklist&lt;/em&gt;&lt;br&gt;
 &lt;code&gt;sudo systemctl start transmission-daemon&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;full-video-walkthrough&#34;&gt;Full Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wc-Ti8UoPoA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/wc-Ti8UoPoA/0.jpg&#34; alt=&#34;vpn kill switch&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/wc-Ti8UoPoA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -453,8 +466,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;netstat -tunlp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You will now have completed the basics of a secure web server!&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=7pJKBL9x6bY&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/7pJKBL9x6bY/0.jpg&#34; alt=&#34;secure web server&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/7pJKBL9x6bY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>

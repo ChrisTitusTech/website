@@ -48,6 +48,5 @@ This details the Linux File System and should give you a better understanding of
 
 ## Video Walkthrough
 
-[![linux file system-yt](https://img.youtube.com/vi/roES8iAaJEM/0.jpg)](https://www.youtube.com/watch?v=roES8iAaJEM)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube roES8iAaJEM >}}  
 

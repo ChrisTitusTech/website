@@ -57,8 +57,10 @@ Other Distributions use &lt;strong&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/s
 &lt;li&gt;Use a vanilla server distribution pen drive to boot to prompt, then chroot to your existing install and reinstall GRUB.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthroughs&#34;&gt;Video Walkthroughs&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=r7meKJsjqfY&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/r7meKJsjqfY/0.jpg&#34; alt=&#34;grub-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/r7meKJsjqfY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
   </channel>

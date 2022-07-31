@@ -35,8 +35,10 @@
 &lt;p&gt;&lt;em&gt;OR&lt;/em&gt; Edit &lt;code&gt;/etc/passwd&lt;/code&gt; and change /bin/bash to /bin/zsh&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/zsh-passwd.png&#34; alt=&#34;ZSH Switch&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gGmBUfMaWMU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/gGmBUfMaWMU/0.jpg&#34; alt=&#34;zsh guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/gGmBUfMaWMU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
   </channel>

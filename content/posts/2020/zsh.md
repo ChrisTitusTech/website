@@ -49,6 +49,5 @@ chsh $USER
 
 ## Video Walkthrough
 
-[![zsh guide](https://img.youtube.com/vi/gGmBUfMaWMU/0.jpg)](https://www.youtube.com/watch?v=gGmBUfMaWMU)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube gGmBUfMaWMU >}}  
 

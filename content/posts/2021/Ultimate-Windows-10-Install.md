@@ -32,8 +32,7 @@ Download MSMG Toolkit from their website.
 From the Source menu select expand and then mount in MSMG Toolkit. Below is a full video where I use MSMG toolkit to remove many components in Win10. 
 
 How to Make a Custom Windows 10 ISO with *MSMG Toolkit* Video  
-[![customiso](https://img.youtube.com/vi/R6XPff38iSc/0.jpg)](https://www.youtube.com/watch?v=R6XPff38iSc)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube R6XPff38iSc >}}  
 
 ### Install Drivers
 

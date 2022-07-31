@@ -59,7 +59,6 @@ Many also asked about the League of Legends and other riot games on steam deck. 
 
 ## Steam Deck - Unexplored Potential
 
-[![youtube-video](https://img.youtube.com/vi/8oQdJjxn9EA/0.jpg)](https://www.youtube.com/watch?v=8oQdJjxn9EA)
+{{< youtube 8oQdJjxn9EA >}}
 
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 

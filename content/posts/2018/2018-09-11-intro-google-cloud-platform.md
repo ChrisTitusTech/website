@@ -14,8 +14,7 @@ This is an Introduction to Google Cloud Platform and goes over creating your fir
   
 ## Video Walkthrough
 
-[![WSL](https://img.youtube.com/vi/tJyVG-u6RhA/0.jpg)](https://www.youtube.com/watch?v=tJyVG-u6RhA)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube tJyVG-u6RhA >}}  
 
 ## GCloud Commands
 

@@ -87,6 +87,5 @@ Run the program and right click the icon in the tray and connect
 
 ## Video Walkthrough
 
-[![openvpn-yt](https://img.youtube.com/vi/CBJMl9MILbg/0.jpg)](https://www.youtube.com/watch?v=CBJMl9MILbg)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube CBJMl9MILbg >}}  
 

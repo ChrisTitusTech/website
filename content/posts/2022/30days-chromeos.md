@@ -108,5 +108,4 @@ ChromeOS has some amazing use cases, but is definitely not for everyone. I have 
 
 ### Walkthrough Video
 
-[![30daychromeosvid](https://img.youtube.com/vi/fVRZlqmGrUk/0.jpg)](https://www.youtube.com/watch?v=fVRZlqmGrUk)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube fVRZlqmGrUk >}}  

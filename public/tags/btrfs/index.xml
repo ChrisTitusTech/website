@@ -95,8 +95,10 @@ RAID 10: &lt;code&gt;sudo btrfs -m raid10 -d raid10 /dev/sda1 /dev/sdb1 /dev/sdc
 &lt;/blockquote&gt;
 &lt;p&gt;I could put RAID 0 here&amp;hellip; but honestly you should just use EXT4 or XFS if you are looking for performance. It would be better than using BTRFS!&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=J2QP4onqJKI&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/J2QP4onqJKI/0.jpg&#34; alt=&#34;btrfs guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/J2QP4onqJKI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
   </channel>

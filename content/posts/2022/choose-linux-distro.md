@@ -92,7 +92,6 @@ So the best distribution is the one that suits your needs and preferences. Inste
 
 ## Walkthrough Video
 
-[![youtube-video](https://img.youtube.com/vi/dL05DoJ0qsQ/0.jpg)](https://www.youtube.com/watch?v=dL05DoJ0qsQ)
+{{< youtube dL05DoJ0qsQ >}}
 
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 

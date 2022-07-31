@@ -40,8 +40,7 @@ _Note: This will force the pool and slaves to reinitialize with the pool master_
 
 ### How-To Video going over troubleshooting
 
-[![apache-yt](https://img.youtube.com/vi/UqsaRixKveA/0.jpg)](https://www.youtube.com/watch?v=UqsaRixKveA)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube UqsaRixKveA >}}  
 
 ### Conclusion
 

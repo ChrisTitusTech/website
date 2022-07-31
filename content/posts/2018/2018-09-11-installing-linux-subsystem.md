@@ -15,8 +15,7 @@ tags:
 ---
 The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system. <!--more-->
 
-[![WSL](https://img.youtube.com/vi/RriP3LmuKNA/0.jpg)](https://www.youtube.com/watch?v=RriP3LmuKNA)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube RriP3LmuKNA >}}  
 
 ## Enable Linux Subsystem Feature
 

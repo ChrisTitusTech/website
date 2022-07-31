@@ -30,7 +30,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/vmware-vdisk.jpg&#34; alt=&#34;vdisk&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;still-too-big&#34;&gt;Still Too Big?&lt;/h2&gt;
-&lt;p&gt;If it is still too large, you can simply export the VM to OVF format inside VMWare Workstation. This will create a new vmdk file that will be considerably smaller. You can ignore all the other files it creates.&lt;/p&gt;
+&lt;p&gt;If it is still too large, you can simply export the VM to OVF format inside VMWare Workstation. This will create a new vmdk file that will be considerably smaller. OVF is pretty easy to move to VirtualBox and other VM platforms as well.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;export to ovf&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/vmware-ovf.jpg&#34; alt=&#34;ovf&#34;&gt;&lt;/p&gt;</description>
     </item>
@@ -67,8 +67,10 @@ Then install the downloaded ZST file through pacman - Ex. &lt;code&gt;sudo pacma
 &lt;h2 id=&#34;league-of-legends-on-linux--steam&#34;&gt;League of Legends on Linux / Steam&lt;/h2&gt;
 &lt;p&gt;Many also asked about the League of Legends and other riot games on steam deck. Now this can be done on any Linux system, but the way its done changes all the time as Riot isn&amp;rsquo;t very friendly to Linux. From the anti-cheat to the ridiculous launcher, it is always a nightmare to deal with unless the publisher stops smoking the devil&amp;rsquo;s lettuce and actually listens to its customers. Because of the ever changing landscape around these two things stay subscribed to &lt;a href=&#34;https://www.reddit.com/r/leagueoflinux/&#34;&gt;https://www.reddit.com/r/leagueoflinux/&lt;/a&gt; sub reddit. Those guys are working day and night to make sure that LoL keeps playing on Linux and are an amazing community&amp;hellip; UNLIKE most of League communities haha.&lt;/p&gt;
 &lt;h2 id=&#34;steam-deck---unexplored-potential&#34;&gt;Steam Deck - Unexplored Potential&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=8oQdJjxn9EA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/8oQdJjxn9EA/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/8oQdJjxn9EA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -92,8 +94,10 @@ Then install the downloaded ZST file through pacman - Ex. &lt;code&gt;sudo pacma
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;is-this-really-needed&#34;&gt;Is this really needed?&lt;/h2&gt;
 &lt;p&gt;While all this above isn&amp;rsquo;t really needed, it is a really neat way to squeeze a bit performance out of your systems. It is ONLY recommended for those not sharing services and files through your network. It is also NOT recommended for those using Linux in a virtual machine as many of the mitigations are for VM protection. So use this RESPONSIBLY and don&amp;rsquo;t just slap it on every Linux install.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=8XueTkMTNvc&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/8XueTkMTNvc/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/8XueTkMTNvc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -173,8 +177,10 @@ Example:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Release Date: July 22, 2022&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=hbg-QgKOdac&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/hbg-QgKOdac/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/hbg-QgKOdac&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -222,8 +228,10 @@ Example:&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This is everything I want in a package manager and more. My hat is off to the team that came up with all these drastic improvements and it has made my life so much easier on Debian based systems!&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=oroSkR4Nn_w&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/oroSkR4Nn_w/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/oroSkR4Nn_w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -304,8 +312,10 @@ They follow the same syntax as pacman except you run them at a user level and th
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;So the best distribution is the one that suits your needs and preferences. Instead of the one size fits all approach of Mac and Windows, Linux takes a completely different approach. Learn the above and try out the different options and you will make the perfect system for your needs. You will also understand why all the top 5 distros and other Linux garbage on the internet is worthless. That is because there is no perfect distro, however there is the perfect distro for YOU! It just so happens that it is different for each user and you have the options that no other system on earth give you with Linux.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=dL05DoJ0qsQ&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/dL05DoJ0qsQ/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/dL05DoJ0qsQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -341,8 +351,10 @@ They follow the same syntax as pacman except you run them at a user level and th
 &lt;p&gt;It continues down this path, forcing everyone to use snaps and fades to irrelevance until the entire desktop offering is discontinued.&lt;/p&gt;
 &lt;p&gt;It cuts it losses with snaps and starts streamlining their distro. Gone are the days of slow boot times and bloated distribution installs. It reverts to what it began as&amp;hellip; a user friendly and easy to user distribution that just works.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=pMfqCzbSmQU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/pMfqCzbSmQU/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/pMfqCzbSmQU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -402,8 +414,10 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;lt;/body&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/html&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=GERBV2Bv-A4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/GERBV2Bv-A4/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/GERBV2Bv-A4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -484,8 +498,10 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;p&gt;This is for progress bar, or if you want to do filters, tags, yaml headers, and other sorting techniques. It does WAY more than I use it for at the moment. Since I&amp;rsquo;m limiting my notes to maybe 10-20 notes I don&amp;rsquo;t need the other stuff, but it is there incase I expand. For now, I will use the following code in my templates to add a progress bar that tracks any checkboxes and how many are checked compared to total.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`=&amp;#34;![progress](https://progress-bar.dev/&amp;#34; + round(length(filter(this.file.tasks.completed, (t) =&amp;gt; t = true)) / length(this.file.tasks.text) * 100) + &amp;#34;/)&amp;#34;`
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zGCv6aDDfP8&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/zGCv6aDDfP8/0.jpg&#34; alt=&#34;30daychromeosvid&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/zGCv6aDDfP8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -521,8 +537,10 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;titus@debian:~$ sudo adduser titus libvirt-qemu
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Reboot and you are Finished!&lt;/p&gt;
 &lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Kq849CpGd88&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Kq849CpGd88/0.jpg&#34; alt=&#34;30daychromeosvid&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Kq849CpGd88&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -818,16 +836,22 @@ Razer has a bunch of cool features, but also has a great open source project cal
 &lt;li&gt;Logitech K780 Multi-Device Wireless Keyboard $100 - &lt;a href=&#34;https://amzn.to/33bKBUO&#34;&gt;https://amzn.to/33bKBUO&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;tituspi&#34;&gt;TitusPi&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wyvS1FxR4ic&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/wyvS1FxR4ic/0.jpg&#34; alt=&#34;studio tour&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/wyvS1FxR4ic&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Raspberry Pi 4 8GB Kit - $105 - &lt;a href=&#34;https://amzn.to/2K7CuBR&#34;&gt;https://amzn.to/2K7CuBR&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Raspberry Pi 4 Image - $5 - &lt;a href=&#34;https://www.cttstore.com/tituspi&#34;&gt;https://www.cttstore.com/tituspi&lt;/a&gt; OR Build it yourself &lt;a href=&#34;https://github.com/ChrisTitusTech/TitusPi&#34;&gt;https://github.com/ChrisTitusTech/TitusPi&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;audiovideo-production-stuff&#34;&gt;Audio/Video Production Stuff&lt;/h2&gt;
 &lt;p&gt;Here is Equipment I use for A/V and recommend to others. Below is a video going over my entire studio setup, but I left out the impractical gear that many wouldn&amp;rsquo;t want.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cuBay8QzYH4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/cuBay8QzYH4/0.jpg&#34; alt=&#34;studio tour&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/cuBay8QzYH4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Camera - M200 - $550 - &lt;a href=&#34;https://amzn.to/32T9qEU&#34;&gt;https://amzn.to/32T9qEU&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Camera Lens - Canon 22M 2.0 - $200 - &lt;a href=&#34;https://amzn.to/3pzW0r0&#34;&gt;https://amzn.to/3pzW0r0&lt;/a&gt;&lt;/li&gt;
@@ -1298,8 +1322,10 @@ You don&amp;rsquo;t have to use a company to exchange crypto, as you can use a d
 &lt;p&gt;I love this laptop and am looking forward to making some lesson plans for the upcoming school year to teach my kids about it. This is the perfect product to experiment and learn about a variety of things in technology. Ever since the Raspberry Pi came out, I have been looking for this type of laptop to fill this need of showcasing all that the pi is capable of and the Crow Pi 2 exceeded all my expectations.&lt;/p&gt;
 &lt;p&gt;Learn more about the CrowPi 2 here: &lt;a href=&#34;https://www.kickstarter.com/projects/elecrow/crowpi2-steam-education-platformand-raspberry-pi-laptop&#34;&gt;Kickstarter Page&lt;/a&gt; and &lt;a href=&#34;https://www.elecrow.com/development-kit.html&#34;&gt;Official Site&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=uZmiWQbOBDw&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/uZmiWQbOBDw/0.jpg&#34; alt=&#34;pi laptop&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/uZmiWQbOBDw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1441,8 +1467,11 @@ Auto-Install Project: &lt;a href=&#34;https://github.com/Termuellinator/ProtonUp
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./cproton.sh
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=xvrft9ULvho&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/xvrft9ULvho/0.jpg&#34; alt=&#34;vidwalk&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/xvrft9ULvho&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Doing these tweaks or just some of them will make a drastic difference when it comes to Gaming on Linux. I personally use all of the tweaks, but sometimes I end up not using the Custom kernel if I have issues with drivers like nvidia sometimes does not like it.&lt;/p&gt;</description>
     </item>
@@ -1707,8 +1736,11 @@ This will install the new GE proton into the ~/.steam/root/compatibility.d (arch
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you still encounter issues install the AMDVLK package &lt;a href=&#34;https://github.com/GPUOpen-Drivers/AMDVLK&#34;&gt;https://github.com/GPUOpen-Drivers/AMDVLK&lt;/a&gt;&lt;br&gt;
 &lt;em&gt;Note: Nvidia card users can&amp;rsquo;t use this package and are currently having issues with Doom&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=g3UPxd8iUsU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/g3UPxd8iUsU/0.jpg&#34; alt=&#34;doom guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/g3UPxd8iUsU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;All testing was done with a Linux box using an AMD Radeon RX580. Refer to the video above for a look at the performance. I have noticed a lot of people online complaining that they are still having performance problems, but all of them seem to be nVidia users.&lt;br&gt;
 All these fixes should be merged in to the official version of proton in a couple months and you shouldn&amp;rsquo;t need to do any of this once this is done.&lt;/p&gt;
@@ -1744,8 +1776,10 @@ All these fixes should be merged in to the official version of proton in a coupl
 &lt;p&gt;&lt;em&gt;OR&lt;/em&gt; Edit &lt;code&gt;/etc/passwd&lt;/code&gt; and change /bin/bash to /bin/zsh&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/zsh-passwd.png&#34; alt=&#34;ZSH Switch&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=gGmBUfMaWMU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/gGmBUfMaWMU/0.jpg&#34; alt=&#34;zsh guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/gGmBUfMaWMU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1824,8 +1858,10 @@ Debian-based Installs &lt;code&gt;apt install xscreensaver xprintidle&lt;/code&g
 &lt;li&gt;Enable on startup &lt;code&gt;sudo systemctl enable lcars&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=J2zasJz5vuA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/J2zasJz5vuA/0.jpg&#34; alt=&#34;hugo guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/J2zasJz5vuA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1917,8 +1953,10 @@ RAID 10: &lt;code&gt;sudo btrfs -m raid10 -d raid10 /dev/sda1 /dev/sdb1 /dev/sdc
 &lt;/blockquote&gt;
 &lt;p&gt;I could put RAID 0 here&amp;hellip; but honestly you should just use EXT4 or XFS if you are looking for performance. It would be better than using BTRFS!&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=J2QP4onqJKI&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/J2QP4onqJKI/0.jpg&#34; alt=&#34;btrfs guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/J2QP4onqJKI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2102,8 +2140,11 @@ The Most challengeing Part of this was the SVG files used by mainroad. However, 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;!--more--&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now everytime I run &lt;code&gt;hugo new posts/newpost.md&lt;/code&gt; it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=6JaBian3vgI&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/6JaBian3vgI/0.jpg&#34; alt=&#34;hugo guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/6JaBian3vgI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This has changed my life and has made it so I can make posts like this one for people to follow. This entire post took me about an hour to write and would have take twice as long if I were to do it in WordPress.&lt;/p&gt;</description>
     </item>
@@ -2224,8 +2265,10 @@ For complete listing of user sessions type: &lt;code&gt;ls /usr/share/xsessions/
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;height=1080
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;depth=16
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=_dYqisDIcC0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/_dYqisDIcC0/0.jpg&#34; alt=&#34;lightdm guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/_dYqisDIcC0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2286,8 +2329,11 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;h2 id=&#34;external-program-setup-on-server&#34;&gt;External Program Setup on Server&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;../images/2019/12/transmission.png&#34; alt=&#34;install image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;X11 Forwarding&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=auePeI8vZA8&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/auePeI8vZA8/0.jpg&#34; alt=&#34;x11 forwarding&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/auePeI8vZA8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Transmission daemon&lt;/strong&gt;&lt;br&gt;
 &lt;code&gt;sudo apt install transmission-daemon&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;sudo systemctl stop transmission-daemon&lt;/code&gt;&lt;br&gt;
@@ -2295,8 +2341,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;em&gt;*enable rpc and whitelist, add blocklist&lt;/em&gt;&lt;br&gt;
 &lt;code&gt;sudo systemctl start transmission-daemon&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;full-video-walkthrough&#34;&gt;Full Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wc-Ti8UoPoA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/wc-Ti8UoPoA/0.jpg&#34; alt=&#34;vpn kill switch&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/wc-Ti8UoPoA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2345,8 +2393,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;h2 id=&#34;lvm-conclusion&#34;&gt;LVM conclusion&lt;/h2&gt;
 &lt;p&gt;LVM is fantastic for managing a system, but remember that the more drives you make in a volume group that the likely it is to fail. Instead of having one point of failure you can open yourself up for multiple points when making a large system with multiple drives.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=scMkYQxBtJ4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/scMkYQxBtJ4/0.jpg&#34; alt=&#34;lvm guide&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/scMkYQxBtJ4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2403,8 +2453,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;netstat -tunlp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;You will now have completed the basics of a secure web server!&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=7pJKBL9x6bY&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/7pJKBL9x6bY/0.jpg&#34; alt=&#34;secure web server&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/7pJKBL9x6bY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2471,8 +2523,11 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Video Overview of Learning Resources
-&lt;a href=&#34;https://www.youtube.com/watch?v=a2qblT7o4mE&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/a2qblT7o4mE/0.jpg&#34; alt=&#34;learn linux-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/a2qblT7o4mE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2504,8 +2559,10 @@ net.ipv6.conf.lo.disable_ipv6=1&lt;/p&gt;
 Grub Rescue: &lt;a href=&#34;https://www.youtube.com/watch?v=r7meKJsjqfY&#34;&gt;https://www.youtube.com/watch?v=r7meKJsjqfY&lt;/a&gt;&lt;br&gt;
 Kernel Upgrade with UKUU: &lt;a href=&#34;https://www.youtube.com/watch?v=fnn_MzosdwA&#34;&gt;https://www.youtube.com/watch?v=fnn_MzosdwA&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=nd0MysqLDB0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/nd0MysqLDB0/0.jpg&#34; alt=&#34;custom kernel-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/nd0MysqLDB0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2546,8 +2603,11 @@ Kernel Upgrade with UKUU: &lt;a href=&#34;https://www.youtube.com/watch?v=fnn_Mz
 &lt;/ul&gt;
 &lt;p&gt;This details the Linux File System and should give you a better understanding of how to navigate around in not only a Linux system, but any UNIX based OS for that matter.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=roES8iAaJEM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/roES8iAaJEM/0.jpg&#34; alt=&#34;linux file system-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/roES8iAaJEM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 </description>
     </item>
     
@@ -2604,8 +2664,10 @@ Note: &lt;em&gt;Certificates stored in ~/.local/share/networkmanagement/certific
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/09/openvpnconnect.jpg&#34; alt=&#34;openvpnconnect&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Run the program and right click the icon in the tray and connect&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=CBJMl9MILbg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/CBJMl9MILbg/0.jpg&#34; alt=&#34;openvpn-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/CBJMl9MILbg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2660,8 +2722,11 @@ Note: &lt;em&gt;Certificates stored in ~/.local/share/networkmanagement/certific
 &lt;p&gt;Xming required for X11 forwarding &lt;a href=&#34;https://sourceforge.net/projects/xming/&#34;&gt;https://sourceforge.net/projects/xming/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Verify X11 Forwarding in PuTTY options&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough-ssh-access&#34;&gt;Video Walkthrough SSH Access&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=w_OwmqjAcn0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/w_OwmqjAcn0/0.jpg&#34; alt=&#34;ssh-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/w_OwmqjAcn0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h1 id=&#34;transfer-files-via-ssh&#34;&gt;Transfer Files via SSH&lt;/h1&gt;
 &lt;p&gt;The difference between SFTP and SCP by default are one is interactive and the other isn’t. SCP is faster, but can’t be resumed where SFTP and slower and can be.&lt;/p&gt;
 &lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
@@ -2691,8 +2756,11 @@ Remote PC Syntax: &lt;code&gt;username@serverip:/path/to/file&lt;/code&gt;&lt;/p
 &lt;p&gt;Now simply install GIMP and it will automatically update to the latest version of GIMP from now on&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sudo apt-get install gimp&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Here is a video walkthrough of install special GIMP scripts as well if you want to unlock the complete capabilities of GIMP.&lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=CysfnD7dYwM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/CysfnD7dYwM/0.jpg&#34; alt=&#34;gimp-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/CysfnD7dYwM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2746,8 +2814,10 @@ Other Distributions use &lt;strong&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/s
 &lt;li&gt;Use a vanilla server distribution pen drive to boot to prompt, then chroot to your existing install and reinstall GRUB.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthroughs&#34;&gt;Video Walkthroughs&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=r7meKJsjqfY&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/r7meKJsjqfY/0.jpg&#34; alt=&#34;grub-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/r7meKJsjqfY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2817,8 +2887,11 @@ Setup Project and VM (micro)&lt;/em&gt;&lt;br&gt;
 &lt;p&gt;&lt;code&gt;$ chown -R www-data:www-data /var/www/html/*&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;This adds permissions for the Apache server user to use the files in the webpage directory.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=vIJdypOqlL4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/vIJdypOqlL4/0.jpg&#34; alt=&#34;wordpress-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/vIJdypOqlL4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;In Conclusion, you now have WordPress on Google Cloud Platform. Enjoy the experience and let me know in the comments if you have any issues.&lt;/p&gt;
 &lt;p&gt;I live stream on &lt;a href=&#34;https://twitch.tv/christitustech&#34;&gt;Twitch&lt;/a&gt; and encourage you to drop in and ask a question. I regularly publish on &lt;a href=&#34;https://www.youtube.com/c/ChrisTitusTech&#34;&gt;YouTube&lt;/a&gt; and &lt;a href=&#34;https://christitus.com/&#34;&gt;christitus.com&lt;/a&gt;, but if you need immediate assistance, check out the Terminal Cafe with &lt;a href=&#34;https://christitus.com/discord&#34;&gt;Discord Invite Link&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
@@ -2949,8 +3022,10 @@ Setup Project and VM (micro)&lt;/em&gt;&lt;br&gt;
 &lt;h3 id=&#34;aptitude-search-terms&#34;&gt;aptitude search terms&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.debian.org/doc/manuals/aptitude/ch02s04s05.en.html#tableSearchTermQuickGuide&#34;&gt;https://www.debian.org/doc/manuals/aptitude/ch02s04s05.en.html#tableSearchTermQuickGuide&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=xca3Ywf54N0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/xca3Ywf54N0/0.jpg&#34; alt=&#34;aptitude-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/xca3Ywf54N0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2980,8 +3055,10 @@ Setup Project and VM (micro)&lt;/em&gt;&lt;br&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/02/Selection_012.png&#34; alt=&#34;Garmin Express on Linux&#34;&gt;&lt;/p&gt;
 &lt;p&gt;With all this done you will be able to launch Garmin Express on Linux.&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=hg01Z6VCox0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/hg01Z6VCox0/0.jpg&#34; alt=&#34;garminexpress-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/hg01Z6VCox0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -2995,8 +3072,10 @@ Setup Project and VM (micro)&lt;/em&gt;&lt;br&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/01/manjaro-cover.jpg&#34; alt=&#34;Manjaro Architect Book&#34;&gt;&lt;br&gt;
 Amazon Link: &lt;a href=&#34;https://amzn.to/2SS8lcb&#34;&gt;https://amzn.to/2SS8lcb&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=530O4InhR3A&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/530O4InhR3A/0.jpg&#34; alt=&#34;manjaro-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/530O4InhR3A&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -3054,8 +3133,11 @@ Amazon Link: &lt;a href=&#34;https://amzn.to/2SS8lcb&#34;&gt;https://amzn.to/2SS
 &lt;p&gt;&lt;code&gt;v4l2-ctl -d /dev/video6 --set-ctrl=exposure_auto=1&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;v4l2-ctl -d /dev/video6 --set-ctrl=focus_auto=0&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=7SZBQ5bqaWU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/7SZBQ5bqaWU/0.jpg&#34; alt=&#34;iscsi-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/7SZBQ5bqaWU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Now that you know about the Logitech C920 Linux Driver support and how it functions, you can fix it. I hope this helps you as it took me quite a while to hunt down this information.&lt;/p&gt;</description>
     </item>
     
@@ -3114,8 +3196,10 @@ Amazon Link: &lt;a href=&#34;https://amzn.to/2SS8lcb&#34;&gt;https://amzn.to/2SS
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=s5QGZ-DBYGs&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/s5QGZ-DBYGs/0.jpg&#34; alt=&#34;linuxswitch-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/s5QGZ-DBYGs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -3171,8 +3255,10 @@ Amazon Link: &lt;a href=&#34;https://amzn.to/2SS8lcb&#34;&gt;https://amzn.to/2SS
 &lt;/blockquote&gt;
 &lt;p&gt;Comparatively, a microserver with 600-700 MB of ram and shared CPU you will be looking at 1-3 Start/Min/Max Start and Spare servers, and no more than 10 for ServerLimit/MaxClients/MaxRequestWorkers. There are other modifications you need to make in culling down apache modules, therefore you can increase these values further.&lt;/p&gt;
 &lt;h3 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=uGugeHVEeiU&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/uGugeHVEeiU/0.jpg&#34; alt=&#34;apache-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/uGugeHVEeiU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -3543,8 +3629,11 @@ Amazon Link: &lt;a href=&#34;https://amzn.to/2SS8lcb&#34;&gt;https://amzn.to/2SS
       <guid>https://christitus.com/issuing-ssl-certs/</guid>
       <description>&lt;p&gt;This article goes over Issuing SSL Certs using Let’s Encrypt in Ubuntu 16.04. The basic steps outlined in the video are adding the repository, installing certbot, issuing a certificate, and enabling SSL.&lt;/p&gt;
 &lt;h4 id=&#34;video-guide&#34;&gt;Video Guide:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yC3GTHJRQuM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/yC3GTHJRQuM/0.jpg&#34; alt=&#34;ssl-yt&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/yC3GTHJRQuM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 &lt;p&gt;Let’s Encrypt @ &lt;a href=&#34;https://letsencrypt.org&#34;&gt;https://letsencrypt.org&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Certbot @ &lt;a href=&#34;https://certbot.eff.org&#34;&gt;https://certbot.eff.org&lt;/a&gt;&lt;/p&gt;
@@ -3582,8 +3671,11 @@ Amazon Link: &lt;a href=&#34;https://amzn.to/2SS8lcb&#34;&gt;https://amzn.to/2SS
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=0O9TzNvVwR0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/0O9TzNvVwR0/0.jpg&#34; alt=&#34;chrome&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/0O9TzNvVwR0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;I typically love a lot of the Google projects and updates they do, but the missing www in the address bar left me a little puzzled and why they thought they needed to do it. On the plus side, I do like the new chrome tabs, so the entire update is not all bad. Also, the changes to default to secure sites has been a long time coming. There are many different reasons for this, but the fact is by forcing webmasters to use SSL and get secure is a good thing. These days non-secure http sites can easily be exploited by a variety of different methods and this is a welcomed change in my opinion.&lt;/p&gt;</description>
     </item>
@@ -3595,8 +3687,10 @@ Amazon Link: &lt;a href=&#34;https://amzn.to/2SS8lcb&#34;&gt;https://amzn.to/2SS
       
       <guid>https://christitus.com/installing-linux-subsystem/</guid>
       <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RriP3LmuKNA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/RriP3LmuKNA/0.jpg&#34; alt=&#34;WSL&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/RriP3LmuKNA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
@@ -3620,11 +3714,17 @@ Amazon Link: &lt;a href=&#34;https://amzn.to/2SS8lcb&#34;&gt;https://amzn.to/2SS
       <description>&lt;p&gt;This is a guide on how to set up an always on VPN in Ubuntu, and basic troubleshooting of VPNs in ubuntu server. I used Private Internet Access as an example VPN connection.&lt;/p&gt;
 &lt;p&gt;Use my affiliate link to get a Private Internet Access VPN: &lt;a href=&#34;http://www.privateinternetaccess.com/pages/buy-vpn/christitus&#34;&gt;http://www.privateinternetaccess.com/pages/buy-vpn/christitus&lt;/a&gt;. This is a must-have for a dedicated Linux box specifically for privacy concerns.&lt;/p&gt;
 &lt;h3 id=&#34;setup-vpn-in-ubuntu-8211-no-commentary&#34;&gt;Setup VPN in Ubuntu – No Commentary&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=KrNgZPzHNeA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/KrNgZPzHNeA/0.jpg&#34; alt=&#34;Setup VPN no commentary&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/KrNgZPzHNeA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;setup-vpn-in-ubuntu-8211-with-commentary&#34;&gt;Setup VPN in Ubuntu – With Commentary&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=tHEd3fFfGpM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/tHEd3fFfGpM/0.jpg&#34; alt=&#34;Setup VPN in Ubuntu with commentary&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/tHEd3fFfGpM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;vpn-setup-commands&#34;&gt;VPN setup commands:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo su
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt-get install openvpn -y

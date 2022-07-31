@@ -63,8 +63,7 @@ Razer has a bunch of cool features, but also has a great open source project cal
 
 ## TitusPi
 
-[![studio tour](https://img.youtube.com/vi/wyvS1FxR4ic/0.jpg)](https://www.youtube.com/watch?v=wyvS1FxR4ic)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube wyvS1FxR4ic >}}  
 
 - Raspberry Pi 4 8GB Kit - $105 - <https://amzn.to/2K7CuBR>
 - Raspberry Pi 4 Image - $5 - <https://www.cttstore.com/tituspi> OR Build it yourself <https://github.com/ChrisTitusTech/TitusPi>
@@ -73,8 +72,7 @@ _Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
 
 Here is Equipment I use for A/V and recommend to others. Below is a video going over my entire studio setup, but I left out the impractical gear that many wouldn't want. 
 
-[![studio tour](https://img.youtube.com/vi/cuBay8QzYH4/0.jpg)](https://www.youtube.com/watch?v=cuBay8QzYH4)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube cuBay8QzYH4 >}}  
 
 - Camera - M200 - $550 - <https://amzn.to/32T9qEU>
 - Camera Lens - Canon 22M 2.0 - $200 - <https://amzn.to/3pzW0r0>

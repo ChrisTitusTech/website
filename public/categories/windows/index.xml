@@ -30,7 +30,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/vmware-vdisk.jpg&#34; alt=&#34;vdisk&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;still-too-big&#34;&gt;Still Too Big?&lt;/h2&gt;
-&lt;p&gt;If it is still too large, you can simply export the VM to OVF format inside VMWare Workstation. This will create a new vmdk file that will be considerably smaller. You can ignore all the other files it creates.&lt;/p&gt;
+&lt;p&gt;If it is still too large, you can simply export the VM to OVF format inside VMWare Workstation. This will create a new vmdk file that will be considerably smaller. OVF is pretty easy to move to VirtualBox and other VM platforms as well.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;export to ovf&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/vmware-ovf.jpg&#34; alt=&#34;ovf&#34;&gt;&lt;/p&gt;</description>
     </item>
@@ -62,8 +62,10 @@
 &lt;p&gt;HardenTools to disable services: &lt;a href=&#34;https://github.com/securitywithoutborders/hardentools&#34;&gt;https://github.com/securitywithoutborders/hardentools&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/hardentools.png&#34; alt=&#34;harden&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Bh8HqxxI4pc&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Bh8HqxxI4pc/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Bh8HqxxI4pc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -302,8 +304,10 @@
 &lt;h2 id=&#34;paid-anti-virus&#34;&gt;Paid Anti-Virus&lt;/h2&gt;
 &lt;p&gt;For those that want good detection rates, better privacy, and low overhead. The antivirus I have recommend has stayed the same for years. I recommend &lt;a href=&#34;https://christitus.com/antivirus&#34;&gt;ESET&lt;/a&gt; for this because it is a proven antivirus that isn&amp;rsquo;t as intrusive as the others.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=9P6r7DLS77Q&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/9P6r7DLS77Q/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/9P6r7DLS77Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -345,8 +349,10 @@
 &lt;p&gt;The biggest factors to look at when considering antivirus is System Impact and History/Detection Rates.&lt;/p&gt;
 &lt;p&gt;ESET NOD32 Antivirus is the best I&amp;rsquo;ve found. They were one of the original antivirus programs with NOD32&amp;rsquo;s creation in 1987 and ESET being founded by the developers of NOD32 in 1992. The basic antivirus is fast has very little passive performance loss and fantastic detection rates. I recommend just doing the basic &lt;a href=&#34;https://www.jdoqocy.com/click-100287975-15083621&#34;&gt;NOD32 Antivirus&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UXT17bQ2W2Q&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/UXT17bQ2W2Q/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/UXT17bQ2W2Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -406,8 +412,10 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &amp;lt;/body&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/html&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=GERBV2Bv-A4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/GERBV2Bv-A4/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/GERBV2Bv-A4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -442,8 +450,10 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;p&gt;Windows updates set to defaults are crazy. They install and download at weird times and often update far too much. I give 2 options my recommended one that only installs security updates and allowing features updates after they have been proven over 1 year.&lt;/p&gt;
 &lt;p&gt;However, there is a disable all button. I do NOT recommend doing this, but is there for people that have specific software that they don&amp;rsquo;t update and don&amp;rsquo;t want their windows install changing at all. This is NOT secure, but often more stable and why you&amp;rsquo;d want to do something like this.&lt;/p&gt;
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=tPRv-ATUBe4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/tPRv-ATUBe4/0.jpg&#34; alt=&#34;youtube-video&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/tPRv-ATUBe4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -481,8 +491,10 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;p&gt;This is for progress bar, or if you want to do filters, tags, yaml headers, and other sorting techniques. It does WAY more than I use it for at the moment. Since I&amp;rsquo;m limiting my notes to maybe 10-20 notes I don&amp;rsquo;t need the other stuff, but it is there incase I expand. For now, I will use the following code in my templates to add a progress bar that tracks any checkboxes and how many are checked compared to total.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;`=&amp;#34;![progress](https://progress-bar.dev/&amp;#34; + round(length(filter(this.file.tasks.completed, (t) =&amp;gt; t = true)) / length(this.file.tasks.text) * 100) + &amp;#34;/)&amp;#34;`
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zGCv6aDDfP8&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/zGCv6aDDfP8/0.jpg&#34; alt=&#34;30daychromeosvid&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/zGCv6aDDfP8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -526,8 +538,10 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;/ul&gt;
 &lt;p&gt;I don&amp;rsquo;t recommend using backup, restartable mode, or jobs. Jobs typically miss options and 3rd party solution like veeam are FAR better for backups than robocopy EVER will be.&lt;/p&gt;
 &lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=0q3rGK_IMZg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/0q3rGK_IMZg/0.jpg&#34; alt=&#34;30daychromeosvid&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/0q3rGK_IMZg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -611,8 +625,11 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;h3 id=&#34;expand-and-mount-windows&#34;&gt;Expand and Mount Windows&lt;/h3&gt;
 &lt;p&gt;From the Source menu select expand and then mount in MSMG Toolkit. Below is a full video where I use MSMG toolkit to remove many components in Win10.&lt;/p&gt;
 &lt;p&gt;How to Make a Custom Windows 10 ISO with &lt;em&gt;MSMG Toolkit&lt;/em&gt; Video&lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=R6XPff38iSc&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/R6XPff38iSc/0.jpg&#34; alt=&#34;customiso&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/R6XPff38iSc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;h3 id=&#34;install-drivers&#34;&gt;Install Drivers&lt;/h3&gt;
 &lt;p&gt;Download and extract your drivers with the following Powershell command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DISM.exe /Online /Export-Driver /Destination:%HOMEDRIVE%%HOMEPATH%\Downloads\Drivers
@@ -653,8 +670,11 @@ Put the inf and driver x86 files here: &lt;code&gt;ToolKit_Directory\Drivers\Ins
 &lt;p&gt;Easiest Method &lt;em&gt;NTLite&lt;/em&gt; ($30) - &lt;a href=&#34;https://www.ntlite.com/&#34;&gt;https://www.ntlite.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Free Method &lt;em&gt;MSMG Toolkit&lt;/em&gt; - &lt;a href=&#34;https://msmgtoolkit.in/&#34;&gt;https://msmgtoolkit.in/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;How to Make a Custom Windows 10 ISO with &lt;em&gt;MSMG Toolkit&lt;/em&gt; Video&lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=R6XPff38iSc&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/R6XPff38iSc/0.jpg&#34; alt=&#34;customiso&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/R6XPff38iSc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 &lt;h3 id=&#34;microsoft-method-for-custom-iso-advanced-users-only&#34;&gt;Microsoft Method for Custom ISO (Advanced Users Only)&lt;/h3&gt;
 &lt;p&gt;Downloading in Installing ADK (Microsoft Image Tools) &lt;a href=&#34;https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install&#34;&gt;https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install&lt;/a&gt;
 Using sysprep from Microsoft &lt;a href=&#34;https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation&#34;&gt;https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation&lt;/a&gt;&lt;/p&gt;
@@ -716,8 +736,11 @@ Reboot and Run&lt;br&gt;
 &lt;/ul&gt;
 &lt;p&gt;Based on User feedback, this no longer uninstalls OneDrive or Office.&lt;/p&gt;
 &lt;h3 id=&#34;toolbox-walkthrough-video&#34;&gt;Toolbox Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=V27McA7ch6w&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/V27McA7ch6w/0.jpg&#34; alt=&#34;win10toolbox&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/V27McA7ch6w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;windows-services-to-disable&#34;&gt;Windows Services to Disable&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Windows Defender &amp;amp; Firewall&lt;/li&gt;
@@ -796,16 +819,22 @@ Razer has a bunch of cool features, but also has a great open source project cal
 &lt;li&gt;Logitech K780 Multi-Device Wireless Keyboard $100 - &lt;a href=&#34;https://amzn.to/33bKBUO&#34;&gt;https://amzn.to/33bKBUO&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;tituspi&#34;&gt;TitusPi&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=wyvS1FxR4ic&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/wyvS1FxR4ic/0.jpg&#34; alt=&#34;studio tour&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/wyvS1FxR4ic&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Raspberry Pi 4 8GB Kit - $105 - &lt;a href=&#34;https://amzn.to/2K7CuBR&#34;&gt;https://amzn.to/2K7CuBR&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Raspberry Pi 4 Image - $5 - &lt;a href=&#34;https://www.cttstore.com/tituspi&#34;&gt;https://www.cttstore.com/tituspi&lt;/a&gt; OR Build it yourself &lt;a href=&#34;https://github.com/ChrisTitusTech/TitusPi&#34;&gt;https://github.com/ChrisTitusTech/TitusPi&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;audiovideo-production-stuff&#34;&gt;Audio/Video Production Stuff&lt;/h2&gt;
 &lt;p&gt;Here is Equipment I use for A/V and recommend to others. Below is a video going over my entire studio setup, but I left out the impractical gear that many wouldn&amp;rsquo;t want.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cuBay8QzYH4&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/cuBay8QzYH4/0.jpg&#34; alt=&#34;studio tour&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/cuBay8QzYH4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Camera - M200 - $550 - &lt;a href=&#34;https://amzn.to/32T9qEU&#34;&gt;https://amzn.to/32T9qEU&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Camera Lens - Canon 22M 2.0 - $200 - &lt;a href=&#34;https://amzn.to/3pzW0r0&#34;&gt;https://amzn.to/3pzW0r0&lt;/a&gt;&lt;/li&gt;
@@ -1097,8 +1126,10 @@ You don&amp;rsquo;t have to use a company to exchange crypto, as you can use a d
 &lt;p&gt;(&lt;em&gt;WARNING: WILL UNINSTALL LOTS OF STUFF&lt;/em&gt;)&lt;br&gt;
 &lt;a href=&#34;https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ultra-ltsc.ps1&#34;&gt;https://raw.githubusercontent.com/ChrisTitusTech/win10script/master/ultra-ltsc.ps1&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=2R28u7o9mls&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/2R28u7o9mls/0.jpg&#34; alt=&#34;pi laptop&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/2R28u7o9mls&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1184,8 +1215,11 @@ You don&amp;rsquo;t have to use a company to exchange crypto, as you can use a d
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;SetUACHigh&amp;#34;,
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;EnableSMB1&amp;#34;,
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Tfd7BXCo9Xk&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Tfd7BXCo9Xk/0.jpg&#34; alt=&#34;vidwalk&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Tfd7BXCo9Xk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;This script will be great for most users out there without losing much if any functionality. I typically run this on every system I setup, but I encourage you to fork this project and make the customizations that you need. Anything is possible, and everything can be automated. Save yourself hours of time and learn how to use not only this script, but using PowerShell.&lt;/p&gt;</description>
     </item>
@@ -1389,8 +1423,11 @@ You will download this exe and rename it to your needs. It is configured by the 
 &lt;/ul&gt;
 &lt;p&gt;Based on User feedback Microsoft Store and Windows Defender is no longer touched.&lt;/p&gt;
 &lt;h3 id=&#34;toolbox-walkthrough-video&#34;&gt;Toolbox Walkthrough Video&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=V27McA7ch6w&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/V27McA7ch6w/0.jpg&#34; alt=&#34;win10toolbox&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/V27McA7ch6w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;user-requested-restore-scripts&#34;&gt;User Requested Restore Scripts&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JTbKD&amp;#39;))
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This restore script pops up a GUI that lets you restore what you want to FACTORY DEFAULTS!&lt;/p&gt;
@@ -1575,8 +1612,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;strong&gt;Modify Applications Menu:&lt;/strong&gt; explorer shell:AppsFolder&lt;br&gt;
 &lt;strong&gt;Change Windows 10 Start Menu:&lt;/strong&gt; shell:StartMenuAllPrograms or shell:Start Menu&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=mWHiP9K8fQ0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/mWHiP9K8fQ0/0.jpg&#34; alt=&#34;secure web server&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/mWHiP9K8fQ0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1604,8 +1643,11 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;li&gt;Done!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Vw-JA89brSg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/Vw-JA89brSg/0.jpg&#34; alt=&#34;freenas-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Vw-JA89brSg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;p&gt;In the end, you need to watch out for Windows updates. Anytime Windows does a major update, be prepared to repeat the process above, as it will reset it to Edge. Therefore, I’d bookmark the Chrometana Pro page or this one as you will be coming back to do this about twice a year. If you don’t want to do this, you can always switch to Linux. Consequently, I have written an article about the pro’s and con’s of such a switch and I highly recommend the switch if you are able.&lt;/p&gt;</description>
     </item>
     
@@ -1631,8 +1673,11 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;li&gt;Name “Allow All”&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;video-guide&#34;&gt;Video Guide&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=fvFWFrN-MZQ&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/fvFWFrN-MZQ/0.jpg&#34; alt=&#34;iscsi-ya&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/fvFWFrN-MZQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;finishing-up&#34;&gt;Finishing Up&lt;/h3&gt;
 &lt;p&gt;By doing this you allow all traffic inbound to this computer, consequently, all outbound traffic is already allowed by default. Therefore, certain programs and services that depend on windows firewall can function properly. In conclusion, this is a far superior way of disabling the built-in firewall in windows without affecting other programs.&lt;/p&gt;</description>
     </item>
@@ -1725,8 +1770,11 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=0O9TzNvVwR0&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/0O9TzNvVwR0/0.jpg&#34; alt=&#34;chrome&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/0O9TzNvVwR0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;I typically love a lot of the Google projects and updates they do, but the missing www in the address bar left me a little puzzled and why they thought they needed to do it. On the plus side, I do like the new chrome tabs, so the entire update is not all bad. Also, the changes to default to secure sites has been a long time coming. There are many different reasons for this, but the fact is by forcing webmasters to use SSL and get secure is a good thing. These days non-secure http sites can easily be exploited by a variety of different methods and this is a welcomed change in my opinion.&lt;/p&gt;</description>
     </item>
@@ -1738,8 +1786,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
       
       <guid>https://christitus.com/installing-linux-subsystem/</guid>
       <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=RriP3LmuKNA&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/RriP3LmuKNA/0.jpg&#34; alt=&#34;WSL&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/RriP3LmuKNA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
@@ -1792,8 +1842,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;/ul&gt;
 &lt;p&gt;[&lt;img src=&#34;https://christitus.com/images/2018/09/debloatwin10cmd.png&#34; alt=&#34;debloatwin10cmd&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=q4ziE5Am0pM&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/q4ziE5Am0pM/0.jpg&#34; alt=&#34;Debloat Windows 10&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/q4ziE5Am0pM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1878,8 +1930,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;li&gt;Reboot and you are done!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;video-walkthroughs&#34;&gt;Video Walkthroughs&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=F72D7uL6cZg&#34;&gt;&lt;img src=&#34;https://img.youtube.com/vi/F72D7uL6cZg/0.jpg&#34; alt=&#34;Fix Windows Boot Partition&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;em&gt;Note: YouTube Video - Hold Ctrl + Left Click to open in new window&lt;/em&gt;&lt;/p&gt;</description>
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/F72D7uL6cZg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>

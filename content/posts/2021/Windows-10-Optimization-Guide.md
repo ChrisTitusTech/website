@@ -21,8 +21,7 @@ Easiest Method *NTLite* ($30) - <https://www.ntlite.com/>
 Free Method *MSMG Toolkit* - <https://msmgtoolkit.in/>
 
 How to Make a Custom Windows 10 ISO with *MSMG Toolkit* Video  
-[![customiso](https://img.youtube.com/vi/R6XPff38iSc/0.jpg)](https://www.youtube.com/watch?v=R6XPff38iSc)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube R6XPff38iSc >}}  
 
 ### Microsoft Method for Custom ISO (Advanced Users Only)
 
@@ -105,8 +104,7 @@ Based on User feedback, this no longer uninstalls OneDrive or Office.
 
 ### Toolbox Walkthrough Video
 
-[![win10toolbox](https://img.youtube.com/vi/V27McA7ch6w/0.jpg)](https://www.youtube.com/watch?v=V27McA7ch6w)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube V27McA7ch6w >}}  
 
 ### Windows Services to Disable
 

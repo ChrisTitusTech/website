@@ -110,8 +110,7 @@ Comment any thing you don't want out... Example:
 
 ## Video Walkthrough
 
-[![vidwalk](https://img.youtube.com/vi/Tfd7BXCo9Xk/0.jpg)](https://www.youtube.com/watch?v=Tfd7BXCo9Xk)  
-_Note: YouTube Video - Hold Ctrl + Left Click to open in new window_
+{{< youtube Tfd7BXCo9Xk >}}  
 
 ## Conclusion
 
