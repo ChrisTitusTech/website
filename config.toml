@@ -84,7 +84,7 @@ icon_font = "Font Awesome 5 Free"
 
 ######################## sidebar widgets #########################
 [params.widgets]
-sidebar = ["about-me", "toc", "subscription", "google"]
+sidebar = ["toc", "google"]
 # available widget : search,about-me,authors,categories,tags,recent-post,social,promotion,subscription
 
 # preloader
@@ -113,6 +113,9 @@ expire_days = 2
 link = "plugins/bootstrap/bootstrap.min.css"
 [[params.plugins.css]]
 link = "plugins/slick/slick.min.css"
+[[params.plugins.css]]
+link = "css/custom-nav.css"
+
 
 # js plugins
 [[params.plugins.js]]

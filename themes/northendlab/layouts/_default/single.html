@@ -73,7 +73,7 @@
       <!-- right sidebar -->
       {{ if eq $sidebar "right" }}
       <aside class="col-lg-4 mt-5 mt-lg-0">
-        <div class="{{ if eq $sidebar `left` }}pr-lg-4{{ end }}{{ if eq $sidebar `right` }}pl-lg-4{{ end }}">
+        <div class="stickyside {{ if eq $sidebar `left` }}pr-lg-4{{ end }}{{ if eq $sidebar `right` }}pl-lg-4{{ end }}">
           {{- partial "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) -}}
         </div>
       </aside>
