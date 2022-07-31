@@ -17,11 +17,11 @@ div.stickyside.pl-lg-4 {
   margin-top: 10px;
   padding-top: 10px;
   padding-left: 8%;
-  background: rgb(55, 55, 55) !important;
   width:70%;
 }
 
 .banner-social {
+  display:inline-block;
   margin-top: 5px;
 }
 
