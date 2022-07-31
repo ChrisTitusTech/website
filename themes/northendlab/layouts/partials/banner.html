@@ -1,0 +1,36 @@
+<section>
+  <div class="container bannerpad">
+        <table width="100%"><tr><td width="50%">
+        <h1 class="mainpagetitle">Chris Titus Tech</h1>
+        </td><td width="30%">
+            <h3 class="banner-social">
+            {{ "<!-- about me -->" | safeHTML }}
+            {{ with site.Params.social_profile }}
+            <ul class="list-unstyled list-inline">
+                {{ range . }}
+                <li class="list-inline-item mr-3"><a href="{{ .link }}" aria-label="Social Profile"><i class="{{ .icon }}"></i></a></li>
+                {{ end }}
+            </ul>
+            {{ end }}</h3>
+        </td></tr></table>
+        <p class="banner-para">This site is a repository of guides, image downloads, and how to articles. You can browse the site by navigating the five sections on the top bar or using the search in the top right. I've been in IT for over 20 years and make articles and videos on YouTube to share my knowledge. Visit any of my socials by clicking on their icon.</p></td>
+  </div>
+</section>
+
+
+<!-- original banner 
+<section class="banner-creative" style="background-image:url('{{ site.Params.banner.bg_image | absURL }}')">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-lg-8 mb-4 mb-lg-0 order-1 order-lg-0">
+        <h1 class="title">{{ site.Params.banner.title | markdownify }}</h1>
+      </div>
+      {{ with site.Params.banner.image }}
+      <div class="col-lg-4 col-md-4 col-sm-6 order-0 order-lg-1 mb-5 mb-lg-0">
+        <img class="w-100" src="{{ . | absURL }}" alt="{{ site.Title }}">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+/banner -->

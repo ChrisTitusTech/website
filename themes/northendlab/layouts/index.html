@@ -1,23 +1,7 @@
 {{ define "main" }}
+{{ partial "banner.html" . }}
 
-<!-- banner 
-<section class="banner-creative" style="background-image:url('{{ site.Params.banner.bg_image | absURL }}')">
-  <div class="container">
-    <div class="row align-items-center justify-content-between">
-      <div class="col-lg-8 mb-4 mb-lg-0 order-1 order-lg-0">
-        <h1 class="title">{{ site.Params.banner.title | markdownify }}</h1>
-      </div>
-      {{ with site.Params.banner.image }}
-      <div class="col-lg-4 col-md-4 col-sm-6 order-0 order-lg-1 mb-5 mb-lg-0">
-        <img class="w-100" src="{{ . | absURL }}" alt="{{ site.Title }}">
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
-/banner -->
-
-<!-- featured-post-slider -->
+<!-- featured-post-slider 
 <div class="featured-post-slider">
   <div class="container">
     <div class="row justify-content-center">
@@ -45,7 +29,7 @@
     </div>
   </div>
 </div>
-<!-- /featured-post-slider -->
+ /featured-post-slider -->
 
 <!-- Popular Categories 
 <div class="popular-categories">
