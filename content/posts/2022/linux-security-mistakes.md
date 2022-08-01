@@ -1,14 +1,14 @@
 ---
 title: "The 3 Biggest Security Mistakes Linux Users Make"
 
-date: 2022-07-30T19:35:37-05:00
+date: 2022-08-03
 url: /linux-security-mistakes/
 image: images/2022-thumbs/linux-security-mistakes.jpg
 categories:
   - Linux
 tags:
   - Security
-draft: true
+draft: false
 ---
 Security is a journey, not a destination
 <!--more-->
@@ -127,7 +127,6 @@ AppArmor Documentation <https://gitlab.com/apparmor/apparmor/-/wikis/Documentati
 SELinux Documentation <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index>
 
 ## Walkthrough Video
-*Not Yet Released*
 
 {{< youtube 1111111 >}}
 

@@ -950,7 +950,6 @@ body.dark-mode main * {
 body.dark-mode p, body.dark-mode .paragraph {
   font-weight: 400;
   color: #f5f5f5;
-  font-size: 16px;
   font-family: "PT Sans", sans-serif; }
 
 body.dark-mode header.sticky-top {
@@ -962,7 +961,14 @@ header.nav-bg {
 body.dark-mode a.px-3 {
   color: #222222; }
 
-body.dark-mode .col-lg-8, body.dark-mode .featured-post-slider::before, body.dark-mode .bg-white, body.dark-mode li.list-inline-item, body.dark-mode div.widget, body.dark-mode .card-block, body.dark-mode .col-md-6 * {
+body.dark-mode .col-lg-8,
+body.dark-mode .featured-post-slider::before,
+body.dark-mode .bg-white,
+body.dark-mode li.list-inline-item,
+body.dark-mode div.widget,
+body.dark-mode .card-block,
+body.dark-mode .col-md-6 *,
+body.dark-mode .bannerpad {
   background: #373737 !important; }
 
 body.dark-mode a {
