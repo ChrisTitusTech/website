@@ -3,21 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
+    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
-    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
+    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/categories/linux/</loc>
-    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
+    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
+    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/shrink-vmware-vmdk/</loc>
-    <lastmod>2022-07-30T13:40:50-05:00</lastmod>
+    <loc>https://christitus.com/tags/security/</loc>
+    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/linux-security-mistakes/</loc>
+    <lastmod>2022-08-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/shrink-vmware-vmdk/</loc>
     <lastmod>2022-07-30T13:40:50-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/vmdk/</loc>
@@ -55,9 +61,6 @@
   </url><url>
     <loc>https://christitus.com/stop-using-apt/</loc>
     <lastmod>2022-07-19T17:32:28-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/security/</loc>
-    <lastmod>2022-07-15T13:14:39-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/not-safe-windows/</loc>
     <lastmod>2022-07-15T13:14:39-05:00</lastmod>
