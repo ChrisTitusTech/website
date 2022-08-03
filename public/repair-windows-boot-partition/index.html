@@ -441,72 +441,44 @@ if (!doNotTrack) {
           <div class="content mb-5">
             <p>This walkthrough shows you how to repair windows boot partition and boot from an existing windows installation without reinstalling windows.</p>
 <p>Recently I had an old server with a FAT32 system reserved partition and a bunch of extra partitions. I have already moved all the data off the server and it was ready for decommissioning. Before, I did this I wanted to go ahead and remove all these old partitions and just leave the C: Drive with the Windows installation then rebuild the System Reserved partition as NTFS as an exercise. Many backup programs have issues doing block level images with FAT32 partitions OR you need to do a physical to virtual setup. For me, I wanted to decommission the hardware but be able to spin up this server in a virtual environment if needed.</p>
-<h3 id="do-not-attempt-this-if-you-don8217t-have-backups"><strong>DO NOT ATTEMPT THIS IF YOU DON’T HAVE BACKUPS!!!!</strong></h3>
-<h5 id="step-1-delete-old-partitions-and-create-new-ones">Step 1: **Delete old partitions and create new ones**</h5>
+<h2 id="backup-before-attempting-this">Backup Before Attempting This!</h2>
+<h3 id="step-1-delete-old-partitions-and-create-new-ones">Step 1: Delete old partitions and create new ones</h3>
 <ul>
-<li>
-<p>Boot into your partition manager of choice (I used Parted Magic <a href="https://partedmagic.com/">https://partedmagic.com/</a>) – GParted</p>
-</li>
-<li>
-<p>Delete extra partitions including the old FAT32 system partition (These all should be very small between 100 MB and up to 2 GB)</p>
-</li>
-<li>
-<p>Create new NTFS partition with 512 MB of space and label it System Reserved</p>
-</li>
-<li>
-<p>Shutdown</p>
-</li>
+<li>Boot into your partition manager of choice (I used Parted Magic <a href="https://partedmagic.com/">https://partedmagic.com/</a> ) GParted</li>
+<li>Delete extra partitions including the old FAT32 system partition (These all should be very small between 100 MB and up to 2 GB)</li>
+<li>Create new NTFS partition with 512 MB of space and label it System Reserved</li>
+<li>Shutdown</li>
 </ul>
-<h5 id="step-2-setup-partitions-with-the-correct-drive-letters">Step 2: **Setup Partitions with the correct drive letters**</h5>
+<h3 id="step-2-setup-partitions-with-the-correct-drive-letters">Step 2: Setup Partitions with the correct drive letters</h3>
 <ul>
-<li>
-<p>Launch Windows 10 Install disc / usb</p>
-</li>
-<li>
-<p>Shift+F10 once you see language select to bring up command prompt</p>
-</li>
-<li>
-<p>Launch “DISKPART”</p>
-</li>
-<li>
-<p>select volume with 512MB (ex: select vol 0)</p>
-</li>
-<li>
-<p>assign letter=G: (or any letter that isn’t taken that is NOT C:)</p>
-</li>
-<li>
-<p>exit **OR **If Windows operating system is NOT on C:</p>
-</li>
-<li>
-<p>select volume with windows installation on it</p>
-</li>
-<li>
-<p>assign letter=C:</p>
-</li>
-<li>
-<p>exit</p>
-</li>
+<li>Launch Windows 10 Install disc / usb</li>
+<li>Shift+F10 once you see language select to bring up command prompt</li>
+<li>Launch <code>DISKPART</code></li>
+<li>select volume with 512MB (ex: <code>select vol 0</code>)</li>
+<li><code>assign letter=G:</code> (or any letter that isn’t taken that is NOT C:)</li>
+<li><code>exit</code> OR If Windows operating system is NOT on C:</li>
+<li><code>select volume</code> with windows installation on it</li>
+<li><code>assign letter=C:</code></li>
+<li><code>exit</code></li>
 </ul>
-<p>example output:</p>
+<p><em>Example output:</em></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">diskpart
 </span></span><span class="line"><span class="cl">select disk 0
 </span></span><span class="line"><span class="cl">list vol
-</span></span><span class="line"><span class="cl">select vol 0 &amp;lt;---500 MB Partition
+</span></span><span class="line"><span class="cl">select vol 0 &lt;---500 MB Partition
 </span></span><span class="line"><span class="cl">assign letter=G:
-</span></span><span class="line"><span class="cl">select vol 1 &amp;lt;--- Large Partition with Windows Install on it
+</span></span><span class="line"><span class="cl">select vol 1 &lt;--- Large Partition with Windows Install on it
 </span></span><span class="line"><span class="cl">assign letter=C:
 </span></span><span class="line"><span class="cl">exit
-</span></span></code></pre></div><p>Partitions are done – now time to fix problems with the “type” of partition – By forcing all paritions to be NTFS NT60</p>
+</span></span></code></pre></div><p>Partitions are done. Now time to fix problems with the “type” of partition – By forcing all partitions to be NTFS NT60</p>
 <p><code>bootsect.exe /nt60 all /force</code></p>
 <h5 id="step-3-copy-boot-records-fix-mbr-and-rebuild-bcd">Step 3: Copy Boot Records, Fix MBR, and Rebuild BCD</h5>
-<ul>
-<li>Rebuild new system reserved partition with EFI and regular boot files</li>
-</ul>
+<p>Rebuild new system reserved partition with EFI and regular boot files</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">bcdboot c:\Windows /s &lt;boot letter of System Reserved Partion&gt;: /f ALL
 </span></span><span class="line"><span class="cl">bcdboot c:\Windows /s G: /f ALL
 </span></span></code></pre></div><ul>
 <li>Now we can finally rebuild the bcd and master boot record like you see in so many online guides</li>
-<li>You can verify the system is seeing the windows installation by doing a bootrec /scanos and then be running through the rest of the commands to do the rest of the repairs</li>
+<li>You can verify the system is seeing the windows installation by doing a <code>bootrec /scanos</code> and then be running through the rest of the commands to do the rest of the repairs</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">bootrec /scanos &lt;---Verify it sees the windows install
 </span></span><span class="line"><span class="cl">bootrec /fixmbr
@@ -514,7 +486,7 @@ if (!doNotTrack) {
 </span></span></code></pre></div><ul>
 <li>Reboot and you are done!</li>
 </ul>
-<h2 id="video-walkthroughs">Video Walkthroughs</h2>
+<h2 id="video">Video</h2>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/F72D7uL6cZg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
@@ -570,12 +542,13 @@ if (!doNotTrack) {
 <aside>
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#backup-before-attempting-this">Backup Before Attempting This!</a>
       <ul>
-        <li><a href="#do-not-attempt-this-if-you-don8217t-have-backups"><strong>DO NOT ATTEMPT THIS IF YOU DON’T HAVE BACKUPS!!!!</strong></a></li>
+        <li><a href="#step-1-delete-old-partitions-and-create-new-ones">Step 1: Delete old partitions and create new ones</a></li>
+        <li><a href="#step-2-setup-partitions-with-the-correct-drive-letters">Step 2: Setup Partitions with the correct drive letters</a></li>
       </ul>
     </li>
-    <li><a href="#video-walkthroughs">Video Walkthroughs</a></li>
+    <li><a href="#video">Video</a></li>
   </ul>
 </nav>
 </aside>
