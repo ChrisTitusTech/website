@@ -5,11 +5,11 @@
     <link>https://christitus.com/tags/regex/</link>
     <description>Recent content in RegEx on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Aug 2022 10:15:56 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/regex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Save HOURS of work with Regex</title>
       <link>https://christitus.com/regex/</link>
-      <pubDate>Mon, 01 Aug 2022 10:15:56 -0500</pubDate>
+      <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://christitus.com/regex/</guid>
       <description>&lt;p&gt;RegEx is a formidable tool that many just don&amp;rsquo;t understand, but can save literally thousands of hours of work.&lt;/p&gt;
@@ -19,7 +19,7 @@
 &lt;p&gt;However, for many years I just couldn&amp;rsquo;t be bothered to learn anything beside the basics &lt;code&gt;.*&lt;/code&gt; or &lt;code&gt;[a-z]&lt;/code&gt;. I just had a project pop up where I&amp;rsquo;d have to spend hours finding and replacing a complex markdown line I was using to pull images and a video link. The solution was painfully obvious&amp;hellip; either I get better with RegEx or spend hours finding and replacing text in hundreds of posts.&lt;/p&gt;
 &lt;h2 id=&#34;understanding-regex&#34;&gt;Understanding RegEx&lt;/h2&gt;
 &lt;p&gt;Learning all the syntax for RegEx is not happening for me and probably many others. There is a solution for this and you don&amp;rsquo;t need to&amp;hellip; &lt;a href=&#34;https://regexr.com/&#34;&gt;https://regexr.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/regex/text-example.jpg&#34; alt=&#34;text-example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/regex/text-example.png&#34; alt=&#34;text-example&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now that you have an explainer of all the syntax and cheat sheet. We just need to know a few basic features of RegEx, so you can perfect the pattern that you need. Also, the need to understand groups and variables will make the find and replace much more powerful.&lt;/p&gt;
 &lt;h2 id=&#34;making-the-perfect-pattern&#34;&gt;Making the Perfect Pattern&lt;/h2&gt;
 &lt;p&gt;With our test example on regexr.com we can test our pattern to make sure we match exactly what we need. Now normally a guide would start talking about &lt;code&gt;.*&lt;/code&gt; and other match characters, but frankly any site like regexr or regex101.com, will have those laid out for you.&lt;/p&gt;
@@ -37,7 +37,7 @@
 &lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/11111111&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/uwtPH6owqZA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;</description>
     </item>
     
