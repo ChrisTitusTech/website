@@ -956,7 +956,9 @@ body.dark-mode header.sticky-top {
   background: white; }
 
 header.nav-bg {
-  visibility: hidden; }
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear; }
 
 body.dark-mode a.px-3 {
   color: #222222; }

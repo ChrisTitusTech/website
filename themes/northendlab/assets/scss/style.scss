@@ -41,6 +41,8 @@ body.dark-mode header.sticky-top {
 
 header.nav-bg {
     visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
 }
 
 body.dark-mode a.px-3 {
