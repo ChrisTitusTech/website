@@ -5,7 +5,52 @@
     <link>https://christitus.com/tags/</link>
     <description>Recent content in Tags on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 30 Jul 2022 13:40:50 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch</title>
+      <link>https://christitus.com/tags/arch/</link>
+      <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/arch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fedora</title>
+      <link>https://christitus.com/tags/fedora/</link>
+      <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/fedora/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://christitus.com/tags/ubuntu/</link>
+      <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RegEx</title>
+      <link>https://christitus.com/tags/regex/</link>
+      <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://christitus.com/tags/security/</link>
+      <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/security/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>VMDK</title>
       <link>https://christitus.com/tags/vmdk/</link>
@@ -34,47 +79,11 @@
     </item>
     
     <item>
-      <title>Arch</title>
-      <link>https://christitus.com/tags/arch/</link>
-      <pubDate>Sun, 24 Jul 2022 10:30:53 -0500</pubDate>
-      
-      <guid>https://christitus.com/tags/arch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fedora</title>
-      <link>https://christitus.com/tags/fedora/</link>
-      <pubDate>Sun, 24 Jul 2022 10:30:53 -0500</pubDate>
-      
-      <guid>https://christitus.com/tags/fedora/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://christitus.com/tags/ubuntu/</link>
-      <pubDate>Sun, 24 Jul 2022 10:30:53 -0500</pubDate>
-      
-      <guid>https://christitus.com/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Debian</title>
       <link>https://christitus.com/tags/debian/</link>
       <pubDate>Thu, 21 Jul 2022 12:07:52 -0500</pubDate>
       
       <guid>https://christitus.com/tags/debian/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Security</title>
-      <link>https://christitus.com/tags/security/</link>
-      <pubDate>Fri, 15 Jul 2022 13:14:39 -0500</pubDate>
-      
-      <guid>https://christitus.com/tags/security/</guid>
       <description></description>
     </item>
     

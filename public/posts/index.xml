@@ -5,7 +5,200 @@
     <link>https://christitus.com/posts/</link>
     <description>Recent content in Posts on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 30 Jul 2022 13:40:50 -0500</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Package Manager</title>
+      <link>https://christitus.com/best-package-manager/</link>
+      <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/best-package-manager/</guid>
+      <description>&lt;p&gt;Instead of using the built-in package manager in Linux or some container that never puts the programs files in a usable spot, we will use Homebrew!&lt;/p&gt;
+&lt;p&gt;I know, it&amp;rsquo;s an OS X package manager, but it works fantastic on Linux and solves MANY problems.&lt;/p&gt;
+&lt;p&gt;Main issues it addresses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Older packages from stable Linux distributions&lt;/li&gt;
+&lt;li&gt;Putting the installed packages in easy spots to reference them and modify them when needed.&lt;/li&gt;
+&lt;li&gt;Using sudo can be dangerous and brew installs it to a home directory instead of systemwide without needing sudo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A good example of this. On Debian and Fedora the package HUGO is old&amp;hellip; like really old. Anywhere between version .60 and .90 where home brew installs version .101-extended&lt;/p&gt;
+&lt;h2 id=&#34;installing-homebrew&#34;&gt;Installing Homebrew&lt;/h2&gt;
+&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Debian or Ubuntu&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install build-essential procps curl file git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Fedora, CentOS, or Red Hat&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum groupinstall &amp;#39;Development Tools&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum install procps-ng curl file git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum install libxcrypt-compat # needed by Fedora 30 and up
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;install-script&#34;&gt;Install Script&lt;/h3&gt;
+&lt;p&gt;One command to install it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-brew-available-in-terminal&#34;&gt;Make brew available in terminal&lt;/h3&gt;
+&lt;p&gt;By default homebrew puts itself in an easy to access directory. &lt;code&gt;/home/linuxbrew/.linuxbrew&lt;/code&gt; but there are a variety methods to use it from your prompt.&lt;/p&gt;
+&lt;h4 id=&#34;official-method&#34;&gt;Official Method&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test -d ~/.linuxbrew &amp;amp;&amp;amp; eval &amp;#34;$(~/.linuxbrew/bin/brew shellenv)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test -d /home/linuxbrew/.linuxbrew &amp;amp;&amp;amp; eval &amp;#34;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test -r ~/.bash_profile &amp;amp;&amp;amp; echo &amp;#34;eval \&amp;#34;\$($(brew --prefix)/bin/brew shellenv)\&amp;#34;&amp;#34; &amp;gt;&amp;gt; ~/.bash_profile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;eval \&amp;#34;\$($(brew --prefix)/bin/brew shellenv)\&amp;#34;&amp;#34; &amp;gt;&amp;gt; ~/.profile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;the-bashrc-method&#34;&gt;The .bashrc Method&lt;/h4&gt;
+&lt;p&gt;Add the following line to &lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;eval &amp;#34;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: if you use ZSH then the file you need to edit is &lt;code&gt;~/.zshrc&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;using-homebrew&#34;&gt;Using Homebrew&lt;/h2&gt;
+&lt;p&gt;With homebrew setup here are the commands I use almost daily&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;brew install programname&lt;/code&gt; - Install programname using brew&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew search programname&lt;/code&gt; - Search for programname in brew&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew uninstall programname&lt;/code&gt; - Uninstall program&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew update&lt;/code&gt; - Updates brew&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew upgrade program&lt;/code&gt; - Updates just that one program&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew list&lt;/code&gt; - List programs in brew&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Get Lost? &lt;code&gt;man brew&lt;/code&gt; to look at all documentation in terminal or don&amp;rsquo;t know what a program does? &lt;code&gt;brew info programname&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s it for the daily syntax&lt;/p&gt;
+&lt;h2 id=&#34;understanding-homebrew-terms&#34;&gt;Understanding Homebrew terms&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;keg - Program binaries created from source&lt;/li&gt;
+&lt;li&gt;bottle - Program binaries downloaded&lt;/li&gt;
+&lt;li&gt;cellar - Directory where kegs / binaries are stored&lt;/li&gt;
+&lt;li&gt;tap - git repository&lt;/li&gt;
+&lt;li&gt;cask - mac os native binary (not used in Linux)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is other stuff to homebrew but read the full documentation if interested here &lt;a href=&#34;https://docs.brew.sh/Formula-Cookbook#homebrew-terminology&#34;&gt;https://docs.brew.sh/Formula-Cookbook#homebrew-terminology&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Basics of homebrew on Linux official documentation &lt;a href=&#34;https://docs.brew.sh/Homebrew-on-Linux&#34;&gt;https://docs.brew.sh/Homebrew-on-Linux&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/11111111&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;thank-you-homebrew-team&#34;&gt;Thank you Homebrew Team&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Thanks &lt;a href=&#34;https://twitter.com/MacHomebrew?ref_src=twsrc%5Etfw&#34;&gt;@MacHomebrew&lt;/a&gt; for making an amazing product and also letting us Linux users in on the fun!&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1554153066823385089?ref_src=twsrc%5Etfw&#34;&gt;August 1, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Save HOURS of work with Regex</title>
+      <link>https://christitus.com/regex/</link>
+      <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/regex/</guid>
+      <description>&lt;p&gt;RegEx is a formidable tool that many just don&amp;rsquo;t understand, but can save literally thousands of hours of work.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Boom got it with RegEx... Thanks to the website RegExr for testing this insane string. &lt;a href=&#34;https://t.co/FHVonwqcsh&#34;&gt;pic.twitter.com/FHVonwqcsh&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1553598175314845697?ref_src=twsrc%5Etfw&#34;&gt;July 31, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;However, for many years I just couldn&amp;rsquo;t be bothered to learn anything beside the basics &lt;code&gt;.*&lt;/code&gt; or &lt;code&gt;[a-z]&lt;/code&gt;. I just had a project pop up where I&amp;rsquo;d have to spend hours finding and replacing a complex markdown line I was using to pull images and a video link. The solution was painfully obvious&amp;hellip; either I get better with RegEx or spend hours finding and replacing text in hundreds of posts.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-regex&#34;&gt;Understanding RegEx&lt;/h2&gt;
+&lt;p&gt;Learning all the syntax for RegEx is not happening for me and probably many others. There is a solution for this and you don&amp;rsquo;t need to&amp;hellip; &lt;a href=&#34;https://regexr.com/&#34;&gt;https://regexr.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/regex/text-example.png&#34; alt=&#34;text-example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now that you have an explainer of all the syntax and cheat sheet. We just need to know a few basic features of RegEx, so you can perfect the pattern that you need. Also, the need to understand groups and variables will make the find and replace much more powerful.&lt;/p&gt;
+&lt;h2 id=&#34;making-the-perfect-pattern&#34;&gt;Making the Perfect Pattern&lt;/h2&gt;
+&lt;p&gt;With our test example on regexr.com we can test our pattern to make sure we match exactly what we need. Now normally a guide would start talking about &lt;code&gt;.*&lt;/code&gt; and other match characters, but frankly any site like regexr or regex101.com, will have those laid out for you.&lt;/p&gt;
+&lt;p&gt;Instead, let&amp;rsquo;s talk about escaping characters and how to match weird expressions that have syntax like &lt;code&gt;[,(,+,?&lt;/code&gt; and more. All these can really mess up matching your pattern. So you need to &lt;em&gt;escape&lt;/em&gt; the with a &lt;code&gt;\&lt;/code&gt; before the symbol, so it would look something like this &lt;code&gt;\[blah\]&lt;/code&gt; this is regex speak for &lt;code&gt;[blah]&lt;/code&gt; the escaping character makes it actually register the bracket or parenthesis. Without it, it will probably just give you some syntax error.&lt;/p&gt;
+&lt;p&gt;The websites I gave above are perfect for pointing out flaws in your pattern or maybe you missed escaping that + sign or question mark. It&amp;rsquo;s why having these syntax sites available is vital.&lt;/p&gt;
+&lt;h2 id=&#34;selection-groups&#34;&gt;Selection Groups&lt;/h2&gt;
+&lt;p&gt;Now that you understand how to match things with RegEx you can wipe out things with ease, but what about saving that bit of the match you need?&lt;/p&gt;
+&lt;p&gt;Example (I want to save youtube video id):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;img.youtube.com/vi/0q3rGKIMZg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Using this Regex will clean it up and save the id using the selection group.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.*vi\/(.*)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will match and SELECT everything after &lt;code&gt;vi/&lt;/code&gt;  with &lt;code&gt;(.*)&lt;/code&gt; in the string, where &lt;code&gt;.*vi\/&lt;/code&gt; matches &lt;code&gt;img.youtube.com/vi/&lt;/code&gt;. The value &lt;code&gt;0q3rGKIMZg&lt;/code&gt; will be stored in &lt;code&gt;$1&lt;/code&gt; which is the first selection group. If you do multiple &lt;code&gt;()&lt;/code&gt; selections the second one would be &lt;code&gt;$2&lt;/code&gt; and so on.&lt;/p&gt;
+&lt;p&gt;Example new format from old &lt;code&gt;{{ youtube 0q3rGKIMZg }}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The replace field would simply be &lt;code&gt;{{ youtube $1 }}&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/11111111&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>The 3 Biggest Security Mistakes Linux Users Make</title>
+      <link>https://christitus.com/linux-security-mistakes/</link>
+      <pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/linux-security-mistakes/</guid>
+      <description>&lt;p&gt;Security is a journey, not a destination&lt;/p&gt;
+&lt;p&gt;So after making a couple videos showing how to increase performance in desktop computers running Linux, I was overwhelmed by the sheer scale of comments worried about mitigations. If you are worried about that, you should be even more worried about the things below.&lt;/p&gt;
+&lt;p&gt;Here are the 3 biggest things I see wrong in Linux installs that can easily be exploited or lead to massive problems. I&amp;rsquo;m choosing some of the worst offenders from the basic security layers an attacker goes through.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/linux-security-mistakes/basic-layers.png&#34; alt=&#34;basic-layers&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;network-level---not-using-a-firewall&#34;&gt;Network Level - Not using a Firewall&lt;/h2&gt;
+&lt;p&gt;Managing a firewall on a system can be a monumental task, but one of the most important is managing the traffic coming to and from your computer. The best packages for this in Linux is &lt;code&gt;ufw&lt;/code&gt; and &lt;code&gt;fail2ban&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;ufw&#34;&gt;UFW&lt;/h3&gt;
+&lt;p&gt;Uncomplicated Firewall is easy to setup and understand. It blocks traffic and allows it.&lt;/p&gt;
+&lt;h4 id=&#34;install-ufw&#34;&gt;Install UFW&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install ufw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;my-recommended-rules&#34;&gt;My recommended Rules&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw limit 22/tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw allow 80/tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw allow 443/tcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw default deny incoming
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw default allow outgoing
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw enable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;fail2ban&#34;&gt;Fail2Ban&lt;/h3&gt;
+&lt;p&gt;Fail2Ban is one of the best programs that is installed in every single Linux server I have EVER installed. This program is a intrusion prevention utility. Most install it, but forget to configure and use it. These are the settings I like to use.&lt;/p&gt;
+&lt;h4 id=&#34;installing-fail2ban&#34;&gt;Installing Fail2Ban&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install fail2ban
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;my-fail2ban-settings-file&#34;&gt;My Fail2Ban Settings File&lt;/h4&gt;
+&lt;p&gt;Fail2Ban by default doesn&amp;rsquo;t really do much unless you adjust the settings file. Here is mine, but feel free to change it to your needs.&lt;/p&gt;
+&lt;p&gt;All configuration files are in &lt;code&gt;/etc/fail2ban&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Configuration file examples and defaults are in two main files &lt;code&gt;/etc/fail2ban/fail2ban.conf&lt;/code&gt; and &lt;code&gt;/etc/fail2ban/jail.conf&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;My Config - &lt;code&gt;/etc/fail2ban/jail.local&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[DEFAULT]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ignoreip = 127.0.0.1/8 ::1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bantime = 3600
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;findtime = 600
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;maxretry = 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[sshd]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;enabled = true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now in more complex service environments I would generally start adding services and programs like &lt;code&gt;ssh-jail.conf&lt;/code&gt; to the &lt;code&gt;/etc/fail2ban/jail.d/&lt;/code&gt; directory. Any program that hackers use is typically always under watch, like WordPress installs for example:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/etc/fail2ban/jail.d/wordpress.conf&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[wordpress]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;enabled = true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;filter = wordpress
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;logpath = /var/log/auth.log
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;maxretry = 3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;port = http,https
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bantime = 300
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;enabling-fail2ban&#34;&gt;Enabling Fail2Ban&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl enable fail2ban
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl start fail2ban
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;operating-system-level---adding-repositories&#34;&gt;Operating System Level - Adding Repositories&lt;/h2&gt;
+&lt;p&gt;Too many times do I see people installing and using 10+ repositories on a Linux install. Obviously, adding repositories to get the programs you want on your system is something you will do. However, there is a hierarchy to these repositories and if you just blindly trust and import all the keys to the repositories, they can and will override packages from the base distribution. This isn&amp;rsquo;t good and can lead to security issues or even break your system. I&amp;rsquo;d highly recommend putting a priority on these, so it will only use them when the package doesn&amp;rsquo;t exist in that base repo.&lt;/p&gt;
+&lt;p&gt;If you don&amp;rsquo;t use any priority, often times the package you want from the added repo is installed and updated, but sometimes they add OTHER packages in that repo that will also overwrite existing packages, which can lead to some undesired results.&lt;/p&gt;
+&lt;h3 id=&#34;prioritizing-repositories&#34;&gt;Prioritizing Repositories&lt;/h3&gt;
+&lt;p&gt;Official documentation for APT (Debian) - &lt;a href=&#34;https://wiki.debian.org/DebianRepository/UseThirdParty&#34;&gt;https://wiki.debian.org/DebianRepository/UseThirdParty&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;All priority preference files are stored in the &lt;code&gt;/etc/apt/preferences.d/&lt;/code&gt; directory.&lt;/p&gt;
+&lt;p&gt;Example: &lt;code&gt;volian.perf&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Package: *
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pin: origin deb.volian.org
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pin-Priority: 100
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Set specific packages to only install with the &lt;code&gt;Package: *&lt;/code&gt; Line&lt;/li&gt;
+&lt;li&gt;Pin: Origin is the address of the repo&lt;/li&gt;
+&lt;li&gt;Pin-Priority is generally 100 which means it will update packages NOT in base repos.
+&lt;ul&gt;
+&lt;li&gt;1 = do not auto update&lt;/li&gt;
+&lt;li&gt;100 = update if not in other repos&lt;/li&gt;
+&lt;li&gt;over 100 = overwrite base repos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Arch doesn&amp;rsquo;t have any priorities in pacman that I can find, but most are building from source with limited 3rd party repositories. Building from source presents even more dangers for those that are blindly installing programs through the AUR.&lt;/p&gt;
+&lt;h2 id=&#34;application-level---not-using-apparmor-or-selinux&#34;&gt;Application Level - Not using AppArmor or SELinux&lt;/h2&gt;
+&lt;p&gt;Most Linux distributions have one of these installed by default, but there is one major one that most forget. Arch Linux. A lot of install scripts forget apparmor and SELinux is too complex for many to install. These programs do one massive security feature that many just don&amp;rsquo;t realize. They can sandbox and limit program access even when they get elevated. If an application profile doesn&amp;rsquo;t exist, they typically limit its access to the home folder and limit hardware access. You can customize application profiles to expand or limit access as needed. Without having either of the programs installed, you are putting yourself at risk.&lt;/p&gt;
+&lt;p&gt;However, just the simple act of installing these programs often leads to them being used or setup. They typically are set up to be in complain mode for AppArmor or permissive mode for SELinux. While these are fine for logging and adding some security, it normally would NOT stop the program doing damage.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve set these up in server environments and it is not trivial to do or maintain. Most, if not all, Linux desktops don&amp;rsquo;t bother with setting these to enforce mode and blocking programs that don&amp;rsquo;t comply to their application profile. This requires the end user to have knowledge of how to set up profiles and generate them when they are missing, so the programs will work correctly.&lt;/p&gt;
+&lt;p&gt;To learn more about using them:
+AppArmor Documentation &lt;a href=&#34;https://gitlab.com/apparmor/apparmor/-/wikis/Documentation&#34;&gt;https://gitlab.com/apparmor/apparmor/-/wikis/Documentation&lt;/a&gt;
+SELinux Documentation &lt;a href=&#34;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index&#34;&gt;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/index&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/1111111&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>Shrink VMWare VMDK File</title>
       <link>https://christitus.com/shrink-vmware-vmdk/</link>
