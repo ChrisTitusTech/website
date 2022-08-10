@@ -14,4 +14,4 @@ draft: false
 ---
 <!--more-->
 
-{{< tweet user="christitustech" id="1550918768334979078" >}}
+{{< nitter user="christitustech" id="1550918768334979078" >}}

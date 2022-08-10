@@ -161,6 +161,36 @@ if (!doNotTrack) {
     left: 10px;
     color:  #fff ;
   }
+
+  .nitter-tweet {
+    display: flex;
+    max-width: 550px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .nitter-anchor, .nitter-widget {
+    display: block;
+    visibility: visible;
+    width: 550px;
+    height: 136px;
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
+
+  .nitter-anchor {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .nitter-widget {
+    position: static;
+    border: 1px solid hsl(200, 19%, 84%);
+    border-radius: 12px;
+    z-index: 1;
+  }
 </style>
 </head>
 
@@ -501,8 +531,24 @@ if (!doNotTrack) {
 </div>
 
 <h2 id="thank-you-homebrew-team">Thank you Homebrew Team</h2>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thanks <a href="https://twitter.com/MacHomebrew?ref_src=twsrc%5Etfw">@MacHomebrew</a> for making an amazing product and also letting us Linux users in on the fun!</p>&mdash; Chris Titus Tech (@christitustech) <a href="https://twitter.com/christitustech/status/1554153066823385089?ref_src=twsrc%5Etfw">August 1, 2022</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="nitter-tweet nitter-tweet-rendered">
+    <a
+        class="nitter-anchor"
+        href="https://nitter.pussthecat.org/christitustech/status/1554153066823385089"
+        rel="noopener noreferrer nofollow"
+        target="_blank"
+        role="link"
+    ></a>
+    
+    <iframe
+        class="nitter-widget"
+        scrolling="no"
+        frameborder="0"
+        allowtransparency="true"
+        allowfullscreen="true"
+        src="https://nitter.pussthecat.org/christitustech/status/1554153066823385089/embed?theme=twitter"
+    ></iframe>
+</div>
           </div>
           <div class="mb-3 post-meta">
              <a class="bg-light py-2 px-3" href="https://christitus.com/tags/ubuntu">#Ubuntu</a>
