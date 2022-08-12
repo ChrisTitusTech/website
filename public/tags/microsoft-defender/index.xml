@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft Defender on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/microsoft-defender/</link>
+    <description>Recent content in Microsoft Defender on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 12 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/microsoft-defender/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Disable Win Defender</title>
+      <link>https://christitus.com/disable-win-defender/</link>
+      <pubDate>Fri, 12 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/disable-win-defender/</guid>
+      <description>&lt;p&gt;Windows Defender can be a massive drain on system performance and often can have a lot of false positives. While I recommend Anti-virus for most, I don&amp;rsquo;t like having it enabled on my systems that aren&amp;rsquo;t used for web browsing.&lt;/p&gt;
+&lt;h2 id=&#34;how-secure-is-windows-defender&#34;&gt;How Secure is Windows Defender&lt;/h2&gt;
+&lt;p&gt;I often hear the phrase and have used the phrase &amp;ldquo;Windows Defender is good enough&amp;rdquo;, but often get mistaken in to thinking Defender is a good Anti-Virus. For detection rates it is good, but for protection it is NOT! Why? Anyone with a little bit of knowledge knows how to disable it without the user even knowing it. The services, registry entries, and built-in windows policies are designed to make it easy for an administrator to disable it. Why does Microsoft make it so easy to disable it? Simple, Windows in business environments never use Defender and administrators need to disable it.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-the-methods-to-disable-defender&#34;&gt;What are the methods to disable defender?&lt;/h2&gt;
+&lt;p&gt;There are a multitude of ways to disable defender or render it useless. Most properly programmed viruses will utilize one or more of these methods below.&lt;/p&gt;
+&lt;h3 id=&#34;windows-settings&#34;&gt;Windows Settings&lt;/h3&gt;
+&lt;p&gt;Turn off Tamper Protection and Real-Time monitoring.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/remove-win-defender/real-monitoring.png&#34; alt=&#34;real-monitoring&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;registry&#34;&gt;Registry&lt;/h3&gt;
+&lt;p&gt;There are so many registry settings, but the main ones to focus on are below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;MpPlatformKillbitsFromEngine&amp;#34;=hex:00,00,00,00,00,00,00,00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;TamperProtectionSource&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;MpCapability&amp;#34;=hex:00,00,00,00,00,00,00,00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;TamperProtection&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;PUAProtection&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableRoutinelyTakingAction&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ServiceKeepAlive&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;AllowFastServiceStartup&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableLocalAdminMerge&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableAntiSpyware&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;RandomizeScheduleTaskTimes&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Microsoft Antimalware]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;ServiceKeepAlive&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;AllowFastServiceStartup&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableRoutinelyTakingAction&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableAntiSpyware&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableAntiVirus&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableRealtimeMonitoring&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableBehaviorMonitoring&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableOnAccessProtection&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableScanOnRealtimeEnable&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableIOAVProtection&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;LocalSettingOverrideDisableOnAccessProtection&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;LocalSettingOverrideRealtimeScanDirection&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;LocalSettingOverrideDisableIOAVProtection&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;LocalSettingOverrideDisableBehaviorMonitoring&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;LocalSettingOverrideDisableIntrusionPreventionSystem&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;LocalSettingOverrideDisableRealtimeMonitoring&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;RealtimeScanDirection&amp;#34;=dword:00000002
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;IOAVMaxSize&amp;#34;=dword:00000512
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableInformationProtectionControl&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableIntrusionPreventionSystem&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;DisableRawWriteNotification&amp;#34;=dword:00000001
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For a more comprehensive list check out: &lt;a href=&#34;https://christitus.com/files/windefender_disable.reg&#34;&gt;https://christitus.com/files/windefender_disable.reg&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;services&#34;&gt;Services&lt;/h3&gt;
+&lt;p&gt;List of Services Windows Defender uses and relies upon.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WdNisSvc&lt;/li&gt;
+&lt;li&gt;WdNisDrv&lt;/li&gt;
+&lt;li&gt;WdFilter&lt;/li&gt;
+&lt;li&gt;WdBoot&lt;/li&gt;
+&lt;li&gt;wcncsvc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;files&#34;&gt;Files&lt;/h3&gt;
+&lt;p&gt;There are a ton of program files and logs for Windows Defender located at &lt;code&gt;C:\Program Files\Windows Defender&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;powershell&#34;&gt;Powershell&lt;/h3&gt;
+&lt;p&gt;This can be used to do temporary disable parts or all of Defender as well. Here is some basic command I used and shared on Twitter:&lt;/p&gt;
+&lt;div class=&#34;nitter-tweet nitter-tweet-rendered&#34;&gt;
+    &lt;a
+        class=&#34;nitter-anchor&#34;
+        href=&#34;https://nitter.pussthecat.org/christitustech/status/1556368265139585026&#34;
+        rel=&#34;noopener noreferrer nofollow&#34;
+        target=&#34;_blank&#34;
+        role=&#34;link&#34;
+    &gt;&lt;/a&gt;
+    
+    &lt;iframe
+        class=&#34;nitter-widget&#34;
+        scrolling=&#34;no&#34;
+        frameborder=&#34;0&#34;
+        allowtransparency=&#34;true&#34;
+        allowfullscreen=&#34;true&#34;
+        src=&#34;https://nitter.pussthecat.org/christitustech/status/1556368265139585026/embed?theme=twitter&#34;
+    &gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;github-projects---caution&#34;&gt;GitHub Projects - CAUTION!&lt;/h2&gt;
+&lt;p&gt;Here are a couple GitHub projects that will completely destroy defender and when used improperly can even be used to deliver virus payloads onto systems&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jbara2002/windows-defender-remover&#34;&gt;https://github.com/jbara2002/windows-defender-remover&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/swagkarna/Defeat-Defender-V1.2&#34;&gt;https://github.com/swagkarna/Defeat-Defender-V1.2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/qtkite/defender-control&#34;&gt;https://github.com/qtkite/defender-control&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/11111111&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
