@@ -163,6 +163,36 @@ if (!doNotTrack) {
     left: 10px;
     color:  #fff ;
   }
+
+  .nitter-tweet {
+    display: flex;
+    max-width: 550px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .nitter-anchor, .nitter-widget {
+    display: block;
+    visibility: visible;
+    width: 550px;
+    height: 136px;
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
+
+  .nitter-anchor {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .nitter-widget {
+    position: static;
+    border: 1px solid hsl(200, 19%, 84%);
+    border-radius: 12px;
+    z-index: 1;
+  }
 </style>
 </head>
 
@@ -425,11 +455,11 @@ if (!doNotTrack) {
         </li>
         
         <li class="category-item list-inline-item text-center shadow">
-          <a class="d-block" href="https://christitus.com/categories/linux/" data-text="L">Linux <sup>(71)</sup></a>
+          <a class="d-block" href="https://christitus.com/categories/linux/" data-text="L">Linux <sup>(73)</sup></a>
         </li>
         
         <li class="category-item list-inline-item text-center shadow">
-          <a class="d-block" href="https://christitus.com/categories/windows/" data-text="W">Windows <sup>(47)</sup></a>
+          <a class="d-block" href="https://christitus.com/categories/windows/" data-text="W">Windows <sup>(48)</sup></a>
         </li>
         
         <li class="category-item list-inline-item text-center shadow">
@@ -437,7 +467,7 @@ if (!doNotTrack) {
         </li>
         
         <li class="category-item list-inline-item text-center shadow">
-          <a class="d-block" href="https://christitus.com/categories/macos/" data-text="M">MacOS <sup>(12)</sup></a>
+          <a class="d-block" href="https://christitus.com/categories/macos/" data-text="M">MacOS <sup>(13)</sup></a>
         </li>
         
         <li class="category-item list-inline-item text-center shadow">

@@ -5,7 +5,143 @@
     <link>https://christitus.com/posts/</link>
     <description>Recent content in Posts on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 03 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Package Manager</title>
+      <link>https://christitus.com/best-package-manager/</link>
+      <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/best-package-manager/</guid>
+      <description>&lt;p&gt;Instead of using the built-in package manager in Linux or some container that never puts the programs files in a usable spot, we will use Homebrew!&lt;/p&gt;
+&lt;p&gt;I know, it&amp;rsquo;s an OS X package manager, but it works fantastic on Linux and solves MANY problems.&lt;/p&gt;
+&lt;p&gt;Main issues it addresses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Older packages from stable Linux distributions&lt;/li&gt;
+&lt;li&gt;Putting the installed packages in easy spots to reference them and modify them when needed.&lt;/li&gt;
+&lt;li&gt;Using sudo can be dangerous and brew installs it to a home directory instead of systemwide without needing sudo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A good example of this. On Debian and Fedora the package HUGO is old&amp;hellip; like really old. Anywhere between version .60 and .90 where home brew installs version .101-extended&lt;/p&gt;
+&lt;h2 id=&#34;installing-homebrew&#34;&gt;Installing Homebrew&lt;/h2&gt;
+&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Debian or Ubuntu&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install build-essential procps curl file git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Fedora, CentOS, or Red Hat&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum groupinstall &amp;#39;Development Tools&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum install procps-ng curl file git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum install libxcrypt-compat # needed by Fedora 30 and up
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;install-script&#34;&gt;Install Script&lt;/h3&gt;
+&lt;p&gt;One command to install it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-brew-available-in-terminal&#34;&gt;Make brew available in terminal&lt;/h3&gt;
+&lt;p&gt;By default homebrew puts itself in an easy to access directory. &lt;code&gt;/home/linuxbrew/.linuxbrew&lt;/code&gt; but there are a variety methods to use it from your prompt.&lt;/p&gt;
+&lt;h4 id=&#34;official-method&#34;&gt;Official Method&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test -d ~/.linuxbrew &amp;amp;&amp;amp; eval &amp;#34;$(~/.linuxbrew/bin/brew shellenv)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test -d /home/linuxbrew/.linuxbrew &amp;amp;&amp;amp; eval &amp;#34;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test -r ~/.bash_profile &amp;amp;&amp;amp; echo &amp;#34;eval \&amp;#34;\$($(brew --prefix)/bin/brew shellenv)\&amp;#34;&amp;#34; &amp;gt;&amp;gt; ~/.bash_profile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;eval \&amp;#34;\$($(brew --prefix)/bin/brew shellenv)\&amp;#34;&amp;#34; &amp;gt;&amp;gt; ~/.profile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;the-bashrc-method&#34;&gt;The .bashrc Method&lt;/h4&gt;
+&lt;p&gt;Add the following line to &lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;eval &amp;#34;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: if you use ZSH then the file you need to edit is &lt;code&gt;~/.zshrc&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;using-homebrew&#34;&gt;Using Homebrew&lt;/h2&gt;
+&lt;p&gt;With homebrew setup here are the commands I use almost daily&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;brew install programname&lt;/code&gt; - Install programname using brew&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew search programname&lt;/code&gt; - Search for programname in brew&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew uninstall programname&lt;/code&gt; - Uninstall program&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew update&lt;/code&gt; - Updates brew&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew upgrade program&lt;/code&gt; - Updates just that one program&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew list&lt;/code&gt; - List programs in brew&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Get Lost? &lt;code&gt;man brew&lt;/code&gt; to look at all documentation in terminal or don&amp;rsquo;t know what a program does? &lt;code&gt;brew info programname&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s it for the daily syntax&lt;/p&gt;
+&lt;h2 id=&#34;understanding-homebrew-terms&#34;&gt;Understanding Homebrew terms&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;keg - Program binaries created from source&lt;/li&gt;
+&lt;li&gt;bottle - Program binaries downloaded&lt;/li&gt;
+&lt;li&gt;cellar - Directory where kegs / binaries are stored&lt;/li&gt;
+&lt;li&gt;tap - git repository&lt;/li&gt;
+&lt;li&gt;cask - mac os native binary (not used in Linux)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is other stuff to homebrew but read the full documentation if interested here &lt;a href=&#34;https://docs.brew.sh/Formula-Cookbook#homebrew-terminology&#34;&gt;https://docs.brew.sh/Formula-Cookbook#homebrew-terminology&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Basics of homebrew on Linux official documentation &lt;a href=&#34;https://docs.brew.sh/Homebrew-on-Linux&#34;&gt;https://docs.brew.sh/Homebrew-on-Linux&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/QsYEvnV-P34&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;thank-you-homebrew-team&#34;&gt;Thank you Homebrew Team&lt;/h2&gt;
+&lt;div class=&#34;nitter-tweet nitter-tweet-rendered&#34;&gt;
+    &lt;a
+        class=&#34;nitter-anchor&#34;
+        href=&#34;https://nitter.pussthecat.org/christitustech/status/1554153066823385089&#34;
+        rel=&#34;noopener noreferrer nofollow&#34;
+        target=&#34;_blank&#34;
+        role=&#34;link&#34;
+    &gt;&lt;/a&gt;
+    
+    &lt;iframe
+        class=&#34;nitter-widget&#34;
+        scrolling=&#34;no&#34;
+        frameborder=&#34;0&#34;
+        allowtransparency=&#34;true&#34;
+        allowfullscreen=&#34;true&#34;
+        src=&#34;https://nitter.pussthecat.org/christitustech/status/1554153066823385089/embed?theme=twitter&#34;
+    &gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Save HOURS of work with Regex</title>
+      <link>https://christitus.com/regex/</link>
+      <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/regex/</guid>
+      <description>&lt;p&gt;RegEx is a formidable tool that many just don&amp;rsquo;t understand, but can save literally thousands of hours of work.&lt;/p&gt;
+&lt;div class=&#34;nitter-tweet nitter-tweet-rendered&#34;&gt;
+    &lt;a
+        class=&#34;nitter-anchor&#34;
+        href=&#34;https://nitter.pussthecat.org/christitustech/status/1553598175314845697&#34;
+        rel=&#34;noopener noreferrer nofollow&#34;
+        target=&#34;_blank&#34;
+        role=&#34;link&#34;
+    &gt;&lt;/a&gt;
+    
+    &lt;iframe
+        class=&#34;nitter-widget&#34;
+        scrolling=&#34;no&#34;
+        frameborder=&#34;0&#34;
+        allowtransparency=&#34;true&#34;
+        allowfullscreen=&#34;true&#34;
+        src=&#34;https://nitter.pussthecat.org/christitustech/status/1553598175314845697/embed?theme=twitter&#34;
+    &gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;However, for many years I just couldn&amp;rsquo;t be bothered to learn anything beside the basics &lt;code&gt;.*&lt;/code&gt; or &lt;code&gt;[a-z]&lt;/code&gt;. I just had a project pop up where I&amp;rsquo;d have to spend hours finding and replacing a complex markdown line I was using to pull images and a video link. The solution was painfully obvious&amp;hellip; either I get better with RegEx or spend hours finding and replacing text in hundreds of posts.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-regex&#34;&gt;Understanding RegEx&lt;/h2&gt;
+&lt;p&gt;Learning all the syntax for RegEx is not happening for me and probably many others. There is a solution for this and you don&amp;rsquo;t need to&amp;hellip; &lt;a href=&#34;https://regexr.com/&#34;&gt;https://regexr.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/regex/text-example.png&#34; alt=&#34;text-example&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now that you have an explainer of all the syntax and cheat sheet. We just need to know a few basic features of RegEx, so you can perfect the pattern that you need. Also, the need to understand groups and variables will make the find and replace much more powerful.&lt;/p&gt;
+&lt;h2 id=&#34;making-the-perfect-pattern&#34;&gt;Making the Perfect Pattern&lt;/h2&gt;
+&lt;p&gt;With our test example on regexr.com we can test our pattern to make sure we match exactly what we need. Now normally a guide would start talking about &lt;code&gt;.*&lt;/code&gt; and other match characters, but frankly any site like regexr or regex101.com, will have those laid out for you.&lt;/p&gt;
+&lt;p&gt;Instead, let&amp;rsquo;s talk about escaping characters and how to match weird expressions that have syntax like &lt;code&gt;[,(,+,?&lt;/code&gt; and more. All these can really mess up matching your pattern. So you need to &lt;em&gt;escape&lt;/em&gt; the with a &lt;code&gt;\&lt;/code&gt; before the symbol, so it would look something like this &lt;code&gt;\[blah\]&lt;/code&gt; this is regex speak for &lt;code&gt;[blah]&lt;/code&gt; the escaping character makes it actually register the bracket or parenthesis. Without it, it will probably just give you some syntax error.&lt;/p&gt;
+&lt;p&gt;The websites I gave above are perfect for pointing out flaws in your pattern or maybe you missed escaping that + sign or question mark. It&amp;rsquo;s why having these syntax sites available is vital.&lt;/p&gt;
+&lt;h2 id=&#34;selection-groups&#34;&gt;Selection Groups&lt;/h2&gt;
+&lt;p&gt;Now that you understand how to match things with RegEx you can wipe out things with ease, but what about saving that bit of the match you need?&lt;/p&gt;
+&lt;p&gt;Example (I want to save youtube video id):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;img.youtube.com/vi/0q3rGKIMZg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Using this Regex will clean it up and save the id using the selection group.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;.*vi\/(.*)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will match and SELECT everything after &lt;code&gt;vi/&lt;/code&gt;  with &lt;code&gt;(.*)&lt;/code&gt; in the string, where &lt;code&gt;.*vi\/&lt;/code&gt; matches &lt;code&gt;img.youtube.com/vi/&lt;/code&gt;. The value &lt;code&gt;0q3rGKIMZg&lt;/code&gt; will be stored in &lt;code&gt;$1&lt;/code&gt; which is the first selection group. If you do multiple &lt;code&gt;()&lt;/code&gt; selections the second one would be &lt;code&gt;$2&lt;/code&gt; and so on.&lt;/p&gt;
+&lt;p&gt;Example new format from old &lt;code&gt;{{ youtube 0q3rGKIMZg }}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The replace field would simply be &lt;code&gt;{{ youtube $1 }}&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/uwtPH6owqZA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>The 3 Biggest Security Mistakes Linux Users Make</title>
       <link>https://christitus.com/linux-security-mistakes/</link>
@@ -6305,72 +6441,44 @@ Debug as necessary: tail -f /var/log/syslog|grep ovpn`&lt;/p&gt;
       <guid>https://christitus.com/repair-windows-boot-partition/</guid>
       <description>&lt;p&gt;This walkthrough shows you how to repair windows boot partition and boot from an existing windows installation without reinstalling windows.&lt;/p&gt;
 &lt;p&gt;Recently I had an old server with a FAT32 system reserved partition and a bunch of extra partitions. I have already moved all the data off the server and it was ready for decommissioning. Before, I did this I wanted to go ahead and remove all these old partitions and just leave the C: Drive with the Windows installation then rebuild the System Reserved partition as NTFS as an exercise. Many backup programs have issues doing block level images with FAT32 partitions OR you need to do a physical to virtual setup. For me, I wanted to decommission the hardware but be able to spin up this server in a virtual environment if needed.&lt;/p&gt;
-&lt;h3 id=&#34;do-not-attempt-this-if-you-don8217t-have-backups&#34;&gt;&lt;strong&gt;DO NOT ATTEMPT THIS IF YOU DON’T HAVE BACKUPS!!!!&lt;/strong&gt;&lt;/h3&gt;
-&lt;h5 id=&#34;step-1-delete-old-partitions-and-create-new-ones&#34;&gt;Step 1: **Delete old partitions and create new ones**&lt;/h5&gt;
+&lt;h2 id=&#34;backup-before-attempting-this&#34;&gt;Backup Before Attempting This!&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-delete-old-partitions-and-create-new-ones&#34;&gt;Step 1: Delete old partitions and create new ones&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Boot into your partition manager of choice (I used Parted Magic &lt;a href=&#34;https://partedmagic.com/&#34;&gt;https://partedmagic.com/&lt;/a&gt;) – GParted&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Delete extra partitions including the old FAT32 system partition (These all should be very small between 100 MB and up to 2 GB)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Create new NTFS partition with 512 MB of space and label it System Reserved&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Shutdown&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Boot into your partition manager of choice (I used Parted Magic &lt;a href=&#34;https://partedmagic.com/&#34;&gt;https://partedmagic.com/&lt;/a&gt; ) GParted&lt;/li&gt;
+&lt;li&gt;Delete extra partitions including the old FAT32 system partition (These all should be very small between 100 MB and up to 2 GB)&lt;/li&gt;
+&lt;li&gt;Create new NTFS partition with 512 MB of space and label it System Reserved&lt;/li&gt;
+&lt;li&gt;Shutdown&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h5 id=&#34;step-2-setup-partitions-with-the-correct-drive-letters&#34;&gt;Step 2: **Setup Partitions with the correct drive letters**&lt;/h5&gt;
+&lt;h3 id=&#34;step-2-setup-partitions-with-the-correct-drive-letters&#34;&gt;Step 2: Setup Partitions with the correct drive letters&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Launch Windows 10 Install disc / usb&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Shift+F10 once you see language select to bring up command prompt&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Launch “DISKPART”&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;select volume with 512MB (ex: select vol 0)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;assign letter=G: (or any letter that isn’t taken that is NOT C:)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;exit **OR **If Windows operating system is NOT on C:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;select volume with windows installation on it&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;assign letter=C:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;exit&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;Launch Windows 10 Install disc / usb&lt;/li&gt;
+&lt;li&gt;Shift+F10 once you see language select to bring up command prompt&lt;/li&gt;
+&lt;li&gt;Launch &lt;code&gt;DISKPART&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;select volume with 512MB (ex: &lt;code&gt;select vol 0&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assign letter=G:&lt;/code&gt; (or any letter that isn’t taken that is NOT C:)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exit&lt;/code&gt; OR If Windows operating system is NOT on C:&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select volume&lt;/code&gt; with windows installation on it&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assign letter=C:&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exit&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;example output:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example output:&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;diskpart
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;select disk 0
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;list vol
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;select vol 0 &amp;amp;lt;---500 MB Partition
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;select vol 0 &amp;lt;---500 MB Partition
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;assign letter=G:
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;select vol 1 &amp;amp;lt;--- Large Partition with Windows Install on it
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;select vol 1 &amp;lt;--- Large Partition with Windows Install on it
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;assign letter=C:
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exit
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Partitions are done – now time to fix problems with the “type” of partition – By forcing all paritions to be NTFS NT60&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Partitions are done. Now time to fix problems with the “type” of partition – By forcing all partitions to be NTFS NT60&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;bootsect.exe /nt60 all /force&lt;/code&gt;&lt;/p&gt;
 &lt;h5 id=&#34;step-3-copy-boot-records-fix-mbr-and-rebuild-bcd&#34;&gt;Step 3: Copy Boot Records, Fix MBR, and Rebuild BCD&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;Rebuild new system reserved partition with EFI and regular boot files&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Rebuild new system reserved partition with EFI and regular boot files&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bcdboot c:\Windows /s &amp;lt;boot letter of System Reserved Partion&amp;gt;: /f ALL
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bcdboot c:\Windows /s G: /f ALL
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Now we can finally rebuild the bcd and master boot record like you see in so many online guides&lt;/li&gt;
-&lt;li&gt;You can verify the system is seeing the windows installation by doing a bootrec /scanos and then be running through the rest of the commands to do the rest of the repairs&lt;/li&gt;
+&lt;li&gt;You can verify the system is seeing the windows installation by doing a &lt;code&gt;bootrec /scanos&lt;/code&gt; and then be running through the rest of the commands to do the rest of the repairs&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootrec /scanos &amp;lt;---Verify it sees the windows install
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootrec /fixmbr
@@ -6378,7 +6486,7 @@ Debug as necessary: tail -f /var/log/syslog|grep ovpn`&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Reboot and you are done!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;video-walkthroughs&#34;&gt;Video Walkthroughs&lt;/h2&gt;
+&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/F72D7uL6cZg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
