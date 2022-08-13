@@ -13,7 +13,7 @@ draft: false
 ---
 RegEx is a formidable tool that many just don't understand, but can save literally thousands of hours of work.
 <!--more-->
-{{< nitter user="christitustech" id="1553598175314845697" >}}
+{{< tweet user="christitustech" id="1553598175314845697" >}}
 
 However, for many years I just couldn't be bothered to learn anything beside the basics `.*` or `[a-z]`. I just had a project pop up where I'd have to spend hours finding and replacing a complex markdown line I was using to pull images and a video link. The solution was painfully obvious... either I get better with RegEx or spend hours finding and replacing text in hundreds of posts.
 

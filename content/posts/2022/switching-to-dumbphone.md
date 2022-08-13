@@ -13,7 +13,7 @@ draft: false
 I recently switched to a Dumb Phone from the smart phone and many asked why? This is my breakdown of the entire experience and recommendations. This certainly won't be for everyone, but for those that attempt it, I can promise that it will be extremely rewarding for those that have the willpower to do it. 
 <!--more-->
 
-{{< nitter user="christitustech" id="1557833634467414016" >}}
+{{< tweet user="christitustech" id="1557833634467414016" >}}
 
 ## Why use a dumb phone?
 Here are the benefits for using a dumb phone that I have found:

@@ -75,24 +75,9 @@
 &lt;p&gt;There are a ton of program files and logs for Windows Defender located at &lt;code&gt;C:\Program Files\Windows Defender&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;powershell&#34;&gt;Powershell&lt;/h3&gt;
 &lt;p&gt;This can be used to do temporary disable parts or all of Defender as well. Here is some basic command I used and shared on Twitter:&lt;/p&gt;
-&lt;div class=&#34;nitter-tweet nitter-tweet-rendered&#34;&gt;
-    &lt;a
-        class=&#34;nitter-anchor&#34;
-        href=&#34;https://nitter.pussthecat.org/christitustech/status/1556368265139585026&#34;
-        rel=&#34;noopener noreferrer nofollow&#34;
-        target=&#34;_blank&#34;
-        role=&#34;link&#34;
-    &gt;&lt;/a&gt;
-    
-    &lt;iframe
-        class=&#34;nitter-widget&#34;
-        scrolling=&#34;no&#34;
-        frameborder=&#34;0&#34;
-        allowtransparency=&#34;true&#34;
-        allowfullscreen=&#34;true&#34;
-        src=&#34;https://nitter.pussthecat.org/christitustech/status/1556368265139585026/embed?theme=twitter&#34;
-    &gt;&lt;/iframe&gt;
-&lt;/div&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Why I hate Windows defender in one picture... &lt;a href=&#34;https://t.co/HFYXV38Ytz&#34;&gt;pic.twitter.com/HFYXV38Ytz&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1556368265139585026?ref_src=twsrc%5Etfw&#34;&gt;August 7, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 &lt;h2 id=&#34;github-projects---caution&#34;&gt;GitHub Projects - CAUTION!&lt;/h2&gt;
 &lt;p&gt;Here are a couple GitHub projects that will completely destroy defender and when used improperly can even be used to deliver virus payloads onto systems&lt;/p&gt;
 &lt;ul&gt;
