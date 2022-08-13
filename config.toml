@@ -59,11 +59,6 @@ sidebar = "right" # Sidebar value ("left", "right" or false)
 # google tag manager, see https://developers.google.com/tag-manager/
 google_tag_manager = "GTM-5JNJ8NL" # example: G-XXXXXXXXXX
 
-# nitter
-nitter_instance = "https://nitter.pussthecat.org" # not all instances allow iframes
-nitter_default_user = "christitustech" # default user for tweet if none is defined
-nitter_theme = "twitter" # available: auto, auto_(twitter), black, dracula, mastodon, nitter, pleroma, twitter, twitter_dark
-
 code_copy_button = true # Turn on/off the code-copy-button for code-fields
 
 ######################## Site Variables #########################

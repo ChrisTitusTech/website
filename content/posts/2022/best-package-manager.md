@@ -99,4 +99,4 @@ Basics of homebrew on Linux official documentation <https://docs.brew.sh/Homebre
 
 ## Thank you Homebrew Team
 
-{{< nitter user="christitustech" id="1554153066823385089" >}}
+{{< tweet user="christitustech" id="1554153066823385089" >}}
