@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://christitus.com/categories/android/</loc>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
-    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/dumbphone/</loc>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/switching-to-dumbphone/</loc>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/posts/</loc>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/disable-win-defender/</loc>
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/microsoft-defender/</loc>
-    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/</loc>
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/categories/windows/</loc>
@@ -238,9 +247,6 @@
   </url><url>
     <loc>https://christitus.com/tags/xorg/</loc>
     <lastmod>2020-08-28T05:42:25-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/android/</loc>
-    <lastmod>2020-08-27T09:49:33-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/fix-ticwatch-lag/</loc>
     <lastmod>2020-08-27T09:49:33-05:00</lastmod>

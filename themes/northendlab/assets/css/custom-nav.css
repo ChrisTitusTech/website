@@ -12,6 +12,7 @@ div.stickyside.pl-lg-4 {
 
 .bannerpad {
   align-content: center;
+  text-align: center;
   margin-top: 10px;
   padding-top: 10px;
   padding-left: 1%;
@@ -26,5 +27,23 @@ div.stickyside.pl-lg-4 {
 
 .banner-para {
   padding-bottom: 20px;
+  text-align: left;
   font-size: larger !important;
+}
+
+.list-row {
+  display:inline-block;
+  align-self: center;
+  width: auto;
+}
+
+.list-left {
+  width:auto;
+  padding:10px;
+  float:left;
+}
+
+.list-right {
+  padding:10px;
+  float:right;
 }
