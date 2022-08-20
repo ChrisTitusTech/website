@@ -64,7 +64,7 @@
 &lt;h3 id=&#34;prioritizing-repositories&#34;&gt;Prioritizing Repositories&lt;/h3&gt;
 &lt;p&gt;Official documentation for APT (Debian) - &lt;a href=&#34;https://wiki.debian.org/DebianRepository/UseThirdParty&#34;&gt;https://wiki.debian.org/DebianRepository/UseThirdParty&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;All priority preference files are stored in the &lt;code&gt;/etc/apt/preferences.d/&lt;/code&gt; directory.&lt;/p&gt;
-&lt;p&gt;Example: &lt;code&gt;volian.perf&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Example: &lt;code&gt;volian.pref&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Package: *
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pin: origin deb.volian.org
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Pin-Priority: 100

@@ -99,7 +99,7 @@ Official documentation for APT (Debian) - <https://wiki.debian.org/DebianReposit
 
 All priority preference files are stored in the `/etc/apt/preferences.d/` directory.
 
-Example: `volian.perf`
+Example: `volian.pref`
 ```
 Package: *
 Pin: origin deb.volian.org

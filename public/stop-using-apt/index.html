@@ -443,9 +443,8 @@ if (!doNotTrack) {
 <p>Welp, all that is now fixed with <a href="https://gitlab.com/volian/nala">Nala</a> and it is absolutely wonderful. Not only does it fix all that listed above but it makes the updates look beautiful.</p>
 <p><img src="/images/2022/nala/nala.png" alt="nala-image"></p>
 <h2 id="install">Install</h2>
-<p>Add Repository</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo &#34;deb http://deb.volian.org/volian/ scar main&#34; | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-</span></span><span class="line"><span class="cl">wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
+<p>Add Repository - NOT NEEDED FOR Debian SID/testing</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo &#34;deb http://deb.volian.org/volian/ scar main&#34; | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list; wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
 </span></span></code></pre></div><p>Install Nala on any Debian Sid or Ubuntu 22+ with:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt update &amp;&amp; sudo apt install nala
 </span></span></code></pre></div><p>Install on Debian Stable or Ubuntu 21 and below:</p>

@@ -17,10 +17,9 @@ Welp, all that is now fixed with [Nala](https://gitlab.com/volian/nala) and it i
 ![nala-image](/images/2022/nala/nala.png)
 
 ## Install
-Add Repository
+Add Repository - NOT NEEDED FOR Debian SID/testing
 ```
-echo "deb http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
-wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
+echo "deb http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list; wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
 ```
 
 Install Nala on any Debian Sid or Ubuntu 22+ with:

@@ -113,7 +113,7 @@
 &lt;li&gt;run the following commands:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;xe pool-ha-disable&lt;/code&gt;&lt;em&gt;Note: If this fails try ha-disable force below&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;xe host-emergency-ha-disable force=true&amp;lt;br /&amp;gt; xe pool-emergency-transition-to-master --force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe host-emergency-ha-disable force=true&amp;lt;br /&amp;gt; xe pool-emergency-transition-to-master --force&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: This will force the pool and slaves to reinitialize with the pool master&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Once the server reboots it should connect&lt;/li&gt;
