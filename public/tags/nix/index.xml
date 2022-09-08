@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nix on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/nix/</link>
+    <description>Recent content in Nix on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/nix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nix Package Manager</title>
+      <link>https://christitus.com/nix-package-manager/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/nix-package-manager/</guid>
+      <description>&lt;p&gt;This standalone package manager is absolutely stunning and I can&amp;rsquo;t believe I&amp;rsquo;m just now discovering it&amp;rsquo;s true power.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I was wrong, NIX is the best standalone package manager.&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1559232526094417921?ref_src=twsrc%5Etfw&#34;&gt;August 15, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://github.com/NixOS/nix&#34;&gt;https://github.com/NixOS/nix&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -L https://nixos.org/nix/install | sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: I&amp;rsquo;d recommend multi-user install if it prompts for it.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;finding-packages&#34;&gt;Finding Packages&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;d recommend using their website to find packages to install, but make sure to click the &amp;ldquo;unstable&amp;rdquo; button has NixOS stable is a Linux Distribution few use.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://search.nixos.org/packages&#34;&gt;https://search.nixos.org/packages&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Or from terminal you can list all packages with &lt;code&gt;nix-env -qaP&lt;/code&gt; then just grep what you are looking for. Example: &lt;code&gt;nix-env -qaP | grep hugo&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;Here is the basic usage of nix, most revolve around the &lt;code&gt;nix-env&lt;/code&gt; command. These are manually managed and require user intervention&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;List Installed packages &lt;code&gt;nix-env -q&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install Packages &lt;code&gt;nix-env -iA nixpkgs.packagename&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Erase Packages &lt;code&gt;nix-env -e packagename&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update All Packages &lt;code&gt;nix-env -u&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update Specific Packages &lt;code&gt;nix-env -u packagename&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Hold Specific Package &lt;code&gt;nix-env --set-flag keep true packagename&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;List Backups (Generations) &lt;code&gt;nix-env --list-generations&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rollback to Last Backup &lt;code&gt;nix-env --rollback&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rollback to Specific Generation &lt;code&gt;nix-env --switch-generation #&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;help-and-manual&#34;&gt;Help and Manual&lt;/h2&gt;
+&lt;p&gt;Official Manual is &lt;a href=&#34;https://nixos.org/manual/nix/stable/&#34;&gt;here&lt;/a&gt;. You can also get more details with &lt;code&gt;man nix&lt;/code&gt; or &lt;code&gt;man nix-env&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h2&gt;
+&lt;h3 id=&#34;programs-not-showing-up-in-start-menu&#34;&gt;Programs not showing up in start menu&lt;/h3&gt;
+&lt;p&gt;NIX stores all the .desktop files for the programs it installs @ &lt;code&gt;/home/$USER/.nix-profile/share/applications/&lt;/code&gt; and a simple symlink will fix them not showing up in your start menu.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Ty8C2B910EI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

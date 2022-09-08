@@ -5,7 +5,52 @@
     <link>https://christitus.com/tags/</link>
     <description>Recent content in Tags on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian</title>
+      <link>https://christitus.com/tags/debian/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://christitus.com/tags/ubuntu/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Power Management</title>
+      <link>https://christitus.com/tags/power-management/</link>
+      <pubDate>Fri, 26 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/power-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft</title>
+      <link>https://christitus.com/tags/microsoft/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nix</title>
+      <link>https://christitus.com/tags/nix/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/nix/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Dumbphone</title>
       <link>https://christitus.com/tags/dumbphone/</link>
@@ -39,15 +84,6 @@
       <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://christitus.com/tags/fedora/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://christitus.com/tags/ubuntu/</link>
-      <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://christitus.com/tags/ubuntu/</guid>
       <description></description>
     </item>
     
@@ -93,15 +129,6 @@
       <pubDate>Wed, 27 Jul 2022 21:26:53 -0500</pubDate>
       
       <guid>https://christitus.com/tags/steam-deck/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debian</title>
-      <link>https://christitus.com/tags/debian/</link>
-      <pubDate>Thu, 21 Jul 2022 12:07:52 -0500</pubDate>
-      
-      <guid>https://christitus.com/tags/debian/</guid>
       <description></description>
     </item>
     

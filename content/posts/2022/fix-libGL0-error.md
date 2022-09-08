@@ -1,20 +1,28 @@
 ---
-title: "Fix LibGL0 Error"
+title: "Fix LibGL Errors"
 
-date: 2022-08-16
-url: /fix-libGL0-error/
-image: images/2022-thumbs/fix-libGL0-error.jpg
+date: 2022-09-08
+url: /fix-libGL-errors/
+image: images/2022-thumbs/fix-libGL-error.jpg
 categories:
   - Linux
-  - Windows
-  - Networking
 tags:
   - Ubuntu
-draft: true
+  - Debian
+draft: false
 ---
-<!--more-->
+I recently had a debian install where Steam would not launch. Here is how I fixed it when it.
+<!--more--> _Note: This is for nVidia based GPU systems_
 
-{{< tweet user="christitustech" id="1550918768334979078" >}}
+## Error Screen
+
+![libGL-error](/images/2022/fix-libGL-error.jpg)
+
+`You are missing the following 32-bit libraries, and Steam may not run: libGL.so.1`
+
+## Packages Required
+
+These packages are missing and will fix the above error.
 
 ```
 sudo dpkg --add-architecture i386
@@ -23,3 +31,7 @@ sudo apt install libgl1-mesa-dri:i386 libgl1:i386
 sudo apt-get upgrade steam -f
 sudo apt install nvidia-driver-libs:i386
 ```
+
+## Launch Steam
+
+You now can launch steam and have it launch properly. 

@@ -2,13 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://christitus.com/categories/android/</loc>
-    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
+    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/debian/</loc>
+    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/fix-libGL-errors/</loc>
+    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/linux/</loc>
+    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/posts/</loc>
+    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/ubuntu/</loc>
+    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/laptop-power-management/</loc>
+    <lastmod>2022-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/power-management/</loc>
+    <lastmod>2022-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/windows/</loc>
+    <lastmod>2022-08-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/is-windows-bad/</loc>
+    <lastmod>2022-08-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/microsoft/</loc>
+    <lastmod>2022-08-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/macos/</loc>
+    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/nix/</loc>
+    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/nix-package-manager/</loc>
+    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/android/</loc>
     <lastmod>2022-08-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/dumbphone/</loc>
@@ -17,19 +59,10 @@
     <loc>https://christitus.com/switching-to-dumbphone/</loc>
     <lastmod>2022-08-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/</loc>
-    <lastmod>2022-08-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/disable-win-defender/</loc>
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/microsoft-defender/</loc>
-    <lastmod>2022-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/windows/</loc>
     <lastmod>2022-08-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/arch/</loc>
@@ -39,15 +72,6 @@
     <lastmod>2022-08-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/fedora/</loc>
-    <lastmod>2022-08-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/linux/</loc>
-    <lastmod>2022-08-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/macos/</loc>
-    <lastmod>2022-08-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/ubuntu/</loc>
     <lastmod>2022-08-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/regex/</loc>
@@ -79,9 +103,6 @@
   </url><url>
     <loc>https://christitus.com/speedup-linux/</loc>
     <lastmod>2022-07-24T10:30:53-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/debian/</loc>
-    <lastmod>2022-07-21T12:07:52-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/star-trek-os/</loc>
     <lastmod>2022-07-21T12:07:52-05:00</lastmod>

@@ -5,7 +5,29 @@
     <link>https://christitus.com/tags/debian/</link>
     <description>Recent content in Debian on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 21 Jul 2022 12:07:52 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix LibGL Errors</title>
+      <link>https://christitus.com/fix-libGL-errors/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/fix-libGL-errors/</guid>
+      <description>&lt;p&gt;I recently had a debian install where Steam would not launch. Here is how I fixed it when it.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: This is for nVidia based GPU systems&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;error-screen&#34;&gt;Error Screen&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/fix-libGL-error.jpg&#34; alt=&#34;libGL-error&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;You are missing the following 32-bit libraries, and Steam may not run: libGL.so.1&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;packages-required&#34;&gt;Packages Required&lt;/h2&gt;
+&lt;p&gt;These packages are missing and will fix the above error.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg --add-architecture i386
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install libgl1-mesa-dri:i386 libgl1:i386
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get upgrade steam -f
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install nvidia-driver-libs:i386
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;launch-steam&#34;&gt;Launch Steam&lt;/h2&gt;
+&lt;p&gt;You now can launch steam and have it launch properly.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Star Trek Window Management</title>
       <link>https://christitus.com/star-trek-os/</link>

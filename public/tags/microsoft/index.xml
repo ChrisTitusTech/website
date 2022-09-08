@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/microsoft/</link>
+    <description>Recent content in Microsoft on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 24 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Is Windows Bad</title>
+      <link>https://christitus.com/is-windows-bad/</link>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/is-windows-bad/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s what we know. Windows is a tool and has evolved over the years while dominating the PC Market since the 90s. So it begs the question, is it bad?&lt;/p&gt;
+&lt;h2 id=&#34;what-it-does-well&#34;&gt;What it does well&lt;/h2&gt;
+&lt;p&gt;There are certain things Windows does better than any other OS. The operating system itself has an amazing assortment of compatibility and gaming.&lt;/p&gt;
+&lt;p&gt;If you want to play the most software and games that works with all your hardware, Windows is your best bet and that isn&amp;rsquo;t changing anytime soon.&lt;/p&gt;
+&lt;h2 id=&#34;why-use-something-else&#34;&gt;Why use something else?&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s say you don&amp;rsquo;t mind some software or hardware not working or you want to pick out specific hardware to use on another operating system. What do you gain?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Better Security - Windows is know to be easily hackable, from the NSA tool leak in 2017, Ransomware, and out dated kernel design. Windows is an absolute security nightmare. Both Mac and Linux offer proper elevation support with a NIX design, while windows does not and relies on the tacked on UAC system.&lt;/li&gt;
+&lt;li&gt;Better Privacy - Windows has extremely egregious telemetry, but what information does Windows collect?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Type&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Hardware information&lt;/td&gt;
+&lt;td&gt;CPU speed, memory capacity, battery, HDD size.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Network Data&lt;/td&gt;
+&lt;td&gt;Adapter speed, WiFi Data, and Mobile data if SIM exists&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Event Metrics&lt;/td&gt;
+&lt;td&gt;Basic pc events&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;State Changes&lt;/td&gt;
+&lt;td&gt;App uptime, CPU allocation to what app, and crashes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Accessory data&lt;/td&gt;
+&lt;td&gt;What you have connected to the PC&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Microsoft Store Logs&lt;/td&gt;
+&lt;td&gt;Purchases, installs, updates, viewed, launched, etc.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;In-depth system specs&lt;/td&gt;
+&lt;td&gt;Greater detail on hardware capabilities&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;App logs&lt;/td&gt;
+&lt;td&gt;How often you use what and how quick they are&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Browser activity logs&lt;/td&gt;
+&lt;td&gt;Shows what sites you visit and what you searched for&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Enhanced Error Reporting&lt;/td&gt;
+&lt;td&gt;Dumps entire memory and submits anything running.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Keylogging&lt;/td&gt;
+&lt;td&gt;provided by &amp;ldquo;Improve Inking and typing recognition&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;More Consistency - One of the biggest issues Windows has is the rolling update cycle that tends to mess up computers. There are ways businesses tame this process and I&amp;rsquo;ve even shown how to have sane windows update settings, but the default configuration will typically land users in an undesirable place more often than not. Mac and Linux typically have much better update cycles and far fewer issues with system updates, and need fewer reboots.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-microsoft-hate&#34;&gt;The Microsoft HATE&lt;/h2&gt;
+&lt;p&gt;This all doesn&amp;rsquo;t sound too bad, most people don&amp;rsquo;t care about privacy or security as they freely give it away on social media. See this image if you want a good laugh at how bad people are at these practices.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/social-eng.jpg&#34; alt=&#34;social&#34;&gt;&lt;/p&gt;
+&lt;p&gt;So why do people hate Microsoft and try to get away from Windows? The monopoly and absolute ruthless business model it has built over the past 30 years is something to marvel at.&lt;/p&gt;
+&lt;h3 id=&#34;government-cooperation&#34;&gt;Government Cooperation&lt;/h3&gt;
+&lt;p&gt;It has grown so influential from its massive government lobby and has even an entire wing dedicated to working with governments. While some of this is bad, not all of it is. Their monitoring has helped stop some cyberattacks, like Ukraine cyber attacks in 2022 and this close partnership even had the NSA and FBI remotely hack into Microsoft exchange servers and patch the system. (source: &lt;a href=&#34;https://www.enterprisetimes.co.uk/2021/04/14/nsa-and-fbi-move-to-help-microsoft-with-its-exchange-server-vulnerabilities/&#34;&gt;https://www.enterprisetimes.co.uk/2021/04/14/nsa-and-fbi-move-to-help-microsoft-with-its-exchange-server-vulnerabilities/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The downside to this is when the NSA tools leaked in 2017 with blatant backdoors that spawned a massive ransomware attack around the world with EternalBlue exploit that then spawned a host of WannaCry ransomware payloads delivered to millions of computers. (source: &lt;a href=&#34;https://www.wired.com/story/eternalblue-leaked-nsa-spy-tool-hacked-world/&#34;&gt;https://www.wired.com/story/eternalblue-leaked-nsa-spy-tool-hacked-world/&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;the-companies-microsoft-killed&#34;&gt;The Companies Microsoft Killed&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;&lt;strong&gt;Embrace, extend, and extinguish&lt;/strong&gt;&amp;rdquo; (&lt;strong&gt;EEE&lt;/strong&gt;), also known as &amp;ldquo;&lt;strong&gt;embrace, extend, and exterminate&lt;/strong&gt;&amp;rdquo;, is a phrase that the U.S. Department of Justice found that was used internally by Microsoft&amp;hellip; (source: &lt;a href=&#34;https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguish&#34;&gt;https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguish&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;They have successfully murdered companies and ruined countless lives while stifling innovation to get to where they are. Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Browser incompatibilities: Netscape killed off and why we were plagued by the hellscape of Internet Exploader and ActiveX controls for almost a decade before Chrome came along.&lt;/li&gt;
+&lt;li&gt;Office: They purposely held back the API to make other competitors, like WordPerfect, able to succeed when they launched in Windows 98. With no documentation this ensured Microsoft Office had to be purchased and used by the world killing many competitors. They also did this by making Office documents render improperly in other browsers that weren&amp;rsquo;t Internet Explorer.&lt;/li&gt;
+&lt;li&gt;Purposely breaking Java programs on other systems so they weren&amp;rsquo;t cross-platform. They&amp;rsquo;ve settled with Sun for over 2 billion dollars in a lawsuit they lost back in 2002 and 20 million in 2001.&lt;/li&gt;
+&lt;li&gt;Why email sucks? Microsoft implemented MAPI protocol instead of using many common forms like SMTP, POP, or IMAP. On October 1st of 2022, they disabled the following protocols from Exchange Online: &lt;code&gt;Outlook, EWS, RPS, POP, IMAP, and EAS&lt;/code&gt; and even SMTP gets disabled if not used.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So the hate comes from the world that never happened because of Microsoft&amp;rsquo;s greed. The missed innovations, the companies that were forced to shutdown, and the lives that it destroyed, all to make the Microsoft monopoly.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Sh1kZD7EVj0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
