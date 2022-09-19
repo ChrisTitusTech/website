@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US"><meta charset="utf-8">
-<title>ADSync</title>
+<title>Linux for Beginners</title>
 
 <meta name="author" content="Chris Titus">
 <meta name="description" content="Having Fun with Technology">
@@ -51,10 +51,9 @@ if (!doNotTrack) {
 
 
 
-<link rel="alternate" type="application/rss+xml" href="https://christitus.com/tags/adsync/index.xml" title="Chris Titus Tech | Tech Content Creator" />
 <head>
   <meta charset="utf-8">
-<title>ADSync</title>
+<title>Linux for Beginners</title>
 
 <meta name="author" content="Chris Titus">
 <meta name="description" content="Having Fun with Technology">
@@ -105,7 +104,6 @@ if (!doNotTrack) {
 
 
 
-<link rel="alternate" type="application/rss+xml" href="https://christitus.com/tags/adsync/index.xml" title="Chris Titus Tech | Tech Content Creator" />
 
   
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -417,45 +415,213 @@ if (!doNotTrack) {
 
 
 
+
+
+
 <section class="section">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <h2 class="mb-4"> <span class="text-primary">ADSync</span></h2>
-        <div class="bg-white shadow block">
+    <div class="row justify-content-center">
+      
+      
+      
+
+      <div class="col-lg-8 ">
+        <div class="block shadow mb-4">
+          <h2>Linux for Beginners</h2>
+          <div class="mb-4 mt-3 post-meta">
+            <a href="https://christitus.com/author/"></a> <span class="mx-2">|</span>
+            Sep 19, 2022<span class="mx-2">|</span> 
+            <a href="https://christitus.com/categories/linux">Linux</a>
+            
+          </div>
           
           
-          <article class="mb-4 pb-2">
-  <h2 class="h4"><a class="post-title" href="https://christitus.com/force-active-directory-sync/">Force active directory sync to Office 365 with Azure ADSync</a></h2>
-  <div class="mb-3 post-meta">
-    <a href="https://christitus.com/author/chris-titus">Chris Titus</a> <span class="mx-1">|</span>
-    Oct 7, 2016 <span class="mx-1">|</span> 
-    <a href="https://christitus.com/categories/windows-server">Windows Server</a>
-    
-  </div>
-  <p><p>Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.</p></p>
-  <a href="https://christitus.com/force-active-directory-sync/" class="btn btn-sm btn-transparent pl-0">read more</a>
-  <div style="border: 1px #eee solid; margin-top:40px"></div>
-</article>
           
-          
-          <div class="mt-5">
-            <!-- pagination -->
+
+          <div class="content mb-5">
+            <p>So you want to use Linux? It is truly an amazing operating system and probably my favorite one to use. However, it is not for everyone and you&rsquo;ll need to learn a few things before you can understand it.</p>
+<h2 id="where-to-start">Where to Start</h2>
+<p>Starting off in Linux is not an easy task and has the most extreme learning curve of ANY operating system because it has so many options. Most will say install X Distro. However, this just doesn&rsquo;t tell you the full story.</p>
+<p>The Linux desktop community is a strange, social awkward bunch that typically likes to troll people. It also has a tendency of over promising and under delivering. I say this to temper your expectations and realize Linux is a different animal from ANY other operating system. It has its own set of amazing software and when it comes to hardware it has some incompatibilities when coming from Windows.</p>
+<p>The start to your journey will begin with a distribution or a collection of all the tools that make a somewhat complete experience. Just know that every single thing has alternatives. Make notes of what you LIKE and DO NOT LIKE. Then change what you do not like to your needs.</p>
+<p>For a beginner, I highly recommend Linux Mint. It has a very friendly starting point and I want to walk through its install and components as while it&rsquo;s a great starting point, there are many things I do change to make it a good experience for me. Once you understand what you can change, this opens up many doors&hellip;</p>
+<h2 id="the-install">The Install</h2>
+<p>Lets get start with Downloading the ISO @ <a href="https://www.linuxmint.com/download.php">https://www.linuxmint.com/download.php</a></p>
+<p>Burn this to a USB Stick with Etcher @ <a href="https://www.balena.io/etcher/">https://www.balena.io/etcher/</a></p>
+<p>Then boot to the USB stick in the PC you are installing Linux on. If this is your first time, I HIGHLY recommend to just boot into the Live environment to get your feet wet first and see if this is something you want to do. Otherwise, follow the prompts and erase your computer to move to Linux.</p>
+<h2 id="what-to-change">What to Change</h2>
+<ul>
+<li><strong>File Managers</strong>
+<ol>
+<li>Dolphin</li>
+<li>Thunar</li>
+<li>Nautilus</li>
+</ol>
+</li>
+<li><strong>Themes</strong>
+<ol>
+<li>lxappearance</li>
+<li>DE Settings</li>
+</ol>
+</li>
+<li><strong>Desktop Environments</strong>
+<ol>
+<li>Cinnamon</li>
+<li>XFCE</li>
+<li>KDE</li>
+<li>GNOME</li>
+</ol>
+</li>
+<li><strong>Remote Access</strong>
+<ol>
+<li>TightVNC</li>
+<li>Remmina</li>
+</ol>
+</li>
+<li><strong>Terminals</strong>
+<ol>
+<li>Kitty</li>
+<li>Terminator</li>
+<li>gnome-terminal</li>
+<li>konsole</li>
+<li>yakuake</li>
+</ol>
+</li>
+</ul>
+<h2 id="windows-app-alternatives">Windows App Alternatives</h2>
+<p>People will tell you these programs can work or &ldquo;kinda&rdquo; work, but it is an awful experience and if you need them, then you need Windows.</p>
+<h3 id="adobe">Adobe</h3>
+<p>PDF is one of those things that make the business world go round. Adobe has an iron grip in this realm, but for basic editing and simple viewing we can use these programs:</p>
+<ul>
+<li>xpdf</li>
+<li>LibreOffice</li>
+</ul>
+<p>Then there is the creative suite for video and photo. Photoshop, Premiere, etc&hellip; and there really isn&rsquo;t an equal in this area. Just basic alternatives that will work for beginners. So if you aren&rsquo;t a professional and just need to edit a little photo and video, here are your alternatives.</p>
+<p><strong>Photo</strong> - GIMP</p>
+<p><strong>Video</strong> - Kdenlive</p>
+<p>I have used these programs exclusively for my first 500 videos on YouTube. They are good and I still use GIMP every day. However, the video editing on Linux is a bit of a joke. Yes, there are alternatives, but they just aren&rsquo;t very good. Kdenlive is great for beginners, but once you get into color correcting or complex transitions it will fall short. Openshot is another basic alternative, but I personally think Kdenlive is a bit better.</p>
+<p>The other software Linux evangelists recommend are frankly just for the extreme users. DaVinci Resolve is a good piece of software, but its installation and usage on Linux is dicey at best. Lightworks is better to install, but overall a worse piece of software than DaVinci Resolve. If you are a professional in the video industry you can set up a dedicated Linux workstation for DaVinci resolve to their specifications, but for the general user&hellip; it is just an awful experience.</p>
+<h3 id="microsoft-office">Microsoft Office</h3>
+<p>This used to have a choke hold on business, but these days it really isn&rsquo;t needed. Frankly, I think G-Suite does a better job in a lot of ways, but Microsoft themselves offer a fantastic web experience. However, if you have to have a non-web based application, these programs are pretty darn amazing.</p>
+<ul>
+<li>LibreOffice</li>
+<li>FreeOffice</li>
+<li>OnlyOffice</li>
+<li>OpenOffice</li>
+</ul>
+<p>All of these applications are pretty darn good. The easiest to transition from Microsoft Office is FreeOffice. It&rsquo;s so alike that I&rsquo;m suprised they haven&rsquo;t been sued by Microsoft. However, the other alternatives are just as powerful and fantastic options.</p>
+<h3 id="gaming">Gaming</h3>
+<p>This one has made the most progress in the past couple years and is quite impressive. Linux has easily become the second best operating system for gaming. It has Steam support baked in and many alternatives for non-steam games. While steam games often install and play without any intervention, many non-steam games require a bit of tinkering to get functioning perfectly.</p>
+<p>The one massive drawback for gaming on Linux is the lack of support for many competitive shooter titles. It isn&rsquo;t that Linux can&rsquo;t play them, but the publishers refuse to enable Linux support in Easy Anti-Cheat, BattleEye, or Denuvo. There are a few exceptions with APEX Legends recently adding Linux support, but many refuse to like Destiny 2, Call of Duty, Battlefield, and more.</p>
+<h4 id="compatibility">Compatibility</h4>
+<p>About 70% of windows games work on Linux. However you need to check <a href="https://protondb.com">https://protondb.com</a> and <a href="https://lutris.net">https://lutris.net</a> to make sure you game is working before you switch!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This is merely a starting point to help you understand and take your first steps in to Linux. There is so much more to explore and even after using Linux daily for almost 5 years as my desktop, I am still discovering new things every day. It is an absolutely amazing Operating System with unlimited potential&hellip; It just relies on you the end-user to discover it.</p>
+<h2 id="walkthrough-video">Walkthrough Video</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/10f4899srvc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h3 id="file-system-video">File System Video</h3>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/roES8iAaJEM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h3 id="youtube-playlists-to-watch">YouTube Playlists to Watch</h3>
+<ul>
+<li>Learning Linux Terminal (8 Videos) - <a href="https://www.youtube.com/watch?v=XK81cfvrElg&amp;list=PLc7fktTRMBozYfi4zlDeH0IdLdGImeOnO">https://www.youtube.com/watch?v=XK81cfvrElg&amp;list=PLc7fktTRMBozYfi4zlDeH0IdLdGImeOnO</a></li>
+<li>Windows to Linux Mint (7 Videos) - <a href="https://www.youtube.com/watch?v=1hwWAOBOsJs&amp;list=PLc7fktTRMBoxoDWkt0EzILkG4sCrEOT3e">https://www.youtube.com/watch?v=1hwWAOBOsJs&amp;list=PLc7fktTRMBoxoDWkt0EzILkG4sCrEOT3e</a></li>
+</ul>
+          </div>
+          <div class="mb-3 post-meta">
+             <a class="bg-light py-2 px-3" href="https://christitus.com/tags/linux-mint">#Linux Mint</a>
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <!-- /pagination -->
           </div>
         </div>
+
+        <div class="block shadow">
+          
+          
+          <h3 class="mb-3">See Also</h3>
+          <ul class="list-unstyled related-post-list">
+            
+            <li><a class="d-inline-block py-1 text-dark" href="/install-wine-libfaudio0-error/"><small class="fas fa-external-link-alt mr-2"></small>Install Wine Libfaudio0 Error</a></li>
+            
+          </ul>
+          
+        </div>
+        
+        <script src="https://utteranc.es/client.js"
+          repo="ChrisTitusTech/website"
+          issue-term="pathname"
+          theme="preferred-color-scheme"
+          crossorigin="anonymous"
+          async>
+        </script>
+        
+        <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+        <script>addBackToTop({
+          diameter: 56,
+          backgroundColor: 'rgb(154, 196, 248)',
+          textColor: '#fff'
+        })</script>
+        
       </div>
+      
+      
+      <aside class="col-lg-4 mt-5 mt-lg-0">
+        <div class="stickyside pl-lg-4"><div class="widget widget-about">
+    <h5 class="widget-title">Table of Contents</h5>
+<aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#where-to-start">Where to Start</a></li>
+    <li><a href="#the-install">The Install</a></li>
+    <li><a href="#what-to-change">What to Change</a></li>
+    <li><a href="#windows-app-alternatives">Windows App Alternatives</a>
+      <ul>
+        <li><a href="#adobe">Adobe</a></li>
+        <li><a href="#microsoft-office">Microsoft Office</a></li>
+        <li><a href="#gaming">Gaming</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#walkthrough-video">Walkthrough Video</a>
+      <ul>
+        <li><a href="#file-system-video">File System Video</a></li>
+        <li><a href="#youtube-playlists-to-watch">YouTube Playlists to Watch</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+</div><!-- Search -->
+
+
+
+
+<div class="widget">
+  <h5 class="widget-title"></h5>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6679678361432308"
+     data-ad-slot="2001915683"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+</div>
+      </aside>
+      
+      
     </div>
   </div>
 </section>
@@ -463,8 +629,9 @@ if (!doNotTrack) {
 
 
 
-
   
+  
+  <script src="/js/code-copy.js"></script>
   
   
   

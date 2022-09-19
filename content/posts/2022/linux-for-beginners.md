@@ -95,3 +95,12 @@ This is merely a starting point to help you understand and take your first steps
 ## Walkthrough Video
 
 {{< youtube 10f4899srvc >}}
+
+### File System Video
+
+{{< youtube roES8iAaJEM >}}
+
+### YouTube Playlists to Watch
+
+- Learning Linux Terminal (8 Videos) - <https://www.youtube.com/watch?v=XK81cfvrElg&list=PLc7fktTRMBozYfi4zlDeH0IdLdGImeOnO>
+- Windows to Linux Mint (7 Videos) - <https://www.youtube.com/watch?v=1hwWAOBOsJs&list=PLc7fktTRMBoxoDWkt0EzILkG4sCrEOT3e>

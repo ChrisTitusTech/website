@@ -632,11 +632,11 @@ Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 This knowledge base is fantastic for any information I glaze over or troubleshooting that isn&amp;rsquo;t covered. It is much more indepth than this article, but can be confusing in parts. This article is meant to get you acquainted with OpenCore and fill in any missing gaps.&lt;/p&gt;
 &lt;h2 id=&#34;why-i-use-opencore&#34;&gt;Why I Use OpenCore?&lt;/h2&gt;
 &lt;p&gt;I use opencore for compatibility and everything can be setup in a non macOS environment. It also injects drivers support (kext) differently than past methods and is far more stable.
-This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster.
+This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster. 
 I also find a larger amount of hardware is supported and the finished product is all contained neatly in an EFI partition.&lt;/p&gt;
 &lt;h2 id=&#34;hardware-compatibility&#34;&gt;Hardware Compatibility&lt;/h2&gt;
 &lt;p&gt;Even with OpenCore supporting a lot more hardware there is still some hardware that simply will not work on macOS no matter what you do. Here is a definitive guide &lt;a href=&#34;https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/&#34;&gt;https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/&lt;/a&gt;.
-The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops.
+The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops. 
 AMD CPUs can technically work, but will require more tinkering and are more difficult than the Intel counterparts.&lt;/p&gt;
 &lt;h2 id=&#34;files-and-projects-you-need-to-download-and-what-they-do&#34;&gt;Files and Projects you need to download and what they do&lt;/h2&gt;
 &lt;p&gt;Here is a list of all the files and GitHub projects that are used for OpenCore.&lt;/p&gt;

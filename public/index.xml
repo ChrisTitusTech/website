@@ -5,7 +5,110 @@
     <link>https://christitus.com/</link>
     <description>Recent content on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux for Beginners</title>
+      <link>https://christitus.com/linux-for-beginners/</link>
+      <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/linux-for-beginners/</guid>
+      <description>&lt;p&gt;So you want to use Linux? It is truly an amazing operating system and probably my favorite one to use. However, it is not for everyone and you&amp;rsquo;ll need to learn a few things before you can understand it.&lt;/p&gt;
+&lt;h2 id=&#34;where-to-start&#34;&gt;Where to Start&lt;/h2&gt;
+&lt;p&gt;Starting off in Linux is not an easy task and has the most extreme learning curve of ANY operating system because it has so many options. Most will say install X Distro. However, this just doesn&amp;rsquo;t tell you the full story.&lt;/p&gt;
+&lt;p&gt;The Linux desktop community is a strange, social awkward bunch that typically likes to troll people. It also has a tendency of over promising and under delivering. I say this to temper your expectations and realize Linux is a different animal from ANY other operating system. It has its own set of amazing software and when it comes to hardware it has some incompatibilities when coming from Windows.&lt;/p&gt;
+&lt;p&gt;The start to your journey will begin with a distribution or a collection of all the tools that make a somewhat complete experience. Just know that every single thing has alternatives. Make notes of what you LIKE and DO NOT LIKE. Then change what you do not like to your needs.&lt;/p&gt;
+&lt;p&gt;For a beginner, I highly recommend Linux Mint. It has a very friendly starting point and I want to walk through its install and components as while it&amp;rsquo;s a great starting point, there are many things I do change to make it a good experience for me. Once you understand what you can change, this opens up many doors&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;the-install&#34;&gt;The Install&lt;/h2&gt;
+&lt;p&gt;Lets get start with Downloading the ISO @ &lt;a href=&#34;https://www.linuxmint.com/download.php&#34;&gt;https://www.linuxmint.com/download.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Burn this to a USB Stick with Etcher @ &lt;a href=&#34;https://www.balena.io/etcher/&#34;&gt;https://www.balena.io/etcher/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then boot to the USB stick in the PC you are installing Linux on. If this is your first time, I HIGHLY recommend to just boot into the Live environment to get your feet wet first and see if this is something you want to do. Otherwise, follow the prompts and erase your computer to move to Linux.&lt;/p&gt;
+&lt;h2 id=&#34;what-to-change&#34;&gt;What to Change&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;File Managers&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;Dolphin&lt;/li&gt;
+&lt;li&gt;Thunar&lt;/li&gt;
+&lt;li&gt;Nautilus&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Themes&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;lxappearance&lt;/li&gt;
+&lt;li&gt;DE Settings&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desktop Environments&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;Cinnamon&lt;/li&gt;
+&lt;li&gt;XFCE&lt;/li&gt;
+&lt;li&gt;KDE&lt;/li&gt;
+&lt;li&gt;GNOME&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remote Access&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;TightVNC&lt;/li&gt;
+&lt;li&gt;Remmina&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terminals&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;Kitty&lt;/li&gt;
+&lt;li&gt;Terminator&lt;/li&gt;
+&lt;li&gt;gnome-terminal&lt;/li&gt;
+&lt;li&gt;konsole&lt;/li&gt;
+&lt;li&gt;yakuake&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;windows-app-alternatives&#34;&gt;Windows App Alternatives&lt;/h2&gt;
+&lt;p&gt;People will tell you these programs can work or &amp;ldquo;kinda&amp;rdquo; work, but it is an awful experience and if you need them, then you need Windows.&lt;/p&gt;
+&lt;h3 id=&#34;adobe&#34;&gt;Adobe&lt;/h3&gt;
+&lt;p&gt;PDF is one of those things that make the business world go round. Adobe has an iron grip in this realm, but for basic editing and simple viewing we can use these programs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;xpdf&lt;/li&gt;
+&lt;li&gt;LibreOffice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then there is the creative suite for video and photo. Photoshop, Premiere, etc&amp;hellip; and there really isn&amp;rsquo;t an equal in this area. Just basic alternatives that will work for beginners. So if you aren&amp;rsquo;t a professional and just need to edit a little photo and video, here are your alternatives.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Photo&lt;/strong&gt; - GIMP&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video&lt;/strong&gt; - Kdenlive&lt;/p&gt;
+&lt;p&gt;I have used these programs exclusively for my first 500 videos on YouTube. They are good and I still use GIMP every day. However, the video editing on Linux is a bit of a joke. Yes, there are alternatives, but they just aren&amp;rsquo;t very good. Kdenlive is great for beginners, but once you get into color correcting or complex transitions it will fall short. Openshot is another basic alternative, but I personally think Kdenlive is a bit better.&lt;/p&gt;
+&lt;p&gt;The other software Linux evangelists recommend are frankly just for the extreme users. DaVinci Resolve is a good piece of software, but its installation and usage on Linux is dicey at best. Lightworks is better to install, but overall a worse piece of software than DaVinci Resolve. If you are a professional in the video industry you can set up a dedicated Linux workstation for DaVinci resolve to their specifications, but for the general user&amp;hellip; it is just an awful experience.&lt;/p&gt;
+&lt;h3 id=&#34;microsoft-office&#34;&gt;Microsoft Office&lt;/h3&gt;
+&lt;p&gt;This used to have a choke hold on business, but these days it really isn&amp;rsquo;t needed. Frankly, I think G-Suite does a better job in a lot of ways, but Microsoft themselves offer a fantastic web experience. However, if you have to have a non-web based application, these programs are pretty darn amazing.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LibreOffice&lt;/li&gt;
+&lt;li&gt;FreeOffice&lt;/li&gt;
+&lt;li&gt;OnlyOffice&lt;/li&gt;
+&lt;li&gt;OpenOffice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of these applications are pretty darn good. The easiest to transition from Microsoft Office is FreeOffice. It&amp;rsquo;s so alike that I&amp;rsquo;m suprised they haven&amp;rsquo;t been sued by Microsoft. However, the other alternatives are just as powerful and fantastic options.&lt;/p&gt;
+&lt;h3 id=&#34;gaming&#34;&gt;Gaming&lt;/h3&gt;
+&lt;p&gt;This one has made the most progress in the past couple years and is quite impressive. Linux has easily become the second best operating system for gaming. It has Steam support baked in and many alternatives for non-steam games. While steam games often install and play without any intervention, many non-steam games require a bit of tinkering to get functioning perfectly.&lt;/p&gt;
+&lt;p&gt;The one massive drawback for gaming on Linux is the lack of support for many competitive shooter titles. It isn&amp;rsquo;t that Linux can&amp;rsquo;t play them, but the publishers refuse to enable Linux support in Easy Anti-Cheat, BattleEye, or Denuvo. There are a few exceptions with APEX Legends recently adding Linux support, but many refuse to like Destiny 2, Call of Duty, Battlefield, and more.&lt;/p&gt;
+&lt;h4 id=&#34;compatibility&#34;&gt;Compatibility&lt;/h4&gt;
+&lt;p&gt;About 70% of windows games work on Linux. However you need to check &lt;a href=&#34;https://protondb.com&#34;&gt;https://protondb.com&lt;/a&gt; and &lt;a href=&#34;https://lutris.net&#34;&gt;https://lutris.net&lt;/a&gt; to make sure you game is working before you switch!&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This is merely a starting point to help you understand and take your first steps in to Linux. There is so much more to explore and even after using Linux daily for almost 5 years as my desktop, I am still discovering new things every day. It is an absolutely amazing Operating System with unlimited potential&amp;hellip; It just relies on you the end-user to discover it.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/10f4899srvc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;file-system-video&#34;&gt;File System Video&lt;/h3&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/roES8iAaJEM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;youtube-playlists-to-watch&#34;&gt;YouTube Playlists to Watch&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Learning Linux Terminal (8 Videos) - &lt;a href=&#34;https://www.youtube.com/watch?v=XK81cfvrElg&amp;amp;list=PLc7fktTRMBozYfi4zlDeH0IdLdGImeOnO&#34;&gt;https://www.youtube.com/watch?v=XK81cfvrElg&amp;amp;list=PLc7fktTRMBozYfi4zlDeH0IdLdGImeOnO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Windows to Linux Mint (7 Videos) - &lt;a href=&#34;https://www.youtube.com/watch?v=1hwWAOBOsJs&amp;amp;list=PLc7fktTRMBoxoDWkt0EzILkG4sCrEOT3e&#34;&gt;https://www.youtube.com/watch?v=1hwWAOBOsJs&amp;amp;list=PLc7fktTRMBoxoDWkt0EzILkG4sCrEOT3e&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
     <item>
       <title>Fix LibGL Errors</title>
       <link>https://christitus.com/fix-libGL-errors/</link>
@@ -2399,7 +2502,7 @@ Razer has a bunch of cool features, but also has a great open source project cal
 &lt;/ul&gt;
 &lt;p&gt;Recommended Wallets:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt;
+&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt; 
 &lt;img src=&#34;https://christitus.com/images/crypto/exodus.png&#34; alt=&#34;exodus&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Other advanced wallets I&amp;rsquo;d recommend come from the official projects or opensource on github.com&lt;/li&gt;
 &lt;/ul&gt;
@@ -3378,11 +3481,11 @@ Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 This knowledge base is fantastic for any information I glaze over or troubleshooting that isn&amp;rsquo;t covered. It is much more indepth than this article, but can be confusing in parts. This article is meant to get you acquainted with OpenCore and fill in any missing gaps.&lt;/p&gt;
 &lt;h2 id=&#34;why-i-use-opencore&#34;&gt;Why I Use OpenCore?&lt;/h2&gt;
 &lt;p&gt;I use opencore for compatibility and everything can be setup in a non macOS environment. It also injects drivers support (kext) differently than past methods and is far more stable.
-This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster.
+This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster. 
 I also find a larger amount of hardware is supported and the finished product is all contained neatly in an EFI partition.&lt;/p&gt;
 &lt;h2 id=&#34;hardware-compatibility&#34;&gt;Hardware Compatibility&lt;/h2&gt;
 &lt;p&gt;Even with OpenCore supporting a lot more hardware there is still some hardware that simply will not work on macOS no matter what you do. Here is a definitive guide &lt;a href=&#34;https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/&#34;&gt;https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/&lt;/a&gt;.
-The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops.
+The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops. 
 AMD CPUs can technically work, but will require more tinkering and are more difficult than the Intel counterparts.&lt;/p&gt;
 &lt;h2 id=&#34;files-and-projects-you-need-to-download-and-what-they-do&#34;&gt;Files and Projects you need to download and what they do&lt;/h2&gt;
 &lt;p&gt;Here is a list of all the files and GitHub projects that are used for OpenCore.&lt;/p&gt;
@@ -5986,10 +6089,10 @@ Setup FreeNAS Video: &lt;a href=&#34;https://youtu.be/JexkrpeM_WA&#34;&gt;https:
       <guid>https://christitus.com/sata-vs-sas-vs-nvme/</guid>
       <description>&lt;p&gt;This is a quick breakdown of the differences between SATA vs SAS vs NVMe. After looking at the performance below, you will be able to decide which one best suits your needs.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;SATA (Serial Advanced Technology Advancement)
+&lt;li&gt;SATA (Serial Advanced Technology Advancement) 
 * Most common
 * Least reliable
-* Slow
+* Slow 
 * 5400 – 7200 RPM Hard Drives
 * Half duplex (Can’t read and write simultaneously)
 * 6 GB/s connection
@@ -6089,7 +6192,7 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
 &lt;li&gt;run the following commands:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;xe pool-ha-disable&lt;/code&gt;&lt;em&gt;Note: If this fails try ha-disable force below&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;xe host-emergency-ha-disable force=true&amp;lt;br /&amp;gt; xe pool-emergency-transition-to-master --force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe host-emergency-ha-disable force=true&amp;lt;br /&amp;gt; xe pool-emergency-transition-to-master --force&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: This will force the pool and slaves to reinitialize with the pool master&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Once the server reboots it should connect&lt;/li&gt;
@@ -6765,10 +6868,10 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
 &lt;/div&gt;
 
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;powershell-installation-method&#34;&gt;PowerShell Installation Method&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;microsoft-store-installation-method&#34;&gt;Microsoft Store Installation Method&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Open the Microsoft Store&lt;/li&gt;
@@ -7568,7 +7671,7 @@ OR&lt;/li&gt;
 &lt;em&gt;Alternatively, you can do this from the Services Panel&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Purge the ticket cache on the local domain controller.
+&lt;p&gt;Purge the ticket cache on the local domain controller. 
 &lt;code&gt;klist purge&lt;/code&gt;&lt;br&gt;
 _Note: you can use &lt;code&gt;klist tickets&lt;/code&gt; to view tickets before purging them&lt;/p&gt;
 &lt;ul&gt;
