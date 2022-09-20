@@ -16,24 +16,6 @@
     </item>
     
     <item>
-      <title>Windows 10</title>
-      <link>https://christitus.com/tags/windows-10/</link>
-      <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://christitus.com/tags/windows-10/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows 11</title>
-      <link>https://christitus.com/tags/windows-11/</link>
-      <pubDate>Fri, 16 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://christitus.com/tags/windows-11/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Debian</title>
       <link>https://christitus.com/tags/debian/</link>
       <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
@@ -255,6 +237,15 @@
       <pubDate>Tue, 20 Jul 2021 14:46:40 -0500</pubDate>
       
       <guid>https://christitus.com/tags/kde/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows 11</title>
+      <link>https://christitus.com/tags/windows-11/</link>
+      <pubDate>Tue, 29 Jun 2021 11:21:54 -0500</pubDate>
+      
+      <guid>https://christitus.com/tags/windows-11/</guid>
       <description></description>
     </item>
     
@@ -579,6 +570,15 @@
       <pubDate>Tue, 29 Oct 2019 01:13:21 +0000</pubDate>
       
       <guid>https://christitus.com/tags/hackintosh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows 10</title>
+      <link>https://christitus.com/tags/windows-10/</link>
+      <pubDate>Mon, 14 Oct 2019 20:08:01 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/windows-10/</guid>
       <description></description>
     </item>
     

@@ -1,12 +1,13 @@
 ---
 title: "You are using GitHub WRONG!"
 
-date: 2022-09-19
+date: 2022-09-23
 url: /using-github-correctly/
 image: images/2022-thumbs/using-github-correctly.jpg
 categories:
   - Linux
   - Windows
+  - MacOS
 tags:
   - GitHub
 draft: false
