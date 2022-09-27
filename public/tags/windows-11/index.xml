@@ -5,7 +5,55 @@
     <link>https://christitus.com/tags/windows-11/</link>
     <description>Recent content in Windows 11 on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 29 Jun 2021 11:21:54 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/windows-11/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/windows-11/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Should you switch from Windows 10 to Windows 11</title>
+      <link>https://christitus.com/win10-to-win11/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/win10-to-win11/</guid>
+      <description>&lt;p&gt;The question isn&amp;rsquo;t if you should switch, but if you CAN switch. Windows 11 does a lot of things right as most of it&amp;rsquo;s systems are identical to 10. However, there are some drawbacks which we need to dive into.&lt;/p&gt;
+&lt;h2 id=&#34;windows-11-requirements&#34;&gt;Windows 11 Requirements&lt;/h2&gt;
+&lt;p&gt;There are two issues with Windows 11 that will catch some older computers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU Requirement: Intel 8th Generation and AMD 2nd Generation&lt;/li&gt;
+&lt;li&gt;UEFI Secure Boot with TPM 2.0 Chip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, these requirements are artificial and can easily be bypassed. With these Steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Launch Command Prompt with Shift + F10&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;regedit&lt;/code&gt; and launch Reg Editor&lt;/li&gt;
+&lt;li&gt;Add the following KEY (folder) HKEY_Local_Machine -&amp;gt; System -&amp;gt; Setup &amp;mdash; Name the key &lt;code&gt;MoSetup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add the following Value (DWORD) Name = &lt;code&gt;AllowUpgradesWithUnsupportedTPMOrCPU&lt;/code&gt;
+Value = &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Close Regedit and continue install&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;why-upgrade&#34;&gt;Why Upgrade&lt;/h2&gt;
+&lt;p&gt;Here are the main reason to upgade to Windows 11. &lt;strong&gt;The Look&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can go round and round about the marketing of Microsoft and all the bullshit they like to say. However, at the end of the day if you want a new look and a cleaner looking OS&amp;hellip; Windows 11 is it. The better sounds, rounded aesthetic, auto-hdr for games, and overall more cohesive visual experience is what Windows 11 does well.&lt;/p&gt;
+&lt;p&gt;What about all the other features Microsoft shills say are important and are NOT?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Performance - I have seen negligible performance gains and even worse performance in some instances&lt;/li&gt;
+&lt;li&gt;Widgets - This just reminds of Vista sidebar all over again. They are all sizzle and no steak.&lt;/li&gt;
+&lt;li&gt;Security - Another marketing ploy that promotes it being more secure. While technically true, it mainly applies to the startup of your pc with TPM and Secureboot. Which frankly, doesn&amp;rsquo;t matter as I can easily crack your Windows security with it&amp;rsquo;s terrible SAM file exploits that are well documented and present in Windows 11.&lt;/li&gt;
+&lt;li&gt;Teams colloboration - Just more pre-installed crap that you probably won&amp;rsquo;t use.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are all just meh points that I view the exact same as Windows 10.&lt;/p&gt;
+&lt;h2 id=&#34;why-not-to-upgrade&#34;&gt;Why NOT to Upgrade&lt;/h2&gt;
+&lt;p&gt;Windows 11 may look objectively better, but there are also some downsides. Here are the big ones I hate.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Taskbar - It is just plain awful as it is based on a new UWP platform that isn&amp;rsquo;t nearly as good as 10&amp;rsquo;s taskbar. Also you can&amp;rsquo;t move it to the left, right, or top like you can in 10.&lt;/li&gt;
+&lt;li&gt;Context Menu - The new look might look cleaner, but is far less functional. I&amp;rsquo;m working on a tweak to revert this back to the windows 10 menu&lt;/li&gt;
+&lt;li&gt;Changing Default Apps is awful in Windows 11. Everything is extension based now, where it is program based in Windows 10.&lt;/li&gt;
+&lt;li&gt;Windows 10 still has support until 2025, so don&amp;rsquo;t be in a rush to switch.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WBrh-9BdGVQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>Update Any PC to Windows 11</title>
       <link>https://christitus.com/update-any-pc-to-windows11/</link>

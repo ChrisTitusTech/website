@@ -5,7 +5,165 @@
     <link>https://christitus.com/posts/</link>
     <description>Recent content in Posts on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 19 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up Windows inside Linux</title>
+      <link>https://christitus.com/windows-inside-linux/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/windows-inside-linux/</guid>
+      <description>&lt;p&gt;Running Windows inside of Linux is essential for those that are trying to convert to Linux. There will always be a transition period and need to fallback to Windows. It is also nice to have for many Windows only programs that you may need while inside Linux.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;rsquo;t ever installed QEMU before, here is an article to get that setup @ &lt;a href=&#34;https://christitus.com/vm-setup-in-linux/&#34;&gt;https://christitus.com/vm-setup-in-linux/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;optimizing-windows-vm&#34;&gt;Optimizing Windows VM&lt;/h2&gt;
+&lt;p&gt;First you need to install the VirtIO tools, which can be difficult to track down. My favorite way is to run the exe file from &lt;a href=&#34;https://github.com/virtio-win/virtio-win-pkg-scripts&#34;&gt;https://github.com/virtio-win/virtio-win-pkg-scripts&lt;/a&gt; but many guides use the iso file also provided at this link.&lt;/p&gt;
+&lt;p&gt;Another good resource for obtaining VirtIO drivers is from the proxmox wiki &lt;a href=&#34;https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers&#34;&gt;https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;enable-qemu-guest-agent&#34;&gt;Enable QEMU Guest Agent&lt;/h3&gt;
+&lt;p&gt;Now you need to modify the VM to make use of the guest agent drivers. We need to add the qemu agent channel. Add Hardware -&amp;gt; Channel and copy these settings&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/qemu/guest-agent.png&#34; alt=&#34;guest-agent&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;passing-devices-through&#34;&gt;Passing Devices Through&lt;/h2&gt;
+&lt;p&gt;There are two main devices that you may want to pass through to a Windows VM. Hard Drives and Graphics Cards. Passing through a hard drive will give a good uplift in processing power and general VM response. The graphics card is very technical and frankly not recommended, but can be doable on some systems.&lt;/p&gt;
+&lt;h3 id=&#34;dedicated-hard-drive&#34;&gt;Dedicated Hard Drive&lt;/h3&gt;
+&lt;p&gt;Simply select Add Hardware -&amp;gt; Storage and copy these settings&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/qemu/hdd.png&#34; alt=&#34;hdd&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dedicated-graphics-card&#34;&gt;Dedicated Graphics Card&lt;/h3&gt;
+&lt;p&gt;This is referred to as PCI Passthrough and can be dicey on some systems. I&amp;rsquo;ve had some motherboards that can&amp;rsquo;t do this and others that can. The best guide and scripts I&amp;rsquo;ve found are from HikariKnight and his GitHub @ &lt;a href=&#34;https://github.com/HikariKnight/quickpassthrough&#34;&gt;https://github.com/HikariKnight/quickpassthrough&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/11111111&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>You are using GitHub WRONG!</title>
+      <link>https://christitus.com/using-github-correctly/</link>
+      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/using-github-correctly/</guid>
+      <description>&lt;p&gt;GitHub is an incredible powerful tool, but using it in command line can be frustrating. So instead of doing something dumb like using SSH agent workarounds or Token exporting shenanigans to make &lt;code&gt;git&lt;/code&gt; work in command line. We are going to use an amazing utility called &lt;code&gt;gh&lt;/code&gt; to authenticate.&lt;/p&gt;
+&lt;p&gt;Now before we continue, you might be thinking, I can just use password authentication. Well, Here is the error you get if you try that non-sense.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Support for password authentication was removed on August 13, 2021. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Please use a personal access token instead.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;gh-overview&#34;&gt;GH Overview&lt;/h2&gt;
+&lt;p&gt;This utility was created by GitHub directly to manage authentication and has a lot of fantastic features. So lets dive in&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;install-gh&#34;&gt;Install GH&lt;/h3&gt;
+&lt;p&gt;Debian Linux&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install gh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Windows&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;winget install -e GitHub.cli
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Mac&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install gh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;first-time-setup&#34;&gt;First Time Setup&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gh auth login
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Follow all the prompts and I&amp;rsquo;d recommend setting SSH as auth method.&lt;/p&gt;
+&lt;h3 id=&#34;set-cli-to-use-ssh&#34;&gt;Set CLI to use SSH&lt;/h3&gt;
+&lt;p&gt;If you forgot to set the protocol during the setup in &lt;code&gt;gh auth login&lt;/code&gt; use this command to set it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gh config set -h github.com git_protocol ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;set-the-repo-to-use-gh-auth&#34;&gt;Set the Repo to use GH auth&lt;/h4&gt;
+&lt;p&gt;Set the project repository for SSH auth&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:ChrisTitusTech/project.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-github-desktop&#34;&gt;Using GitHub Desktop&lt;/h2&gt;
+&lt;p&gt;There is nothing wrong with GitHub desktop and sometimes I use it when I&amp;rsquo;m reviewing my commits or pushes. It is a great graphical representation of how fetch/pull or commit/push work on GitHub. However, it is considerably slower, than just typing it in via terminal with a simple git push or git pull. This also blurs the lines between &lt;code&gt;git add .&lt;/code&gt;, &lt;code&gt;git commit -a -m &amp;quot;message&amp;quot;&lt;/code&gt;, and &lt;code&gt;git push&lt;/code&gt; when adding to a project.&lt;/p&gt;
+&lt;h2 id=&#34;using-github-properly&#34;&gt;Using GitHub properly&lt;/h2&gt;
+&lt;p&gt;If you are anything like me, when I started using GitHub I did so many things incorrectly and still do today! However, I&amp;rsquo;m slowly seeing the error of my ways and these are the big things I missed.&lt;/p&gt;
+&lt;h3 id=&#34;not-combining-git-add-commit-and-push&#34;&gt;Not combining git add, commit, and push&lt;/h3&gt;
+&lt;p&gt;When I first started these three commands seemed like they all pretty much did the same thing. I JUST WANT TO ADD TO MY PROJECT! Why is it like this?&lt;/p&gt;
+&lt;p&gt;Then I started doing some collaborative work and realized I&amp;rsquo;m terrible and most other people are too on GitHub, because we are all doing it WRONG!&lt;/p&gt;
+&lt;p&gt;So how should we be using &lt;code&gt;git&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;COMMIT OFTEN and after every change in code&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This should be everyone mantra, including me, but often I get caught up in my work and don&amp;rsquo;t do it. So what is the big deal? Well, if you bundle a ton of different changes into one commit&amp;hellip; you have to revert ALL those changes if you had one bad one. Breaking those up into different commits, you could just revert the bad code. That can literally save a project! I learned this when I bundled a ton of changes into my ArchTitus project and basically turned it into a spaghetti string of code that I hate looking at and debugging. To continue that project, I&amp;rsquo;d have to rebase and wipe out a ton of progress I&amp;rsquo;ve made and other people have contributed. This makes everyone mad and is simply not fun.&lt;/p&gt;
+&lt;p&gt;So follow that golden rule and realize you will fail at it, but realize your failures and do better the next time is how we elevate ourselves to the next level.&lt;/p&gt;
+&lt;h3 id=&#34;quick-aliases&#34;&gt;Quick Aliases&lt;/h3&gt;
+&lt;p&gt;These are some quality of life improvements that will make using git from command line so much better.&lt;/p&gt;
+&lt;p&gt;I use bashrc these days and these are some aliases I added to my &lt;code&gt;~/.bashrc&lt;/code&gt; file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcom() {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	git commit -m &amp;#34;$1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lazyg() {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	git commit -m &amp;#34;$1&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	git push
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now in a perfect world I would be using &lt;code&gt;gcom &amp;quot;commit message&amp;quot;&lt;/code&gt; several times a day and then finally using &lt;code&gt;lazyg &amp;quot;last commit of the day&amp;quot;&lt;/code&gt; to push my changes public after I&amp;rsquo;m done. However, the world and myself are far from perfect, but understanding what perfection would look like will help you know when you aren&amp;rsquo;t.&lt;/p&gt;
+&lt;h3 id=&#34;helping-projects&#34;&gt;Helping Projects&lt;/h3&gt;
+&lt;p&gt;A poorly documented issue is pointless and just gets closed in every project. Don&amp;rsquo;t be that person! Document what you can and if you noticed a recent commit messed something up reference it by doing a copy paste of the Pull Request # like so. First, get to this screen by clicking &amp;ldquo;## commits&amp;rdquo; in top right of the project main page. Then copy the SHA from the &amp;ldquo;bad&amp;rdquo; commit.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/github/git-commits.png&#34; alt=&#34;git-commit&#34;&gt;&lt;/p&gt;
+&lt;p&gt;From here, you simply make your issue and paste that long sha hash in where you want to reference it. Don&amp;rsquo;t worry the numbers will be truncated and it will look awesome in the issue page.&lt;/p&gt;
+&lt;p&gt;Also make sure you don&amp;rsquo;t just put a WALL OF TEXT! Try to make your issue readable by breaking up your issue if it is more than several sentences long. This just makes it more readable and make it as concise as possible.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/f7xZivqLZxc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Auto Mount with SystemD</title>
+      <link>https://christitus.com/auto-mount-systemd/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/auto-mount-systemd/</guid>
+      <description>&lt;p&gt;This shows how to automount remote network drives using systemd and fstab&lt;/p&gt;
+&lt;h2 id=&#34;automount-using-systemd&#34;&gt;Automount using systemd&lt;/h2&gt;
+&lt;p&gt;Sometimes partitions can fail to mount on startup and some options are needed to fix this. I&amp;rsquo;ve had two instances where it was needed. One was on a slow 6 TB drive that timed out on occation during boot and I had to &lt;code&gt;sudo mount -a&lt;/code&gt; to get it to mount&lt;/p&gt;
+&lt;p&gt;For this a simple option addition in fstab on a local disk looks like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;noauto,x-systemd.automount
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next, I had problems with NFS shares not mounting and I had to expand these option to:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;noauto,x-systemd.automount,x-systemd.mount-timeout=30,_netdev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This makes the &lt;code&gt;/etc/fstab&lt;/code&gt; entry look like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.0.0.10:/volume2/Images		/media/images	nfs	noauto,x-systemd.automount,x-systemd.mount-timeout=30,_netdev	0	0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://wiki.archlinux.org/title/Fstab#Automount_with_systemd&#34;&gt;https://wiki.archlinux.org/title/Fstab#Automount_with_systemd&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Should you switch from Windows 10 to Windows 11</title>
+      <link>https://christitus.com/win10-to-win11/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/win10-to-win11/</guid>
+      <description>&lt;p&gt;The question isn&amp;rsquo;t if you should switch, but if you CAN switch. Windows 11 does a lot of things right as most of it&amp;rsquo;s systems are identical to 10. However, there are some drawbacks which we need to dive into.&lt;/p&gt;
+&lt;h2 id=&#34;windows-11-requirements&#34;&gt;Windows 11 Requirements&lt;/h2&gt;
+&lt;p&gt;There are two issues with Windows 11 that will catch some older computers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU Requirement: Intel 8th Generation and AMD 2nd Generation&lt;/li&gt;
+&lt;li&gt;UEFI Secure Boot with TPM 2.0 Chip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, these requirements are artificial and can easily be bypassed. With these Steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Launch Command Prompt with Shift + F10&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;regedit&lt;/code&gt; and launch Reg Editor&lt;/li&gt;
+&lt;li&gt;Add the following KEY (folder) HKEY_Local_Machine -&amp;gt; System -&amp;gt; Setup &amp;mdash; Name the key &lt;code&gt;MoSetup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add the following Value (DWORD) Name = &lt;code&gt;AllowUpgradesWithUnsupportedTPMOrCPU&lt;/code&gt;
+Value = &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Close Regedit and continue install&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;why-upgrade&#34;&gt;Why Upgrade&lt;/h2&gt;
+&lt;p&gt;Here are the main reason to upgade to Windows 11. &lt;strong&gt;The Look&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can go round and round about the marketing of Microsoft and all the bullshit they like to say. However, at the end of the day if you want a new look and a cleaner looking OS&amp;hellip; Windows 11 is it. The better sounds, rounded aesthetic, auto-hdr for games, and overall more cohesive visual experience is what Windows 11 does well.&lt;/p&gt;
+&lt;p&gt;What about all the other features Microsoft shills say are important and are NOT?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Performance - I have seen negligible performance gains and even worse performance in some instances&lt;/li&gt;
+&lt;li&gt;Widgets - This just reminds of Vista sidebar all over again. They are all sizzle and no steak.&lt;/li&gt;
+&lt;li&gt;Security - Another marketing ploy that promotes it being more secure. While technically true, it mainly applies to the startup of your pc with TPM and Secureboot. Which frankly, doesn&amp;rsquo;t matter as I can easily crack your Windows security with it&amp;rsquo;s terrible SAM file exploits that are well documented and present in Windows 11.&lt;/li&gt;
+&lt;li&gt;Teams colloboration - Just more pre-installed crap that you probably won&amp;rsquo;t use.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are all just meh points that I view the exact same as Windows 10.&lt;/p&gt;
+&lt;h2 id=&#34;why-not-to-upgrade&#34;&gt;Why NOT to Upgrade&lt;/h2&gt;
+&lt;p&gt;Windows 11 may look objectively better, but there are also some downsides. Here are the big ones I hate.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Taskbar - It is just plain awful as it is based on a new UWP platform that isn&amp;rsquo;t nearly as good as 10&amp;rsquo;s taskbar. Also you can&amp;rsquo;t move it to the left, right, or top like you can in 10.&lt;/li&gt;
+&lt;li&gt;Context Menu - The new look might look cleaner, but is far less functional. I&amp;rsquo;m working on a tweak to revert this back to the windows 10 menu&lt;/li&gt;
+&lt;li&gt;Changing Default Apps is awful in Windows 11. Everything is extension based now, where it is program based in Windows 10.&lt;/li&gt;
+&lt;li&gt;Windows 10 still has support until 2025, so don&amp;rsquo;t be in a rush to switch.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WBrh-9BdGVQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>Linux for Beginners</title>
       <link>https://christitus.com/linux-for-beginners/</link>
