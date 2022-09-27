@@ -52,3 +52,14 @@ This isn't a advertisement for you to use VIM! In fact, I'd recommend you NOT us
 
 Focus on what works for you and what you enjoy as far as an environment. This is more about how you *FEEL* than practical application. The better you feel in your workflow, the better your work product!
 
+## Set Goals
+
+If you are going to improve in anything you need to have a goal. For me it is all about putting in the time consistently. That is true with everything in life that you go to learn. **MORE TIME = BETTER RESULTS**
+
+Example Goals: 
+- 3 hours of coding per day
+- 500 Git Contributions in 2022
+
+Once you set these goals look at how you are doing. I recommend both short term and long term goals like I listed above.
+
+Now, go code! 
