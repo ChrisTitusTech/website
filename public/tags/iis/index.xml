@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IIS on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/iis/</link>
+    <description>Recent content in IIS on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 26 Dec 2015 05:41:50 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/iis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Move Website from Linux to IIS</title>
+      <link>https://christitus.com/move-website-linux-iis/</link>
+      <pubDate>Sat, 26 Dec 2015 05:41:50 +0000</pubDate>
+      
+      <guid>https://christitus.com/move-website-linux-iis/</guid>
+      <description>&lt;p&gt;This guide goes over how to Move Website from Linux to IIS. If you’re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.&lt;/p&gt;
+&lt;h3 id=&#34;migration&#34;&gt;Migration&lt;/h3&gt;
+&lt;p&gt;The database migration from MySQL to MS SQL is actually pretty easy since you just push it through a large query, but I didn’t really want to mess with it, so I stuck with MySQL.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.mysql.com/downloads/mysql/&#34;&gt;Download and Install MySQL for Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With that down setting up IIS is also extremely simple now, which is quite surprising given how unfriendly IIS 6 was. The interface is pretty much the same, so you can do it the way you have always known, but now they have added multiple friendly tools in the form of &lt;strong&gt;Microsoft WebMatrix&lt;/strong&gt; and &lt;strong&gt;Web Platform Installer&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://go.microsoft.com/fwlink/?LinkID=286266&#34;&gt;Download Microsoft WebMatrix (official Microsoft Link)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Using the Web Platform Install you can just select whatever install you want (WordPress for me) and click install. It grabs all the dependencies and installs them for you, and from here I had a fresh WordPress install. I did a simple import and changed a couple of settings that were reset and was back up and running. Overall a simple migration, and pretty happy with IIS 10 (What happened to IIS 9 we will never know…)&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

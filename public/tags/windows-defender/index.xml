@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Defender on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/windows-defender/</link>
+    <description>Recent content in Windows Defender on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 11 Jul 2022 11:36:33 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/windows-defender/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why I Hate Windows Defender</title>
+      <link>https://christitus.com/bad-windows-defender/</link>
+      <pubDate>Mon, 11 Jul 2022 11:36:33 -0500</pubDate>
+      
+      <guid>https://christitus.com/bad-windows-defender/</guid>
+      <description>&lt;p&gt;Windows Defender is often seen as a good antivirus, but I want to inform you of a cost noone sees but developers because of Defender.&lt;/p&gt;
+&lt;h2 id=&#34;is-windows-defender-good&#34;&gt;Is Windows Defender Good?&lt;/h2&gt;
+&lt;p&gt;Yes. It does detect a ton of viruses and have good detection rates as long as you are online, since it relies heavily on its online connection. However, there is a dark side to having Microsoft control this entire part of your PC that we need to go over. The false positives are excessive and I believe it is by design.&lt;/p&gt;
+&lt;h2 id=&#34;the-mafia-for-software-developers&#34;&gt;The Mafia for Software Developers&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022-thumbs/bad-windows-defender.jpg&#34; alt=&#34;bad-defender&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Smartscreen is powered by Windows Defender and you have to buy a $300 A YEAR code signing license with Extended Validation to bypass it. The EV cert is close to the mafia extorting business users for &amp;ldquo;protection&amp;rdquo;. If you don&amp;rsquo;t use Defender, you don&amp;rsquo;t need to worry about smartscreen. Using standard code signing with an external anti-virus will work close to the same as Defender is disabled when you use a 3rd party av.&lt;/p&gt;
+&lt;h3 id=&#34;code-signing-cost&#34;&gt;Code Signing Cost&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Cost for 1 year - prices as of 7/11/2022&lt;/em&gt;&lt;/p&gt;
+
+
+
+&lt;table
+  
+  class=&#39;table &#39;
+
+  
+  title=&#39;&#39;
+  aria-label=&#39;&#39;
+&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+          &lt;th
+            title=&#39;Site&#39;
+            aria-label=&#39;Site&#39;
+            data-th_x=&#39;0&#39;
+            data-id=&#39;0&#39;
+          &gt;Site&lt;/th&gt;
+          &lt;th
+            title=&#39;Extended Validation&#39;
+            aria-label=&#39;Extended Validation&#39;
+            data-th_x=&#39;1&#39;
+            data-id=&#39;1&#39;
+          &gt;Extended Validation&lt;/th&gt;
+          &lt;th
+            title=&#39;Regular Validation&#39;
+            aria-label=&#39;Regular Validation&#39;
+            data-th_x=&#39;2&#39;
+            data-id=&#39;2&#39;
+          &gt;Regular Validation&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;&lt;tbody&gt;
+      
+          &lt;tr
+            
+            data-tr_y=&#39;0&#39;
+          &gt;&lt;td
+                
+                title=&#39;Site&#39;
+                aria-label=&#39;Site&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Comodo&lt;/td&gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;$319&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;2&#39;
+              &gt;$85&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr
+            
+            data-tr_y=&#39;1&#39;
+          &gt;&lt;td
+                
+                title=&#39;Site&#39;
+                aria-label=&#39;Site&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Instant SSL&lt;/td&gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;$299&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;2&#39;
+              &gt;$166&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr
+            
+            data-tr_y=&#39;2&#39;
+          &gt;&lt;td
+                
+                title=&#39;Site&#39;
+                aria-label=&#39;Site&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Sectigo&lt;/td&gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;$399&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;2&#39;
+              &gt;$179&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr
+            
+            data-tr_y=&#39;3&#39;
+          &gt;&lt;td
+                
+                title=&#39;Site&#39;
+                aria-label=&#39;Site&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;DigiCert&lt;/td&gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;$566&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;2&#39;
+              &gt;$404&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;The big question is &amp;ldquo;Why does extended validation cost so much more?&amp;rdquo; and it is simply gatekeeping at its best. Many SSL companies will tell you it is because the &amp;ldquo;vetting process is harder&amp;rdquo;, but I smell bullshit on that. It costs usually double and sometimes more. The only difference is it requires a hardware cryptographic key and Microsoft smartscreen immediately gives it a pass on all scans.&lt;/p&gt;
+
+
+
+&lt;table
+  
+  class=&#39;table &#39;
+
+  
+  title=&#39;&#39;
+  aria-label=&#39;&#39;
+&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+          &lt;th
+            title=&#39;Extended Validation&#39;
+            aria-label=&#39;Extended Validation&#39;
+            data-th_x=&#39;0&#39;
+            data-id=&#39;0&#39;
+          &gt;Extended Validation&lt;/th&gt;
+          &lt;th
+            title=&#39;Regular Validation&#39;
+            aria-label=&#39;Regular Validation&#39;
+            data-th_x=&#39;1&#39;
+            data-id=&#39;1&#39;
+          &gt;Regular Validation&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;&lt;tbody&gt;
+      
+          &lt;tr
+            
+            data-tr_y=&#39;0&#39;
+          &gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Hardware Key&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;Software Key&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr
+            
+            data-tr_y=&#39;1&#39;
+          &gt;&lt;td
+                
+                title=&#39;Extended Validation&#39;
+                aria-label=&#39;Extended Validation&#39;
+                
+
+                
+                data-td_x=&#39;0&#39;
+              &gt;Smartscreen Bypassed&lt;/td&gt;&lt;td
+                
+                title=&#39;Regular Validation&#39;
+                aria-label=&#39;Regular Validation&#39;
+                
+
+                
+                data-td_x=&#39;1&#39;
+              &gt;Smartscreen Error&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;I can&amp;rsquo;t find anything in regards to who is really profiting the most of the Extended Validation code signing and if Microsoft is getting a cut since it is basically the only reason to have one. However, the entire situation is a bit suspect and any development person I know loath the process that Extended Validation is.&lt;/p&gt;
+&lt;h2 id=&#34;free-anti-virus-alternatives&#34;&gt;Free Anti-Virus Alternatives&lt;/h2&gt;
+&lt;p&gt;Is there something better than windows defender that is free? I&amp;rsquo;d say &lt;a href=&#34;https://www.bitdefender.com/solutions/free.html&#34;&gt;BitDefender Free&lt;/a&gt; offers superior protection.&lt;/p&gt;
+&lt;p&gt;This is a drastic shift in recommendation for me, because I used to say &amp;ldquo;All Free AV is worthless&amp;rdquo;, but now I see this from a different angle. Don&amp;rsquo;t get me wrong most FREE antivirus is glorified advertising for a paid product that essentially does the same thing. After looking at all the free offerings, I&amp;rsquo;d say BitDefender Free is better than using Defender.&lt;/p&gt;
+&lt;h2 id=&#34;paid-anti-virus&#34;&gt;Paid Anti-Virus&lt;/h2&gt;
+&lt;p&gt;For those that want good detection rates, better privacy, and low overhead. The antivirus I have recommend has stayed the same for years. I recommend &lt;a href=&#34;https://christitus.com/antivirus&#34;&gt;ESET&lt;/a&gt; for this because it is a proven antivirus that isn&amp;rsquo;t as intrusive as the others.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/9P6r7DLS77Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

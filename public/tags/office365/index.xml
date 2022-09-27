@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Office365 on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/office365/</link>
+    <description>Recent content in Office365 on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 07 Oct 2016 14:01:26 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/office365/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Force active directory sync to Office 365 with Azure ADSync</title>
+      <link>https://christitus.com/force-active-directory-sync/</link>
+      <pubDate>Fri, 07 Oct 2016 14:01:26 +0000</pubDate>
+      
+      <guid>https://christitus.com/force-active-directory-sync/</guid>
+      <description>&lt;p&gt;Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Start-ADSyncSyncCycle -PolicyType Delta
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is great for forcing a sync of time-sensitive distribution list updates or user updates. If you find yourself doing this frequently make a PowerShell script for ease of access.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

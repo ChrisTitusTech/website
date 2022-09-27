@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hardware on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/categories/hardware/</link>
+    <description>Recent content in Hardware on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Oct 2018 20:28:58 +0000</lastBuildDate><atom:link href="https://christitus.com/categories/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SATA vs SAS vs NVMe Performance Breakdown</title>
+      <link>https://christitus.com/sata-vs-sas-vs-nvme/</link>
+      <pubDate>Fri, 05 Oct 2018 20:28:58 +0000</pubDate>
+      
+      <guid>https://christitus.com/sata-vs-sas-vs-nvme/</guid>
+      <description>&lt;p&gt;This is a quick breakdown of the differences between SATA vs SAS vs NVMe. After looking at the performance below, you will be able to decide which one best suits your needs.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SATA (Serial Advanced Technology Advancement)
+* Most common
+* Least reliable
+* Slow
+* 5400 – 7200 RPM Hard Drives
+* Half duplex (Can’t read and write simultaneously)
+* 6 GB/s connection
+* Cheap (1 TB  SSD $150)
+&lt;ul&gt;
+&lt;li&gt;SAS (Serial Attached Storage)
+&lt;ul&gt;
+&lt;li&gt;Commonplace in data centers&lt;/li&gt;
+&lt;li&gt;Very reliable
+&lt;ul&gt;
+&lt;li&gt;Error checking is built-in&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fast
+&lt;ul&gt;
+&lt;li&gt;15k RPM Hard Drives&lt;/li&gt;
+&lt;li&gt;Full Duplex (Simultaneous read and write)&lt;/li&gt;
+&lt;li&gt;12 GB/s connection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Expensive (800 GB SSD $600) – Pretty much enterprise only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NVMe (Non-Volatile Memory Express)
+&lt;ul&gt;
+&lt;li&gt;Common in new PC builds, common in data center SANs for cache on tiered storage.&lt;/li&gt;
+&lt;li&gt;Reliable&lt;/li&gt;
+&lt;li&gt;Fastest
+&lt;ul&gt;
+&lt;li&gt;16-32 GB/s connection when directly plugged into PCIe&lt;/li&gt;
+&lt;li&gt;12 GB/s connection still applies when hot-swapped via SAS connection&lt;/li&gt;
+&lt;li&gt;Full Duplex&lt;/li&gt;
+&lt;li&gt;Higher Bandwidth (Able to process the most at one time)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Expensive (1 TB Residential $300-$400 | 1.2 TB Enterprise $1200)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No real surprises here but having it bullet-pointed makes the comparison very easy. I hope this helps those trying to decide on what to buy and typical performance you can expect from it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2018/10/ssdvsnvme.png&#34; alt=&#34;nvmevssata-pic&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;sata-vs-sas-vs-nvme--performance-winner-nvme&#34;&gt;SATA vs SAS vs NVMe | Performance Winner: NVMe&lt;/h2&gt;
+&lt;h2 id=&#34;sata-vs-sas-vs-nvme--budget-winner-sata&#34;&gt;SATA vs SAS vs NVMe | Budget Winner: SATA&lt;/h2&gt;
+&lt;p&gt;What about SAS? Well, in enterprise environments you see this very often with pretty much every tiered storage device having it. Most of what is on the market today is a mixture of SAS and NVMe for business. These hybrid drives are crazy expensive but give system administrators the ability to claim some of the speed from NVMe without purchasing entirely new devices. While this may seem trivial when you are talking thousands of dollars, this becomes a budget issue. SAS also has the error checking built into the interface, which in turn, gives greater reliability in theory. Personally, I think the future enterprise devices will have some type of new connector or housing that will make NVMe devices hot-swappable without the 12 GB/s SAS limitation. That said, we aren’t quite there yet, and the prevalence of SAS in enterprise space will continue.&lt;/p&gt;
+&lt;p&gt;By doing this you allow all traffic inbound to this computer, consequently, all outbound traffic is already allowed by default. Therefore, certain programs and services that depend on windows firewall can function properly. In conclusion, this is a far superior way of disabling the built-in firewall in windows without affecting other programs.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Using IOMeter to determine hard drive performance</title>
+      <link>https://christitus.com/using-iometer/</link>
+      <pubDate>Fri, 14 Sep 2018 16:50:46 +0000</pubDate>
+      
+      <guid>https://christitus.com/using-iometer/</guid>
+      <description>&lt;p&gt;Using IOMeter will give you a great benchmark on any hard drives and network drives you have. I use this quite often as you can see the effects of new hardware, introducing Link-Aggregation, or troubleshooting drives to determine if they are losing performance.&lt;/p&gt;
+&lt;h2 id=&#34;steps-to-follow&#34;&gt;Steps to Follow&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Download IOMeter from the &lt;a href=&#34;http://www.iometer.org/doc/downloads.html&#34;&gt;Official Site&lt;/a&gt; and run setup&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2018/09/isometer1.png&#34; alt=&#34;isometer1&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;All Programs -&amp;gt; Iometer -&amp;gt; Iometer&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Under ‘Topology’ tab, select the local machine&lt;br&gt;
+-Delete All workers but 1&lt;br&gt;
+-Under ‘Disk Targets’ tab select the drive you want to run the IO test on:&lt;br&gt;
+-Set Maximum Disk Size to 204800 Sectors (one sector is 512 B, so 204800 sectors gives 100MB)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2018/09/isometer2.png&#34; alt=&#34;isometer2&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Under ‘Access Specifications’ tab, under Global Access Specifications, select Default, and Click Add&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;_Note: Default test is – 67% read, 33% write, 2 KB, 100% Random non/sequential writes, Burst Length 1 I/O. This is fine for this brief guide and the sample results below use this. _&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2018/09/isometer3.png&#34; alt=&#34;isometer3&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Under ‘Results Display’ tab, under Update Frequency, set to 10 seconds&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2018/09/iometer4.png&#34; alt=&#34;isometer4&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Under ‘Test Setup’ tab, set Run Time to 1 minute ( If bench-marking a SAN or Network drive I recommend doing it for 5 minutes for consistency. )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clone Workers from the first page to the number of cores you have. (Ex. Quad Core = 4 workers)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The click the green flag to start the test, and choose a location to save the results….&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Remember to benchmark often and always do a before and after you make any changes. This is imperative so you can see any performance gains or losses you might incur. There are many times I have been surprised by the results of switching hardware or simply testing older hardware to see how it is holding up. One thing is for certain, I haven’t found a freeware tool that is better than IOMeter in the past 15 years that I’ve been doing IT.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>iDrac Dell Server (Off-Band Remote Access)</title>
+      <link>https://christitus.com/idrac-dell-server/</link>
+      <pubDate>Tue, 24 Mar 2015 18:43:46 +0000</pubDate>
+      
+      <guid>https://christitus.com/idrac-dell-server/</guid>
+      <description>&lt;p&gt;I recently had a server freeze up when I wasn’t on-site and needed to power cycle it. I had configured iDrac before but it was not responsive. Here are some useful commands that can configure, reboot, and reset the iDrac function on Dell Servers. The commands below are run from a command prompt on the server (unless otherwise stated) in the (C:\Program Files\Dell\SysMgt\idrac) path.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2015/03/idrac.png&#34; alt=&#34;iDrac&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Remote Commands (Workstation or another server)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;racadm -r -u -p&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Example: &lt;code&gt;racadm -r 10.1.1.1 -u root -p calvin getsysinfo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;DEFAULT USER: root&lt;/p&gt;
+&lt;p&gt;DEFAULT PASS: calvin&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;iDrac Information&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;racadm getsysinfo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reset and Factory Defaults&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;racadm racreset&lt;/code&gt; (soft Reset)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;racadm racresetcfg&lt;/code&gt; (Hard Reset – Resets IP/Account settings back to factory default)&lt;/p&gt;
+&lt;p&gt;NOTE: Resets Default IP &amp;gt; 192.168.0.120&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Network Setup&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgLanNetworking -o cfgNicEnable 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgLanNetworking -o cfgNicIpAddress 192.168.0.120
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgLanNetworking -o cfgNicNetmask 255.255.255.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgLanNetworking -o cfgNicGateway 192.168.0.120
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgLanNetworking -o cfgNicUseDHCP 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgLanNetworking -o cfgDNSServersFromDHCP 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgLanNetworking -o cfgDNSServer1 192.168.0.5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgLanNetworking -o cfgDNSServer2 192.168.0.6
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;User Setup&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgUserAdmin -o cfgUserAdminUserName -i 2 john
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgUserAdmin -o cfgUserAdminPassword -i 2 123456
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm config -g cfgUserAdmin -o cfgUserAdminEnable -i 2 1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To verify the new user, use one of the following commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm getconfig -u john
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;racadm getconfig –g cfgUserAdmin –i 2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;From here you will use your web browser to enter the iDrac configuration GUI and finish setting up SMTP servers, alerts and other things. I only recommend the above from command line since it gives direct access when the web browser isn’t functions due to bad IP address or invalid username.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Removing or Adding 9 to Dial out on VeriFone VX510</title>
+      <link>https://christitus.com/verifone-vx510-add-9/</link>
+      <pubDate>Wed, 07 Aug 2013 17:29:19 +0000</pubDate>
+      
+      <guid>https://christitus.com/verifone-vx510-add-9/</guid>
+      <description>&lt;p&gt;Using the following steps to add or remove a 9 when using the VeriFone VX510 to process credit cards.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2013/08/33937_Vx510hero-e1375896480531.jpg&#34; alt=&#34;VX510&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-by-step-instructions&#34;&gt;Step-by-Step Instructions&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;First go into Quick Setup (6 on pad)&lt;/li&gt;
+&lt;li&gt;Password is 1 Alpha Alpha 66831&lt;/li&gt;
+&lt;li&gt;Select Phone&lt;/li&gt;
+&lt;li&gt;Edit to add or remove 9 and then exit&lt;/li&gt;
+&lt;li&gt;Done!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Now run a couple tests to verify that is properly dialing out on your VeriFone VX510. Once done you don’t have to worry about it failing when dialing out any longer. Should you continue to have problems, it is likely that your unit is defective and will need to be replaced.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

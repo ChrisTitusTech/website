@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry Pi on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/raspberry-pi/</link>
+    <description>Recent content in Raspberry Pi on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 20 Apr 2021 10:02:56 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a Website on Raspberry Pi</title>
+      <link>https://christitus.com/pi-website/</link>
+      <pubDate>Tue, 20 Apr 2021 10:02:56 -0500</pubDate>
+      
+      <guid>https://christitus.com/pi-website/</guid>
+      <description>&lt;p&gt;This is a guide on how to create a website on a Raspberry Pi. This will teach you the basics of using a LAMP stack.&lt;/p&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This is perfect for setting up your first website and learning not only administering a wordpress site, but learning Linux. You will need a Raspberry Pi, a couple hours, and a computer to download the image on. The Raspberry Pi (RPI) is a perfect device for learning these things.&lt;/p&gt;
+&lt;p&gt;Also check out the official projects site from RaspberryPi
+Source: &lt;a href=&#34;https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress&#34;&gt;https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;downloading-the-rpi-imager&#34;&gt;Downloading the RPI Imager&lt;/h2&gt;
+&lt;p&gt;Download the Imager for your operating system. This supports all three OS&amp;rsquo;s (Windows, Mac, and Linux).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/downloads/&#34;&gt;https://www.raspberrypi.org/downloads/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run and Install the Imager&lt;/li&gt;
+&lt;li&gt;Select Raspberry Pi OS (other) -&amp;gt; Raspberry Pi OS Lite (32-bit)
+&lt;ul&gt;
+&lt;li&gt;Note: This is the one with NO Desktop Environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Insert the SD Card into your Computer&lt;/li&gt;
+&lt;li&gt;Click Write&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install-dependencies&#34;&gt;Install Dependencies&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install apache2 php mariadb-server php-mysql -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo service apache2 restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-wordpress&#34;&gt;Install Wordpress&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /var/www/html/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo rm *
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo wget http://wordpress.org/latest.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo tar xzf latest.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mv wordpress/* .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo rm -rf wordpress latest.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chown -R www-data: .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setup-wordpress-database&#34;&gt;Setup WordPress Database&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mysql_secure_installation
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;You will be asked Enter current password for root (enter for none): — press Enter.&lt;/li&gt;
+&lt;li&gt;Type in Y and press Enter to Set root password?.&lt;/li&gt;
+&lt;li&gt;Type in a password at the New password: prompt, and press Enter. Important: remember this root password, as you will need it later to set up WordPress.&lt;/li&gt;
+&lt;li&gt;Type in Y to Remove anonymous users.&lt;/li&gt;
+&lt;li&gt;Type in Y to Disallow root login remotely.&lt;/li&gt;
+&lt;li&gt;Type in Y to Remove test database and access to it.&lt;/li&gt;
+&lt;li&gt;Type in Y to Reload privilege tables now.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;When complete, you will see the message All done! and Thanks for using MariaDB!.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Login to MySQL with &lt;code&gt;sudo mysql -uroot -p&lt;/code&gt; and enter the password you set above.&lt;/p&gt;
+&lt;p&gt;You will see the terminal prompt change and you can enter the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;create database wordpress;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRANT ALL PRIVILEGES ON wordpress.* TO &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;YOURPASSWORD&amp;#39;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FLUSH PRIVILEGES;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;IMPORTANT: Exit SQL Prompt with &lt;code&gt;Ctrl + D&lt;/code&gt; and change &lt;code&gt;YOURPASSWORD&lt;/code&gt; above to your password!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Reboot with &lt;code&gt;sudo reboot&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;wordpress-configuration&#34;&gt;Wordpress Configuration&lt;/h2&gt;
+&lt;p&gt;Remote Access can be done with SSH from any system. Find your Raspberry Pi IP with &lt;code&gt;ip a&lt;/code&gt;. This IP is only your Local IP and not accessible from the outside world.&lt;/p&gt;
+&lt;p&gt;Initial setup can be done from any computer in the same network as the RPI. Type your pi ip address from above into your browsers address bar.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example: https://192.168.1.123&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Remote Login after initial setup append &lt;code&gt;/wp-admin&lt;/code&gt; to the address&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Example: https://192.168.1.123/wp-admin&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;recommended-server-settings&#34;&gt;Recommended Server settings&lt;/h2&gt;
+&lt;p&gt;Finally we need to make some quality of life improvements so you don&amp;rsquo;t have weird looking addresses. This is called &amp;ldquo;Friendly Permalinks&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;In the &lt;em&gt;WP Admin Portal&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;em&gt;Setting&lt;/em&gt;, then &lt;em&gt;Permalinks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Select the &lt;em&gt;Post name&lt;/em&gt; option and click &lt;em&gt;Save Changes&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From &lt;em&gt;SSH or Terminal on the RPI&lt;/em&gt; you need to enter the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo a2enmod rewrite
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nano /etc/apache2/sites-available/000-default.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;000-default.conf edits (Add this midway in the file)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;Directory &amp;#34;/var/www/html&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    AllowOverride All
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;/Directory&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Save the File by press Ctrl + O and Exit with Ctrl + X&lt;/p&gt;
+&lt;p&gt;Now restart Apache Web with &lt;code&gt;sudo service apache2 restart&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

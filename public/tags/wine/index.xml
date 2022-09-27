@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wine on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/wine/</link>
+    <description>Recent content in Wine on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Jan 2020 17:43:17 -0600</lastBuildDate><atom:link href="https://christitus.com/tags/wine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lcars Screensaver</title>
+      <link>https://christitus.com/lcars-screensaver/</link>
+      <pubDate>Fri, 17 Jan 2020 17:43:17 -0600</pubDate>
+      
+      <guid>https://christitus.com/lcars-screensaver/</guid>
+      <description>&lt;p&gt;This article goes over getting the LCARS screensaver by mewho working in Linux. This Screensaver was originally intended for Windows 9x and this is for fun!&lt;/p&gt;
+&lt;h2 id=&#34;installation-and-testing&#34;&gt;Installation and Testing&lt;/h2&gt;
+&lt;p&gt;First download the System47 Screensaver from mewho.com&lt;br&gt;
+&lt;a href=&#34;https://mewho.com/system47/download1.htm&#34;&gt;LCARS Download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Unzip the system47.zip&lt;/p&gt;
+&lt;p&gt;Create a WINE bottle for the Screensaver to run in from terminal:&lt;br&gt;
+&lt;code&gt;WINEARCH=win32 WINEPREFIX=/home/$USER/.lcars winecfg&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Change the Windows Version to Windows XP&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Run the System47.exe in wine to install the screensaver&lt;br&gt;
+&lt;code&gt;WINEPREFIX=~/.lcars wine &#39;~/Downloads/system47 v2.2_setup.exe.exe&#39;&lt;/code&gt;&lt;br&gt;
+Install the Screen saver and quit&lt;/p&gt;
+&lt;p&gt;Test the Screensaver in wine&lt;br&gt;
+&lt;code&gt;WINEPREFIX=~/.lcars wine &#39;/home/$USER/.lcars/drive_c/windows/system32/System47.scr&#39; /s&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;creating-screensaver-service&#34;&gt;Creating Screensaver Service&lt;/h2&gt;
+&lt;p&gt;Creating the screensaver service is done in three sections: service dependencies installation, script creation, and systemd service.&lt;/p&gt;
+&lt;h4 id=&#34;dependencies-to-install&#34;&gt;Dependencies to install&lt;/h4&gt;
+&lt;p&gt;Arch-based Installs &lt;code&gt;yay -S xscreensaver xprintidle&lt;/code&gt;&lt;br&gt;
+Debian-based Installs &lt;code&gt;apt install xscreensaver xprintidle&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;script-creation&#34;&gt;Script Creation&lt;/h4&gt;
+&lt;p&gt;Create lcars.sh in your home directory (&lt;em&gt;replace titus with your user&lt;/em&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/sh
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;DISPLAY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Wanted trigger timeout in milliseconds.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;IDLE_TIME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Sequence to execute when timeout triggers.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;trigger_cmd&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;WINEPREFIX&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/home/titus/.lcars wine &lt;span class=&#34;s1&#34;&gt;&amp;#39;/home/titus/.lcars/drive_c/windows/system32/System47.scr&amp;#39;&lt;/span&gt; /s
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;sleep_time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$IDLE_TIME&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;triggered&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ceil() instead of floor()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; sleep &lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;sleep_time+999&lt;span class=&#34;o&#34;&gt;)/&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;idle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;xprintidle&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$idle&lt;/span&gt; -ge &lt;span class=&#34;nv&#34;&gt;$IDLE_TIME&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; ! &lt;span class=&#34;nv&#34;&gt;$triggered&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            trigger_cmd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nv&#34;&gt;triggered&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nv&#34;&gt;sleep_time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$IDLE_TIME&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nv&#34;&gt;triggered&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# Give 100 ms buffer to avoid frantic loops shortly before triggers.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nv&#34;&gt;sleep_time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;IDLE_TIME-idle+100&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;service-creation&#34;&gt;Service Creation&lt;/h4&gt;
+&lt;p&gt;Create lcars.service (&lt;code&gt;sudo nano /etc/systemd/system/lcars.service&lt;/code&gt;)
+&lt;em&gt;change titus to your user&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Unit]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Description=Screensaver
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Service]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;User=titus
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Type=simple
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ExecStart=/bin/bash /home/titus/lcars.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Install]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WantedBy=multi-user.target
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Reload service daemon &lt;code&gt;sudo systemctl daemon-reload&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start lcars service to test &lt;code&gt;sudo systemctl start lcars&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Verify service is running &lt;code&gt;sudo systemctl status lcars&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Enable on startup &lt;code&gt;sudo systemctl enable lcars&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/J2zasJz5vuA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Garmin Express on Linux | Step by Step Guide</title>
+      <link>https://christitus.com/garmin-express-linux/</link>
+      <pubDate>Fri, 15 Feb 2019 22:20:57 +0000</pubDate>
+      
+      <guid>https://christitus.com/garmin-express-linux/</guid>
+      <description>&lt;p&gt;This is an installation guide on how to get Garmin Express on Linux working. In this Step by Step Guide, I go over creating a new wine bottle and installing Garmin Express in it.&lt;/p&gt;
+&lt;h2 id=&#34;linux-package-requirements&#34;&gt;Linux Package Requirements:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;wine-devel &lt;em&gt;Note:3.19 or higher&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;winetricks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation-steps&#34;&gt;Installation Steps&lt;/h2&gt;
+&lt;p&gt;First we start by creating a wineprefix and installing our prerequisites from terminal:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WINEARCH=win32 WINEPREFIX=/home/$USER/GarminExpress winetricks dotnet452 vcrun2010 corefonts&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;WINEARCH=win32 WINEPREFIX=/home/$USER/GarminExpress winetricks win7&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: You will be prompted during the setup for .NET installation just hit next and finish. Also, I like to seperate win7 after the prerequisites are setup to make sure the wineprefix runs in Windows 7 mode.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;With that out of the  way we need to download and install our GarminExpress.exe Setup executable. I downloaded mine from &lt;a href=&#34;https://www.garmin.com/en-US/software/express&#34;&gt;https://www.garmin.com/en-US/software/express&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Run the GarminExpress.exe file in our wine prefix&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WINEPREFIX=/home/$USER/GarminExpress wine explorer /desktop=garmin,1366x768 /home/$USER/Downloads/GarminExpress.exe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: If you downloaded the GarminExpress.exe to another location replace it above&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Modify your shortcut to be the following command&lt;/p&gt;
+&lt;p&gt;WINEPREFIX=/home/ctitus/GarminExpress wine explorer /desktop=garmin,1366x768 &amp;lsquo;/home/ctitus/GarminExpress/drive_c/Program Files/Garmin/Express/express.exe&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;Upon Launch you should see this screen which should recognize your Garmin device&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/02/Selection_012.png&#34; alt=&#34;Garmin Express on Linux&#34;&gt;&lt;/p&gt;
+&lt;p&gt;With all this done you will be able to launch Garmin Express on Linux.&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/hg01Z6VCox0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

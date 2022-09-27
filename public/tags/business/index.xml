@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Business on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/business/</link>
+    <description>Recent content in Business on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Feb 2017 21:03:20 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/business/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud migration hosting in Google, Amazon, or Microsoft</title>
+      <link>https://christitus.com/cloud-migration/</link>
+      <pubDate>Mon, 27 Feb 2017 21:03:20 +0000</pubDate>
+      
+      <guid>https://christitus.com/cloud-migration/</guid>
+      <description>&lt;h3 id=&#34;moving-to-the-cloud&#34;&gt;Moving to the Cloud&lt;/h3&gt;
+&lt;p&gt;The following article outlines what it takes for a cloud migration to Google Cloud Compute, Amazon Web Services, or Microsoft Azure means. Most businesses want to move to the “cloud” but have no idea what that means.&lt;/p&gt;
+&lt;p&gt;If you’re a small business you typically have a couple computers scattered around with one storage device. If you’re a medium or large business you probably already have several servers at a location in a contract. Moving to the cloud is often pitched to businesses using Software-as-a-Service replacing the current system with a web application that runs through your browser. While this is ideal, in most instances it isn’t practical. So you keep paying for a bloated IT infrastructure that is dated, isn’t as reliable, and unable to change with your business needs.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/02/pc-solution.png&#34; alt=&#34;PC Solution&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;performing-a-cloud-migration&#34;&gt;Performing a Cloud Migration&lt;/h3&gt;
+&lt;p&gt;Leverage Google Cloud Compute, Amazon Web Services, or Microsoft Azure to perform a cloud migration. Moving your servers will often end up costing between $100 – $400 per server a month depending on your environment. When you factor in that there is no capital expenditure, maintenance, or power costs this is a far cheaper solution than your current environment. You also gain a &lt;strong&gt;SUBSTANTIAL&lt;/strong&gt; increase in flexibility, performance, and reliability. So why hasn’t everyone transitioned to these services?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/02/tangled.png&#34; alt=&#34;tangled&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;migration-pains&#34;&gt;Migration Pains&lt;/h3&gt;
+&lt;p&gt;The main issue is getting a cloud migration completed. It’s hard to find businesses, technicians, or engineers that will do the migration. In the end, you should be paying these companies directly.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pitfalls&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Contracting a company that uses their own hardware and you pay them for substandard service and equipment on a monthly basis.&lt;/li&gt;
+&lt;li&gt;Under-estimating the extended downtime that is required for moving to these services. If you have 30+ servers it will take months for preparation, transfer time, and deployment.&lt;/li&gt;
+&lt;li&gt;Degraded service if you have to work in a hybrid environment. Working through a VPN for an extended time that it takes to complete the full migration.&lt;/li&gt;
+&lt;li&gt;Mass Storage – Most of the cost of using these services come from storage, and typically it’s not till you hit the petabytes that you’d run into ROI issues. As a general rule of thumb, anything less than 1000 Terabytes is more cost-effective using these services.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;I think every business should be leveraging this technology. The larger the business the harder the cloud migration will be. Small businesses I’ve done in the course of a day, whereas larger businesses take considerably longer. Stay the course and keep searching for talent capable of helping with this transition. I enjoy using all three of these major players in the market, however, for Website Hosting and Linux boxes I like Google Cloud Compute the most, and for businesses already running Office 365 Microsoft Azure makes for the easiest transition.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

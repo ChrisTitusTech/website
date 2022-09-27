@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberrypi on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/raspberrypi/</link>
+    <description>Recent content in Raspberrypi on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 12 Aug 2020 10:19:20 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry Pi Laptop</title>
+      <link>https://christitus.com/raspberry-pi-laptop/</link>
+      <pubDate>Wed, 12 Aug 2020 10:19:20 -0500</pubDate>
+      
+      <guid>https://christitus.com/raspberry-pi-laptop/</guid>
+      <description>&lt;p&gt;This post goes over the CrowPi 2 Laptop. This is a modular laptop for the raspberry pi that is simply amazing and showcases all that you can do with the pi.&lt;/p&gt;
+&lt;h2 id=&#34;using-elecrow-crowpi-image&#34;&gt;Using Elecrow CrowPi Image&lt;/h2&gt;
+&lt;p&gt;The Custom Raspbian Linux that CrowPi uses is from &lt;a href=&#34;https://www.elecrow.com/download/crowpi/&#34;&gt;https://www.elecrow.com/download/crowpi/&lt;/a&gt;. You can load this on any raspberry pi if you just want to use the digital portions to teach. It has a wonderful interface for learning Python and Scratch with code directly operating portions of the CrowPi2. This image also includes Minecraft Pi lessons which is fantastic for teaching and learning for younger students.&lt;/p&gt;
+&lt;h2 id=&#34;programming-lessons&#34;&gt;Programming Lessons&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/crowpi/learning.jpg&#34; alt=&#34;learning&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The interface for learning both Python and Scratch operate portions of the CrowPi such as making a sound or turning on one of the LEDs. While you can load the CrowPi 2 image on regular pi&amp;rsquo;s without the laptop a lot of lessons would not be meaningful. That said the Minecraft section was fantastic no matter if you were using the CrowPi or not.&lt;/p&gt;
+&lt;p&gt;Other interfaces such as Arduino or Microbit do require that component which isn&amp;rsquo;t included. Since both these products can operating pretty much anything you can think up in the real world, it makes sense that you&amp;rsquo;d want to purchase these parts separately as they will vary widely from project to project. I mentioned in my YouTube I wanted to do automated door locks in a future project which I&amp;rsquo;d use Arduino parts to accomplish.&lt;/p&gt;
+&lt;p&gt;As far as starting to learn and understand python, I thought this wasn&amp;rsquo;t the best starting spot. If you or your student has never touched or seen python, I&amp;rsquo;d highly recommend intro lessons from &lt;a href=&#34;https://codecombat.com/&#34;&gt;https://codecombat.com/&lt;/a&gt; which are free and a great way to get your feet wet with Python before trying something like CrowPi 2 Python lessons.&lt;/p&gt;
+&lt;h2 id=&#34;retro-gaming&#34;&gt;Retro Gaming&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/crowpi/retro.jpg&#34; alt=&#34;retro&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The retro gaming aspect is something that is very familiar to the pi. I went ahead and did a custom RetroPie install only compiling SNES with Emulation Station and put that directly on the crow pi. If I were going to play a LOT of games on this, I&amp;rsquo;d highly recommend using a dedicated SD card for Retro pi so you can get maximum performance as running the crow pi desktop and applications along with the emulators will take away from some of the performance when emulating newer hardware like N64 / PS1 games. However, If you are just doing old school games like NES and SNES you won&amp;rsquo;t need to. The one thing I noticed was that it wasn&amp;rsquo;t already integrated and if you aren&amp;rsquo;t already familiar with RetroPi this can be a challenging thing to add if you don&amp;rsquo;t know Linux.&lt;/p&gt;
+&lt;p&gt;Learn more about RetroPie here: &lt;a href=&#34;https://retropie.org.uk/&#34;&gt;https://retropie.org.uk/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;overall-impressions&#34;&gt;Overall Impressions&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/crowpi/crowpi2.jpg&#34; alt=&#34;crowpi2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I love this laptop and am looking forward to making some lesson plans for the upcoming school year to teach my kids about it. This is the perfect product to experiment and learn about a variety of things in technology. Ever since the Raspberry Pi came out, I have been looking for this type of laptop to fill this need of showcasing all that the pi is capable of and the Crow Pi 2 exceeded all my expectations.&lt;/p&gt;
+&lt;p&gt;Learn more about the CrowPi 2 here: &lt;a href=&#34;https://www.kickstarter.com/projects/elecrow/crowpi2-steam-education-platformand-raspberry-pi-laptop&#34;&gt;Kickstarter Page&lt;/a&gt; and &lt;a href=&#34;https://www.elecrow.com/development-kit.html&#34;&gt;Official Site&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/uZmiWQbOBDw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

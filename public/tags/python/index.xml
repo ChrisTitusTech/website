@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/python/</link>
+    <description>Recent content in Python on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 Nov 2017 22:03:53 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python script to print out specific results from an API JSON call</title>
+      <link>https://christitus.com/api-json-call/</link>
+      <pubDate>Tue, 28 Nov 2017 22:03:53 +0000</pubDate>
+      
+      <guid>https://christitus.com/api-json-call/</guid>
+      <description>&lt;p&gt;The following is a Python script to print out specific results from an API JSON call from a website. This basic syntax will allow you to create a value to use.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import json, urllib2 # Import libraries we will be using
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;url = urllib2.urlopen(&amp;#39;http://baseurl.com:port/api.json&amp;#39;) # Pull webpage into a variable
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;result = json.load(url) # Format the URL for JSON
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;allhash = result[&amp;#39;hashrate&amp;#39;][&amp;#39;total&amp;#39;] # Pull a specific array of values
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checkhash= allhash[0] # Specify a single value in the array
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;making-an-api-json-call&#34;&gt;Making an API JSON call&lt;/h2&gt;
+&lt;p&gt;Using this basic script this will make a call from the JSON API on a website. I wanted a specific value 2 levels down. To determine which value you want to grab remember { open bracket will expand a level and a } close bracket will go back a level.&lt;/p&gt;
+&lt;p&gt;For instance, using this api.json&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{&amp;#34;hashrate&amp;#34;:{&amp;#34;threads&amp;#34;:[[632.8,629.7,631.0],[531.6,524.6,518.4],[631.9,628.6,625.0],[501.6,520.4,512.0]],&amp;#34;total&amp;#34;:[2297.8,2303.2,2286.4],&amp;#34;highest&amp;#34;:2339.2},&amp;#34;results&amp;#34;:{&amp;#34;diff_current&amp;#34;:100001,&amp;#34;shares_good&amp;#34;:281,&amp;#34;shares_total&amp;#34;:301,&amp;#34;avg_time&amp;#34;:49.9,&amp;#34;hashes_total&amp;#34;:32000515,&amp;#34;best&amp;#34;:[11141633,10328800,8258255,8129845,4476110,3954464,3795403,3425658,3208501,3130523],&amp;#34;error_log&amp;#34;:[{&amp;#34;count&amp;#34;:18,&amp;#34;last_seen&amp;#34;:1511905084,&amp;#34;text&amp;#34;:&amp;#34;Job not found.&amp;#34;}]},&amp;#34;connection&amp;#34;:{&amp;#34;pool&amp;#34;: &amp;#34;cryptonight.usa.nicehash.com:3355&amp;#34;,&amp;#34;uptime&amp;#34;:15018,&amp;#34;ping&amp;#34;:109,&amp;#34;error_log&amp;#34;:[]}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;in-closing&#34;&gt;In Closing&lt;/h3&gt;
+&lt;p&gt;Using the above API readout you can see I go into the hashrate brackets and pull the values for “total”. This creates an array and not a single string. So to make a call for the second value in “total” you would change the python code from allhash[0] to allhash[1]. You can use this to print out the values from the script, put them in a variable to be displayed on a website, or use it in a Nagios script for monitoring. The options are limitless.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

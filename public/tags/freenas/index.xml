@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FreeNAS on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/freenas/</link>
+    <description>Recent content in FreeNAS on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Oct 2018 19:14:03 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/freenas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Plex plugin in FreeNAS</title>
+      <link>https://christitus.com/install-plex-plugin-freenas/</link>
+      <pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate>
+      
+      <guid>https://christitus.com/install-plex-plugin-freenas/</guid>
+      <description>&lt;p&gt;This is an in-depth installation and configuration of the Plex plugin in FreeNAS 11.2. I detail the installation of plex on FreeNAS Jail and configuration of using a share as a Plex mount point.&lt;/p&gt;
+&lt;h2 id=&#34;plex-plugin-in-freenas-steps&#34;&gt;Plex plugin in FreeNAS Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Install Plex Plugin
+&lt;ul&gt;
+&lt;li&gt;Under Plugins -&amp;gt; Availiable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Set Static IP
+&lt;ul&gt;
+&lt;li&gt;Interface em0 (or your interface name), Static IP for Plex Server, and Netmask (/24 is 255.255.255.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Stop Plugin&lt;/li&gt;
+&lt;li&gt;Edit Plex Jail – Mount Point – &lt;em&gt;Note: This is only used if you want a share to add movies to your plex from another computer&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;Set Source Share (/mnt/sharename/) and Set Destination (I selected the media folder in the jail directory)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Edit Plex Jail – Edit Confiuration
+&lt;ol&gt;
+&lt;li&gt;Check VNET and Berkeley Packet Filter&lt;/li&gt;
+&lt;li&gt;Set Default IPv4 Route to your Gateway or Router (Ex. 192.168.1.1)&lt;/li&gt;
+&lt;li&gt;Next&lt;/li&gt;
+&lt;li&gt;Select “allow:raw_sockets”&lt;/li&gt;
+&lt;li&gt;Click save in the bottom left&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Launch Management from Plugin Menu&lt;/li&gt;
+&lt;li&gt;Name your Server&lt;/li&gt;
+&lt;li&gt;Enter your Destination folder from Jail Mount Point (Ex. /media/)&lt;/li&gt;
+&lt;li&gt;Finish!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;p&gt;Install Plex on FreeNAS Video: 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/99fQNbuAOlg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Install FreeNAS Video: &lt;a href=&#34;https://youtu.be/G2-s1_OkHGA&#34;&gt;https://youtu.be/G2-s1_OkHGA&lt;/a&gt;&lt;br&gt;
+Setup FreeNAS Video: &lt;a href=&#34;https://youtu.be/JexkrpeM_WA&#34;&gt;https://youtu.be/JexkrpeM_WA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In closing, This guide will get Plex up and running on your FreeNAS without much hassle. I highly recommend this setup as ZFS is far superior to a RAID setup and makes sure that your data stays stable and reliable. Consequently, I find that my Plex server does run considerably faster in this configuration than it ever did when it was on my Windows 10 machine.&lt;/p&gt;
+&lt;p&gt;For general setup, configuration, and hardware setup, please refer to my guide @ &lt;a href=&#34;https://christitus.com/setup-freenas-11/&#34;&gt;https://christitus.com/setup-freenas-11/&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Setup FreeNAS 11</title>
+      <link>https://christitus.com/setup-freenas-11/</link>
+      <pubDate>Fri, 12 Oct 2018 16:11:50 +0000</pubDate>
+      
+      <guid>https://christitus.com/setup-freenas-11/</guid>
+      <description>&lt;p&gt;This article goes over how to setup FreeNAS 11 and configure it. These are the basic steps so you can have a reliable network storage at your house.&lt;/p&gt;
+&lt;h2 id=&#34;steps-to-setup-freenas-11&#34;&gt;Steps to setup FreeNAS 11&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Download FreeNAS stable from &lt;a href=&#34;http://www.freenas.org/download-freenas-release/&#34;&gt;http://www.freenas.org/download-freenas-release/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create Thumb drive from iso and Win32DiskImager &lt;a href=&#34;https://sourceforge.net/projects/win32diskimager/&#34;&gt;https://sourceforge.net/projects/win32diskimager/&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: DO NOT use Rufus or Yumi as these won’t create a bootable thumb drive&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Install and Follow the Prompts&lt;/li&gt;
+&lt;li&gt;Set Static IP&lt;/li&gt;
+&lt;li&gt;Reboot&lt;/li&gt;
+&lt;li&gt;Login to Web Interface with IP from Step 4&lt;/li&gt;
+&lt;li&gt;Set up Storage Pool&lt;/li&gt;
+&lt;li&gt;Assign SMB Share
+&lt;ul&gt;
+&lt;li&gt;Make sure allow guest access  is checked&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Configure SMB Share Service
+&lt;ul&gt;
+&lt;li&gt;Auto-Start and Enabled&lt;/li&gt;
+&lt;li&gt;Configure Guest user to be root&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Test!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;installation-video-walkthrough&#34;&gt;Installation Video Walkthrough&lt;/h2&gt;
+&lt;p&gt;Install FreeNAS Video: 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/G2-s1_OkHGA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Setup FreeNAS Video: 
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/JexkrpeM_WA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;This will get you set up for a reliable network-attached storage in your home environment. Remember once you are finished to clone and image the USB FreeNAS drive. These USB Drives typically only last a couple years, so a backup is a must! In the end, FreeNAS is far more reliable than other commercial NAS products because of ZFS and its versatility.&lt;/p&gt;
+&lt;p&gt;For further configuration, I highly recommend checking out the FreeNAS wiki for using some of its more advanced features.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://doc.freenas.org&#34;&gt;http://doc.freenas.org&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;recommended-hardware&#34;&gt;Recommended Hardware&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Samsung 32 GB Bar (Metal Series) &lt;a href=&#34;https://amzn.to/2PPvyrf&#34;&gt;https://amzn.to/2PPvyrf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pre-Built FreeNAS Device (Official Brand – No Drives) &lt;a href=&#34;https://amzn.to/2R7uyid&#34;&gt;https://amzn.to/2R7uyid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hard Disk Drives – HGST
+&lt;ul&gt;
+&lt;li&gt;4 GB – &lt;a href=&#34;https://amzn.to/2Sc3lfM&#34;&gt;https://amzn.to/2Sc3lfM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;6 TB – &lt;a href=&#34;https://amzn.to/2q9NsJL&#34;&gt;https://amzn.to/2q9NsJL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Solid State Drives – Samsung Pro
+&lt;ul&gt;
+&lt;li&gt;256 GB – &lt;a href=&#34;https://amzn.to/2Jf58MM&#34;&gt;https://amzn.to/2Jf58MM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;512 GB – &lt;a href=&#34;https://amzn.to/2R6bbGn&#34;&gt;https://amzn.to/2R6bbGn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;1 TB – &lt;a href=&#34;https://amzn.to/2D1CBKz&#34;&gt;https://amzn.to/2D1CBKz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

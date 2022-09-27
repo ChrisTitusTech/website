@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TicWatch on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/ticwatch/</link>
+    <description>Recent content in TicWatch on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 27 Aug 2020 09:49:33 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/ticwatch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix Ticwatch Lag</title>
+      <link>https://christitus.com/fix-ticwatch-lag/</link>
+      <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
+      
+      <guid>https://christitus.com/fix-ticwatch-lag/</guid>
+      <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Install ADB Tools&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows - &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-windows.zip&#34;&gt;https://dl.google.com/android/repository/platform-tools-latest-windows.zip&lt;/a&gt; or &lt;code&gt;choco install adb&lt;/code&gt; &lt;em&gt;Chocolatey Users Only&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Linux - &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-linux.zip&#34;&gt;https://dl.google.com/android/repository/platform-tools-latest-linux.zip&lt;/a&gt; or &lt;code&gt;sudo apt install adb&lt;/code&gt; Debian or &lt;code&gt;yay -S adb&lt;/code&gt; Arch&lt;/li&gt;
+&lt;li&gt;MacOS - &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-darwin.zip&#34;&gt;https://dl.google.com/android/repository/platform-tools-latest-darwin.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable Developer Tools on TicWatch&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Under settings - Click About&lt;/li&gt;
+&lt;li&gt;Click the Build number 7 times to enable developer tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable Wi-fi Debugging in Developer Tools&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Under settings - Click Developer Tools
+&lt;ul&gt;
+&lt;li&gt;Enable ADB Debugging&lt;/li&gt;
+&lt;li&gt;Enable ADB Debugging Wi-fi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;note-ensure-both-the-watch-and-computer-are-on-the-same-wifi-network&#34;&gt;Note: Ensure both the Watch and Computer are on the same Wifi network&lt;/h4&gt;
+&lt;h2 id=&#34;removing-ticwatch-bloat&#34;&gt;Removing TicWatch Bloat&lt;/h2&gt;
+&lt;p&gt;This removes all the mobvoi crap that is junking up your watch.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connect to your watch
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb connect IP_ADDRESS:5555&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Check Devices
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb devices&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Verify you see your watch!&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Run the following commands to remove all the bloat:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.account.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.companion.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.ticwatch.cmodel.c2.male
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.appsservice
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.fitness.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.health.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.privacy.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.system.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.watchface.aw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Screenshot&lt;br&gt;
+&lt;img src=&#34;https://christitus.com/images/2020/ticwatch.jpg&#34; alt=&#34;ticwatch&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;using-google-fit-and-other-wearos-apps&#34;&gt;Using Google Fit and other WearOS Apps&lt;/h2&gt;
+&lt;p&gt;Now with all the garbage gone you can use all the other apps that are well maintained and optimized. You will notice that your watch is no longer lagging and it runs just like any other good wearable.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Kernel on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/linux-kernel/</link>
+    <description>Recent content in Linux Kernel on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Aug 2020 05:42:25 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/linux-kernel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Common Computer Issues</title>
+      <link>https://christitus.com/common-computer-issues/</link>
+      <pubDate>Fri, 28 Aug 2020 05:42:25 -0500</pubDate>
+      
+      <guid>https://christitus.com/common-computer-issues/</guid>
+      <description>&lt;p&gt;These are all the issues we discussed on a live stream. I took all the community questions and made this webpage for them.&lt;/p&gt;
+&lt;h2 id=&#34;windows-10---automated-tasks&#34;&gt;Windows 10 - Automated Tasks&lt;/h2&gt;
+&lt;p&gt;Q: How can I make a YouTube video sit there paused on someone&amp;rsquo;s screen in Windows 10 and instantly start playing aloud upon unlocking the screen/waking from sleep?&lt;/p&gt;
+&lt;p&gt;A: Task Scheduler can do all sorts of tasks and you can set the triggers to be on login or at certain times of the day.&lt;/p&gt;
+&lt;h2 id=&#34;linux---display-issues&#34;&gt;Linux - Display Issues&lt;/h2&gt;
+&lt;p&gt;Solution for Display constantly resetting or getting incorrectly configured&lt;/p&gt;
+&lt;p&gt;3 Solutions (All will work)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Xorg Custom Settings
+&lt;ul&gt;
+&lt;li&gt;When display render is launched it will automatically configure each display to these specification from &lt;code&gt;/etc/X11/xorg.conf.d/10-monitor.conf&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# /etc/X11/xorg.conf.d/10-monitor.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Section &amp;#34;Monitor&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### Monitor Identity - Typically HDMI-0 or DisplayPort-0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Identifier    &amp;#34;HDMI1&amp;#34; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Option        &amp;#34;PreferredMode&amp;#34; &amp;#34;1920x1080&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Option        &amp;#34;TargetRefresh&amp;#34; &amp;#34;60&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### Positioning the Monitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Basic
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Option &amp;#34;LeftOf or RightOf or Above or Below&amp;#34; &amp;#34;DisplayPort-0&amp;#34;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Advanced
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Option        &amp;#34;Position&amp;#34; &amp;#34;1680 0&amp;#34; #Note you can always set both to 0 0 to mirror
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## Disable a Monitor
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     Option        &amp;#34;Disable&amp;#34; &amp;#34;true&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;EndSection 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Autorandr - Automatic monitor settings
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/phillipberndt/autorandr&#34;&gt;https://github.com/phillipberndt/autorandr&lt;/a&gt; - This automatically selects a display configuration based on connected devices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Xrandr Script
+&lt;ul&gt;
+&lt;li&gt;Make a custom bash script and set with login manager, cron job, or set in &lt;code&gt;~/.xinitrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sample xrandr script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;xrandr --output HDMI-1 --off --output HDMI-2 --auto
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: You can use the tool &lt;em&gt;arandr&lt;/em&gt; to grab the proper display script&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;windowslinuxmacos---flashing-images-to-sd-card-or-usb&#34;&gt;Windows/Linux/MacOS - Flashing Images to SD-Card or USB&lt;/h2&gt;
+&lt;p&gt;There are so many solutions for this one:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows - Rufus (&lt;a href=&#34;https://rufus.ie&#34;&gt;https://rufus.ie&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Windows/Linux/Mac - Etcher (&lt;a href=&#34;https://www.balena.io/etcher/&#34;&gt;https://www.balena.io/etcher/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Linux/Mac - &lt;code&gt;dd&lt;/code&gt; terminal command
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dd if=~/Downloads/image.iso of=/dev/sdx bs=1M&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;if = input file/device | of= output file/device | bs= block size&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Windows - Win32 Disk Imager &lt;a href=&#34;https://sourceforge.net/projects/win32diskimager/&#34;&gt;https://sourceforge.net/projects/win32diskimager/&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;for images that aren&amp;rsquo;t working or using special media like sd cards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux---boot-time-high-for-kde&#34;&gt;Linux - Boot Time High for KDE&lt;/h2&gt;
+&lt;p&gt;Analyze systemd and figure out why&amp;hellip; (&lt;code&gt;systemd-analyze&lt;/code&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemd-analyze blame
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;             10.667s apt-daily.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              1.127s apt-daily-upgrade.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;              1.053s dev-mapper-neon\x2d\x2dvg\x2droot.device
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               793ms lvm2-pvscan@8:3.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               622ms boot.mount
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               613ms snapd.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               267ms minidlna.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               217ms NetworkManager.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               200ms nvidia-persistenced.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               196ms upower.service
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               189ms systemd-logind.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: Also try &lt;code&gt;systemd-analyze critical-chain&lt;/code&gt; or &lt;code&gt;systemd-analyze plot &amp;gt; boot.svg&lt;/code&gt; as this shows the chain of the startup&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;linux---usb-port-stops-working&#34;&gt;Linux - USB Port stops working&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Check to see if device shows on &lt;code&gt;lsusb&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Check dmesg for errors &lt;code&gt;dmesg | grep -i USB&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;usb-devices&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Disable Auto Suspend
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cat /sys/module/usbcore/parameters/autosuspend&lt;/code&gt; result should be &lt;code&gt;2&lt;/code&gt; which means enabled&lt;/li&gt;
+&lt;li&gt;Modify Grub or bootloader to disable auto suspend (for grub modify &lt;code&gt;/etc/default/grub&lt;/code&gt;)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;quiet splash usbcore.autosuspend=-1&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo update-grub&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Verify by running cat command again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux---fixing-no-display-drivers-or-black-screen-or-missing-desktop-environment&#34;&gt;Linux - Fixing No Display Drivers or Black Screen or Missing Desktop Environment&lt;/h2&gt;
+&lt;p&gt;Ctrl + Alt + F1 or F2&lt;/p&gt;
+&lt;p&gt;This drops you to TTY and no display drivers are needed. From this console you can fix things by installing display drivers or missing packages you need.&lt;/p&gt;
+&lt;h2 id=&#34;all-computers---cant-get-into-bios&#34;&gt;All Computers - Can&amp;rsquo;t Get into BIOS&lt;/h2&gt;
+&lt;p&gt;Open it up and remove the CMOS Battery. Press the power button without it plugged in to fully discharge. Then wait 60 seconds and put CMOS battery back in.&lt;/p&gt;
+&lt;h2 id=&#34;general-pc-maintenance---updates--shuting-them-down&#34;&gt;General PC Maintenance - Updates &amp;amp; Shuting them down&lt;/h2&gt;
+&lt;p&gt;Updates should be done weekly with security only one applied. Feature Updates should be delayed at least 1 year. This is universal across all operating systems. I also recommend shutting down your PC every day and not using suspend/hibernate. If you want to schedule the updates you can leave your PC once a week overnight.&lt;/p&gt;
+&lt;h2 id=&#34;windowslinux---time-maintenance&#34;&gt;Windows/Linux - Time Maintenance&lt;/h2&gt;
+&lt;p&gt;You should use UTC time everywhere. Windows uses local time and it is terrible. Change this with a registry setting&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Disable Internet Time on Windows 10
+&lt;ul&gt;
+&lt;li&gt;Head to Settings &amp;gt; Time &amp;amp; language and disable “Set time automatically”.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Modify Windows Registry to use UTC
+&lt;ul&gt;
+&lt;li&gt;Start - Run - &lt;code&gt;regedit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Navigate to &lt;code&gt;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create new DWORD (32-bit) Value &lt;code&gt;RealTimeIsUniversal&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set Value to &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;You can also use REG files from this project &lt;a href=&#34;https://github.com/ChrisTitusTech/Windows-10-UTC&#34;&gt;https://github.com/ChrisTitusTech/Windows-10-UTC&lt;/a&gt; if you don&amp;rsquo;t want to manually edit registry&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;macos---opencore-and-safety&#34;&gt;MacOS - OpenCore and Safety&lt;/h2&gt;
+&lt;p&gt;Opencore is a completely open project and is safe. Here is the github of OpenCore where they expose all their code for review &lt;a href=&#34;https://github.com/acidanthera/OpenCorePkg&#34;&gt;https://github.com/acidanthera/OpenCorePkg&lt;/a&gt; and the complete install guide is here &lt;a href=&#34;https://dortania.github.io/OpenCore-Install-Guide/&#34;&gt;https://dortania.github.io/OpenCore-Install-Guide/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;linux-battery-life-and-laptop-heat&#34;&gt;Linux Battery Life and Laptop Heat&lt;/h2&gt;
+&lt;p&gt;There are a variety of packages you can use, but highly suggest two:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tlp&lt;/li&gt;
+&lt;li&gt;xfce4-power-manager&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;TLP will throttle your CPU and use less power and XFCE power manager will take care of brightness, suspend, and other power saving features as a standalone package even if you aren&amp;rsquo;t using XFCE as a desktop environment.&lt;/p&gt;
+&lt;h2 id=&#34;macos---opencore-audio-issues&#34;&gt;MacOS - OpenCore Audio Issues&lt;/h2&gt;
+&lt;p&gt;This typically comes from using two codecs or the wrong one. &lt;em&gt;Use ONLY ONE!&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AppleALC - &lt;a href=&#34;https://github.com/acidanthera/AppleALC&#34;&gt;https://github.com/acidanthera/AppleALC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;VoodooHDA - &lt;a href=&#34;https://sourceforge.net/projects/voodoohda/&#34;&gt;https://sourceforge.net/projects/voodoohda/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux---app-wont-launch-it-just-disappears&#34;&gt;Linux - App won&amp;rsquo;t launch it just disappears&amp;hellip;&lt;/h2&gt;
+&lt;p&gt;Run Application in Terminal and look at the errors. Chances are it is missing a dependency.&lt;/p&gt;
+&lt;h2 id=&#34;windows---these-settings-are-managed-by-your-organization&#34;&gt;Windows - &amp;ldquo;these settings are managed by your organization&amp;rdquo;&lt;/h2&gt;
+&lt;p&gt;Chances are you ran a powershell script (maybe mine&amp;hellip;) and you are now locked out of changing the lock screen on your Windows Box. Run this command in powershell to gain control of your lock screen again:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Remove-ItemProperty -Path &amp;#34;HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization&amp;#34; -Name &amp;#34;NoLockScreen&amp;#34; -ErrorAction SilentlyContinue
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OR&lt;/p&gt;
+&lt;p&gt;You can also open up Start - Run - &lt;code&gt;gpedit.msc&lt;/code&gt; and then go to All Settings and look for enabled features and set them to &lt;em&gt;Not Configured&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;windows---reinstall-onedrive&#34;&gt;Windows - Reinstall OneDrive&lt;/h2&gt;
+&lt;p&gt;Open Up PowerShell Admin (Right Click Start Button)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;%systemroot%\SysWOW64\OneDriveSetup.exe
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Custom Kernel in Linux</title>
+      <link>https://christitus.com/custom-kernel/</link>
+      <pubDate>Sun, 29 Sep 2019 00:32:45 +0000</pubDate>
+      
+      <guid>https://christitus.com/custom-kernel/</guid>
+      <description>&lt;p&gt;This Guide walks your through how to install a custom kernel on Linux. I will go over performing this in a Debian-based system and an Arch-based system. Please note that the arch based system requires you to build the kernel yourself and will take much longer.&lt;/p&gt;
+&lt;p&gt;Custom kernels in Linux are based on the Zen project and have some workstation/desktop optimizations. They are &lt;strong&gt;NOT&lt;/strong&gt; meant for server installations. These are meant for those using Linux Desktop and utilizing it for Gaming, Production, etc. and overall I don’t recommend using these. However, if you like to tinker and squeeze every bit of performance out of your kernel than you can proceed.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/09/debian.svg&#34; alt=&#34;debian&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;custom-kernel-on-ubuntu--debian--mint--pop-os&#34;&gt;Custom Kernel on Ubuntu / Debian / Mint / Pop OS&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Official Site &lt;a href=&#34;https://liquorix.net/&#34;&gt;https://liquorix.net/&lt;/a&gt; for the Liquorix Kernel.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Vanilla Debian&lt;/strong&gt; requires a bit of a long command to install the custom kernel, but works fine.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;codename=&amp;quot;$(find /etc/apt -type f -name &#39;*.list&#39; | xargs grep -E &#39;^deb&#39; | awk &#39;{print $3}&#39; | grep -Eo &#39;^[a-z]+&#39; | sort | uniq -c | sort -n | tail -n1 | grep -Eo &#39;[a-z]+$&#39;)&amp;quot; &amp;amp;&amp;amp; sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install apt-transport-https &amp;amp;&amp;amp; echo -e &amp;quot;deb http://liquorix.net/debian $codename maindeb-src http://liquorix.net/debian $codename main# Mirrors:## Unit193 - France# deb http://mirror.unit193.net/liquorix $codename main# deb-src http://mirror.unit193.net/liquorix $codename main&amp;quot; | sudo tee /etc/apt/sources.list.d/liquorix.list &amp;amp;&amp;amp; curl https://liquorix.net/linux-liquorix.pub | sudo apt-key add - &amp;amp;&amp;amp; sudo apt-get update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ubuntu,&lt;/strong&gt; &lt;strong&gt;Linux&lt;/strong&gt; &lt;strong&gt;Mint&lt;/strong&gt;, and &lt;strong&gt;Pop&lt;/strong&gt; &lt;strong&gt;OS&lt;/strong&gt;! are quite a bit shorter for the install.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo add-apt-repository ppa:damentz/liquorix &amp;amp;&amp;amp; sudo apt-get update&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;sudo apt-get install linux-image-liquorix-amd64 linux-headers-liquorix-amd64&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/09/arch.png&#34; alt=&#34;arch&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;custom-kernel-on-arch-linux-manjaro-etc&#34;&gt;Custom Kernel on Arch Linux, Manjaro, etc.&lt;/h2&gt;
+&lt;p&gt;For Arch-based systems the command to run is simplier than all of the above. However, this is &lt;strong&gt;BUILDING&lt;/strong&gt; a kernel and on a low-end system this will take &lt;strong&gt;HOURS&lt;/strong&gt;.&lt;br&gt;
+&lt;em&gt;Example: On my AMD Ryzen 2700 with 16 threads and 8 cores, this took almost 60 minutes!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;yay -S linux-lqx&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Note: This uses yay as the AUR helper. you may need to change this if you use something else like Yaourt, pacaur, trizen, etc.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For modifying which Kernel you are going to boot in check out these videos going over modifying GRUB&lt;/p&gt;
+&lt;h2 id=&#34;custom-boot-grub-rescue-and-ukuu-youtube-videos&#34;&gt;Custom Boot (Grub, Rescue, and UKUU) YouTube Videos&lt;/h2&gt;
+&lt;p&gt;The following videos will help you if you need to revert your kernel or setup multiple kernels to boot into your Linux installation. This is highly recommended.&lt;/p&gt;
+&lt;p&gt;Grub Customizer: &lt;a href=&#34;https://www.youtube.com/watch?v=3s7qBJ-H7vw&#34;&gt;https://www.youtube.com/watch?v=3s7qBJ-H7vw&lt;/a&gt;&lt;br&gt;
+Grub Rescue: &lt;a href=&#34;https://www.youtube.com/watch?v=r7meKJsjqfY&#34;&gt;https://www.youtube.com/watch?v=r7meKJsjqfY&lt;/a&gt;&lt;br&gt;
+Kernel Upgrade with UKUU: &lt;a href=&#34;https://www.youtube.com/watch?v=fnn_MzosdwA&#34;&gt;https://www.youtube.com/watch?v=fnn_MzosdwA&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/nd0MysqLDB0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

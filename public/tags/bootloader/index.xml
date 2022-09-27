@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bootloader on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/bootloader/</link>
+    <description>Recent content in Bootloader on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Apr 2019 22:21:10 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/bootloader/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grub Rescue | Repairing your Bootloader</title>
+      <link>https://christitus.com/grub-rescue/</link>
+      <pubDate>Mon, 01 Apr 2019 22:21:10 +0000</pubDate>
+      
+      <guid>https://christitus.com/grub-rescue/</guid>
+      <description>&lt;p&gt;Lets go over Grub Rescue and repairing your bootloader. This is a very misunderstood topic and by learn basic syntax you will be able to repair your GRUB very easily. Here are 4 methods of doing a GRUB Rescue.&lt;/p&gt;
+&lt;h2 id=&#34;repairing-from-a-grub--prompt&#34;&gt;Repairing from a GRUB &amp;gt; Prompt&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Find your Hard drive&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;ls&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Output Example: &lt;br&gt;
+(hd0) (hd0,msdos2) (hd0,msdos1)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;List Root partition on each drive til you find your Install&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;ls (hd0,msdos2)/&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Check for the directory listing, if nothing, move to next&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Now that we have found the proper drive lets boot to it&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;grub&amp;gt; set root=(hd0,msdos2)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub&amp;gt; linux /boot/vmlinu (tab complete) root=/dev/sda1 (or the root linux partition)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub&amp;gt; initrd /boot/initrd (tab complete)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub&amp;gt; boot&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;repairing-from-a-grub-rescue--prompt&#34;&gt;Repairing from a GRUB Rescue &amp;gt; Prompt&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Find your Hard drive&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;ls&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Output Example: &lt;br&gt;
+(hd0) (hd0,msdos2) (hd0,msdos1)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;List Root partition on each drive til you find your Install&lt;/strong&gt;&lt;br&gt;
+&lt;code&gt;ls (hd0,msdos2)/&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Check for the&lt;/em&gt; &lt;em&gt;directory&lt;/em&gt; &lt;em&gt;listing, if nothing, move to next&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Now that we have found the proper drive lets boot to it&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;grub rescue&amp;gt; set prefix=(hd0,msdos2)/boot/grub&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub rescue&amp;gt; set root=(hd0,msdos2)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub rescue&amp;gt; insmod normal&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub rescue&amp;gt; normal&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub rescue&amp;gt; insmod linux&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub rescue&amp;gt; linux /boot/vmlinu (tab complete) root=/dev/sda1 (or the root linux partition)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub rescue&amp;gt; initrd /boot/initrd (tab complete)&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;grub rescue&amp;gt; boot&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2019/04/grub-300x211.png&#34; alt=&#34;grub&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;fix-grub-permanently&#34;&gt;Fix GRUB Permanently&lt;/h2&gt;
+&lt;p&gt;Now that we are booted in from GRUB Rescue, we can begin work with repairing our grub permanently. First we rebuild the /boot/grub/grub.cfg file:&lt;/p&gt;
+&lt;p&gt;Debian-based Distributions use &lt;strong&gt;update-grub&lt;/strong&gt;&lt;br&gt;
+Other Distributions use &lt;strong&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;With the Configuration rebuilt, we now simply need to reinstall grub&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;grub-install /dev/sda&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: /dev/sda is the DEVICE…&lt;/em&gt;&lt;strong&gt;NOT THE PARTITION&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;other-methods-of-repairing-grub&#34;&gt;Other Methods of Repairing GRUB&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use the [https://www.supergrubdisk.org/ image on a USB drive to repair][1]&lt;/li&gt;
+&lt;li&gt;Use a vanilla server distribution pen drive to boot to prompt, then chroot to your existing install and reinstall GRUB.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;video-walkthroughs&#34;&gt;Video Walkthroughs&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/r7meKJsjqfY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

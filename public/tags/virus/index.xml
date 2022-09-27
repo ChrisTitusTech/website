@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Virus on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/virus/</link>
+    <description>Recent content in Virus on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 18 Aug 2020 13:02:25 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/virus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secure Linux</title>
+      <link>https://christitus.com/secure-linux/</link>
+      <pubDate>Tue, 18 Aug 2020 13:02:25 -0500</pubDate>
+      
+      <guid>https://christitus.com/secure-linux/</guid>
+      <description>&lt;p&gt;This article covers basic security and settings I do with every Linux installation.&lt;/p&gt;
+&lt;h2 id=&#34;check-for-drovorub-malware&#34;&gt;Check for Drovorub Malware&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/drovorub/drovorub.jpg&#34; alt=&#34;drovorub&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch testfile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo “ASDFZXCV:hf:testfile” &amp;gt; /dev/zero
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;If the testfile disappears&amp;hellip; you are infected&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;check-for-unsigned-kernel-modules&#34;&gt;Check for unsigned kernel modules&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;for mod in $(lsmod | tail -n +2 | cut -d&amp;#39; &amp;#39; -f1); do modinfo ${mod} | grep -q &amp;#34;signature&amp;#34; || echo &amp;#34;no signature for module: ${mod}&amp;#34; ; done
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;If you see vbox or nvidia modules, these are for VirtualBox and NVidia Drivers respectively&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;secure-boot&#34;&gt;Secure Boot&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/drovorub/secure-boot.jpg&#34; alt=&#34;secure-boot&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Secure Boot forces checks for kernel module signatures and is good not only for blocking Drovorub-style malware, but also prevents Evil Maid attacks as well. However, it can be complex and also make using bootable USB drives difficult. &lt;em&gt;Note: UEFI Boot Required&amp;hellip; No Legacy/CSM.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;easy-way-to-install&#34;&gt;Easy Way to Install&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mokutil --enable-validation # Remember the password!
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mokutil --sb-state # Checks if Secure Boot is enabled
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;*Note: I used the enable validation on Debian based systems and it worked right out of the box&lt;/p&gt;
+&lt;h3 id=&#34;hard-way-to-install&#34;&gt;Hard Way to Install&lt;/h3&gt;
+&lt;p&gt;Hard way involves signing packages that aren&amp;rsquo;t stock which you might need on your system or if you dual boot. Check out the following guide from the ArchWiki: &lt;a href=&#34;https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface/Secure_Boot&#34;&gt;https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface/Secure_Boot&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;security-settings-for-all-linux-installs&#34;&gt;Security Settings for All Linux Installs&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/github.png&#34; alt=&#34;github&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I created a github script to make this easier but I wanted to break down what this script does. Secure-Linux Project &lt;a href=&#34;https://github.com/ChrisTitusTech/secure-linux/blob/master/secure.sh&#34;&gt;https://github.com/ChrisTitusTech/secure-linux/blob/master/secure.sh&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Before running this script install ufw and fail2ban packages&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This script is broken into 3 parts: ufw, sysctl.conf modifications, and fail2ban. Ufw stands for Uncomplicated Firewall and is fantastic for adding to every install. This script opens http and https, while limiting SSH to only a couple connections per second. The sysctl modifications helps harden your system by preventing spoofing and man in the middle attacks. Fail2ban is the final piece and possibly my favorite. This package see any traffic that is failing authentication attempts repeatedly or is malicious in nature (DDoS) and records the IP then blocks it for a period of time.&lt;/p&gt;
+&lt;p&gt;Other things I&amp;rsquo;d recommend not mentioned&amp;hellip; SELinux! Look it up because it is amazing. You can also use this on debian if you&amp;rsquo;d like, but a smaller package called AppArmor is generally used on those types of distributions.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This is not a all inclusive guide on securing your Linux system, but it is a good starting point that I do on pretty much every computer. I highly recommend you take these instructions and expand them to suit your needs.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

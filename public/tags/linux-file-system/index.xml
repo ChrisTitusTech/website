@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux File System on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/linux-file-system/</link>
+    <description>Recent content in Linux File System on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Sep 2019 17:23:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/linux-file-system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux File System | Directory Structure</title>
+      <link>https://christitus.com/linux-file-system/</link>
+      <pubDate>Mon, 23 Sep 2019 17:23:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/linux-file-system/</guid>
+      <description>&lt;p&gt;This article details the Linux File System and it’s directory structure.&lt;/p&gt;
+&lt;h2 id=&#34;linux-file-system-8211-root&#34;&gt;Linux File System – Root&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;/&lt;/strong&gt; -This is the root directory which should contain only the directories needed at the top level of the file structure&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/bin&lt;/strong&gt; – This is where the executable files are located. These files are available to all users, but do not add programs manually here&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/dev&lt;/strong&gt; – These are devices in your system – Not Mounted!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/etc&lt;/strong&gt; – Superuser directory commands, configuration files, disk configuration files, valid user lists, groups, ethernet, hosts, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/lib&lt;/strong&gt; – Contains shared library files and sometimes other kernel-related files&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/boot&lt;/strong&gt; – Contains files for booting the system /boot/efi for EFI systems&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/home&lt;/strong&gt; – Contains the home directory for users and other accounts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/media&lt;/strong&gt; – Typically used to mount permanent file systems&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/mnt&lt;/strong&gt; – Used to mount other temporary file systems, such as cdrom and floppy for the CD-ROM drive and floppy diskette drive, respectively&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/proc&lt;/strong&gt; – Contains all processes marked as a file by process number or other information that is dynamic to the system&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/tmp&lt;/strong&gt; – Holds temporary files used between system boots&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/usr&lt;/strong&gt; – (Unix System Resource) Used for miscellaneous purposes, and can be used by many users. Includes administrative commands, shared files, library files, and others&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/var&lt;/strong&gt; – Typically contains variable-length files such as log and print files and any other type of file that may contain a variable amount of data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/sbin&lt;/strong&gt; – Contains binary (executable) files, usually for system administration. For example, fdisk and ifconfig utlities&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/kernel&lt;/strong&gt; – Contains kernel files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;home-directory-structure&#34;&gt;Home Directory Structure&lt;/h2&gt;
+&lt;p&gt;/home/user is the home directory for your user and it is often abbreviated with a ~. Folders starting with a period are hidden and can be looked at via options in file browser or &lt;code&gt;ls -al&lt;/code&gt; in terminal.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;~/.cache&lt;/strong&gt; – Cache files for that user&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;~/.config&lt;/strong&gt; – User Configuration files for your programs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;~/.local/share&lt;/strong&gt; – User Configuration files for your system. Edit Application in start menu, modify system configurations for your user, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;~/.ssh&lt;/strong&gt; – SSH configuration and keys&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;~/.vnc&lt;/strong&gt; – VNC remote desktop configuration files&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;~/.steam&lt;/strong&gt; – default steam location for games and config files&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;~/.bashrc&lt;/strong&gt; (FILE) – This file controls shortcuts and aliases that you use in Terminal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This details the Linux File System and should give you a better understanding of how to navigate around in not only a Linux system, but any UNIX based OS for that matter.&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/roES8iAaJEM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

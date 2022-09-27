@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amazon Fire on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/amazon-fire/</link>
+    <description>Recent content in Amazon Fire on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 21 Jul 2020 12:37:54 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/amazon-fire/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Speed Up Your Amazon Fire Tablet</title>
+      <link>https://christitus.com/amazon-fire-debloat/</link>
+      <pubDate>Tue, 21 Jul 2020 12:37:54 -0500</pubDate>
+      
+      <guid>https://christitus.com/amazon-fire-debloat/</guid>
+      <description>&lt;p&gt;This Guide goes over over debloating amazon fire tablets and getting Google Store and regular tablet functionality out of them.&lt;/p&gt;
+&lt;h2 id=&#34;tools-and-sources-used&#34;&gt;Tools and Sources Used&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debloat Amazon Fire (XDA Developers): &lt;a href=&#34;https://forum.xda-developers.com/hd8-hd10/development/official-amazon-fire-toolbox-v1-0-t3889604&#34;&gt;Amazon Fire Toolbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Screenshare Any Android Device (GitHub Project): &lt;a href=&#34;https://github.com/Genymobile/scrcpy&#34;&gt;scrcpy&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;YouTube Video Link for scrcpy: &lt;a href=&#34;https://youtu.be/VMQfH2Qkuss&#34;&gt;https://youtu.be/VMQfH2Qkuss&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;No Root Required&lt;/li&gt;
+&lt;li&gt;Developer Mode Unlocked&lt;/li&gt;
+&lt;li&gt;USB Debugging Enabled in Developer Tools&lt;/li&gt;
+&lt;li&gt;Compatibility:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 8/8+ (2020)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 10 (2019)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 7 (2019)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 8 (2018)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 10 (2017)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 8 (2017)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 7 (2017)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD8 (2016)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD10 (2015)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD8 (2015)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD7 (2015)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD7 (2014)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD6 (2014)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;enabling-developer-mode&#34;&gt;Enabling Developer Mode&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/debloat-amazon/dev-tools.jpg&#34; alt=&#34;Dev Tools&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Settings &amp;gt; Device Options &amp;gt; About Fire Tablet and tap on the Serial Number until you unlock Developer Options&lt;/li&gt;
+&lt;li&gt;Settings &amp;gt; Device Options &amp;gt; Developer Tools and enable USB Debugging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;After doing this plug your tablet in to your computer and tap authorize device. If you don&amp;rsquo;t see authorization prompt, change USB mode to file transfer or it may already be authorized from a past attempt. Check the Toolbox app in the next step to verify.&lt;/p&gt;
+&lt;h2 id=&#34;amazon-fire-toolbox-usage&#34;&gt;Amazon Fire Toolbox Usage&lt;/h2&gt;
+&lt;h3 id=&#34;main-menu&#34;&gt;Main Menu&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/debloat-amazon/toolbox.png&#34; alt=&#34;Toolbox&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;options-you-need&#34;&gt;Options you need&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Manage Everything Amazon
+&lt;ul&gt;
+&lt;li&gt;Disable all amazon apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Custom Launcher
+&lt;ul&gt;
+&lt;li&gt;Change to Nova Launcher from Amazon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Google Services (Manage)
+&lt;ul&gt;
+&lt;li&gt;Install Google Play and Google Sign-In&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;optional-features-on-main-menu&#34;&gt;Optional Features on Main Menu&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;ADB Shell
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Command Line for ADB&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hybrid Apps
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Installing Netflix or Disney- Not needed when using Google Store&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lockscreen Wallpaper
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Doesn&amp;rsquo;t remove ads - Done with another package&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Density Modifier
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Changes DPI&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Google Assistant
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Uses Google Assistant instead of Alexa&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Modify System Settings
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Disable automatic system/app updates, and turn off Over the Air updates&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Power Options
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Power Off, Reboot, Bootloader Selection&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;second-menu&#34;&gt;Second Menu&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2020/debloat-amazon/toolbox2.jpg&#34; alt=&#34;Toolbox2&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;recommended-options&#34;&gt;Recommended Options&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Remove Lockscreen Ads&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This setups an automation sequence that constantly scans and removes amazon ads. Here are the detailed instructions:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click Remove Lockscreen Ads in Amazon Fire Toolbox&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Launch Automate Settings&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check &amp;ldquo;Run on system startup&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Import Adblocker script into Automate&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To import: Click Import from 3 dots on right, Select SD Card and click &amp;ldquo;Amazon Lockscreen Ads Remover V4.5&amp;rdquo; from root&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Return to Home screen of Automate and click the Ads Remover&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;optional-items-on-second-menu&#34;&gt;Optional Items on Second Menu&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Parental Control Hide&lt;/li&gt;
+&lt;li&gt;System Backup
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Excellent backup and restore tool for your tablet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Push and Pull
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;File Transfer to and from tablet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;User Management
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Add Accounts for Google, LinkedIn, Patreon, etc.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;YouTube Clients
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;APK files for Vanced and other YouTube alternative apps&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Screen Capturing
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Record or Screenshot on your tablet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sideload Apps
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Select APK files to upload OR search for APK files on internet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This tool is a fantastic way to debloat a new fire tablet and get greater functionality from it. The added utilities I rarely use, but can be very nice for some users.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Get rid of Amazon Fire Launcher without root access</title>
+      <link>https://christitus.com/amazon-fire-launcher/</link>
+      <pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate>
+      
+      <guid>https://christitus.com/amazon-fire-launcher/</guid>
+      <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;
+&lt;p&gt;The process to use Google Services and Googles Store instead is a bit involved but entirely doable on the Fire Tablets without having to root it. From then on, you don’t have to navigate the out of date and limited Amazon App Store.&lt;/p&gt;
+&lt;h3 id=&#34;here-is-the-process&#34;&gt;Here is the process:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable ADP USB Debugging (Settings -&amp;gt; Device -&amp;gt; Tap Serial 10 Times -&amp;gt; Select Developer options -&amp;gt; Turn ADP Debugging ON)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/07/ADP-Enable.png&#34; alt=&#34;ADP Enable&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable Downloads from Unknown Sources (Settings -&amp;gt; Security -&amp;gt; Allow Unknown Sources ON)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/07/Unknown-Sources.png&#34; alt=&#34;Unknown Sources&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Google Play Services
+&lt;ul&gt;
+&lt;li&gt;Plug Device into USB on Computer and run the Supertool as Administrator
+&lt;ul&gt;
+&lt;li&gt;On Tablet Select Always Allow this computer and press OK&lt;/li&gt;
+&lt;li&gt;Download this zip file &lt;a href=&#34;http://rootjunkysdl.com/files/?dir=Amazon%20Fire%205th%20gen/SuperTool&#34;&gt;http://rootjunkysdl.com/files/?dir=Amazon%20Fire%205th%20gen/SuperTool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Run 1-Amazon-Fire-5th-gen.bat&lt;/li&gt;
+&lt;li&gt;Select Install Google Play Services/Framework&lt;/li&gt;
+&lt;li&gt;Wait for it to Finish and Close the program&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Launch Google Play using Search on Home Screen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/07/Search-Play.png&#34; alt=&#34;Search Play&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sign-in to Google&lt;/li&gt;
+&lt;li&gt;Update Google Play Services (Note: you can type Google Play Services in or launch update from the notifications tray — This will take 5-10 minutes to update)&lt;/li&gt;
+&lt;li&gt;Install Nova Launcher from Play next&lt;/li&gt;
+&lt;li&gt;Download the following APK to change the Amazon Fire’s Default Launcher. Afterward, on the tablet open Google Chrome or Amazon Silk Browser enter this address: &lt;a href=&#34;http://bit.ly/amalaunch&#34;&gt;http://bit.ly/amalaunch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: This is the shortlink for https://github.com/BaronKiko/LauncherHijackV2/releases/download/2.1/LauncherHijackV2.1.apk Github project. It is open source and I encourage you to look over the project on your PC so you aren’t blindly installing things on your tablet.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install the HijackLauncherV2.apk and Open it&lt;/li&gt;
+&lt;li&gt;Select Nova Launcher in the App and hit Ok at the prompt&lt;/li&gt;
+&lt;li&gt;Go back to settings -&amp;gt; Accessibility -&amp;gt;To detect home button press -&amp;gt; Switch to On&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2017/07/HijackLauncher.png&#34; alt=&#34;Hijack Launcher&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Finished, Enjoy being able to use Google Services on your Amazon Fire!&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

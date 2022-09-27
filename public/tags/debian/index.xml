@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/debian/</link>
+    <description>Recent content in Debian on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 22 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Auto Mount with SystemD</title>
+      <link>https://christitus.com/auto-mount-systemd/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/auto-mount-systemd/</guid>
+      <description>&lt;p&gt;This shows how to automount remote network drives using systemd and fstab&lt;/p&gt;
+&lt;h2 id=&#34;automount-using-systemd&#34;&gt;Automount using systemd&lt;/h2&gt;
+&lt;p&gt;Sometimes partitions can fail to mount on startup and some options are needed to fix this. I&amp;rsquo;ve had two instances where it was needed. One was on a slow 6 TB drive that timed out on occation during boot and I had to &lt;code&gt;sudo mount -a&lt;/code&gt; to get it to mount&lt;/p&gt;
+&lt;p&gt;For this a simple option addition in fstab on a local disk looks like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;noauto,x-systemd.automount
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next, I had problems with NFS shares not mounting and I had to expand these option to:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;noauto,x-systemd.automount,x-systemd.mount-timeout=30,_netdev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This makes the &lt;code&gt;/etc/fstab&lt;/code&gt; entry look like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.0.0.10:/volume2/Images		/media/images	nfs	noauto,x-systemd.automount,x-systemd.mount-timeout=30,_netdev	0	0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://wiki.archlinux.org/title/Fstab#Automount_with_systemd&#34;&gt;https://wiki.archlinux.org/title/Fstab#Automount_with_systemd&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fix LibGL Errors</title>
+      <link>https://christitus.com/fix-libGL-errors/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/fix-libGL-errors/</guid>
+      <description>&lt;p&gt;I recently had a debian install where Steam would not launch. Here is how I fixed it when it.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: This is for nVidia based GPU systems&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;error-screen&#34;&gt;Error Screen&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/fix-libGL-error.jpg&#34; alt=&#34;libGL-error&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;You are missing the following 32-bit libraries, and Steam may not run: libGL.so.1&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;packages-required&#34;&gt;Packages Required&lt;/h2&gt;
+&lt;p&gt;These packages are missing and will fix the above error.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg --add-architecture i386
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install libgl1-mesa-dri:i386 libgl1:i386
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get upgrade steam -f
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install nvidia-driver-libs:i386
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;launch-steam&#34;&gt;Launch Steam&lt;/h2&gt;
+&lt;p&gt;You now can launch steam and have it launch properly.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Star Trek Window Management</title>
+      <link>https://christitus.com/star-trek-os/</link>
+      <pubDate>Thu, 21 Jul 2022 12:07:52 -0500</pubDate>
+      
+      <guid>https://christitus.com/star-trek-os/</guid>
+      <description>&lt;p&gt;The LCARS system from Star Trek is a staple in the geek world. Ever since it made its first appearence in the Next Generation TV series in the 90s people have been obsessed with recreating that system. Leave it to Linux to give a functional LCARS recreation for those Star Trek fans out there.&lt;/p&gt;
+&lt;h2 id=&#34;the-lcars-desktop-environment&#34;&gt;The LCARS Desktop Environment&lt;/h2&gt;
+&lt;p&gt;This was created and hosted on &lt;a href=&#34;https://lcarsde.github.io/index.html&#34;&gt;https://lcarsde.github.io/index.html&lt;/a&gt;. The creator made 5 packages that you need to install before you can use it. The entire environment isn&amp;rsquo;t all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design. This isn&amp;rsquo;t very up to date so I recommend using debian version 10 (buster) for maximum compatibility. Newer version of Debian have issues with the &lt;code&gt;python3-posix-ipc&lt;/code&gt; dependancy.&lt;/p&gt;
+&lt;p&gt;Download base Debian 10 (buster) distro @ &lt;a href=&#34;https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0+nonfree/amd64/iso-cd/firmware-10.12.0-amd64-netinst.iso&#34;&gt;https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0+nonfree/amd64/iso-cd/firmware-10.12.0-amd64-netinst.iso&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install nothing but base system. No GUI components to keep it light.&lt;/p&gt;
+&lt;h3 id=&#34;install-dependancies&#34;&gt;Install Dependancies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Xorg&lt;/li&gt;
+&lt;li&gt;LightDM&lt;/li&gt;
+&lt;li&gt;Firefox (or other browser)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Set Graphical install &lt;code&gt;sudo systemctl set-default graphical.target&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: There are a ton of different python dependancies and you need to track these down to utilize the full desktop environment&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;my-lcars-script&#34;&gt;My LCARS script&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir lcars-build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd lcars-build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/lcarswm/releases/download/22.1/lcarswm_22.1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/menu/releases/download/22.1/lcarsde-app-menu_22.1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/status-bar/releases/download/22.2/status-bar_22.2_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/application-starter/releases/download/21.1/lcarsde-application-starter_21.1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/lcarsde/logout/releases/download/20.1/lcarsde-logout_20.1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -i *.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt -f install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-lcars&#34;&gt;Using LCARS&lt;/h2&gt;
+&lt;p&gt;To use it after installation, you logout of your desktop and select LCARS instead of KDE,GNOME, or whatever your current system is. This is an extremely minimal install so you don&amp;rsquo;t have to worry about it conflicting with your current install.&lt;/p&gt;
+&lt;p&gt;The complete manual is located @ &lt;a href=&#34;https://lcarsde.github.io/manual.html&#34;&gt;https://lcarsde.github.io/manual.html&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;setting-up-intial-configuration&#34;&gt;Setting up intial configuration&lt;/h3&gt;
+&lt;p&gt;Edit the file @ &lt;code&gt;~/.config/lcarde/status-config.xml&lt;/code&gt; look for these lines and change them to your system:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;widget name=&amp;#34;LcarsdeWifiStatus&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 41         &amp;lt;position x=&amp;#34;4&amp;#34; y=&amp;#34;2&amp;#34; width=&amp;#34;1&amp;#34; height=&amp;#34;1&amp;#34; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 42         &amp;lt;properties&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 43             &amp;lt;!-- Device should correspond to a folder in /sys/class/net that starts with &amp;#34;w&amp;#34; --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 44             &amp;lt;property key=&amp;#34;device&amp;#34; **value=&amp;#34;wlp2s0&amp;#34;** /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 45         &amp;lt;/properties&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 46     &amp;lt;/widget&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 47     &amp;lt;widget name=&amp;#34;LcarsdeEthStatus&amp;#34;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 48         &amp;lt;position x=&amp;#34;4&amp;#34; y=&amp;#34;1&amp;#34; width=&amp;#34;1&amp;#34; height=&amp;#34;1&amp;#34; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 49         &amp;lt;properties&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 50             &amp;lt;!-- Device should correspond to a folder in /sys/class/net that starts with &amp;#34;e&amp;#34; --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 51             &amp;lt;property key=&amp;#34;device&amp;#34; **value=&amp;#34;enp0s20f0u2u3i5&amp;#34;** /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 52         &amp;lt;/properties&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 53     &amp;lt;/widget&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Change the programs to what you use in &lt;code&gt;~/.config/lcarde/settings.xml&lt;/code&gt;
+Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  2 &amp;lt;lcarswm&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  3     &amp;lt;key-config&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  4         &amp;lt;!-- keys for executing programs --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  5         &amp;lt;binding&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  6             &amp;lt;keys&amp;gt;Lin+T&amp;lt;/keys&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  7             &amp;lt;exec&amp;gt;kitty&amp;lt;/exec&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  8         &amp;lt;/binding&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  9         &amp;lt;binding&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 10             &amp;lt;keys&amp;gt;Lin+B&amp;lt;/keys&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 11             &amp;lt;exec&amp;gt;brave-browser&amp;lt;/exec&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 12         &amp;lt;/binding&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
+&lt;p&gt;You can download my completed images if you don&amp;rsquo;t want to build this yourself @ &lt;a href=&#34;https://cttstore.com/star-trek-os&#34;&gt;https://cttstore.com/star-trek-os&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There is two image formats part of the download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VMDK - Virtual Machine Format - VMWare, Virtualbox, and QEMU will all play this.&lt;/li&gt;
+&lt;li&gt;Clonezilla tar.gz - Image Backup - You can restore this to any machine using clonezilla after unzipping the files to a USB drive. Clone Any System walkthrough video @ &lt;a href=&#34;https://youtu.be/yQ9NpWZ74BU&#34;&gt;https://youtu.be/yQ9NpWZ74BU&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Login Information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User: Kirk&lt;/li&gt;
+&lt;li&gt;Pass: 1234&lt;/li&gt;
+&lt;li&gt;Hostname: Enterprise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Release Date: July 22, 2022&lt;/em&gt;&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/hbg-QgKOdac&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Stop Using APT</title>
+      <link>https://christitus.com/stop-using-apt/</link>
+      <pubDate>Tue, 19 Jul 2022 17:32:28 -0500</pubDate>
+      
+      <guid>https://christitus.com/stop-using-apt/</guid>
+      <description>&lt;p&gt;APT is slow&amp;hellip; single downloading and generally uses slow mirrors as it doesn&amp;rsquo;t optimize them out of the box. It also doesn&amp;rsquo;t have a history so rolling back updates can really suck.&lt;/p&gt;
+&lt;p&gt;Welp, all that is now fixed with &lt;a href=&#34;https://gitlab.com/volian/nala&#34;&gt;Nala&lt;/a&gt; and it is absolutely wonderful. Not only does it fix all that listed above but it makes the updates look beautiful.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/nala/nala.png&#34; alt=&#34;nala-image&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;Add Repository - NOT NEEDED FOR Debian SID/testing&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;deb http://deb.volian.org/volian/ scar main&amp;#34; | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list; wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install Nala on any Debian Sid or Ubuntu 22+ with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &amp;amp;&amp;amp; sudo apt install nala
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install on Debian Stable or Ubuntu 21 and below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &amp;amp;&amp;amp; sudo apt install nala-legacy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;update-mirrors&#34;&gt;Update Mirrors&lt;/h2&gt;
+&lt;p&gt;This will drastically speed up your downloads&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nala fetch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Select the mirrors you want from the list. Typically you will want to select three. Here is an example:
+&lt;img src=&#34;https://christitus.com/images/2022/nala/mirror.png&#34; alt=&#34;nala-mirror&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;view-update-history&#34;&gt;View Update History&lt;/h2&gt;
+&lt;p&gt;Nala has a robust history and even an UNDO! These commands are a life saver.&lt;/p&gt;
+&lt;p&gt;View the history:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nala history
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Undo a history (&lt;code&gt;sudo nala history undo ID&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nala history undo 1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;convert-apt-to-nala&#34;&gt;Convert APT to Nala&lt;/h2&gt;
+&lt;p&gt;Add the following to your &lt;code&gt;~/.bashrc&lt;/code&gt; AND &lt;code&gt;/root/.bashrc&lt;/code&gt; file:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt() { 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  command nala &amp;#34;$@&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo() {
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  if [ &amp;#34;$1&amp;#34; = &amp;#34;apt&amp;#34; ]; then
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    shift
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    command sudo nala &amp;#34;$@&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  else
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    command sudo &amp;#34;$@&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  fi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;From here you can install programs with apt or nala command and it will always work perfectly!&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This is everything I want in a package manager and more. My hat is off to the team that came up with all these drastic improvements and it has made my life so much easier on Debian based systems!&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/oroSkR4Nn_w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Choosing the Right Linux Distro</title>
+      <link>https://christitus.com/choose-linux-distro/</link>
+      <pubDate>Tue, 28 Jun 2022 17:12:25 -0500</pubDate>
+      
+      <guid>https://christitus.com/choose-linux-distro/</guid>
+      <description>&lt;p&gt;Choosing a Linux distribution can be difficult, especially if you don&amp;rsquo;t know much about Linux. However, over the past several years I&amp;rsquo;ve tried almost every Distribution that you can choose. There are some that I have not installed, because it was just more of the same.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/choose-linux-distribution/distros.png&#34; alt=&#34;distros&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To start with there is a misconception that there is thousands of choices in Linux Distributions. While technically true, there is really only 3 distributions you need to know about for desktop use, but before we get into that you need to know about what makes up a distribution. This is mandatory to understand why there is so many different ones that splinter off of these three.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-in-a-distribution&#34;&gt;What is in a Distribution&lt;/h2&gt;
+&lt;p&gt;Windows and Mac are called Operating Systems, NOT distributions&amp;hellip; but in Linux this isn&amp;rsquo;t the case. Why? That is because each Linux offering has different options at its core. With Windows and Mac you always get the same bootloader, file manager, etc. and in Linux these can differ drastically from one to the next. So this is what makes up the Linux distribution.&lt;/p&gt;
+&lt;h3 id=&#34;bootloader&#34;&gt;Bootloader&lt;/h3&gt;
+&lt;p&gt;This can is usually either GRUB or systemd-boot. This may not mean much to you, but i&amp;rsquo;ll explain the difference. GRUB has been around for ages and can be themed while having a ton of flexibility. It supports UEFI and Legacy, while systemd-boot is pretty much included with every modern linux distribution and only boots via UEFI and has a limited menu system. I highly encourage you that want a themed multi-boot system to check out my Top 5 Bootloader project that auto-installs multiple themes: &lt;a href=&#34;https://christitus.com/bootloader-themes/&#34;&gt;https://christitus.com/bootloader-themes/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;init-system&#34;&gt;Init System&lt;/h3&gt;
+&lt;p&gt;When your system is initializing on startup it needs to verify all the devices it will use and get the system ready for boot. Almost every Linux system these days use systemd. Systemd is very big and inclusive, but to many is bloated. It does much more than just initializing the system. It has Timers, bootloader, services, and much more. I did a YouTube video explaining everything in systemd if you want to learn more. &lt;a href=&#34;https://youtu.be/hc7J-zWEty8&#34;&gt;https://youtu.be/hc7J-zWEty8&lt;/a&gt;
+There is other options out there for Linux and certain fringe distributions that use them, but if you want other options check out init.d and precursors to systemd. They are much faster and if looking at building an ultimate minimal system this is the route to take.&lt;/p&gt;
+&lt;h3 id=&#34;display-render&#34;&gt;Display Render&lt;/h3&gt;
+&lt;p&gt;To draw graphics on the screen we need a render. There are only two major ones you need to know about. Wayland and Xorg. Wayland is the new kid that should be faster and better, but is lacking features and compatibility. Xorg is the old, wise man that just works, but is starting to show its age. To me, I always choose Xorg because Wayland always runs into problems. Xorg has two features that Wayland is lacking for me right now. It has X11 forwarding for running GUI programs remotely through an SSH connection and using legacy programs for sharing a keyboard/mouse across screens using synergy/barrier. I did a video on this here: &lt;a href=&#34;https://youtu.be/Fci_ALdEzGc&#34;&gt;https://youtu.be/Fci_ALdEzGc&lt;/a&gt;. To many it simply doesn&amp;rsquo;t matter, because they both fundamentally do the same thing.&lt;/p&gt;
+&lt;h3 id=&#34;display-manager&#34;&gt;Display Manager&lt;/h3&gt;
+&lt;p&gt;This really should be called a Login Manager or user selector, but in Linux the entire ecosystem is run by extremely smart technical people, that just so happen to be terrible at marketing. So the &amp;ldquo;Display Manager&amp;rdquo; comes in many flavors and this is where we start to run into many personal options in Distributions. Personally, I really don&amp;rsquo;t care about this, but there are three main ones that are used and can be configured differently:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lightdm&lt;/li&gt;
+&lt;li&gt;sddm&lt;/li&gt;
+&lt;li&gt;gdm
+While there are others, these three pretty much are always chosen for a distribution. SDDM is generally bundled with KDE systems (which we will get into here in a bit), GDM is for GNOME systems, and lightdm (my personal fav) is pretty much a catch all.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;desktop-environments&#34;&gt;Desktop Environments&lt;/h3&gt;
+&lt;p&gt;Think of Desktop Environments as the tools that make up the control center in an Operating System. Want to change the display resolution, theme, colors, fonts, etc. well all that stuff is in the desktop environment. Now you don&amp;rsquo;t technically need a full blow DE with all this stuff. The main thing you do need is a Window Manager to control where windows are placed. With all that said lets layout the common DEs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GNOME&lt;/li&gt;
+&lt;li&gt;KDE&lt;/li&gt;
+&lt;li&gt;XFCE&lt;/li&gt;
+&lt;li&gt;Window Managers&lt;/li&gt;
+&lt;li&gt;and many, many, more. 
+This could be a 100 page manual with all the options, but I want to give you the basics. GNOME gives more of a mac-esque style and KDE gives that windows look and feed. XFCE is more bare-bones with the essential tools and not much else. Where a basic &amp;ldquo;window manager&amp;rdquo; is just the window manager without any utilities. You might think&amp;hellip; &amp;ldquo;How the hell do you change the resolution? or font? with a window manger&amp;hellip;&amp;rdquo; This is accomplished either by hard coding it in to the configuration files or by installing an independent utility.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;package-managers&#34;&gt;Package Managers&lt;/h3&gt;
+&lt;p&gt;This is how distributions install programs. Here are the major ones you need to know about.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;APT - Debian distros &lt;code&gt;apt install programname&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;DNF / YUM - RHEL distros &lt;code&gt;dnf install programname&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Pacman - Arch distros &lt;code&gt;pacman -S programname&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;distributions&#34;&gt;Distributions&lt;/h2&gt;
+&lt;p&gt;So now that you know what they are made up of we can easily get to deciding what you really want your computing experience to be like. Figure out what components above you like and do NOT like. Then swap them out for something better. The main gripe I have with Windows and Mac is I find their file manager absolutely terrible. I want to switch them and rip out the junk they give me, but we can&amp;rsquo;t as they are integral to the function of the operating system. In Linux, we get that freedom. Here are the three &amp;ldquo;distributions&amp;rdquo; that pretty much everything is based on and what the base package installs are. Remember you can change the things you do NOT like from the stock settings.&lt;/p&gt;
+&lt;h3 id=&#34;debian-linux&#34;&gt;Debian Linux&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/choose-linux-distribution/debian.png&#34; alt=&#34;debian&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Debian uses a stable release cycle and generally has older packages, but they don&amp;rsquo;t usually have many bugs and are very reliable. This is typically my go to for desktops I don&amp;rsquo;t change much.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bootloader - GRUB&lt;/li&gt;
+&lt;li&gt;Init System - systemd&lt;/li&gt;
+&lt;li&gt;Display Render - Xorg&lt;/li&gt;
+&lt;li&gt;Display Manager - SDDM/GDM&lt;/li&gt;
+&lt;li&gt;Desktop Environment - KDE/GNOME&lt;/li&gt;
+&lt;li&gt;Package Manager - APT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;arch-linux&#34;&gt;Arch Linux&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/choose-linux-distribution/arch.png&#34; alt=&#34;arch&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Very new packages with a massive user repository to grab programs you might be missing and builds them for you. The main issue is if you forget to update your system for a period of months it is prone to breaking. Backups are MANDATORY if you use this for your daily use. The benefits are you get the latest and greatest and is often thought to be the best for drivers and hardware that is just released. Its unique that you get to choose every component and can utilize pretty much any COMBINATION of components listed above. The only constant is its package manager which is PACMAN. The other unique aspect is it has a helper program that can install things through the AUR (Arch User Repository) and boy does it have options here&amp;hellip; I&amp;rsquo;m going to recommend the top three&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;paru&lt;/li&gt;
+&lt;li&gt;yay&lt;/li&gt;
+&lt;li&gt;trizen
+They follow the same syntax as pacman except you run them at a user level and they can install pretty much any package. For a complete list visit: &lt;a href=&#34;https://aur.archlinux.org/&#34;&gt;https://aur.archlinux.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fedora-linux&#34;&gt;Fedora Linux&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/choose-linux-distribution/fedora.png&#34; alt=&#34;fedora&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is a RHEL (Red Hat Enterprise Linux) based distribution. It strikes a balance between newer packages and Linux kernels between Debian and Arch. Its not as new as Arch, but not as old as Debian. It has different SPINS but its main download uses the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bootloader - Systemd&lt;/li&gt;
+&lt;li&gt;Init System - systemd&lt;/li&gt;
+&lt;li&gt;Display Render - Wayland&lt;/li&gt;
+&lt;li&gt;Desktop Environment - GNOME&lt;/li&gt;
+&lt;li&gt;Package Manager - DNF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;So the best distribution is the one that suits your needs and preferences. Instead of the one size fits all approach of Mac and Windows, Linux takes a completely different approach. Learn the above and try out the different options and you will make the perfect system for your needs. You will also understand why all the top 5 distros and other Linux garbage on the internet is worthless. That is because there is no perfect distro, however there is the perfect distro for YOU! It just so happens that it is different for each user and you have the options that no other system on earth give you with Linux.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/dL05DoJ0qsQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setup Qemu in Debian Linux</title>
+      <link>https://christitus.com/vm-setup-in-linux/</link>
+      <pubDate>Wed, 12 Jan 2022 16:28:59 -0500</pubDate>
+      
+      <guid>https://christitus.com/vm-setup-in-linux/</guid>
+      <description>&lt;p&gt;This is guide on setting up QEMU in Debian Linux.&lt;/p&gt;
+&lt;h2 id=&#34;check-virtualization-extension&#34;&gt;Check Virtualization Extension&lt;/h2&gt;
+&lt;p&gt;Run this command to make sure you&amp;rsquo;ve enabled virtualization in on your computer. It should be above 0&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;titus@debian:~$  egrep -c &amp;#39;(vmx|svm)&amp;#39; /proc/cpuinfo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;12
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the output is zero then go to bios settings and enable VT-x (Virtualization Technology Extension) for Intel processor and AMD-V for AMD processor.&lt;/p&gt;
+&lt;h2 id=&#34;install-qemu-and-virtual-machine-manager&#34;&gt;Install QEMU and Virtual Machine Manager&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;titus@debian:~$ sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Verify that Libvirtd service is started&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;titus@debian:~$ sudo systemctl status libvirtd.service
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/libvirtd-service.png&#34; alt=&#34;libvirtd-service&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;start-default-network-for-networking&#34;&gt;Start Default Network for Networking&lt;/h2&gt;
+&lt;p&gt;VIRSH is a command to directly interact with our VMs from terminal. We use it to list networks, vm-status and various other tools when we need to make tweaks. Here is how we start the default and make it auto-start after reboot.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;titus@debian:~$ sudo virsh net-start default
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Network default started
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;titus@debian:~$ sudo virsh net-autostart default
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Network default marked as autostarted
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check status with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;titus@debian:~$ sudo virsh net-list --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; Name      State      Autostart   Persistent
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;----------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; default   active       yes          yes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;add-user-to-libvirt-to-allow-access-to-vms&#34;&gt;Add User to libvirt to Allow Access to VMs&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;titus@debian:~$ sudo adduser titus libvirt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;titus@debian:~$ sudo adduser titus libvirt-qemu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Reboot and you are Finished!&lt;/p&gt;
+&lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Kq849CpGd88&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

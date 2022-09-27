@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptocurrency on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/cryptocurrency/</link>
+    <description>Recent content in Cryptocurrency on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 03 Sep 2020 11:33:12 -0500</lastBuildDate><atom:link href="https://christitus.com/tags/cryptocurrency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Everything You Need to Know About Crypto</title>
+      <link>https://christitus.com/crypto/</link>
+      <pubDate>Thu, 03 Sep 2020 11:33:12 -0500</pubDate>
+      
+      <guid>https://christitus.com/crypto/</guid>
+      <description>&lt;p&gt;This article goes over everything you need to know about crypto in 2020.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/crypto/coins.png&#34; alt=&#34;coins&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;what-is-it-and-practical-application&#34;&gt;What is it and Practical Application&lt;/h2&gt;
+&lt;p&gt;Cryptocurrency is a set of different projects like Bitcoin or Ethereum that are decentralized and have billions of dollars tied up in them. They are wildly volatile speculative assets that&amp;rsquo;s valuation will swing wildly from one moment to the next. However, This article isn&amp;rsquo;t about how much its worth or how much it will be worth. This is about it&amp;rsquo;s practical application and how it will change the world we live in. Just by having this knowledge you will be able to profit and be ready for that future.&lt;/p&gt;
+&lt;p&gt;Practical application of crypto is all over our society today. Many banks are using it, and wealthy individuals are utilizing it. Here are the ways it is used today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;International Bank transfers (Ripple) - Long wire delays and intermediary banking is becoming a relic of the past. Banks can leverage it to make trustless transfers between banks in seconds around the world.&lt;/li&gt;
+&lt;li&gt;International Money Transfers (Bitcoin) - Want to send money to a relative in a different nation? Well using Bitcoin is probably the easiest way to get this done with almost no fees. You could send $1000 for less than $1 fee.&lt;/li&gt;
+&lt;li&gt;Banking Replacement (Yield Farming) - Some companies are providing loans and holding crypto while passing along a profits to those holding crypto with them. Think of a savings account on steroids or collateral loans.&lt;/li&gt;
+&lt;li&gt;Synthetic Assets (Synthetix) - What to trade Apple stock, gold, or other assets that exist? Sythetic assets are tracked using the blockchain and traded either for the said asset or for the dollar amount the asset is worth.&lt;/li&gt;
+&lt;li&gt;Send Private Transactions (Monero) - Send money between two entities completely that is completely private. &lt;em&gt;Please note: Bitcoin and other projects are actively tracked, while some are still privacy oriented, much like physical cash.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Insurance, Data Backup, and all kinds of data that you will always want a ledger of.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/crypto/wallet.png&#34; alt=&#34;wallet&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;how-to-store-crypto&#34;&gt;How to Store Crypto&lt;/h2&gt;
+&lt;p&gt;There are two ways of thinking about storing crypto. You can either hold it all yourself or you can use a custodian where you rely on a company to hold it for you, much like a bank. Let&amp;rsquo;s address both ways:&lt;/p&gt;
+&lt;h3 id=&#34;storing-crypto-in-your-wallet&#34;&gt;Storing Crypto in Your Wallet&lt;/h3&gt;
+&lt;p&gt;There are digital wallets where you can safely store your crypto and access it. They come in two types with different pros and cons.&lt;/p&gt;
+&lt;h4 id=&#34;hot-wallets&#34;&gt;Hot Wallets&lt;/h4&gt;
+&lt;p&gt;Hot wallets refer to software that runs on your computer with a password that protects the crypto.&lt;/p&gt;
+&lt;p&gt;Pros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Convenient&lt;/li&gt;
+&lt;li&gt;Quick Access&lt;/li&gt;
+&lt;li&gt;Fast exchanges&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Security: Computer compromised or Private key theft&lt;/li&gt;
+&lt;li&gt;Backups: If you lose your password or misplace your keys/seed&amp;hellip; there is no recovery.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Recommended Wallets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt;
+&lt;img src=&#34;https://christitus.com/images/crypto/exodus.png&#34; alt=&#34;exodus&#34;&gt;&lt;/li&gt;
+&lt;li&gt;Other advanced wallets I&amp;rsquo;d recommend come from the official projects or opensource on github.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;cold-wallets&#34;&gt;Cold Wallets&lt;/h4&gt;
+&lt;p&gt;Cold wallets refer to hardware that hides the keys so the computer never sees them, but you authorize transactions on the device itself.&lt;/p&gt;
+&lt;p&gt;Pros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Secure&lt;/li&gt;
+&lt;li&gt;Transfers take place on isolated device&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Not as Quick&lt;/li&gt;
+&lt;li&gt;If you misplace your device, you can only recover things through a seed (phrase written on paper)&lt;/li&gt;
+&lt;li&gt;Backups: If you misplace both the seed and device&amp;hellip; everything is gone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Recommended Wallets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;img src=&#34;https://christitus.com/images/crypto/ledger.png&#34; alt=&#34;ledger&#34;&gt; Ledger &lt;a href=&#34;https://www.ledger.com&#34;&gt;https://www.ledger.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://christitus.com/images/crypto/trezor.png&#34; alt=&#34;trezor&#34;&gt; Trezor &lt;a href=&#34;https://trezor.io&#34;&gt;https://trezor.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;storing-crypto-with-a-custodian&#34;&gt;Storing Crypto with a Custodian&lt;/h3&gt;
+&lt;p&gt;These are companies that you are sending your money to for safe keeping, much like a bank. They can be insured, but none of them are federally insured like a traditional bank account. I lump these companies into three categories, on and off ramps, exchanges, and yield farmers. Here are my take and recommendations on each of these. &lt;em&gt;Note: I like to use companies in my local country for regulatory reasons and safety&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;on-and-off-ramp-companies&#34;&gt;On and Off Ramp Companies&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/crypto/coinbase.jpg&#34; alt=&#34;coinbase&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Companies like Coinbase or Gemini are the two I use often. These companies are based in the United States and you can link your bank account to them to transfer Crypto to Dollar directly into your checking account. The fees are high and they should only be used for the purpose. While they do offer other services, it will be at a premium. &lt;em&gt;Please Note: DO NOT use credit cards to purchase crypto! You will have exorbitant fees and it is NOT worth it!&lt;/em&gt;&lt;br&gt;
+I don&amp;rsquo;t recommend storing money here, but they do have a good track record. If you only want to hold crypto and do nothing with it, then it is relatively safe with these institutions.&lt;/p&gt;
+&lt;p&gt;Coinbase Referral Link: &lt;a href=&#34;https://christitus.com/coinbase&#34;&gt;https://christitus.com/coinbase&lt;/a&gt;
+Gemini Referral Link: &lt;a href=&#34;https://christitus.com/gemini&#34;&gt;https://christitus.com/gemini&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;exchanges&#34;&gt;Exchanges&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/crypto/bittrex.jpg&#34; alt=&#34;bittrex&#34;&gt;&lt;/p&gt;
+&lt;p&gt;These companies are all over the place. The two I like the most are Bittrex(US) and Binance(Japan). They are the juggernauts in the space and when making crypto to crypto transfers they have the most options with the lowest fees. Many exchanges have been hacked over the years, so I don&amp;rsquo;t store any money here, but use it to exchange crypto. A good example is using Bittrex to transfer LBC tokens to ETH or BTC.&lt;br&gt;
+You don&amp;rsquo;t have to use a company to exchange crypto, as you can use a decentralized exchange like Uniswap, but the fees are typically more. However, the convenience of not having to register with a form of ID is nice. Other exchange services like Uniswap exist but are centralized, examples are Simpleswap and Shapeshift, but they are starting to require ID (KYC Compliance) as well.&lt;br&gt;
+&lt;em&gt;TLDR:&lt;/em&gt; Don&amp;rsquo;t store money here, but use it to exchange out one currency for another&lt;/p&gt;
+&lt;p&gt;Bittrex Referral Code: 4KR-KYJ-BQG&lt;/p&gt;
+&lt;h4 id=&#34;yield-companies&#34;&gt;Yield Companies&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;2022 Update:&lt;/em&gt; Do NOT use them. Celsius, Voyager Digital, and many others have proven that this method is not only extremely risky, but possibly fraudulent. Be skeptical on any companies that is promising returns by holding assets with them in crypto.&lt;/p&gt;
+&lt;h2 id=&#34;mining-crypto-using-a-graphics-card&#34;&gt;Mining Crypto Using a Graphics Card&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/crypto/mining.jpg&#34; alt=&#34;mining&#34;&gt;&lt;/p&gt;
+&lt;p&gt;With the DeFi explosion and transaction fees going sky high we can make a profile with a good graphics card. Ethereum will be transitioning to Proof of Stake which means mining it with a graphics card will not be feasible sometime in 2021. However, until that time if interest stay the same or increases, mining will be profitable. Here is how I recommend mining during this time with just a single or small graphics card setup.&lt;/p&gt;
+&lt;p&gt;Profitability:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Check &lt;a href=&#34;https://ethgasstation.info&#34;&gt;https://ethgasstation.info&lt;/a&gt; and if standard GWEI fee is over 100 then chances are you will be profitable&lt;/li&gt;
+&lt;li&gt;Check &lt;a href=&#34;https://whattomine.com&#34;&gt;https://whattomine.com&lt;/a&gt; and see current daily payouts based on your graphics cards&lt;/li&gt;
+&lt;li&gt;Again&amp;hellip; Do NOT buy tons of equipment. This will dry up in the next year and will NOT make money&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Basic Mining Process:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Setup a Wallet using Exodus.io&lt;/li&gt;
+&lt;li&gt;Setup an account with Mining Pool Hub&lt;/li&gt;
+&lt;li&gt;Use a LTC Wallet Address from Exodus and Setup Auto-Exchange to Litecoin in Mining pool hub&lt;/li&gt;
+&lt;li&gt;Install PhoenixMiner 5.1c - &lt;a href=&#34;https://bitcointalk.org/index.php?topic=2647654.0&#34;&gt;Forum Post&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use the string for PhoenixMiner @ &lt;a href=&#34;https://ethereum.miningpoolhub.com&#34;&gt;https://ethereum.miningpoolhub.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LTC will be autoexchange and withdrawn to your Exodus Wallet
+&lt;em&gt;Note: Make sure to setup the Auto Withdrawl feature when setting up AutoExchange&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;Note 2: Litecoin is used for minimal fees and fast transactions&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I highly recommend &lt;a href=&#34;https://minerstat.com&#34;&gt;https://minerstat.com&lt;/a&gt; for using a dedicated machine for mining. This will ensure maximum uptime and reliability.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GFI MailArchiver on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/gfi-mailarchiver/</link>
+    <description>Recent content in GFI MailArchiver on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 Mar 2015 23:56:01 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/gfi-mailarchiver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GFI Archiver resource usage</title>
+      <link>https://christitus.com/gfi-archiver-resource-usage/</link>
+      <pubDate>Fri, 06 Mar 2015 23:56:01 +0000</pubDate>
+      
+      <guid>https://christitus.com/gfi-archiver-resource-usage/</guid>
+      <description>&lt;p&gt;Does your GFI Archiver resource usage SQL process ballon over 8GB? If so, the following procedure will reduce usage by about half and fix many performance issues.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Stop all MailArchiver and SQL services&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a backup of ..MailArchiverStoreDataproduct.config&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit product.config and add the following key within the &lt;code&gt;&amp;lt;AppSettings&amp;gt;&lt;/code&gt; section: &lt;code&gt;&amp;lt;add key=&amp;quot;MaxPoolSize&amp;quot; value=&amp;quot;20&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Re-start the services&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;*Note GFI has built-in scripts made to stop all NON-SQL services. Run the Stop script then stop SQL Server Instance, When starting start SQL Server Service before running a start script. The scripts default location are: ..MailArchiver\Tools\Scripts&lt;/p&gt;
+&lt;p&gt;After performing this procedure the SQL Server Process is now under 4GB or cut in half from their previous usage. In closing, this type of tweak is vital especially if you are running out of resources on the source server or you are running into performance problems within GFI Archiver.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GFI MailArchiver MAIS Queue Folder has tons of emails stuck</title>
+      <link>https://christitus.com/mais-queue-folder/</link>
+      <pubDate>Tue, 09 Apr 2013 16:50:22 +0000</pubDate>
+      
+      <guid>https://christitus.com/mais-queue-folder/</guid>
+      <description>&lt;p&gt;The Import service can get stuck and this will stop all the mail in the MAIS Queue Folder. These are the emails that have not been processed and added to GFI Archiver yet, so do not delete them. Below is the fix on how I restored the import service and processed all the stuck email.&lt;/p&gt;
+&lt;h2 id=&#34;the-fix&#34;&gt;The Fix&lt;/h2&gt;
+&lt;p&gt;Deleted all files &lt;strong&gt;EXCEPT&lt;/strong&gt; for *.eml from &lt;code&gt;C:\Program Files (x86)\GFIMailArchiver\MAIS\Queue&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Renamed all *.eml files to *.txt (Command Prompt: ren *.eml *.txt)&lt;/p&gt;
+&lt;p&gt;Move all files to &lt;code&gt;C:\Program Files (x86)\GFIMailArchiver\MAIS\Pickup&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;in-closing&#34;&gt;In Closing&lt;/h2&gt;
+&lt;p&gt;This will force GFI Mailarchiver to reprocess all these emails. I’d highly recommend doing all these operations from a command prompt as the sheer number of files in the folders can potentially lock up your server when using a Graphic User Interface. Once you restart your processes wait for the MAIS Queue Folder to reduce in size before checking again.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Moving GFI MailArchiver to another server</title>
+      <link>https://christitus.com/moving-gfi-mailarchiver/</link>
+      <pubDate>Tue, 09 Apr 2013 16:39:37 +0000</pubDate>
+      
+      <guid>https://christitus.com/moving-gfi-mailarchiver/</guid>
+      <description>&lt;p&gt;The following walkthrough shows you the process of moving GFI MailArchiver to another server.&lt;/p&gt;
+&lt;p&gt;These KB articles will assist you in the moving and migration of this server. The process is very involved and requires copying all the data files over to the new server. Afterward, backing up every single SQL database (archive store) and detaching/copying them. From there you reattach the stores and reinstall GFI MailArchiver on the new server.&lt;/p&gt;
+&lt;h4 id=&#34;here-is-the-article-describing-the-data-file-moves-andre-installationon-the-new-server&#34;&gt;Here is the Article describing the data file moves and re-installation on the new server.&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;Please Note: DO NOT re-install GFI before moving SQL Databases from&lt;/em&gt; the second &lt;em&gt;article unless you plan on leaving SQL on old server!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://kb.gfi.com/articles/SkyNet_Article/Is-it-possible-to-move-MailArchiver-to-a-new-server?retURL=%2Fapex%2FSupportHome&amp;amp;popup=true&#34;&gt;http://kb.gfi.com/articles/SkyNet_Article/Is-it-possible-to-move-MailArchiver-to-a-new-server?retURL=%2Fapex%2FSupportHome&amp;amp;popup=true&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;this-articledescribes-the-actual-sql-server-move&#34;&gt;This Article describes the actual SQL Server Move&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;http://kb.gfi.com/articles/SkyNet_Article/How-to-move-a-GFI-MailArchiver-database-from-one-Microsoft-SQL-Server-to-another?retURL=%2Fapex%2FSupportHome&amp;amp;popup=true&#34;&gt;http://kb.gfi.com/articles/SkyNet_Article/How-to-move-a-GFI-MailArchiver-database-from-one-Microsoft-SQL-Server-to-another?retURL=%2Fapex%2FSupportHome&amp;amp;popup=true&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/moving-gfi-mailarchiver/moving-gfi-mailarchiver-2/&#34; alt=&#34;Moving GFI MailArchiver&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;installation-notes&#34;&gt;Installation Notes:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;I had to switch to SQL authentication because my old archive store kept popping up errors.&lt;/li&gt;
+&lt;li&gt;A very long process, because of the massive amount of emails in this archiver. Depending on the business it can take a few days or weeks!&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Configuring SQL Authentication</title>
+      <link>https://christitus.com/configuring-sql-authentication/</link>
+      <pubDate>Tue, 09 Apr 2013 16:24:26 +0000</pubDate>
+      
+      <guid>https://christitus.com/configuring-sql-authentication/</guid>
+      <description>&lt;p&gt;Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: This article is taken from &lt;a href=&#34;http://kb.gfi.com/articles/SkyNet_Article/How-to-configure-SQL-Server-2005-2008-to-accept-SQL-Authentication&#34;&gt;http://kb.gfi.com/articles/SkyNet_Article/How-to-configure-SQL-Server-2005-2008-to-accept-SQL-Authentication&lt;/a&gt; and all credit goes to them for the writing. I’m posting it here simply as a reference in case&lt;/em&gt; there _site changes the above link. _&lt;/p&gt;
+&lt;h3 id=&#34;fix-authentication-in-gfi-reportcenter&#34;&gt;Fix Authentication in GFI ReportCenter&lt;/h3&gt;
+&lt;p&gt;In order to use SQL Server authentication, you must first configure your server using the steps below.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Right-click on the server node and select ‘Properties’&lt;/li&gt;
+&lt;li&gt;Select ‘Security’ from the left menu under ‘Select a page’&lt;/li&gt;
+&lt;li&gt;Under ‘Server Authentication’, select the ‘SQL Server and Windows Authentication mode option’&lt;/li&gt;
+&lt;li&gt;Click ‘OK’ to close the dialog&lt;/li&gt;
+&lt;li&gt;Right click on the server node and choose ‘Restart’ for the changes to take effect&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;sql-server-authentication-login&#34;&gt;SQL Server authentication login&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;In the server node expand ‘Security’ and ‘Logins’&lt;/li&gt;
+&lt;li&gt;Right click on the login name and select ‘Properties’&lt;/li&gt;
+&lt;li&gt;Enter a password and confirm the password for the login&lt;/li&gt;
+&lt;li&gt;Select ‘Status’ from the left menu under ‘Select a page’&lt;/li&gt;
+&lt;li&gt;Set the ‘Login’ option to ‘Enabled’&lt;/li&gt;
+&lt;li&gt;Click ‘OK’ to close the dialog&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once you have walked through configuring SQL authentication, you can now change your instance to the type you need.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
