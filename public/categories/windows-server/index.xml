@@ -243,7 +243,7 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
 &lt;em&gt;Alternatively, you can do this from the Services Panel&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Purge the ticket cache on the local domain controller.
+&lt;p&gt;Purge the ticket cache on the local domain controller. 
 &lt;code&gt;klist purge&lt;/code&gt;&lt;br&gt;
 _Note: you can use &lt;code&gt;klist tickets&lt;/code&gt; to view tickets before purging them&lt;/p&gt;
 &lt;ul&gt;

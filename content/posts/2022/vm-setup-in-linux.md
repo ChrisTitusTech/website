@@ -15,19 +15,18 @@ This is guide on setting up QEMU in Debian Linux.
 
 Run this command to make sure you've enabled virtualization in on your computer. It should be above 0
 ```
-titus@debian:~$  egrep -c '(vmx|svm)' /proc/cpuinfo
-12
+egrep -c '(vmx|svm)' /proc/cpuinfo
 ```
 If the output is zero then go to bios settings and enable VT-x (Virtualization Technology Extension) for Intel processor and AMD-V for AMD processor.
 
 ## Install QEMU and Virtual Machine Manager
 
 ```
-titus@debian:~$ sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
+sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
 ```
 Verify that Libvirtd service is started
 ```
-titus@debian:~$ sudo systemctl status libvirtd.service
+sudo systemctl status libvirtd.service
 ```
 ![libvirtd-service](/images/2022/libvirtd-service.png)
 
@@ -35,22 +34,27 @@ titus@debian:~$ sudo systemctl status libvirtd.service
 
 VIRSH is a command to directly interact with our VMs from terminal. We use it to list networks, vm-status and various other tools when we need to make tweaks. Here is how we start the default and make it auto-start after reboot. 
 ```
-titus@debian:~$ sudo virsh net-start default
-Network default started
-titus@debian:~$ sudo virsh net-autostart default
-Network default marked as autostarted
+sudo virsh net-start default
 ```
+Network default started
+```
+sudo virsh net-autostart default
+```
+Network default marked as autostarted
+
 Check status with:
 ```
-titus@debian:~$ sudo virsh net-list --all
+sudo virsh net-list --all
+```
+```
  Name      State      Autostart   Persistent
 ----------------------------------------------
  default   active       yes          yes
 ```
 ## Add User to libvirt to Allow Access to VMs 
 ```
-titus@debian:~$ sudo adduser titus libvirt
-titus@debian:~$ sudo adduser titus libvirt-qemu
+sudo adduser $(whoami) libvirt
+sudo adduser $(whoami) libvirt-qemu
 ```
 Reboot and you are Finished!
 
