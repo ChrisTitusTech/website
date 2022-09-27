@@ -14,114 +14,40 @@ draft: false
 ---
 This shows you all the steps to install a MacOS VM in Linux QEMU using Virtual Machine Manager or virt-manager.
 <!--more-->
-Source: <https://github.com/kholia/OSX-KVM>
-Older Repository: <https://github.com/foxlet/macOS-Simple-KVM>
+Newer Source, but not as polished: <https://github.com/kholia/OSX-KVM>
+Mac KVM Repository: <https://github.com/foxlet/macOS-Simple-KVM>
 
-### Requirements
+## Requirements
 - A modern Linux distribution. E.g. Ubuntu 20.04 LTS 64-bit or later.
 - QEMU >= 4.2.0
 - A CPU with Intel VT-x / AMD SVM support is required (`grep -e vmx -e svm /proc/cpuinfo`)
 
-### Installation Preparation
-KVM may need the following tweak on the host machine to work.
+## Installation Preparation
 
-  ```
-  echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs
-  ```
+Install QEMU and modify your user using <https://christitus.com/vm-setup-in-linux> Guide.
 
-  To make this change permanent, you may use the following command.
+Clone this repository on your QEMU system. Files from this repository are used in the following steps.
 
-  ```
-  sudo cp kvm.conf /etc/modprobe.d/kvm.conf
-  ```
+```
+cd ~
+git clone --depth 1 --recursive https://github.com/foxlet/macOS-Simple-KVM
+cd macOS-Simple-KVM
+```
 
-Install QEMU and other packages.
+## Installation Media
 
-  ```
-  sudo apt-get install qemu uml-utilities virt-manager git \
-      wget libguestfs-tools p7zip-full make dmg2img -y
-  ```
+This downloads our installation media and I'd recommend using Catalina for compatibility and performance. 
 
-  This step may need to be adapted for your Linux distribution.
+```
+./jumpstart.sh --catalina
+```
 
-Add user to the `kvm` and `libvirt` groups (might be needed).
+_Note: Modern NVIDIA GPUs are supported on HighSierra but not on later
+versions of macOS. Recommended PCI Passthrough GPU is 5700XT as this works on Catalina and above. If you go with a 6000 Series Card only certain ones will work on Big Sur and Monterey, but not earlier releases._
 
-  ```
-  sudo usermod -aG kvm $(whoami)
-  sudo usermod -aG libvirt $(whoami)
-  sudo usermod -aG input $(whoami)
-  sudo usermod -aG disk $(whoami)
-  ```
+## Virtual Machine Setup
 
-  Note: Re-login after executing this command.
-
-Clone this repository on your QEMU system. Files from this repository are
-  used in the following steps.
-
-  ```
-  cd ~
-  git clone --depth 1 --recursive https://github.com/kholia/OSX-KVM.git
-  cd OSX-KVM
-  ```
-
-  Repository updates can be pulled via the following command:
-
-  ```
-  git pull --rebase
-  ```
-
-  This repository uses rebase based workflows heavily.
-
-Fetch macOS installer.
-
-  ```
-  ./fetch-macOS-v2.py
-  ```
-
-  You can choose your desired macOS version here. After executing this step,
-  you should have the `BaseSystem.dmg` file in the current folder.
-
-  > ATTENTION: Let `>= Big Sur` setup sit at the `Country Selection` screen, and
-  > other similar places for a while if things are being slow. The initial macOS
-  > setup wizard will eventually succeed.
-
-  Sample run:
-  ```
-  $ ./fetch-macOS-v2.py
-  1. High Sierra (10.13)
-  2. Mojave (10.14)
-  3. Catalina (10.15)
-  4. Big Sur (11.6) - RECOMMENDED
-  5. Monterey (latest)
-
-  Choose a product to download (1-5): 4
-  ```
-  Note: Modern NVIDIA GPUs are supported on HighSierra but not on later
-  versions of macOS. Recommended PCI Passthrough GPU is 5700XT as this works on Catalina and above. If you go with a 6000 Series Card only certain ones will work on Big Sur and Monterey, but not earlier releases.
-
-Convert the downloaded `BaseSystem.dmg` file into the `BaseSystem.img` file.
-
-  ```
-  dmg2img -i BaseSystem.dmg BaseSystem.img
-  ```
-
-  OR
-
-  ```
-  qemu-img convert BaseSystem.dmg -O raw BaseSystem.img  # can be problematic on newer systems
-  ```
-
-Create a virtual HDD image where macOS will be installed. If you change the
-  name of the disk image from `mac_hdd_ng.img` to something else, the boot scripts
-  will need to be updated to point to the new image name.
-
-  ```
-  qemu-img create -f qcow2 mac_hdd_ng.img 128G
-  ```
-
-  NOTE: Create this HDD image file on a fast SSD/NVMe disk for best results.
-
-Now you are ready to install macOS
+I recommend using Virtual Machine Manager (virt-manager) as it has a fantastic interface 
 
 ### Installation
 

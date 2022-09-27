@@ -53,8 +53,12 @@ sudo virsh net-list --all
 ```
 ## Add User to libvirt to Allow Access to VMs 
 ```
-sudo adduser $(whoami) libvirt
-sudo adduser $(whoami) libvirt-qemu
+sudo usermod -aG libvirt $(whoami)
+sudo usermod -aG libvirt-qemu $(whoami)
+sudo usermod -aG kvm $(whoami)
+sudo usermod -aG libvirt $(whoami)
+sudo usermod -aG input $(whoami)
+sudo usermod -aG disk $(whoami)
 ```
 Reboot and you are Finished!
 
