@@ -47,53 +47,40 @@ versions of macOS. Recommended PCI Passthrough GPU is 5700XT as this works on Ca
 
 ## Virtual Machine Setup
 
-I recommend using Virtual Machine Manager (virt-manager) as it has a fantastic interface 
+I recommend using Virtual Machine Manager (virt-manager) as it has a fantastic interface and Simple-KVM does a great job with their setup script. Simply type the following to get the macOS VM setup:
 
-### Installation
+```
+sudo ./make.sh --add
+```
 
-CLI method (primary). Just run the `OpenCore-Boot.sh` script to start the
-  installation process.
+### VM Modification
 
-  ```
-  ./OpenCore-Boot.sh
-  ```
+Before we can start out VM we have to have a hard drive to load it. You have two options: physical hard drive passthrough or qcow2 file. 
 
-_Note: This same script works for Big Sur, Catalina, Mojave, and High Sierra._
+Obviously, the physical drive is considerably faster, but not possible in some instances such as laptops or if you can't afford a secondary drive. 
+
+#### Physical Hard Drive Passthrough 
+
+This is pretty simple as you just click Add Hardware -> Storage and then specify your hard drive.
+
+![hdd](/images/2022/qemu/hdd.png)
+
+_Note: while you can use drive short names `/dev/sda` I'd recommend using `/dev/disk/by-id/HARDDRIVESERIAL` as this doesn't ever change._
+
+#### QCOW2 File for Hard Drive
+
+This is even simpler as you just click Add Hardware -> Storage and create new file. Just make sure you put it on at least a SSD or a nvme drive as it will be super slow if you don't.
+
+## Install Process
+
+Boot your machine and select the OS Install Partition on startup. 
 
 Use the `Disk Utility` tool within the macOS installer to partition, and
   format the virtual disk attached to the macOS VM.
 
-Go ahead, and install macOS 
-
 **TIP: Using a non-APFS filesystem is recommended.**
 
-_(OPTIONAL) Use this macOS VM disk with libvirt (virt-manager / virsh stuff)._
-
-#### Virtual Machine Manager Setup
-
-Edit `macOS-libvirt-Catalina.xml` file and change the various file paths (search
-    for `CHANGEME` strings in that file). The following command should do the
-    trick usually.
-
-```
-sed "s/CHANGEME/$USER/g" macOS-libvirt-Catalina.xml > macOS.xml
-virt-xml-validate macOS.xml
-```
-
-Create a VM by running the following command.
-
-```
-virsh --connect qemu:///system define macOS.xml
-```
-
-If needed, grant necessary permissions to libvirt-qemu user,
-
-```
-sudo setfacl -m u:libvirt-qemu:rx /home/$USER
-sudo setfacl -R -m u:libvirt-qemu:rx /home/$USER/OSX-KVM
-```
-
-Launch `virt-manager` and start the `macOS` virtual machine.
+Go ahead, and install macOS 
 
 ### Post-Installation
 
@@ -119,7 +106,7 @@ Example: (Interface name is enp7s0)
     valid_lft forever preferred_lft forever
 ```
 
-*Second* Update `/etc/network/interfaces` to only have the `lo` device or loopback - Comment out any other interfaces with `#`
+*Second* Update `/etc/network/interfaces` 
 
 ```
 source /etc/network/interfaces.d/*
@@ -128,33 +115,35 @@ source /etc/network/interfaces.d/*
 auto lo
 iface lo inet loopback
 
-# The primary network interface
+# The primary network interface - old entry
 # allow-hotplug enp7s0
 # iface enp7s0 inet dhcp
-```
 
-*Third* Add `sudo vim /etc/network/interfaces.d/br0` File. Use `nano` instead of `vim` if you don't know vim.
-
-```
-## DHCP ip config file for br0 ##
+# The primary network interface - new entry
+# DEVICENAME = enp7so for this pc and MYUSERNAME need to be $(whoami)
 auto br0
- 
-# Bridge setup
- iface br0 inet dhcp
-    bridge_ports enp7s0
+iface br0 inet dhcp
+  bridge_ports DEVICENAME tap0
+
+auto tap0
+iface tap0 inet dhcp
+  pre-up tunctl -u MYUSERNAME -t tap0
 ```
 
-*Lastly* Restart the networking service or reboot computer.
+*Lastly* Restart the networking service or reboot computer. Then change your VM NIC (Network Hardware) to `br0` interface.
 
 ```
 sudo systemctl restart networking
 ```
 
 #### Other Considerations
-- To passthrough GPUs and other devices, see [these notes](https://github.com/kholia/OSX-KVM/blob/master/notes.md#gpu-passthrough-notes)
-- Need a different resolution? Check out the [notes](https://github.com/kholia/OSX-KVM/blob/master/notes.md#change-resolution-in-opencore) included in this repository.
-- Trouble with iMessage? Check out the [notes](https://github.com/kholia/OSX-KVM/blob/master/notes.md#trouble-with-imessage) included in this repository.
-- Highly recommended macOS tweaks - https://github.com/sickcodes/osx-optimizer
+
+- GPU Passthrough (Requires two Graphics Cards) - <https://github.com/foxlet/macOS-Simple-KVM/blob/master/docs/guide-passthrough.md>
+- Changing Screen Resolution - <https://github.com/foxlet/macOS-Simple-KVM/blob/master/docs/guide-screen-resolution.md>
+- Optimizing System Performance - <https://github.com/sickcodes/osx-optimizer>
+- Sound - Two methods, Pass the audio through HDMI if using GPU Passthrough OR Pass through a USB sound card that is macOS compatible
+    - _Note: There is a way to use Voodoo kext or AppleALC, but it will crackle and sound terrible_
+
 
 ## Walkthrough Video
 
