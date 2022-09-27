@@ -5,7 +5,157 @@
     <link>https://christitus.com/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Macos on Linux</title>
+      <link>https://christitus.com/macos-on-linux/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/macos-on-linux/</guid>
+      <description>&lt;p&gt;This shows you all the steps to install a MacOS VM in Linux QEMU using Virtual Machine Manager or virt-manager.&lt;/p&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://github.com/kholia/OSX-KVM&#34;&gt;https://github.com/kholia/OSX-KVM&lt;/a&gt;
+Older Repository: &lt;a href=&#34;https://github.com/foxlet/macOS-Simple-KVM&#34;&gt;https://github.com/foxlet/macOS-Simple-KVM&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A modern Linux distribution. E.g. Ubuntu 20.04 LTS 64-bit or later.&lt;/li&gt;
+&lt;li&gt;QEMU &amp;gt;= 4.2.0&lt;/li&gt;
+&lt;li&gt;A CPU with Intel VT-x / AMD SVM support is required (&lt;code&gt;grep -e vmx -e svm /proc/cpuinfo&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;installation-preparation&#34;&gt;Installation Preparation&lt;/h3&gt;
+&lt;p&gt;KVM may need the following tweak on the host machine to work.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To make this change permanent, you may use the following command.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo cp kvm.conf /etc/modprobe.d/kvm.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install QEMU and other packages.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install qemu uml-utilities virt-manager git \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    wget libguestfs-tools p7zip-full make dmg2img -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This step may need to be adapted for your Linux distribution.&lt;/p&gt;
+&lt;p&gt;Add user to the &lt;code&gt;kvm&lt;/code&gt; and &lt;code&gt;libvirt&lt;/code&gt; groups (might be needed).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG kvm $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG libvirt $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG input $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG disk $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: Re-login after executing this command.&lt;/p&gt;
+&lt;p&gt;Clone this repository on your QEMU system. Files from this repository are
+used in the following steps.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone --depth 1 --recursive https://github.com/kholia/OSX-KVM.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd OSX-KVM
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Repository updates can be pulled via the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull --rebase
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This repository uses rebase based workflows heavily.&lt;/p&gt;
+&lt;p&gt;Fetch macOS installer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./fetch-macOS-v2.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can choose your desired macOS version here. After executing this step,
+you should have the &lt;code&gt;BaseSystem.dmg&lt;/code&gt; file in the current folder.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ATTENTION: Let &lt;code&gt;&amp;gt;= Big Sur&lt;/code&gt; setup sit at the &lt;code&gt;Country Selection&lt;/code&gt; screen, and
+other similar places for a while if things are being slow. The initial macOS
+setup wizard will eventually succeed.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sample run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ./fetch-macOS-v2.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. High Sierra (10.13)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. Mojave (10.14)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. Catalina (10.15)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;4. Big Sur (11.6) - RECOMMENDED
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5. Monterey (latest)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Choose a product to download (1-5): 4
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: Modern NVIDIA GPUs are supported on HighSierra but not on later
+versions of macOS. Recommended PCI Passthrough GPU is 5700XT as this works on Catalina and above. If you go with a 6000 Series Card only certain ones will work on Big Sur and Monterey, but not earlier releases.&lt;/p&gt;
+&lt;p&gt;Convert the downloaded &lt;code&gt;BaseSystem.dmg&lt;/code&gt; file into the &lt;code&gt;BaseSystem.img&lt;/code&gt; file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dmg2img -i BaseSystem.dmg BaseSystem.img
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OR&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qemu-img convert BaseSystem.dmg -O raw BaseSystem.img  # can be problematic on newer systems
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Create a virtual HDD image where macOS will be installed. If you change the
+name of the disk image from &lt;code&gt;mac_hdd_ng.img&lt;/code&gt; to something else, the boot scripts
+will need to be updated to point to the new image name.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qemu-img create -f qcow2 mac_hdd_ng.img 128G
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;NOTE: Create this HDD image file on a fast SSD/NVMe disk for best results.&lt;/p&gt;
+&lt;p&gt;Now you are ready to install macOS&lt;/p&gt;
+&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+&lt;p&gt;CLI method (primary). Just run the &lt;code&gt;OpenCore-Boot.sh&lt;/code&gt; script to start the
+installation process.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./OpenCore-Boot.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: This same script works for Big Sur, Catalina, Mojave, and High Sierra.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Use the &lt;code&gt;Disk Utility&lt;/code&gt; tool within the macOS installer to partition, and
+format the virtual disk attached to the macOS VM.&lt;/p&gt;
+&lt;p&gt;Go ahead, and install macOS&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TIP: Using a non-APFS filesystem is recommended.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(OPTIONAL) Use this macOS VM disk with libvirt (virt-manager / virsh stuff).&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;virtual-machine-manager-setup&#34;&gt;Virtual Machine Manager Setup&lt;/h4&gt;
+&lt;p&gt;Edit &lt;code&gt;macOS-libvirt-Catalina.xml&lt;/code&gt; file and change the various file paths (search
+for &lt;code&gt;CHANGEME&lt;/code&gt; strings in that file). The following command should do the
+trick usually.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```
+sed &amp;quot;s/CHANGEME/$USER/g&amp;quot; macOS-libvirt-Catalina.xml &amp;gt; macOS.xml
+
+virt-xml-validate macOS.xml
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create a VM by running the following command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```bash
+virsh --connect qemu:///system define macOS.xml
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If needed, grant necessary permissions to libvirt-qemu user,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```
+sudo setfacl -m u:libvirt-qemu:rx /home/$USER
+sudo setfacl -R -m u:libvirt-qemu:rx /home/$USER/OSX-KVM
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Launch &lt;code&gt;virt-manager&lt;/code&gt; and start the &lt;code&gt;macOS&lt;/code&gt; virtual machine.&lt;/p&gt;
+&lt;h3 id=&#34;post-installation&#34;&gt;Post-Installation&lt;/h3&gt;
+&lt;h4 id=&#34;bridge-networking&#34;&gt;Bridge Networking&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;First&lt;/em&gt; find your card interface name&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ip a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example: (Interface name is enp7s0)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    inet 127.0.0.1/8 scope host lo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    inet6 ::1/128 scope host 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2: enp7s0: &amp;lt;NO-CARRIER,BROADCAST,MULTICAST,UP&amp;gt; mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    link/ether 24:bb:ee:55:22:33 brd ff:ff:ff:ff:ff:ff
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    inet 10.0.0.99/24 brd 10.0.0.255 scope global
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    inet6 ::1/128 scope host 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Second&lt;/em&gt; Update &lt;code&gt;/etc/network/interfaces&lt;/code&gt; to only have the &lt;code&gt;lo&lt;/code&gt; device or loopback - Comment out any other interfaces with &lt;code&gt;#&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;source /etc/network/interfaces.d/*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# The loopback network interface
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auto lo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iface lo inet loopback
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# The primary network interface
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# allow-hotplug enp7s0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# iface enp7s0 inet dhcp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Third&lt;/em&gt; Add &lt;code&gt;sudo vim /etc/network/interfaces.d/br0&lt;/code&gt; File. Use &lt;code&gt;nano&lt;/code&gt; instead of &lt;code&gt;vim&lt;/code&gt; if you don&amp;rsquo;t know vim.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;## DHCP ip config file for br0 ##
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auto br0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# Bridge setup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; iface br0 inet dhcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    bridge_ports enp7s0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Lastly&lt;/em&gt; Restart the networking service or reboot computer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl restart networking
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;other-considerations&#34;&gt;Other Considerations&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;To passthrough GPUs and other devices, see &lt;a href=&#34;https://github.com/kholia/OSX-KVM/blob/master/notes.md#gpu-passthrough-notes&#34;&gt;these notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Need a different resolution? Check out the &lt;a href=&#34;https://github.com/kholia/OSX-KVM/blob/master/notes.md#change-resolution-in-opencore&#34;&gt;notes&lt;/a&gt; included in this repository.&lt;/li&gt;
+&lt;li&gt;Trouble with iMessage? Check out the &lt;a href=&#34;https://github.com/kholia/OSX-KVM/blob/master/notes.md#trouble-with-imessage&#34;&gt;notes&lt;/a&gt; included in this repository.&lt;/li&gt;
+&lt;li&gt;Highly recommended macOS tweaks - &lt;a href=&#34;https://github.com/sickcodes/osx-optimizer&#34;&gt;https://github.com/sickcodes/osx-optimizer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/11111111&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>Fix LibGL Errors</title>
       <link>https://christitus.com/fix-libGL-errors/</link>

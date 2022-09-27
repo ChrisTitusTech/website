@@ -5,31 +5,40 @@
     <link>https://christitus.com/categories/</link>
     <description>Recent content in Categories on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 19 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux</title>
       <link>https://christitus.com/categories/linux/</link>
-      <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://christitus.com/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Windows</title>
-      <link>https://christitus.com/categories/windows/</link>
-      <pubDate>Fri, 26 Aug 2022 00:00:00 +0000</pubDate>
+      <title>MacOS</title>
+      <link>https://christitus.com/categories/macos/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://christitus.com/categories/windows/</guid>
+      <guid>https://christitus.com/categories/macos/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>MacOS</title>
-      <link>https://christitus.com/categories/macos/</link>
-      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      <title>Networking</title>
+      <link>https://christitus.com/categories/networking/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://christitus.com/categories/macos/</guid>
+      <guid>https://christitus.com/categories/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://christitus.com/categories/windows/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/categories/windows/</guid>
       <description></description>
     </item>
     
@@ -48,15 +57,6 @@
       <pubDate>Mon, 11 Apr 2022 08:48:13 -0500</pubDate>
       
       <guid>https://christitus.com/categories/chromeos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networking</title>
-      <link>https://christitus.com/categories/networking/</link>
-      <pubDate>Wed, 19 Jan 2022 17:39:34 -0600</pubDate>
-      
-      <guid>https://christitus.com/categories/networking/</guid>
       <description></description>
     </item>
     

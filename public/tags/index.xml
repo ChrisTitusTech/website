@@ -5,31 +5,67 @@
     <link>https://christitus.com/tags/</link>
     <description>Recent content in Tags on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 19 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Linux Mint</title>
-      <link>https://christitus.com/tags/linux-mint/</link>
-      <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
+      <title>QEMU</title>
+      <link>https://christitus.com/tags/qemu/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://christitus.com/tags/linux-mint/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Debian</title>
-      <link>https://christitus.com/tags/debian/</link>
-      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://christitus.com/tags/debian/</guid>
+      <guid>https://christitus.com/tags/qemu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu</title>
       <link>https://christitus.com/tags/ubuntu/</link>
-      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://christitus.com/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>https://christitus.com/tags/github/</link>
+      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian</title>
+      <link>https://christitus.com/tags/debian/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows 10</title>
+      <link>https://christitus.com/tags/windows-10/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/windows-10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows 11</title>
+      <link>https://christitus.com/tags/windows-11/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/windows-11/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux Mint</title>
+      <link>https://christitus.com/tags/linux-mint/</link>
+      <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/linux-mint/</guid>
       <description></description>
     </item>
     
@@ -241,15 +277,6 @@
     </item>
     
     <item>
-      <title>Windows 11</title>
-      <link>https://christitus.com/tags/windows-11/</link>
-      <pubDate>Tue, 29 Jun 2021 11:21:54 -0500</pubDate>
-      
-      <guid>https://christitus.com/tags/windows-11/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Rocky Linux</title>
       <link>https://christitus.com/tags/rocky-linux/</link>
       <pubDate>Mon, 03 May 2021 12:12:16 -0500</pubDate>
@@ -318,15 +345,6 @@
       <pubDate>Thu, 03 Sep 2020 11:33:12 -0500</pubDate>
       
       <guid>https://christitus.com/tags/cryptocurrency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GitHub</title>
-      <link>https://christitus.com/tags/github/</link>
-      <pubDate>Thu, 03 Sep 2020 10:57:46 -0500</pubDate>
-      
-      <guid>https://christitus.com/tags/github/</guid>
       <description></description>
     </item>
     
@@ -570,15 +588,6 @@
       <pubDate>Tue, 29 Oct 2019 01:13:21 +0000</pubDate>
       
       <guid>https://christitus.com/tags/hackintosh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows 10</title>
-      <link>https://christitus.com/tags/windows-10/</link>
-      <pubDate>Mon, 14 Oct 2019 20:08:01 +0000</pubDate>
-      
-      <guid>https://christitus.com/tags/windows-10/</guid>
       <description></description>
     </item>
     

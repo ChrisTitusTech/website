@@ -3,13 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-09-19T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
-    <lastmod>2022-09-19T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/categories/linux/</loc>
-    <lastmod>2022-09-19T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/macos/</loc>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/macos-on-linux/</loc>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/networking/</loc>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/posts/</loc>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/qemu/</loc>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/windows-inside-linux/</loc>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/ubuntu/</loc>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/windows/</loc>
+    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/github/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/using-github-correctly/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/auto-mount-systemd/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/debian/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/win10-to-win11/</loc>
+    <lastmod>2022-09-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/windows-10/</loc>
+    <lastmod>2022-09-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/windows-11/</loc>
+    <lastmod>2022-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/linux-for-beginners/</loc>
     <lastmod>2022-09-19T00:00:00+00:00</lastmod>
@@ -17,19 +65,7 @@
     <loc>https://christitus.com/tags/linux-mint/</loc>
     <lastmod>2022-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/</loc>
-    <lastmod>2022-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/debian/</loc>
-    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/fix-libGL-errors/</loc>
-    <lastmod>2022-09-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/ubuntu/</loc>
     <lastmod>2022-09-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/laptop-power-management/</loc>
@@ -38,17 +74,11 @@
     <loc>https://christitus.com/tags/power-management/</loc>
     <lastmod>2022-08-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/categories/windows/</loc>
-    <lastmod>2022-08-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/is-windows-bad/</loc>
     <lastmod>2022-08-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/microsoft/</loc>
     <lastmod>2022-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/macos/</loc>
-    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/nix/</loc>
     <lastmod>2022-08-22T00:00:00+00:00</lastmod>
@@ -173,9 +203,6 @@
     <loc>https://christitus.com/tags/crosh/</loc>
     <lastmod>2022-04-11T08:48:13-05:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/categories/networking/</loc>
-    <lastmod>2022-01-19T17:39:34-06:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/tags/robocopy/</loc>
     <lastmod>2022-01-19T17:39:34-06:00</lastmod>
   </url><url>
@@ -201,9 +228,6 @@
     <lastmod>2021-07-20T14:46:40-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/update-any-pc-to-windows11/</loc>
-    <lastmod>2021-06-29T11:21:54-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/windows-11/</loc>
     <lastmod>2021-06-29T11:21:54-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/rocky-linux/</loc>
@@ -259,9 +283,6 @@
   </url><url>
     <loc>https://christitus.com/crypto/</loc>
     <lastmod>2020-09-03T11:33:12-05:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/github/</loc>
-    <lastmod>2020-09-03T10:57:46-05:00</lastmod>
   </url><url>
     <loc>https://christitus.com/ssh-github/</loc>
     <lastmod>2020-09-03T10:57:46-05:00</lastmod>
@@ -444,9 +465,6 @@
     <lastmod>2019-10-29T01:13:21+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/clean-up-windows-10/</loc>
-    <lastmod>2019-10-14T20:08:01+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/tags/windows-10/</loc>
     <lastmod>2019-10-14T20:08:01+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/secure-web-server/</loc>

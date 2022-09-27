@@ -5,7 +5,25 @@
     <link>https://christitus.com/tags/debian/</link>
     <description>Recent content in Debian on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Auto Mount with SystemD</title>
+      <link>https://christitus.com/auto-mount-systemd/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/auto-mount-systemd/</guid>
+      <description>&lt;p&gt;This shows how to automount remote network drives using systemd and fstab&lt;/p&gt;
+&lt;h2 id=&#34;automount-using-systemd&#34;&gt;Automount using systemd&lt;/h2&gt;
+&lt;p&gt;Sometimes partitions can fail to mount on startup and some options are needed to fix this. I&amp;rsquo;ve had two instances where it was needed. One was on a slow 6 TB drive that timed out on occation during boot and I had to &lt;code&gt;sudo mount -a&lt;/code&gt; to get it to mount&lt;/p&gt;
+&lt;p&gt;For this a simple option addition in fstab on a local disk looks like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;noauto,x-systemd.automount
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Next, I had problems with NFS shares not mounting and I had to expand these option to:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;noauto,x-systemd.automount,x-systemd.mount-timeout=30,_netdev
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This makes the &lt;code&gt;/etc/fstab&lt;/code&gt; entry look like this:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;10.0.0.10:/volume2/Images		/media/images	nfs	noauto,x-systemd.automount,x-systemd.mount-timeout=30,_netdev	0	0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://wiki.archlinux.org/title/Fstab#Automount_with_systemd&#34;&gt;https://wiki.archlinux.org/title/Fstab#Automount_with_systemd&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Fix LibGL Errors</title>
       <link>https://christitus.com/fix-libGL-errors/</link>

@@ -35,9 +35,15 @@ body.dark-mode p,body.dark-mode .paragraph {
     font-family: $primary-font;
 }
 
+body.dark-mode blockquote p {
+    font-weight: 400;
+    color: #222 !important;
+    font-family: $primary-font;
+  }
+
 body.dark-mode table {
     background: rgb(205, 205, 205);
-    color:#333
+    color:#333;
 }
 //sticky top non scroll bg
 body.dark-mode header.sticky-top {
