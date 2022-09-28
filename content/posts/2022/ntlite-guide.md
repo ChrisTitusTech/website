@@ -1,5 +1,5 @@
 ---
-title: "Ntlite Guide"
+title: "NTLite Guide"
 
 date: 2022-10-05
 url: /ntlite-guide/
@@ -12,6 +12,7 @@ draft: false
 ---
 This Guide shows you the easiest way to configure Windows and make an ISO with NTLite. 
 <!--more-->
+![ntlite](/images/2022/ntlite/ntlite.png)
 
 ## Overview
 
@@ -25,9 +26,51 @@ That is where import existing profiles that have already been tested by the NTLi
 
  - NTLite costs $40 for a home user and is worth every penny in my opinion. Download and buy from their website <https://ntlite.com>
  - Download the presets to import from my GitHub Repository <https://github.com/ChrisTitusTech/ntlite-configs> - Credit for it's creation goes to Txmmy from NTLite forums. I'm using GitHub to maintain and update it based on user requests. 
+ - Install 7zip to extra files from Windows ISO - Windows Terminal install with `winget install --id=7zip.7zip  -e`
  - Download the official Windows ISO <https://www.microsoft.com/en-us/software-download/windows10>
-     - _Note: In windows it will default to "Media Creation Tool" to make the iso (see below) You can use Mac/Linux to direct download ISO or User Agent Switch Browser Extension to trick Microsoft_
 
 ![ms-download](/images/2022/ntlite/download-iso.png)
 
+_Note: In windows it will default to "Media Creation Tool" to make the iso (see above) You can use Mac/Linux to direct download ISO or User Agent Switch Browser Extension to trick Microsoft_
 
+## The Setup
+
+These are the following steps for the NTLite to make a proper ISO. Extract the Official ISO, Add ISO Files, Load Files, Apply Imported XML Profile, Save New ISO!
+
+### Extract Windows ISO File
+
+Right click your `windows.iso` file and select the "extract files". _If you don't see the extract files in the context menu then you did NOT install 7zip OR in Windows 11 you need to select "show more options"_
+
+### Preparing NTLite
+
+Look at the image below and add the files you extracted above. Follow these steps in order:
+
+1. Select Folder from Add Menu
+2. Delete unneeded Windows versions _Ex. Windows Pro N or Windows Educational_
+  - Select the Version you DO NEED after before move to Apply
+  - Import the Presets XML File
+3. Apply to load the files _Note: This will take a LONG time 5-10 minutes on fast systems_
+
+![import-image](/images/2022/ntlite/import-image.png)
+
+### Customize Image
+
+There are a TON of customizations you can do here, but DO NOT OVER DO IT! Past the imported presets that automatically set the services you need and a few other quality of life settings, you should also import the drivers for the system you are installing it on. This speeds up the post-install time. 
+
+Once you have everything the way you want it, simply apply the settings.
+
+![apply-settings](/images/2022/ntlite/apply-settings.png)
+
+_Note: This is the longest of all the stages and took almost 15 minutes on a good system_
+
+### Create the ISO
+
+Finally, we are ready to make the ISO. Just Click "Create ISO" and select the location to save it. 
+
+![create-iso](/images/2022/ntlite/create-iso.png)
+
+## Next Steps
+
+After you have made your ISO file you are now ready to install and finish your configuration
+
+Check out my Windows Utility script and set the Security Updates, Install Extra Programs, and more @ <https://christitus.com/windows-tool/>
