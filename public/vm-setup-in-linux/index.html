@@ -445,7 +445,7 @@ if (!doNotTrack) {
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">egrep -c &#39;(vmx|svm)&#39; /proc/cpuinfo
 </span></span></code></pre></div><p>If the output is zero then go to bios settings and enable VT-x (Virtualization Technology Extension) for Intel processor and AMD-V for AMD processor.</p>
 <h2 id="install-qemu-and-virtual-machine-manager">Install QEMU and Virtual Machine Manager</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt install qemu-kvm qemu-system qemu-utils python3 python3-pip libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
 </span></span></code></pre></div><p>Verify that Libvirtd service is started</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo systemctl status libvirtd.service
 </span></span></code></pre></div><p><img src="/images/2022/libvirtd-service.png" alt="libvirtd-service"></p>
@@ -461,8 +461,11 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl">----------------------------------------------
 </span></span><span class="line"><span class="cl"> default   active       yes          yes
 </span></span></code></pre></div><h2 id="add-user-to-libvirt-to-allow-access-to-vms">Add User to libvirt to Allow Access to VMs</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo adduser $(whoami) libvirt
-</span></span><span class="line"><span class="cl">sudo adduser $(whoami) libvirt-qemu
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo usermod -aG libvirt $(whoami)
+</span></span><span class="line"><span class="cl">sudo usermod -aG libvirt-qemu $(whoami)
+</span></span><span class="line"><span class="cl">sudo usermod -aG kvm $(whoami)
+</span></span><span class="line"><span class="cl">sudo usermod -aG input $(whoami)
+</span></span><span class="line"><span class="cl">sudo usermod -aG disk $(whoami)
 </span></span></code></pre></div><p>Reboot and you are Finished!</p>
 <h3 id="walkthrough-video">Walkthrough Video</h3>
 

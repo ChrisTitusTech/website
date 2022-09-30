@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Chris Titus Tech | Tech Content Creator</title>
+    <link>https://christitus.com/tags/programming/</link>
+    <description>Recent content in Programming on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be a Better Programmer</title>
+      <link>https://christitus.com/be-a-better-programmer/</link>
+      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/be-a-better-programmer/</guid>
+      <description>&lt;p&gt;Many people want to be a programmer, but often find themselves flailing around in the dark. These are the things I&amp;rsquo;ve done to help aid myself in coding more, learning new things, and just becoming a better programmer.&lt;/p&gt;
+&lt;h2 id=&#34;use-github-daily&#34;&gt;Use GitHub DAILY!&lt;/h2&gt;
+&lt;p&gt;Ok, maybe you don&amp;rsquo;t have to use GitHub specifically but choose a platform or host your own git and use it as much as you can. Finish a feature or part of a project&amp;hellip; COMMIT IT! This makes it very easy when you leave and come back to the project.&lt;/p&gt;
+&lt;p&gt;Collaborators can find your project and contribute or even fix errors you have made, which helps you improve quickly.&lt;/p&gt;
+&lt;h2 id=&#34;track-your-progress&#34;&gt;Track Your Progress&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m constantly bouncing around and when I started I was getting discouraged. I&amp;rsquo;d start a project, move on or get busy, and not look at it again or even code for weeks!&lt;/p&gt;
+&lt;p&gt;To fix this, I ended up using a free tool called wakatime. This showed me what projects I was spending time on, editors I used, languages, and spit it all out on a dashboard.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/wakatime.png&#34; alt=&#34;wakatime&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Check out my GitHub page @ &lt;a href=&#34;https://github.com/christitustech&#34;&gt;https://github.com/christitustech&lt;/a&gt; for all my stats and share yours down below in the comments! I am extremely competitive and I code more knowing I have people watching my progress.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: As a bonus, check out my hidden profile readme @ &lt;a href=&#34;https://github.com/christitustech/christitustech&#34;&gt;https://github.com/christitustech/christitustech&lt;/a&gt; and steal my auto generated setup!&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;setup-your-ideal-workflow&#34;&gt;Setup Your Ideal Workflow&lt;/h2&gt;
+&lt;p&gt;You have to like your work or at least enjoy parts of it. I follow this phrase and make sure I find something I do daily that I enjoy.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Focus on the Journey, not the destination. Joy is not found in finishing an activity, but doing it!&amp;rdquo; - Greg Anderson&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It&amp;rsquo;s not to say that you will enjoy everything, because on the flip side of that phrase I made my own.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;You have to shovel a little shit in every job&amp;rdquo; - Chris Titus&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The point being is there will be things you will hate, but just make sure it&amp;rsquo;s not all bad. For example, I love VIM as it makes me just feel cool even though sometimes I am slower than if I just used VSCODE with the proper extension. The reason I do this is because of two reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Eventually I will optimize VIM enough that I&amp;rsquo;m faster than VSCODE&lt;/li&gt;
+&lt;li&gt;I just feel awesome typing and coding in VIM&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This isn&amp;rsquo;t a advertisement for you to use VIM! In fact, I&amp;rsquo;d recommend you NOT use VIM unless these things interest you and you want to go down that rabbit hole. It depends on you!&lt;/p&gt;
+&lt;p&gt;Focus on what works for you and what you enjoy as far as an environment. This is more about how you &lt;em&gt;FEEL&lt;/em&gt; than practical application. The better you feel in your workflow, the better your work product!&lt;/p&gt;
+&lt;h2 id=&#34;set-goals&#34;&gt;Set Goals&lt;/h2&gt;
+&lt;p&gt;If you are going to improve in anything you need to have a goal. For me it is all about putting in the time consistently. That is true with everything in life that you go to learn. &lt;strong&gt;MORE TIME = BETTER RESULTS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Example Goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3 hours of coding per day&lt;/li&gt;
+&lt;li&gt;500 Git Contributions in 2022&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you set these goals look at how you are doing. I recommend both short term and long term goals like I listed above.&lt;/p&gt;
+&lt;p&gt;Now, go code!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

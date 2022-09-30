@@ -5,7 +5,50 @@
     <link>https://christitus.com/categories/linux/</link>
     <description>Recent content in Linux on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be a Better Programmer</title>
+      <link>https://christitus.com/be-a-better-programmer/</link>
+      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/be-a-better-programmer/</guid>
+      <description>&lt;p&gt;Many people want to be a programmer, but often find themselves flailing around in the dark. These are the things I&amp;rsquo;ve done to help aid myself in coding more, learning new things, and just becoming a better programmer.&lt;/p&gt;
+&lt;h2 id=&#34;use-github-daily&#34;&gt;Use GitHub DAILY!&lt;/h2&gt;
+&lt;p&gt;Ok, maybe you don&amp;rsquo;t have to use GitHub specifically but choose a platform or host your own git and use it as much as you can. Finish a feature or part of a project&amp;hellip; COMMIT IT! This makes it very easy when you leave and come back to the project.&lt;/p&gt;
+&lt;p&gt;Collaborators can find your project and contribute or even fix errors you have made, which helps you improve quickly.&lt;/p&gt;
+&lt;h2 id=&#34;track-your-progress&#34;&gt;Track Your Progress&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m constantly bouncing around and when I started I was getting discouraged. I&amp;rsquo;d start a project, move on or get busy, and not look at it again or even code for weeks!&lt;/p&gt;
+&lt;p&gt;To fix this, I ended up using a free tool called wakatime. This showed me what projects I was spending time on, editors I used, languages, and spit it all out on a dashboard.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/wakatime.png&#34; alt=&#34;wakatime&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Check out my GitHub page @ &lt;a href=&#34;https://github.com/christitustech&#34;&gt;https://github.com/christitustech&lt;/a&gt; for all my stats and share yours down below in the comments! I am extremely competitive and I code more knowing I have people watching my progress.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: As a bonus, check out my hidden profile readme @ &lt;a href=&#34;https://github.com/christitustech/christitustech&#34;&gt;https://github.com/christitustech/christitustech&lt;/a&gt; and steal my auto generated setup!&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;setup-your-ideal-workflow&#34;&gt;Setup Your Ideal Workflow&lt;/h2&gt;
+&lt;p&gt;You have to like your work or at least enjoy parts of it. I follow this phrase and make sure I find something I do daily that I enjoy.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Focus on the Journey, not the destination. Joy is not found in finishing an activity, but doing it!&amp;rdquo; - Greg Anderson&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It&amp;rsquo;s not to say that you will enjoy everything, because on the flip side of that phrase I made my own.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;You have to shovel a little shit in every job&amp;rdquo; - Chris Titus&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The point being is there will be things you will hate, but just make sure it&amp;rsquo;s not all bad. For example, I love VIM as it makes me just feel cool even though sometimes I am slower than if I just used VSCODE with the proper extension. The reason I do this is because of two reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Eventually I will optimize VIM enough that I&amp;rsquo;m faster than VSCODE&lt;/li&gt;
+&lt;li&gt;I just feel awesome typing and coding in VIM&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This isn&amp;rsquo;t a advertisement for you to use VIM! In fact, I&amp;rsquo;d recommend you NOT use VIM unless these things interest you and you want to go down that rabbit hole. It depends on you!&lt;/p&gt;
+&lt;p&gt;Focus on what works for you and what you enjoy as far as an environment. This is more about how you &lt;em&gt;FEEL&lt;/em&gt; than practical application. The better you feel in your workflow, the better your work product!&lt;/p&gt;
+&lt;h2 id=&#34;set-goals&#34;&gt;Set Goals&lt;/h2&gt;
+&lt;p&gt;If you are going to improve in anything you need to have a goal. For me it is all about putting in the time consistently. That is true with everything in life that you go to learn. &lt;strong&gt;MORE TIME = BETTER RESULTS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Example Goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3 hours of coding per day&lt;/li&gt;
+&lt;li&gt;500 Git Contributions in 2022&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you set these goals look at how you are doing. I recommend both short term and long term goals like I listed above.&lt;/p&gt;
+&lt;p&gt;Now, go code!&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Setting up Windows inside Linux</title>
       <link>https://christitus.com/windows-inside-linux/</link>
@@ -1122,7 +1165,7 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;egrep -c &amp;#39;(vmx|svm)&amp;#39; /proc/cpuinfo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the output is zero then go to bios settings and enable VT-x (Virtualization Technology Extension) for Intel processor and AMD-V for AMD processor.&lt;/p&gt;
 &lt;h2 id=&#34;install-qemu-and-virtual-machine-manager&#34;&gt;Install QEMU and Virtual Machine Manager&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install qemu-kvm qemu-system qemu-utils python3 python3-pip libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Verify that Libvirtd service is started&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl status libvirtd.service
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/libvirtd-service.png&#34; alt=&#34;libvirtd-service&#34;&gt;&lt;/p&gt;
@@ -1138,8 +1181,11 @@ This guide shows how to host a website, owning a web domain forever, and redirec
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;----------------------------------------------
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; default   active       yes          yes
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;add-user-to-libvirt-to-allow-access-to-vms&#34;&gt;Add User to libvirt to Allow Access to VMs&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo adduser $(whoami) libvirt
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo adduser $(whoami) libvirt-qemu
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG libvirt $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG libvirt-qemu $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG kvm $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG input $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG disk $(whoami)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Reboot and you are Finished!&lt;/p&gt;
 &lt;h3 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h3&gt;
 
@@ -1599,7 +1645,7 @@ Razer has a bunch of cool features, but also has a great open source project cal
 &lt;/ul&gt;
 &lt;p&gt;Recommended Wallets:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt; 
+&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt;
 &lt;img src=&#34;https://christitus.com/images/crypto/exodus.png&#34; alt=&#34;exodus&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Other advanced wallets I&amp;rsquo;d recommend come from the official projects or opensource on github.com&lt;/li&gt;
 &lt;/ul&gt;
@@ -4297,10 +4343,10 @@ Amazon Link: &lt;a href=&#34;https://amzn.to/2SS8lcb&#34;&gt;https://amzn.to/2SS
 &lt;/div&gt;
 
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;powershell-installation-method&#34;&gt;PowerShell Installation Method&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;microsoft-store-installation-method&#34;&gt;Microsoft Store Installation Method&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Open the Microsoft Store&lt;/li&gt;

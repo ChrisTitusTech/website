@@ -5,7 +5,25 @@
     <link>https://christitus.com/tags/</link>
     <description>Recent content in Tags on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://christitus.com/tags/programming/</link>
+      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FOSS Programs</title>
+      <link>https://christitus.com/tags/foss-programs/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/tags/foss-programs/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>QEMU</title>
       <link>https://christitus.com/tags/qemu/</link>

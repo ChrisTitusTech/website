@@ -5,7 +5,87 @@
     <link>https://christitus.com/categories/windows/</link>
     <description>Recent content in Windows on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 26 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Be a Better Programmer</title>
+      <link>https://christitus.com/be-a-better-programmer/</link>
+      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/be-a-better-programmer/</guid>
+      <description>&lt;p&gt;Many people want to be a programmer, but often find themselves flailing around in the dark. These are the things I&amp;rsquo;ve done to help aid myself in coding more, learning new things, and just becoming a better programmer.&lt;/p&gt;
+&lt;h2 id=&#34;use-github-daily&#34;&gt;Use GitHub DAILY!&lt;/h2&gt;
+&lt;p&gt;Ok, maybe you don&amp;rsquo;t have to use GitHub specifically but choose a platform or host your own git and use it as much as you can. Finish a feature or part of a project&amp;hellip; COMMIT IT! This makes it very easy when you leave and come back to the project.&lt;/p&gt;
+&lt;p&gt;Collaborators can find your project and contribute or even fix errors you have made, which helps you improve quickly.&lt;/p&gt;
+&lt;h2 id=&#34;track-your-progress&#34;&gt;Track Your Progress&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m constantly bouncing around and when I started I was getting discouraged. I&amp;rsquo;d start a project, move on or get busy, and not look at it again or even code for weeks!&lt;/p&gt;
+&lt;p&gt;To fix this, I ended up using a free tool called wakatime. This showed me what projects I was spending time on, editors I used, languages, and spit it all out on a dashboard.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/wakatime.png&#34; alt=&#34;wakatime&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Check out my GitHub page @ &lt;a href=&#34;https://github.com/christitustech&#34;&gt;https://github.com/christitustech&lt;/a&gt; for all my stats and share yours down below in the comments! I am extremely competitive and I code more knowing I have people watching my progress.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: As a bonus, check out my hidden profile readme @ &lt;a href=&#34;https://github.com/christitustech/christitustech&#34;&gt;https://github.com/christitustech/christitustech&lt;/a&gt; and steal my auto generated setup!&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;setup-your-ideal-workflow&#34;&gt;Setup Your Ideal Workflow&lt;/h2&gt;
+&lt;p&gt;You have to like your work or at least enjoy parts of it. I follow this phrase and make sure I find something I do daily that I enjoy.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Focus on the Journey, not the destination. Joy is not found in finishing an activity, but doing it!&amp;rdquo; - Greg Anderson&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It&amp;rsquo;s not to say that you will enjoy everything, because on the flip side of that phrase I made my own.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;You have to shovel a little shit in every job&amp;rdquo; - Chris Titus&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The point being is there will be things you will hate, but just make sure it&amp;rsquo;s not all bad. For example, I love VIM as it makes me just feel cool even though sometimes I am slower than if I just used VSCODE with the proper extension. The reason I do this is because of two reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Eventually I will optimize VIM enough that I&amp;rsquo;m faster than VSCODE&lt;/li&gt;
+&lt;li&gt;I just feel awesome typing and coding in VIM&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This isn&amp;rsquo;t a advertisement for you to use VIM! In fact, I&amp;rsquo;d recommend you NOT use VIM unless these things interest you and you want to go down that rabbit hole. It depends on you!&lt;/p&gt;
+&lt;p&gt;Focus on what works for you and what you enjoy as far as an environment. This is more about how you &lt;em&gt;FEEL&lt;/em&gt; than practical application. The better you feel in your workflow, the better your work product!&lt;/p&gt;
+&lt;h2 id=&#34;set-goals&#34;&gt;Set Goals&lt;/h2&gt;
+&lt;p&gt;If you are going to improve in anything you need to have a goal. For me it is all about putting in the time consistently. That is true with everything in life that you go to learn. &lt;strong&gt;MORE TIME = BETTER RESULTS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Example Goals:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3 hours of coding per day&lt;/li&gt;
+&lt;li&gt;500 Git Contributions in 2022&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you set these goals look at how you are doing. I recommend both short term and long term goals like I listed above.&lt;/p&gt;
+&lt;p&gt;Now, go code!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ClickPaste the Best Program You Never Heard Of </title>
+      <link>https://christitus.com/clickpaste/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/clickpaste/</guid>
+      <description>&lt;p&gt;This program is free and open source, while being absolutely a life saver. I use it for VNC sessions and when dealing with VMs through my host computer.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;No more typing crap out when I use VNC or VM Sessions on the Host. Thanks ClickPaste (Free and Open Source)&lt;br&gt;&lt;br&gt;GitHub Link: &amp;lt;&lt;a href=&#34;https://t.co/S3M69kQF3s&#34;&gt;https://t.co/S3M69kQF3s&lt;/a&gt;&amp;gt;&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1572985183594242048?ref_src=twsrc%5Etfw&#34;&gt;September 22, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;GitHub Link: &lt;a href=&#34;https://github.com/Collective-Software/ClickPaste&#34;&gt;https://github.com/Collective-Software/ClickPaste&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;Simply extract the zip file from &lt;a href=&#34;https://github.com/Collective-Software/ClickPaste/releases&#34;&gt;https://github.com/Collective-Software/ClickPaste/releases&lt;/a&gt; and run ClickPaste.exe&lt;/p&gt;
+&lt;h3 id=&#34;running-at-startup&#34;&gt;Running at Startup&lt;/h3&gt;
+&lt;p&gt;The best way I&amp;rsquo;ve found is to create a shortcut to ClickPaste.exe then drag&amp;amp;drop that into shell:startup&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/startup.png&#34; alt=&#34;startup&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;First of course, you need to have some text in your clipboard. Then:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the target notification icon to begin:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToTarget.png&#34;&gt;&lt;img src=&#34;https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToTarget.png&#34; alt=&#34;Click to choose a target&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Click to choose a location you want to paste the text:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToPaste.png&#34;&gt;&lt;img src=&#34;https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToPaste.png&#34; alt=&#34;Click to choose a location to paste&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Your clipboard contents should be typed as keystrokes onto the window you selected:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Collective-Software/ClickPaste/blob/master/doc/Pasted.png&#34;&gt;&lt;img src=&#34;https://github.com/Collective-Software/ClickPaste/raw/master/doc/Pasted.png&#34; alt=&#34;Your clipboard is typed as keystrokes onto the window you selected&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/i7cgD_KCh10&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>Setting up Windows inside Linux</title>
       <link>https://christitus.com/windows-inside-linux/</link>
@@ -1385,7 +1465,7 @@ Razer has a bunch of cool features, but also has a great open source project cal
 &lt;/ul&gt;
 &lt;p&gt;Recommended Wallets:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt; 
+&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt;
 &lt;img src=&#34;https://christitus.com/images/crypto/exodus.png&#34; alt=&#34;exodus&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Other advanced wallets I&amp;rsquo;d recommend come from the official projects or opensource on github.com&lt;/li&gt;
 &lt;/ul&gt;
@@ -2284,10 +2364,10 @@ Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;htt
 &lt;/div&gt;
 
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;powershell-installation-method&#34;&gt;PowerShell Installation Method&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;microsoft-store-installation-method&#34;&gt;Microsoft Store Installation Method&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Open the Microsoft Store&lt;/li&gt;

@@ -2,17 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://christitus.com/be-a-better-programmer/</loc>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://christitus.com/categories/</loc>
-    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/</loc>
-    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/categories/linux/</loc>
-    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/macos/</loc>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/posts/</loc>
-    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/programming/</loc>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/</loc>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/categories/windows/</loc>
+    <lastmod>2022-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/clickpaste/</loc>
+    <lastmod>2022-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://christitus.com/tags/foss-programs/</loc>
+    <lastmod>2022-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/tags/qemu/</loc>
     <lastmod>2022-09-26T00:00:00+00:00</lastmod>
@@ -20,16 +41,7 @@
     <loc>https://christitus.com/windows-inside-linux/</loc>
     <lastmod>2022-09-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://christitus.com/tags/</loc>
-    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/windows/</loc>
-    <lastmod>2022-09-26T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://christitus.com/tags/github/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://christitus.com/categories/macos/</loc>
     <lastmod>2022-09-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://christitus.com/using-github-correctly/</loc>
