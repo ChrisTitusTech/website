@@ -46,7 +46,7 @@ Then we will initialize it with a HUGO theme like so:
 ```
 cd website
 git init
-git submodule add git submodule add https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
+git submodule add https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
 ```
 
 I absolutely love the ZZO theme as a beginner. It has some of the best instructions and documentation you will find! <https://zzo-docs.vercel.app/zzo/gettingstarted/installation/>
