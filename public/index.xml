@@ -5,7 +5,108 @@
     <link>https://christitus.com/</link>
     <description>Recent content on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Macos on Linux</title>
+      <link>https://christitus.com/macos-on-linux/</link>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/macos-on-linux/</guid>
+      <description>&lt;p&gt;This shows you all the steps to install a MacOS VM in Linux QEMU using Virtual Machine Manager or virt-manager.&lt;/p&gt;
+&lt;p&gt;Newer Source, but not as polished: &lt;a href=&#34;https://github.com/kholia/OSX-KVM&#34;&gt;https://github.com/kholia/OSX-KVM&lt;/a&gt;
+Mac KVM Repository: &lt;a href=&#34;https://github.com/foxlet/macOS-Simple-KVM&#34;&gt;https://github.com/foxlet/macOS-Simple-KVM&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A modern Linux distribution. E.g. Ubuntu 20.04 LTS 64-bit or later.&lt;/li&gt;
+&lt;li&gt;QEMU &amp;gt;= 4.2.0&lt;/li&gt;
+&lt;li&gt;A CPU with Intel VT-x / AMD SVM support is required (&lt;code&gt;grep -e vmx -e svm /proc/cpuinfo&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;installation-preparation&#34;&gt;Installation Preparation&lt;/h2&gt;
+&lt;p&gt;Install QEMU and modify your user using &lt;a href=&#34;https://christitus.com/vm-setup-in-linux&#34;&gt;https://christitus.com/vm-setup-in-linux&lt;/a&gt; Guide.&lt;/p&gt;
+&lt;p&gt;Clone this repository on your QEMU system. Files from this repository are used in the following steps.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone --depth 1 --recursive https://github.com/foxlet/macOS-Simple-KVM
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd macOS-Simple-KVM
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;installation-media&#34;&gt;Installation Media&lt;/h2&gt;
+&lt;p&gt;This downloads our installation media and I&amp;rsquo;d recommend using Catalina for compatibility and performance.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./jumpstart.sh --catalina
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: Modern NVIDIA GPUs are supported on HighSierra but not on later
+versions of macOS. Recommended PCI Passthrough GPU is 5700XT as this works on Catalina and above. If you go with a 6000 Series Card only certain ones will work on Big Sur and Monterey, but not earlier releases.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;virtual-machine-setup&#34;&gt;Virtual Machine Setup&lt;/h2&gt;
+&lt;p&gt;I recommend using Virtual Machine Manager (virt-manager) as it has a fantastic interface and Simple-KVM does a great job with their setup script. Simply type the following to get the macOS VM setup:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ./make.sh --add
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;vm-modification&#34;&gt;VM Modification&lt;/h3&gt;
+&lt;p&gt;Before we can start out VM we have to have a hard drive to load it. You have two options: physical hard drive passthrough or qcow2 file.&lt;/p&gt;
+&lt;p&gt;Obviously, the physical drive is considerably faster, but not possible in some instances such as laptops or if you can&amp;rsquo;t afford a secondary drive.&lt;/p&gt;
+&lt;h4 id=&#34;physical-hard-drive-passthrough&#34;&gt;Physical Hard Drive Passthrough&lt;/h4&gt;
+&lt;p&gt;This is pretty simple as you just click Add Hardware -&amp;gt; Storage and then specify your hard drive.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://christitus.com/images/2022/qemu/hdd.png&#34; alt=&#34;hdd&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: while you can use drive short names &lt;code&gt;/dev/sda&lt;/code&gt; I&amp;rsquo;d recommend using &lt;code&gt;/dev/disk/by-id/HARDDRIVESERIAL&lt;/code&gt; as this doesn&amp;rsquo;t ever change.&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;qcow2-file-for-hard-drive&#34;&gt;QCOW2 File for Hard Drive&lt;/h4&gt;
+&lt;p&gt;This is even simpler as you just click Add Hardware -&amp;gt; Storage and create new file. Just make sure you put it on at least a SSD or a nvme drive as it will be super slow if you don&amp;rsquo;t.&lt;/p&gt;
+&lt;h2 id=&#34;install-process&#34;&gt;Install Process&lt;/h2&gt;
+&lt;p&gt;Boot your machine and select the OS Install Partition on startup.&lt;/p&gt;
+&lt;p&gt;Use the &lt;code&gt;Disk Utility&lt;/code&gt; tool within the macOS installer to partition, and
+format the virtual disk attached to the macOS VM.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TIP: Using a non-APFS filesystem is recommended.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Go ahead, and install macOS&lt;/p&gt;
+&lt;h3 id=&#34;post-installation&#34;&gt;Post-Installation&lt;/h3&gt;
+&lt;h4 id=&#34;bridge-networking&#34;&gt;Bridge Networking&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;First&lt;/em&gt; find your card interface name&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ip a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example: (Interface name is enp7s0)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1: lo: &amp;lt;LOOPBACK,UP,LOWER_UP&amp;gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    inet 127.0.0.1/8 scope host lo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    inet6 ::1/128 scope host 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2: enp7s0: &amp;lt;NO-CARRIER,BROADCAST,MULTICAST,UP&amp;gt; mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    link/ether 24:bb:ee:55:22:33 brd ff:ff:ff:ff:ff:ff
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    inet 10.0.0.99/24 brd 10.0.0.255 scope global
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    inet6 ::1/128 scope host 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    valid_lft forever preferred_lft forever
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Second&lt;/em&gt; Update &lt;code&gt;/etc/network/interfaces&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;source /etc/network/interfaces.d/*
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# The loopback network interface
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auto lo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iface lo inet loopback
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# The primary network interface - old entry
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# allow-hotplug enp7s0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# iface enp7s0 inet dhcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# The primary network interface - new entry
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# DEVICENAME = enp7so for this pc and MYUSERNAME need to be $(whoami)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auto br0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iface br0 inet dhcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  bridge_ports DEVICENAME tap0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auto tap0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iface tap0 inet dhcp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  pre-up tunctl -u MYUSERNAME -t tap0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Lastly&lt;/em&gt; Restart the networking service or reboot computer. Then change your VM NIC (Network Hardware) to &lt;code&gt;br0&lt;/code&gt; interface.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl restart networking
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;other-considerations&#34;&gt;Other Considerations&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;GPU Passthrough (Requires two Graphics Cards) - &lt;a href=&#34;https://github.com/foxlet/macOS-Simple-KVM/blob/master/docs/guide-passthrough.md&#34;&gt;https://github.com/foxlet/macOS-Simple-KVM/blob/master/docs/guide-passthrough.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Changing Screen Resolution - &lt;a href=&#34;https://github.com/foxlet/macOS-Simple-KVM/blob/master/docs/guide-screen-resolution.md&#34;&gt;https://github.com/foxlet/macOS-Simple-KVM/blob/master/docs/guide-screen-resolution.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optimizing System Performance - &lt;a href=&#34;https://github.com/sickcodes/osx-optimizer&#34;&gt;https://github.com/sickcodes/osx-optimizer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sound - Two methods, Pass the audio through HDMI if using GPU Passthrough OR Pass through a USB sound card that is macOS compatible
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: There is a way to use Voodoo kext or AppleALC, but it will crackle and sound terrible&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/11111111&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>Be a Better Programmer</title>
       <link>https://christitus.com/be-a-better-programmer/</link>
@@ -2742,7 +2843,7 @@ Razer has a bunch of cool features, but also has a great open source project cal
 &lt;/ul&gt;
 &lt;p&gt;Recommended Wallets:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt; 
+&lt;li&gt;(Desktop &amp;amp; Mobile) Exodus &lt;a href=&#34;https://www.exodus.io&#34;&gt;https://www.exodus.io&lt;/a&gt;
 &lt;img src=&#34;https://christitus.com/images/crypto/exodus.png&#34; alt=&#34;exodus&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Other advanced wallets I&amp;rsquo;d recommend come from the official projects or opensource on github.com&lt;/li&gt;
 &lt;/ul&gt;
@@ -3721,11 +3822,11 @@ Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
 This knowledge base is fantastic for any information I glaze over or troubleshooting that isn&amp;rsquo;t covered. It is much more indepth than this article, but can be confusing in parts. This article is meant to get you acquainted with OpenCore and fill in any missing gaps.&lt;/p&gt;
 &lt;h2 id=&#34;why-i-use-opencore&#34;&gt;Why I Use OpenCore?&lt;/h2&gt;
 &lt;p&gt;I use opencore for compatibility and everything can be setup in a non macOS environment. It also injects drivers support (kext) differently than past methods and is far more stable.
-This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster. 
+This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster.
 I also find a larger amount of hardware is supported and the finished product is all contained neatly in an EFI partition.&lt;/p&gt;
 &lt;h2 id=&#34;hardware-compatibility&#34;&gt;Hardware Compatibility&lt;/h2&gt;
 &lt;p&gt;Even with OpenCore supporting a lot more hardware there is still some hardware that simply will not work on macOS no matter what you do. Here is a definitive guide &lt;a href=&#34;https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/&#34;&gt;https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/&lt;/a&gt;.
-The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops. 
+The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops.
 AMD CPUs can technically work, but will require more tinkering and are more difficult than the Intel counterparts.&lt;/p&gt;
 &lt;h2 id=&#34;files-and-projects-you-need-to-download-and-what-they-do&#34;&gt;Files and Projects you need to download and what they do&lt;/h2&gt;
 &lt;p&gt;Here is a list of all the files and GitHub projects that are used for OpenCore.&lt;/p&gt;
@@ -6329,10 +6430,10 @@ Setup FreeNAS Video: &lt;a href=&#34;https://youtu.be/JexkrpeM_WA&#34;&gt;https:
       <guid>https://christitus.com/sata-vs-sas-vs-nvme/</guid>
       <description>&lt;p&gt;This is a quick breakdown of the differences between SATA vs SAS vs NVMe. After looking at the performance below, you will be able to decide which one best suits your needs.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;SATA (Serial Advanced Technology Advancement) 
+&lt;li&gt;SATA (Serial Advanced Technology Advancement)
 * Most common
 * Least reliable
-* Slow 
+* Slow
 * 5400 – 7200 RPM Hard Drives
 * Half duplex (Can’t read and write simultaneously)
 * 6 GB/s connection
@@ -6432,7 +6533,7 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
 &lt;li&gt;run the following commands:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;xe pool-ha-disable&lt;/code&gt;&lt;em&gt;Note: If this fails try ha-disable force below&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;xe host-emergency-ha-disable force=true&amp;lt;br /&amp;gt; xe pool-emergency-transition-to-master --force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe host-emergency-ha-disable force=true&amp;lt;br /&amp;gt; xe pool-emergency-transition-to-master --force&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: This will force the pool and slaves to reinitialize with the pool master&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Once the server reboots it should connect&lt;/li&gt;
@@ -7108,10 +7209,10 @@ _Note: Do not forget to add the MX, SPF, DMARC records where your domain registr
 &lt;/div&gt;
 
 &lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
 &lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&#34;powershell-installation-method&#34;&gt;PowerShell Installation Method&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;microsoft-store-installation-method&#34;&gt;Microsoft Store Installation Method&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Open the Microsoft Store&lt;/li&gt;
@@ -7911,7 +8012,7 @@ OR&lt;/li&gt;
 &lt;em&gt;Alternatively, you can do this from the Services Panel&lt;/em&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Purge the ticket cache on the local domain controller. 
+&lt;p&gt;Purge the ticket cache on the local domain controller.
 &lt;code&gt;klist purge&lt;/code&gt;&lt;br&gt;
 _Note: you can use &lt;code&gt;klist tickets&lt;/code&gt; to view tickets before purging them&lt;/p&gt;
 &lt;ul&gt;

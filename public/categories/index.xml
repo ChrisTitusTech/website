@@ -5,11 +5,11 @@
     <link>https://christitus.com/categories/</link>
     <description>Recent content in Categories on Chris Titus Tech | Tech Content Creator</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 30 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://christitus.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux</title>
       <link>https://christitus.com/categories/linux/</link>
-      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://christitus.com/categories/linux/</guid>
       <description></description>
@@ -18,9 +18,18 @@
     <item>
       <title>MacOS</title>
       <link>https://christitus.com/categories/macos/</link>
-      <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://christitus.com/categories/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>https://christitus.com/categories/networking/</link>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://christitus.com/categories/networking/</guid>
       <description></description>
     </item>
     
@@ -30,15 +39,6 @@
       <pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://christitus.com/categories/windows/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Networking</title>
-      <link>https://christitus.com/categories/networking/</link>
-      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://christitus.com/categories/networking/</guid>
       <description></description>
     </item>
     

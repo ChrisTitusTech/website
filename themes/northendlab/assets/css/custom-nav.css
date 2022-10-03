@@ -47,3 +47,7 @@ div.stickyside.pl-lg-4 {
   padding:10px;
   float:right;
 }
+
+html {
+	scroll-behavior: smooth;
+}
