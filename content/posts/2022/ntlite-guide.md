@@ -95,3 +95,5 @@ Finally, we are ready to make the ISO. Just Click "Create ISO" and select the lo
 After you have made your ISO file you are now ready to install and finish your configuration
 
 Check out my Windows Utility script and set the Security Updates, Install Extra Programs, and more @ <https://christitus.com/windows-tool/>
+
+{{< youtube xLCWtC6UYrM >}}
