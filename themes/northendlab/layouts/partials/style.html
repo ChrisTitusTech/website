@@ -13,14 +13,61 @@
 <style crossorigin="anonymous" media="all" type="text/css" integrity="{{ $styles.Data.Integrity }}">{{$styles.Content | safeCSS}}</style>
 
 <style>
+  /* Unordered Lists */
   .content ul li:not(.nav-item) {
     position: relative;
     margin-bottom: 5px;
     margin-left: 25px;
-    list-style-type: disc;
+    list-style-type: none;
+    font-size: 14px;
+  }
+  .content ul li:not(.nav-item)::before {
+    content: "";
+    position: absolute;
+    top: 1.2em;
+    left: -20px;
+    margin-top: -.9em;
+    background: linear-gradient(45deg, #9AC4F8, #7e7e7e);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+  }
+
+  ul li {
+    position: relative;
+    list-style-type: none;
+    font-size: 15px;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    top: 1.2em;
+    left: -15px;
+    margin-top: -.6em;
+    background: linear-gradient(45deg, #9AC4F8, #7e7e7e);
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+  }
+
+  /* Ordered Lists */
+
+  .content ol li {
+    list-style-type: none;
+    counter-increment: item;
     font-size: 14px;
   }
 
+  .content ol li:before {
+    content: counter(item);
+    margin-right: 5px;
+    font-size: 80%;
+    background-color: #7e7e7e;
+    color: #7eb4e2;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
   .notices p::before {
     position: absolute;
     top: 2px;
