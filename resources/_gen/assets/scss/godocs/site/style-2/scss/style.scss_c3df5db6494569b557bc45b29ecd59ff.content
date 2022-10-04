@@ -528,17 +528,7 @@ pre {
   padding-left: 0;
   margin-bottom: 20px; }
   .content ul li {
-    padding-left: 20px;
-    position: relative; }
-    .content ul li::before {
-      position: absolute;
-      content: '';
-      height: 8px;
-      width: 8px;
-      border-radius: 50%;
-      background: #FF0043;
-      left: 3px;
-      top: 8px; }
+    margin-bottom: 10px; }
 
 .content table {
   width: 100%;
