@@ -26,7 +26,7 @@ That is where import existing profiles that have already been tested by the NTLi
 
  - NTLite costs $40 for a home user and is worth every penny in my opinion. Download and buy from their website <https://ntlite.com>
  - Download the presets to import from my GitHub Repository <https://github.com/ChrisTitusTech/ntlite-configs> - Credit for it's creation goes to Txmmy from NTLite forums. I'm using GitHub to maintain and update it based on user requests. 
- - Install 7zip to extra files from Windows ISO - Windows Terminal install with `winget install --id=7zip.7zip  -e`
+ - Install 7zip to extract files from Windows ISO - Windows Terminal install with `winget install --id=7zip.7zip  -e`
  - Download the official Windows ISO <https://www.microsoft.com/en-us/software-download/windows10>
 
 ![ms-download](/images/2022/ntlite/download-iso.png)
