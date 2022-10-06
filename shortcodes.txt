@@ -6,4 +6,10 @@
 | Item 1   | Item 2   | Item 3   |
 | Item 1a  | Item 2a  | Item 3a  |
 {{</table>}}
--->
+-->imgur
+
+{{<imgur id="Imgur Image ID" ext="Image Extension" title="Image Title">}}
+
+github
+
+{{<github repo="christitustech/repo-name" file="/path/to/file" lang="language" options="highlight-options">}}
