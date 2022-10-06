@@ -1,4 +1,5 @@
 # ignore all logs
+public/
 *.log
 .env
 *.sh
