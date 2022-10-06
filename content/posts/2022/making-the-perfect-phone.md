@@ -107,4 +107,4 @@ After the debloat and changing my launcher, this is what my phone looks like now
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube MFbXFG2xDJI >}}
