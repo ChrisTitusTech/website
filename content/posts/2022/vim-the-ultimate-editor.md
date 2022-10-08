@@ -70,8 +70,9 @@ It is time to elevate your game to the elite status and making your own `.vimrc`
 
 I've been using VIM for a month and this is my `.vimrc` file. I use a lot of plugins, themes, and just a few hotkeys. This isn't what an experts .vimrc file looks like, as I still consider myself just now leaving the beginner stages into an intermediate user. As time goes on I will expand this file by adding more shortcuts and better hotkeys. 
 
+Source: <https://github.com/christitustech/myvim>
 {{< ghcode "https://raw.githubusercontent.com/ChrisTitusTech/myvim/master/.vimrc" >}}
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube P88ydZVcm1s >}}
