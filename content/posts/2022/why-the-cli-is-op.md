@@ -7,14 +7,15 @@ image: images/2022-thumbs/why-the-cli-is-op.jpg
 categories:
   - Linux
   - Windows
-  - Networking
+  - MacOS
 tags:
-  - Ubuntu
+  - Command Line
 draft: false
 ---
+When I say "Overpowered", this means the command line interfaces can do things that are otherwise impossible.
 <!--more-->
 
-{{< tweet user="christitustech" id="1550918768334979078" >}}
+{{< tweet user="christitustech" id="1578822405518397442" >}}
 
 
 

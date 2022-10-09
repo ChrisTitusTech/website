@@ -12,7 +12,7 @@ tags:
   - VIM
 draft: false
 ---
-VIM editor is one of the most beloved, but often misunderstood editor in existence. Let's configure it from a noobs perspective and show you it's power.
+VIM editor is one of the most beloved, but often misunderstood editors in existence. Let's configure it from a noobs perspective and show you it's power.
 <!--more-->
 
 ## Why VIM?
@@ -25,14 +25,14 @@ There is nothing that can even compare when it comes to speed from a veteran VIM
 
 So if it's so fast why don't most people use VIM? It's hard and has one of the biggest learning curves that I have ever seen from any program. It will take **YEARS** to master, months to be better than vs code/intellij editors, and weeks of learning to be comparable to any other editor on the market. 
 
-However, the payoff is beyond worth it to me. The reward feels so good when you start to _get_ it. The big thing... you can throw your mouse away, because when you get it a mouse is no longer needed. 
+However, the payoff is beyond worth it to me. The reward feels so good when you start to _get_ it. The big thing... you can throw your mouse away, because when you get it... a mouse is no longer needed. 
 
 ## Beginning steps
 
 The very first thing you need to know about vim is the modes.
 
   - Normal Mode - The default mode you enter into on launch. This allows quick movement, exiting, commands, but you don't "type" in this mode. 
-  - Insert Mode - Pressing `i` on your keyboard will allow you enter insert mode. This allows you to type text and keyboard input to into the file open. 
+  - Insert Mode - Pressing `i` on your keyboard will allow you enter insert mode. This allows you to type text and keyboard input to the open file.
   - Visual Mode - Pressing `v` on your keyboard will put you in visual mode. This allows you to highlight and use commands on highlighted syntax.
 
 _Note: You can escape Insert and Visual mode to go back to Normal mode with `esc` key_
@@ -54,7 +54,7 @@ VIM Cheatsheets:
 
 ## Learning the basics
 
-Now that you can actually function inside of vim, you might be thinking... "How in the hell do elite programs use this damn program so fast?". 
+Now that you can actually function inside of vim, you might be thinking... "How in the hell do elite programmers use this damn program so fast?". 
 
 Movement and muscle memory are the biggest things with vim. It's not just knowing the keys, but using them without thinking. This may seem impossible, but the more you practice the better you will get. 
 
