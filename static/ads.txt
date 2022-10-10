@@ -1,0 +1,37 @@
+infolinks.com, 3376612, direct
+appnexus.com, 3251, reseller
+pubmatic.com, 156872, reseller, 5d62403b186f2ace
+sonobi.com, 0e0a64d7d3, reseller, d1a215d9eb5aee9e
+sovrn.com, 268479, reseller, fafdf38b16bf6b2b
+lijit.com, 268479, reseller, fafdf38b16bf6b2b
+google.com, pub-6373315980741255, reseller, f08c47fec0942fa0
+google.com, pub-4299156005397946, reseller, f08c47fec0942fa0
+indexexchange.com, 191306, reseller
+openx.com, 543174347, reseller, 6a698e2ec38604c6
+yahoo.com, 58723, reseller
+pubmatic.com, 60809, reseller, 5d62403b186f2ace
+emxdgt.com, 1918, reseller, 1e1d41537f7cad7f
+xandr.com, 3251, reseller
+lijit.com, 268479-eb, reseller, fafdf38b16bf6b2b
+google.com, pub-7858377917172490, reseller, f08c47fec0942fa0
+google.com, pub-1463455084986126, reseller, f08c47fec0942fa0
+rhythmone.com, 2221906906, reseller, a670c89d4a324e47
+video.unrulymedia.com, 2221906906, reseller
+criteo.com, B-059206, reseller, 9fac4a4a87c2a44f
+appnexus.com, 7666, reseller, f5ab79cb980f11d1
+rubiconproject.com, 156042, reseller, 0bfd66d529a55807
+33across.com, 0010b00002CpYhEAAV, reseller, bbea06d9c4d2853c
+rubiconproject.com, 16414, reseller, 0bfd66d529a55807
+pubmatic.com, 156423, reseller, 5d62403b186f2ace
+appnexus.com, 10239, reseller, f5ab79cb980f11d1
+openx.com, 537120563, reseller, 6a698e2ec38604c6
+yahoo.com, 57289, reseller, e1a5b5b6e3255540
+appnexus.com, 1356, reseller, f5ab79cb980f11d1
+advertising.com, 28246, reseller
+rubiconproject.com, 11006, reseller, 0bfd66d529a55807
+onetag.com, 598ce3ddaee8c90, reseller
+e-planning.net, 901a809a65f984a4, reseller, c1ba615865ed87b2
+improvedigital.com, 2016, reseller
+inmobi.com, b4821b1325c44dc581b04d743ca46575, reseller, 83e75a7ae333ca9d
+rubiconproject.com, 11726, reseller, 0bfd66d529a55807
+themediagrid.com, V19ZSB, reseller, 35d5010d7789b49d
