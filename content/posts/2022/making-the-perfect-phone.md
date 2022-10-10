@@ -66,7 +66,7 @@ sudo apt install android-sdk-platform-tools
 Windows
 
 - Download [ADB Platform Tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
-- Extra Tools to `C:\Windows` _(This allows you to run adb.exe and fastboot.exe from anywhere)_
+- Extract Tools to `C:\Windows` _(This allows you to run adb.exe and fastboot.exe from anywhere)_
 - Install drivers for your phone - [Install Android Device Drivers](https://developer.android.com/studio/run/oem-usb#Drivers)
 
 MacOS
