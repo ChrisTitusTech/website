@@ -35,3 +35,4 @@ improvedigital.com, 2016, reseller
 inmobi.com, b4821b1325c44dc581b04d743ca46575, reseller, 83e75a7ae333ca9d
 rubiconproject.com, 11726, reseller, 0bfd66d529a55807
 themediagrid.com, V19ZSB, reseller, 35d5010d7789b49d
+google.com, pub-6679678361432308, DIRECT, f08c47fec0942fa0
