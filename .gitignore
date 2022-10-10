@@ -1,4 +1,5 @@
 # ignore all logs
+.vscode/
 public/
 *.log
 .env
