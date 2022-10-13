@@ -29,12 +29,26 @@ I also highly recommend buying NTLite if you want to live in this environment. Y
 - Install Windows
 - Run my Windows utility <https://christitus.com/windows-tool/>
 
+_Shortcut_
+```
+irm christitus.com/win | iex
+```
+
 ## Issues with Minimal Install
 
 Certain dependencies for programs will be missing. When you run my utility installation of winget will likely fail because there isn't a trace of the Microsoft store on the system. 
 
+I manually grabbed these using Invoke Rest Method. These are the commands I used in the video below:
 
+```
+irm "https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx"-o "./Microsoft.VCLibs.x64.14.00.Desktop.appx"
+irm "https://github.com/microsoft/winget-cli/releases/download/v1.2.10271/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"-o "./Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
+irm "https://github.com/microsoft/winget-cli/releases/download/v1.2.10271/b0a0692da1034339b76dce1c298a1e42_License1.xml"-o "./b0a0692da1034339b76dce1c298a1e42_License1.xml"
+Add-AppxProvisionedPackage -Online -PackagePath ".\Microsoft.VCLibs.x64.14.00.Desktop.appx" -SkipLicense
+Add-AppxProvisionedPackage -Online -PackagePath ".\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle" -LicensePath ".\b0a0692da1034339b76dce1c298a1e42_License1.xml"
+```
 
+I'm working on expanding my tool to give an easy way to do this reliably for these types of minimal systems. If you'd like to support my work and its future development, consider grabbing the exe @ <https://cttstore.com/windows-toolbox>
 
 ## Walkthrough Video
 
