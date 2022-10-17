@@ -27,6 +27,16 @@ The setup file will also install autojump which helps you navigate between direc
 
 ![](/images/2022/beautiful-bash/alias.png)
 
+## Installation
+
+Pick a directory to house all the bash files. I have a dedicated Github directory for all the projects I use @ `~/GitHub/`, but you can pick any directory including your home and then clone mybash repository for install.
+
+```
+git clone https://github.com/christitustech/mybash
+cd mybash
+./setup.sh
+```
+_Note: By default this will symlink your ~/.bashrc and wipe out any customizations you have made!_
 
 ## Walkthrough Video
 
