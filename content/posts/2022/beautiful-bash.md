@@ -19,8 +19,13 @@ Tired of an Ugly prompt with no features? Fix it with this guide!
 
  ![](/images/2022/beautiful-bash/prompt.png)
 
+## Requirements
 
+With all my guides I like to create bash scripts that will auto install and configure everything. You may have heard of the starship prompt, which this uses, but is heavily themed. I also have my included bashrc with a ton of useful aliases.
 
+The setup file will also install autojump which helps you navigate between directories. 
+
+![](/images/2022/beautiful-bash/alias.png)
 
 
 ## Walkthrough Video
