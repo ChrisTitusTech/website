@@ -11,15 +11,9 @@ enableWhoami: false
 I appreciate you taking the time to come to my website to check out the various affiliate programs and help support me make more videos. 
 
 ## Services I Use
-- [Backblaze Cloud Storage](https://www.backblaze.com/cloud-backup.html#af9th4)
-- [ESET Anti-Virus](https://www.jdoqocy.com/click-100287975-10939606)
 - [Express VPN - Fastest VPN Provider](https://www.linkev.com/?a_fid=christitustech)
-- [Linode Virtual Private Servers](https://linode.gvw92c.net/xA1Rk)
-- [Namecheap - My Favorite Domain Registrar](http://www.tkqlhce.com/click-9109049-13269564)
 - [Parted Magic Recovery Discs](https://partedmagic.com/store/?ref=35)
-- [Pluralsite - Learning Video Courses](http://pluralsight.pxf.io/c/1398393/448522/7490)
 - [Roboform Password Management](https://www.anrdoezrs.net/click-9109049-14329390)
-- [Wordpress Hosting](https://www.jdoqocy.com/click-100287975-14061248)
 
 ## Amazon
 
