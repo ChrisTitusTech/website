@@ -6,16 +6,18 @@ url: /beautiful-bash/
 image: images/2022-thumbs/beautiful-bash.jpg
 categories:
   - Linux
-  - Windows
-  - Networking
 tags:
-  - Ubuntu
+  - Bash
 draft: false
 ---
+Tired of an Ugly prompt with no features? Fix it with this guide! 
 <!--more-->
+ 
+## The Look
 
-{{< tweet user="christitustech" id="1550918768334979078" >}}
+ The following is what the end result of the bash prompt will look like:
 
+ ![](/images/2022/beautiful-bash/prompt.png)
 
 
 
