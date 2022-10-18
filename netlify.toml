@@ -146,9 +146,3 @@ package = "@netlify/plugin-sitemap"
   to = "https://www.anrdoezrs.net/click-100287975-14415044"
   status = 301
   force = true
-
-[[redirects]]
-  from = "https://christitus.com/winget"
-  to = "https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/winget.ps1"
-  status = "301"
-  force = true
