@@ -34,121 +34,115 @@ package = "@netlify/plugin-sitemap"
   force = true
 
 [[redirects]]
-  from = "https://www.christitus.com/downloads"
+  from = "https://christitus.com/downloads"
   to = "https://www.cttstore.com/downloads"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://www.christitus.com/windows-toolbox"
+  from = "https://christitus.com/windows-toolbox"
   to = "https://www.cttstore.com/windows-toolbox"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/roboform"
+  from = "https://christitus.com/roboform"
   to = "https://www.anrdoezrs.net/click-9109049-14329390"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/easywp"
+  from = "https://christitus.com/easywp"
   to = "https://www.jdoqocy.com/click-100287975-14061248"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/linode"
+  from = "https://christitus.com/linode"
   to = "https://linode.gvw92c.net/xA1Rk"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/Binance"
+  from = "https://christitus.com/Binance"
   to = "https://www.binance.com/en/register?ref%3DEXCXLJ84"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/gemini"
+  from = "https://christitus.com/gemini"
   to = "https://gemini.com/share/j94zggt7"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/celsius"
-  to = "https://celsiusnetwork.app.link/19371707f3"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/partedmagic"
+  from = "https://christitus.com/partedmagic"
   to = "https://partedmagic.com/store/?ref=35"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/join"
+  from = "https://christitus.com/join"
   to = "https://www.youtube.com/channel/UCg6gPGh8HU2U01vaFCAsvmQ/join"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/antivirus"
+  from = "https://christitus.com/antivirus"
   to = "https://www.jdoqocy.com/click-100287975-10939606"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/coinbase"
+  from = "https://christitus.com/coinbase"
   to = "https://www.coinbase.com/join/titus_0u"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/lbry"
+  from = "https://christitus.com/lbry"
   to = "https://odysee.com/$/invite/@christitustech:5"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/ekster"
+  from = "https://christitus.com/ekster"
   to = "https://ekster.com?sca_ref=128599.0kgNiKicwL"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/namecheap"
+  from = "https://christitus.com/namecheap"
   to = "http://www.dpbolvw.net/click-9109049-13266668"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/pluralsite"
+  from = "https://christitus.com/pluralsite"
   to = "https://pluralsight.pxf.io/kGOjL"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/expressvpn"
+  from = "https://christitus.com/expressvpn"
   to = "https://www.expressvpn.com/christitustech"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/blockfi"
+  from = "https://christitus.com/blockfi"
   to = "https://blockfi.com/?ref=4658fd40"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/odysee"
+  from = "https://christitus.com/odysee"
   to = "https://odysee.com/$/invite/@christitustech:5"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/carbonite"
+  from = "https://christitus.com/carbonite"
   to = "https://www.anrdoezrs.net/click-100287975-14415044"
   status = 301
   force = true
