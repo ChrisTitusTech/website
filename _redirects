@@ -1,2 +1,4 @@
 http://www.christitus.com/* https://christitus.com/:splat 301!
 https://www.christitus.com/* https://christitus.com/:splat 301!
+# External redirect
+https://christitus.com/winget https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/winget.ps1
