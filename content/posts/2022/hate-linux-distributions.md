@@ -17,15 +17,19 @@ I love Linux, but the distributions for desktop systems isn't fun to navigate. I
 
 Linux itself and GNU tools are some of the best I've ever used, I actually like systemd, and its display renders are adequate. 
 
+![hate](/images/2022/hate.gif)
+
 ## So what is to hate?
 
 Distributions are often cobbled together and not well optimized with some exceptions, but I'm often disappointed from the lack of polish. This isn't a knock against the developers of these distributions, they don't have the resources to succeed. They don't have the massive budgets like the big tech operating system equivelents and why they are so... strange.
 
-Besides there being 100+ distributions and most of them canabilizing off each other, they don't have a cohesive system a lot of time. They try to emulate Windows or Mac and always fall short. In the end, they typically all have the same options, but each choose a bit differently.
+Besides there being 100+ distributions and most of them cannibalizing off each other, they don't have a cohesive system a lot of time. They try to emulate Windows or Mac and always fall short. In the end, they typically all have the same options, but each choose a bit differently.
 
 Choice isn't bad... Right? 
 
-The biggest pitfall is that they all take different design decisions and often fall short in areas. This couldn't be more evedant than the success of the Steam Deck and Chrome OS. 
+The biggest pitfall is that they all take different design decisions and often fall short in areas. This couldn't be more evident than the success of the Steam Deck and Chrome OS. 
+
+![linux-suit](/images/2022/tux-suit.png)
 
 ## The Year of the CORPORATE Linux Desktop
 
@@ -37,13 +41,17 @@ You can ask any Linux neckbeard... they will say they have money, marketing, and
 
 Both Chrome OS and Steam Deck get update at least once a month and sometimes more often. This is where most Linux distributions fail because they don't have the man power to develop at such a rapid pace or the money to quality test it like these corporate system can. 
 
-## The Distrubtion I use
+![debian](/images/2022/debian.png)
+
+## The Distribution I use
 
 Debian and Fedora. They are MASSIVE and give all the options in the world that you could want. My system will be as good or bad as I can make it, but I decide. If something happens on my system, I screwed up. 
 
 This is where the disconnect happens with normal users. They hear Linux is this stable system that never breaks. While this is true in the server realm, Linux desktop is not a consistent experience because of the distributions it has. With too much choice, too many underfunded projects, and little quality control... there will be problems. Users won't understand this foriegn system, instructions will be out of date or non-existent, and support will be spotty at best. 
 
 Last month, Arch Linux had a bad update that BROKE GRUB and users couldn't boot their system for example. 
+
+![](/images/2022/hate-linux-distributions/doom.png)
 
 ## Is Linux Desktop Doomed?
 
