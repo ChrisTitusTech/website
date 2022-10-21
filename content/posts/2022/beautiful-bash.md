@@ -40,4 +40,4 @@ _Note: By default this will symlink your ~/.bashrc and wipe out any customizatio
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube "b3W7Ky_aaaY" >}}
