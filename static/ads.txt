@@ -28,7 +28,7 @@ appnexus.com, 10239, reseller, f5ab79cb980f11d1
 openx.com, 537120563, reseller, 6a698e2ec38604c6
 yahoo.com, 57289, reseller, e1a5b5b6e3255540
 appnexus.com, 1356, reseller, f5ab79cb980f11d1
-advertising.com, 28246, reseller
+yahoo.com, 58905, reseller, e1a5b5b6e3255540
 rubiconproject.com, 11006, reseller, 0bfd66d529a55807
 onetag.com, 598ce3ddaee8c90, reseller
 e-planning.net, 901a809a65f984a4, reseller, c1ba615865ed87b2
