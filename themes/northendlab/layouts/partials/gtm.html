@@ -1,5 +1,15 @@
 {{ with site.Params.google_tag_manager }}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5817718-5"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5817718-5');
+</script>
+
+<!-- old script>
   (function (w, d, s, l, i) {
     w[l] = w[l] || [];
     w[l].push({
@@ -13,5 +23,5 @@
     j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
     f.parentNode.insertBefore(j, f);
   })(window, document, 'script', 'dataLayer', '{{ . }}');
-</script>
+</script-->
 {{ end }}
