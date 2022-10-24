@@ -28,6 +28,58 @@ One notable non-official project is for Synology NAS devices. I use a 64-bit Syn
 
 Synology Project: <https://github.com/josef109/spksrc>
 
+### Server Dashboard
+
+ ![](/images/2022/urbackup/dash.png)
+
+### Automated Terminal Install and Linux Setup
+
+Linux installs are a complete DREAM! Just paste the command listed under terminal when you use "Add New Client" Button. Here is an example install:
+
+![](/images/2022/urbackup/linux-term.png)
+
+### Enable Restore from Web
+
+You need to enable restoration in client configuration to completely control everything from server web interface. Here is a sample client configuration `/etc/default/urbackupclientbackend`
+
+![](/images/2022/urbackup/enable-web.png)
+
+## Windows Client Setup
+
+Windows uses a executable that is made with the "Add New Client" button. By default, windows clients will have full image backup on and no file based backups. I'd recommend changing this by adding your home directory or any other important folders, such as: `My Documents`
+
+## Linux Client Setup
+
+Linux clients can be installed via terminal and what I recommend. 
+
+_Note: The Linux GUI isn't good and terminal use of `urbackupclientctl` is used_
+
+### Image Backups
+
+Since urbackup only supports EXT4 and XFS we need LVM setup on these volumes BEFORE installing the distribution. LVM is tricky to setup correctly and will be hard as a beginner. The good thing about Linux is we don't have to worry about full image backups. All our configuration settings are in `~/.config` and global settings in `/etc/`. On my installs I mainly backup the `.config` folder and any other folder where I might put important information that would be isolated to that computer.  
+
+### Setting the backup directories
+
+Here is a sample backup command to add my `~/.config` directory
+
+```
+sudo urbackupclientctl add-backupdir -d $HOME/.config/
+```
+
+Then, check the status using the server web interface. 
+
+![](/images/2022/urbackup/linux-file.png)
+
+### Uninstall
+
+Uninstallation is a bit weird and needs to be done with this command: 
+
+```
+sudo uninstall_urbackupclient
+```
+
+![](/images/2022/urbackup/linux-uninstall.png)
+
 
 ## Walkthrough Video
 
