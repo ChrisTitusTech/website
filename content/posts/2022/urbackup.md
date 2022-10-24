@@ -81,6 +81,12 @@ sudo uninstall_urbackupclient
 
 ![](/images/2022/urbackup/linux-uninstall.png)
 
+## Alternatives
+
+There are a lot of free and open source backup solutions for backup. I picked urbackup because it is the most basic and probably the easiest to setup. However, if you need more features there are more backup solutions that I'd consider better for large environments or businesses. 
+
+- BorgBackup <https://www.borgbackup.org/> for cloud paid offering, BorgBase <https://www.borgbase.com/>
+- Bacula <https://www.bacula.org/> Enterprise solutions and fantastic dashboard
 
 ## Walkthrough Video
 
