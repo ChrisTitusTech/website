@@ -6,17 +6,19 @@ url: /neovim-is-better/
 image: images/2022-thumbs/neovim-is-better.jpg
 categories:
   - Linux
-  - Windows
-  - Networking
 tags:
-  - Ubuntu
+  - Neovim
 draft: false
 ---
 <!--more-->
 
 {{< tweet user="christitustech" id="1550918768334979078" >}}
 
+Neovim is an absolutely amazing system with amazing cool sweet features.
 
+## Installation
+
+## Configuration
 
 
 
