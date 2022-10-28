@@ -75,4 +75,4 @@ Here are the following added aliases for quality of life
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube LuAipOW8BNQ >}}

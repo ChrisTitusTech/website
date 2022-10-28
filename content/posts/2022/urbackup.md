@@ -7,7 +7,6 @@ image: images/2022-thumbs/urbackup.jpg
 categories:
   - Linux
   - Windows
-  - Networking
 tags:
   - Backup
 draft: false
@@ -90,4 +89,4 @@ There are a lot of free and open source backup solutions for backup. I picked ur
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube tXGVzMUsuE4 >}}
