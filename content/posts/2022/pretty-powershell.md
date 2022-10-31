@@ -21,10 +21,10 @@ The End Result:
 
 With all my guides here is the one line script to install "most" of the needed fixes. I'd recommend running it from an admin elevated prompt for installation of OhMyPosh.
 
-### One click Install
+### One Line Install
 
 ```
-irm "https://github.com/ChrisTitusTech/powershell-profile/blob/main/setup.ps1" | iex
+irm "https://github.com/ChrisTitusTech/powershell-profile/raw/main/setup.ps1" | iex
 ```
 
 The first thing that needs to be fixed is installing the correct font. Here are screenshots from both Windows 11 using Terminal and Windows 10 using Conhost. After running the above script, you will unzip the `cove.zip` file from the directory the command above was run from and install those nerd fonts. If you want to download other nerd fonts, go to: <https://www.nerdfonts.com/>
