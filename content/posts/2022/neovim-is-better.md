@@ -6,8 +6,8 @@ url: /neovim-is-better/
 image: images/2022-thumbs/neovim-is-better.jpg
 categories:
   - Linux
-	- Windows
-	- MacOS
+  - Windows
+  - MacOS
 tags:
   - Neovim
 draft: false
@@ -63,13 +63,15 @@ Instead of making a big modular structure that you see in most Neovim projects, 
 
 USE `:checkhealth` FIRST!
 
+![](/images/2022/neovim-is-better/checkhealth.png)
+
 Errors must be fixed to have a functional Neovim experience. Warnings can be ignored, but noted, because you may have failed installs for LSPs, Linters, and other tools. 
 
 ### Adding Tools
 
 `:Mason`
 
-![](/images/2022/Neovim-is-better/mason.png)
+![](/images/2022/neovim-is-better/mason.png)
 
 _Note: I recommend ONLY installing what you USE!_
 
