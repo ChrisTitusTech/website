@@ -12,7 +12,7 @@ tags:
   - Neovim
 draft: false
 ---
-I've never experience a program with such power and potential than Neovim. It does so much and we are at the beginning as it isn't even to a 1.0 release yet. The best part is the program works on Windows, MacOS, and Linux.
+I've never experienced a program with such power and potential than Neovim. It does so much and we are at the beginning as it isn't even to a 1.0 release yet. The best part is the program works on Windows, MacOS, and Linux.
 <!--more-->
 
 The following tweet encompasses my thoughts and feelings in my first week using Neovim.

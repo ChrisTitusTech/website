@@ -49,7 +49,7 @@ Don't know what ReAgentC is or how to use it? This is your guide.
 
 If you can boot in to Windows, hold shift while pressing restart. This will reboot your PC into a menu. Select *Advanced Options*
 
-Another method to reach this screen is to simply have the boot fail 3 times. A simply reboot when it starts it boot process will work. 
+Another method to reach this screen is to have the boot fail 3 times. A reboot during the load screen will count as a failure. 
 
 F8 is an older method that doesn't work unless enabled, but was a great way to get to the menu. I'm adding this to my Windows Utility Tweaks section.
 
@@ -61,7 +61,7 @@ Startup Repair almost never works, but once in a blue moon is beneficial. Startu
 
 ### Command Prompt
 
-Where the recovery partition shines. So many tools to choose from that I could write a book. Here are the highlights:
+Here are the highlights of a recovery partition:
 
 - Copy Files
 - Chkdsk for failing hard drives
@@ -75,7 +75,7 @@ Where the recovery partition shines. So many tools to choose from that I could w
 
 ### Uninstall Updates
 
-Bad update and now things don't work? Click this and revert it!
+Bad update and now it doesn't work? Click this and revert it!
 
 ![](/images/2022/reagentc-windows-recovery-partition/updates.png)
 
