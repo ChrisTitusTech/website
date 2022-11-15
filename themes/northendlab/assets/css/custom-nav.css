@@ -5,7 +5,7 @@ div.stickyside.pl-lg-4 {
     margin-top: 0px;
   }
 
-div.google-anchor {
+.google-anchor {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
