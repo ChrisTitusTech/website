@@ -51,9 +51,81 @@ _Click Advanced and proceed with any certificate errors_
 
 ## MacOS Docker Setup
 
+Setup the MacOS Docker Container with the following docker command
+
+```
+docker run -it \
+    --device /dev/kvm \
+    -p 50922:10022 \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e "DISPLAY=${DISPLAY:-:0.0}" \
+    -e GENERATE_UNIQUE=true \
+    -e MASTER_PLIST_URL='https://raw.githubusercontent.com/sickcodes/osx-serial-generator/master/config-custom.plist' \
+    sickcodes/docker-osx:monterey
+
+# docker build -t docker-osx --build-arg SHORTNAME=monterey .
+```
+
+Use Disk Utility to "erase" the 270GB virtual disk: _Note: This is just virtual and doesn't erase your drive_
+
+![](/images/2022/docker-macos/disk-util.png)
+
+## Start MacOS Docker Container
+
+Before we start the container find the name with:
+
+```
+docker ps -a
+```
+
+_Look for the NAMES column and pick the container name._
+
+![](/images/2022/docker-macos/container.png)
+
+Start with the following command NAME = Name from column above
+
+```
+docker start NAME
+```
+
+### Portainer Method for Starting
+
+I love portainer because you can easily manage your containers. Start, Stop, and see resource usage... Portainer does it all! Here is what mine looks like:
+
+![](/images/2022/docker-macos/portainer.png)
 
 
+## Optimize the Container
 
+Source: <https://github.com/sickcodes/osx-optimizer>
+
+Run the following from Root Prompt # `sudo su`
+
+```
+defaults write com.apple.loginwindow autoLoginUser -bool true
+mdutil -i off -a
+nvram boot-args="serverperfmode=1 $(nvram boot-args 2>/dev/null | cut -f 2-)"
+defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture ""
+defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
+defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
+defaults write com.apple.universalaccess reduceMotion -int 1
+defaults write com.apple.universalaccess reduceTransparency -int 1
+defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
+defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool false
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool false
+defaults write com.apple.commerce AutoUpdate -bool false
+defaults write com.apple.commerce AutoUpdateRestartRequired -bool false
+defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 0
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 0
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 0
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 0
+defaults write com.apple.loginwindow DisableScreenLock -bool true
+defaults write com.apple.loginwindow TALLogoutSavesState -bool false
+```
+
+## Final Result
+
+![](/images/2022/docker-macos/macos-final.png)
 
 ## Walkthrough Video
 
