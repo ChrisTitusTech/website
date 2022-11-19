@@ -203,6 +203,11 @@ name = "Downloads"
 
 [[Languages.en.menu.main]]
 weight = 3
+url = "https://www.bonfire.com/store/ctt-store/"
+name = "Merchandice"
+
+[[Languages.en.menu.main]]
+weight = 4
 url = "https://www.cttstore.com/login"
 name = "Members"
 hasChildren = true
