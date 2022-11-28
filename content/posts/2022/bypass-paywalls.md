@@ -1,7 +1,7 @@
 ---
 title: "Bypass Paywalls"
 
-date: 2022-12-5
+date: 2022-12-05
 url: /bypass-paywalls/
 image: images/2022-thumbs/bypass-paywalls.jpg
 categories:
