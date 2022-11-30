@@ -46,8 +46,13 @@ Screensavers might be the past, but they are still one of the coolest to do on y
 ### Windows
 
 1. Copy the *.scr file to `c:\Windows\System32`
-2. Launch the Screensaver Windows Module (Start -> Run -> `ScreenSaver`)
+2. Launch the Screensaver Windows Module (Start -> Run -> `control desk.cpl,,@screensaver`)
 3. Select the screensaver you copied
+
+Copy/Paste Run command:
+```
+control desk.cpl,,@screensaver
+```
 
 ### Linux
 
