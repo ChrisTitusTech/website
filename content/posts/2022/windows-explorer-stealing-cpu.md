@@ -34,10 +34,6 @@ Windows Registry Editor Version 5.00
 "IsPrelaunchEnabled"=dword:00000001
 ```
 
-
-
-
-
 ## Walkthrough Video
 
 {{< youtube 11111111 >}}
