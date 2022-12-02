@@ -14,6 +14,11 @@ draft: false
 This is a full walk-through and guide for Docker. 
 <!--more-->
 
+## Install and Getting Started
+
+- Official Docker: <https://docs.docker.com/get-docker/>
+- Official Portainer: <https://docs.portainer.io/start/install/server/docker>
+
 ## Quick Commands
 
 ### Run a new container
@@ -58,4 +63,4 @@ This is a full walk-through and guide for Docker.
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube 94VQvRpjfO8 >}}
