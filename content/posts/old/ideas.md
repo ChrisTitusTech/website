@@ -17,6 +17,7 @@ Current Ideas for Videos and Articles
 - [ ] TrueNAS Scale
 - [ ] QuickEMU
 - [ ] EXT4 in Windows
+- [ ] Hyprland Window Manager for Wayland - https://github.com/hyprwm/Hyprland
 - [ ] Setting Up Linux Gaming
 - [ ] Live Stream Radio Browser Program https://strimio.com/
 - [ ] DSTask - https://github.com/naggie/dstask
