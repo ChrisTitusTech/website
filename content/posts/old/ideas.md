@@ -14,6 +14,7 @@ draft: false
 ---
 Current Ideas for Videos and Articles
 <!--more-->
+- [ ] FOSS vs Proprietary counterparts
 - [ ] TrueNAS Scale
 - [ ] QuickEMU
 - [ ] EXT4 in Windows
