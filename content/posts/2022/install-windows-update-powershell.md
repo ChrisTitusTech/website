@@ -1,7 +1,7 @@
 ---
 title: "Install Windows Update Powershell"
 
-date: 2022-12-16
+date: 2022-12-14
 url: /install-windows-update-powershell/
 image: images/2022-thumbs/install-windows-update-powershell.jpg
 categories:
@@ -39,4 +39,4 @@ Invoke-WUJob -ComputerName $Computers -Script {Import-Module PSWindowsUpdate; In
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube M2mMQfPGZsE >}}

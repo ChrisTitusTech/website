@@ -1,7 +1,7 @@
 ---
 title: "Acronis Cyber Protect Home Office"
 
-date: 2022-12-14
+date: 2022-12-16
 url: /acronis-true-image/
 image: images/2022-thumbs/acronis-true-image.jpg
 categories:
