@@ -14,6 +14,7 @@ draft: false
 ---
 Current Ideas for Videos and Articles
 <!--more-->
+- [ ] ZFS, couple that with Sanoid and Syncoid
 - [ ] FOSS vs Proprietary counterparts
 - [ ] TrueNAS Scale
 - [ ] QuickEMU
