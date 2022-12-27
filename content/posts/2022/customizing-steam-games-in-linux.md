@@ -24,8 +24,7 @@ I caution you from using the built-in packages on Ubuntu 22.04 because it uses a
 First install pipx
 
 ```
-sudo apt install python3-pip python3-setuptools python3-venv pipx
-
+sudo apt install python3-pip python3-setuptools python3-venv pipx winetricks
 ```
 
 Then use pipx to install protontricks
