@@ -3,7 +3,7 @@ title: "Thumbnails in Windows"
 
 date: 2023-01-06
 url: /thumbnails-in-windows/
-image: images/2022-thumbs/thumbnails-in-windows.jpg
+image: images/2023-thumbs/thumbnails-in-windows.jpg
 categories:
   - Windows
 tags:

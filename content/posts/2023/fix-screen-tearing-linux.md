@@ -3,7 +3,7 @@ title: "Fix Screen Tearing Linux"
 
 date: 2023-01-04
 url: /fix-screen-tearing-linux/
-image: images/2022-thumbs/fix-screen-tearing-linux.jpg
+image: images/2023-thumbs/fix-screen-tearing-linux.jpg
 categories:
   - Linux
 tags:
