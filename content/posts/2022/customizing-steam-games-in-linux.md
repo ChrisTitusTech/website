@@ -56,4 +56,4 @@ _Example launching a plugin installer for Lord of the Rings Online_
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube nRiUdVSeuFU >}}
