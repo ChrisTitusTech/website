@@ -15,6 +15,7 @@ draft: false
 Current Ideas for Videos and Articles
 <!--more-->
 - [ ] ZFS, couple that with Sanoid and Syncoid
+- [ ] Tiling Window Manager for Windows - https://github.com/LGUG2Z/komorebi
 - [ ] FOSS vs Proprietary counterparts
 - [ ] TrueNAS Scale
 - [ ] QuickEMU
