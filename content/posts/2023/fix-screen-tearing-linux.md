@@ -69,9 +69,9 @@ File to Edit/Add: `/etc/X11/xorg.conf.d/20-amd.conf`
 
 ```
 Section "Device"
-   Identifier "AMD Graphics"
-   Driver "amdgpu"
-   Option "TearFree" "true"
+    Identifier  "AMD Graphics"
+    Driver      "amdgpu"
+    Option      "TearFree" "true"
 EndSection
 ```
 
