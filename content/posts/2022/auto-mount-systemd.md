@@ -21,19 +21,19 @@ Sometimes partitions can fail to mount on startup and some options are needed to
 For this a simple option addition in fstab on a local disk looks like this:
 
 ```
-noauto,x-systemd.automount
+x-systemd.after=network-online.target,x-systemd.automount
 ```
 
 Next, I had problems with NFS shares not mounting and I had to expand these option to:
 
 ```
-noauto,x-systemd.automount,x-systemd.mount-timeout=30,_netdev
+x-systemd.after=network-online.target,x-systemd.automount,x-systemd.mount-timeout=30,_netdev
 ```
 
 This makes the `/etc/fstab` entry look like this:
 
 ```
-10.0.0.10:/volume2/Images		/media/images	nfs	noauto,x-systemd.automount,x-systemd.mount-timeout=30,_netdev	0	0
+10.0.0.10:/volume2/Images		/media/images	nfs	x-systemd.after=network-online.target,x-systemd.automount,x-systemd.mount-timeout=30,_netdev	0	0
 ```
 
 _Source: <https://wiki.archlinux.org/title/Fstab#Automount_with_systemd>_
