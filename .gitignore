@@ -1,6 +1,7 @@
 # ignore all logs
 .vscode/
 public/
+resources/
 *.log
 node_modules/
 package-lock.json
