@@ -1,5 +1,5 @@
 ---
-title: "Everything Toolbar"
+title: "Replace Windows Search"
 
 date: 2023-01-18
 url: /everything-toolbar/
@@ -67,4 +67,4 @@ Disable the Service by stopping and disabling it
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube "6Xg-BRA3rgQ" >}}

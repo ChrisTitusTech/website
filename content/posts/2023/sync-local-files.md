@@ -1,5 +1,5 @@
 ---
-title: "Sync Local Files"
+title: "How to Sync Local Files"
 
 date: 2023-01-20
 url: /sync-local-files/
@@ -80,4 +80,4 @@ Here is Syncthing's wonderful backup system. I always use this for the times I d
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube dBVTedUWbfg >}}
