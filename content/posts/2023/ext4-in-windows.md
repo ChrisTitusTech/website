@@ -18,7 +18,7 @@ Pulling in EXT4 drives is easy now with Windows WSL2. There are a few tricks tha
 - Any version of Windows 11
 - Any version of Windows 10 (Build 22000+) _Note: check with `winver` from Run_
 - Powershell as Admin and WSL 2 installed
-- Internet connections ONLY. No USB Drives.
+- ONLY Internal drives are supported. No USB Drives.
 
 Syntax pulled from <https://learn.microsoft.com/en-us/windows/wsl/wsl2-mount-disk>
 
