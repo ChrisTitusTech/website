@@ -64,6 +64,10 @@ yay -S hyprland-bin polkit-gnome ffmpeg neovim viewnior dunst rofi pavucontrol t
 - Official Hyprland Github <https://github.com/hyprwm/Hyprland>
 - Linux Mobiles Hyprland dot files <https://github.com/linuxmobile/hyprland-dots>
 
+## 4 Hour Live Stream Attempt
+
+{{< youtube sDmLCBI9L4E >}}
+
 ## Walkthrough Video
 
 {{< youtube wNL6eIoksd8 >}}
