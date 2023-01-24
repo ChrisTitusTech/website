@@ -5,11 +5,5 @@
 # - jpegoptim
 # - optipng
 
-FOLDER="/home/titus/GitHub/website/content/images/2023"
-
-# max width
-WIDTH=800
-
-#resize png or jpg to either height or width, keeps proportions using imagemagick
-find ${FOLDER} -iname '*.jpg' -o -iname '*.png' -exec convert \{} -verbose -resize $WIDTH \> \{} \;
-img-optimize --std --path ${FOLDER}
+for file in *.png; do convert "$file" -verbose -resize 600\> "$file"; done
+img-optimize --std --path "$(pwd)"
