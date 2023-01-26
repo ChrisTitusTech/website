@@ -1,5 +1,5 @@
 ---
-title: "Windows Network and Sharing Center"
+title: "Fix Windows Network and Sharing"
 
 date: 2023-02-01
 url: /windows-network-and-sharing/
