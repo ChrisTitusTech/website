@@ -40,4 +40,4 @@ This is the best way to manage and maintain flatpaks with ease and it's the firs
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube IfDUXZfDhEI >}}

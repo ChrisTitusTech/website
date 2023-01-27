@@ -95,4 +95,4 @@ _Note: My personal setup is using syncthing on my windows machine and automatica
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube DCwGENR5scE >}}
