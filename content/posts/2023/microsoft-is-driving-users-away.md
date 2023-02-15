@@ -35,6 +35,16 @@ To Access the old devices and printer use the run prompt and type the following:
 shell:::{A8A91A66-3A7D-4424-8D24-04E180695C7A}
 ```
 
+Alternatively, you can create a new shortcut and assign the key combination to it.
+
+* Create a new shortcut on your desktop
+* Set the location to: explorer.exe shell:::{A8A91A66-3A7D-4424-8D24-04E180695C7A}
+* Set the name to Devices and Printers
+* Choose the shortcut icon
+* Add the key combination shortcut (CTRL + ALT + D is default for this window)
+
+This provides you an easy to access link as well as overwriting the keyboard shortcut to open the old version.
+
 Success for now...
 
 ## The Future
