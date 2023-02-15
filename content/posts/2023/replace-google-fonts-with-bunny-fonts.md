@@ -15,7 +15,7 @@ draft: false
 Did you know Google Fonts is bloated and can cause longer load times? Bunny fonts to the rescue!
 <!--more-->
 
-Oh, I forgot to mention, Google fonts is also NOT GPDR compliant. For legal reasons and traffic you might switch over to bunny because it IS GPDR compliant.
+Oh, I forgot to mention, Google fonts is also NOT GDPR compliant. For legal reasons and traffic you might switch over to bunny because it IS GDPR compliant.
 
 ## Installation
 
