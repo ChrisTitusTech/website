@@ -53,4 +53,4 @@ MacOS and Linux will keep gaining market share. Microsoft needs to stop actively
 
 ## Walkthrough Video
 
-{{< youtube Ew0nX5pkji0 >}}
+{{< youtube "q7JmN8_URGY" >}}
