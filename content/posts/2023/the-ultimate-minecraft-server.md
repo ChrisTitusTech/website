@@ -8,7 +8,7 @@ categories:
   - Linux
 tags:
   - Minecraft
-draft: false
+draft: true
 ---
 I've run a Minecraft server for about two years now, and these are lessons I've learned.
 <!--more-->
