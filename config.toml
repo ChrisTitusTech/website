@@ -142,6 +142,9 @@ attributes = "crossorigin='anonymous' defer='defer' data-search-pseudo-elements"
 icon = "fab fa-youtube" # Fontawesome icon pack https://fontawesome.com/icons
 link = "https://youtube.com/c/ChrisTitusTech"
 [[params.social]]
+icon = "fab fa-twitch" # Fontawesome icon pack https://fontawesome.com/icons
+link = "https://twitch.tv/christitustech"
+[[params.social]]
 icon = "fab fa-twitter" # Fontawesome icon pack https://fontawesome.com/icons
 link = "https://twitter.com/christitustech"
 [[params.social]]
@@ -168,6 +171,9 @@ bio = ""
 [[params.social_profile]]
 icon = "fab fa-twitter" # Fontawesome icon pack https://fontawesome.com/icons
 link = "https://twitter.com/christitustech"
+[[params.social_profile]]
+icon = "fab fa-twitch" # Fontawesome icon pack https://fontawesome.com/icons
+link = "https://twitch.tv/christitustech"
 [[params.social_profile]]
 icon = "fab fa-github" # Fontawesome icon pack https://fontawesome.com/icons
 link = "https://github.com/christitustech"
