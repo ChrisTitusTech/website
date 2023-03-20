@@ -1,9 +1,9 @@
 ---
-title: "Moving to Twitch"
+title: "Changes"
 
 date: 2023-03-21
-url: /moving-to-twitch/
-image: images/2023-thumbs/moving-to-twitch.jpg
+url: /changes/
+image: images/2023-thumbs/changes.jpg
 categories:
   - Titus
 tags:
