@@ -53,6 +53,7 @@ adobe-source-code-pro-fonts
 - Recommend archinstall with Sway as desktop for base
 - SDDM-GIT is required or you will run into shutdown bugs and delays
 - SDDM needs to be configured for autologin (recommend using swaylock on start of script for security)
+- Replace xdg-desktop-portal-wlr with **[xdg-desktop-portal-hyprland-git](https://wiki.hyprland.org/hyprland-wiki/pages/Useful-Utilities/Hyprland-desktop-portal/)**
 
 ## Bugs
 
