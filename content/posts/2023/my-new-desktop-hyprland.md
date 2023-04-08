@@ -65,7 +65,7 @@ adobe-source-code-pro-fonts
 - [ ] Wayland guide for nwg-look, wlr-randr, etc.
 - [ ] Synergy Workaround - Looking at waynergy or just using KVM
 - [ ] Gamescope Addition - Adding more parity with Steamdeck features
-- [ ] More Customizations for Waybar - Battery, Backlight, etc.
+- [X] More Customizations for Waybar - Battery, Backlight, etc.
 - [ ] Auto-configuration - Long term goal
 
 ## Sources used making these
