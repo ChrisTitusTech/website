@@ -36,7 +36,16 @@ makepkg -si
 ### Packages
 
 ```
-yay -S hyprland-bin polkit-gnome ffmpeg neovim viewnior dunst rofi pavucontrol thunar starship wl-clipboard wf-recorder swaybg grimblast-git ffmpegthumbnailer tumbler playerctl noise-suppression-for-voice thunar-archive-plugin kitty waybar-hyprland wlogout swaylock-effects sddm-git nwg-look-bin nordic-theme papirus-icon-theme pamixer
+yay -S hyprland-bin polkit-gnome ffmpeg neovim viewnior       \
+rofi pavucontrol thunar starship wl-clipboard wf-recorder     \
+swaybg grimblast-git ffmpegthumbnailer tumbler playerctl      \
+noise-suppression-for-voice thunar-archive-plugin kitty       \
+waybar-hyprland wlogout swaylock-effects sddm-git pamixer     \
+nwg-look-bin nordic-theme papirus-icon-theme dunst otf-sora   \
+ttf-nerd-fonts-symbols-common otf-firamono-nerd inter-font    \
+ttf-fantasque-nerd noto-fonts noto-fonts-emoji ttf-comfortaa  \
+ttf-jetbrains-mono-nerd ttf-icomoon-feather ttf-iosevka-nerd  \
+adobe-source-code-pro-fonts
 ```
 
 ## Workarounds that need to be addressed
@@ -44,6 +53,7 @@ yay -S hyprland-bin polkit-gnome ffmpeg neovim viewnior dunst rofi pavucontrol t
 - Recommend archinstall with Sway as desktop for base
 - SDDM-GIT is required or you will run into shutdown bugs and delays
 - SDDM needs to be configured for autologin (recommend using swaylock on start of script for security)
+- Replace xdg-desktop-portal-wlr with **[xdg-desktop-portal-hyprland-git](https://wiki.hyprland.org/hyprland-wiki/pages/Useful-Utilities/Hyprland-desktop-portal/)**
 
 ## Bugs
 
@@ -56,7 +66,7 @@ yay -S hyprland-bin polkit-gnome ffmpeg neovim viewnior dunst rofi pavucontrol t
 - [ ] Wayland guide for nwg-look, wlr-randr, etc.
 - [ ] Synergy Workaround - Looking at waynergy or just using KVM
 - [ ] Gamescope Addition - Adding more parity with Steamdeck features
-- [ ] More Customizations for Waybar - Battery, Backlight, etc.
+- [X] More Customizations for Waybar - Battery, Backlight, etc.
 - [ ] Auto-configuration - Long term goal
 
 ## Sources used making these
