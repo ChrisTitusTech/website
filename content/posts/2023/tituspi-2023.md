@@ -118,4 +118,4 @@ Check official documentation from RetroPie @ <https://retropie.org.uk/docs/Manua
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube z6Ut8zSCczU >}}
