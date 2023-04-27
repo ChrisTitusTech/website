@@ -1,7 +1,7 @@
 ---
 title: "AtlasOS Review"
 
-date: 2023-04-28
+date: 2023-04-27
 url: /atlasos-review/
 image: images/2023-thumbs/atlasos-review.jpg
 categories:
@@ -76,4 +76,4 @@ Its for someone with a specific purpose in mind. Playing a few games, a kiosk, o
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube UICz1S1xuHo >}}
