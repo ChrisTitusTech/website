@@ -19,7 +19,17 @@ When I was younger I could eat anything I wanted and go work out to burn it off.
 
 Everyone wants to be healthy, but want a shortcut, a fad diet, something easy that requires very little work. This is where I failed in past attempts, I just wanted to be healthy or to look a certain way. It was a WEAK reason to workout and as soon as it became hard or the shortcut stopped working after the initial success I would quit.
 
-This time was different, my why changed after I hit 40, because my father passed away at 55 and many other realitives. 
+This time was different, my why changed after I hit 40, because my father passed away at 55 and many other relatives also passed in their 50s. Fear of death is a powerful motivator and just thinking about all the birthdays and life events my father missed from passing away at an early age. I don't want that to happen to my children or many other scenarios that would lead to a degraded quality of life by NOT working out.
+
+## Nutrition
+
+An overly complicated subject that I failed miserably at because of all the misinformation that exists. Here are the three biggest things I did that kept me unhappy and miserable.
+
+- No Alcohol (Special Events, but NO MORE than once a month.)
+- Limit Added Sugar (Drinks and Artificial Sweetners are also bad.)
+- Limit Refined/Simple Carbs (White Bread, Pizza, Pasta, Pastries, White Flour, White Rice, Desserts, Cereal)
+
+
 
 ## Walkthrough Video
 
