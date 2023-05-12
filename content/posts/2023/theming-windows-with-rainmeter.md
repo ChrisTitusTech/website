@@ -48,10 +48,11 @@ winget install -e Rainmeter.Rainmeter
 
 ## Rainmeter Skins
 
-There are multiple download sites for Rainmeter skins, but these are the two sites I use. 
+There are multiple download sites for Rainmeter skins, but here are some that I use. 
 
-- VisualSkins <https://visualskins.com/>
-- Deviant Art <https://www.deviantart.com/rainmeter>
+- [Rainmeter DeviantArt group](https://www.deviantart.com/rainmeter) (downloads require an account)
+- [Rainmeter forums](https://forum.rainmeter.net/viewforum.php?f=27)
+- GitHub [#rainmeter-skin topic](https://github.com/topics/rainmeter-skin)
 
 ## Using Rainmeter Skins
 
@@ -61,7 +62,9 @@ Enable the components you want and edit the ini files to your needs.
 
 ## Issues
 
-Rainmeter has been around since 2001! This means a lot of skins are out of date. A common bug I see with themes is they use the weather.com API which is no longer open. This means most of the weather widgets do NOT work! Keep this in mind when using old skins that haven't been updated in years.
+Rainmeter has been around since 2001! This means a lot of skins are out of date. A common bug I see with themes is they use an old weather API which is no longer open. This means most of the weather widgets do NOT work! Keep this in mind when using old skins that haven't been updated in years.
+
+There's a non-exhaustive list of [working weather skins](https://forum.rainmeter.net/viewtopic.php?f=13&t=34689) on the Rainmeter forum.
 
 ## Walkthrough Video
 
