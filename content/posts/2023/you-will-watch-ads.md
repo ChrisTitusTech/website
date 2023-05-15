@@ -1,7 +1,7 @@
 ---
 title: "You Will Watch Ads"
 
-date: 2023-05-16
+date: 2023-05-15
 url: /you-will-watch-ads/
 image: images/2023-thumbs/you-will-watch-ads.jpg
 categories:
@@ -42,4 +42,4 @@ Ad block through custom dns always works, but it works too well. The reason we u
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube oQL9dVsEXT0 >}}
