@@ -1,7 +1,7 @@
 ---
 title: "Registry Cleaner"
 
-date: 2023-05-14
+date: 2023-05-17
 url: /registry-cleaner/
 image: images/2023-thumbs/registry-cleaner.jpg
 categories:
