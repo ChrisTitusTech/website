@@ -16,7 +16,7 @@ The rise of console gaming has been sharp and the pc masterrace has been hit har
 
 ## Playstation is #1
 
-Playstation has far and wide the largest marketshare in the gaming space. It's main operating system is based on FreeBSD and is often toted as a good thing in the open source circles. By comparison, Microsoft's Xbox is completely closed and uses it's own DirectX 12 to perform most of the gaming in the console. 
+Playstation has the largest market share in the gaming space. It's main operating system is based on FreeBSD and is often toted as a good thing in the open source circles. By comparison, Microsoft's Xbox is completely closed and uses it's own DirectX 12 to perform most of the gaming in the console. What if I told you... They are really the same!
 
 Sony Playstation has undoubtedly carved its name as a prominent player in the gaming industry, boasting impressive hardware capabilities, a diverse library of games, and a passionate fanbase. While the Playstation offers an immersive gaming experience, it is important to acknowledge its limitations when it comes to fostering open-source development. This article aims to shed light on why Sony Playstation is not conducive to open-source initiatives and explore the implications of its closed ecosystem.
 
@@ -39,11 +39,11 @@ Sony's stringent protection of intellectual property rights can be a significant
 
 ## What about FreeBSD?
 
-Since Playstation is based on FreeBSD, you would think there is a lot of collaboration back and forth between the two. While the project has made some commits and contributions, it is limited and most of the benefits revolve around bug fixes and exposure.
+Since Playstation is based on FreeBSD, you would think there is a lot of collaboration back and forth between the two. While the project has made some commits and contributions, it is limited and most of the benefits revolve around bug fixes and exposure. BSD in general is used by other for-profit companies as well, but their networking stack is generally considered better than the Linux one. Netgate, makers of pfSense, Whatsapp, and even a small portion of Netflix's backend utilizes a bit of BSD. 
 
 Sony picked FreeBSD over Linux because of the license behind FreeBSD that allows them to take the project and close source any contributions then profit from the proprietary nature of the platform. They are not obligated in anyway to contribute to the project.
 
-If they picked Linux this would not be the case. Linux operates under a strict GPL license that requires projects that are based on it to remain open source to contribute back to the main branch. 
+If they picked Linux this would not be the case. Linux operates under a strict GPL license that requires projects that are based on it to remain open source to contribute back to the main branch. So everyone can reap the rewards as a collective. One example of problems that arise from Linux's GPL license is ZFS, arguably the best file system, is actually owned by Sun (Oracle subsidiary) using a CDDL license and it makes compatibility with Linux's GPL difficult and why iXsystems (TrueNAS) choose FreeBSD as their main distribution.
 
 ## Walkthrough Video
 
