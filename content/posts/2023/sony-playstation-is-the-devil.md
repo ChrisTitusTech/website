@@ -1,7 +1,7 @@
 ---
 title: "Sony Playstation Is the Devil"
 
-date: 2023-05-24
+date: 2023-05-26
 url: /sony-playstation-is-the-devil/
 image: images/2023-thumbs/sony-playstation-is-the-devil.jpg
 categories:
