@@ -73,6 +73,44 @@ There are a ton of others for different distros, like `zypper` for OpenSUSE or `
 
 *Packages for ALL Distributions* are made using Flatpak, AppImage, Flatpak, and even installing a secondary package manager like homebrew or nix. Everything I just listed works on all distributions and are containerized for the most part.
 
+#### Typical Distribution
+
+_Common alternatives in parenthesis_
+
+- Bootloader = GRUB (Systemd-boot)
+- Init System = Systemd
+- Display Render = Wayland (Xorg - Common on Older Distros)
+- Display Manager = GDM, SDDM, or LightDM (This is the Login Manager)
+- Desktop Environments = KDE, Gnome, Cinnamon, XFCE, Mate, and LXQT (These have gui tool suite to help with system configuration)
+- Window Managers (Desktop Environment Alternative)
+  - Wayland Based = Sway and Hyprland (riverwm, dwl, and other are still being developed)
+  - Xorg = BSPWM, DWM, i3, qTile, XMonad, awesomewm, and many others.
+
+Example Configuration
+
+Ubuntu 
+- Bootloader - Grub
+- Init System - Systemd
+- Display Render - Wayland
+- Display Manager - GDM
+- Desktop Environment - GNOME
+
+### First Installation
+
+Grab a debian ISO here: <https://www.debian.org/download>
+
+The basic netinst is fine for now. We just want a sample system to build up and learn on.
+
+### Second Installation
+
+Use Arch Linux here: <https://archlinux.org/download/>
+
+Instead of using a wizard included with Arch, I recommend walking through all the steps @ <https://wiki.archlinux.org/title/Installation_guide> and learning about what goes into the setup process. Arch does a fantastic job of breaking down each step and I highly recommend their wiki as a resource even when NOT using arch. 
+
+### Third Installation
+
+Start messing around with window managers and configuring the system from a command line interface (CLI). This will make you more comfortable with Linux as a whole. After this is done, decide which way you enjoy the most.
+
 ## Walkthrough Video
 
 {{< youtube 11111111 >}}
