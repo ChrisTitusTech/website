@@ -34,6 +34,29 @@ Getting all your packages and updating them reliably can be a challenge. With LT
 
 This will be different for everyone. The idea is to have a system you enjoy being in and looking forward to coming back to it.
 
+I've attempted a bastardized version of the genome project from unixporn and made [ubuntu-titus](https://github.com/ChrisTitusTech/ubuntu-titus), [debian-titus](https://github.com/ChrisTitusTech/Debian-titus), and [fedora-titus](https://github.com/ChrisTitusTech/Fedora-Titus) repos that kinda work. It ends up looking like this:
+
+![mydesktop](/images/2023/the-perfect-system/fedora-mydesktop.jpg)
+
+The problem is I am not good at graphic design. I'm a function over form person and these desktop below are the opposite of that.
+
+This rice is interesting using hyprland, eww, and is clean.
+
+![hyprland](/images/2023/the-perfect-system/fedora-hyprland-eww.jpg)
+
+Source: <https://github.com/Aylur/dotfiles>
+
+Another rice that is using awesomewm w/ bling utilties and rofi for menus. Simplistic and clean.
+
+![awesomewm](/images/2023/the-perfect-system/awesomewm-bling-rofi.jpg)
+
+Source: <https://github.com/beastsongithub/AwesomeWMRice>
+
+I mentioned the above projects for the simplistic nature and not requiring a TON of dependancies. Too many rices in Linux require 10+ programs to even function, which is bad design where the two above look good, but don't have tons of problems. I say this to encourage more rices that are easier to replicate for people.
+
+What does my future desktop look like? Two versions... The pretty version in a year using Hyprland, Wayland, and the pretty desktop and the suckless barebones minimal one that just works like below.
+
+![dwm](/images/2023/the-perfect-system/dwm.jpg)
 
 ## Walkthrough Video
 
