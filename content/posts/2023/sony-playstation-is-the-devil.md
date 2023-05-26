@@ -9,7 +9,7 @@ categories:
   - FreeBSD
 tags:
   - Playstation
-draft: false
+draft: true
 ---
 The rise of console gaming has been sharp and the pc masterrace has been hit hard these past couple years. We need to talk about the evils of Sony and the Playstion project.
 <!--more-->

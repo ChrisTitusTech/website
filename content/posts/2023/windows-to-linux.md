@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - Guide
-draft: false
+draft: true
 ---
 Windows to Linux is a hard transition for many users. I find this especially true for advanced Windows users. Here are all the things I wish I knew before trying to switch to Linux after using Windows for 20+ years.
 <!--more-->

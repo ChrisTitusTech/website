@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - Neovim
-draft: false
+draft: true
 ---
 
 <!--more-->
