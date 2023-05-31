@@ -3,6 +3,7 @@ baseURL = "https://christitus.com/"
 title = "Chris Titus Tech | Tech Content Creator"
 # theme
 theme = "northendlab"
+languageCode = "en-us"
 # post pagination
 paginate = "10"
 # post excerpt
@@ -158,13 +159,13 @@ icon = "fas fa-rss" # Fontawesome icon pack https://fontawesome.com/icons
 link = "https://christitus.com/rss"
 
 ####################### Banner #######################################
-[Languages.en.banner]
+[banner]
 bg_image = "images/bannerbackground.png"
 title = "<strong>Chris Titus Tech</strong><br>How To Articles, <br>Image Downloads,<br> Tech Guides."
 image = "images/operating systems.jpg"
 
 ######################## About Me Widget ###############################
-[Languages.en.about_me]
+[about_me]
 title = "Chris Titus Tech"
 bio = ""
 
@@ -197,81 +198,81 @@ label = "Visit Here"
 link = "https://gethugothemes.com/shop/"
 
 ############################# English - Main Menu ########################
-[[Languages.en.menu.main]]
+[[menu.main]]
 weight = 1
 url = "/"
 name = "Home"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
 weight = 2
 url = "https://www.cttstore.com/downloads"
 name = "Downloads"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
 weight = 3
 url = "https://www.bonfire.com/store/ctt-store/"
 name = "Merchandise"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
 weight = 4
 url = "https://www.cttstore.com/login"
 name = "Members"
 hasChildren = true
 
-[[Languages.en.menu.main]]
+[[menu.main]]
     name = "Latest Videos"
     url = "https://www.cttstore.com/community/topics/27931"
     parent = "Members"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
     name = "Members Videos"
     url = "https://www.cttstore.com/community/topics/9021"
     parent = "Members"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
     name = "Sign Up"
     url = "https://www.cttstore.com/chris-titus-tech-membership"
     parent = "Members"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
 weight = 6
 url = "#"
 name = "Sections"
 hasChildren = true
   
-[[Languages.en.menu.main]]
+[[menu.main]]
     name = "Android"
     url = "/categories/android"
     parent = "Sections"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
     name = "Linux"
     url = "/categories/linux"
     parent = "Sections"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
     name = "MacOS"
     url = "/categories/macos"
     parent = "Sections"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
     name = "Networking"
     url = "/categories/networking"
     parent = "Sections"
 
-[[Languages.en.menu.main]]
+[[menu.main]]
     name = "Windows"
     url = "/categories/windows"
     parent = "Sections"
 
 ############################# Footer Menu ########################
 
-[[Languages.en.menu.footer]]
+[[menu.footer]]
 weight = 3
 url = "privacy/"
 name = "Privacy"
 
-[[Languages.en.menu.footer]]
+[[menu.footer]]
 weight = 4
 url = "terms-conditions/"
 name = "Terms & Conditions"
