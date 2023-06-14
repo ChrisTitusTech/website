@@ -27,39 +27,39 @@
   });
 
 
-	// tab
-	$('.tab-content').find('.tab-pane').each(function (idx, item) {
-		var navTabs = $(this).closest('.code-tabs').find('.nav-tabs'),
-			title = $(this).attr('title');
-		navTabs.append('<li class="nav-item"><a class="nav-link" href="#">' + title + '</a></li>');
-	});
+  // tab
+  $('.tab-content').find('.tab-pane').each(function (idx, item) {
+    var navTabs = $(this).closest('.code-tabs').find('.nav-tabs'),
+      title = $(this).attr('title');
+    navTabs.append('<li class="nav-item"><a class="nav-link" href="#">' + title + '</a></li>');
+  });
 
-	$('.code-tabs ul.nav-tabs').each(function () {
-		$(this).find("li:first").addClass('active');
-	})
+  $('.code-tabs ul.nav-tabs').each(function () {
+    $(this).find("li:first").addClass('active');
+  })
 
-	$('.code-tabs .tab-content').each(function () {
-		$(this).find("div:first").addClass('active');
-	});
+  $('.code-tabs .tab-content').each(function () {
+    $(this).find("div:first").addClass('active');
+  });
 
-	$('.nav-tabs a').click(function (e) {
-		e.preventDefault();
-		var tab = $(this).parent(),
-			tabIndex = tab.index(),
-			tabPanel = $(this).closest('.code-tabs'),
-			tabPane = tabPanel.find('.tab-pane').eq(tabIndex);
-		tabPanel.find('.active').removeClass('active');
-		tab.addClass('active');
-		tabPane.addClass('active');
-	});
+  $('.nav-tabs a').click(function (e) {
+    e.preventDefault();
+    var tab = $(this).parent(),
+      tabIndex = tab.index(),
+      tabPanel = $(this).closest('.code-tabs'),
+      tabPane = tabPanel.find('.tab-pane').eq(tabIndex);
+    tabPanel.find('.active').removeClass('active');
+    tab.addClass('active');
+    tabPane.addClass('active');
+  });
 
 
-	// Accordions
-	$('.collapse').on('shown.bs.collapse', function () {
-		$(this).parent().find('.fas fa-plus').removeClass('fas fa-plus').addClass('fas fa-minus');
-	}).on('hidden.bs.collapse', function () {
-		$(this).parent().find('.fas fa-minus').removeClass('fas fa-minus').addClass('fas fa-plus');
-	});
+  // Accordions
+  $('.collapse').on('shown.bs.collapse', function () {
+    $(this).parent().find('.fas fa-plus').removeClass('fas fa-plus').addClass('fas fa-minus');
+  }).on('hidden.bs.collapse', function () {
+    $(this).parent().find('.fas fa-minus').removeClass('fas fa-minus').addClass('fas fa-plus');
+  });
 
   //  post-slider-block
   function postSlider() {
@@ -75,17 +75,18 @@
       prevArrow: $('.slider-prev'),
       nextArrow: $('.slider-next'),
       responsive: [{
-      breakpoint: 991,
-        settings: {
-          slidesToShow: 2
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
         }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1
-        }
-      }]
+      ]
     });
   }
   postSlider();
@@ -107,7 +108,26 @@
         }
       });
     }
-	}
-  shuffleInit()
+  }
+  shuffleInit();
 
+  // Function to set the Utterances comment section theme
+  function setCommentTheme(theme) {
+    const commentContainer = document.getElementById("comment-section");
+    if (commentContainer) {
+      commentContainer.setAttribute("theme", theme);
+      commentContainer.innerHTML = ""; // Clear the existing comment section
+      const utterancesScript = document.createElement("script");
+      utterancesScript.src = "https://utteranc.es/client.js";
+      utterancesScript.setAttribute("repo", "ChrisTitusTech/website");
+      utterancesScript.setAttribute("issue-term", "pathname");
+      utterancesScript.setAttribute("theme", theme);
+      utterancesScript.setAttribute("crossorigin", "anonymous");
+      utterancesScript.async = true;
+      commentContainer.appendChild(utterancesScript);
+    }
+  }
+
+  // Call the function to set the initial comment section theme
+  setCommentTheme("preferred-color-scheme");
 })(jQuery);
