@@ -1,5 +1,5 @@
 ---
-title: "Nixos Explained"
+title: "NixOS Explained"
 
 date: 2023-06-16
 url: /nixos-explained/
@@ -110,4 +110,4 @@ Timestamps:
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube fuWPuJZ9NcU >}}
