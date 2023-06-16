@@ -19,6 +19,8 @@ Unlike other distributions where you configure system wide programs with `/etc` 
 
 You can reference all my videos below and see my ending configuration files @ <https://github.com/ChrisTitusTech/nixos-titus>
 
+A viewer of the channel also sent me this in-depth guide covering much more of NixOS including flakes and home manager. Here is that article: <https://thiscute.world/en/posts/nixos-and-flake-basics> - which is a great resource as well!
+
 ## Install and Config Videos
 
 First Time Install: <https://youtu.be/_Z32SYFbxpw>
