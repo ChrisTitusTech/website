@@ -13,3 +13,5 @@
 github
 
 {{<github repo="christitustech/repo-name" file="/path/to/file" lang="language" options="highlight-options">}}
+
+obsolete
