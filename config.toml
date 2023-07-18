@@ -11,7 +11,7 @@ summaryLength = "10"
 # disqus short name
 disqusShortname = "" # get your shortname form here : https://disqus.com
 # google analytics
-googleAnalytics = "UA-5817718-4" # example: UA-123-45, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
+googleAnalytics = "" # example: UA-123-45, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
 
 # disable language
 disableLanguages = [""] # desable language from here

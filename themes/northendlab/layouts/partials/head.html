@@ -16,12 +16,10 @@
 {{ "<!-- Favicon -->" | safeHTML}}
 <link rel="icon" href="{{ site.Params.favicon | absURL }}" type="image/x-icon">
 
-<!-- google analytics -->
+<!-- google analytics 
 {{ template "_internal/google_analytics.html" . }}
-
-<!-- google tag manager -->
 {{ partial "gtm.html" . }}
-
+-->
 <!-- RSS Feed Addition -->
 {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
