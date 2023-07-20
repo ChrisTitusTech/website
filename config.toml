@@ -58,7 +58,7 @@ menu_align = "center"
 sidebar = "right" # Sidebar value ("left", "right" or false)
 
 # google tag manager, see https://developers.google.com/tag-manager/
-google_tag_manager = "GTM-5JNJ8NL" # example: G-XXXXXXXXXX
+google_tag_manager = "" # example: G-XXXXXXXXXX
 
 code_copy_button = true # Turn on/off the code-copy-button for code-fields
 
@@ -101,7 +101,7 @@ input_placeholder = "Enter your email"
 
 # Google Ads
 [params.googlead]
-enable = true
+enable = false
 
 # cookies
 [params.cookies]
