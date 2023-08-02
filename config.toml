@@ -209,20 +209,10 @@ url = "https://www.cttstore.com/downloads"
 name = "Downloads"
 
 [[menu.main]]
-weight = 3
-url = "https://www.bonfire.com/store/ctt-store/"
-name = "Merchandise"
-
-[[menu.main]]
 weight = 4
 url = "https://www.cttstore.com/login"
 name = "Members"
 hasChildren = true
-
-[[menu.main]]
-    name = "Latest Videos"
-    url = "https://www.cttstore.com/community/topics/27931"
-    parent = "Members"
 
 [[menu.main]]
     name = "Members Videos"
