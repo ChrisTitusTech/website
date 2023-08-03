@@ -1,7 +1,7 @@
 ---
 title: "Do Not Make These Github Mistakes"
 
-date: 2023-08-04
+date: 2023-08-11
 url: /do-not-make-these-github-mistakes/
 image: images/2023-thumbs/do-not-make-these-github-mistakes.jpg
 categories:
