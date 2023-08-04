@@ -1,7 +1,7 @@
 ---
 title: "Windows 11 Perfect Install"
 
-date: 2023-08-04
+date: 2023-08-05
 url: /windows-11-perfect-install/
 image: images/2023-thumbs/windows-11-perfect-install.jpg
 categories:
@@ -15,17 +15,17 @@ Setting a clean Windows 11 is difficult with all the built-in bloat. This guide 
 
 ## The Download ISO
 
-Do NOT use the united states ISO grab the Worldwide <https://www.microsoft.com/software-download/windows11>
+You can download any of the ISOs from Microsoft <https://www.microsoft.com/software-download/windows11>
 
-Choose English International (Credit to ThioJoe for this tip - This makes sure TikTok and other 3rd party stuff don't install)
-
-![Alt text](/images/2023/windows-11-perfect-install/english.png)
+Choose English World from initial boot screen (Credit to ThioJoe for this tip - This makes sure TikTok and other 3rd party stuff don't install)
 
 ## Change Region to United States Post Install
 
 Run `intl.cpl` or launch the windows toolbox and use legacy panels to launch Region Settings. Then switch it to US region.
 
 ![Alt text](/images/2023/windows-11-perfect-install/region.png)
+
+If you are using the Microsoft Store you need to search for Region in Settings and Set it to United States
 
 ## Debloat with Recommended Tweaks
 
