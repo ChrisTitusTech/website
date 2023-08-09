@@ -1,15 +1,14 @@
 ---
 title: "Do Not Make These Github Mistakes"
 
-date: 2023-08-11
+date: 2023-08-12
 url: /do-not-make-these-github-mistakes/
 image: images/2023-thumbs/do-not-make-these-github-mistakes.jpg
 categories:
   - Linux
   - Windows
-  - Networking
 tags:
-  - Ubuntu
+  - GitHub 
 draft: false
 ---
 I've made a LOT of GitHub mistakes! Here is a list of things most new users do not know or do WRONG!
