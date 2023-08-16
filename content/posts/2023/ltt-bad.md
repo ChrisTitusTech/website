@@ -8,7 +8,7 @@ categories:
   - YouTube
 tags:
   - LinusTechTips
-draft: true
+draft: false
 ---
 With Gamers Nexus covering Linus tech tips in an unfavorable light, here is the bullet points of Problems with LTT.
 <!--more-->
@@ -56,4 +56,4 @@ YouTube is a marketing platform and bias does exist. Reviews can never be 100% t
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube "nGu0_8whK54" >}}
