@@ -1,7 +1,7 @@
 ---
 title: "Removing Systemd"
 
-date: 2023-08-18
+date: 2023-12-18
 url: /removing-systemd/
 image: images/2023-thumbs/removing-systemd.jpg
 categories:

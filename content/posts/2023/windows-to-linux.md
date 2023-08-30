@@ -1,7 +1,7 @@
 ---
 title: "Windows to Linux for Powerusers"
 
-date: 2023-05-26
+date: 2023-12-26
 url: /windows-to-linux/
 image: images/2023-thumbs/windows-to-linux.jpg
 categories:
