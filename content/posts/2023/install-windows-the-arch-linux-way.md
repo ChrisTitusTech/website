@@ -8,7 +8,7 @@ categories:
   - Windows
 tags:
   - DISM
-draft: true
+draft: false
 ---
 Installing Windows strictly through the Command Line is an important tool to have. If windows changes the installer or out of box experience, you can bypass any changes with this guide!
 <!--more-->
@@ -73,4 +73,4 @@ System will restart after executing the command. Select `Continue with limited S
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube vtxedkuUCas >}}
