@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows</title>
+      <link>http://localhost:1313/categories/windows/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>YouTube</title>
+      <link>http://localhost:1313/categories/youtube/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/youtube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/categories/linux/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Titus</title>
+      <link>http://localhost:1313/categories/titus/</link>
+      <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/titus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MacOS</title>
+      <link>http://localhost:1313/categories/macos/</link>
+      <pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/categories/networking/</link>
+      <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/networking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android</title>
+      <link>http://localhost:1313/categories/android/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ChromeOS</title>
+      <link>http://localhost:1313/categories/chromeos/</link>
+      <pubDate>Mon, 11 Apr 2022 08:48:13 -0500</pubDate>
+      
+      <guid>http://localhost:1313/categories/chromeos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows Server</title>
+      <link>http://localhost:1313/categories/windows-server/</link>
+      <pubDate>Thu, 25 Oct 2018 15:34:24 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/windows-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FreeBSD</title>
+      <link>http://localhost:1313/categories/freebsd/</link>
+      <pubDate>Tue, 23 Oct 2018 19:14:03 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/freebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtualization</title>
+      <link>http://localhost:1313/categories/virtualization/</link>
+      <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/virtualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hardware</title>
+      <link>http://localhost:1313/categories/hardware/</link>
+      <pubDate>Fri, 05 Oct 2018 20:28:58 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/hardware/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

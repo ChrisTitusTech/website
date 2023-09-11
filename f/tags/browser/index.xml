@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Browser on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/browser/</link>
+    <description>Recent content in Browser on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Browser Extensions</title>
+      <link>http://localhost:1313/best-browser-extensions/</link>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/best-browser-extensions/</guid>
+      <description>&lt;p&gt;These extensions make life easier when using a browser.&lt;/p&gt;
+&lt;h2 id=&#34;the-list&#34;&gt;The List&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai&#34;&gt;Authenticator&lt;/a&gt; - 2 Factor for websites&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/checker-plus-for-google-c/hkhggnncdpfibdhinjiegagmopldibha&#34;&gt;Checker Plus&lt;/a&gt; - Google Calendar with 1-click&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/clickclean/ghgabhipcejejjmhhchfonmamedcbeod&#34;&gt;Click and Clean&lt;/a&gt; - History and Cache cleaning&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/get-rss-feed-url/kfghpdldaipanmkhfpdcjglncmilendn&#34;&gt;Get RSS Feed URL&lt;/a&gt; - Easily grab the RSS feed for a website&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl&#34;&gt;GoFullPage&lt;/a&gt; - Full Page Screen Capture&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/midnight-lizard/pbnndmlekkboofhnbonilimejonapojg&#34;&gt;Midnight Lizard&lt;/a&gt; - Dark mode everywhere&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca&#34;&gt;Momentum&lt;/a&gt; - Focused Start Screen (Great for Brave users)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn&#34;&gt;Notifier for GitHub&lt;/a&gt; - Notification Panel for GitHub&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.anrdoezrs.net/click-9109049-14329390&#34;&gt;Roboform Password Management&lt;/a&gt; (Bitwarden is a good alternative)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/web-highlights-pdf-web-hi/hldjnlbobkdkghfidgoecgmklcemanhm&#34;&gt;Web Highlights&lt;/a&gt; - Highlight parts of a webpage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/auth.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Authenticator&lt;/strong&gt; is great for simple two factor, but I wouldn&amp;rsquo;t use this for a bank account. These 2FA codes are synced to the cloud for convenience.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/clickandclean.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Click and Clean&lt;/strong&gt; will clean our history, cache, and much more. The built in browser cleaning and history management isn&amp;rsquo;t good. This makes it a complete solution for security, privacy, and maintenance.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/roboform.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Password Manager&lt;/strong&gt; is something everyone should use. I&amp;rsquo;ve used &lt;a href=&#34;https://www.anrdoezrs.net/click-9109049-14329390&#34;&gt;RoboForm&lt;/a&gt; for over 10 years and my personal recommendation for automation. Bitwarden is a bit newer and some features like FIDO keys which make also makes it a strong choice. Both password manager offer easy export and import of ALL passwords, which is a vital feature when you use these services to avoid getting &amp;ldquo;locked in&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: Roboform is currently running a 50% off sale via the link above for Cyber Monday/Black Friday and generally provide a 30% off link after.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The one thing I caution you against is using All-In-One password managers, like McAfee, Nord, and others. The bundles you get will lock you in to their password managers that can hold you hostage if they have breaches and you want to move on.&lt;/p&gt;
+&lt;h3 id=&#34;convenience&#34;&gt;Convenience&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/checker-plus.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Checker Plus&lt;/strong&gt; perfect heads up calendar display with easy add for incoming events.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/rss-feeds.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Get RSS Feed URL&lt;/strong&gt; will get those hidden RSS feeds for any website.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/fullscreen.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GoFullPage&lt;/strong&gt; captures the ENTIRE webpage and can output it to a PDF or PNG for later use.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/midnight-lizard.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Midnight Lizard&lt;/strong&gt; Dark mode and other color customizations.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/momentum.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Momentum&lt;/strong&gt; is an essential extension for any brave browser user. Brave has one of the worst start screens with crypto ads and other BS that no one likes. This extension fixes that.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/github-notifications.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Notifier for GitHub&lt;/strong&gt; shows GitHub notifications.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/best-browser-extensions/highlights.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Web Highlights&lt;/strong&gt; is a great way to highlight a page as you read, which helps your mind retain what you are reading, but also saves it into the logged in account which can be referred to later.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/j-eK_T-FWIo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

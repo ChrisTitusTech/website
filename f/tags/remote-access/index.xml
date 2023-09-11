@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote Access on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/remote-access/</link>
+    <description>Recent content in Remote Access on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Sep 2019 21:55:20 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/remote-access/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Ultimate SSH Guide</title>
+      <link>http://localhost:1313/ssh-guide/</link>
+      <pubDate>Wed, 18 Sep 2019 21:55:20 +0000</pubDate>
+      
+      <guid>http://localhost:1313/ssh-guide/</guid>
+      <description>&lt;p&gt;This is an SSH guide to help you set up, configure, connect, and transfer files using SSH.&lt;/p&gt;
+&lt;h1 id=&#34;setup-ssh&#34;&gt;Setup SSH&lt;/h1&gt;
+&lt;h2 id=&#34;install-ssh-on-your-system&#34;&gt;Install SSH on your system&lt;/h2&gt;
+&lt;h3 id=&#34;debian-based&#34;&gt;Debian-Based&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sudo apt install openssh-server -y&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;centosfedora&#34;&gt;CentOS/Fedora&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sudo yum -y install openssh-server&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;arch&#34;&gt;Arch&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;sudo pacman -S openssh&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;run-ssh-server-on-startup&#34;&gt;Run SSH server on startup&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl start ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl enable ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;**Note: sshd instead of ssh for arch&lt;/p&gt;
+&lt;h2 id=&#34;configure-ssh&#34;&gt;Configure SSH&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Make sure ufw isn’t blocking ssh and enable it for passthrough.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw allow ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw limit ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw enable  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ufw status
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;options-for-etcsshsshd_config&#34;&gt;Options for /etc/ssh/sshd_config&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;PasswordAuthentication yes/no&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;* No should be used when facing the internet and key authentication must be used for security&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;AllowTcpForwarding yes&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;X11Forwarding yes&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;* This is used to forward GUI programs (Xming required for Windows)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;AllowUsers Fred Wilma&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;DenyUsers Dino Pebbles&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;* Block and Allow certain users&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;security-of-a-ssh-server&#34;&gt;Security of a SSH Server&lt;/h3&gt;
+&lt;p&gt;It should be noted that if you open up your firewall and port forward port 22 on a standard SSH server install… you will probably be hacked. This is extremely reckless and should never be done. I highly recommend doing &lt;strong&gt;ALL&lt;/strong&gt; of the following measures if opening up SSH to the outside world.&lt;/p&gt;
+&lt;p&gt;First, obscure the SSH port by changing it in the sshd_config file&lt;br&gt;
+&lt;code&gt;# Change Default port 22 to 2222&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;Port 2222&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Second, disable Password Authentication and use ssh keys instead. This is a complex procedure and recommend using the following script to optimize the encryption and setup process.&lt;br&gt;
+&lt;a href=&#34;https://github.com/angristan/openvpn-install&#34;&gt;https://github.com/angristan/openvpn-install&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Third, verify you are using tar-pitting or rate limiting on your SSH port. This will prevent brute force attacks&lt;br&gt;
+&lt;code&gt;ufw limit proto tcp from any port 2222&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;*Note this can also be done via iptables and it needs to be modified to your SSH port.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;connect-via-ssh&#34;&gt;Connect via SSH&lt;/h1&gt;
+&lt;h2 id=&#34;linux-terminal&#34;&gt;Linux terminal&lt;/h2&gt;
+&lt;p&gt;ssh username@serverip&lt;/p&gt;
+&lt;h2 id=&#34;windows&#34;&gt;Windows&lt;/h2&gt;
+&lt;p&gt;PuTTY &lt;a href=&#34;https://putty.org/&#34;&gt;https://putty.org/&lt;/a&gt; (ssh program)&lt;/p&gt;
+&lt;p&gt;Xming required for X11 forwarding &lt;a href=&#34;https://sourceforge.net/projects/xming/&#34;&gt;https://sourceforge.net/projects/xming/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Verify X11 Forwarding in PuTTY options&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough-ssh-access&#34;&gt;Video Walkthrough SSH Access&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/w_OwmqjAcn0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;transfer-files-via-ssh&#34;&gt;Transfer Files via SSH&lt;/h1&gt;
+&lt;p&gt;The difference between SFTP and SCP by default are one is interactive and the other isn’t. SCP is faster, but can’t be resumed where SFTP and slower and can be.&lt;/p&gt;
+&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
+&lt;p&gt;Use the native file browser, in the location bar type the following:&lt;br&gt;
+&lt;code&gt;sftp://192.168.1.10&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;using-the-terminal&#34;&gt;Using the terminal&lt;/h3&gt;
+&lt;p&gt;Syntax: &lt;strong&gt;&lt;code&gt;scp&lt;/code&gt;&lt;/strong&gt; &lt;code&gt;source destination&lt;/code&gt;&lt;br&gt;
+Remote PC Syntax: &lt;code&gt;username@serverip:/path/to/file&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Example: &lt;code&gt;scp localfile username@serverip:/remote/server/path&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;windows-1&#34;&gt;Windows&lt;/h2&gt;
+&lt;p&gt;WinSCP is my recommended transfer tool.&lt;br&gt;
+&lt;a href=&#34;https://winscp.net/eng/index.php&#34;&gt;https://winscp.net/eng/index.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;pscp.exe for command line. &lt;a href=&#34;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&#34;&gt;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XenServer on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/xenserver/</link>
+    <description>Recent content in XenServer on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Oct 2018 17:14:47 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/xenserver/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Install Xen Orchestra</title>
+      <link>http://localhost:1313/how-to-install-xen-orchestra/</link>
+      <pubDate>Thu, 11 Oct 2018 17:14:47 +0000</pubDate>
+      
+      <guid>http://localhost:1313/how-to-install-xen-orchestra/</guid>
+      <description>&lt;p&gt;This article shows you how to install Xen Orchestra and use the interface via the web. XOA is a very powerful addition to XenServer as it brings auto-updates and making it easier to manage entire farms.&lt;/p&gt;
+&lt;h2 id=&#34;step-by-step-guide&#34;&gt;Step-by-Step Guide&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Login to your XenServer via PuTTy OR through XenCenter console&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;bash -c &amp;quot;$(curl -s http://xoa.io/deploy)&amp;quot;&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Enter a new IP where you will access XOA from web&lt;/li&gt;
+&lt;li&gt;Wait for this to finish you will see XOA VM popup&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Note: This may take a couple hours if XOA servers are downloading slow. I highly recommend downloading offline installer if installing on multiple servers.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Once Complete, PuTTy to XOA VM (IP Address from prior install)
+&lt;ul&gt;
+&lt;li&gt;login with username/password: xoa&lt;/li&gt;
+&lt;li&gt;set new password for console&lt;/li&gt;
+&lt;li&gt;register xoa from username and password that you used on their website &lt;a href=&#34;https://xen-orchestra.com/&#34;&gt;https://xen-orchestra.com/&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo xoa-updater --register&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;now run the updater to check for any upgrades
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo xoa-updater &amp;amp;#8211;upgrade&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;reboot if any upgrades were performed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Open Browser, Login to XOA
+&lt;ul&gt;
+&lt;li&gt;login username &lt;code&gt;admin@admin.net&lt;/code&gt; password &lt;code&gt;admin&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add your XenServers – If you only have 1 pool, you only need to add your pool master
+&lt;ul&gt;
+&lt;li&gt;Remember: if you are using default self-signed certificates on XenServer enable “unauthorized certificates” and then click disconnected&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Enjoy&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/QU28LQ1CX7Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I hope you enjoyed this walkthrough of how to install Xen Orchestra and if you have any feedback let me know below. In closing, I really like this product and think it is a great addition to the XenServer and a much-needed improvement over what Citrix offers.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Create iSCSI SR in XenServer</title>
+      <link>http://localhost:1313/create-iscsi-sr/</link>
+      <pubDate>Tue, 09 Oct 2018 16:18:46 +0000</pubDate>
+      
+      <guid>http://localhost:1313/create-iscsi-sr/</guid>
+      <description>&lt;p&gt;This guide goes over how to Create iSCSI SR on Xen to connect to an iSCSI target. Here is the step-by-step and a video walkthrough, which includes setting up iSCSI in FreeNAS.&lt;/p&gt;
+&lt;h3 id=&#34;requirements&#34;&gt;Requirements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiple XenServers (2+) in a Pool&lt;/li&gt;
+&lt;li&gt;iSCSI target (Check out FreeNAS in the video below for setting one up)&lt;/li&gt;
+&lt;li&gt;At LEAST a gigabit environment&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2018/10/xen-iscsi-sr.png&#34; alt=&#34;xen-iscsi&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-by-step-guide-to-create-iscsi-sr&#34;&gt;Step-by-Step Guide to Create iSCSI SR&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Open and Connect to XenCenter / XCP-ng Center&lt;/li&gt;
+&lt;li&gt;Select Pool and Click New Storage&lt;/li&gt;
+&lt;li&gt;Make sure iSCSI is selected&lt;/li&gt;
+&lt;li&gt;Name Storage&lt;/li&gt;
+&lt;li&gt;Select either provisioning methods&lt;/li&gt;
+&lt;li&gt;Enter IP Address / Authentication (if needed) / Click Scan Target Host&lt;/li&gt;
+&lt;li&gt;Pick IQN / LUN from your storage device
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: When Selecting&lt;/em&gt; IQN_, make sure you select your SAN if you are using a dedicated network_&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Finish&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h3&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/mn17fHzn2XQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In the end, we now have a centralized storage system that all our hosts can put their VMs on. This is key for using high availability, Xen Orchestra, and quick migrations. Remember to use the community-driven XenServer @ &lt;a href=&#34;https://xcp-ng.org/&#34;&gt;https://xcp-ng.org/&lt;/a&gt;, therefore you can get all the enterprise features of XenServer in your lab environment.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>XenServer cannot connect in XenCenter or XCP-ng Center</title>
+      <link>http://localhost:1313/xenserver-cannot-connect/</link>
+      <pubDate>Mon, 01 Oct 2018 18:53:13 +0000</pubDate>
+      
+      <guid>http://localhost:1313/xenserver-cannot-connect/</guid>
+      <description>&lt;p&gt;Having problems and your XenServer cannot connect to XenCenter? Did you have high availability enabled? If you answered yes to both these questions here is how you get your XenServer back online and functioning properly.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2018/10/xenserver-cannot-connect.png&#34; alt=&#34;xenserver-cannot&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-by-step-guide&#34;&gt;Step-by-Step Guide&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PuTTy into the XenServer Pool Master&lt;/li&gt;
+&lt;li&gt;run the following commands:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;xe pool-ha-disable&lt;/code&gt;&lt;em&gt;Note: If this fails try ha-disable force below&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe host-emergency-ha-disable force=true&amp;lt;br /&amp;gt; xe pool-emergency-transition-to-master --force&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: This will force the pool and slaves to reinitialize with the pool master&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Once the server reboots it should connect&lt;/li&gt;
+&lt;li&gt;Go into your XenCenter and re-connect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;other-helpful-commands-for-troubleshooting&#34;&gt;Other Helpful Commands for troubleshooting&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;xe-toolstack-restart&lt;/code&gt; – First command I always try before anything else&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;service xapi restart&lt;/code&gt; – This restarts a core service&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xsconsole&lt;/code&gt; – This launches console to check pool, network config, ha, running VMS, etc.&lt;/p&gt;
+&lt;h3 id=&#34;how-to-video-going-over-troubleshooting&#34;&gt;How-To Video going over troubleshooting&lt;/h3&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/UqsaRixKveA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;This will get your server back up and accessible, however, this disables high availability and will need to be set back up. It’s important to note the cause of an event like this. In my case, the SR I was using to host my VMs was not sufficient and caused the outage. If this happens to you make sure you have a good SAN/NAS for hosting on a Gigabit or above connection. I’d highly recommend a 10Gbs connection or a multipath gigabit connection at the very least.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>XCP-ng / XenServer – Your First Virtual Machine Installation</title>
+      <link>http://localhost:1313/xenserver-xcp-ng-first-vm-install/</link>
+      <pubDate>Sun, 09 Sep 2018 18:54:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/xenserver-xcp-ng-first-vm-install/</guid>
+      <description>&lt;p&gt;This video goes through setting up a Virtual Machine in XenServer / XCP-ng in a lab environment. If you want to experiment with in detail with XenServer, I highly recommend you download XCP-ng from their &lt;a href=&#34;https://xcp-ng.org&#34;&gt;official website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is a community-powered version of XenServer with ALL FEATURES ENABLED. XenServer from Citrix has recently started going away from its open-source roots and as a result, has begun locking features behind a paywall.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/n-0CWPhxgP0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Virtualization Introduction</title>
+      <link>http://localhost:1313/virtualization-introduction/</link>
+      <pubDate>Fri, 07 Sep 2018 21:33:35 +0000</pubDate>
+      
+      <guid>http://localhost:1313/virtualization-introduction/</guid>
+      <description>&lt;p&gt;This is a virtualization introduction and when you should be using it. In the follow-up videos, I will go into using the hypervisor, creating VMs and maintenance.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/T0nywDkf1IE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now that you understand what it is and if you want to start getting your feet wet, please check out my other video to start installing your hypervisor and launching your first virtual machine [here][1]. I highly recommend starting out with VMware as it used the most. It also has the most material online if looking for virtualization introduction videos and how to guides.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Reattach LVM after a reinstalling XenServer</title>
+      <link>http://localhost:1313/reattach-lvm-xenserver/</link>
+      <pubDate>Wed, 03 Aug 2016 16:18:32 +0000</pubDate>
+      
+      <guid>http://localhost:1313/reattach-lvm-xenserver/</guid>
+      <description>&lt;p&gt;This article describes how to reattach LVM or a local Storage repository on XenServer. The XenServer database has become corrupt or your XenServer does not see the local SR.&lt;/p&gt;
+&lt;h3 id=&#34;instructions&#34;&gt;Instructions&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Do a pvscan to get the Universally Unique Identifier (UUID) of an existing SR on a local disk. In this example uses UUID 39baf126-a535-549f-58d6-feeda55f7801:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pvscan&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;output&#34;&gt;Output:&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PV /dev/sda3 VG VG_XenStorage-39baf126-a535-549f-58d6-feeda55f7801 lvm2 [66.87 GB / 57.87 GB free]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Total: 1 [66.87 GB] / in use: 1 [66.87 GB] / in no VG: 0 [0 ]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note the output above, the VG name of the local drive /dev/sda3 is VG_XenStorage-39baf126-a535-549f-58d6-feeda55f7801 . The VG name contains the SR UUID that resides on this storage media. In this case, the UUID is 39baf126-a535-549f-58d6-feeda55f7801.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Introduce the SR with the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe sr-introduce uuid=39baf126-a535-549f-58d6-feeda55f7801 type=lvm name-label=”Local storage” content-type=user&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This command sets up database records for the SR named “Local storage”&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Locate the SCSI ID of the device or partition where the SR data is stored:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ls -l /dev/disk/by-id/&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;output-1&#34;&gt;Output:&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lrwxrwxrwx 1 root root 9 Jan 15 09:44 scsi-SATA_ST3500320AS_9QM13WP2 -&amp;gt; ../../sdb
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lrwxrwxrwx 1 root root 10 Jan 15 09:44 scsi-SATA_ST3500320AS_9QM13WP2-part1 -&amp;gt; ../../sdb1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lrwxrwxrwx 1 root root 9 Jan 15 09:44 scsi-SATA_ST380815AS_6QZ5Z1AM -&amp;gt; ../../sda
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lrwxrwxrwx 1 root root 10 Jan 15 09:44 scsi-SATA_ST380815AS_6QZ5Z1AM-part1 -&amp;gt; ../../sda1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lrwxrwxrwx 1 root root 10 Jan 15 09:44 scsi-SATA_ST380815AS_6QZ5Z1AM-part2 -&amp;gt; ../../sda2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lrwxrwxrwx 1 root root 10 Jan 15 09:44 scsi-SATA_ST380815AS_6QZ5Z1AM-part3 -&amp;gt; ../../sda3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;_In this case, the SCSI ID of the device /dev/sda3 is scsi-SATA_ST380815AS_6QZ5Z1AM-part3.&lt;/p&gt;
+&lt;p&gt;Notate the device name to use in the next command, where a PBD (physical block device – a connector between the XenServer host and the SR) is created._&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Run the xe host-list command to find out the host UUID for the local host:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe host-list&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uuid ( RO) : 83f2c775-57fc-457b-9f98-2b9b0a7dbcb5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;name-label ( RW): xenserver1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;name-description ( RO): Default install of XenServer
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Create the PBD using the device SCSI ID, host UUID and SR UUID detected above:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;xe pbd-create sr-uuid=39baf126-a535-549f-58d6-feeda55f7801&lt;/code&gt;
+&lt;code&gt;device-config:device=/dev/disk/by-id/scsi-SATA_ST380815AS_6QZ5Z1AM-part3 host-uuid=83f2c775-57fc-457b-9f98-2b9b0a7dbcb5&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Afterward, it displays: aec2c6fc-e1fb-0a27-2437-9862cffe213e&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Attach the PBD created with xe pbd-plug command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe pbd-plug uuid=aec2c6fc-e1fb-0a27-2437-9862cffe213e&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the end, you now have reattach LVM to the XenServer host and be visible in XenCenter.&lt;/p&gt;
+&lt;p&gt;Source: Original Article from Citrix &lt;a href=&#34;http://support.citrix.com/article/CTX121896&#34;&gt;http://support.citrix.com/article/CTX121896&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>XenServer tapdisk experienced an error</title>
+      <link>http://localhost:1313/xenserver-tapdisk-error/</link>
+      <pubDate>Wed, 03 Aug 2016 16:12:57 +0000</pubDate>
+      
+      <guid>http://localhost:1313/xenserver-tapdisk-error/</guid>
+      <description>&lt;p&gt;When re-attaching a SR on a fresh VM, I ran into this XenServer tapdisk error. I ran the following from XenServer console to eject all CD drives on that host. I was then able to start the VM with the old image.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe vm-cd-eject --multiple&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If your XenCenter hangs or becomes unresponsive, you can also reset the toolstack from console from a PuTTy session or if XenCenter console is working running the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xe-toolstack-restart&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;It’s important to note what caused the XenServer tapdisk error. I experienced this on an old version of XenServer 6 when switching out the ISOs from the VMs.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Citrix XenCenter error “Could not create SSL/TLS Secure Channel”</title>
+      <link>http://localhost:1313/citrix-xencenter-error-ssl-secure-channel/</link>
+      <pubDate>Wed, 13 Jul 2016 14:24:04 +0000</pubDate>
+      
+      <guid>http://localhost:1313/citrix-xencenter-error-ssl-secure-channel/</guid>
+      <description>&lt;p&gt;Running the following commands will fix the XenCenter Error. You are typically encountering this error because Windows 10 requires stronger encryption, consequently, this is prevalent on older XenServer installations. I encountered this on XenServer 6.0.&lt;/p&gt;
+&lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Putty in using SSH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service xapissl stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv /etc/xensource/xapi-ssl.pem /etc/xensource/xapi-ssl.pem.bak
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/opt/xensource/libexec/generate_ssl_cert &amp;#34;/etc/xensource/xapi-ssl.pem&amp;#34; &amp;#39;10.100.0.40&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;service xapissl start
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xe-toolstack-restart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Where you see 10.100.0.40 this is the IP of your XenServer that you are connecting to (not VM ips). Once you run this it reissues the cert and you will be able to properly connect. I’ve seen this on Windows 10 Systems since they force the higher level encryption, however,  If this doesn’t resolve the XenCenter error let me know.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

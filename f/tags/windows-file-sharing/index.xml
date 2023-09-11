@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows File Sharing on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/windows-file-sharing/</link>
+    <description>Recent content in Windows File Sharing on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/windows-file-sharing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fix Windows Network and Sharing</title>
+      <link>http://localhost:1313/windows-network-and-sharing/</link>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/windows-network-and-sharing/</guid>
+      <description>&lt;p&gt;Fixing problems with windows file sharing using the following methods.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: Check ALL these methods as anyone of them can cause file sharing to fail!&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;network-and-file-sharing&#34;&gt;Network and File Sharing&lt;/h2&gt;
+&lt;p&gt;Launch old control panel with &lt;code&gt;Start -&amp;gt; Run -&amp;gt; control&lt;/code&gt; or &lt;code&gt;Windows Key + R&lt;/code&gt; and select Network and Sharing Center.&lt;/p&gt;
+&lt;p&gt;Follow these Steps from Network and Sharing Center&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select Advanced Sharing Settings&lt;/li&gt;
+&lt;li&gt;Turn on network discovery and check Turn on automatic setup of network connected devices.&lt;/li&gt;
+&lt;li&gt;Turn on file and printer sharing&lt;/li&gt;
+&lt;li&gt;Optional: If you don&amp;rsquo;t want passwords click &amp;ldquo;All Networks and turn off Password protected sharing&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;check-if-network-is-classified-public&#34;&gt;Check if Network is classified Public&lt;/h2&gt;
+&lt;p&gt;If your network is classified as Public it will NOT allow you to share files or printers! Check it with powershell:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Launch Powershell (right-click start menu and select powershell with admin or terminal with admin)&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;Get-NetConnectionProfile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Verify NetworkCategory is PRIVATE!&lt;/li&gt;
+&lt;li&gt;If it is Public Type &lt;code&gt;Set-NetConnectionProfile -Name &amp;quot;Network #&amp;quot; -NetworkCategory Private&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Change Network # to the NAME of your Network from &lt;code&gt;Get-NetConnectionProfile&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;share-your-folders&#34;&gt;Share your folders&lt;/h2&gt;
+&lt;p&gt;Right-click any folder and select &amp;ldquo;give access to&amp;rdquo; and select your login user. On new Windows 11/10 systems this is often your microsoft account (&lt;a href=&#34;mailto:user@outlook.com&#34;&gt;user@outlook.com&lt;/a&gt;). If you turned off password sharing and want EVERYONE to see those files then type &amp;ldquo;Everyone&amp;rdquo; and give access to them.&lt;/p&gt;
+&lt;p&gt;Another option is to right-click the folder and select properties. Then select the sharing tab and give access through there.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/X4Ba7wYlbMA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

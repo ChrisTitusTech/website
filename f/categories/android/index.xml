@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/categories/android/</link>
+    <description>Recent content in Android on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making the Perfect Phone</title>
+      <link>http://localhost:1313/making-the-perfect-phone/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/making-the-perfect-phone/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been using a dumbphone for the past month and I see now all the things I&amp;rsquo;ve been missing in Life. However, dumb phones are far from perfect and there are many things that can be fixed to make the perfect phone.&lt;/p&gt;
+&lt;h2 id=&#34;the-overview&#34;&gt;The Overview&lt;/h2&gt;
+&lt;p&gt;The problem with many &amp;ldquo;smartphones&amp;rdquo; of today is they do too much! Having the world of possibilities in your pocket can not only be distracting but can actively sabotage your life. The notifications or you actively avoid real life situations, because you use your phone as a crutch.&lt;/p&gt;
+&lt;p&gt;This is why you see the rise of the &amp;ldquo;dumbphone&amp;rdquo;, but these devices are far from perfect. I&amp;rsquo;ve used one for the past month and the amount of productivity I&amp;rsquo;ve gained is astonishing. However, it is not without it&amp;rsquo;s problems.&lt;/p&gt;
+&lt;p&gt;My dumbphone issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mobile orders (I had a buffalo wild wings want to see my order # on my phone before they would give me my to-go order.)&lt;/li&gt;
+&lt;li&gt;Navigation (Go old school with printed maps or simply have a GPS in your car)&lt;/li&gt;
+&lt;li&gt;Uber / Lyft (These apps are life savers when visiting somewhere and you need to be picked up)&lt;/li&gt;
+&lt;li&gt;Group Messaging (Depending the phone you picked, you may lose this ability. Mine couldn&amp;rsquo;t do group messages or gifs)&lt;/li&gt;
+&lt;li&gt;Workout Apps&lt;/li&gt;
+&lt;li&gt;Camera and Photos&lt;/li&gt;
+&lt;li&gt;Music Player (YT Music / Spotify)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Even with losing ALL of this&amp;hellip; I still preferred the dumbphone experience because of how much it improved my life. It rewired my brain to really focus on the things that the smartphone does well and if I modified it to only do those things&amp;hellip; It would be the PERFECT PHONE!&lt;/p&gt;
+&lt;p&gt;So what ARE the problems with smartphones?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Web Browsing (Having this seems like a pro, but often we rely on this to look up everything and its more of a con in my experience)&lt;/li&gt;
+&lt;li&gt;Social Media (Time wasters&amp;hellip; need I say more?)&lt;/li&gt;
+&lt;li&gt;Social Crutch (Elevators, Waiting Rooms, and many more&amp;hellip; The addiction is REAL!)&lt;/li&gt;
+&lt;li&gt;Low Battery Life ( 1-2 days&amp;hellip; but this is from bloat and constantly picking it up.)&lt;/li&gt;
+&lt;li&gt;YouTube / YouTube Studio (This is mainly for me, but these apps cost me so much time.)&lt;/li&gt;
+&lt;li&gt;Email (Checking email through your phone is a massive productivity loss and frankly unprofessional)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This isn&amp;rsquo;t that bad as you really are only giving up two things&amp;hellip; Being bored and productivity. Right?&lt;/p&gt;
+&lt;p&gt;To Simplify why those things are so important:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Being Bored = Creativity Fuel&lt;/li&gt;
+&lt;li&gt;Productivity = Realizing your potential&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-solution&#34;&gt;The Solution&lt;/h2&gt;
+&lt;p&gt;Make the Smartphone only do the things that HELP YOU! Debloating your phone will extend your battery life and keep you from launching into the time wasting apps. The easiest way of doing this is with a fantastic project called &lt;a href=&#34;https://github.com/0x192/universal-android-debloater&#34;&gt;Universal Android Debloater&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This makes it extremely easy to debloat your entire device in a single click.&lt;/p&gt;
+&lt;h2 id=&#34;pre-requisites&#34;&gt;Pre-Requisites&lt;/h2&gt;
+&lt;p&gt;You will need the following installed on your computer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ADB tools (XDA Developers has a fantastic article going over this: &lt;a href=&#34;https://www.xda-developers.com/install-adb-windows-macos-linux/&#34;&gt;ADB Tool Installation Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Developer Mode (Simply click 7-times on the about in your phone to enable developer mode)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;adb-tool-install-cheatsheet&#34;&gt;ADB Tool Install Cheatsheet&lt;/h3&gt;
+&lt;p&gt;Debian Linux&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install android-sdk-platform-tools
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Windows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-windows.zip&#34;&gt;ADB Platform Tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract Tools to &lt;code&gt;C:\Windows&lt;/code&gt; &lt;em&gt;(This allows you to run adb.exe and fastboot.exe from anywhere)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Install drivers for your phone - &lt;a href=&#34;https://developer.android.com/studio/run/oem-usb#Drivers&#34;&gt;Install Android Device Drivers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MacOS&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install android-platform-tools
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-universal-android-debloater&#34;&gt;Install Universal Android Debloater&lt;/h2&gt;
+&lt;p&gt;From your command line interface (terminal, powershell, etc.) type &lt;code&gt;adb devices&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Verify your phone is seen&lt;/p&gt;
+&lt;p&gt;Now download the release from their GitHub &lt;a href=&#34;https://github.com/0x192/universal-android-debloater/releases&#34;&gt;https://github.com/0x192/universal-android-debloater/releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then launch the program&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/android/uad.png&#34; alt=&#34;uad&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;As a minimalist I recommend starting with removing ALL the recommended packages. Simply select all with the following recommended settings at the top.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/android/select.png&#34; alt=&#34;select&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Then add back in any google related packages you might use while keeping your phone slimmed down. I only kept these 4 packages from the recommended settings after I finished.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/android/final.png&#34; alt=&#34;final&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Since I was using a Pixel 4a for my main device I also needed to change the default launcher to a more minimal one. Pixel launcher is problematic because of all the dependencies it has. I highly recommend &lt;a href=&#34;https://play.google.com/store/apps/details?id=bitpit.launcher&amp;amp;hl=en_US&amp;amp;gl=US&#34;&gt;Niagara launcher&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;the-final-product&#34;&gt;The Final Product&lt;/h2&gt;
+&lt;p&gt;After the debloat and changing my launcher, this is what my phone looks like now.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/android/home.png&#34; alt=&#34;home&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/MFbXFG2xDJI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Life without a Smart Phone</title>
+      <link>http://localhost:1313/switching-to-dumbphone/</link>
+      <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/switching-to-dumbphone/</guid>
+      <description>&lt;p&gt;I recently switched to a Dumb Phone from the smart phone and many asked why? This is my breakdown of the entire experience and recommendations. This certainly won&amp;rsquo;t be for everyone, but for those that attempt it, I can promise that it will be extremely rewarding for those that have the willpower to do it.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Its been a week since I first switched to a dumb phone. &lt;br&gt;I&amp;#39;m never going back. Smart phones cost me way to much time! &lt;a href=&#34;https://t.co/aV4DEYKbM6&#34;&gt;pic.twitter.com/aV4DEYKbM6&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1557833634467414016?ref_src=twsrc%5Etfw&#34;&gt;August 11, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;why-use-a-dumb-phone&#34;&gt;Why use a dumb phone?&lt;/h2&gt;
+&lt;p&gt;Here are the benefits for using a dumb phone that I have found:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More Productivity&lt;/li&gt;
+&lt;li&gt;Mindfulness
+&lt;ul&gt;
+&lt;li&gt;Less Anxiety&lt;/li&gt;
+&lt;li&gt;More at rest&lt;/li&gt;
+&lt;li&gt;No longer overwhelmed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is probably more, but these are the two massive things that has changed my life for the better. I can boil down these benefits to the fact I can&amp;rsquo;t check my email, look up a restaurant, google some fact, browse social media, and many other apps dinging or grabbing my attention. The greatest strength of the smart phone is it can do ANYTHING, but that can lead to massive decision fatigue and it personally made me FAR less productive.&lt;/p&gt;
+&lt;h2 id=&#34;my-journey-and-downsides&#34;&gt;My Journey and Downsides&lt;/h2&gt;
+&lt;p&gt;I had no intention of using a dumb phone, but then after researching some privacy, and security phones I bought one that looked cool. Little did I know, the Punkt MP02 really was a dumb phone with an app for Signal, so it could be marketed as a &amp;ldquo;Security Phone&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;My first reaction was, &amp;ldquo;This phone SUCKS!&amp;rdquo;, but I needed to make a video about it, so I continued. Initially I was in shock without my smart phone:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No News when on the toilet&lt;/li&gt;
+&lt;li&gt;Email on the go&lt;/li&gt;
+&lt;li&gt;Music while working out or walking&lt;/li&gt;
+&lt;li&gt;Workout Apps&lt;/li&gt;
+&lt;li&gt;Food Apps&lt;/li&gt;
+&lt;li&gt;Social Media: Twitter to kill time, or YouTube studio to check comments, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Within an hour or two I was bored during tasks my smart phone would fill in. Having said that, I really didn&amp;rsquo;t even use my smart phone much. My digital wellbeing app clocked in at an average of 30 minute of usage a day. While many people are using their phones 3+ hours per day. &lt;strong&gt;The average in the world being 3 hours 15 minutes screen time per day and Americans spending 4 hours 16 minutes on mobile devices per day!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;After I became bored and didn&amp;rsquo;t fill in every second, something magical happened. I actually had a cloud lift from me, and I started doing all the tasks I&amp;rsquo;d been putting off. I did more in that one day then I had in the PAST WEEK!&lt;/p&gt;
+&lt;h2 id=&#34;recommendations-and-cheating&#34;&gt;Recommendations and Cheating&lt;/h2&gt;
+&lt;p&gt;There are some recommendations and &amp;ldquo;cheating&amp;rdquo; I do when it comes to quality of life. But before I get in to that, I have to say, &amp;ldquo;You do not NEED your smartphone&amp;rdquo;. All these things are simply conveniences and if push came to shove, I&amp;rsquo;d rather lose these things than have them because of the benefits of a dumb phone.&lt;/p&gt;
+&lt;h3 id=&#34;navigation&#34;&gt;Navigation&lt;/h3&gt;
+&lt;p&gt;This is a big one, but on my dumb phone there is WiFi tethering. My workaround is simply to use an all-in-one android car deck I installed last year that utilizes the WiFi.&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/SXmFBWTxl-U&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;uber-food-music-workout-and-bank-apps&#34;&gt;Uber, Food, Music, Workout and Bank Apps&lt;/h3&gt;
+&lt;p&gt;Most of these are covered by using a computer and a webpage, however for those that do require a physical phone I can either use my old smartphone or get away with a android image off of &lt;a href=&#34;https://www.osboxes.org/android-x86/&#34;&gt;https://www.osboxes.org/android-x86/&lt;/a&gt; and load it up in Virtualbox or VMWare. Here is a walkthrough video I did on that:&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/JQc6VXuwlWk&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;group-messages&#34;&gt;Group Messages&lt;/h3&gt;
+&lt;p&gt;This is one of the downsides, because most dumbphones can&amp;rsquo;t do MMS or groups messages. The Punkt MP02 doesn&amp;rsquo;t do group messages but can receive them independently and GIFs come in, but emoji&amp;rsquo;s do not. Depending on the phone, these things may or may NOT work. One workaround is to use Google Fi for your carrier and then &lt;a href=&#34;https://messages.google.com&#34;&gt;https://messages.google.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/dumbphone/web-message.png&#34; alt=&#34;web-message&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;camera-and-photos&#34;&gt;Camera and Photos&lt;/h3&gt;
+&lt;p&gt;Use an actual camera and then upload them your storage. Like we did back in the day!&lt;/p&gt;
+&lt;h2 id=&#34;will-i-go-back&#34;&gt;Will I Go Back?&lt;/h2&gt;
+&lt;p&gt;I sincerely doubt it. If anything I might get a bit better dumb phone with a bit more options like music or even a good camera if that ever became an option. However, my well being is first and foremost and after I STOPPED lying to myself that I needed a smart phone. I haven&amp;rsquo;t felt this good in a very LONG time.&lt;/p&gt;
+&lt;p&gt;There is also a lot of folks that simply addicted and can&amp;rsquo;t quit their smartphone. Even though my usage was 30 minutes a day with minimal usage, I was addicted. They are designed that way. I was lying to myself when I said I&amp;rsquo;ll just delete my social media apps or this or that. In the end, when boredom hit, I always would pick up my phone because there was always SOMETHING it could do to fill the time.&lt;/p&gt;
+&lt;p&gt;In the end, most of the population simply can&amp;rsquo;t quit it and will remain addicted and working with it as a severe handicap on their life. This gives me the ultimate edge to get ahead and produce more content than a person with a smart phone.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/tzbKqTRuRzU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Fix Ticwatch Lag</title>
+      <link>http://localhost:1313/fix-ticwatch-lag/</link>
+      <pubDate>Thu, 27 Aug 2020 09:49:33 -0500</pubDate>
+      
+      <guid>http://localhost:1313/fix-ticwatch-lag/</guid>
+      <description>&lt;p&gt;Lets fix the lag on the TicWatch. There is tons of bloat that needs to be removed to get a responsive interface.&lt;/p&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Install ADB Tools&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows - &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-windows.zip&#34;&gt;https://dl.google.com/android/repository/platform-tools-latest-windows.zip&lt;/a&gt; or &lt;code&gt;choco install adb&lt;/code&gt; &lt;em&gt;Chocolatey Users Only&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Linux - &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-linux.zip&#34;&gt;https://dl.google.com/android/repository/platform-tools-latest-linux.zip&lt;/a&gt; or &lt;code&gt;sudo apt install adb&lt;/code&gt; Debian or &lt;code&gt;yay -S adb&lt;/code&gt; Arch&lt;/li&gt;
+&lt;li&gt;MacOS - &lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-darwin.zip&#34;&gt;https://dl.google.com/android/repository/platform-tools-latest-darwin.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable Developer Tools on TicWatch&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Under settings - Click About&lt;/li&gt;
+&lt;li&gt;Click the Build number 7 times to enable developer tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable Wi-fi Debugging in Developer Tools&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Under settings - Click Developer Tools
+&lt;ul&gt;
+&lt;li&gt;Enable ADB Debugging&lt;/li&gt;
+&lt;li&gt;Enable ADB Debugging Wi-fi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;note-ensure-both-the-watch-and-computer-are-on-the-same-wifi-network&#34;&gt;Note: Ensure both the Watch and Computer are on the same Wifi network&lt;/h4&gt;
+&lt;h2 id=&#34;removing-ticwatch-bloat&#34;&gt;Removing TicWatch Bloat&lt;/h2&gt;
+&lt;p&gt;This removes all the mobvoi crap that is junking up your watch.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connect to your watch
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb connect IP_ADDRESS:5555&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Check Devices
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb devices&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Verify you see your watch!&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Run the following commands to remove all the bloat:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.account.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.companion.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.ticwatch.cmodel.c2.male
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.appsservice
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.fitness.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.health.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.privacy.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.system.aw
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pm uninstall -k --user 0 com.mobvoi.wear.watchface.aw
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Screenshot&lt;br&gt;
+&lt;img src=&#34;http://localhost:1313/images/2020/ticwatch.jpg&#34; alt=&#34;ticwatch&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;using-google-fit-and-other-wearos-apps&#34;&gt;Using Google Fit and other WearOS Apps&lt;/h2&gt;
+&lt;p&gt;Now with all the garbage gone you can use all the other apps that are well maintained and optimized. You will notice that your watch is no longer lagging and it runs just like any other good wearable.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Speed Up Your Amazon Fire Tablet</title>
+      <link>http://localhost:1313/amazon-fire-debloat/</link>
+      <pubDate>Tue, 21 Jul 2020 12:37:54 -0500</pubDate>
+      
+      <guid>http://localhost:1313/amazon-fire-debloat/</guid>
+      <description>&lt;p&gt;This Guide goes over over debloating amazon fire tablets and getting Google Store and regular tablet functionality out of them.&lt;/p&gt;
+&lt;h2 id=&#34;tools-and-sources-used&#34;&gt;Tools and Sources Used&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debloat Amazon Fire (XDA Developers): &lt;a href=&#34;https://forum.xda-developers.com/hd8-hd10/development/official-amazon-fire-toolbox-v1-0-t3889604&#34;&gt;Amazon Fire Toolbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Screenshare Any Android Device (GitHub Project): &lt;a href=&#34;https://github.com/Genymobile/scrcpy&#34;&gt;scrcpy&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;YouTube Video Link for scrcpy: &lt;a href=&#34;https://youtu.be/VMQfH2Qkuss&#34;&gt;https://youtu.be/VMQfH2Qkuss&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;No Root Required&lt;/li&gt;
+&lt;li&gt;Developer Mode Unlocked&lt;/li&gt;
+&lt;li&gt;USB Debugging Enabled in Developer Tools&lt;/li&gt;
+&lt;li&gt;Compatibility:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 8/8+ (2020)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 10 (2019)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 7 (2019)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 8 (2018)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 10 (2017)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 8 (2017)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire 7 (2017)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD8 (2016)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD10 (2015)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD8 (2015)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD7 (2015)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD7 (2014)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Amazon Fire HD6 (2014)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;enabling-developer-mode&#34;&gt;Enabling Developer Mode&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2020/debloat-amazon/dev-tools.jpg&#34; alt=&#34;Dev Tools&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Settings &amp;gt; Device Options &amp;gt; About Fire Tablet and tap on the Serial Number until you unlock Developer Options&lt;/li&gt;
+&lt;li&gt;Settings &amp;gt; Device Options &amp;gt; Developer Tools and enable USB Debugging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;After doing this plug your tablet in to your computer and tap authorize device. If you don&amp;rsquo;t see authorization prompt, change USB mode to file transfer or it may already be authorized from a past attempt. Check the Toolbox app in the next step to verify.&lt;/p&gt;
+&lt;h2 id=&#34;amazon-fire-toolbox-usage&#34;&gt;Amazon Fire Toolbox Usage&lt;/h2&gt;
+&lt;h3 id=&#34;main-menu&#34;&gt;Main Menu&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2020/debloat-amazon/toolbox.png&#34; alt=&#34;Toolbox&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;options-you-need&#34;&gt;Options you need&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Manage Everything Amazon
+&lt;ul&gt;
+&lt;li&gt;Disable all amazon apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Custom Launcher
+&lt;ul&gt;
+&lt;li&gt;Change to Nova Launcher from Amazon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Google Services (Manage)
+&lt;ul&gt;
+&lt;li&gt;Install Google Play and Google Sign-In&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;optional-features-on-main-menu&#34;&gt;Optional Features on Main Menu&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;ADB Shell
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Command Line for ADB&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Hybrid Apps
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Installing Netflix or Disney- Not needed when using Google Store&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lockscreen Wallpaper
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Doesn&amp;rsquo;t remove ads - Done with another package&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Density Modifier
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Changes DPI&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Google Assistant
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Uses Google Assistant instead of Alexa&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Modify System Settings
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Disable automatic system/app updates, and turn off Over the Air updates&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Power Options
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Power Off, Reboot, Bootloader Selection&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;second-menu&#34;&gt;Second Menu&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2020/debloat-amazon/toolbox2.jpg&#34; alt=&#34;Toolbox2&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;recommended-options&#34;&gt;Recommended Options&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Remove Lockscreen Ads&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This setups an automation sequence that constantly scans and removes amazon ads. Here are the detailed instructions:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click Remove Lockscreen Ads in Amazon Fire Toolbox&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Launch Automate Settings&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check &amp;ldquo;Run on system startup&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Import Adblocker script into Automate&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To import: Click Import from 3 dots on right, Select SD Card and click &amp;ldquo;Amazon Lockscreen Ads Remover V4.5&amp;rdquo; from root&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Return to Home screen of Automate and click the Ads Remover&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;optional-items-on-second-menu&#34;&gt;Optional Items on Second Menu&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Parental Control Hide&lt;/li&gt;
+&lt;li&gt;System Backup
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Excellent backup and restore tool for your tablet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Push and Pull
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;File Transfer to and from tablet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;User Management
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Add Accounts for Google, LinkedIn, Patreon, etc.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;YouTube Clients
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;APK files for Vanced and other YouTube alternative apps&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Screen Capturing
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Record or Screenshot on your tablet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sideload Apps
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Select APK files to upload OR search for APK files on internet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This tool is a fantastic way to debloat a new fire tablet and get greater functionality from it. The added utilities I rarely use, but can be very nice for some users.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Debloat Android</title>
+      <link>http://localhost:1313/debloat-android/</link>
+      <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
+      
+      <guid>http://localhost:1313/debloat-android/</guid>
+      <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;
+&lt;h2 id=&#34;pre-requisites-for-using-adb&#34;&gt;Pre-Requisites for Using ADB&lt;/h2&gt;
+&lt;p&gt;Setup all of the following to use ADB&lt;/p&gt;
+&lt;h3 id=&#34;setup-computer-with-adb-platform-tools&#34;&gt;Setup Computer with ADB Platform Tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows Install with Chocolatey &lt;code&gt;choco install adb&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Linux Install with Terminal &lt;code&gt;sudo apt-get install android-tools-adb android-tools-fastboot&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;MacOS Install with Homebrew
+&lt;ul&gt;
+&lt;li&gt;Homebrew install - &lt;code&gt;ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ADB Homebrew Install - &lt;code&gt;brew cask install android-platform-tools&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;setup-phone-for-adb-debugging&#34;&gt;Setup Phone for ADB Debugging&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Settings, and select “About”.&lt;/li&gt;
+&lt;li&gt;Tap on “Build number” seven times.&lt;/li&gt;
+&lt;li&gt;Go back, and select “Developer options”.&lt;/li&gt;
+&lt;li&gt;Scroll down, and check the “Android debugging” or “USB debugging” entry under “Debugging”.&lt;/li&gt;
+&lt;li&gt;Plug your device into your computer.&lt;/li&gt;
+&lt;li&gt;On the computer, open up a terminal/command prompt and type adb devices.&lt;/li&gt;
+&lt;li&gt;A dialog should show on your device, asking you to allow usb debugging. Check “always allow”, and choose “OK”.
+&lt;ul&gt;
+&lt;li&gt;Note: If you don&amp;rsquo;t see this prompt on you device change the usb connection to MTP or File Transfer on the device&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;adb-commands---these-only-work-when-device-is-booted&#34;&gt;ADB Commands - These only work when device is booted&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb devices&lt;/code&gt; - shows all connected adb devices&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb shell&lt;/code&gt; - launches a shell on the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb shell pm list packages&lt;/code&gt; - list all installed packages on the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb shell pm list packages -3&amp;quot;|cut -f 2 -d &amp;quot;:&lt;/code&gt; - lists all user installed packages&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb push &amp;lt;local&amp;gt; &amp;lt;remote&amp;gt;&lt;/code&gt; - pushes the file &lt;local&gt; to &lt;remote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb pull &amp;lt;remote&amp;gt; [&amp;lt;local&amp;gt;]&lt;/code&gt; - pulls the file &lt;remote&gt; to &lt;local&gt;. If &lt;local&gt; isn’t specified, it will pull to the current folder.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb logcat&lt;/code&gt; - allows you to view the device log in real-time. You can use adb logcat -b radio to view radio logs, and adb logcat -C to view logs in colour&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb install &amp;lt;file&amp;gt;&lt;/code&gt; - installs the given .apk file to your device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb uninstall com.packagename&lt;/code&gt; - uninstalls package from shell pm list packages
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: if you encounter &amp;ldquo;[DELETE_FAILED_INTERNAL_ERROR]&amp;rdquo; type this to bypass:&lt;/em&gt; &lt;code&gt;adb shell pm uninstall --user 0 &amp;lt;appname&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot&lt;/code&gt; - reboots system&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot bootloader&lt;/code&gt; - reboots to bootloader&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot recovery&lt;/code&gt; - reboots into recovery mode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot fastboot&lt;/code&gt; - reboots into fastboot mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fastboot-commands---these-commands-work-when-device-is-in-bootloader-and-fastboot-mode&#34;&gt;Fastboot Commands - These commands work when device is in Bootloader and Fastboot Mode&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fastboot devices&lt;/code&gt; - shows all connected devices&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot reboot&lt;/code&gt; - reboots device - can add bootloader, recovery, and fastboot&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot oem device-info&lt;/code&gt; - shows oem bootloader status (unlocked or locked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot oem unlock&lt;/code&gt; - unlocks oem phones - &lt;em&gt;note: aosp and unlocked phones don&amp;rsquo;t need this&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flashing unlock&lt;/code&gt; - unlocks system for custom rom in pixel and other phones&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flashing unlock_critical&lt;/code&gt; - unlocks bootloader and system partitions - &lt;em&gt;note: this isn&amp;rsquo;t generally needed&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot format:ext4 userdata&lt;/code&gt; - format userdata on device - &lt;em&gt;note: this will erase your entire device&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot boot recovery.img&lt;/code&gt; - test recovery image without flashing&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash recovery recovery.img&lt;/code&gt; - flash recovery image then run &lt;code&gt;fastboot reboot recovery&lt;/code&gt; to boot into it.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash boot boot.img&lt;/code&gt; - flash boot image - this is the kernel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot -w&lt;/code&gt; - wipes device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot update &amp;lt;/path/to/your/Rom.zip&amp;gt;&lt;/code&gt; - flashes zip to the device&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Degoogle Apps</title>
+      <link>http://localhost:1313/degoogle-apps/</link>
+      <pubDate>Tue, 02 Jun 2020 21:28:09 -0500</pubDate>
+      
+      <guid>http://localhost:1313/degoogle-apps/</guid>
+      <description>&lt;p&gt;This article goes over the apps that work and don&amp;rsquo;t work with a Degoogled phone without google play services installed&lt;/p&gt;
+&lt;h2 id=&#34;aurora-store-apps-google-play-store-apks&#34;&gt;Aurora Store Apps (Google Play Store apks)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;App Name&lt;/th&gt;
+&lt;th&gt;State&lt;/th&gt;
+&lt;th&gt;Warnings&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Coinbase&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GoPro&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Keep Notes&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Google App&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Maps&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Google App&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Google Photos&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Google App&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kasa&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Login Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LastPass&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;Crash on Startup&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lichess&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lyft&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;GPS and Google Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Microsoft Outlook&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Patreon&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ring&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Robinhood&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SKED&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SimpliSafe&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Spotify&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None - Except On Initial Login&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Starbucks&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Steam&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stride&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;Google Services Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Synology Drive&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Synology Memories&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Uber&lt;/td&gt;
+&lt;td&gt;Broken&lt;/td&gt;
+&lt;td&gt;GPS and Google Error&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Yi Home&lt;/td&gt;
+&lt;td&gt;Works&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;**Note: Uber and Lyft can be used via mobile site. ex: &lt;a href=&#34;https://m.uber.com&#34;&gt;https://m.uber.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;f-droid-apps-free-and-open-source&#34;&gt;F-Droid Apps (Free and Open Source)&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;App Name&lt;/th&gt;
+&lt;th&gt;Alternative To&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Files&lt;/td&gt;
+&lt;td&gt;Android Files&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ImagePipe&lt;/td&gt;
+&lt;td&gt;Google Photos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Import Contacts&lt;/td&gt;
+&lt;td&gt;Google Contacts&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Lemmy&lt;/td&gt;
+&lt;td&gt;Reddit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NewPipe&lt;/td&gt;
+&lt;td&gt;YouTube&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OSMAnd&lt;/td&gt;
+&lt;td&gt;Google Maps&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;OpenVPN for Android&lt;/td&gt;
+&lt;td&gt;OpenVPN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Personal DNS Filtering&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Slide&lt;/td&gt;
+&lt;td&gt;Reddit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Twidere&lt;/td&gt;
+&lt;td&gt;Twitter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Twire&lt;/td&gt;
+&lt;td&gt;Twitch&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;**Note: ImagePipe shrinks photos and does basic edits. I sync my photos with Synology Memories.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Get rid of Amazon Fire Launcher without root access</title>
+      <link>http://localhost:1313/amazon-fire-launcher/</link>
+      <pubDate>Mon, 10 Jul 2017 21:46:28 +0000</pubDate>
+      
+      <guid>http://localhost:1313/amazon-fire-launcher/</guid>
+      <description>&lt;p&gt;This How-To shows you how to get rid of Amazon Fire Launcher without root access. Amazon Fire 5.3.3 OS can’t be downgraded or rooted, and since the Fire tablet line auto-updates, this leads many folks with the horrible experience of using the Fire OS with their gimped store/subscriptions.&lt;/p&gt;
+&lt;p&gt;The process to use Google Services and Googles Store instead is a bit involved but entirely doable on the Fire Tablets without having to root it. From then on, you don’t have to navigate the out of date and limited Amazon App Store.&lt;/p&gt;
+&lt;h3 id=&#34;here-is-the-process&#34;&gt;Here is the process:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable ADP USB Debugging (Settings -&amp;gt; Device -&amp;gt; Tap Serial 10 Times -&amp;gt; Select Developer options -&amp;gt; Turn ADP Debugging ON)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2017/07/ADP-Enable.png&#34; alt=&#34;ADP Enable&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable Downloads from Unknown Sources (Settings -&amp;gt; Security -&amp;gt; Allow Unknown Sources ON)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2017/07/Unknown-Sources.png&#34; alt=&#34;Unknown Sources&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Google Play Services
+&lt;ul&gt;
+&lt;li&gt;Plug Device into USB on Computer and run the Supertool as Administrator
+&lt;ul&gt;
+&lt;li&gt;On Tablet Select Always Allow this computer and press OK&lt;/li&gt;
+&lt;li&gt;Download this zip file &lt;a href=&#34;http://rootjunkysdl.com/files/?dir=Amazon%20Fire%205th%20gen/SuperTool&#34;&gt;http://rootjunkysdl.com/files/?dir=Amazon%20Fire%205th%20gen/SuperTool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Run 1-Amazon-Fire-5th-gen.bat&lt;/li&gt;
+&lt;li&gt;Select Install Google Play Services/Framework&lt;/li&gt;
+&lt;li&gt;Wait for it to Finish and Close the program&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Launch Google Play using Search on Home Screen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2017/07/Search-Play.png&#34; alt=&#34;Search Play&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sign-in to Google&lt;/li&gt;
+&lt;li&gt;Update Google Play Services (Note: you can type Google Play Services in or launch update from the notifications tray — This will take 5-10 minutes to update)&lt;/li&gt;
+&lt;li&gt;Install Nova Launcher from Play next&lt;/li&gt;
+&lt;li&gt;Download the following APK to change the Amazon Fire’s Default Launcher. Afterward, on the tablet open Google Chrome or Amazon Silk Browser enter this address: &lt;a href=&#34;http://bit.ly/amalaunch&#34;&gt;http://bit.ly/amalaunch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: This is the shortlink for https://github.com/BaronKiko/LauncherHijackV2/releases/download/2.1/LauncherHijackV2.1.apk Github project. It is open source and I encourage you to look over the project on your PC so you aren’t blindly installing things on your tablet.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install the HijackLauncherV2.apk and Open it&lt;/li&gt;
+&lt;li&gt;Select Nova Launcher in the App and hit Ok at the prompt&lt;/li&gt;
+&lt;li&gt;Go back to settings -&amp;gt; Accessibility -&amp;gt;To detect home button press -&amp;gt; Switch to On&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2017/07/HijackLauncher.png&#34; alt=&#34;Hijack Launcher&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Finished, Enjoy being able to use Google Services on your Amazon Fire!&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

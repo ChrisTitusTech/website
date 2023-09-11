@@ -35,9 +35,28 @@ I've done videos on 3cx installation. Here are links to both self-hosted and usi
 
 ### Call Forwarding
 
+To setup Call forwarding I'd recommend adding a mobile number in User Web Client -> Settings
+
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/call-forwarding.png)
+
+After that is setup, Specify My Mobile in different modes (DND, Away, Etc.). You can also specify different forwards for internal and external calls. 
+
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/call-forwarding2.png)
+
 ### Office/Holiday Hours
 
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/office-hours.png)
+
+In the System configuration panel, You can specify Office Hours and Holiday Messages.
+
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/holidays.png)
+
 ### Mobile Application
+
+The mobile app for android and iOS is amazing. Has a ton of functionality and can substitute as an extension. 
+
+ ![](/images/2023/saving-a-business-5000-a-year-in-telecom/chat.png)![](/images/2023/saving-a-business-5000-a-year-in-telecom/recent.png)
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/voicemail.png)
 
 ## Walkthrough Video
 

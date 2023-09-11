@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Winutil on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/winutil/</link>
+    <description>Recent content in Winutil on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/winutil/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows Utility Update</title>
+      <link>http://localhost:1313/winutil-may-23-update/</link>
+      <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/winutil-may-23-update/</guid>
+      <description>&lt;p&gt;A big update with about 50 commits has made it to the May 2023 Windows Utility Update.&lt;/p&gt;
+&lt;h2 id=&#34;the-big-changes&#34;&gt;The Big Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Import/Export Command&lt;/li&gt;
+&lt;li&gt;Winget upgrades and selection of already installed programs&lt;/li&gt;
+&lt;li&gt;Tweaks checker (still early days, but improving)&lt;/li&gt;
+&lt;li&gt;Added Desktop Shortcut for running Winutil&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;summary-of-all-commits&#34;&gt;Summary of ALL commits&lt;/h2&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://github.com/ChrisTitusTech/winutil/pull/726&#34;&gt;https://github.com/ChrisTitusTech/winutil/pull/726&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Update to GUI (InputXML)&lt;/li&gt;
+&lt;li&gt;Fix Dark Mode&lt;/li&gt;
+&lt;li&gt;Tweaks.json Update (Services restoring to factory)&lt;/li&gt;
+&lt;li&gt;Fix Hovertime (annoying instant pop-up is removed)&lt;/li&gt;
+&lt;li&gt;Fix IRPStackSize (minor networking tweak)&lt;/li&gt;
+&lt;li&gt;O&amp;amp;O Shutup shortcut fix (was failing to apply tweaks)&lt;/li&gt;
+&lt;li&gt;More runspace tweaks from Durp (better performance and faster)&lt;/li&gt;
+&lt;li&gt;Added Toggle for Calendar/Notification Center&lt;/li&gt;
+&lt;li&gt;Updated Edge Removal&lt;/li&gt;
+&lt;li&gt;Program Additions
+&lt;ul&gt;
+&lt;li&gt;WinRAR&lt;/li&gt;
+&lt;li&gt;Ubisoft Connect&lt;/li&gt;
+&lt;li&gt;Neovim&lt;/li&gt;
+&lt;li&gt;Node Version Manager&lt;/li&gt;
+&lt;li&gt;Geforce NOW&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Preload winget with already installed tweaks/programs&lt;/li&gt;
+&lt;li&gt;Split AllowGameDVR to make sure xbox game bar does NOT break&lt;/li&gt;
+&lt;li&gt;Removed Atom IDE from Programs due to it being sunset&lt;/li&gt;
+&lt;li&gt;Fixed OriginalType from stock Windows installs to always restore to Microsoft preset Services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/ju_BSNKeP6w&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ADB on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/adb/</link>
+    <description>Recent content in ADB on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Jun 2020 20:01:50 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/adb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debloat Android</title>
+      <link>http://localhost:1313/debloat-android/</link>
+      <pubDate>Sun, 21 Jun 2020 20:01:50 -0500</pubDate>
+      
+      <guid>http://localhost:1313/debloat-android/</guid>
+      <description>&lt;p&gt;This article goes over using ADB Platform Tools and utilizing adb to uninstall packages by using these tools.&lt;/p&gt;
+&lt;h2 id=&#34;pre-requisites-for-using-adb&#34;&gt;Pre-Requisites for Using ADB&lt;/h2&gt;
+&lt;p&gt;Setup all of the following to use ADB&lt;/p&gt;
+&lt;h3 id=&#34;setup-computer-with-adb-platform-tools&#34;&gt;Setup Computer with ADB Platform Tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows Install with Chocolatey &lt;code&gt;choco install adb&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Linux Install with Terminal &lt;code&gt;sudo apt-get install android-tools-adb android-tools-fastboot&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;MacOS Install with Homebrew
+&lt;ul&gt;
+&lt;li&gt;Homebrew install - &lt;code&gt;ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ADB Homebrew Install - &lt;code&gt;brew cask install android-platform-tools&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;setup-phone-for-adb-debugging&#34;&gt;Setup Phone for ADB Debugging&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Settings, and select “About”.&lt;/li&gt;
+&lt;li&gt;Tap on “Build number” seven times.&lt;/li&gt;
+&lt;li&gt;Go back, and select “Developer options”.&lt;/li&gt;
+&lt;li&gt;Scroll down, and check the “Android debugging” or “USB debugging” entry under “Debugging”.&lt;/li&gt;
+&lt;li&gt;Plug your device into your computer.&lt;/li&gt;
+&lt;li&gt;On the computer, open up a terminal/command prompt and type adb devices.&lt;/li&gt;
+&lt;li&gt;A dialog should show on your device, asking you to allow usb debugging. Check “always allow”, and choose “OK”.
+&lt;ul&gt;
+&lt;li&gt;Note: If you don&amp;rsquo;t see this prompt on you device change the usb connection to MTP or File Transfer on the device&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;adb-commands---these-only-work-when-device-is-booted&#34;&gt;ADB Commands - These only work when device is booted&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;adb devices&lt;/code&gt; - shows all connected adb devices&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb shell&lt;/code&gt; - launches a shell on the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb shell pm list packages&lt;/code&gt; - list all installed packages on the device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb shell pm list packages -3&amp;quot;|cut -f 2 -d &amp;quot;:&lt;/code&gt; - lists all user installed packages&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb push &amp;lt;local&amp;gt; &amp;lt;remote&amp;gt;&lt;/code&gt; - pushes the file &lt;local&gt; to &lt;remote&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb pull &amp;lt;remote&amp;gt; [&amp;lt;local&amp;gt;]&lt;/code&gt; - pulls the file &lt;remote&gt; to &lt;local&gt;. If &lt;local&gt; isn’t specified, it will pull to the current folder.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb logcat&lt;/code&gt; - allows you to view the device log in real-time. You can use adb logcat -b radio to view radio logs, and adb logcat -C to view logs in colour&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb install &amp;lt;file&amp;gt;&lt;/code&gt; - installs the given .apk file to your device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb uninstall com.packagename&lt;/code&gt; - uninstalls package from shell pm list packages
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: if you encounter &amp;ldquo;[DELETE_FAILED_INTERNAL_ERROR]&amp;rdquo; type this to bypass:&lt;/em&gt; &lt;code&gt;adb shell pm uninstall --user 0 &amp;lt;appname&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot&lt;/code&gt; - reboots system&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot bootloader&lt;/code&gt; - reboots to bootloader&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot recovery&lt;/code&gt; - reboots into recovery mode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;adb reboot fastboot&lt;/code&gt; - reboots into fastboot mode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;fastboot-commands---these-commands-work-when-device-is-in-bootloader-and-fastboot-mode&#34;&gt;Fastboot Commands - These commands work when device is in Bootloader and Fastboot Mode&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;fastboot devices&lt;/code&gt; - shows all connected devices&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot reboot&lt;/code&gt; - reboots device - can add bootloader, recovery, and fastboot&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot oem device-info&lt;/code&gt; - shows oem bootloader status (unlocked or locked)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot oem unlock&lt;/code&gt; - unlocks oem phones - &lt;em&gt;note: aosp and unlocked phones don&amp;rsquo;t need this&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flashing unlock&lt;/code&gt; - unlocks system for custom rom in pixel and other phones&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flashing unlock_critical&lt;/code&gt; - unlocks bootloader and system partitions - &lt;em&gt;note: this isn&amp;rsquo;t generally needed&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot format:ext4 userdata&lt;/code&gt; - format userdata on device - &lt;em&gt;note: this will erase your entire device&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot boot recovery.img&lt;/code&gt; - test recovery image without flashing&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash recovery recovery.img&lt;/code&gt; - flash recovery image then run &lt;code&gt;fastboot reboot recovery&lt;/code&gt; to boot into it.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot flash boot boot.img&lt;/code&gt; - flash boot image - this is the kernel&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot -w&lt;/code&gt; - wipes device&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fastboot update &amp;lt;/path/to/your/Rom.zip&amp;gt;&lt;/code&gt; - flashes zip to the device&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

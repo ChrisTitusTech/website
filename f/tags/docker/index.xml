@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/docker/</link>
+    <description>Recent content in Docker on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cleanup Docker</title>
+      <link>http://localhost:1313/cleanup-docker/</link>
+      <pubDate>Fri, 16 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/cleanup-docker/</guid>
+      <description>&lt;p&gt;If you are running docker you will accumulate a lot of unused images and volumes as you update running containers. This makes maintenance a necessity.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Running Docker? Be sure and cleanup unused images and volumes with:&lt;br&gt;docker volume rm $(docker volume ls -f dangling=true -q)&lt;br&gt;docker rmi $(docker images --quiet --filter &amp;quot;dangling=true&amp;quot;)&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1603766983274729472?ref_src=twsrc%5Etfw&#34;&gt;December 16, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;do-you-need-this&#34;&gt;Do you need this?&lt;/h2&gt;
+&lt;p&gt;Check your portainer status page and look for &amp;ldquo;unused&amp;rdquo; images and containers. If you are seeing a lot of these, then you are wasting space and I&amp;rsquo;d recommend running this script to clean them up!&lt;/p&gt;
+&lt;h2 id=&#34;the-cleanup-script&#34;&gt;The Cleanup Script&lt;/h2&gt;
+&lt;p&gt;Run this bash script every week to ensure the cleanup gets performed.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker volume rm &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;docker volume ls -f &lt;span class=&#34;nv&#34;&gt;dangling&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; -q&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker rmi &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;docker images --quiet --filter &lt;span class=&#34;s2&#34;&gt;&amp;#34;dangling=true&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/11111111&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker Guide</title>
+      <link>http://localhost:1313/docker-guide/</link>
+      <pubDate>Fri, 09 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docker-guide/</guid>
+      <description>&lt;p&gt;This is a full walk-through and guide for Docker.&lt;/p&gt;
+&lt;h2 id=&#34;install-and-getting-started&#34;&gt;Install and Getting Started&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Official Docker: &lt;a href=&#34;https://docs.docker.com/get-docker/&#34;&gt;https://docs.docker.com/get-docker/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Official Portainer: &lt;a href=&#34;https://docs.portainer.io/start/install/server/docker&#34;&gt;https://docs.portainer.io/start/install/server/docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;quick-commands&#34;&gt;Quick Commands&lt;/h2&gt;
+&lt;h3 id=&#34;run-a-new-container&#34;&gt;Run a new container&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;New Image - &lt;code&gt;docker run IMAGE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Name Container and Launch Image - &lt;code&gt;docker run --name CONTAINER IMAGE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Map Container Ports and Launch Image -&lt;code&gt;docker run -p HOSTPORT:CONTAINERPORT IMAGE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Map ALL Ports and Launch Image - &lt;code&gt;docker run -P IMAGE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Launch Image as Background Service - &lt;code&gt;docker run -d IMAGE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Map Local Directory and Launch - &lt;code&gt;docker run -v HOSTDIR:TARGETDIR IMAGE&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;manage-containers&#34;&gt;Manage Containers&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;List RUNNING Containers - &lt;code&gt;docker ps&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;List ALL containers - &lt;code&gt;docker ps -a&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Delete container - &lt;code&gt;docker rm CONTAINER&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Delete a Running Container - &lt;code&gt;docker rm -f CONTAINER&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Stop Container - &lt;code&gt;docker stop CONTAINER&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start Container - &lt;code&gt;docker start CONTAINER&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Copy File FROM container - &lt;code&gt;docker cp CONTAINER:SOURCE TARGET&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Copy File TO container - &lt;code&gt;docker cp TARGET CONTAINER:SOURCE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start Shell inside container - &lt;code&gt;docker exec -it CONTAINER bash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rename container - &lt;code&gt;docker rename OLD NEW&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create new Image from Container - &lt;code&gt;docker commit CONTAINER&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;manage-images&#34;&gt;Manage Images&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Download Image - &lt;code&gt;docker pull IMAGE[:TAG]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Upload Image to repository - &lt;code&gt;docker push IMAGE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Delete Image - &lt;code&gt;docker rmi IMAGE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;List Images - &lt;code&gt;docker images&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Build Image from Docker file - &lt;code&gt;docker build DIRECTORY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Tag Image IMAGE - &lt;code&gt;docker tag IMAGE NEWIMAGE:TAG&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;troubleshooting-and-information&#34;&gt;Troubleshooting and Information&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Show logs - &lt;code&gt;docker logs CONTAINER&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show stats - &lt;code&gt;docker stats&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show processes - &lt;code&gt;docker top CONTAINER&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show modified files - &lt;code&gt;docker diff CONTAINER&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Show mapped ports - &lt;code&gt;docker port CONTAINER&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/94VQvRpjfO8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker Macos</title>
+      <link>http://localhost:1313/docker-macos/</link>
+      <pubDate>Wed, 30 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docker-macos/</guid>
+      <description>&lt;p&gt;Don&amp;rsquo;t have a Mac and need MacOS? No problem, run it in a docker container.&lt;/p&gt;
+&lt;p&gt;Credit goes to this twitter user:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Anthony &lt;a href=&#34;https://twitter.com/LinusTech?ref_src=twsrc%5Etfw&#34;&gt;@LinusTech&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/christitustech?ref_src=twsrc%5Etfw&#34;&gt;@christitustech&lt;/a&gt; need to check out this project:&lt;a href=&#34;https://t.co/ctx41h0j25&#34;&gt;https://t.co/ctx41h0j25&lt;/a&gt;&lt;br&gt;&lt;br&gt;It offers macOS Catalina, Big Sur, Monterey, High Sierra, and Mojave as Docker images.&lt;br&gt;&lt;br&gt;PS:&lt;br&gt;Someone please tell me what&amp;#39;s Anthony&amp;#39;s twitter handle. I need to follow that man.&lt;/p&gt;&amp;mdash; Arinze (@justArRinze) &lt;a href=&#34;https://twitter.com/justArRinze/status/1591779981390413826?ref_src=twsrc%5Etfw&#34;&gt;November 13, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
+&lt;p&gt;Install Docker Ubuntu 22.04&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo add-apt-repository &amp;#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install docker-ce -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo usermod -aG docker $USER
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Reboot or logout/login&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(Optional) GUI Webpage for Managing Docker - Portainer&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker volume create portainer_data
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--restart=always \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-v /var/run/docker.sock:/var/run/docker.sock \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-v portainer_data:/data \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;portainer/portainer-ce:2.9.3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Open up browser and navigate to &lt;a href=&#34;https://localhost:9443&#34;&gt;https://localhost:9443&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Click Advanced and proceed with any certificate errors&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;macos-docker-setup&#34;&gt;MacOS Docker Setup&lt;/h2&gt;
+&lt;p&gt;Setup the MacOS Docker Container with the following docker command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -it \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    --device /dev/kvm \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -p 50922:10022 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -v /tmp/.X11-unix:/tmp/.X11-unix \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -e &amp;#34;DISPLAY=${DISPLAY:-:0.0}&amp;#34; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -e GENERATE_UNIQUE=true \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -e MASTER_PLIST_URL=&amp;#39;https://raw.githubusercontent.com/sickcodes/osx-serial-generator/master/config-custom.plist&amp;#39; \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    sickcodes/docker-osx:monterey
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# docker build -t docker-osx --build-arg SHORTNAME=monterey .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use Disk Utility to &amp;ldquo;erase&amp;rdquo; the 270GB virtual disk: &lt;em&gt;Note: This is just virtual and doesn&amp;rsquo;t erase your drive&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/docker-macos/disk-util.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;start-macos-docker-container&#34;&gt;Start MacOS Docker Container&lt;/h2&gt;
+&lt;p&gt;Before we start the container find the name with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker ps -a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Look for the NAMES column and pick the container name.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/docker-macos/container.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Start with the following command NAME = Name from column above&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker start NAME
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;portainer-method-for-starting&#34;&gt;Portainer Method for Starting&lt;/h3&gt;
+&lt;p&gt;I love portainer because you can easily manage your containers. Start, Stop, and see resource usage&amp;hellip; Portainer does it all! Here is what mine looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/docker-macos/portainer.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;optimize-the-container&#34;&gt;Optimize the Container&lt;/h2&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://github.com/sickcodes/osx-optimizer&#34;&gt;https://github.com/sickcodes/osx-optimizer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Run the following from Root Prompt # &lt;code&gt;sudo su&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.loginwindow autoLoginUser -bool true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mdutil -i off -a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvram boot-args=&amp;#34;serverperfmode=1 $(nvram boot-args 2&amp;gt;/dev/null | cut -f 2-)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture &amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.Accessibility DifferentiateWithoutColor -int 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.universalaccess reduceMotion -int 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.universalaccess reduceTransparency -int 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.Accessibility ReduceMotionEnabled -int 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.commerce AutoUpdate -bool false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.commerce AutoUpdateRestartRequired -bool false
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.SoftwareUpdate ConfigDataInstall -int 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.SoftwareUpdate AutomaticDownload -int 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.loginwindow DisableScreenLock -bool true
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.loginwindow TALLogoutSavesState -bool false
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;final-result&#34;&gt;Final Result&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/docker-macos/macos-final.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/XWo2gnNbeGQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Commiting Changes to Docker images and containers</title>
+      <link>http://localhost:1313/commiting-docker-images/</link>
+      <pubDate>Thu, 21 Jun 2018 19:36:03 +0000</pubDate>
+      
+      <guid>http://localhost:1313/commiting-docker-images/</guid>
+      <description>&lt;p&gt;This is a walkthrough of how to commit changes to docker images and containers. You need to do this if you make configuration changes to any docker images. By committing changes to the docker images you can backup and clone them.&lt;/p&gt;
+&lt;p&gt;Docker is a very powerful tool you can use to isolate applications, therefore, you won’t have them on a single server. However, some docker images don’t save changes to their container when a restart happens. You will notice that when a reboot or unexpected outage happens all your configuration will be gone since the creation of container. The Ubiquiti Unifi Controller docker image is a good example of this.&lt;/p&gt;
+&lt;h5 id=&#34;here-are-the-following-commands-to-commit-those-changes-to-a-new-image&#34;&gt;Here are the following commands to commit those changes to a new image&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;sudo docker ps -l&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Note: This shows all your containers you need to copy Container ID for the one you want to commit changes on.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo docker commit CONTAINER_ID_GOES_HERE IMAGENAME:TAG&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Example Syntax: sudo docker commit 520b0f024bf6 unifi:latest-06-21-2018&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2018/06/docker.png&#34; alt=&#34;docker&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now if you have any issues you can simply create a new container using the image you created above.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

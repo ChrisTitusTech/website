@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fedora on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/fedora/</link>
+    <description>Recent content in Fedora on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/fedora/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Package Manager</title>
+      <link>http://localhost:1313/best-package-manager/</link>
+      <pubDate>Mon, 08 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/best-package-manager/</guid>
+      <description>&lt;p&gt;Instead of using the built-in package manager in Linux or some container that never puts the programs files in a usable spot, we will use Homebrew!&lt;/p&gt;
+&lt;p&gt;I know, it&amp;rsquo;s an OS X package manager, but it works fantastic on Linux and solves MANY problems.&lt;/p&gt;
+&lt;p&gt;Main issues it addresses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Older packages from stable Linux distributions&lt;/li&gt;
+&lt;li&gt;Putting the installed packages in easy spots to reference them and modify them when needed.&lt;/li&gt;
+&lt;li&gt;Using sudo can be dangerous and brew installs it to a home directory instead of systemwide without needing sudo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A good example of this. On Debian and Fedora the package HUGO is old&amp;hellip; like really old. Anywhere between version .60 and .90 where home brew installs version .101-extended&lt;/p&gt;
+&lt;h2 id=&#34;installing-homebrew&#34;&gt;Installing Homebrew&lt;/h2&gt;
+&lt;h3 id=&#34;dependencies&#34;&gt;Dependencies&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Debian or Ubuntu&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-get install build-essential procps curl file git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Fedora, CentOS, or Red Hat&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum groupinstall &amp;#39;Development Tools&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum install procps-ng curl file git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum install libxcrypt-compat # needed by Fedora 30 and up
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;install-script&#34;&gt;Install Script&lt;/h3&gt;
+&lt;p&gt;One command to install it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/bin/bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-brew-available-in-terminal&#34;&gt;Make brew available in terminal&lt;/h3&gt;
+&lt;p&gt;By default homebrew puts itself in an easy to access directory. &lt;code&gt;/home/linuxbrew/.linuxbrew&lt;/code&gt; but there are a variety methods to use it from your prompt.&lt;/p&gt;
+&lt;h4 id=&#34;official-method&#34;&gt;Official Method&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test -d ~/.linuxbrew &amp;amp;&amp;amp; eval &amp;#34;$(~/.linuxbrew/bin/brew shellenv)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test -d /home/linuxbrew/.linuxbrew &amp;amp;&amp;amp; eval &amp;#34;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test -r ~/.bash_profile &amp;amp;&amp;amp; echo &amp;#34;eval \&amp;#34;\$($(brew --prefix)/bin/brew shellenv)\&amp;#34;&amp;#34; &amp;gt;&amp;gt; ~/.bash_profile
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;eval \&amp;#34;\$($(brew --prefix)/bin/brew shellenv)\&amp;#34;&amp;#34; &amp;gt;&amp;gt; ~/.profile
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;the-bashrc-method&#34;&gt;The .bashrc Method&lt;/h4&gt;
+&lt;p&gt;Add the following line to &lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;eval &amp;#34;$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: if you use ZSH then the file you need to edit is &lt;code&gt;~/.zshrc&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;using-homebrew&#34;&gt;Using Homebrew&lt;/h2&gt;
+&lt;p&gt;With homebrew setup here are the commands I use almost daily&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;brew install programname&lt;/code&gt; - Install programname using brew&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew search programname&lt;/code&gt; - Search for programname in brew&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew uninstall programname&lt;/code&gt; - Uninstall program&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew update&lt;/code&gt; - Updates brew&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew upgrade program&lt;/code&gt; - Updates just that one program&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew list&lt;/code&gt; - List programs in brew&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Get Lost? &lt;code&gt;man brew&lt;/code&gt; to look at all documentation in terminal or don&amp;rsquo;t know what a program does? &lt;code&gt;brew info programname&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s it for the daily syntax&lt;/p&gt;
+&lt;h2 id=&#34;understanding-homebrew-terms&#34;&gt;Understanding Homebrew terms&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;keg - Program binaries created from source&lt;/li&gt;
+&lt;li&gt;bottle - Program binaries downloaded&lt;/li&gt;
+&lt;li&gt;cellar - Directory where kegs / binaries are stored&lt;/li&gt;
+&lt;li&gt;tap - git repository&lt;/li&gt;
+&lt;li&gt;cask - mac os native binary (not used in Linux)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is other stuff to homebrew but read the full documentation if interested here &lt;a href=&#34;https://docs.brew.sh/Formula-Cookbook#homebrew-terminology&#34;&gt;https://docs.brew.sh/Formula-Cookbook#homebrew-terminology&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Basics of homebrew on Linux official documentation &lt;a href=&#34;https://docs.brew.sh/Homebrew-on-Linux&#34;&gt;https://docs.brew.sh/Homebrew-on-Linux&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/QsYEvnV-P34&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;thank-you-homebrew-team&#34;&gt;Thank you Homebrew Team&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Thanks &lt;a href=&#34;https://twitter.com/MacHomebrew?ref_src=twsrc%5Etfw&#34;&gt;@MacHomebrew&lt;/a&gt; for making an amazing product and also letting us Linux users in on the fun!&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1554153066823385089?ref_src=twsrc%5Etfw&#34;&gt;August 1, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Speedup Linux</title>
+      <link>http://localhost:1313/speedup-linux/</link>
+      <pubDate>Sun, 24 Jul 2022 10:30:53 -0500</pubDate>
+      
+      <guid>http://localhost:1313/speedup-linux/</guid>
+      <description>&lt;p&gt;Linux by default is meant for servers and actually decreases the performance for greater security. While this great in business, when using Linux as a desktop it is not ideal unless your are serving other devices on your network with that machine.&lt;/p&gt;
+&lt;h2 id=&#34;disable-mitigations&#34;&gt;Disable Mitigations&lt;/h2&gt;
+&lt;p&gt;This will have a substantial increase in performance just by doing disable many mitigations that happen in multi-threaded systems. The more core count you have the greater the performance gain. Some performances increases can be as large as 30%, but the average increase is about 10%.&lt;/p&gt;
+&lt;p&gt;Add this to your &lt;code&gt;/etc/default/grub&lt;/code&gt; under line &lt;code&gt;GRUB_CMDLINE_LINUX=&amp;quot;rhgb quiet&amp;quot;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRUB_CMDLINE_LINUX=&amp;#34;rhgb quiet mitigations=off&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;zswap-for-16gb-or-less-systems&#34;&gt;ZSwap for 16GB or Less Systems&lt;/h2&gt;
+&lt;p&gt;Z Swap is the a neat Linux feature that compresses data that is about to enter your swap file. This causes it to be used quite a bit less and can give a performance uplift to those with a small amount of memory. If you have a system with 32GB or greater, I wouldn&amp;rsquo;t recommend doing this.&lt;/p&gt;
+&lt;p&gt;Add this to your &lt;code&gt;/etc/default/grub&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRUB_CMDLINE_LINUX=&amp;#34;zswap.enabled=1 rhgb quiet mitigations=off&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;systems-older-than-linux-511&#34;&gt;Systems older than Linux 5.11&lt;/h2&gt;
+&lt;p&gt;There is a cool website called &lt;a href=&#34;https://make-linux-fast-again.com/&#34;&gt;https://make-linux-fast-again.com/&lt;/a&gt; that has a massive amount of the flags including the ones used above. However, this is mainly for older Linux installs and why I really don&amp;rsquo;t use it. These are all the flags that website recommends:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off tsx=on tsx_async_abort=off mitigations=off
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;is-this-really-needed&#34;&gt;Is this really needed?&lt;/h2&gt;
+&lt;p&gt;While all this above isn&amp;rsquo;t really needed, it is a really neat way to squeeze a bit performance out of your systems. It is ONLY recommended for those not sharing services and files through your network. It is also NOT recommended for those using Linux in a virtual machine as many of the mitigations are for VM protection. So use this RESPONSIBLY and don&amp;rsquo;t just slap it on every Linux install.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/8XueTkMTNvc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Choosing the Right Linux Distro</title>
+      <link>http://localhost:1313/choose-linux-distro/</link>
+      <pubDate>Tue, 28 Jun 2022 17:12:25 -0500</pubDate>
+      
+      <guid>http://localhost:1313/choose-linux-distro/</guid>
+      <description>&lt;p&gt;Choosing a Linux distribution can be difficult, especially if you don&amp;rsquo;t know much about Linux. However, over the past several years I&amp;rsquo;ve tried almost every Distribution that you can choose. There are some that I have not installed, because it was just more of the same.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/choose-linux-distribution/distros.png&#34; alt=&#34;distros&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To start with there is a misconception that there is thousands of choices in Linux Distributions. While technically true, there is really only 3 distributions you need to know about for desktop use, but before we get into that you need to know about what makes up a distribution. This is mandatory to understand why there is so many different ones that splinter off of these three.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-in-a-distribution&#34;&gt;What is in a Distribution&lt;/h2&gt;
+&lt;p&gt;Windows and Mac are called Operating Systems, NOT distributions&amp;hellip; but in Linux this isn&amp;rsquo;t the case. Why? That is because each Linux offering has different options at its core. With Windows and Mac you always get the same bootloader, file manager, etc. and in Linux these can differ drastically from one to the next. So this is what makes up the Linux distribution.&lt;/p&gt;
+&lt;h3 id=&#34;bootloader&#34;&gt;Bootloader&lt;/h3&gt;
+&lt;p&gt;This can is usually either GRUB or systemd-boot. This may not mean much to you, but i&amp;rsquo;ll explain the difference. GRUB has been around for ages and can be themed while having a ton of flexibility. It supports UEFI and Legacy, while systemd-boot is pretty much included with every modern linux distribution and only boots via UEFI and has a limited menu system. I highly encourage you that want a themed multi-boot system to check out my Top 5 Bootloader project that auto-installs multiple themes: &lt;a href=&#34;https://christitus.com/bootloader-themes/&#34;&gt;https://christitus.com/bootloader-themes/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;init-system&#34;&gt;Init System&lt;/h3&gt;
+&lt;p&gt;When your system is initializing on startup it needs to verify all the devices it will use and get the system ready for boot. Almost every Linux system these days use systemd. Systemd is very big and inclusive, but to many is bloated. It does much more than just initializing the system. It has Timers, bootloader, services, and much more. I did a YouTube video explaining everything in systemd if you want to learn more. &lt;a href=&#34;https://youtu.be/hc7J-zWEty8&#34;&gt;https://youtu.be/hc7J-zWEty8&lt;/a&gt;
+There is other options out there for Linux and certain fringe distributions that use them, but if you want other options check out init.d and precursors to systemd. They are much faster and if looking at building an ultimate minimal system this is the route to take.&lt;/p&gt;
+&lt;h3 id=&#34;display-render&#34;&gt;Display Render&lt;/h3&gt;
+&lt;p&gt;To draw graphics on the screen we need a render. There are only two major ones you need to know about. Wayland and Xorg. Wayland is the new kid that should be faster and better, but is lacking features and compatibility. Xorg is the old, wise man that just works, but is starting to show its age. To me, I always choose Xorg because Wayland always runs into problems. Xorg has two features that Wayland is lacking for me right now. It has X11 forwarding for running GUI programs remotely through an SSH connection and using legacy programs for sharing a keyboard/mouse across screens using synergy/barrier. I did a video on this here: &lt;a href=&#34;https://youtu.be/Fci_ALdEzGc&#34;&gt;https://youtu.be/Fci_ALdEzGc&lt;/a&gt;. To many it simply doesn&amp;rsquo;t matter, because they both fundamentally do the same thing.&lt;/p&gt;
+&lt;h3 id=&#34;display-manager&#34;&gt;Display Manager&lt;/h3&gt;
+&lt;p&gt;This really should be called a Login Manager or user selector, but in Linux the entire ecosystem is run by extremely smart technical people, that just so happen to be terrible at marketing. So the &amp;ldquo;Display Manager&amp;rdquo; comes in many flavors and this is where we start to run into many personal options in Distributions. Personally, I really don&amp;rsquo;t care about this, but there are three main ones that are used and can be configured differently:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;lightdm&lt;/li&gt;
+&lt;li&gt;sddm&lt;/li&gt;
+&lt;li&gt;gdm
+While there are others, these three pretty much are always chosen for a distribution. SDDM is generally bundled with KDE systems (which we will get into here in a bit), GDM is for GNOME systems, and lightdm (my personal fav) is pretty much a catch all.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;desktop-environments&#34;&gt;Desktop Environments&lt;/h3&gt;
+&lt;p&gt;Think of Desktop Environments as the tools that make up the control center in an Operating System. Want to change the display resolution, theme, colors, fonts, etc. well all that stuff is in the desktop environment. Now you don&amp;rsquo;t technically need a full blow DE with all this stuff. The main thing you do need is a Window Manager to control where windows are placed. With all that said lets layout the common DEs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GNOME&lt;/li&gt;
+&lt;li&gt;KDE&lt;/li&gt;
+&lt;li&gt;XFCE&lt;/li&gt;
+&lt;li&gt;Window Managers&lt;/li&gt;
+&lt;li&gt;and many, many, more.
+This could be a 100 page manual with all the options, but I want to give you the basics. GNOME gives more of a mac-esque style and KDE gives that windows look and feed. XFCE is more bare-bones with the essential tools and not much else. Where a basic &amp;ldquo;window manager&amp;rdquo; is just the window manager without any utilities. You might think&amp;hellip; &amp;ldquo;How the hell do you change the resolution? or font? with a window manger&amp;hellip;&amp;rdquo; This is accomplished either by hard coding it in to the configuration files or by installing an independent utility.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;package-managers&#34;&gt;Package Managers&lt;/h3&gt;
+&lt;p&gt;This is how distributions install programs. Here are the major ones you need to know about.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;APT - Debian distros &lt;code&gt;apt install programname&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;DNF / YUM - RHEL distros &lt;code&gt;dnf install programname&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Pacman - Arch distros &lt;code&gt;pacman -S programname&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;distributions&#34;&gt;Distributions&lt;/h2&gt;
+&lt;p&gt;So now that you know what they are made up of we can easily get to deciding what you really want your computing experience to be like. Figure out what components above you like and do NOT like. Then swap them out for something better. The main gripe I have with Windows and Mac is I find their file manager absolutely terrible. I want to switch them and rip out the junk they give me, but we can&amp;rsquo;t as they are integral to the function of the operating system. In Linux, we get that freedom. Here are the three &amp;ldquo;distributions&amp;rdquo; that pretty much everything is based on and what the base package installs are. Remember you can change the things you do NOT like from the stock settings.&lt;/p&gt;
+&lt;h3 id=&#34;debian-linux&#34;&gt;Debian Linux&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/choose-linux-distribution/debian.png&#34; alt=&#34;debian&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Debian uses a stable release cycle and generally has older packages, but they don&amp;rsquo;t usually have many bugs and are very reliable. This is typically my go to for desktops I don&amp;rsquo;t change much.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bootloader - GRUB&lt;/li&gt;
+&lt;li&gt;Init System - systemd&lt;/li&gt;
+&lt;li&gt;Display Render - Xorg&lt;/li&gt;
+&lt;li&gt;Display Manager - SDDM/GDM&lt;/li&gt;
+&lt;li&gt;Desktop Environment - KDE/GNOME&lt;/li&gt;
+&lt;li&gt;Package Manager - APT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;arch-linux&#34;&gt;Arch Linux&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/choose-linux-distribution/arch.png&#34; alt=&#34;arch&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Very new packages with a massive user repository to grab programs you might be missing and builds them for you. The main issue is if you forget to update your system for a period of months it is prone to breaking. Backups are MANDATORY if you use this for your daily use. The benefits are you get the latest and greatest and is often thought to be the best for drivers and hardware that is just released. Its unique that you get to choose every component and can utilize pretty much any COMBINATION of components listed above. The only constant is its package manager which is PACMAN. The other unique aspect is it has a helper program that can install things through the AUR (Arch User Repository) and boy does it have options here&amp;hellip; I&amp;rsquo;m going to recommend the top three&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;paru&lt;/li&gt;
+&lt;li&gt;yay&lt;/li&gt;
+&lt;li&gt;trizen
+They follow the same syntax as pacman except you run them at a user level and they can install pretty much any package. For a complete list visit: &lt;a href=&#34;https://aur.archlinux.org/&#34;&gt;https://aur.archlinux.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fedora-linux&#34;&gt;Fedora Linux&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/choose-linux-distribution/fedora.png&#34; alt=&#34;fedora&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is a RHEL (Red Hat Enterprise Linux) based distribution. It strikes a balance between newer packages and Linux kernels between Debian and Arch. Its not as new as Arch, but not as old as Debian. It has different SPINS but its main download uses the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bootloader - Systemd&lt;/li&gt;
+&lt;li&gt;Init System - systemd&lt;/li&gt;
+&lt;li&gt;Display Render - Wayland&lt;/li&gt;
+&lt;li&gt;Desktop Environment - GNOME&lt;/li&gt;
+&lt;li&gt;Package Manager - DNF&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;So the best distribution is the one that suits your needs and preferences. Instead of the one size fits all approach of Mac and Windows, Linux takes a completely different approach. Learn the above and try out the different options and you will make the perfect system for your needs. You will also understand why all the top 5 distros and other Linux garbage on the internet is worthless. That is because there is no perfect distro, however there is the perfect distro for YOU! It just so happens that it is different for each user and you have the options that no other system on earth give you with Linux.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/dL05DoJ0qsQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>LVM (Logical Volume Management) – Combine Physical Drives and more!</title>
+      <link>http://localhost:1313/lvm-guide/</link>
+      <pubDate>Fri, 08 Nov 2019 23:06:31 +0000</pubDate>
+      
+      <guid>http://localhost:1313/lvm-guide/</guid>
+      <description>&lt;p&gt;LVM is a very cool volume management tool. It can be used for a variety of tasks and this guide explains all the things LVM can do. I also do an example video of combining physical hard drives using LVM.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Acronyms you must know!&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;PV&lt;/strong&gt; – Physical Volume&lt;br&gt;
+&lt;strong&gt;VG&lt;/strong&gt; – Volume Group&lt;br&gt;
+&lt;strong&gt;LV&lt;/strong&gt; – Logical Volume&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2019/11/lvm-key.jpeg&#34; alt=&#34;lvm-key&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;lvm-commands&#34;&gt;LVM Commands&lt;/h2&gt;
+&lt;h3 id=&#34;lvm-layer-1-8211-hard-drives-partitions-and-physical-volumes&#34;&gt;LVM Layer 1 – Hard Drives, Partitions, and Physical Volumes&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;lvmdiskscan&lt;/code&gt; – system readout of volumes and partitions&lt;br&gt;
+&lt;code&gt;pvdisplay&lt;/code&gt; – display detailed info on physical volumes&lt;br&gt;
+&lt;code&gt;pvscan&lt;/code&gt; – display disks with physical volumes&lt;br&gt;
+&lt;code&gt;pvcreate /dev/sda1&lt;/code&gt; – create a physical volume from sda1&lt;br&gt;
+&lt;code&gt;pvchange -x n /dev/sda1&lt;/code&gt; – Disallow using a disk partition&lt;br&gt;
+&lt;code&gt;pvresize /dev/sda1&lt;/code&gt; – resize sda1 PV to use all of the partition&lt;br&gt;
+&lt;code&gt;pvresize --setphysicalvolumesize 140G /dev/sda1&lt;/code&gt; – resize sda1 to 140g&lt;br&gt;
+&lt;code&gt;pvmove /dev/sda1&lt;/code&gt; – can move data out of sda1 to other PVs in VG. Note: Free disk space equivalent to data moved is needed elsewhere.&lt;br&gt;
+&lt;code&gt;pvremove /dev/sda1&lt;/code&gt; – delete Physical volume&lt;/p&gt;
+&lt;h3 id=&#34;lvm-layer-2-8211-volume-groups&#34;&gt;LVM Layer 2 – Volume Groups&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;vgcreate vg1 /dev/sda1 /dev/sdb1&lt;/code&gt; – create a volume group from two drives&lt;br&gt;
+&lt;code&gt;vgextend vg1 /dev/sdb1&lt;/code&gt; – add PV to the volume group&lt;br&gt;
+&lt;code&gt;vgdisplay vg1&lt;/code&gt; – Display details on a volume group&lt;br&gt;
+&lt;code&gt;vgscan&lt;/code&gt; – list volume groups&lt;br&gt;
+&lt;code&gt;vgreduce vg1 /dev/sda1&lt;/code&gt; – Removes the drive from vg1&lt;br&gt;
+&lt;em&gt;Note: use pvmove /dev/sda1 before removing the drive from vg1&lt;/em&gt;&lt;br&gt;
+&lt;code&gt;vgchange&lt;/code&gt; – you can activate/deactive and change perameteres&lt;br&gt;
+&lt;code&gt;vgremove vg1&lt;/code&gt; – Remove volume group vg1&lt;br&gt;
+&lt;code&gt;vgsplit&lt;/code&gt; and &lt;code&gt;vgmerge&lt;/code&gt; can split and merge volume groups&lt;br&gt;
+&lt;code&gt;vgrename&lt;/code&gt;– renames a volume group&lt;/p&gt;
+&lt;h3 id=&#34;lvm-layer-3-8211-logical-volumes-and-file-systems&#34;&gt;LVM Layer 3 – Logical Volumes and File Systems&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;lvcreate -L 10G vg1&lt;/code&gt; – create a 10 GB logical volume on volume group vg1&lt;br&gt;
+&lt;code&gt;lvchange&lt;/code&gt; and &lt;code&gt;lvreduce&lt;/code&gt; are commands that typically aren’t used&lt;br&gt;
+&lt;code&gt;lvrename&lt;/code&gt;– rename logical volume&lt;br&gt;
+&lt;code&gt;lvremove&lt;/code&gt; – removes a logical volume&lt;br&gt;
+&lt;code&gt;lvscan&lt;/code&gt; – shows logical volumes&lt;br&gt;
+&lt;code&gt;lvdisplay&lt;/code&gt; – shows details on logical volumes&lt;br&gt;
+&lt;code&gt;lvextend -l +100%FREE /dev/vg1/lv1&lt;/code&gt;– One of the most common commands used to extend logical volume lv1 that takes up ALL of the remaining free space on the volume group vg1.&lt;br&gt;
+&lt;code&gt;resize2fs /dev/vg1/lv1&lt;/code&gt; – resize the file system to the size of the logical volume lv1.&lt;/p&gt;
+&lt;h2 id=&#34;lvm-conclusion&#34;&gt;LVM conclusion&lt;/h2&gt;
+&lt;p&gt;LVM is fantastic for managing a system, but remember that the more drives you make in a volume group that the likely it is to fail. Instead of having one point of failure you can open yourself up for multiple points when making a large system with multiple drives.&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/scMkYQxBtJ4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Resize LVM Partition | Fedora 29 | Step by Step Guide</title>
+      <link>http://localhost:1313/resize-lvm-partition-fedora-29-step-by-step-guide/</link>
+      <pubDate>Sat, 17 Nov 2018 19:54:29 +0000</pubDate>
+      
+      <guid>http://localhost:1313/resize-lvm-partition-fedora-29-step-by-step-guide/</guid>
+      <description>&lt;p&gt;In this guide, I show you how to Resize LVM Partition in Fedora 29. I recently ran out of space and had to clone my install from a 120SSD ssd to a 240 GB SSD.&lt;/p&gt;
+&lt;p&gt;I first had issues with boot timing out and causing the /dev/mapper/home, /dev/mapper/swap, and /dev/mapper/root not being found. To fix this, I simply rebooted to the rescue kernel and ran &lt;code&gt;dracut --regenerate-all -f&lt;/code&gt; to resolve this in Single-User Mode.&lt;/p&gt;
+&lt;h4 id=&#34;disclaimer-all-these-commands-are-done-in-single-user-mode-therefore-this-will-not-work-on-a-regular-desktop&#34;&gt;Disclaimer: All these commands are done in Single-User Mode, therefore this will NOT work on a regular desktop.&lt;/h4&gt;
+&lt;p&gt;Upon reboot, I found that I now can see all the space on the drive, but needed to resize the LVM Partition.&lt;/p&gt;
+&lt;h3 id=&#34;resize-lvm-partition&#34;&gt;Resize LVM Partition&lt;/h3&gt;
+&lt;p&gt;First, we need to identify the LVM Partition we need to expand. In my case, it was my home directory that was running low on space.&lt;/p&gt;
+&lt;p&gt;Command: &lt;code&gt;df -h&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2018/11/Selection_008-300x111.png&#34; alt=&#34;lvm-selection8&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Second, lets verify there is space to expand on the physical drive.&lt;/p&gt;
+&lt;p&gt;Command: &lt;code&gt;vgdisplay&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2018/11/Selection_009.png&#34; alt=&#34;lvm-selection9&#34;&gt;&lt;/p&gt;
+&lt;p&gt;With all this verified, you can now expand the lvm partition.&lt;br&gt;
+&lt;em&gt;Note: the command below will take up a 100% of the free space, see screenshot for precise extentsion.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Command: &lt;code&gt;lvextend -l 100%FREE /dev/fedora/home&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2018/11/Selection_010.png&#34; alt=&#34;lvm-selection10&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Finally, with the logical volume extended we simply reclaim the free space now.&lt;/p&gt;
+&lt;p&gt;Command: &lt;code&gt;resize2fs /dev/fedora/home&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2018/11/Selection_011.png&#34; alt=&#34;lvm-selection11&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

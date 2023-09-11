@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ameliorated on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/ameliorated/</link>
+    <description>Recent content in Ameliorated on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ameliorated/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AME Wizard - The Future of Debloat?</title>
+      <link>http://localhost:1313/ame-wizard-the-future-of-debloat/</link>
+      <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/ame-wizard-the-future-of-debloat/</guid>
+      <description>&lt;p&gt;I recently made a review of AtlasOS and what drove it is the AME Wizard made by a different entity. This overviews it and what it is and is NOT!&lt;/p&gt;
+&lt;h2 id=&#34;can-we-trust-it&#34;&gt;Can we trust it?&lt;/h2&gt;
+&lt;p&gt;Their is parts of it that are open-source and other parts are closed source and gated behind the &lt;a href=&#34;https://ameliorated.io/&#34;&gt;https://ameliorated.io/&lt;/a&gt; team. This is done for monetary purposes and security. They do gate the playbook process and AME Wizard verification. They can also charge for auto-updates related to the playbooks.&lt;/p&gt;
+&lt;p&gt;Personally, I don&amp;rsquo;t mind this approach, but it does give me pause. When they are getting money for maintaining multiple custom windows playbooks from different teams, it will make it more secure as the incentive to remain virus-free and legitimate is more important because they make money from their reputation.&lt;/p&gt;
+&lt;p&gt;Right now to immediately get verified you can go through their patreon and for $10/Month you get verified playbook publications.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/ame/verified.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;my-recommendations&#34;&gt;My Recommendations&lt;/h2&gt;
+&lt;p&gt;It is still the early days of these custom windows installs. Right now they only have a handful of patreon donations and until they start making a considerable amount, I can&amp;rsquo;t recommend it.&lt;/p&gt;
+&lt;p&gt;The documentation for making custom playbooks or using the open-source cli program is not out right now. This makes it a project I can&amp;rsquo;t verify or use, because all the playbooks I&amp;rsquo;ve seen just strip out too many things to either recommend or use as a daily driver.&lt;/p&gt;
+&lt;p&gt;The future of the project is really bright, and I look forward to seeing the continued evolution of it.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Y35Prm8nG40&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

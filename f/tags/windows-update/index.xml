@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Update on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/windows-update/</link>
+    <description>Recent content in Windows Update on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Jun 2020 10:50:19 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/windows-update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wsl2</title>
+      <link>http://localhost:1313/wsl2/</link>
+      <pubDate>Sun, 07 Jun 2020 10:50:19 -0500</pubDate>
+      
+      <guid>http://localhost:1313/wsl2/</guid>
+      <description>&lt;p&gt;This article goes over WSL 1 and 2 for Feature Update 2004. This will help you know which WSL you are currently using for any Linux installs on your PC.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Source Article: &lt;a href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-win10&#34;&gt;https://docs.microsoft.com/en-us/windows/wsl/install-win10&lt;/a&gt; I copy these because Microsoft is notorious for changing URLs and to make additions&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install-the-windows-subsystem-for-linux&#34;&gt;Install the Windows Subsystem for Linux&lt;/h2&gt;
+&lt;p&gt;Before installing any Linux distributions on Windows, you must enable the &amp;ldquo;Windows Subsystem for Linux&amp;rdquo; optional feature.&lt;br&gt;
+&lt;strong&gt;Open PowerShell as Administrator and run:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To only install WSL 1, you should now restart your machine and move on to Install your Linux distribution of choice, otherwise wait to restart and move on to update to WSL 2. Read more about Comparing WSL 2 and WSL 1.&lt;/p&gt;
+&lt;h2 id=&#34;update-to-wsl-2&#34;&gt;Update to WSL 2&lt;/h2&gt;
+&lt;p&gt;To update to WSL 2, you must meet the follow criteria:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Running Windows 10, updated to version 2004, Build 19041 or higher.&lt;/li&gt;
+&lt;li&gt;Check your Windows version by selecting the Windows logo key + R, type &lt;code&gt;winver&lt;/code&gt;, select OK. (Or enter the ver command in Windows Command Prompt). Please update to the latest Windows version if your build is lower than 19041. Get Windows Update Assistant.&lt;/li&gt;
+&lt;li&gt;Enable the &amp;lsquo;Virtual Machine Platform&amp;rsquo; optional component&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before installing WSL 2, you must enable the &amp;ldquo;Virtual Machine Platform&amp;rdquo; optional feature.&lt;br&gt;
+&lt;strong&gt;Open PowerShell as Administrator and run:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Restart your machine to complete the WSL install and update to WSL 2.&lt;/p&gt;
+&lt;h3 id=&#34;set-wsl-2-as-your-default-version&#34;&gt;Set WSL 2 as your default version&lt;/h3&gt;
+&lt;p&gt;Run the following command in Powershell to set WSL 2 as the default version when installing a new Linux distribution:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl --set-default-version 2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: The update from WSL 1 to WSL 2 may take several minutes to complete depending on the size of your targeted distribution.&lt;/em&gt;&lt;/p&gt;
+&lt;h4 id=&#34;troubleshooting-wsl-2-set-default-error&#34;&gt;Troubleshooting WSL 2 set-default error&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;../images/2020/wsl/wsl-kernel.png&#34; alt=&#34;wsl-kernel&#34;&gt;&lt;br&gt;
+If you can&amp;rsquo;t set the default version after enabling the virtual machine platform and linux subsystem for windows. Then you need to do a kernel upgrade. This done by running the following msi file: &lt;a href=&#34;https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi&#34;&gt;https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install-your-linux-distribution-of-choice&#34;&gt;Install your Linux distribution of choice&lt;/h2&gt;
+&lt;p&gt;Open the Microsoft Store and select your favorite Linux distribution.&lt;br&gt;
+&lt;img src=&#34;../images/2020/wsl/wsl-store.png&#34; alt=&#34;wsl-store&#34;&gt;&lt;br&gt;
+The following links will open the Microsoft store page for each distribution:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9pjn388hp8c9&#34;&gt;Ubuntu 16.04 LTS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9N9TNGVNDL3Q&#34;&gt;Ubuntu 18.04 LTS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9n6svws3rx71&#34;&gt;Ubuntu 20.04 LTS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9NJFZK00FGKV&#34;&gt;openSUSE Leap 15.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9MZ3D1TRP8T1&#34;&gt;SUSE Linux Enterprise Server 12 SP5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9PN498VPMF3Z&#34;&gt;SUSE Linux Enterprise Server 15 SP1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9PKR34TNCV07&#34;&gt;Kali Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9MSVKQC78PK6&#34;&gt;Debian GNU/Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9n6gdm4k2hnc&#34;&gt;Fedora Remix for WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9NV1GV1PXZ6P&#34;&gt;Pengwin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9N8LP0X93VCP&#34;&gt;Pengwin Enterprise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9p804crf0395&#34;&gt;Alpine WSL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From the distribution&amp;rsquo;s page, select &amp;ldquo;Get&amp;rdquo;.&lt;br&gt;
+&lt;img src=&#34;../images/2020/wsl/wsl-store2.png&#34; alt=&#34;wsl-store2&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;set-up-a-new-distribution&#34;&gt;Set up a new distribution&lt;/h2&gt;
+&lt;p&gt;The first time you launch a newly installed Linux distribution, a console window will open and you&amp;rsquo;ll be asked to wait for a minute or two for files to de-compress and be stored on your PC. All future launches should take less than a second.
+You will then need to create a user account and password for your new Linux distribution.&lt;br&gt;
+&lt;img src=&#34;../images/2020/wsl/wsl-prompt.png&#34; alt=&#34;wsl-prompt&#34;&gt;&lt;br&gt;
+Set your distribution version to WSL 1 or WSL 2&lt;br&gt;
+You can check the WSL version assigned to each of the Linux distributions you have installed by opening the PowerShell command line and entering the command (only available in Windows Build 19041 or higher): &lt;code&gt;wsl -l -v&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl --list --verbose
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To set a distribution to be backed by either version of WSL please run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl --set-version &amp;lt;distribution name&amp;gt; &amp;lt;versionNumber&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Make sure to replace &lt;distribution name&gt; with the actual name of your distribution and &lt;versionNumber&gt; with the number &amp;lsquo;1&amp;rsquo; or &amp;lsquo;2&amp;rsquo;. You can change back to WSL 1 at anytime by running the same command as above but replacing the &amp;lsquo;2&amp;rsquo; with a &amp;lsquo;1&amp;rsquo;.&lt;br&gt;
+Additionally, if you want to make WSL 2 your default architecture you can do so with this command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl --set-default-version 2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Note: This will set the version of any new distribution installed to WSL 2.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;troubleshooting-installation&#34;&gt;Troubleshooting installation&lt;/h2&gt;
+&lt;p&gt;Below are related errors and suggested fixes. Refer to the WSL troubleshooting page for other common errors and their solutions.&lt;/p&gt;
+&lt;h4 id=&#34;installation-failed-with-error-0x80070003&#34;&gt;Installation failed with error 0x80070003&lt;/h4&gt;
+&lt;p&gt;The Windows Subsystem for Linux only runs on your system drive (usually this is your C: drive). Make sure that distributions are stored on your system drive:&lt;br&gt;
+&lt;strong&gt;Open Settings -&amp;gt; Storage -&amp;gt; More Storage Settings:&lt;/strong&gt; Change where new content is saved&lt;br&gt;
+&lt;img src=&#34;../images/2020/wsl/wsl-troubleshoot.png&#34; alt=&#34;wsl-troubleshoot&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;wslregisterdistribution-failed-with-error-0x8007019e&#34;&gt;WslRegisterDistribution failed with error 0x8007019e&lt;/h4&gt;
+&lt;p&gt;The Windows Subsystem for Linux optional component is not enabled:&lt;br&gt;
+&lt;strong&gt;Open Control Panel -&amp;gt; Programs and Features -&amp;gt; Turn Windows Feature on or off -&amp;gt; Check Windows Subsystem for Linux or using the PowerShell cmdlet mentioned at the beginning of this article.&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;installation-failed-with-error-0x80070003-or-error-0x80370102&#34;&gt;Installation failed with error 0x80070003 or error 0x80370102&lt;/h4&gt;
+&lt;p&gt;Please make sure that virtualization is enabled inside of your computer&amp;rsquo;s BIOS. The instructions on how to do this will vary from computer to computer, and will most likely be under CPU related options.&lt;/p&gt;
+&lt;h4 id=&#34;error-when-trying-to-upgrade-invalid-command-line-option-wsl---set-version-ubuntu-2&#34;&gt;Error when trying to upgrade: Invalid command line option: wsl &amp;ndash;set-version Ubuntu 2&lt;/h4&gt;
+&lt;p&gt;Please make sure that you have the Windows Subsystem for Linux enabled, and that you&amp;rsquo;re using Windows Build version 19041 or higher. To enable WSL run this command in a Powershell prompt with admin privileges: Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux. You can find the full WSL install instructions &lt;a href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install-win10&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;the-requested-operation-could-not-be-completed-due-to-a-virtual-disk-system-limitation-virtual-hard-disk-files-must-be-uncompressed-and-unencrypted-and-must-not-be-sparse&#34;&gt;The requested operation could not be completed due to a virtual disk system limitation. Virtual hard disk files must be uncompressed and unencrypted and must not be sparse.&lt;/h4&gt;
+&lt;p&gt;Please check WSL Github &lt;a href=&#34;https://github.com/microsoft/WSL/issues/4103&#34;&gt;thread #4103&lt;/a&gt; where this issue is being tracked for updated information.&lt;/p&gt;
+&lt;h4 id=&#34;the-term-wsl-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program&#34;&gt;The term &amp;lsquo;wsl&amp;rsquo; is not recognized as the name of a cmdlet, function, script file, or operable program.&lt;/h4&gt;
+&lt;p&gt;Ensure that the Windows Subsystem for Linux Optional Component is installed. Additionally, if you are using an Arm64 device and running this command from PowerShell, you will receive this error. Instead run wsl.exe from PowerShell Core, or Command Prompt.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;WSL 2 is still very new and as such is still rough around the edges. However, the performance increase is undeniable and is a substantial improvement over&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Install Only Security Updates on Windows 10</title>
+      <link>http://localhost:1313/windows-update-security-only/</link>
+      <pubDate>Sun, 29 Mar 2020 21:55:22 -0500</pubDate>
+      
+      <guid>http://localhost:1313/windows-update-security-only/</guid>
+      <description>&lt;p&gt;This article shows how to install only security updates on Windows 10. This is vital to avoid long updates on startup or shutdown!&lt;/p&gt;
+&lt;h2 id=&#34;windows-10-pro-users---policy-editor-method&#34;&gt;Windows 10 Pro Users - Policy Editor Method&lt;/h2&gt;
+&lt;p&gt;Open your Local Policy editor (Start - Run) and type &lt;code&gt;gpedit.msc&lt;/code&gt;&lt;br&gt;
+From this screen go to &lt;code&gt;Computer - Administrative Templates - Windows Components - Windows Update - Windows Update for Business&lt;/code&gt;&lt;br&gt;
+&lt;img src=&#34;../images/2020/winupdate/gpedit.png&#34; alt=&#34;gpedit&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now set the &lt;em&gt;Feature Updates&lt;/em&gt; to the following&lt;br&gt;
+&lt;img src=&#34;../images/2020/winupdate/gpedit2.png&#34; alt=&#34;gpedit2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For &lt;em&gt;Quality Updates&lt;/em&gt;, I recommend deferring those 4 days.&lt;/p&gt;
+&lt;h2 id=&#34;windows-10-home-users---regedit-method&#34;&gt;Windows 10 Home Users - Regedit Method&lt;/h2&gt;
+&lt;p&gt;Open up your registry editor (Start - Run) and type &lt;code&gt;regedit&lt;/code&gt;&lt;br&gt;
+Go to the follow key &lt;code&gt;Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings&lt;/code&gt;&lt;br&gt;
+Add the following DWORD Values (32-bit value):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BranchReadinessLevel 20&lt;/li&gt;
+&lt;li&gt;DeferFeatureUpdatesPeriodInDays 365&lt;/li&gt;
+&lt;li&gt;DeferQualityUpdatesPeriodInDays 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;../images/2020/winupdate/regedit.png&#34; alt=&#34;regedit&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;set-active-hours&#34;&gt;Set Active Hours&lt;/h2&gt;
+&lt;p&gt;Under Settings and Updates &amp;amp; Security, make sure to set your active hours! I always set these manually as the automatic method is horrible. Always set an 18 hour window where you want to make sure your computer doesn&amp;rsquo;t update.&lt;br&gt;
+&lt;em&gt;My personal active hours are 8 AM to 2 AM.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;These are settings that I recommend anyone using windows adopt. Otherwise, you will run into many update issues caused by the terrible quality control that goes into the first couple rounds of updates in Microsoft Windows 10.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

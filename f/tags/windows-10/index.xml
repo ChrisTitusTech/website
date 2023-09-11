@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows 10 on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/windows-10/</link>
+    <description>Recent content in Windows 10 on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/windows-10/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Should you switch from Windows 10 to Windows 11</title>
+      <link>http://localhost:1313/win10-to-win11/</link>
+      <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/win10-to-win11/</guid>
+      <description>&lt;p&gt;The question isn&amp;rsquo;t if you should switch, but if you CAN switch. Windows 11 does a lot of things right as most of it&amp;rsquo;s systems are identical to 10. However, there are some drawbacks which we need to dive into.&lt;/p&gt;
+&lt;h2 id=&#34;windows-11-requirements&#34;&gt;Windows 11 Requirements&lt;/h2&gt;
+&lt;p&gt;There are two issues with Windows 11 that will catch some older computers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU Requirement: Intel 8th Generation and AMD 2nd Generation&lt;/li&gt;
+&lt;li&gt;UEFI Secure Boot with TPM 2.0 Chip&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;However, these requirements are artificial and can easily be bypassed. With these Steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Launch Command Prompt with Shift + F10&lt;/li&gt;
+&lt;li&gt;Type &lt;code&gt;regedit&lt;/code&gt; and launch Reg Editor&lt;/li&gt;
+&lt;li&gt;Add the following KEY (folder) HKEY_Local_Machine -&amp;gt; System -&amp;gt; Setup &amp;mdash; Name the key &lt;code&gt;MoSetup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add the following Value (DWORD) Name = &lt;code&gt;AllowUpgradesWithUnsupportedTPMOrCPU&lt;/code&gt;
+Value = &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Close Regedit and continue install&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;why-upgrade&#34;&gt;Why Upgrade&lt;/h2&gt;
+&lt;p&gt;Here are the main reason to upgade to Windows 11. &lt;strong&gt;The Look&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can go round and round about the marketing of Microsoft and all the bullshit they like to say. However, at the end of the day if you want a new look and a cleaner looking OS&amp;hellip; Windows 11 is it. The better sounds, rounded aesthetic, auto-hdr for games, and overall more cohesive visual experience is what Windows 11 does well.&lt;/p&gt;
+&lt;p&gt;What about all the other features Microsoft shills say are important and are NOT?&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Performance - I have seen negligible performance gains and even worse performance in some instances&lt;/li&gt;
+&lt;li&gt;Widgets - This just reminds of Vista sidebar all over again. They are all sizzle and no steak.&lt;/li&gt;
+&lt;li&gt;Security - Another marketing ploy that promotes it being more secure. While technically true, it mainly applies to the startup of your pc with TPM and Secureboot. Which frankly, doesn&amp;rsquo;t matter as I can easily crack your Windows security with it&amp;rsquo;s terrible SAM file exploits that are well documented and present in Windows 11.&lt;/li&gt;
+&lt;li&gt;Teams colloboration - Just more pre-installed crap that you probably won&amp;rsquo;t use.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are all just meh points that I view the exact same as Windows 10.&lt;/p&gt;
+&lt;h2 id=&#34;why-not-to-upgrade&#34;&gt;Why NOT to Upgrade&lt;/h2&gt;
+&lt;p&gt;Windows 11 may look objectively better, but there are also some downsides. Here are the big ones I hate.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Taskbar - It is just plain awful as it is based on a new UWP platform that isn&amp;rsquo;t nearly as good as 10&amp;rsquo;s taskbar. Also you can&amp;rsquo;t move it to the left, right, or top like you can in 10.&lt;/li&gt;
+&lt;li&gt;Context Menu - The new look might look cleaner, but is far less functional. I&amp;rsquo;m working on a tweak to revert this back to the windows 10 menu&lt;/li&gt;
+&lt;li&gt;Changing Default Apps is awful in Windows 11. Everything is extension based now, where it is program based in Windows 10.&lt;/li&gt;
+&lt;li&gt;Windows 10 still has support until 2025, so don&amp;rsquo;t be in a rush to switch.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/WBrh-9BdGVQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Clean Up Windows 10</title>
+      <link>http://localhost:1313/clean-up-windows-10/</link>
+      <pubDate>Mon, 14 Oct 2019 20:08:01 +0000</pubDate>
+      
+      <guid>http://localhost:1313/clean-up-windows-10/</guid>
+      <description>&lt;p&gt;In this article, we will clean up Windows 10. This will include debloat, startup maintenance, system tweaks, and privacy settings. These 3 stages are broken down below and will help maintain a healthy Windows 10 system. I’d recommend re-running these steps every 6 months.&lt;/p&gt;
+&lt;h2 id=&#34;july-2021-update---ctt-official-debloat-launched&#34;&gt;July 2021 Update - CTT Official Debloat Launched&lt;/h2&gt;
+&lt;p&gt;Check out the updated debloat and utility toolbox here: &lt;a href=&#34;https://christitus.com/debloat-windows-10-2020/&#34;&gt;https://christitus.com/debloat-windows-10-2020/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Old Content is below with an older method of debloating Windows 10.&lt;/p&gt;
+&lt;h2 id=&#34;step-1-debloat-windows-10&#34;&gt;Step 1: Debloat Windows 10&lt;/h2&gt;
+&lt;p&gt;We will be utilizing PowerShell to clean up Windows 10 and get rid of a bunch of useless bloat that is included with it.&lt;/p&gt;
+&lt;h3 id=&#34;download-powershell-script&#34;&gt;Download PowerShell Script&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/2019/10/Screenshot_20191014_144201.png&#34; alt=&#34;Screenshot_20191014_144201&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;run-powershell-script&#34;&gt;Run PowerShell Script&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/2019/10/runcmd.png&#34; alt=&#34;runcmd&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://git.io/debloat&#39;))&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note: This will remove many apps in the Microsoft Store. Games, Office 365 and things that utilize the Microsoft Store. If unsure, use the customize blacklist and only tick the boxes of things you want to remove!&lt;/strong&gt;&lt;br&gt;
+Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;https://github.com/Sycnex/Windows10Debloater&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;step-2-clean-up-windows-10-startup&#34;&gt;Step 2: Clean Up Windows 10 Startup&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/2019/10/taskmanager.png&#34; alt=&#34;taskmanager&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Launch Task Manager&lt;/strong&gt; and then click the startup tab. You need to disable any unneeded programs from here.&lt;/p&gt;
+&lt;h3 id=&#34;changing-startup-programs-advanced-users&#34;&gt;Changing Startup Programs (Advanced Users)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/2019/10/startup10.png&#34; alt=&#34;startup10&#34;&gt;&lt;/p&gt;
+&lt;p&gt;You can change startup programs from Start-Run-Type:&lt;code&gt;shell:startup&lt;/code&gt; and Start-Run-Type: &lt;code&gt;shell:common startup&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You can also modify startup programs using registry editor HKCU or &lt;code&gt;HKLM\Software\Microsoft\Windows\CurrrentVersion\Run&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Cleanup &lt;strong&gt;Task Scheduler&lt;/strong&gt;, as it accumulates many things that cause an install to be slow and is vital when you clean up Windows 10.&lt;/p&gt;
+&lt;h2 id=&#34;step-3-system-tweaks-and-privacy&#34;&gt;Step 3: System Tweaks and Privacy&lt;/h2&gt;
+&lt;p&gt;There is literally hundreds of settings in Windows 10 that are privacy concerns and why I’d recommend using a 3rd party software for this. However, you can do all the same tweaks by simply going through settings and doing all these manually. That said, I recommend using O&amp;amp;O Shutup10 for optimal tweaks and privacy.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../../images/2019/10/oo-shutup10.png&#34; alt=&#34;oo-shutup10&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Download: &lt;a href=&#34;https://www.oo-software.com/en/shutup10&#34;&gt;https://www.oo-software.com/en/shutup10&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I also tell everyone to use the &lt;strong&gt;recommended settings&lt;/strong&gt; as the other settings can have unintended consequences.&lt;/p&gt;
+&lt;h3 id=&#34;other-recommended-settings&#34;&gt;Other Recommended Settings&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Turn off Hibernation:&lt;/strong&gt; powercfg /hibernate off&lt;br&gt;
+&lt;strong&gt;Modify Applications Menu:&lt;/strong&gt; explorer shell:AppsFolder&lt;br&gt;
+&lt;strong&gt;Change Windows 10 Start Menu:&lt;/strong&gt; shell:StartMenuAllPrograms or shell:Start Menu&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/mWHiP9K8fQ0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>How To Change Cortana Search</title>
+      <link>http://localhost:1313/change-cortana-search/</link>
+      <pubDate>Wed, 17 Oct 2018 15:22:41 +0000</pubDate>
+      
+      <guid>http://localhost:1313/change-cortana-search/</guid>
+      <description>&lt;p&gt;This article goes over how to change Cortana search engine to display results in chrome instead of Microsoft Edge. Afterward, the second part requires you to install a chrome extension to search in Google instead of Bing.&lt;/p&gt;
+&lt;h2 id=&#34;links-from-video&#34;&gt;Links from Video&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sylveon/SearchWithMyBrowser&#34;&gt;https://github.com/sylveon/SearchWithMyBrowser&lt;/a&gt; – GitHub Source and Compile Instructions&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge&#34;&gt;https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge&lt;/a&gt; – Windows Store Link from Developer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/chrometana-pro-redirect-c/lllggmgeiphnciplalhefnbpddbadfdi&#34;&gt;https://chrome.google.com/webstore/detail/chrometana-pro-redirect-c/lllggmgeiphnciplalhefnbpddbadfdi&lt;/a&gt; – Chrometana Pro Google Store Extension&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;steps-to-change-cortana-search-updated&#34;&gt;Steps to Change Cortana Search (Updated)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Open up Chrometana Pro Google Store Extension and Install (Link Above)&lt;/li&gt;
+&lt;li&gt;Install EdgeDeflector (On Page after Extension Installed)
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: SearchWithMyBrowser is no longer needed as EdgeDeflector takes its place&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Open Webpage and select EdgeDeflector.exe for default open with application&lt;/li&gt;
+&lt;li&gt;Done!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Vw-JA89brSg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In the end, you need to watch out for Windows updates. Anytime Windows does a major update, be prepared to repeat the process above, as it will reset it to Edge. Therefore, I’d bookmark the Chrometana Pro page or this one as you will be coming back to do this about twice a year. If you don’t want to do this, you can always switch to Linux. Consequently, I have written an article about the pro’s and con’s of such a switch and I highly recommend the switch if you are able.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Disable Windows Firewall Properly</title>
+      <link>http://localhost:1313/disable-windows-firewall-properly/</link>
+      <pubDate>Sat, 06 Oct 2018 17:20:22 +0000</pubDate>
+      
+      <guid>http://localhost:1313/disable-windows-firewall-properly/</guid>
+      <description>&lt;p&gt;This walkthrough goes over how to Disable Windows Firewall while not affecting other programs that rely on this service. It’s important that you **DO NOT **disable the service, due to the fact it can cause issues with Microsoft Office and other products.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2018/10/windows-firewall.png&#34; alt=&#34;win-firewall&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;steps-to-bypass-firewall&#34;&gt;Steps to bypass firewall&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Launch Windows Defender Firewall with Advanced Security (Start -&amp;gt; Run -&amp;gt; wf.msc)&lt;/li&gt;
+&lt;li&gt;Click Inbound Rules&lt;/li&gt;
+&lt;li&gt;Select “New Rule”&lt;/li&gt;
+&lt;li&gt;Custom rule&lt;/li&gt;
+&lt;li&gt;All Programs&lt;/li&gt;
+&lt;li&gt;Leave Any and All Ports&lt;/li&gt;
+&lt;li&gt;Any IP Address for both&lt;/li&gt;
+&lt;li&gt;Allow the connection&lt;/li&gt;
+&lt;li&gt;Check Domain, Private, and Public&lt;/li&gt;
+&lt;li&gt;Name “Allow All”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;video-guide&#34;&gt;Video Guide&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/fvFWFrN-MZQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;finishing-up&#34;&gt;Finishing Up&lt;/h3&gt;
+&lt;p&gt;By doing this you allow all traffic inbound to this computer, consequently, all outbound traffic is already allowed by default. Therefore, certain programs and services that depend on windows firewall can function properly. In conclusion, this is a far superior way of disabling the built-in firewall in windows without affecting other programs.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Snipping Tool Removed by Microsoft in October 2018 Update 1809</title>
+      <link>http://localhost:1313/snipping-tool-removed/</link>
+      <pubDate>Tue, 18 Sep 2018 19:06:44 +0000</pubDate>
+      
+      <guid>http://localhost:1313/snipping-tool-removed/</guid>
+      <description>&lt;p&gt;The Snipping Tool is being removed by Microsoft in October 2018 Update 1809 and I am not happy! This tool is one of the best tools Microsoft has ever created, so why? Well, they want you to use the Snip and Sketch App from the Microsoft Store. Spoiler: It sucks.&lt;/p&gt;
+&lt;h2 id=&#34;greenshot-the-best-snipping-tool-replacement&#34;&gt;Greenshot the best Snipping Tool Replacement&lt;/h2&gt;
+&lt;p&gt;So what should you use? Greenshot. Its freeware and it just works. Not bulky with a toolbar, but adds a tray icon, which you don’t have to use. You can just press print screen and away you go.&lt;/p&gt;
+&lt;p&gt;Download it from there website here: &lt;a href=&#34;http://getgreenshot.org/downloads/&#34;&gt;http://getgreenshot.org/downloads/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;microsoft-snip-and-sketch-replacement&#34;&gt;Microsoft Snip and Sketch Replacement&lt;/h2&gt;
+&lt;p&gt;Currently, this is labeled as Screen Sketch, however, this is changing to Snip and Sketch App in the next update. Here is the preview of the upcoming disaster for Microsoft their predictably bad moves on forcing their tragic app store on us. Here is today’s download image of the app prior to the upcoming update that sunsets our beloved Snipping Tool.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2018/09/screen-sketch.png&#34; alt=&#34;screen-sketch&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;With Snipping Tool gone, you might as well get used to something new, and Greenshot is a great freeware that has been around for 4 years. In the short week or so that I have been using this, I have grown to love it more than the old Snipping Tool. The features give me more options, but with its polish, I am much more efficient than I ever was.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installing Linux Subsystem for Windows 10</title>
+      <link>http://localhost:1313/installing-linux-subsystem/</link>
+      <pubDate>Tue, 11 Sep 2018 19:56:07 +0000</pubDate>
+      
+      <guid>http://localhost:1313/installing-linux-subsystem/</guid>
+      <description>&lt;p&gt;The following video goes over installing Linux Subsystem on Windows 10. Most notably it allows you to run Linux terminal commands in Windows 10 without having a virtual machine or dual boot into a Linux operating system.&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/RriP3LmuKNA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;enable-linux-subsystem-feature&#34;&gt;Enable Linux Subsystem Feature&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;cd ~ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux&lt;/code&gt;&lt;br&gt;
+&lt;em&gt;Note: Perform in PowerShell&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;powershell-installation-method&#34;&gt;PowerShell Installation Method&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing Rename-Item -Path ~/Ubuntu.appx -NewName Ubuntu.zip Expand-Archive ~/Ubuntu.zip ~/Ubuntu cd Ubuntu ./ubuntu.exe&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;microsoft-store-installation-method&#34;&gt;Microsoft Store Installation Method&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open the Microsoft Store&lt;/li&gt;
+&lt;li&gt;Browse to Ubuntu-1604 and subsequently click the Install button&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In Closing The Linux Subsystem is a welcomed addition to Windows 10 because most things that come from the Microsoft store are garbage. Above all using this will give you the ability to check out and compile many GitHub projects. It is now one of the first options I enable when I do fresh installs of Windows 10 due to the fact Linux is not practical all the time. Leave any Questions and Comments below and I’ll get back to you. I regularly publish on&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Debloat Windows 10</title>
+      <link>http://localhost:1313/debloat-windows-10/</link>
+      <pubDate>Sun, 09 Sep 2018 17:08:58 +0000</pubDate>
+      
+      <guid>http://localhost:1313/debloat-windows-10/</guid>
+      <description>&lt;p&gt;Trying to Debloat Windows 10 is getting ridiculous and as a system admin it is soul crushing to see all that performance go to waste on the botched attempt by Microsoft to do an Appstore and its apps (I’m looking at you Candy Crush). Luckily some admins have worked tirelessly to give us a solution that works considerably well. Lets Start!&lt;/p&gt;
+&lt;h2 id=&#34;october-2020-update&#34;&gt;October 2020 Update&lt;/h2&gt;
+&lt;p&gt;If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: &lt;a href=&#34;https://github.com/ChrisTitusTech/win10script&#34;&gt;https://github.com/ChrisTitusTech/win10script&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://git.io/JJ8R4&amp;#39;))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What this script does&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Installs Chocolatey, Notepad++, Irfanview, VLC, Java, and asks if you want Adobe Reader or Brave.&lt;/li&gt;
+&lt;li&gt;Removes all Windows Store Apps EXCEPT office, xbox, and WSL.&lt;/li&gt;
+&lt;li&gt;Removed Telemetry&lt;/li&gt;
+&lt;li&gt;Disables Cortana&lt;/li&gt;
+&lt;li&gt;Deletes various schedules tasks that rebloat the system&lt;/li&gt;
+&lt;li&gt;Removes Other Bloatware (Candy Crush, etc.)&lt;/li&gt;
+&lt;li&gt;Fixes problems that other scripts causes (lock screen and personalization options restricted)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Based on User feedback, this no longer uninstalls OneDrive or Office.&lt;/p&gt;
+&lt;h2 id=&#34;old-2018-instructions&#34;&gt;Old 2018 Instructions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Right Click Windows Button -&amp;gt;Select Powershell Prompt (Admin) OR Select Command Prompt (Admin)
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Note: If you don’t have PowerShell and only command prompt open command prompt (admin) and type “&lt;em&gt;powershell&lt;/em&gt;“&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Change Execution policy to allow a debloat script to run in Powershell &lt;code&gt;Set-ExecutionPolicy Unrestricted&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run the script from the following Github Repository. The person running this GitHub has been updating this script for a while and is a godsend. (Source: &lt;a href=&#34;https://github.com/Sycnex/Windows10Debloater&#34;&gt;https://github.com/Sycnex/Windows10Debloater&lt;/a&gt;) Use Windows10Debloater.ps1from the location above
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;During installation select yes to debloat windows 10, select yes to remove OneDrive, and Yes to reboot after it finishes. Below is the image of performing these tasks.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[&lt;img src=&#34;http://localhost:1313/images/2018/09/debloatwin10cmd.png&#34; alt=&#34;debloatwin10cmd&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/q4ziE5Am0pM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Repair Windows Boot Partition | Includes files and partitioning</title>
+      <link>http://localhost:1313/repair-windows-boot-partition/</link>
+      <pubDate>Mon, 02 Jul 2018 17:01:44 +0000</pubDate>
+      
+      <guid>http://localhost:1313/repair-windows-boot-partition/</guid>
+      <description>&lt;p&gt;This walkthrough shows you how to repair windows boot partition and boot from an existing windows installation without reinstalling windows.&lt;/p&gt;
+&lt;p&gt;Recently I had an old server with a FAT32 system reserved partition and a bunch of extra partitions. I have already moved all the data off the server and it was ready for decommissioning. Before, I did this I wanted to go ahead and remove all these old partitions and just leave the C: Drive with the Windows installation then rebuild the System Reserved partition as NTFS as an exercise. Many backup programs have issues doing block level images with FAT32 partitions OR you need to do a physical to virtual setup. For me, I wanted to decommission the hardware but be able to spin up this server in a virtual environment if needed.&lt;/p&gt;
+&lt;h2 id=&#34;backup-before-attempting-this&#34;&gt;Backup Before Attempting This!&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-delete-old-partitions-and-create-new-ones&#34;&gt;Step 1: Delete old partitions and create new ones&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Boot into your partition manager of choice (I used Parted Magic &lt;a href=&#34;https://partedmagic.com/&#34;&gt;https://partedmagic.com/&lt;/a&gt; ) GParted&lt;/li&gt;
+&lt;li&gt;Delete extra partitions including the old FAT32 system partition (These all should be very small between 100 MB and up to 2 GB)&lt;/li&gt;
+&lt;li&gt;Create new NTFS partition with 512 MB of space and label it System Reserved&lt;/li&gt;
+&lt;li&gt;Shutdown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;step-2-setup-partitions-with-the-correct-drive-letters&#34;&gt;Step 2: Setup Partitions with the correct drive letters&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Launch Windows 10 Install disc / usb&lt;/li&gt;
+&lt;li&gt;Shift+F10 once you see language select to bring up command prompt&lt;/li&gt;
+&lt;li&gt;Launch &lt;code&gt;DISKPART&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;select volume with 512MB (ex: &lt;code&gt;select vol 0&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assign letter=G:&lt;/code&gt; (or any letter that isn’t taken that is NOT C:)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exit&lt;/code&gt; OR If Windows operating system is NOT on C:&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select volume&lt;/code&gt; with windows installation on it&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;assign letter=C:&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Example output:&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;diskpart
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;select disk 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;list vol
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;select vol 0 &amp;lt;---500 MB Partition
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;assign letter=G:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;select vol 1 &amp;lt;--- Large Partition with Windows Install on it
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;assign letter=C:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Partitions are done. Now time to fix problems with the “type” of partition – By forcing all partitions to be NTFS NT60&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bootsect.exe /nt60 all /force&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;step-3-copy-boot-records-fix-mbr-and-rebuild-bcd&#34;&gt;Step 3: Copy Boot Records, Fix MBR, and Rebuild BCD&lt;/h5&gt;
+&lt;p&gt;Rebuild new system reserved partition with EFI and regular boot files&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bcdboot c:\Windows /s &amp;lt;boot letter of System Reserved Partion&amp;gt;: /f ALL
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bcdboot c:\Windows /s G: /f ALL
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Now we can finally rebuild the bcd and master boot record like you see in so many online guides&lt;/li&gt;
+&lt;li&gt;You can verify the system is seeing the windows installation by doing a &lt;code&gt;bootrec /scanos&lt;/code&gt; and then be running through the rest of the commands to do the rest of the repairs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootrec /scanos &amp;lt;---Verify it sees the windows install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootrec /fixmbr
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bootrec /fixboot &amp;lt;----Pick the installation will mirror /scanos bootrec /rebuildbcd
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Reboot and you are done!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/F72D7uL6cZg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spooler subsystem app high CPU usage on Windows 10</title>
+      <link>http://localhost:1313/spooler-subsystem-app-cpu-usage/</link>
+      <pubDate>Tue, 02 May 2017 19:53:16 +0000</pubDate>
+      
+      <guid>http://localhost:1313/spooler-subsystem-app-cpu-usage/</guid>
+      <description>&lt;p&gt;Perform the following steps to solve the Spooler subsystem app high CPU usage. I recently updated a computer to Windows 10 and found that the spooler service was using a lot of resources.&lt;/p&gt;
+&lt;h2 id=&#34;the-solution&#34;&gt;The Solution&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Open up command prompt as administrator and type the following&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;net stop spooler
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;del /Q /F /S &amp;#34;%systemroot%\System32\Spool\Printers\*.*&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;net start spooler
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Now check task manager again and verify the Spooler subsystem app is now at 0% usage. Alternatively, you can disable the spooler service in services (Start -&amp;gt; Run -&amp;gt; Type: services.msc) and this will make sure it doesn’t run, however, it also means you can’t print.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Launching a startup program to run as administrator</title>
+      <link>http://localhost:1313/run-as-administrator/</link>
+      <pubDate>Mon, 27 Mar 2017 02:26:36 +0000</pubDate>
+      
+      <guid>http://localhost:1313/run-as-administrator/</guid>
+      <description>&lt;p&gt;The following script shows you how to launch a startup program to run as administrator in Windows 10. This fixes many programs that require elevation and you don’t want to launch manually every time.&lt;/p&gt;
+&lt;p&gt;Almost every online tutorial I came across said to run it as a scheduled task. This is very cumbersome and I hate it, however using the following method is easier and saves you time.&lt;/p&gt;
+&lt;p&gt;Create a Text file in shell:startup and put the following in it.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Set WshShell = CreateObject(&amp;#34;WScript.Shell&amp;#34; ) 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;WshShell.Run chr(34) &amp;amp; &amp;#34;C:\Program Files (x86)\File\Program.exe&amp;#34; &amp;amp; Chr(34), 0 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Set WshShell = Nothing
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now save the file as ProgramName.vbs&lt;/p&gt;
+&lt;p&gt;You are done! Reboot and see that program launch.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows 10 IIS: C:\WINDOWS\system32\inetsrv\rewrite.dll failed to load</title>
+      <link>http://localhost:1313/windows-10-iis-rewrite-error/</link>
+      <pubDate>Mon, 19 Sep 2016 00:07:43 +0000</pubDate>
+      
+      <guid>http://localhost:1313/windows-10-iis-rewrite-error/</guid>
+      <description>&lt;p&gt;This article shows you what to do if you get the rewrite.dll failed to load in Windows 10 event viewer for Windows 10 IIS.&lt;/p&gt;
+&lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
+&lt;p&gt;Checked Event viewer when my website Showed up with&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Service Unavailable 503 error&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The Event Viewer Error was&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;The Module DLL C:\WINDOWS\system32\inetsrv\rewrite.dll failed to load&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I went into Add/Remove Programs (Start -&amp;gt; Run-&amp;gt; appwiz.cpl) and simply repaired the following program&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;IIS Url Rewrite Module 2.0&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;troubleshootingdownload&#34;&gt;Troubleshooting/Download&lt;/h3&gt;
+&lt;p&gt;Afterward, restart your WWW Service in services.msc and your website will now be working. If you are unable to repair the IIS rewrite module using Add/Remove Programs, you will need to redownload them from Microsoft.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/download/details.aspx?id=47337&#34;&gt;IIS Url Rewrite Module 2.0 for Windows 10&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Move Website from Linux to IIS</title>
+      <link>http://localhost:1313/move-website-linux-iis/</link>
+      <pubDate>Sat, 26 Dec 2015 05:41:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/move-website-linux-iis/</guid>
+      <description>&lt;p&gt;This guide goes over how to Move Website from Linux to IIS. If you’re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.&lt;/p&gt;
+&lt;h3 id=&#34;migration&#34;&gt;Migration&lt;/h3&gt;
+&lt;p&gt;The database migration from MySQL to MS SQL is actually pretty easy since you just push it through a large query, but I didn’t really want to mess with it, so I stuck with MySQL.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://dev.mysql.com/downloads/mysql/&#34;&gt;Download and Install MySQL for Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With that down setting up IIS is also extremely simple now, which is quite surprising given how unfriendly IIS 6 was. The interface is pretty much the same, so you can do it the way you have always known, but now they have added multiple friendly tools in the form of &lt;strong&gt;Microsoft WebMatrix&lt;/strong&gt; and &lt;strong&gt;Web Platform Installer&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://go.microsoft.com/fwlink/?LinkID=286266&#34;&gt;Download Microsoft WebMatrix (official Microsoft Link)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Using the Web Platform Install you can just select whatever install you want (WordPress for me) and click install. It grabs all the dependencies and installs them for you, and from here I had a fresh WordPress install. I did a simple import and changed a couple of settings that were reset and was back up and running. Overall a simple migration, and pretty happy with IIS 10 (What happened to IIS 9 we will never know…)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SFC scannow error and Windows 10 corruption</title>
+      <link>http://localhost:1313/sfc-scannow-error/</link>
+      <pubDate>Sun, 26 Jul 2015 02:39:10 +0000</pubDate>
+      
+      <guid>http://localhost:1313/sfc-scannow-error/</guid>
+      <description>&lt;p&gt;If you run into SFC scannow error which cannot be repaired chances are you have some corrupt system components. The fastest way to fix this is by following these steps to repair your system.&lt;/p&gt;
+&lt;p&gt;Here is an example of the error you are seeing:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2015/07/SFC-scannow-error-1.png&#34; alt=&#34;SFC Scannow Error&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download Windows 10 ISO from &lt;a href=&#34;https://www.microsoft.com/en-us/software-download/windows10&#34;&gt;https://www.microsoft.com/en-us/software-download/windows10&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mount the ISO file by double-clicking on it.&lt;/li&gt;
+&lt;li&gt;Open ‘Windows Powershell’ or ‘Command Prompt’ with Admin privileges (right click -&amp;gt; Run as Administrator)&lt;/li&gt;
+&lt;li&gt;Let’s check the System Health first, by running these commands:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dism /online /cleanup-image /scanhealth&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dism /online /cleanup-image /checkhealth&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dism /online /cleanup-image /restorehealth&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I’m sure that will give you an error stating that it could not perform the task. Afterward, Let’s specify the file from the ISO so that we can fix it. Run the following command: (Notice that X must be the drive letter on which your system has mounted the ISO)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DISM /Online /Cleanup-Image /RestoreHealth /source:WIM:X:SourcesInstall.wim:1 /LimitAccess&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Now let’s repair any damage in the system files, shall we?
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sfc /scannow&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once this is complete, you will see you now have a functional windows environment again. One other tip that I would suggest is to re-run windows updates because your windows components were damaged and the updates have not been happening.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

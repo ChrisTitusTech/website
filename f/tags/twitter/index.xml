@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Twitter on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/twitter/</link>
+    <description>Recent content in Twitter on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Twitter Archive Offline</title>
+      <link>http://localhost:1313/twitter-archive/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/twitter-archive/</guid>
+      <description>&lt;p&gt;Leaving Twitter? Why not download all your tweets from archive and store it yourself before deleting your account!&lt;/p&gt;
+&lt;h2 id=&#34;projects&#34;&gt;Projects&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/timhutton/twitter-archive-parser&#34;&gt;Twitter Archive Parser&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nornagon/twitter-bookmark-archiver&#34;&gt;Twitter Bookmark Tool - Download All Links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/caarlos0/twitter-cleaner&#34;&gt;Twitter Cleaner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/walaura/Twitter-photo-downloader&#34;&gt;Twitter Photo Downloader&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;process-of-offline-twitter&#34;&gt;Process of Offline Twitter&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Download Twitter Archive
+&lt;img src=&#34;http://localhost:1313/images/2022/twitter-archive/twitter-archive.png&#34; alt=&#34;&#34;&gt;
+&lt;em&gt;Note: This can take up to 72 hours to produce a downloadable zip&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Unzip Archive to it&amp;rsquo;s OWN folder&lt;/li&gt;
+&lt;li&gt;Download the Archive parser
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://raw.githubusercontent.com/timhutton/twitter-archive-parser/main/parser.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;python3 parser.py&lt;/code&gt;
+&lt;em&gt;I recommend selecting Yes to download all messages&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Open &lt;code&gt;Your archive.html&lt;/code&gt; in your browser
+&lt;img src=&#34;http://localhost:1313/images/2022/twitter-archive/offline-twitter.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;limitations&#34;&gt;Limitations&lt;/h2&gt;
+&lt;p&gt;I put the other projects above to get around the limitations of using the Archive Parser.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bookmark Tool will change the t.co links to their proper links so it doesn&amp;rsquo;t use Twitter servers.&lt;/li&gt;
+&lt;li&gt;Cleaner will cleanup the archive&lt;/li&gt;
+&lt;li&gt;Photo Downloader will download the full photos in your tweets. By default it downloads the thumbnail and references twitter for the full image.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/vwxxNCQpcTA&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

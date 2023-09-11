@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Razer on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/razer/</link>
+    <description>Recent content in Razer on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/razer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Block Razer Bloatware</title>
+      <link>http://localhost:1313/block-razer-bloatware/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/block-razer-bloatware/</guid>
+      <description>&lt;p&gt;This script is made due to the frustration of the bloatware that gets install for all Razer devices.&lt;/p&gt;
+&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;The hardware works fine without any software and just installing the BASE synapse software it runs almost 500 MB installer that has 3 services and 15 RUNNING PROCESSES! This gets worse the more software you select past Synapse. The worst part about all this? It auto-installs when you plug in ANY Razer USB product. It is classified as malware because the hardware doesn&amp;rsquo;t need it AND it slow yours your computer down.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/block-razer-bloatware/bloatware.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-solution&#34;&gt;The Solution&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve developed a simplistic approach, but may need to expand when Razer learns of this project. This script, locates the installer folder and deletes it while protecting from being written to again. This prevents the hardware from running Razer installers.&lt;/p&gt;
+&lt;p&gt;GitHub Project: &lt;a href=&#34;https://github.com/ChrisTitusTech/block-razer&#34;&gt;https://github.com/ChrisTitusTech/block-razer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;One line Script: (Run As Administrator in Powershell)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;irm https://raw.githubusercontent.com/ChrisTitusTech/block-razer/main/block.ps1 | iex
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/OlFR6PeJA4U&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

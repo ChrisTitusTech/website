@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows11 on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/windows11/</link>
+    <description>Recent content in Windows11 on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/windows11/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows Explorer Stealing CPU</title>
+      <link>http://localhost:1313/windows-explorer-stealing-cpu/</link>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/windows-explorer-stealing-cpu/</guid>
+      <description>&lt;p&gt;Windows 11 has a bug effecting some systems. Out of my 3 Windows 11 systems, one of them had this happen.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Windows 11... ugh. Is File Explorer stealing 20% of your CPU? &lt;br&gt;Well Windows Input Experience is to blame. Just tracked down these registry keys to fix it. (Spoiler: It launches widgets and typing BS that you don&amp;#39;t use) &lt;a href=&#34;https://t.co/YKL0zjTzic&#34;&gt;pic.twitter.com/YKL0zjTzic&lt;/a&gt;&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1597766834094211073?ref_src=twsrc%5Etfw&#34;&gt;November 30, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;underlying-problem&#34;&gt;Underlying Problem&lt;/h2&gt;
+&lt;p&gt;Two services are interacting with Windows Explorer that are the root of this problem. Widgets and Typing experience from Windows 11. Even if you disabled these services, they will relaunch because they use the Microsoft Store. What is causing this behavior? A new pre-launch command that pushes these apps into the background on startup. This means they start up faster, but most don&amp;rsquo;t even use these apps and do NOT want to use them.&lt;/p&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Add these Registry entries to fix it!&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;FixRegistry.reg&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[HKEY_CURRENT_USER\Software\Microsoft\input]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;IsInputAppPreloadEnabled&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Dsh]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;IsPrelaunchEnabled&amp;#34;=dword:00000000
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;delete-old-programs&#34;&gt;Delete old programs&lt;/h3&gt;
+&lt;p&gt;Wallpaper Engine caused a big CPU elevation after I updated to 22H2 on Windows 11. Check your programs and if they haven&amp;rsquo;t been updated in a while, they may not work that well on the new version.&lt;/p&gt;
+&lt;p&gt;To uninstall old programs run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;appwiz.cpl
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/3YaG3YPGCbQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FOSS Programs on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/foss-programs/</link>
+    <description>Recent content in FOSS Programs on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/foss-programs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ClickPaste the Best Program You Never Heard Of </title>
+      <link>http://localhost:1313/clickpaste/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/clickpaste/</guid>
+      <description>&lt;p&gt;This program is free and open source, while being absolutely a life saver. I use it for VNC sessions and when dealing with VMs through my host computer.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;No more typing crap out when I use VNC or VM Sessions on the Host. Thanks ClickPaste (Free and Open Source)&lt;br&gt;&lt;br&gt;GitHub Link: &amp;lt;&lt;a href=&#34;https://t.co/S3M69kQF3s&#34;&gt;https://t.co/S3M69kQF3s&lt;/a&gt;&amp;gt;&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1572985183594242048?ref_src=twsrc%5Etfw&#34;&gt;September 22, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;GitHub Link: &lt;a href=&#34;https://github.com/Collective-Software/ClickPaste&#34;&gt;https://github.com/Collective-Software/ClickPaste&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;Simply extract the zip file from &lt;a href=&#34;https://github.com/Collective-Software/ClickPaste/releases&#34;&gt;https://github.com/Collective-Software/ClickPaste/releases&lt;/a&gt; and run ClickPaste.exe&lt;/p&gt;
+&lt;h3 id=&#34;running-at-startup&#34;&gt;Running at Startup&lt;/h3&gt;
+&lt;p&gt;The best way I&amp;rsquo;ve found is to create a shortcut to ClickPaste.exe then drag&amp;amp;drop that into shell:startup&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/startup.png&#34; alt=&#34;startup&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;First of course, you need to have some text in your clipboard. Then:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the target notification icon to begin:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToTarget.png&#34;&gt;&lt;img src=&#34;https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToTarget.png&#34; alt=&#34;Click to choose a target&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Click to choose a location you want to paste the text:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToPaste.png&#34;&gt;&lt;img src=&#34;https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToPaste.png&#34; alt=&#34;Click to choose a location to paste&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Your clipboard contents should be typed as keystrokes onto the window you selected:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/Collective-Software/ClickPaste/blob/master/doc/Pasted.png&#34;&gt;&lt;img src=&#34;https://github.com/Collective-Software/ClickPaste/raw/master/doc/Pasted.png&#34; alt=&#34;Your clipboard is typed as keystrokes onto the window you selected&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/i7cgD_KCh10&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

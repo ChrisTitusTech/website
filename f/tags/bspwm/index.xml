@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BSPWM on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/bspwm/</link>
+    <description>Recent content in BSPWM on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/bspwm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Perfect System</title>
+      <link>http://localhost:1313/the-perfect-system/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/the-perfect-system/</guid>
+      <description>&lt;p&gt;The perfect system is stable, reliable, and does everything you need it to, while it feels amazing to use.&lt;/p&gt;
+&lt;h2 id=&#34;the-base-system&#34;&gt;The Base System&lt;/h2&gt;
+&lt;p&gt;Choose a Stable Release that won&amp;rsquo;t get many feature updates that change the experience, but gets security updates that makes it stable and secure.&lt;/p&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RHEL 10-year Support (Red Hat Enterprise Linux - Require Subscription)
+-Free Variants (Rocky and Alma Linux)&lt;/li&gt;
+&lt;li&gt;Debian 5-year Support (Stable - Bookworm(06/2023) or Bullseye)&lt;/li&gt;
+&lt;li&gt;Ubuntu 5-year Support (Version 22 or 20)&lt;/li&gt;
+&lt;li&gt;OpenSUSE 6-year Support (Leap only)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;packages&#34;&gt;Packages&lt;/h2&gt;
+&lt;p&gt;Getting all your packages and updating them reliably can be a challenge. With LTS releases, you will always be installing old version of software, where something like Arch Linux or other rolling releases will have the latest and greatest. We can get around this with NixOS Packages and Flatpak. There are other all-in-one tools like AppImages or Snap packages, but I don&amp;rsquo;t find these to be any better than just using Nix or Flatpak.&lt;/p&gt;
+&lt;h2 id=&#34;the-look-and-feel&#34;&gt;The Look and Feel&lt;/h2&gt;
+&lt;p&gt;This will be different for everyone. The idea is to have a system you enjoy being in and looking forward to coming back to it.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve attempted a bastardized version of the genome project from unixporn and made &lt;a href=&#34;https://github.com/ChrisTitusTech/ubuntu-titus&#34;&gt;ubuntu-titus&lt;/a&gt;, &lt;a href=&#34;https://github.com/ChrisTitusTech/Debian-titus&#34;&gt;debian-titus&lt;/a&gt;, and &lt;a href=&#34;https://github.com/ChrisTitusTech/Fedora-Titus&#34;&gt;fedora-titus&lt;/a&gt; repos that kinda work. It ends up looking like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/the-perfect-system/fedora-mydesktop.jpg&#34; alt=&#34;mydesktop&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The problem is I am not good at graphic design. I&amp;rsquo;m a function over form person and these desktop below are the opposite of that.&lt;/p&gt;
+&lt;p&gt;This rice is interesting using hyprland, eww, and is clean.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/the-perfect-system/fedora-hyprland-eww.jpg&#34; alt=&#34;hyprland&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://github.com/Aylur/dotfiles&#34;&gt;https://github.com/Aylur/dotfiles&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Another rice that is using awesomewm w/ bling utilties and rofi for menus. Simplistic and clean.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/the-perfect-system/awesomewm-bling-rofi.jpg&#34; alt=&#34;awesomewm&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://github.com/beastsongithub/AwesomeWMRice&#34;&gt;https://github.com/beastsongithub/AwesomeWMRice&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I mentioned the above projects for the simplistic nature and not requiring a TON of dependancies. Too many rices in Linux require 10+ programs to even function, which is bad design where the two above look good, but don&amp;rsquo;t have tons of problems. I say this to encourage more rices that are easier to replicate for people.&lt;/p&gt;
+&lt;p&gt;What does my future desktop look like? Two versions&amp;hellip; The pretty version in a year using Hyprland, Wayland, and the pretty desktop and the suckless barebones minimal one that just works like below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/the-perfect-system/dwm.jpg&#34; alt=&#34;dwm&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/ZgHX8jPuHjE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aptitude on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/aptitude/</link>
+    <description>Recent content in Aptitude on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Mar 2019 20:35:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/aptitude/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aptitude Explained</title>
+      <link>http://localhost:1313/aptitude-explained/</link>
+      <pubDate>Tue, 12 Mar 2019 20:35:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/aptitude-explained/</guid>
+      <description>&lt;p&gt;In this article, I am going over the aptitude command and explaining all of the commands and usage that goes with its usage.&lt;/p&gt;
+&lt;h3 id=&#34;install-aptitude&#34;&gt;Install Aptitude&lt;/h3&gt;
+&lt;p&gt;Run the following command to install aptitude and task select: &lt;strong&gt;sudo apt install aptitude tasksel&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;why-aptitude&#34;&gt;Why Aptitude?&lt;/h2&gt;
+&lt;p&gt;Aptitude provides greater dependency resolution and wildcard installations. Making installing or reinstalling entire packages far easier. For instance the following command installs KDE in a simple command: &lt;code&gt;aptitude install ~t^desktop$ ~t^kde-desktop$&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;aptitude-install&#34;&gt;&lt;strong&gt;aptitude install&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;install one or more packages:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo aptitude install gedit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;remove a package
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo aptitude install gedit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;purge a package
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo aptitude install gedit_&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;hold a package at its current version
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo aptitude install gedit=&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;build dependencies for a package
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo aptitude install gedit&amp;amp;BD&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aptitude-remove-purge-reinstall&#34;&gt;aptitude remove, purge, reinstall&lt;/h3&gt;
+&lt;p&gt;These are the same as using the above commands under install, however, you can utilizing these independent commands with wildcards like below&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo aptitude purge ^kde-desktop$&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aptitude-hold-unhold-keep&#34;&gt;aptitude hold, unhold, keep&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;hold is the same as the install, but again I like to use this long hand version when utilizing wildcards.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;unhold&lt;/strong&gt; – is a great way to release held packages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;keep&lt;/strong&gt; – I &lt;strong&gt;DO NOT USE&lt;/strong&gt; because it merely cancelled scheduled tasks for that package… only it will continue to be upgraded later.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aptitude-update-safe-upgrade-full-upgrade&#34;&gt;aptitude update, safe-upgrade, full-upgrade&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;update&lt;/strong&gt; – updates the cache&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;safe-upgrade&lt;/strong&gt; – upgrades all packages but will not remove unused packages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;full-upgrade&lt;/strong&gt; – upgrades all packages but &lt;strong&gt;WILL&lt;/strong&gt; remove unused packages&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aptitude-search&#34;&gt;aptitude search&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;search &lt;package&gt;&lt;/strong&gt; – searches for the package, these search results can use wildcards, be sorted, and culled as needed using various options&lt;/li&gt;
+&lt;li&gt;search examples:
+&lt;ul&gt;
+&lt;li&gt;Search for packaged installed from outside stable repo
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aptitude search &#39;?narrow(?installed, !?archive(stable))&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Search for packages installed by the testing repo but not stable
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aptitude search &#39;?narrow(?installed, ?archive(testing) !?archive(stable))&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;List installed packages
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aptitude search ~i&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;List reverse dependencies for gedit
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aptitude search ~Dgedit&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;show broken packages
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aptitude search ~b&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;display packages on hold
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aptitude search ~ahold&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Find and install all packages with the name tightvnc in it
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aptitude search ~ntightvnc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Install a specific version of a package
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aptitude install php=5.6&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aptitude-show&#34;&gt;&lt;strong&gt;aptitude show&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;aptitude show &lt;package&gt;&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;displays information about the package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aptitude-why-why-not&#34;&gt;aptitude why, why-not&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;aptitude why &lt;package&gt;&lt;/strong&gt; – explains why a package can’t be installs because of a missing dependency&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;aptitude why-not &lt;package&gt;&lt;/strong&gt; – show conflicts in which the package dependency can not be installed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aptitude-clean-and-autoclean&#34;&gt;aptitude clean and autoclean&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;aptitude clean&lt;/strong&gt; – removes all previously downloaded packages from the cache directory&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;aptitude autoclean&lt;/strong&gt; – removes cached packages which no longer exist in your repositories&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;aptitude-search-terms&#34;&gt;aptitude search terms&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.debian.org/doc/manuals/aptitude/ch02s04s05.en.html#tableSearchTermQuickGuide&#34;&gt;https://www.debian.org/doc/manuals/aptitude/ch02s04s05.en.html#tableSearchTermQuickGuide&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/xca3Ywf54N0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

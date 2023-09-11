@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ISO on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/iso/</link>
+    <description>Recent content in ISO on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Jan 2021 10:23:43 -0600</lastBuildDate><atom:link href="http://localhost:1313/tags/iso/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ultimate Windows 10 Install ISO</title>
+      <link>http://localhost:1313/Ultimate-Windows-10-Install-ISO/</link>
+      <pubDate>Wed, 20 Jan 2021 10:23:43 -0600</pubDate>
+      
+      <guid>http://localhost:1313/Ultimate-Windows-10-Install-ISO/</guid>
+      <description>&lt;p&gt;This goes over creating the best installation media possible for a fresh Windows 10&lt;/p&gt;
+&lt;h2 id=&#34;downloading-windows-10-iso&#34;&gt;Downloading Windows 10 ISO&lt;/h2&gt;
+&lt;p&gt;I only use official Microsoft sources for Windows installation. At the time of the writing the following link is where I&amp;rsquo;d download either the ISO directly or the media creation tool that you select ISO on.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/software-download/windows10&#34;&gt;https://www.microsoft.com/en-us/software-download/windows10&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;mounting-and-modifying-the-iso&#34;&gt;Mounting and Modifying the ISO&lt;/h2&gt;
+&lt;h3 id=&#34;using-msmg-toolkit&#34;&gt;Using MSMG Toolkit&lt;/h3&gt;
+&lt;p&gt;Download MSMG Toolkit from their website.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://msmgtoolkit.in/download.html&#34;&gt;https://msmgtoolkit.in/download.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2021/01-win10iso/msmg.png&#34; alt=&#34;msmg&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;expand-and-mount-windows&#34;&gt;Expand and Mount Windows&lt;/h3&gt;
+&lt;p&gt;From the Source menu select expand and then mount in MSMG Toolkit. Below is a full video where I use MSMG toolkit to remove many components in Win10.&lt;/p&gt;
+&lt;p&gt;How to Make a Custom Windows 10 ISO with &lt;em&gt;MSMG Toolkit&lt;/em&gt; Video&lt;br&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/R6XPff38iSc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;install-drivers&#34;&gt;Install Drivers&lt;/h3&gt;
+&lt;p&gt;Download and extract your drivers with the following Powershell command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DISM.exe /Online /Export-Driver /Destination:%HOMEDRIVE%%HOMEPATH%\Downloads\Drivers
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can install ANY inf files to the below directories. &lt;em&gt;EXE and Setup files DO NOT WORK!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;If you want to install EVERY DRIVER IN EXISTENCE&amp;hellip; download the offline files using &lt;a href=&#34;https://sdi-tool.org/&#34;&gt;https://sdi-tool.org/&lt;/a&gt; and go into the drivers directory and extract all of the 7z files. This will be time intensive and require about 60 GB or more for the install media&lt;/p&gt;
+&lt;p&gt;Put the inf and driver x64 files here: &lt;code&gt;ToolKit_Directory\Drivers\Install\w10\x64&lt;/code&gt;&lt;br&gt;
+Put the inf and driver x86 files here: &lt;code&gt;ToolKit_Directory\Drivers\Install\w10\x86&lt;/code&gt; &lt;em&gt;Note: Most people don&amp;rsquo;t do 32-bit installs and can skip this&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Other notable tools: 3DP Chip Network Drivers &lt;a href=&#34;https://www.3dpchip.com/3dpchip/3dp/net_down_en.php&#34;&gt;https://www.3dpchip.com/3dpchip/3dp/net_down_en.php&lt;/a&gt; - This installs pretty much any network driver on the fly.&lt;/p&gt;
+&lt;h3 id=&#34;install-updates&#34;&gt;Install Updates&lt;/h3&gt;
+&lt;p&gt;Download the Windows updates from the Official Microsoft Catalog. We need two specific updates that cover most of the big updates missing from our ISO download.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Servicing Stack Update &lt;a href=&#34;https://www.catalog.update.microsoft.com/Search.aspx?q=Servicing%20Stack%20Update%20Windows%2010&#34;&gt;https://www.catalog.update.microsoft.com/Search.aspx?q=Servicing%20Stack%20Update%20Windows%2010&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cumulative Update &lt;a href=&#34;https://www.catalog.update.microsoft.com/Search.aspx?q=Cumulative%20Update%20Windows%2010&#34;&gt;https://www.catalog.update.microsoft.com/Search.aspx?q=Cumulative%20Update%20Windows%2010&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Be sure and download your version 20H2, 2009, 1909, etc. and x64 architecture for most computers&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Put these in &lt;code&gt;ToolKit_Directory\Updates\w10\x64&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;create-the-iso&#34;&gt;Create the ISO&lt;/h2&gt;
+&lt;h3 id=&#34;make-autounattendxml&#34;&gt;Make Autounattend.xml&lt;/h3&gt;
+&lt;p&gt;Now let&amp;rsquo;s make it so we will automatically install Windows 10 without answering a bunch of questions. I use a cheatsheet where it just makes it for me from: &lt;a href=&#34;https://www.windowsafg.com/win10x86_x64.html&#34;&gt;https://www.windowsafg.com/win10x86_x64.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Fill out the form and then click download at the bottom of the page.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2021/01-win10iso/autounattend.jpg&#34; alt=&#34;autounattend&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;apply-changes-and-exit-msmg-toolkit&#34;&gt;Apply Changes and Exit MSMG Toolkit&lt;/h3&gt;
+&lt;p&gt;Select the Apply Changes option and exit MSMG Toolkit. We aren&amp;rsquo;t done as we need to implement the autounattend.xml file into the ISO and add any extra tools we want. This can be the Network Driver EXE or any other executable you want. Another good example would be the nVidia Geforce Experience.&lt;/p&gt;
+&lt;h3 id=&#34;mount-iso-and-copy-files&#34;&gt;Mount ISO and Copy Files&lt;/h3&gt;
+&lt;p&gt;Mount the completed ISO file. (&lt;em&gt;Right-Click the Windows10.ISO file and select mount&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2021/01-win10iso/mount.png&#34; alt=&#34;mount&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

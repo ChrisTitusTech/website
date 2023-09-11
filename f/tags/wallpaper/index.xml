@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wallpaper on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/wallpaper/</link>
+    <description>Recent content in wallpaper on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jul 2020 14:52:13 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/wallpaper/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Change your Desktop Wallpaper</title>
+      <link>http://localhost:1313/change-wallpaper/</link>
+      <pubDate>Wed, 08 Jul 2020 14:52:13 -0500</pubDate>
+      
+      <guid>http://localhost:1313/change-wallpaper/</guid>
+      <description>&lt;p&gt;This article shows you how to automatically change your wallpaper on Windows, macOS, and Linux.&lt;/p&gt;
+&lt;p&gt;To get the greatest variety and the highest quality it is best to use reddit as the voting system and variety ensure both these goals are met.&lt;/p&gt;
+&lt;h2 id=&#34;change-wallpaper-in-windows&#34;&gt;Change Wallpaper in Windows&lt;/h2&gt;
+&lt;p&gt;GitHub Project: &lt;a href=&#34;https://github.com/Rawns/Reddit-Wallpaper-Changer&#34;&gt;https://github.com/Rawns/Reddit-Wallpaper-Changer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;From the Releases Tab on GitHub download the latest version and install it.&lt;/p&gt;
+&lt;p&gt;Here are the settings I recommend using:&lt;br&gt;
+&lt;img src=&#34;http://localhost:1313/images/2020/wallpaper/wall-settings-w10.png&#34; alt=&#34;win10-wallsettings&#34;&gt;&lt;/p&gt;
+&lt;p&gt;There is also an option to save all wallpapers locally. I like to save all downloaded wallpapers for future reference or build and offline repository.&lt;/p&gt;
+&lt;h2 id=&#34;change-wallpaper-in-mac-os&#34;&gt;Change Wallpaper in Mac OS&lt;/h2&gt;
+&lt;p&gt;GitHub Project: &lt;a href=&#34;https://github.com/ChrisTitusTech/wallpaper-reddit&#34;&gt;https://github.com/ChrisTitusTech/wallpaper-reddit&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;install-macos-dependancies&#34;&gt;Install MacOS Dependancies&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xcode-select --install
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo easy_install pip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo pip install --upgrade pip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install pillow
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;needed-desktop-wallpaper-script-package&#34;&gt;Needed Desktop Wallpaper Script Package&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Swift Tools on MacOS 13 (Required for High Sierra or Earlier) - &lt;a href=&#34;https://support.apple.com/kb/DL1998&#34;&gt;https://support.apple.com/kb/DL1998&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Script for Changing MacOS Wallpaper - &lt;a href=&#34;https://github.com/scriptingosx/desktoppr/releases&#34;&gt;https://github.com/scriptingosx/desktoppr/releases&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;install-macos-program&#34;&gt;Install MacOS Program&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/ChrisTitusTech/wallpaper-reddit.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd wallpaper-reddit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo python3 setup.py install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;macos-usage&#34;&gt;MacOS Usage&lt;/h3&gt;
+&lt;p&gt;You can run this anytime by typing in terminal &lt;code&gt;wallpaper-reddit [subreddits]&lt;/code&gt;&lt;br&gt;
+Binaries are located at &lt;code&gt;/usr/local/bin/wallpaper-reddit&lt;/code&gt;
+Config files are located at &lt;code&gt;~/.config/wallpaper-reddit&lt;/code&gt;
+Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;running-on-macos-startup&#34;&gt;Running on macOS Startup&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Start Automator&lt;/li&gt;
+&lt;li&gt;Create New Task: File -&amp;gt; New&lt;/li&gt;
+&lt;li&gt;Select &amp;ldquo;Application&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;Click &amp;ldquo;Show library&amp;rdquo; in the toolbar (if hidden)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add &amp;ldquo;Run shell script&amp;rdquo; (from the Actions/Utilities)
+&lt;ul&gt;
+&lt;li&gt;Copy-and-paste your script into the window and Run- &lt;em&gt;Note: I used desktoppr to force wallpaper if script fails&lt;/em&gt;
+&lt;img src=&#34;http://localhost:1313/images/2020/wallpaper/macos-automator.jpg&#34; alt=&#34;automator&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/wallpaper-reddit --startup
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/desktoppr ~/Pictures/Wallpapers/wallpaper.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Save it somewhere: a file called your_name.app will be created)&lt;/li&gt;
+&lt;li&gt;Go to System Preferences → Users and Groups → Login items&lt;/li&gt;
+&lt;li&gt;Add this newly-created app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;change-wallpaper-in-linux&#34;&gt;Change Wallpaper in Linux&lt;/h2&gt;
+&lt;p&gt;GitHub Project: &lt;a href=&#34;https://github.com/ChrisTitusTech/wallpaper-reddit&#34;&gt;https://github.com/ChrisTitusTech/wallpaper-reddit&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;install-linux-dependancies&#34;&gt;Install Linux Dependancies&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu/Linux Mint/ElementaryOS: &lt;code&gt;sudo apt-get install python3-dev python3-setuptools libjpeg8-dev zlib1g-dev libfreetype6-dev&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fedora: &lt;code&gt;sudo dnf install python3-imaging&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Arch: &lt;code&gt;sudo pacman -S python-pillow&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;install-linux-program&#34;&gt;Install Linux Program&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/ChrisTitusTech/wallpaper-reddit.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd wallpaper-reddit
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo python3 setup.py install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;linux-usage&#34;&gt;Linux Usage&lt;/h3&gt;
+&lt;p&gt;You can run this anytime by typing in terminal &lt;code&gt;wallpaper-reddit [subreddits]&lt;/code&gt;&lt;br&gt;
+Binaries are located at &lt;code&gt;/usr/local/bin/wallpaper-reddit&lt;/code&gt;
+Config files are located at &lt;code&gt;~/.config/wallpaper-reddit&lt;/code&gt;
+Syntax Help &lt;code&gt;wallpaper-reddit --help&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;running-on-linux-startup&#34;&gt;Running on Linux Startup&lt;/h3&gt;
+&lt;p&gt;There is plenty of ways to have this automatically change the wallpaper on startup, however, I like to use the method by adding it at the &lt;code&gt;/etc/profile&lt;/code&gt; EOF (End of File). Here is an example.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/wallpaper-reddit --save
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/local/bin/wallpaper-reddit --startup
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;--save&lt;/code&gt; &lt;em&gt;option flag will save the current wallpaper to the default directory in the config file (&lt;code&gt;~/Pictures/Wallpapers/&lt;/code&gt;). Remove this line if you don&amp;rsquo;t want to save past wallpapers.&lt;/em&gt;
+&lt;code&gt;--startup&lt;/code&gt; &lt;em&gt;option flag will wait til internet access is established and then download the wallpaper from reddit&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;wallpaper-reddit-config-file-settings&#34;&gt;Wallpaper-reddit Config File Settings&lt;/h2&gt;
+&lt;p&gt;The config file is in &lt;code&gt;~/.config/wallpaper-reddit&lt;/code&gt;, and will be created automatically. Currently, the GNOME, XFCE, MATE, Unity, and Cinnamon Desktop Environments should be automatically detected and the program should set the wallpaper without any extra work. However, due to the varying nature of window managers, it is possible, even likely, that you may have to specify a custom command to set your wallpaper. The program will prompt you for this if this is the case; the exact command can be researched per desktop environment. If your desktop environment is not supported, leave the set command blank and it will auto download to the &lt;code&gt;~/Pictures/Wallpapers/&lt;/code&gt; directory as wallpaper.jpg for the daily wallpaper.&lt;/p&gt;
+&lt;h3 id=&#34;config-options&#34;&gt;Config Options&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;minwidth&lt;/code&gt; and &lt;code&gt;minheight&lt;/code&gt; set the minimum dimensions the program will consider a valid candidate for a wallpaper. If &lt;code&gt;--resize&lt;/code&gt; is enabled, the script will resize the image to those dimensions before setting the wallpaper.
+&lt;code&gt;minratio&lt;/code&gt; is the minimal aspect ratio of the image. It is a float value of width/height of the image, for example 1.6 for 16:9 image.
+&lt;code&gt;maxlinks&lt;/code&gt; is the maximum number of links the script will go through before giving up.
+&lt;code&gt;resize&lt;/code&gt; does the same thing as the &lt;code&gt;--resize&lt;/code&gt; flag. It is enabled by default.
+&lt;code&gt;random&lt;/code&gt; does the same thing as the &lt;code&gt;--random&lt;/code&gt; flag.&lt;/p&gt;
+&lt;h2 id=&#34;recommended-wallpaper-subreddits&#34;&gt;Recommended Wallpaper Subreddits&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;EarthPorn&lt;/li&gt;
+&lt;li&gt;CityPorn&lt;/li&gt;
+&lt;li&gt;SkyPorn&lt;/li&gt;
+&lt;li&gt;WeatherPorn&lt;/li&gt;
+&lt;li&gt;BotanicalPorn&lt;/li&gt;
+&lt;li&gt;LakePorn&lt;/li&gt;
+&lt;li&gt;VillagePorn&lt;/li&gt;
+&lt;li&gt;BeachPorn&lt;/li&gt;
+&lt;li&gt;WaterPorn&lt;/li&gt;
+&lt;li&gt;SpacePorn&lt;/li&gt;
+&lt;li&gt;multiwall&lt;/li&gt;
+&lt;li&gt;wallpapers&lt;/li&gt;
+&lt;li&gt;wallpaper&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

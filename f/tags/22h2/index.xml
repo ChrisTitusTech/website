@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>22H2 on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/22h2/</link>
+    <description>Recent content in 22H2 on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/22h2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 22H2 has Problems</title>
+      <link>http://localhost:1313/Windows-22H2-problems/</link>
+      <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/Windows-22H2-problems/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve had a ton of bug reports from 22H2. DO NOT UPDATE to this first Windows 11 update.&lt;/p&gt;
+&lt;h2 id=&#34;the-nature-of-updates-and-security&#34;&gt;The Nature of Updates and Security&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Security is a journey, not a destination - Ralph Waldo Emerson&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The instinct for any Journalist, YouTuber, Media Personality, or Technical Writer to make a sensational title. This one could be &amp;ldquo;Windows 22H2 is a Nightmare and it will steal the DNA from your babies.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;That would get a stupid amount of views and ad revenue, but it wouldn&amp;rsquo;t teach you anything. Instead we need to understand the nature of update and with that knowledge, we will be better computer users.&lt;/p&gt;
+&lt;p&gt;Any system that updates frequently will have bugs. Fix two bugs&amp;hellip; One more appears. This is the nature of computing.&lt;/p&gt;
+&lt;h2 id=&#34;microsoft-known-issues-and-updates&#34;&gt;Microsoft Known Issues and Updates&lt;/h2&gt;
+&lt;p&gt;Source article: &lt;a href=&#34;https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-22h2&#34;&gt;https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-22h2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Issues on 10-22-2022&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/Windows-22H2-problems/ms-known-issues.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Issues update on 10-31-2022&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/Windows-22H2-problems/issue-update.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;should-you-update&#34;&gt;Should you Update?&lt;/h2&gt;
+&lt;p&gt;HELL NO!&lt;/p&gt;
+&lt;p&gt;Being on the newest release of anything can be fun and dealing with new shining features is a blast, but it comes with a cost. You will experience issues and more &amp;ldquo;known issues&amp;rdquo; will appears as more and more users adopt it. Microsoft doesn&amp;rsquo;t have a good quality control department and I wait AT LEAST 1 year after feature updates hit the market before upgrading. For my Windows instances, I wait 2 years.&lt;/p&gt;
+&lt;h2 id=&#34;is-windows-bad-at-updates&#34;&gt;Is Windows Bad at Updates?&lt;/h2&gt;
+&lt;p&gt;This isn&amp;rsquo;t a yes or no answer, but the more complex and old a system is, the greater margin for errors to occur. The foundation of Windows hasn&amp;rsquo;t drastically changed in decades and this makes updating the platform a monumental task for even the mammoth corporation that is Microsoft.&lt;/p&gt;
+&lt;p&gt;Microsoft has some talented employees, but it takes time to add polish and with new feature updates pushed out the door every 6 months&amp;hellip; Expect this to be a trend for ALL future feature updates.&lt;/p&gt;
+&lt;h2 id=&#34;source-articles&#34;&gt;Source Articles&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pureinfotech.com/windows-11-22h2-bug-remote-desktop/&#34;&gt;https://pureinfotech.com/windows-11-22h2-bug-remote-desktop/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-22h2&#34;&gt;https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-22h2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://windowsreport.com/windows-11-22h2-bugs/&#34;&gt;https://windowsreport.com/windows-11-22h2-bugs/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.techradar.com/news/windows-11-22h2-bug-breaks-windows-hello-security-feature&#34;&gt;https://www.techradar.com/news/windows-11-22h2-bug-breaks-windows-hello-security-feature&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.thurrott.com/forums/microsoft/windows/thread/major-bugs-in-win10-22h2&#34;&gt;https://www.thurrott.com/forums/microsoft/windows/thread/major-bugs-in-win10-22h2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/ITI1HaFeq_g&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

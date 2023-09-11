@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flatseal on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/flatseal/</link>
+    <description>Recent content in Flatseal on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/flatseal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flatseal: The Best Flatpak Addon</title>
+      <link>http://localhost:1313/flatseal-required-flatpak-addon/</link>
+      <pubDate>Fri, 10 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/flatseal-required-flatpak-addon/</guid>
+      <description>&lt;p&gt;Managing Flatpak permissions and file storage outside of the flatpak can be difficult to manage. Flatseal fixes all that!&lt;/p&gt;
+&lt;h2 id=&#34;installing-flatseal&#34;&gt;Installing Flatseal&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;flatpak install flathub com.github.tchx84.Flatseal
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using-flatseal&#34;&gt;Using Flatseal&lt;/h2&gt;
+&lt;p&gt;View each flatpak permissions&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/flatseal-required-flatpak-addon/perms.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;See user modified permissions&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/flatseal-required-flatpak-addon/user-perms.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Reset permissions in the top right corner&lt;/p&gt;
+&lt;p&gt;The thing I use the most is filesystem access. This lets you specify the flatpak can read from other parts in the filesystem.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/flatseal-required-flatpak-addon/filesystem.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is the best way to manage and maintain flatpaks with ease and it&amp;rsquo;s the first thing I install after the base flatpak!&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/IfDUXZfDhEI&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netlify on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/netlify/</link>
+    <description>Recent content in Netlify on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/netlify/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Im Sorry Netlify</title>
+      <link>http://localhost:1313/im-sorry-netlify/</link>
+      <pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/im-sorry-netlify/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve used Netlify for years on my website and it&amp;rsquo;s a fantastic service! As I&amp;rsquo;ve grown it&amp;rsquo;s becoming unaffordable. I submitted a support request and this is what happened&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;excess-bandwidth&#34;&gt;Excess Bandwidth&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/im-sorry-netlify/intro.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/im-sorry-netlify/graph.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The statistics on the website have grown with data usage. More Users = More Bandwidth Used. At this rate of growth I&amp;rsquo;m going to be spending well over $100 a month in bandwidth usage. Don&amp;rsquo;t get me wrong for starting a website, Netlify limits won&amp;rsquo;t be a problem. Heck, for the past year I had a 1TB of bandwidth per month for $19! The downside? Over 1TB it starts getting REALLY EXPENSIVE, every 100GB after that is $55! It isn&amp;rsquo;t sustainable.&lt;/p&gt;
+&lt;h2 id=&#34;the-switch&#34;&gt;The Switch&lt;/h2&gt;
+&lt;p&gt;There are many competitors to Netlify launching competing services, but one in particular caught my eye. Cloudflare launched it&amp;rsquo;s &amp;ldquo;Pages&amp;rdquo; service that hooks in with GitHub in 2020. The free tier even gives you UNLIMITED bandwidth! Having used Cloudflare extensively for DNS and DDoS setups in business this is a no brainer. The best part? Analytics are also free!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/im-sorry-netlify/cloudflare.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-experience&#34;&gt;The Experience&lt;/h2&gt;
+&lt;p&gt;I setup pages and click &amp;ldquo;Connect to GitHub&amp;rdquo; then selected my existing Netlify website to see if it could build the HUGO site. FAILURE.&lt;/p&gt;
+&lt;p&gt;The stock hugo instance is v0.50 which is old (Netlify does the same thing) so I added an Environmental Variable. Fixed with the following:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/im-sorry-netlify/hugo-variable.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The other downside? Netlify redirect rules do NOT apply. Cloudflare takes a different approach with Page Rules. This might get expensive for anyone doing a LOT of redirects, as you only get 20 rules for free or pro plan.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/im-sorry-netlify/rules.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Overall, I&amp;rsquo;m pretty darn happy with Cloudflare.&lt;/p&gt;
+&lt;p&gt;They also have a bunch of optimization rules, DDoS prevention, and more, but its about on par with Netlify and haven&amp;rsquo;t noticed any speed or optimization difference.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Cfr4YNbKrB8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

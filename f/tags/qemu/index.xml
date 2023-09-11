@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>QEMU on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/qemu/</link>
+    <description>Recent content in QEMU on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/qemu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quickemu</title>
+      <link>http://localhost:1313/quickemu/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/quickemu/</guid>
+      <description>&lt;p&gt;This is a GitHub project that installs virtual machines for more than 300+ spins of Linux, Windows, and macOS!&lt;/p&gt;
+&lt;h2 id=&#34;the-project&#34;&gt;The Project&lt;/h2&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://github.com/quickemu-project/quickemu&#34;&gt;https://github.com/quickemu-project/quickemu&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Dependency requirements:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install qemu bash coreutils ovmf grep jq lsb procps python3 genisoimage usbutils util-linux sed spice-client-gtk swtpm wget xdg-user-dirs zsync unzip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Install for Ubuntu&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt-add-repository ppa:flexiondotorg/quickemu
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install quickemu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;GUI Install&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo add-apt-repository ppa:yannick-mauray/quickgui
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install quickgui
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Other Distros (Use &lt;a href=&#34;https://christitus.com/nix-package-manager/&#34;&gt;NIX Installer&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nix-env -iA nixpkgs.quickemu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Build from Source for GUI &lt;a href=&#34;https://github.com/quickemu-project/quickgui&#34;&gt;https://github.com/quickemu-project/quickgui&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cli-usage&#34;&gt;CLI Usage&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;quickget ubuntu-mate 22.04
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;quickemu --vm ubuntu-mate-22.04.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is pretty easy to manage with it&amp;rsquo;s own dedicated directory. Ex. &lt;code&gt;~/VMs&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;downloading-via-gui&#34;&gt;Downloading via GUI&lt;/h2&gt;
+&lt;p&gt;Select your OS and Press Download (Yes, it&amp;rsquo;s that easy!)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/quickemu/quickgui.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/quickemu/kubuntu-download.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/87MCT3Ekjlo&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Virtual Machine Formats</title>
+      <link>http://localhost:1313/virtual-machine-formats/</link>
+      <pubDate>Mon, 19 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/virtual-machine-formats/</guid>
+      <description>&lt;p&gt;This Guide goes over transferring and what each type of virtual machine is used for.&lt;/p&gt;
+&lt;h2 id=&#34;the-types&#34;&gt;The Types&lt;/h2&gt;
+&lt;h3 id=&#34;vdi---virtualbox&#34;&gt;VDI - Virtualbox&lt;/h3&gt;
+&lt;p&gt;The only time I&amp;rsquo;ve seen this format is in Virtualbox instances. They are always converted when moved to other hypervisors. The VDI packaging is open source and considered efficient.&lt;/p&gt;
+&lt;h3 id=&#34;vmdk---vmware&#34;&gt;VMDK - VMWare&lt;/h3&gt;
+&lt;p&gt;This is the market leader and what you will see the most in virtualization environments. Virtualbox and QEMU can run them without conversion.&lt;/p&gt;
+&lt;h3 id=&#34;vhd---microsoft&#34;&gt;VHD - Microsoft&lt;/h3&gt;
+&lt;p&gt;Leave it to Microsoft to make the worst container. VHD only holds a 2 TB capacity and why they created VHDX which improves this to 64 TB. Its not as performant as other containers, but gets the job done. The main benefit to these is they are read natively inside Windows without the need for extra software. You can mount and look at partition layouts with native windows tools like Disk Management.&lt;/p&gt;
+&lt;h3 id=&#34;qcow2---qemu&#34;&gt;QCOW2 - QEMU&lt;/h3&gt;
+&lt;p&gt;QEMU is by far my favorite hypervisor because of the versatility it gives me. QCOW2 is the file format you will use and it fantastic. There is a conversion tool that comes with QEMU that will easily convert any image. I&amp;rsquo;d recommend first converting the image to OVA as it is the most portable and versatile. Here is a sample script to convert to qcow2.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -xvf original.ova
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;qemu-img convert -O qcow2 original.vmdk original.qcow2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ovf-and-ova---the-best-way-to-share-vms&#34;&gt;OVF and OVA - The Best Way to Share VMs&lt;/h3&gt;
+&lt;p&gt;This standard is widely adopted from VMWare, but you will be able to ingest these files into any hypervisor. VMWare, Virtualbox, and XenServer (XCP-ng) do this natively, where QEMU needs a little more conversion, but simple to use. Here is the &lt;a href=&#34;https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AE61948B-C2EE-436E-BAFB-3C7209088552.html&#34;&gt;official website&lt;/a&gt;  right up on these files.&lt;/p&gt;
+&lt;p&gt;The TLDR is use OVA as it grabs all the information from the VMs (VMDK, OVF, and other information) and packages it all into one file for you. This is by far the best way to share a Virtual Machine.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/EdP1Fc-exwY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Setting up Windows inside Linux</title>
+      <link>http://localhost:1313/windows-inside-linux/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/windows-inside-linux/</guid>
+      <description>&lt;p&gt;Running Windows inside of Linux is essential for those that are trying to convert to Linux. There will always be a transition period and need to fallback to Windows. It is also nice to have for many Windows only programs that you may need while inside Linux.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;rsquo;t ever installed QEMU before, here is an article to get that setup @ &lt;a href=&#34;https://christitus.com/vm-setup-in-linux/&#34;&gt;https://christitus.com/vm-setup-in-linux/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;optimizing-windows-vm&#34;&gt;Optimizing Windows VM&lt;/h2&gt;
+&lt;p&gt;First you need to install the VirtIO tools, which can be difficult to track down. My favorite way is to run the exe file from &lt;a href=&#34;https://github.com/virtio-win/virtio-win-pkg-scripts&#34;&gt;https://github.com/virtio-win/virtio-win-pkg-scripts&lt;/a&gt; but many guides use the iso file also provided at this link.&lt;/p&gt;
+&lt;p&gt;Another good resource for obtaining VirtIO drivers is from the proxmox wiki &lt;a href=&#34;https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers&#34;&gt;https://pve.proxmox.com/wiki/Windows_VirtIO_Drivers&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;enable-qemu-guest-agent&#34;&gt;Enable QEMU Guest Agent&lt;/h3&gt;
+&lt;p&gt;Now you need to modify the VM to make use of the guest agent drivers. We need to add the qemu agent channel. Add Hardware -&amp;gt; Channel and copy these settings&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/qemu/guest-agent.png&#34; alt=&#34;guest-agent&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;passing-devices-through&#34;&gt;Passing Devices Through&lt;/h2&gt;
+&lt;p&gt;There are two main devices that you may want to pass through to a Windows VM. Hard Drives and Graphics Cards. Passing through a hard drive will give a good uplift in processing power and general VM response. The graphics card is very technical and frankly not recommended, but can be doable on some systems.&lt;/p&gt;
+&lt;h3 id=&#34;dedicated-hard-drive&#34;&gt;Dedicated Hard Drive&lt;/h3&gt;
+&lt;p&gt;Simply select Add Hardware -&amp;gt; Storage and copy these settings&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/qemu/hdd.png&#34; alt=&#34;hdd&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dedicated-graphics-card&#34;&gt;Dedicated Graphics Card&lt;/h3&gt;
+&lt;p&gt;This is referred to as PCI Passthrough and can be dicey on some systems. I&amp;rsquo;ve had some motherboards that can&amp;rsquo;t do this and others that can. The best guide and scripts I&amp;rsquo;ve found are from HikariKnight and his GitHub @ &lt;a href=&#34;https://github.com/HikariKnight/quickpassthrough&#34;&gt;https://github.com/HikariKnight/quickpassthrough&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/6KqqNsnkDlQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GIMP on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/gimp/</link>
+    <description>Recent content in GIMP on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Sep 2019 00:55:12 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/gimp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update to the Latest Version of GIMP</title>
+      <link>http://localhost:1313/latest-version-of-gimp/</link>
+      <pubDate>Mon, 16 Sep 2019 00:55:12 +0000</pubDate>
+      
+      <guid>http://localhost:1313/latest-version-of-gimp/</guid>
+      <description>&lt;p&gt;Here are instructions on how to Update to the latest version of GIMP. This is vital to make sure you get the newest and best features for GIMP. The old versions of gimp that come bundled with Ubuntu 18 and prior aren’t nearly as good as Gimp 2.10+.&lt;/p&gt;
+&lt;p&gt;Start by launching terminal and adding the GIMP repository&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo add-apt-repository ppa:otto-kesselgulasch/gimp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Verify the apt updates and if it doesn’t run the following command&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now simply install GIMP and it will automatically update to the latest version of GIMP from now on&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install gimp&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Here is a video walkthrough of install special GIMP scripts as well if you want to unlock the complete capabilities of GIMP.&lt;br&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/CysfnD7dYwM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

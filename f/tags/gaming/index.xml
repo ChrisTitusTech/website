@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gaming on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/gaming/</link>
+    <description>Recent content in Gaming on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Mar 2020 20:50:39 -0500</lastBuildDate><atom:link href="http://localhost:1313/tags/gaming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Doom Eternal Linux</title>
+      <link>http://localhost:1313/doom-eternal-linux/</link>
+      <pubDate>Sun, 22 Mar 2020 20:50:39 -0500</pubDate>
+      
+      <guid>http://localhost:1313/doom-eternal-linux/</guid>
+      <description>&lt;p&gt;This post is here to help guide you through setting up doom eternal on Linux.&lt;/p&gt;
+&lt;h1 id=&#34;requirements&#34;&gt;Requirements&lt;/h1&gt;
+&lt;p&gt;We will be using Glorious Eggroll&amp;rsquo;s version of proton which is very easy to install and update with an update script. You can manually install this if you don&amp;rsquo;t want to do the &amp;ldquo;easy way&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;custom-proton-ge-edition-install&#34;&gt;Custom Proton GE Edition Install&lt;/h2&gt;
+&lt;p&gt;Run the following commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://raw.githubusercontent.com/flubberding/ProtonUpdater/master/cproton.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod a+x cproton.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sh cproton.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You will be prompted if you want to update it just type yes.&lt;br&gt;
+This will install the new GE proton into the ~/.steam/root/compatibility.d (arch) and ~/.steam/compatibility.d (debian) respectively.&lt;/p&gt;
+&lt;h2 id=&#34;modifying-steam-launch-options&#34;&gt;Modifying Steam Launch Options&lt;/h2&gt;
+&lt;p&gt;By default, the default settings will still make it so you are unable to launch the game. I found using the following in steam launch options not only fixes the problems but makes it perform better and get you to the title screen faster.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RADV_PERFTEST=llvm PROTON_NO_ESYNC=1 %command% +in_terminal 1 +com_skipIntroVideo 1 +com_skipKeyPressOnLoadScreens 1 +com_skipSignInManager 1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you still encounter issues install the AMDVLK package &lt;a href=&#34;https://github.com/GPUOpen-Drivers/AMDVLK&#34;&gt;https://github.com/GPUOpen-Drivers/AMDVLK&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;Note: Nvidia card users can&amp;rsquo;t use this package and are currently having issues with Doom&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/g3UPxd8iUsU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;All testing was done with a Linux box using an AMD Radeon RX580. Refer to the video above for a look at the performance. I have noticed a lot of people online complaining that they are still having performance problems, but all of them seem to be nVidia users.&lt;br&gt;
+All these fixes should be merged in to the official version of proton in a couple months and you shouldn&amp;rsquo;t need to do any of this once this is done.&lt;/p&gt;
+&lt;p&gt;Have Fun and Game On!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

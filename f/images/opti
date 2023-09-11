@@ -1,0 +1,9 @@
+#!/bin/bash
+# Dependencies
+# - img-optimize - https://virtubox.github.io/img-optimize/
+# - imagemagick
+# - jpegoptim
+# - optipng
+
+for file in *.png; do convert "$file" -verbose -resize 600\> "$file"; done
+img-optimize --std --path "$(pwd)"

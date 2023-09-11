@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recovery on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/recovery/</link>
+    <description>Recent content in Recovery on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/recovery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reagentc Windows Recovery Partition</title>
+      <link>http://localhost:1313/reagentc-windows-recovery-partition/</link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/reagentc-windows-recovery-partition/</guid>
+      <description>&lt;p&gt;Don&amp;rsquo;t know what ReAgentC is or how to use it? This is your guide.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Do you know how to use ReAgentC and setup the built-in windows recovery partition?&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1584603485261115392?ref_src=twsrc%5Etfw&#34;&gt;October 24, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;setup-recovery-partition&#34;&gt;Setup Recovery Partition&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create Recovery Partition at least 1GB in size.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Format the recovery partition as NTFS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DISKPART Changes&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;- select disk 0
+- select partition 3 (last partition)
+- detail partition (list partition details)
+- set id=&amp;quot;de94bba4-06d1-4d40-a16a-bfd50179d6ac&amp;quot; (GPTDisk) _Note: id=27 on MBR_
+NOTE: Reset ids to normal if you did the WRONG partition (MBR set id=7 and GPT set id=&amp;quot;ebd0a0a2-b9e5-4433-87c0-68b6b72699c7&amp;quot;)
+ 	 - _Create Partition if Missing!_ `cre par pri size=605 id=de94bba4-06d1-4d40-a16a-bfd50179d6ac`
+ 	 - `format fs=ntfs quick label=WinRE`
+ 	 - `assign letter=z`
+ 	 - UEFI only: `gpt attributes=0x8000000000000001`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;reagentc /disable&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verify &lt;code&gt;WinRE.wim&lt;/code&gt; is installed on local system &lt;code&gt;ls &amp;quot;C:\Windows\System32\Recovery&amp;quot; | FindStr /I &amp;quot;WinRE.wim&amp;quot; ; ls &amp;quot;C:\Windows\System32\Recovery&amp;quot; -Hidden | FindStr /I &amp;quot;WinRE.wim&amp;quot;&lt;/code&gt;
+5a. If Missing, Copy WinRE.wim and the uninitialized ReAgent.xml files from the installation Media (Easiest method is to use 7zip to extract &lt;code&gt;WinRE.wim&lt;/code&gt; from &lt;code&gt;install.wim&lt;/code&gt;) to &lt;code&gt;C:\Windows\System32\Recovery&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;reagentc /enable&lt;/code&gt; (this will move WinRe.wim to the Recovery partition and set the GUID and location in ReAgent.xml)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;reagentc /info&lt;/code&gt; (Check settings for verification)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;if-reagentc-enable-does-not-work&#34;&gt;If ReAgentC /enable does NOT work&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Manually copy &lt;code&gt;WinRE.wim&lt;/code&gt; to &lt;code&gt;Z:\Recovery\WindowsRE&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ReAgentC /SetREimage /Path &amp;quot;Z:\Recovery\WindowsRE&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ReAgentC /Enable&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Verify with &lt;code&gt;ReAgentC /Info&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rebooting-to-recovery-partition&#34;&gt;Rebooting to Recovery Partition&lt;/h2&gt;
+&lt;p&gt;If you can boot in to Windows, hold shift while pressing restart. This will reboot your PC into a menu. Select &lt;em&gt;Advanced Options&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Another method to reach this screen is to have the boot fail 3 times. A reboot during the load screen will count as a failure.&lt;/p&gt;
+&lt;p&gt;F8 is an older method that doesn&amp;rsquo;t work unless enabled, but was a great way to get to the menu. I&amp;rsquo;m adding this to my Windows Utility Tweaks section.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/reagentc-windows-recovery-partition/recovery.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;startup-repair-and-settings&#34;&gt;Startup Repair and Settings&lt;/h3&gt;
+&lt;p&gt;Startup Repair almost never works, but once in a blue moon is beneficial. Startup Settings can send you to safe mode.&lt;/p&gt;
+&lt;h3 id=&#34;command-prompt&#34;&gt;Command Prompt&lt;/h3&gt;
+&lt;p&gt;Here are the highlights of a recovery partition:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Copy Files&lt;/li&gt;
+&lt;li&gt;Chkdsk for failing hard drives&lt;/li&gt;
+&lt;li&gt;SFC/DISM repairs corrupt system files (&lt;code&gt;sfc /scannow&lt;/code&gt; and &lt;code&gt;dism /image:c:\ /cleanup-image /restorehealth&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/reagentc-windows-recovery-partition/sfc.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Regedit for editing the registry&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/reagentc-windows-recovery-partition/regedit.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;uninstall-updates&#34;&gt;Uninstall Updates&lt;/h3&gt;
+&lt;p&gt;Bad update and now it doesn&amp;rsquo;t work? Click this and revert it!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/reagentc-windows-recovery-partition/updates.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;uefi-firmware-settings&#34;&gt;UEFI Firmware Settings&lt;/h3&gt;
+&lt;p&gt;Loads into BIOS. Can be useful on laptops where you don&amp;rsquo;t know key combination when powering on.&lt;/p&gt;
+&lt;h3 id=&#34;system-restore-and-system-image-recovery&#34;&gt;System Restore and System Image Recovery&lt;/h3&gt;
+&lt;p&gt;I don&amp;rsquo;t use these much, but can be a good last resort option. System Restore generally brings most of the system back to last restore point and System Image is good for recovering Windows if you used the built-in Windows Backup Software to external hard drive.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/L7Ss-KKp010&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

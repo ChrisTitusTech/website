@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learn Linux on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/learn-linux/</link>
+    <description>Recent content in Learn Linux on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Oct 2019 01:42:05 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/learn-linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Learn Linux</title>
+      <link>http://localhost:1313/learn-linux/</link>
+      <pubDate>Thu, 10 Oct 2019 01:42:05 +0000</pubDate>
+      
+      <guid>http://localhost:1313/learn-linux/</guid>
+      <description>&lt;p&gt;This article gives you the resources on how to learn Linux. If I am missing a resource, be sure and comment so I can add it.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/2019/10/wiki-261x300.png&#34; alt=&#34;wiki&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/2019/10/help-300x252.png&#34; alt=&#34;help&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://wiki.archlinux.org/&#34;&gt;Arch Linux Wiki&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://christitus.com/discord&#34;&gt;CTT Discord&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://wiki.debian.org/&#34;&gt;Debian Wiki&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://discord.gg/fedora&#34;&gt;Fedora&amp;rsquo;s Discord&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://wiki.ubuntu.com/&#34;&gt;Ubuntu Wiki&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://www.reddit.com/r/linux4noobs/&#34;&gt;Linux4Noobs&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://en.opensuse.org/Main_Page&#34;&gt;OpenSUSE Wiki&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://www.linuxquestions.org/questions/&#34;&gt;Linux Questions Forums&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://fedoraproject.org/wiki/Fedora_Project_Wiki&#34;&gt;Fedora Wiki&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://ubuntuforums.org/index.php&#34;&gt;Ubuntu Forums&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://bbs.archlinux.org/&#34;&gt;Arch Linux Forums&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/2019/10/playbutton-150x150.png&#34; alt=&#34;videos&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/2019/10/Screenwriting-Websites-300x241.jpg&#34; alt=&#34;externalsites&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLc7fktTRMBowM-n5VXCUobY0eddQ1H4YV&#34;&gt;CTT Linux Tutorial Videos&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://itsfoss.com/?&#34;&gt;It&amp;rsquo;s FOSS&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://www.theurbanpenguin.com/operating-system-tutorials/&#34;&gt;The Urban Penguin&amp;rsquo;s OS Tutorial Videos&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://www.linuxuprising.com/&#34;&gt;Linux Uprising&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://christitus.com/pluralsight&#34;&gt;Pluralsight (Classroom Style Courses - PAID)&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;https://linoxide.com/&#34;&gt;Lin0xide&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Video Overview of Learning Resources
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/a2qblT7o4mE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Why should I switch to Linux from Windows?</title>
+      <link>http://localhost:1313/linux-switch-video/</link>
+      <pubDate>Tue, 16 Oct 2018 17:59:04 +0000</pubDate>
+      
+      <guid>http://localhost:1313/linux-switch-video/</guid>
+      <description>&lt;p&gt;This will be the first article in a series of Linux articles, I am going over 6 reasons to switch to Linux and 1 big reason not to. Many people ask “Why should I switch to Linux from Windows?” and in this article below I break it down for you.&lt;/p&gt;
+&lt;h3 id=&#34;pros&#34;&gt;Pros&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;It’s Free – Tons of Free software&lt;/li&gt;
+&lt;li&gt;No big brother – Microsoft Telemetry reports on you!&lt;/li&gt;
+&lt;li&gt;Stable – Can go months or even years before rebooting&lt;/li&gt;
+&lt;li&gt;Works on anything – Pretty much any piece of hard will run Linux.&lt;/li&gt;
+&lt;li&gt;Updates the way you WANT!&lt;/li&gt;
+&lt;li&gt;Virus/malware resistant&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;cons&#34;&gt;Cons&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Windows only software
+&lt;ul&gt;
+&lt;li&gt;Microsoft Office&lt;/li&gt;
+&lt;li&gt;Adobe Software Suite&lt;/li&gt;
+&lt;li&gt;Specific Games&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;video-walkthrough&#34;&gt;Video Walkthrough&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/s5QGZ-DBYGs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

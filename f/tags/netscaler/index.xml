@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NetScaler on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/netscaler/</link>
+    <description>Recent content in NetScaler on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Nov 2016 15:13:18 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/netscaler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Updating LDAP Credentials for Netscaler VPX 1000</title>
+      <link>http://localhost:1313/update-netscaler-vpx/</link>
+      <pubDate>Sat, 12 Nov 2016 15:13:18 +0000</pubDate>
+      
+      <guid>http://localhost:1313/update-netscaler-vpx/</guid>
+      <description>&lt;p&gt;This article shows you how to update LDAP credentials on the Netscaler VPX 1000. It goes over logging in, editing virtual server, and applying settings.&lt;/p&gt;
+&lt;h3 id=&#34;login-to-the-netscaler-device&#34;&gt;Login to the NetScaler Device&lt;/h3&gt;
+&lt;p&gt;Default User: nsroot Pass: nsroot (or password you changed it to)&lt;/p&gt;
+&lt;h3 id=&#34;go-to-netscaler-gateway-virtual-server-controlling-your-logins&#34;&gt;Go to Netscaler gateway virtual server controlling your logins&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2016/11/netscaler1.png&#34; alt=&#34;Netscaler1&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;click-on-ldap-policy-and-select-edit-server&#34;&gt;Click on LDAP Policy and select Edit Server&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2016/11/netscaler2.png&#34; alt=&#34;Netscaler2&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;update-the-credentials-under-connection-settings-and-also-test-the-new-settings&#34;&gt;Update the credentials under connection settings, and also test the new settings.&lt;/h3&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

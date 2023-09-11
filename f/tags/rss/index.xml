@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RSS on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/rss/</link>
+    <description>Recent content in RSS on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/rss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why We Don&#39;t Browse the Internet Anymore</title>
+      <link>http://localhost:1313/why-we-dont-browse-the-internet-anymore/</link>
+      <pubDate>Mon, 21 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/why-we-dont-browse-the-internet-anymore/</guid>
+      <description>&lt;p&gt;The problem with the modern internet is ads, sponsored posts, and pay walls. Enter RSS feeds as a solution.&lt;/p&gt;
+&lt;p&gt;Subscribe to the sites and information you want to see and not have an algorithm decide what influences you. This requires &amp;ldquo;fixing&amp;rdquo; RSS and downloading articles, but the payout is amazing. How many people use RSS? Here is poll I ran on Twitter.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Do you use RSS?&lt;/p&gt;&amp;mdash; Chris Titus Tech (@christitustech) &lt;a href=&#34;https://twitter.com/christitustech/status/1589727064957284352?ref_src=twsrc%5Etfw&#34;&gt;November 7, 2022&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;how-we-used-to-browse-the-internet&#34;&gt;How we used to browse the Internet&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/why-we-dont-browse-the-internet-anymore/altavista.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The era of altavista, dogpile, askjeeves, yahoo, excite, lycos, and others was an era of innovation and competition. There was a heated rivalry between Internet Exploader and Netscape, which Microsoft inevitably won with dirty business practices. That era was a time of discovery and businesses were figuring out how to make money on the internet.&lt;/p&gt;
+&lt;p&gt;Information was scattered everywhere and the web was decentralized among hundreds of companies. When we &amp;ldquo;logged on&amp;rdquo; you made decisions on what to do. Sometimes you wanted to play a game, or stumble upon a new website, or browse a news group. Almost nothing curated and uniform. This is often referred to as Web 1.0.&lt;/p&gt;
+&lt;h2 id=&#34;how-we-use-the-internet-today&#34;&gt;How we use the Internet today&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/why-we-dont-browse-the-internet-anymore/google.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We google anything we want, use our chromium browsers, and social media for everything else. Between Google, Facebook (I&amp;rsquo;m not calling it Meta), and Amazon we have everything. Facebook is dying off and for old people raging about some political garbage, Amazon we order anything want to appear on our doorstep, and Google is what powers almost every search we do.&lt;/p&gt;
+&lt;p&gt;When we find the site we are looking for, it ends up with tons of ads or paywalled. Even worse, some reputable sites sell &amp;ldquo;sponsored posts&amp;rdquo; where the advertising gets posted directly in the feed. Imagine watching a television show and then in the third episode its nothing but a giant Subway ad. This is our modern internet.&lt;/p&gt;
+&lt;h2 id=&#34;how-to-fix-it-with-rss&#34;&gt;How to fix it with RSS&lt;/h2&gt;
+&lt;p&gt;Really Simple Syndication or RSS for short, is used to get updates from websites whenever something is posted. You have a listing of the entire website and you can pick the article you want to read. Even better you can subscribe to YouTube Channels and other social feeds to RSS as well.&lt;/p&gt;
+&lt;p&gt;The problem? Ads, Brief Summaries, and redirects. We fix this by using a feed aggregator and never leave our RSS reader.&lt;/p&gt;
+&lt;p&gt;The other problem with RSS Readers online are expensive using feedly($8), inoreader($10), and newsblur($3) per month. This used all be free with Google Reader, but in typical Google fashion they killed Reader.&lt;/p&gt;
+&lt;h3 id=&#34;feed-aggregation&#34;&gt;Feed Aggregation&lt;/h3&gt;
+&lt;p&gt;I use docker self-hosted aggregator &lt;a href=&#34;https://github.com/heussd/fivefilters-full-text-rss-docker&#34;&gt;https://github.com/heussd/fivefilters-full-text-rss-docker&lt;/a&gt; or if you want to pay money you can use &lt;a href=&#34;http://ftr.fivefilters.org/&#34;&gt;five filters aggregator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here is my docker command to install and configure it on my docker server using port 50000&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--name=full-test-rss \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-p 50000:80 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--restart always \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;heussd/fivefilters-full-text-rss:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;feed-reader&#34;&gt;Feed Reader&lt;/h3&gt;
+&lt;p&gt;There are a couple different ways to pull in these RSS feeds. For browsers there is Vivaldi, external programs like Obsidian, and for self-hosted I recommend &lt;a href=&#34;https://freshrss.org/&#34;&gt;FreshRSS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I use my docker server again to host this on port 49999&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --name=freshrss \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e PUID=1000 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e PGID=1000 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e TZ=Europe/London \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -p 49999:80 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v /path/to/data:/config \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --restart unless-stopped \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  lscr.io/linuxserver/freshrss:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/nxV0CPNeFxY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

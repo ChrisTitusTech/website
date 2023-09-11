@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DISM&#43;&#43; on Chris Titus Tech | Tech Content Creator</title>
+    <link>http://localhost:1313/tags/dism&#43;&#43;/</link>
+    <description>Recent content in DISM&#43;&#43; on Chris Titus Tech | Tech Content Creator</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/dism++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dism&#43;&#43;</title>
+      <link>http://localhost:1313/dism-plus/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/dism-plus/</guid>
+      <description>&lt;p&gt;Dism++ enables users to modify Windows images before installing them, as well as providing tools to address and repair common issues like missing or corrupted files.&lt;/p&gt;
+&lt;h2 id=&#34;before-using&#34;&gt;Before Using&lt;/h2&gt;
+&lt;p&gt;DISM++ is an open source github project located @ &lt;a href=&#34;https://github.com/Chuyu-Team/Dism-Multi-language/tree/master/www.chuyu.me&#34;&gt;https://github.com/Chuyu-Team/Dism-Multi-language/tree/master/www.chuyu.me&lt;/a&gt; but is a bit dated. The last activity on the project was February 2022, but the main site is down.&lt;/p&gt;
+&lt;p&gt;It is created by Chuyu, which is a Chinese developer and I&amp;rsquo;d recommend NOT using this tool for secure environments. In short, if you use TikTok or Discord, then is a giant nothing burger for you and use away.&lt;/p&gt;
+&lt;h2 id=&#34;download&#34;&gt;Download&lt;/h2&gt;
+&lt;h2 id=&#34;usage-and-features&#34;&gt;Usage and Features&lt;/h2&gt;
+&lt;h3 id=&#34;disk-cleanup&#34;&gt;Disk Cleanup&lt;/h3&gt;
+&lt;p&gt;Advanced cleanup of Windows updates and misc. files.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/dism-plus/cleanup.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;startup-check&#34;&gt;Startup Check&lt;/h3&gt;
+&lt;p&gt;See what programs are starting and what programs will get installed when a new user is created.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/dism-plus/startup.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;appx-uninstaller&#34;&gt;Appx Uninstaller&lt;/h3&gt;
+&lt;p&gt;Bulk uninstall Microsoft Store Apps.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/dism-plus/appx.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;updates&#34;&gt;Updates&lt;/h3&gt;
+&lt;p&gt;Uninstalled Built-In Updates? Use the DISM++ Updates tab to scan and install new updates.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2023/dism-plus/updates.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-rest---toolbox-deploy-drivers-etc&#34;&gt;The Rest - Toolbox, Deploy, Drivers, etc.&lt;/h3&gt;
+&lt;p&gt;Since this is seeing less and less updates, I wouldn&amp;rsquo;t use these tools. Microsoft is constantly updating and modifying Windows, hence using the less targeted tools is NOT Recommended.&lt;/p&gt;
+&lt;h2 id=&#34;walkthrough-video&#34;&gt;Walkthrough Video&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/2hEde5WuCSY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
