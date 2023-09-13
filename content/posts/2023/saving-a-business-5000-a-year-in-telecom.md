@@ -1,7 +1,7 @@
 ---
 title: "Saving a Business Thousands a Year in Telecom"
 
-date: 2023-09-16
+date: 2023-09-15
 url: /saving-a-business-5000-a-year-in-telecom/
 image: images/2023-thumbs/saving-a-business-5000-a-year-in-telecom.jpg
 categories:
@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - 3cx
-draft: true
+draft: false
 ---
 Over the past 3 years I've setup a hosted solution for a business that has saved them over $5000 per year on their telephone bill.
 <!--more-->
