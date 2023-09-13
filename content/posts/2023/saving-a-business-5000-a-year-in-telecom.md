@@ -1,5 +1,5 @@
 ---
-title: "Saving a Business 5000 a Year in Telecom"
+title: "Saving a Business Thousands a Year in Telecom"
 
 date: 2023-09-16
 url: /saving-a-business-5000-a-year-in-telecom/
@@ -58,6 +58,12 @@ The mobile app for android and iOS is amazing. Has a ton of functionality and ca
  ![](/images/2023/saving-a-business-5000-a-year-in-telecom/chat.png)![](/images/2023/saving-a-business-5000-a-year-in-telecom/recent.png)
 ![](/images/2023/saving-a-business-5000-a-year-in-telecom/voicemail.png)
 
+### Live Chat
+
+They also have live chat code that is really easy to add to any website. Only two lines of code and you can setup an entire call center. Here is the video I did on that. 
+
+{{< youtube IPhbI3LWkTg >}}
+
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube klsqtRclpXo >}}
