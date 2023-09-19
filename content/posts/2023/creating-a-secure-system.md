@@ -1,7 +1,7 @@
 ---
 title: "Creating a Secure System"
 
-date: 2023-09-06
+date: 2023-09-26
 url: /creating-a-secure-system/
 image: images/2023-thumbs/creating-a-secure-system.jpg
 categories:
