@@ -1,7 +1,7 @@
 ---
-title: "Do Not Make These Github Mistakes"
+title: "Github Mistakes and What I Wish I Knew Sooner"
 
-date: 2023-12-12
+date: 2023-09-20
 url: /do-not-make-these-github-mistakes/
 image: images/2023-thumbs/do-not-make-these-github-mistakes.jpg
 categories:
@@ -51,4 +51,4 @@ Unit testing is a vital part of every project as it checks for syntax errors and
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube "djPC_hBKl3I" >}}
