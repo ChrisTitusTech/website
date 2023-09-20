@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - GitHub 
-draft: true
+draft: false
 ---
 I've made a LOT of GitHub mistakes! Here is a list of things most new users do not know or do WRONG!
 <!--more-->
