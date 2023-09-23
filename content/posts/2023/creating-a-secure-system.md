@@ -1,14 +1,14 @@
 ---
 title: "Creating a Secure System"
 
-date: 2023-09-26
+date: 2023-09-24
 url: /creating-a-secure-system/
 image: images/2023-thumbs/creating-a-secure-system.jpg
 categories:
   - Linux
 tags:
   - Security
-draft: true
+draft: false
 ---
 Security is a journey not a destination. Let's go over all the ways you aren't secure and how you can minimize your footprint.
 <!--more-->
@@ -32,9 +32,9 @@ Windows is the most problamatic with extensive telemetry and the most remote exe
 
 ## Browsers
 
-There isn't a web browser I'd recommend. I'm currently using Brave, but it could be better. All web browsers have their faults and most of them are running off the Google Chrome codebase. A recommended extention, Guard.io, can help make browsing a safer experience. It detects, bad urls, malcious extensions, email phishing, search hijackers, information leak monitoring, dangerous downloads, and harmful pop-ups. 
+There isn't a web browser I'd recommend. I'm currently using Brave, but it could be better. All web browsers have their faults and most of them are running off the Google Chrome codebase. 
 
-You can scan your browser for threats for free, by visiting <guard.io> and installing the extension and you'll get a 7-day free trial to the premium features such as real-time threat removal.
+Probably the best would be a private firefox you make yourself with this script: <https://github.com/simeononsecurity/FireFox-Privacy-Script>
 
 ## Password Managers
 
@@ -50,4 +50,4 @@ Downloading hacked programs, clicking on phishing links, and installing 50 exten
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube "ffnIL6hE__w" >}}
