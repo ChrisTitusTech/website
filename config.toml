@@ -34,7 +34,7 @@ home = ["HTML", "AMP", "RSS", "JSON"]
 [params]
 # logo
 logo = "images/navlogo.png"
-logoWidth = 121
+logoWidth = 248
 logoHeight = 50
 # favicon
 favicon = "images/favicon.png"
