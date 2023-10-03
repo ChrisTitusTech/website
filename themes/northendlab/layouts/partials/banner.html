@@ -1,6 +1,5 @@
 <section>
   <div class="container bannerpad">
-    <div class="list-row">
       <!-- Twitch Embed -->
         <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
         <div id="twitchplayer"></div>
@@ -15,20 +14,6 @@
           var player = new Twitch.Player("twitchplayer", options);
           player.setVolume(0.0);
         </script>
-
-
-      <!--h1 class="mainpagetitle">Chris Titus Tech</h1-->
-      <h4 class="banner-social">
-      {{ "<!-- about me -->" | safeHTML }}
-      {{ with site.Params.social_profile }}
-      <ul class="list-unstyled list-inline">
-          {{ range . }}
-          <li class="banner-social mr-3"><a href="{{ .link }}" aria-label="Social Profile"><i class="{{ .icon }}"></i></a></li>
-          {{ end }}
-      </ul>
-      {{ end }}</h4>
-    </div>
-    </td>
   </div>
 </section>
 
