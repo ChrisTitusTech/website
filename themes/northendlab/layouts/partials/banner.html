@@ -1,7 +1,22 @@
 <section>
   <div class="container bannerpad">
     <div class="list-row">
-      <h1 class="mainpagetitle">Chris Titus Tech</h1>
+      <!-- Twitch Embed -->
+        <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+        <div id="twitchplayer"></div>
+        <script type="text/javascript">
+          var options = {
+            width: 854,
+            height: 480,
+            channel: "christitustech",
+            parent: ["christitus.com"]
+          };
+          var player = new Twitch.Player("twitchplayer", options);
+          player.setVolume(0.0);
+        </script>
+
+
+      <!--h1 class="mainpagetitle">Chris Titus Tech</h1-->
       <h4 class="banner-social">
       {{ "<!-- about me -->" | safeHTML }}
       {{ with site.Params.social_profile }}
@@ -12,7 +27,7 @@
       </ul>
       {{ end }}</h4>
     </div>
-    <p class="banner-para">This site is a repository of guides, image downloads, and how to articles. You can browse the site by navigating the five sections on the top bar or using the search in the top right. I've been in IT for over 20 years and make articles and videos on YouTube to share my knowledge.</p></td>
+    </td>
   </div>
 </section>
 
