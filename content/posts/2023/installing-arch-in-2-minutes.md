@@ -1,14 +1,14 @@
 ---
 title: "Installing Arch in 2 Minutes"
 
-date: 2023-09-27
+date: 2023-10-07
 url: /installing-arch-in-2-minutes/
 image: images/2023-thumbs/installing-arch-in-2-minutes.jpg
 categories:
   - Linux
 tags:
   - Arch
-draft: true
+draft: false
 ---
 You can install Arch Linux in 120 seconds with my script. 
 <!--more-->
@@ -39,4 +39,4 @@ There are 3 additional changes that I'm working on.
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube hKpxMWm5l7w >}}
