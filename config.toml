@@ -255,6 +255,11 @@ hasChildren = true
     url = "/categories/windows"
     parent = "Sections"
 
+[[menu.main]]
+    weight = 7
+    url = "https://youtube.com/@christitustech"
+    name = "Youtube"
+
 ############################# Footer Menu ########################
 
 [[menu.footer]]
