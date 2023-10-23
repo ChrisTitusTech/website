@@ -24,8 +24,28 @@ Starting from scratch is rough, because of all the options and customization tha
 
 ## Kickstart
 
+One of the devs of Neovim made an amazing kickstart project <https://github.com/nvim-lua/kickstart.nvim> that I have taken and make my own modifications to. 
 
+The entire project is meant as a jumping off point. Giving you a functional LSP and the essentials that everyone wants in Neovim, but not a bunch of customizations that you may not want. I recommend referring back to this project often and checking for updates. 
 
+## My Neovim
+
+Using the kickstart base, here are the customizations I've made for my neovim. <https://github.com/ChrisTitusTech/neovim>
+
+- copilot.vim added
+- synthwave84 theme
+- spellcheck on startup
+- telescope ignores images by default
+- custom clipboard image addon for markdown files
+- windows fixes
+- undotree addition (F5 Hotkey)
+- wakatime for tracking time spent programming
+- autosave.vim
+- suda.vim to elevate to sudo and save file
+- Alpha Dashboard on startup for recent items and projects (Leader + a to switch to dashboard at anytime)
+- zoxide for project search
+- New Tab Hotkeys (leader + 1-5 for selecting tab, leader+t for new tab, and leader+c to closetab)
+- jj to quick esc
 
 ## Walkthrough Video
 
