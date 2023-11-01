@@ -201,6 +201,7 @@ body.dark-mode .card-block * {
 #twitchplayer, #twitchchat {
     max-width: 853px; /* Set max width for desktop */
     margin: 0 auto; /* Center the divs */
+    width: 100%;
   }
 
   @media screen and (max-width: 853px) {
