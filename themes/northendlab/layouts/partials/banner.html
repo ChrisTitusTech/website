@@ -1,58 +1,19 @@
 <section>
   <div class="container bannerpad">
     <!-- Twitch Embed -->
+    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
     <div id="twitchplayer"></div>
-    <div id="twitchchat"></div>
-
-    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', (event) => {
-        var options = {
-          channel: "christitustech",
-          parent: ["christitus.com"],
-          allowfullscreen: true,
-          muted: true
-        };
-        var player = new Twitch.Player("twitchplayer", options);
-        player.setVolume(0.0);
-
-        // Calculate the aspect ratio (16:9)
-        var aspectRatio = 16 / 9;
-
-        function setPlayerSize() {
-          var playerContainer = document.getElementById("twitchplayer");
-          var maxWidth = 853; // maximum width for desktop
-          var width = Math.min(playerContainer.clientWidth, maxWidth); 
-          var height = width / aspectRatio; 
-          player.setSize(width, height);
-        }
-
-        // Add an event listener to update the player size when the window is resized
-        window.addEventListener("resize", setPlayerSize);
-
-        // Initial call to set the player size
-        setPlayerSize();
-
-        function updateChatVisibility() {
-          var width = window.innerWidth; // Current viewport width
-          var chatContainer = document.getElementById("twitchchat"); // Get the chat container element
-
-          // Hide the chat on mobile (width less than or equal to 767 pixels)
-          if (width <= 767) {
-            chatContainer.style.display = "none"; // Hide the chat
-          } else {
-            chatContainer.style.display = "block"; // Show the chat
-          }
-        }
-
-        // Add an event listener to update the chat visibility when the window is resized
-        window.addEventListener("resize", updateChatVisibility);
-
-        // Initial call to set the chat visibility
-        updateChatVisibility();
-      });
+      var options = {
+        width: "100%",
+        height: "100%",
+        channel: "christitustech",
+        parent: ["christitus.com"],
+        muted: true
+      };
+      var player = new Twitch.Player("twitchplayer", options);
+      player.setVolume(0.0);
     </script>
-    
 
   </div>
 </section>
