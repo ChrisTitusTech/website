@@ -197,3 +197,14 @@ body.dark-mode .card-block {
 body.dark-mode .card-block * {
     background-color: inherit !important;
 }
+
+#twitchplayer, #twitchchat {
+    max-width: 853px; /* Set max width for desktop */
+    margin: 0 auto; /* Center the divs */
+  }
+
+  @media screen and (max-width: 853px) {
+    #twitchplayer, #twitchchat {
+      width: 100%; /* Full width on mobile */
+    }
+  }

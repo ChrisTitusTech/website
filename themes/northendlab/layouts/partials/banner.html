@@ -1,58 +1,22 @@
 <section>
   <div class="container bannerpad">
-    <!-- Twitch Embed -->
-    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-    <div id="twitchplayer"></div>
-    <div id="twitchchat"></div>
     <script type="text/javascript">
-      var options = {
-        allowfullscreen: true,
-        channel: "christitustech",
-        parent: ["christitus.com"],
-        muted: true
-      };
-      var player = new Twitch.Player("twitchplayer", options);
-      player.setVolume(0.0);
-
-      // Calculate the aspect ratio (16:9)
-      var aspectRatio = 16 / 9;
-
-      // Function to update the player's size and chat visibility
-      function updatePlayerSizeAndChatPosition() {
-        var maxWidth = 854; // Maximum width for non-mobile devices
-        var width = window.innerWidth; // Current viewport width
-        var height = width / aspectRatio; // Calculate the height to maintain the aspect ratio
-
-        // Limit the width to the maximum for non-mobile devices
-        if (width > maxWidth) {
-          width = maxWidth;
-          height = maxWidth / aspectRatio;
-        }
-
-        // Set the player's size
-        player.setSize(width, height);
-
-        // Get the chat container element
-        var chatContainer = document.getElementById("twitchchat");
-
-        // Hide the chat on mobile (width less than or equal to 767 pixels)
-        if (width <= 767) {
-          chatContainer.style.display = "none"; // Hide the chat
-        } else {
-          chatContainer.style.display = "block"; // Show the chat
-          chatContainer.style.width = "300px"; // Adjust the width as needed
-          chatContainer.style.position = "absolute";
-          chatContainer.style.top = "0";
-          chatContainer.style.left = width + "px";
-        }
+      //... previous code ...
+    
+      function setPlayerSize() {
+        var playerContainer = document.getElementById("twitchplayer");
+        var width = playerContainer.clientWidth; // Get the current width of the player container
+        var height = width / aspectRatio; // Calculate the height based on the aspect ratio
+        player.setSize(width, height); // Set the size of the player
       }
-
-      // Add an event listener to update the player's size and chat visibility when the window is resized
-      window.addEventListener("resize", updatePlayerSizeAndChatPosition);
-
-      // Initial call to set the player's size and chat visibility
-      updatePlayerSizeAndChatPosition();
+    
+      // Add an event listener to update the player size when the window is resized
+      window.addEventListener("resize", setPlayerSize);
+    
+      // Initial call to set the player size
+      setPlayerSize();
     </script>
+    
 
   </div>
 </section>
