@@ -1,20 +1,57 @@
 <section>
   <div class="container bannerpad">
+    <!-- Twitch Embed -->
+    <div id="twitchplayer"></div>
+    <div id="twitchchat"></div>
+
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <script type="text/javascript">
-      //... previous code ...
-    
-      function setPlayerSize() {
-        var playerContainer = document.getElementById("twitchplayer");
-        var width = playerContainer.clientWidth; // Get the current width of the player container
-        var height = width / aspectRatio; // Calculate the height based on the aspect ratio
-        player.setSize(width, height); // Set the size of the player
-      }
-    
-      // Add an event listener to update the player size when the window is resized
-      window.addEventListener("resize", setPlayerSize);
-    
-      // Initial call to set the player size
-      setPlayerSize();
+      document.addEventListener('DOMContentLoaded', (event) => {
+        var options = {
+          width: 853,
+          height: 480, // initial height based on 16:9 aspect ratio
+          channel: "christitustech",
+          parent: ["yourdomain.com"],
+          allowfullscreen: true,
+          muted: true
+        };
+        var player = new Twitch.Player("twitchplayer", options);
+        player.setVolume(0.0);
+
+        // Calculate the aspect ratio (16:9)
+        var aspectRatio = 16 / 9;
+
+        function setPlayerSize() {
+          var playerContainer = document.getElementById("twitchplayer");
+          var width = playerContainer.clientWidth; // Get the current width of the player container
+          var height = width / aspectRatio; // Calculate the height based on the aspect ratio
+          player.setSize(width, height); // Set the size of the player
+        }
+
+        // Add an event listener to update the player size when the window is resized
+        window.addEventListener("resize", setPlayerSize);
+
+        // Initial call to set the player size
+        setPlayerSize();
+
+        function updateChatVisibility() {
+          var width = window.innerWidth; // Current viewport width
+          var chatContainer = document.getElementById("twitchchat"); // Get the chat container element
+
+          // Hide the chat on mobile (width less than or equal to 767 pixels)
+          if (width <= 767) {
+            chatContainer.style.display = "none"; // Hide the chat
+          } else {
+            chatContainer.style.display = "block"; // Show the chat
+          }
+        }
+
+        // Add an event listener to update the chat visibility when the window is resized
+        window.addEventListener("resize", updateChatVisibility);
+
+        // Initial call to set the chat visibility
+        updateChatVisibility();
+      });
     </script>
     
 
