@@ -8,8 +8,6 @@
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', (event) => {
         var options = {
-          width: 853,
-          height: 480, // initial height based on 16:9 aspect ratio
           channel: "christitustech",
           parent: ["christitus.com"],
           allowfullscreen: true,
@@ -23,9 +21,10 @@
 
         function setPlayerSize() {
           var playerContainer = document.getElementById("twitchplayer");
-          var width = playerContainer.clientWidth; // Get the current width of the player container
-          var height = width / aspectRatio; // Calculate the height based on the aspect ratio
-          player.setSize(width, height); // Set the size of the player
+          var maxWidth = 853; // maximum width for desktop
+          var width = Math.min(playerContainer.clientWidth, maxWidth); 
+          var height = width / aspectRatio; 
+          player.setSize(width, height);
         }
 
         // Add an event listener to update the player size when the window is resized
