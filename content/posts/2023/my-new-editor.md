@@ -1,7 +1,7 @@
 ---
 title: "My New Editor"
 
-date: 2023-12-31
+date: 2023-11-09
 url: /my-new-editor/
 image: images/2023-thumbs/my-new-editor.jpg
 categories:
@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - Neovim
-draft: true
+draft: false
 ---
 After years of switching IDE's and editors, then trying dozens of vim configurations... I HAVE FOUND THE PERFECT EDITOR! My Neovim configuration I have tweaked to perfection.
 <!--more-->
@@ -49,4 +49,4 @@ Using the kickstart base, here are the customizations I've made for my neovim. <
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube WgXO2cvmdQc >}}
