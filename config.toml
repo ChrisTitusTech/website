@@ -209,22 +209,6 @@ url = "https://www.cttstore.com/downloads"
 name = "Downloads"
 
 [[menu.main]]
-weight = 4
-url = "https://www.cttstore.com/login"
-name = "Members"
-hasChildren = true
-
-[[menu.main]]
-    name = "Members Videos"
-    url = "https://www.cttstore.com/community/topics/9021"
-    parent = "Members"
-
-[[menu.main]]
-    name = "Sign Up"
-    url = "https://www.cttstore.com/chris-titus-tech-membership"
-    parent = "Members"
-
-[[menu.main]]
 weight = 6
 url = "#"
 name = "Sections"
