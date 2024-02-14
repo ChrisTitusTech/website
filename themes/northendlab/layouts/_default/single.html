@@ -24,9 +24,8 @@
         <div class="block shadow mb-4">
           <h2>{{ .Title | markdownify }}</h2>
           <div class="mb-4 mt-3 post-meta">
-            <a href="{{ `author/` | absLangURL }}{{ .Params.Author | urlize | lower }}">{{ .Params.Author | title }}</a> <span class="mx-2">|</span>
             {{ .PublishDate.Format "Jan 2, 2006" }}<span class="mx-2">|</span> {{ range .Params.Categories }}
-            <a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a>
+            <span class="post-category"><a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a></span>
             {{ end }}
           </div>
           {{ if .Params.Image }}
@@ -42,8 +41,9 @@
           </div>
         </div>
 
+        {{ $related := site.RegularPages.Related . | first 5 }}
+        {{ if $related }}
         <div class="block shadow">
-          {{ $related := site.RegularPages.Related . | first 5 }}
           {{ with $related }}
           <h3 class="mb-3">See Also</h3>
           <ul class="list-unstyled related-post-list">
@@ -53,6 +53,7 @@
           </ul>
           {{ end }}
         </div>
+        {{ end }}
         <!-- Github Comments addition -->
         <script src="https://utteranc.es/client.js"
           repo="ChrisTitusTech/website"
