@@ -83,6 +83,7 @@
     padding: 30px;
     margin-left: -60px;
     background: $white;
+    border-radius: 4px;
     @include desktop {
       margin-left: 0;
       padding: 15px;
@@ -216,6 +217,7 @@
 /* blog */
 .block {
   padding: 40px;
+  border-radius: 4px;
 }
 
 .author-thumb {
