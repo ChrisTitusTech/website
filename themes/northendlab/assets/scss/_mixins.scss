@@ -32,8 +32,12 @@
 // https://stackoverflow.com/a/67297049
 @mixin media($keys...) {
   @each $key in $keys {
-    @if ($key == phone) {
-      @include phone {
+    @if ($key == mobile-xs) {
+      @include mobile-xs {
+        @content
+      }
+    } @else if ($key == mobile) {
+      @include mobile {
         @content
       }
     } @else if ($key == tablet) {
@@ -42,6 +46,14 @@
       }
     } @else if ($key == desktop) {
       @include desktop {
+        @content
+      }
+    } @else if ($key == desktop-lg) {
+      @include desktop-lg {
+        @content
+      }
+    } @else if ($key == desktop-xl) {
+      @include desktop-xl {
         @content
       }
     }
