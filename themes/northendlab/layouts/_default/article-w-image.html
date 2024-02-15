@@ -2,7 +2,7 @@
   {{ if .Params.image }}
   <div class="col-md-6">
     <!--a href="{{ .Permalink }}"><img loading="lazy" class="w-100" src="{{ .Params.image | absURL }}" alt="post-image"></a-->
-    <a href="{{ .Permalink }}"><img src="{{ .Params.image | absURL }}" width="300"></a>
+    <a href="{{ .Permalink }}"><img src="{{ .Params.image | absURL }}" width="300" class="rounded shadow"></a>
   </div>
   {{ end }}
   <div class="col-md-6">
