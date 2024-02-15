@@ -71,15 +71,30 @@
 
 // article-overlapped-list
 .article-overlapped-list {
+  img {
+    @include media(mobile, tablet) {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
   .card-block {
     padding: 30px;
     margin-left: -60px;
     background: $white;
     @include desktop {
       margin-left: 0;
-      padding: 0;
+      padding: 15px;
+    }
+
+    @include media(tablet, mobile) {
+      padding: 15px;
+      margin-top: 15px;
+      text-align: center;
     }
   }
+
   @include tablet {
     img.w-100 {
       margin-bottom: 20px;
