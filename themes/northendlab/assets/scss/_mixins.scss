@@ -29,6 +29,25 @@
   }
 }
 
+// https://stackoverflow.com/a/67297049
+@mixin media($keys...) {
+  @each $key in $keys {
+    @if ($key == phone) {
+      @include phone {
+        @content
+      }
+    } @else if ($key == tablet) {
+      @include tablet {
+        @content
+      }
+    } @else if ($key == desktop) {
+      @include desktop {
+        @content
+      }
+    }
+  }
+}
+
 @mixin size($size){
   width: $size; height: $size;
 }
