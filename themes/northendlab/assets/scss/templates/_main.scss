@@ -253,10 +253,10 @@
 
 .post-category {
   font-style: italic;
-}
 
-.post-category:not(:last-of-type)::after {
-  content: ", ";
+  &:not(:last-of-type)::after {
+    content: ", ";
+  }
 }
 
 .post-meta {
