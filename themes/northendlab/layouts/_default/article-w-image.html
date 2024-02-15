@@ -2,7 +2,7 @@
   {{ if .Params.image }}
   <div class="col-md-6">
     <!--a href="{{ .Permalink }}"><img loading="lazy" class="w-100" src="{{ .Params.image | absURL }}" alt="post-image"></a-->
-    <a href="{{ .Permalink }}"><img src="{{ .Params.image | absURL }}" class="rounded shadow" width="300"></a>
+    <a href="{{ .Permalink }}"><img src="{{ .Params.image | absURL }}" class="" width="300"></a>
   </div>
   {{ end }}
   <div class="col-md-6">
@@ -10,8 +10,12 @@
       <h2 class="h4"><a class="post-title" href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
       <p>{{.Summary | truncate 100}}</p>
       <div class="mt-3 post-meta">
-        {{ .PublishDate.Format "Jan 2, 2006" }} <span class="mx-1">|</span> {{ range .Params.Categories }}
-        <span class="post-category"><a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a></span>
+        {{ .PublishDate.Format "Jan 2, 2006" }}
+        {{ if .Params.Categories }}
+          <span class="mx-1">|</span>
+          {{ range .Params.Categories }}
+          <span class="post-category"><a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a></span>
+          {{ end }}
         {{ end }}
       </div>
     </div>

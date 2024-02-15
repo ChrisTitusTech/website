@@ -24,8 +24,12 @@
         <div class="block shadow mb-4">
           <h2>{{ .Title | markdownify }}</h2>
           <div class="mb-4 mt-3 post-meta">
-            {{ .PublishDate.Format "Jan 2, 2006" }}<span class="mx-2">|</span> {{ range .Params.Categories }}
-            <span class="post-category"><a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a></span>
+            {{ .PublishDate.Format "Jan 2, 2006" }}
+            {{ if .Params.Categories }}
+              <span class="mx-1">|</span>
+              {{ range .Params.Categories }}
+              <span class="post-category"><a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a></span>
+              {{ end }}
             {{ end }}
           </div>
           {{ if .Params.Image }}
