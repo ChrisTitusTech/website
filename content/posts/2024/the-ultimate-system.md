@@ -15,6 +15,8 @@ draft: true
 The Ulimate System will look different for everyone, but here is an outline of what you need to consider when making yours as I overview mine.
 <!--more-->
 
+The purpose of my ultimate system is to have the most enjoyment out of my PC experience while sacrificing nothing to do everything I want to do at 100% efficiency. 
+
 ## Hardware
 
 Not all hardware is created equal. While I could buy more powerful parts this was one of the most powerful systems I could build with my requirements. Here is all my requirements for Hardware and a link to my final system build.
@@ -38,6 +40,32 @@ Build Link: <https://superworkstations.com/configurations/titus-hp-z8-g5-fury/>
 - AMD Sapphire Nitro+ 7800XT (Main GPU)
 - NVIDIA GeForce RTX 2060 (2nd GPU)
 - Single HP Z8 G5 Fury 1125W Power Supply
+
+## Base Operating System
+
+I always go back and forth between Debian and Arch Linux for my base. They are both wonderful options with Arch giving access to the newest hardware since it runs on a newer kernel with newer packages and Debian being more stable with older packages. In the end, I have more fun on Arch and will be my choice for my main system.
+
+There are many guides on how to install Arch Linux, but here are some of my videos going over the various ways I've done it in the past.
+
+|-- ArchTitus in 2 Minutes --|-- Archfi Install --| 
+|---|---|
+| {{< youtube hKpxMWm5l7w >}} | {{< youtube "GUtpHFI-vjg" >}} |
+
+## The Desktop
+
+Most people need a user friendly desktop environment like plasma that you select during the install process. While that is nice for newer users, a tiling window manager is what feels the best to me these days. After years of switching between them all, there is only one that I find the best. DWM from suckless is the one I can do anything with and have zero limitations. I want a new feature, just patch it! Otherwise, everything just works as it always has. 
+
+Official Site for DWM <https://dwm.suckless.org/>
+My DWM Configuration <https://github.com/ChrisTitusTech/dwm-titus>
+
+|-- DWM Walkthrough --|
+|---|
+| {{< youtube JXVle0nyA-o >}} |
+
+## Windows in Linux with PCI Passthrough
+
+Linux is great, but sometimes it just isn't the right tool for what I need. That is why I have a full VM with a dedicated GPU, nvme, and usb card ready to go for anything I need. 
+
 
 ## Walkthrough Video
 
