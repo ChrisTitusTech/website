@@ -61,6 +61,36 @@ My DWM Configuration <https://github.com/ChrisTitusTech/dwm-titus>
 |---|
 | {{< youtube JXVle0nyA-o >}} |
 
+### Removing Friction
+
+When using the desktop think about tasks you do everyday and if they can be automated. This will save you time as you use the computer and lead to a happier computing experience.
+
+Examples:
+
+- Launching my Windows 11 virtual machine happens everyday! Solution? Start Virtual Machine on boot! `sudo virsh enable win11`
+
+- Running a HUGO server to see my test website when creating pages. Solution? Create a user Systemd service that runs when the user logs in:
+
+~/.config/systemd/user/hugo.service
+
+```
+[Unit]
+Description=hugo website server
+
+[Service]
+Type=simple
+StandardOutput=journal
+WorkingDirectory=/home/titus/github/website
+ExecStart=hugo server -FD
+
+[Install]
+WantedBy=default.target
+```
+
+Then issue user command **NO SUDO** `systemctl --user enable hugo.service`
+
+- Running Programs by launching start menu. Solution? Hotkey the programs to launch them faster! In my instance, I'd edit config.h in my dwm folder.
+
 ## Windows in Linux with PCI Passthrough
 
 Linux is great, but sometimes it just isn't the right tool for what I need. That is why I have a full VM with a dedicated GPU, nvme, and usb card ready to go for anything I need. 
@@ -68,6 +98,21 @@ Linux is great, but sometimes it just isn't the right tool for what I need. That
 > _Note_:
 > PCI passthrough is not for the faint of heart. Some motherboards do not separate IOMMU groups properly which means you can't isolate the PCI slots to pass them through and you CAN NOT do this on those systems. Laptops and cheap motherboards have the biggest issues.
 
+### QuickPassthrough
+
+![](/images/2024/the-ultimate-system/quickpass.png)
+
+Github: <https://github.com/HikariKnight/quickpassthrough>
+
+Made by HikariKnight it is an amazing project that makes passthrough much simpler. It will auto blocklist the PCI id's and make the needed system modifications while holding your hand through the process. If you watch my run of it, there was a bug with `mkinitcpio` that made a MODULES=() entry. He has fixed that and said that the latest version is even better. While there is no way to make this perfect and work on every system it has removed a LOT of the legwork. 
+
+## My Setup Videos
+
+Here are all the livestreams where I go through the ENTIRE setup.
+
+|-- Arch Install --|-- QEMU/Windows Install --|-- Looking Glass --|
+|---|---|---|
+| {{< youtube Y7LTdEwR9M8 >}} | {{< youtube K2gliga5Vwc >}} | {{< youtube 01R8Ft1BdxE >}} |
 
 ## Walkthrough Video
 
