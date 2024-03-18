@@ -7,9 +7,8 @@ image: images/2024-thumbs/the-ultimate-system.jpg
 categories:
   - Linux
   - Windows
-  - Networking
 tags:
-  - Ubuntu
+  - PCI-Passthrough
 draft: true
 ---
 The Ulimate System will look different for everyone, but here is an outline of what you need to consider when making yours as I overview mine.
@@ -65,6 +64,9 @@ My DWM Configuration <https://github.com/ChrisTitusTech/dwm-titus>
 ## Windows in Linux with PCI Passthrough
 
 Linux is great, but sometimes it just isn't the right tool for what I need. That is why I have a full VM with a dedicated GPU, nvme, and usb card ready to go for anything I need. 
+
+> _Note_:
+> PCI passthrough is not for the faint of heart. Some motherboards do not separate IOMMU groups properly which means you can't isolate the PCI slots to pass them through and you CAN NOT do this on those systems. Laptops and cheap motherboards have the biggest issues.
 
 
 ## Walkthrough Video
