@@ -1,7 +1,7 @@
 ---
 title: "The Ultimate System"
 
-date: 2024-03-17
+date: 2024-03-20
 url: /the-ultimate-system/
 image: images/2024-thumbs/the-ultimate-system.jpg
 categories:
@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - PCI-Passthrough
-draft: true
+draft: false
 ---
 The Ulimate System will look different for everyone, but here is an outline of what you need to consider when making yours as I overview mine.
 <!--more-->
@@ -116,4 +116,4 @@ Here are all the livestreams where I go through the ENTIRE setup.
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube zq6yvQifyDw >}}
