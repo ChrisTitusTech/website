@@ -209,6 +209,11 @@ url = "https://www.cttstore.com/downloads"
 name = "Downloads"
 
 [[menu.main]]
+weight = 2
+url = "newsletter/"
+name = "Newsletter"
+
+[[menu.main]]
 weight = 6
 url = "#"
 name = "Sections"
