@@ -30,7 +30,7 @@ Get updates, launch announcements and more by joining my newsletter.
 </style>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
-<form action="http://newsletter.christitus.com/subscribe" method="POST" accept-charset="utf-8">
+<form action="https://newsletter.christitus.com/subscribe" method="POST" accept-charset="utf-8">
 	<label for="name">Name</label><br/>
 	<input type="text" name="name" id="name"/>
 	<br/>
