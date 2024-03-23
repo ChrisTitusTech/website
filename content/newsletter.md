@@ -24,23 +24,8 @@ Get updates, launch announcements and more by joining my newsletter.
     }
 
     #submit:hover {
-        background-color: #45a049; /* Darker shade of green on hover */
-        animation: shake 0.5s; /* Add a shake animation on hover */
-        animation-iteration-count: infinite; /* Repeat the animation */
-    }
-
-    @keyframes shake {
-        0% { transform: translate(1px, 1px) rotate(0deg); }
-        10% { transform: translate(-1px, -2px) rotate(-1deg); }
-        20% { transform: translate(-3px, 0px) rotate(1deg); }
-        30% { transform: translate(3px, 2px) rotate(0deg); }
-        40% { transform: translate(1px, -1px) rotate(1deg); }
-        50% { transform: translate(-1px, 2px) rotate(-1deg); }
-        60% { transform: translate(-3px, 1px) rotate(0deg); }
-        70% { transform: translate(3px, 1px) rotate(-1deg); }
-        80% { transform: translate(-1px, -1px) rotate(1deg); }
-        90% { transform: translate(1px, 2px) rotate(0deg); }
-        100% { transform: translate(1px, -2px) rotate(-1deg); }
+        background-color: #007bff; /* Change to blue on hover */
+        transition: background-color 0.5s ease; /* Smooth transition to blue */
     }
 </style>
 
@@ -57,7 +42,7 @@ Get updates, launch announcements and more by joining my newsletter.
 	</div>
 	<input type="hidden" name="list" value="BdlkPnowdu7nhx6niCzQUw"/>
 	<input type="hidden" name="subform" value="yes"/>
-	<input type="submit" name="Sign Me Up!" id="submit"/>
+	<input type="submit" name="submit" id="submit" value="Sign Me Up!"/>
 </form>
 
 You're signing up to receive emails from Chris Titus Tech
