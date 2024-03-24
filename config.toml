@@ -247,7 +247,7 @@ hasChildren = true
 [[menu.main]]
     weight = 7
     url = "https://youtube.com/@christitustech"
-    name = "Youtube"
+    name = "YouTube"
 
 ############################# Footer Menu ########################
 

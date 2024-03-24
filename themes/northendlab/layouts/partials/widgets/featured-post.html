@@ -11,7 +11,7 @@
       <div class="ml-3">
         <h6 class="mb-1"><a class="post-title" href="{{.Permalink}}">{{ .Title }}</a></h6>
         <div class="post-meta small">
-          <a href="{{ `author/` | absLangURL }}{{ .Params.Author | urlize | lower }}">{{ .Params.Author | title }}</a> <span class="mx-1">|</span> {{ .PublishDate.Format "Jan 2, 2006" }}
+          {{ .PublishDate.Format "Jan 2, 2006" }}
         </div>
       </div>
     </div>
