@@ -143,6 +143,10 @@
                     localStorage.removeItem('darkMode');
                 }, 100);
             }
+            // Dispatch a custom event after toggling dark mode
+            document.dispatchEvent(new CustomEvent('darkModeChange', {
+                detail: { darkMode: body.classList.contains('dark-mode') }
+            }));
         })
     
         //Check Storage. Keep user preference on page reload

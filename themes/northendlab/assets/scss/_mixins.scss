@@ -32,3 +32,40 @@
 @mixin size($size){
   width: $size; height: $size;
 }
+
+@mixin button-base {
+  font-family: $primary-font;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: 1px solid;
+  position: relative;
+  z-index: 1;
+  transition: .2s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    box-shadow: none !important;
+  }
+}
+
+@mixin button-size($font-size, $padding) {
+  font-size: $font-size;
+  padding: $padding;
+}
+
+@mixin button-variant($background, $color, $border-color: $background) {
+  background: $background;
+  color: $color;
+  border-color: $border-color;
+
+  &:active,
+  &:hover,
+  &:focus,
+  &.active {
+    background: $background !important;
+    border-color: $border-color !important;
+    color: $color;
+  }
+}

@@ -46,15 +46,15 @@ h6, .h6 {
 
 /* Button style */
 .btn {
-  font-size: 16px;
   font-family: "PT Sans", sans-serif;
   text-transform: capitalize;
-  padding: 12px 20px;
   border-radius: 5px;
   border: 1px solid;
   position: relative;
   z-index: 1;
-  transition: .2s ease; }
+  transition: .2s ease;
+  font-size: 16px;
+  padding: 12px 20px; }
   .btn:hover, .btn:active, .btn:focus {
     outline: 0;
     box-shadow: none !important; }
@@ -67,28 +67,33 @@ h6, .h6 {
   background: #47c4f1;
   color: #fff;
   border-color: #47c4f1; }
-  .btn-primary:active, .btn-primary:hover, .btn-primary.focus, .btn-primary.active {
+  .btn-primary:active, .btn-primary:hover, .btn-primary:focus, .btn-primary.active {
     background: #47c4f1 !important;
-    border-color: #47c4f1 !important; }
+    border-color: #47c4f1 !important;
+    color: #fff; }
 
 .btn-outline-primary {
   background: transparent;
   color: #47c4f1;
-  border-color: #47c4f1; }
-  .btn-outline-primary:active, .btn-outline-primary:hover, .btn-outline-primary.focus, .btn-outline-primary.active {
-    background: #47c4f1 !important;
-    border-color: #47c4f1 !important;
+  border-color: transparent; }
+  .btn-outline-primary:active, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary.active {
+    background: transparent !important;
+    border-color: transparent !important;
+    color: #47c4f1; }
+  .btn-outline-primary:active, .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary.active {
     color: #fff; }
 
 .btn-transparent {
   background: transparent;
   color: #47c4f1;
-  border: 0;
+  border-color: 0;
   border-bottom: 1px solid #47c4f1;
   border-radius: 0;
   padding: 2px; }
-  .btn-transparent:active, .btn-transparent:hover, .btn-transparent.focus, .btn-transparent.active {
-    background: transparent; }
+  .btn-transparent:active, .btn-transparent:hover, .btn-transparent:focus, .btn-transparent.active {
+    background: transparent !important;
+    border-color: 0 !important;
+    color: #47c4f1; }
 
 body {
   background-color: #fff;
