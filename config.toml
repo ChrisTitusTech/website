@@ -205,11 +205,11 @@ name = "Home"
 
 [[menu.main]]
 weight = 2
-url = "https://www.cttstore.com/downloads"
+url = "downloads/"
 name = "Downloads"
 
 [[menu.main]]
-weight = 2
+weight = 3
 url = "newsletter/"
 name = "Newsletter"
 
