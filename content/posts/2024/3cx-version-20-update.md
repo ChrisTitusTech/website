@@ -1,14 +1,15 @@
 ---
-title: "3cx Version 20 Update"
+title: "3CX Version 20 Update"
 
-date: 2024-03-22
+date: 2024-03-28
 url: /3cx-version-20-update/
 image: images/2024-thumbs/3cx-version-20-update.jpg
 categories:
   - Linux
+  - Windows
 tags:
   - 3cx
-draft: true
+draft: false
 ---
 3CX just released version 20 of its PBX telephone system. 3CX has been my favorite phone system that I've setup at multiple businesses. Let's explore version 20!
 <!--more-->
@@ -43,12 +44,18 @@ Source: <https://www.3cx.com/docs/manual/call-processing-script/>
 
 The update also brings new API access for both the system configuration and client configuration. Each has a new set of calls they will take and you can extract user information to your app or even website. 
 
-## Before you move
+## Before You Move
 
 - Check Phone Compatibility <https://www.3cx.com/sip-phones/>
 - Allocate Downtime (Debian 10 -> 11 -> 12) will take time.
 - Check off the official checklist <https://www.3cx.com/blog/releases/v20-upgrade-checklist-faq/>
 
+## 3CX Setup Videos
+
+{{< youtube M7dXvFDhoaI >}}
+
+{{< youtube "P6CS5_CHy8s" >}}
+
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube JS0voPjdZMM >}}
