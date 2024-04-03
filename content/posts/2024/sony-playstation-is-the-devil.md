@@ -1,5 +1,6 @@
 ---
 title: "Is Sony Abusing FreeBSD with Playstation?"
+
 date: 2024-12-29
 url: /sony-playstation-and-freebsd/
 image: images/2024-thumbs/sony-playstation-and-freebsd.jpg
@@ -10,9 +11,7 @@ tags:
   - Playstation
 draft: true
 ---
-
 The intersection of open-source software and proprietary systems often sparks debate, and Sony's Playstation is at the heart of a current controversy. This article delves into the complexities of Sony's use of FreeBSD's MIT License for its Playstation operating system, examining whether this constitutes an abuse of open-source principles.
-
 <!--more-->
 
 ## Sony's Use of FreeBSD
