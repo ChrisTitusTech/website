@@ -1,5 +1,5 @@
 ---
-title: "Is Sony Abusing FreeBSD's MIT License with Playstation?"
+title: "Is Sony Abusing FreeBSD with Playstation?"
 date: 2024-12-29
 url: /sony-playstation-and-freebsd/
 image: images/2024-thumbs/sony-playstation-and-freebsd.jpg
