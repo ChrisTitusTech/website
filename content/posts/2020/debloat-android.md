@@ -62,3 +62,6 @@ Setup all of the following to use ADB
   - `fastboot -w` - wipes device
   - `fastboot update </path/to/your/Rom.zip>` - flashes zip to the device
 
+## Video Walkthrough
+
+{{< youtube EgcfSgPs23A >}}

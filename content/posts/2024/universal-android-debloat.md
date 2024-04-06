@@ -1,14 +1,14 @@
 ---
 title: "Universal Android Debloat"
 
-date: 2024-03-31
+date: 2024-04-09
 url: /universal-android-debloat/
 image: images/2024-thumbs/universal-android-debloat.jpg
 categories:
   - Android
 tags:
   - 
-draft: true
+draft: false
 ---
 The Universal Android Debloater (UAD) is a cross-platform tool designed to help users remove unwanted software from their non-rooted Android devices. Developed by the GitHub user 0x192, this tool leverages the Android Debug Bridge (ADB) to perform its operations, making it a powerful option for those looking to improve their device's privacy, security, and battery life without needing root access. 
 <!--more-->
@@ -66,4 +66,4 @@ For more information and to download the tool, [Visit the Universal Android Debl
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube EgcfSgPs23A >}}
