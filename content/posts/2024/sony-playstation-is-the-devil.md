@@ -1,7 +1,7 @@
 ---
 title: "Is Sony Abusing FreeBSD with Playstation?"
 
-date: 2024-12-29
+date: 2024-04-07
 url: /sony-playstation-and-freebsd/
 image: images/2024-thumbs/sony-playstation-and-freebsd.jpg
 categories:
@@ -64,5 +64,5 @@ The debate over Sony's use of FreeBSD's MIT License in the Playstation ecosystem
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube "DwHKbQFf_uQ" >}}
 
