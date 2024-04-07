@@ -9,7 +9,7 @@ categories:
   - FreeBSD
 tags:
   - Playstation
-draft: true
+draft: false
 ---
 The intersection of open-source software and proprietary systems often sparks debate, and Sony's Playstation is at the heart of a current controversy. This article delves into the complexities of Sony's use of FreeBSD's MIT License for its Playstation operating system, examining whether this constitutes an abuse of open-source principles.
 <!--more-->
