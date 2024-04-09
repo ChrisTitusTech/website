@@ -1,5 +1,5 @@
 ---
-title: "Glazewm Tiling Window Management"
+title: "GlazeWM Tiling Window Management"
 
 date: 2024-04-13
 url: /glazewm-tiling-window-management/
