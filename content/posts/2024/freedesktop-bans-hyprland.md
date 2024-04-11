@@ -31,6 +31,17 @@ Sometimes it takes a while before these things gain traction. Hyprland is now th
 
 Banning Vaxry means he can't contribute to wlroots and keep putting patches which were very beneficial to wayland. He will still maintain and produce hyprland. 
 
+## Official Links to Information
+
+- Vaxry's Blog [Freedesktop/RedHat's CoC team is worse than you thought.](https://blog.vaxry.net/articles/2024-fdo-and-redhat2)
+- Vaxry's Blog [How Freedesktop/RedHat harass other projects into submission](https://blog.vaxry.net/articles/2024-fdo-and-redhat)
+- Drew's Vaxry Takedown - [FDO's conduct enforcement actions regarding Vaxry](https://drewdevault.com/2024/04/09/2024-04-09-FDO-conduct-enforcement.html)
+
+### Other YouTuber Takes
+
+| Brodie Robertson | Nicco (KDE Dev) |
+|---------|---------|
+| {{< youtube Lm3gLwyjawQ >}} | {{< youtube xjTdroiDCtc >}} |
 ## Walkthrough Video
 
 {{< youtube 0ws1SIbAQq8 >}}
