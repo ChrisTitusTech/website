@@ -8,7 +8,7 @@ categories:
   - Linux
 tags:
   - Freedesktop
-draft: true
+draft: false
 ---
 Hyprland maintainer Vaxry has been banned by FreeDesktop. Meaning he can not report or patch anything in FreeDesktop which is a sad state of affairs for the Linux Desktop community as a whole, especially the wayland side of things. 
 <!--more-->
@@ -33,4 +33,4 @@ Banning Vaxry means he can't contribute to wlroots and keep putting patches whic
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube 0ws1SIbAQq8 >}}
