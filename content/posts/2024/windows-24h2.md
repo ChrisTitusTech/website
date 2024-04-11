@@ -1,15 +1,16 @@
 ---
 title: "Windows 24h2"
 
-date: 2024-04-13
+date: 2024-04-15
 url: /windows-24h2/
 image: images/2024-thumbs/windows-24h2.jpg
 categories:
   - Windows
 tags:
   - 24H2
-draft: true
+draft: false
 ---
+Here is a list of all the features in Windows 24H2.
 <!--more-->
 
 ## Windows 24H2 Update Highlights

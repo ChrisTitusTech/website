@@ -8,7 +8,7 @@ categories:
   - Windows
 tags:
   - GlazeWM
-draft: true
+draft: false
 ---
 GlazeWM is a powerful tiling window manager for Windows, designed to enhance productivity by allowing users to efficiently manage their windows and workspaces through keyboard-driven commands. This guide will walk you through the installation process and introduce you to some of the most commonly used hotkeys in GlazeWM.<!--more-->
 
