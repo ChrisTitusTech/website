@@ -32,13 +32,8 @@ winget install glazewm
 
 GlazeWM offers a variety of hotkeys to streamline your workflow. Here are some of the most essential ones:
 
-- **Alt + Enter**: Launch terminal
-- **Alt + W**: Close the focused window
 - **Alt + Arrow Keys**: Move focus between windows
 - **Alt + Shift + Arrow Keys**: Move the focused window in the direction of the arrow keys
-- **Alt + D**: Toggle desktop view (show/hide all windows)
-- **Alt + Tab**: Cycle through workspaces
-- **Alt + Shift + Tab**: Cycle through workspaces in reverse order
 - **Alt + Number**: Switch to a specific workspace (e.g., Alt + 1 for workspace 1)
 - **Alt + Shift + Number**: Move the focused window to a specific workspace
 
@@ -76,6 +71,12 @@ My doesn't change that much from the default but I do have a few changes to the 
 
 [Raw Config File](https://raw.githubusercontent.com/ChrisTitusTech/glazewm/main/config.yaml)
 
+## Livestream using GlazeWM
+
+GlazeWM work starts at [33:35](https://youtu.be/mJqNBBSViDU?si=3hZKYYp3kOJ3ZILG&t=2015)
+
+{{< youtube mJqNBBSViDU >}}
+
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube 0I8HyVMKEeo >}}

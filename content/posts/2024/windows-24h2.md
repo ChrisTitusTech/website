@@ -39,9 +39,6 @@ Here is a list of all the features in Windows 24H2.
 - **Manage Mobile Devices App:** New app for basic phone-PC linking functionalities.
 - **Phone Link App:** Remains for syncing text messages and notifications.
 
-### Voice Clarity
-- **AI-Powered:** Enhancement for microphone clarity without needing NPU hardware.
-
 ### Energy Saver Mode
 - **Efficiency:** Reduces energy consumption and system performance.
 - **Desktop Icon:** Energy-saver indicator for desktop PCs.
@@ -59,6 +56,18 @@ Here is a list of all the features in Windows 24H2.
 - **Taskbar and Printing Enhancements:** Wi-Fi icon animation, new Task Manager icon, and Windows protected print mode.
 - **USB80Gbps Support:** For new hardware with the updated USB4 standard.
 
+## GSudo
+
+Here is the best alternative for ANY version of Windows right now. While Sudo is nice in the future, updating to 24H2 is NOT RECOMMENDED! Use this instead:
+
+GitHub: <https://github.com/gerardog/gsudo>
+
+Direct Install:
+
+```
+winget install gerardog.gsudo
+```
+
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube 00wdDITpfXU >}}
