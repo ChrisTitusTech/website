@@ -68,6 +68,10 @@ Direct Install:
 winget install gerardog.gsudo
 ```
 
+## 24H2 Livestream
+
+{{< youtube "ynmLm5_K_1E" >}}
+
 ## Walkthrough Video
 
 {{< youtube 00wdDITpfXU >}}
