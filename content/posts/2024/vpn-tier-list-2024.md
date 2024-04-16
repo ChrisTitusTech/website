@@ -1,5 +1,5 @@
 ---
-title: "Vpn Tier List 2024"
+title: "VPN Tier List 2024"
 
 date: 2024-04-19
 url: /vpn-tier-list-2024/
@@ -10,7 +10,7 @@ categories:
   - Networking
 tags:
   - VPNs
-draft: true
+draft: false
 ---
 Did you know most VPNs are owned by only a few companies? Those companies can even sell your data on top of charging you a subscription fee.
 
@@ -50,7 +50,7 @@ Nord Security
 - NordLayer
 - Surfshark VPN
 
-I could go on, but these are the heavy hitters in the market. Most the other VPN conglomerates own 5-10 different VPN brands each.
+I could go on, but these are the heavy hitters in the market. Most other VPN conglomerates own 5-10 different VPN brands each.
 
 ## The Best VPNs
 
@@ -62,4 +62,4 @@ These are independent VPNs that are owned by a single company and outside the 14
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube "sPf1q_YLaKQ" >}}
