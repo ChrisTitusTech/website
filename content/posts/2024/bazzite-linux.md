@@ -8,7 +8,7 @@ categories:
   - Linux
 tags:
   - Bazzite
-draft: true
+draft: false
 ---
 Bazzite is an OCI image designed as an alternative OS for the Steam Deck and a SteamOS-like system for desktops and home theater PCs. It's built on Fedora, offering broad hardware support and built-in drivers.
 
@@ -73,7 +73,10 @@ Cons
 - I ran into the multiple power management issues. (Lock ups and will not properly shutdown)
 - Dolphin Wii Emulation is dicey via Emudeck
 
+## Livestream First Install
+
+{{< youtube MOcekLz18QU >}} 
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube "wdC_qiFoHN4" >}}
