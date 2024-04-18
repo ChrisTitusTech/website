@@ -1,19 +1,16 @@
 ---
 title: "Improve Youtube"
 
-date: 2024-04-16
+date: 2024-04-23
 url: /improve-youtube/
 image: images/2024-thumbs/improve-youtube.jpg
 categories:
-  - Linux
-  - Windows
-  - Networking
+  - Misc
 tags:
-  - Ubuntu
-draft: true
+  - YouTube
+draft: false
 ---
 Since its inception in 2012, the ImprovedTube extension has been enhancing the YouTube experience for users across all browsers. Now open-source, it offers a plethora of features aimed at giving you greater control over content discovery, playback, and the overall aesthetics of YouTube. <!--more-->
-
 
 ## Key Features
 
