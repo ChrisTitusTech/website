@@ -56,4 +56,4 @@ Github: <https://github.com/ajeetdsouza/zoxide>
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube XE1f7Tr0suo >}}
