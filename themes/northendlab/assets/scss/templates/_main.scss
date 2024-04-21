@@ -228,7 +228,7 @@
       font-weight: bold;
 
       &:hover {
-        background: $primary-color;
+        background: $text-color;
         color: $white;
       }
     }
@@ -244,8 +244,18 @@
 
 .post-title {
   color: $black;
+  font-weight: bold;
+
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.post-category {
+  font-style: italic;
+
+  &:not(:last-of-type)::after {
+    content: ", ";
   }
 }
 

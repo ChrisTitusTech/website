@@ -1,9 +1,12 @@
 <article class="mb-4 pb-2">
   <h2 class="h4"><a class="post-title" href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
   <div class="mb-3 post-meta">
-    <a href="{{ `author/` | absLangURL }}{{ .Params.Author | urlize | lower }}">{{ .Params.Author | title }}</a> <span class="mx-1">|</span>
-    {{ .PublishDate.Format "Jan 2, 2006" }} <span class="mx-1">|</span> {{ range .Params.Categories }}
-    <a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a>
+    {{ .PublishDate.Format "Jan 2, 2006" }}
+    {{ if .Params.Categories }}
+      <span class="mx-1">|</span>
+      {{ range .Params.Categories }}
+      <span class="post-category"><a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a></span>
+      {{ end }}
     {{ end }}
   </div>
   <p>{{.Summary}}</p>
