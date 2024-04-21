@@ -62,12 +62,12 @@ Snapshots are one of the best things about BTRFS and I absolutely love them. The
 So Lets run through some scenarios when you use Snapshots.
 
 #### Create Snapshot  
-> `sudo btrfs subv snapshop /home /home/.snapshots/2020-01-13`
+> `sudo btrfs subv snapshot /home /home/.snapshots/2020-01-13`
 
-Using this you can revert the snapshop by simply editing the `/etc/fstab` and changing the subvol=2020-01-13 or the corresponding subvolid you get from `sudo btrfs subv list /home`
+Using this you can revert the snapshot by simply editing the `/etc/fstab` and changing the subvol=2020-01-13 or the corresponding subvolid you get from `sudo btrfs subv list /home`
 
 #### Restore Snapshot
-Restore Snapshop after reboot and successful rollback
+Restore Snapshot after reboot and successful rollback
 > `sudo btrfs subv delete /home`  
 `sudo btrfs subv snapshot /home/.snapshots/2020-01-13 /home`
 
