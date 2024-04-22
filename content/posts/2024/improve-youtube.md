@@ -33,7 +33,4 @@ Discover the full capabilities of ImprovedTube by trying it out for yourself and
 
 ## Walkthrough Video
 
-<<<<<<< Updated upstream
 {{< youtube "SLfff7Kw_Xc" >}}
-=======
->>>>>>> Stashed changes
