@@ -33,6 +33,12 @@ Type this command in to launch the toolbox
 irm christitus.com/win | iex
 ```
 
+Want an EXE? Help fund the project:
+
+<https://cttstore.com>
+
+*NOTE: This exe is a wrapper for the command above. No purchase is needed to run the script!*
+
 ### Improvements in 2024
 
 - Import and Export Commands
