@@ -31,8 +31,3 @@ Run this bash script every week to ensure the cleanup gets performed.
 docker volume rm $(docker volume ls -f dangling=true -q)
 docker rmi $(docker images --quiet --filter "dangling=true")
 ```
-
-
-## Walkthrough Video
-
-{{< youtube 11111111 >}}

@@ -56,4 +56,8 @@ Whether you're a professional IT administrator or a casual user wanting to keep 
 
 ## Walkthrough Video
 
+<<<<<<< Updated upstream
 {{< youtube "R5RAgqB6YxM" >}}
+=======
+{{< youtube R5RAgqB6YxM >}}
+>>>>>>> Stashed changes

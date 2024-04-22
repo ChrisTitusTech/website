@@ -16,10 +16,6 @@ This is a guide on how to set up an always on VPN in Ubuntu, and basic troublesh
   
 Use my affiliate link to get a Private Internet Access VPN: <http://www.privateinternetaccess.com/pages/buy-vpn/christitus>. This is a must-have for a dedicated Linux box specifically for privacy concerns.
 
-### Setup VPN in Ubuntu &#8211; No Commentary
-
-{{< youtube KrNgZPzHNeA >}}  
-
 ### Setup VPN in Ubuntu &#8211; With Commentary
 
 {{< youtube tHEd3fFfGpM >}}  

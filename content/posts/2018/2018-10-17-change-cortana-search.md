@@ -28,9 +28,5 @@ This article goes over how to change Cortana search engine to display results in
   * Open Webpage and select EdgeDeflector.exe for default open with application
   * Done!
 
-## Video Walkthrough
-
-{{< youtube Vw-JA89brSg >}}  
-
 In the end, you need to watch out for Windows updates. Anytime Windows does a major update, be prepared to repeat the process above, as it will reset it to Edge. Therefore, I&#8217;d bookmark the Chrometana Pro page or this one as you will be coming back to do this about twice a year. If you don&#8217;t want to do this, you can always switch to Linux. Consequently, I have written an article about the pro&#8217;s and con&#8217;s of such a switch and I highly recommend the switch if you are able.
 
