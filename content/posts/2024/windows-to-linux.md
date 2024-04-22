@@ -113,5 +113,5 @@ Start messing around with window managers and configuring the system from a comm
 
 ## Walkthrough Video
 
-{{< youtube 11111111 >}}
+{{< youtube "WVQ_2hN_zzs" >}}
 
