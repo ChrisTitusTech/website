@@ -8,7 +8,7 @@ categories:
   - Windows
 tags:
   - winutil
-draft: true
+draft: false
 ---
 The Chris Titus Tech WinUtil is now the #2 Most Popular Powershell utility in the World on GitHub.
 <!--more-->
@@ -61,4 +61,4 @@ Want an EXE? Help fund the project:
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "5_AaHXrelTE" >}}
