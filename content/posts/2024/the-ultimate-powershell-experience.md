@@ -8,7 +8,7 @@ categories:
   - Windows
 tags:
   - PowerShell
-draft: true
+draft: false
 ---
 This PowerShell profile script introduces a comprehensive set of functions and aliases aimed at enhancing the PowerShell experience. It includes everything from module management and profile updates to utility functions and quality of life improvements.
 <!--more-->
@@ -39,4 +39,4 @@ This PowerShell profile script is designed to streamline and enhance the PowerSh
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "lePxtkrblRE" >}}
