@@ -8,7 +8,7 @@ categories:
   - Android
 tags:
   - LineageOS
-draft: true
+draft: false
 ---
 RisingOS 2.0 introduces a plethora of enhancements and features, setting it apart from standard Android experiences.<!--more-->
 
@@ -64,4 +64,4 @@ This release not only enhances the user experience with new features and improve
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "epB9WY70csQ" >}}
