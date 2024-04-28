@@ -1,7 +1,7 @@
 ---
 title: "The Ultimate Powershell Experience"
 
-date: 2024-04-29
+date: 2024-05-04
 url: /the-ultimate-powershell-experience/
 image: images/2024-thumbs/the-ultimate-powershell-experience.jpg
 categories:
