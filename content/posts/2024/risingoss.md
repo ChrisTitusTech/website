@@ -1,7 +1,7 @@
 ---
 title: "RisingOS 2.0 - Android Custom ROM"
 
-date: 2024-04-27
+date: 2024-05-01
 url: /risingoss/
 image: images/2024-thumbs/risingoss.jpg
 categories:
