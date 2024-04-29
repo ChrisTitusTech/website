@@ -1,14 +1,14 @@
 ---
 title: "Atomic Desktops: Revolutionizing the Linux Experience"
 
-date: 2024-05-08
+date: 2024-05-11
 url: /linux-atomic-desktops/
 image: images/2024-thumbs/linux-atomic-desktops.jpg
 categories:
   - Linux
 tags:
   - Fedora
-draft: true
+draft: false
 ---
 Linux Atomic Desktops, a concept derived from Fedora's Project Atomic, are designed to provide a more reliable and manageable desktop environment. This initiative extends the principles of atomic updates to Fedora Workstation, aiming to enhance the stability and consistency of the Linux desktop experience.
 <!--more-->
@@ -56,5 +56,5 @@ Linux Atomic Desktops represent a significant shift in how desktop environments 
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "1vSFR8bi0YQ" >}}
 

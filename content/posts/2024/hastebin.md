@@ -1,7 +1,7 @@
 ---
 title: "Hastebin"
 
-date: 2024-05-11
+date: 2024-05-08
 url: /hastebin/
 image: images/2024-thumbs/hastebin.jpg
 categories:
@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - Hastebin
-draft: true
+draft: false
 ---
 <!--more-->
 Hastebin is a simple and efficient tool for sharing code snippets and text online. It's particularly useful for developers and content creators who need to quickly share pieces of code or logs without the hassle of setting up a more complex environment. Here's a quick guide on how to use Hastebin:
@@ -89,4 +89,4 @@ Hastebin is a handy tool for anyone looking to share text or code snippets quick
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "TpI1siclED0" >}}
