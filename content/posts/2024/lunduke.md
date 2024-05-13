@@ -1,14 +1,14 @@
 ---
 title: "Lunduke: The Alex Jones of Linux"
 
-date: 2024-05-10
+date: 2024-05-15
 url: /lunduke/
 image: images/2024-thumbs/lunduke.jpg
 categories:
   - Linux
 tags:
   - Lunduke
-draft: true
+draft: false
 ---
 What happened to Bryan Lunduke, the Linux Sucks Guy?
 <!--more-->
@@ -52,4 +52,4 @@ I Miss this version of Lunduke. These articles and videos are original and inter
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "j_uqTouv6LA" >}}
