@@ -1,14 +1,14 @@
 ---
 title: "My Problems With Linux"
 
-date: 2024-05-20
+date: 2024-06-04
 url: /my-problems-with-linux/
 image: images/2024-thumbs/my-problems-with-linux.jpg
 categories:
   - Linux
 tags:
   - Arch
-draft: true
+draft: false
 ---
 Here are my biggest problems with Linux Desktop and How I fixed them.
 <!--more-->
@@ -85,4 +85,4 @@ Everything in its current configuration works better than Windows or Mac and I a
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "tcQRVOMGXrk" >}}
