@@ -15,13 +15,13 @@ Here are my biggest problems with Linux Desktop and How I fixed them.
 
 ## Breaking Linux
 
-You know what every new power user does when they come to Linux Desktop? They Break it! 
+You know what every new power user does when they come to Linux Desktop? They Break it!
 
 Seriously, they want to tinker and change things and end up blindly following some guide online and breaking their system because they don't understand it. They expect it to work like Windows and it does NOT!
 
-My fix to this is make everything as simple as possible. 
+My fix to this is make everything as simple as possible.
 
-- My Desktop Environment? Don't have one... I just use DWM. 
+- My Desktop Environment? Don't have one... I just use DWM.
 - The Display Renderer? XOrg... its ancient, but it just works.
 - Audio Problems? Use Alsa with Pulse. No pipewire.
 - Video Card issues? I use Nvidia 4070 with DKMS modules.
@@ -41,7 +41,7 @@ My fix for this? Use a Window Manager
 
 ### Display Rendering
 
-All the cool kids in Linux use Wayland. Fedora users are forced to use Wayland in the next release. Wayland works great for *most* AMD Cards, but can be hit and miss on nVidia. Most software now works on it... except for Synergy, barrier, or input leap *small exception for patched gnome users*. 
+All the cool kids in Linux use Wayland. Fedora users are forced to use Wayland in the next release. Wayland works great for *most* AMD Cards, but can be hit and miss on nVidia. Most software now works on it... except for Synergy, barrier, or input leap *small exception for patched gnome users*.
 
 My Fix for these problems? Use Xorg
 
@@ -60,24 +60,24 @@ My Fix? Use Alsa and strip out all the complexity
 nano /etc/modprobe.d/alsa-blacklist.conf
 blacklist snd_hda_intel
 ```
-*Note: to get a better description of the modules use* `cat /proc/asound/cards` 
+*Note: to get a better description of the modules use* `cat /proc/asound/cards`
 - Pulseaudio broken? delete the entire `~/.config/pulse/` folder. Restart pulse using:
 ```
 pulseaudio -k
 pulseaudio --start
 ```
-- Davinci Resolve Audio Issues? 
+- Davinci Resolve Audio Issues?
 
 1. Use Opus for recording audio or transcode from AAC. *Note: Opus is better quality than AAC*
 2. Do NOT Use Pipewire! Resolve hasn't caught up yet. Install `pulseaudio` and `pulseaudio-alsa` packages using your package manager. Remove any pipewire packages.
 
-These are just a few workarounds and the method to my madness why I choose certain things. 
+These are just a few workarounds and the method to my madness why I choose certain things.
 
 ### Switched to nVidia in 2024
 
-I have used AMD GPUs almost exclusively in Linux for the past 5 years. They generally just worked, but the 7000 series has been problematic and caused several issues for me. Helldivers 2 didn't work, my 7800XT card would never get utilized past 40-50% on ANY Distribution I tried, and compatibility was an issue with Resolve on Linux not liking AMD and OpenCL. After loading up a new nVidia 4070 Super with nvidia-dkms and linux-headers everything worked right away. All the issues I had melted away. 
+I have used AMD GPUs almost exclusively in Linux for the past 5 years. They generally just worked, but the 7000 series has been problematic and caused several issues for me. Helldivers 2 didn't work, my 7800XT card would never get utilized past 40-50% on ANY Distribution I tried, and compatibility was an issue with Resolve on Linux not liking AMD and OpenCL. After loading up a new nVidia 4070 Super with nvidia-dkms and linux-headers everything worked right away. All the issues I had melted away.
 
-I will always use what is best for my needs. Nvidia is now the card I choose on my Linux install, because I don't have near the issues compared to the 7800XT. 
+I will always use what is best for my needs. Nvidia is now the card I choose on my Linux install, because I don't have near the issues compared to the 7800XT.
 
 ## Conclusion
 
