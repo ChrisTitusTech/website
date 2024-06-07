@@ -75,7 +75,7 @@ These are just a few workarounds and the method to my madness why I choose certa
 
 ### Switched to nVidia in 2024
 
-I have used AMD GPUs almost exclusively in Linux for the past 5 years. They generally just worked, but the 7000 series has been problematic and caused several issues for me. Helldivers 2 didn't work, my 7800XT card would never get utilized past 40-50% on ANY Distribution I tried, and compatibility was an issue with Resolve on Linux not liking AMD and openncl. After loading up a new nVidia 4070 Super with nvidia-dkms and linux-headers everything worked right away. All the issues I had melted away. 
+I have used AMD GPUs almost exclusively in Linux for the past 5 years. They generally just worked, but the 7000 series has been problematic and caused several issues for me. Helldivers 2 didn't work, my 7800XT card would never get utilized past 40-50% on ANY Distribution I tried, and compatibility was an issue with Resolve on Linux not liking AMD and OpenCL. After loading up a new nVidia 4070 Super with nvidia-dkms and linux-headers everything worked right away. All the issues I had melted away. 
 
 I will always use what is best for my needs. Nvidia is now the card I choose on my Linux install, because I don't have near the issues compared to the 7800XT. 
 
