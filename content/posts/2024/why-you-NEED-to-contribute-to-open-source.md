@@ -11,7 +11,7 @@ tags:
   - OpenSource
 draft: false
 ---
-There is a video called "(Don't Contribute to Open Source)[https://www.youtube.com/watch?v=5nY_cy8zcO4]" by Theo t3 and most people don't understand its purpose or didn't watch the entire video.
+There is a video called [Don't Contribute to Open Source](https://www.youtube.com/watch?v=5nY_cy8zcO4) by Theo t3 and most people don't understand its purpose or didn't watch the entire video.
 <!--more-->
 
 ## The Video Problem
