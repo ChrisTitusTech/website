@@ -1,7 +1,7 @@
 ---
 title: "Why You NEED to Contribute to Open Source"
 
-date: 2024-06-06
+date: 2024-06-19
 url: /why-you-NEED-to-contribute-to-open-source/
 image: images/2024-thumbs/why-you-NEED-to-contribute-to-open-source.jpg
 categories:
@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - OpenSource
-draft: true
+draft: false
 ---
 There is a video called "(Don't Contribute to Open Source)[https://www.youtube.com/watch?v=5nY_cy8zcO4]" by Theo t3 and most people don't understand its purpose or didn't watch the entire video.
 <!--more-->
@@ -45,4 +45,4 @@ Do not do a massive text dump! Instead use the attach button if you are uploadin
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "JF8F7uaGfV8" >}}
