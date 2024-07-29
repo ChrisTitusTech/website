@@ -1,14 +1,14 @@
 ---
 title: "Crowdstrike Alternatives"
 
-date: 2024-07-23
+date: 2024-07-26
 url: /crowdstrike-alternatives/
 image: images/2024-thumbs/crowdstrike-alternatives.jpg
 categories:
   - Windows
 tags:
   - Antivirus
-draft: true
+draft: false
 ---
 With Crowdstrike proving that it should NOT be used, here are some alternatives for MSPs and Enterprise users.
 <!--more-->
@@ -53,4 +53,4 @@ BitDefender, Webroot, and other popular AV name brands are NOT suitable in my op
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "_3NOjLlsp3Y" >}}
