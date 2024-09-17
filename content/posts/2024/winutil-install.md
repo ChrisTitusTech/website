@@ -45,8 +45,8 @@ No customizations or removals of official Microsoft products... but no added blo
 
 ## Official Links
 
-- <https://github.com/ChrisTitusTech/winutil>
-- <https://christitus.com/downloads>
+- GitHub - <https://github.com/ChrisTitusTech/winutil>
+- Download - <https://christitus.com/downloads>
 - Documentation - <https://christitustech.github.io/winutil/>
 
 ## Walkthrough Video
