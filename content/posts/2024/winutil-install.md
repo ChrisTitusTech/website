@@ -1,17 +1,20 @@
 ---
-title: "Winutil Install"
+title: "The Most Popular Windows Utility"
 
-date: 2024-09-03
+date: 2024-09-13
 url: /winutil-install/
 image: images/2024-thumbs/winutil-install.jpg
 categories:
   - Windows
 tags:
   - Winutil 
-draft: true
+draft: false
 ---
 This is the biggest update to WinUtil since its inception. It is now a full-fledged Windows utility suite. It has a lot of new features and improvements. It is now a must-have utility for Windows users.
 <!--more-->
+The #1 Most Stared PowerShell project on GitHub!
+
+![](/images/2024/winutil-install/top-powershell.png)
 
 ## Features
 
@@ -40,6 +43,12 @@ The 4 minute install ISO. It is a minimal Windows 10 ISO with WinUtil pre-instal
 
 No customizations or removals of official Microsoft products... but no added bloatware or apps. Its just like Microsoft used to Package windows during the Windows 7 era.
 
+## Official Links
+
+- <https://github.com/ChrisTitusTech/winutil>
+- <https://christitus.com/downloads>
+- Documentation - <https://christitustech.github.io/winutil/>
+
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "92SM8Az5QVM" >}}
