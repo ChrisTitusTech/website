@@ -35,6 +35,13 @@ Most of these laptops I mentioned above come at a price premium and good hardwar
 
 The price premium comes into play when you look at the software that comes loaded on them. 
 
+### Kfocus
+
+- Validated Kubuntu Systems - KDE Based Ubuntu
+- Extensive "Curated Apps" AKA Bash Scripts - <https://kfocus.org/wf/apps.html>
+- Kfocus Tool has amazing power optimization
+- CUDA, ML, and Ai Libraries that are automatically installed and configured
+
 ### Tuxedo
 
 - Tomte - Debian based package for driver/system configuration
@@ -42,13 +49,6 @@ The price premium comes into play when you look at the software that comes loade
 - Tuxedo OS - KDE Based Ubuntu
 - WebFAI - USB Network Reload
 - Germeny-Based with servers overseas
-
-### Kfocus
-
-- Validated Kubuntu Systems - KDE Based Ubuntu
-- Extensive "Curated Apps" AKA Bash Scripts - <https://kfocus.org/wf/apps.html>
-- Kfocus Tool has amazing power optimization
-- CUDA, ML, and Ai Libraries that are automatically installed and configured
 
 ### System76
 
