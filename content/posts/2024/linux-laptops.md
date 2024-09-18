@@ -38,7 +38,7 @@ The price premium comes into play when you look at the software that comes loade
 ### Kfocus
 
 - Validated Kubuntu Systems - KDE Based Ubuntu
-- Extensive "Curated Apps" AKA Bash Scripts - <https://kfocus.org/wf/apps.html>
+- Curated Apps - <https://kfocus.org/wf/apps.html>
 - Kfocus Tool has amazing power optimization
 - CUDA, ML, and Ai Libraries that are automatically installed and configured
 
