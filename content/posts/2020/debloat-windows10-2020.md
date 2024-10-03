@@ -8,6 +8,8 @@ categories:
   - Windows
 tags:
   - Microsoft Store
+  - Windows 10
+  - Windows 11
 
 ---
 This goes over debloating and slimming down Windows 10 and 11 so you get maximum performance from your PC. 
