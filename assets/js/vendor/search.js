@@ -1,106 +1,143 @@
-summaryInclude=60;
-var fuseOptions = {
+// Constants
+const SUMMARY_INCLUDE = 60;
+const FUSE_OPTIONS = {
   shouldSort: true,
   includeMatches: true,
   threshold: 0.0,
-  tokenize:true,
+  tokenize: true,
   location: 0,
   distance: 100,
   maxPatternLength: 32,
   minMatchCharLength: 1,
   keys: [
-    {name:"title",weight:0.8},
-    {name:"contents",weight:0.5},
-    {name:"tags",weight:0.3},
-    {name:"categories",weight:0.3}
+    { name: "title", weight: 0.8 },
+    { name: "contents", weight: 0.5 },
+    { name: "tags", weight: 0.3 },
+    { name: "categories", weight: 0.3 }
   ]
 };
 
+// Initialize search on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const searchQuery = getSearchParam('s');
+  if (searchQuery) {
+    document.getElementById('search-query').value = searchQuery;
+    executeSearch(searchQuery);
+  }
 
-var searchQuery = param("s");
-if(searchQuery){
-  $("#search-query").val(searchQuery);
-  executeSearch(searchQuery);
-}
+  // Add event listener for search input
+  const searchInput = document.getElementById('search-query');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value;
+      if (query) {
+        executeSearch(query);
+      } else {
+        document.getElementById('search-results').innerHTML = '';
+      }
+    });
+  }
+});
 
+// Execute search with better error handling
+async function executeSearch(searchQuery) {
+  try {
+    const searchResults = document.getElementById('search-results');
+    if (!searchResults) return;
 
-
-function executeSearch(searchQuery){
-  $.getJSON( indexURL, function( data ) {
-    var pages = data;
-    var fuse = new Fuse(pages, fuseOptions);
-    var result = fuse.search(searchQuery);
-    console.log({"matches":result});
-    if(result.length > 0){
-      populateResults(result);
-    }else{
-      $('#search-results').append("<div class=\"text-center\"><img loading=\"lazy\" class=\"img-fluid mb-5\" src=\"https://user-images.githubusercontent.com/17677384/110205559-d77c9580-7ea2-11eb-82b4-f1334db99530.png\"><h3>No Search Found</h3></div>");
+    const response = await fetch(indexURL);
+    const pages = await response.json();
+    const fuse = new Fuse(pages, FUSE_OPTIONS);
+    const result = fuse.search(searchQuery);
+    
+    if (result.length > 0) {
+      populateResults(result, searchQuery);
+    } else {
+      searchResults.innerHTML = `
+        <div class="text-center">
+          <img loading="lazy" class="img-fluid mb-5" src="https://user-images.githubusercontent.com/17677384/110205559-d77c9580-7ea2-11eb-82b4-f1334db99530.png">
+          <h3>No Search Found</h3>
+        </div>`;
     }
-  });
+  } catch (error) {
+    console.error('Search failed:', error);
+  }
 }
 
-function populateResults(result){
-  $.each(result,function(key,value){
-    var contents= value.item.contents;
-    var snippet = "";
-    var snippetHighlights=[];
-    var tags =[];
-    if( fuseOptions.tokenize ){
+function populateResults(results, searchQuery) {
+  const searchResults = document.getElementById('search-results');
+  const template = document.getElementById('search-result-template');
+  
+  if (!searchResults || !template) return;
+  
+  searchResults.innerHTML = ''; // Clear previous results
+  const templateContent = template.innerHTML;
+
+  results.forEach((value, key) => {
+    const { contents, permalink, title, tags, categories } = value.item;
+    let snippet = '';
+    const snippetHighlights = [];
+
+    if (FUSE_OPTIONS.tokenize) {
       snippetHighlights.push(searchQuery);
-    }else{
-      $.each(value.matches,function(matchKey,mvalue){
-        if(mvalue.key == "tags" || mvalue.key == "categories" ){
-          snippetHighlights.push(mvalue.value);
-        }else if(mvalue.key == "contents"){
-          start = mvalue.indices[0][0]-summaryInclude>0?mvalue.indices[0][0]-summaryInclude:0;
-          end = mvalue.indices[0][1]+summaryInclude<contents.length?mvalue.indices[0][1]+summaryInclude:contents.length;
-          snippet += contents.substring(start,end);
-          snippetHighlights.push(mvalue.value.substring(mvalue.indices[0][0],mvalue.indices[0][1]-mvalue.indices[0][0]+1));
+    } else {
+      value.matches.forEach(match => {
+        if (match.key === 'tags' || match.key === 'categories') {
+          snippetHighlights.push(match.value);
+        } else if (match.key === 'contents') {
+          const [start, end] = match.indices[0];
+          const snippetStart = Math.max(0, start - SUMMARY_INCLUDE);
+          const snippetEnd = Math.min(contents.length, end + SUMMARY_INCLUDE);
+          snippet += contents.substring(snippetStart, snippetEnd);
+          snippetHighlights.push(match.value.substring(start, end + 1));
         }
       });
     }
 
-    if(snippet.length<1){
-      snippet += contents.substring(0,summaryInclude*2);
+    if (!snippet) {
+      snippet = contents.substring(0, SUMMARY_INCLUDE * 2);
     }
-    //pull template from hugo templarte definition
-    var templateDefinition = $('#search-result-template').html();
-    //replace values
-    var output = render(templateDefinition,{key:key,title:value.item.title,link:value.item.permalink,tags:value.item.tags,categories:value.item.categories,snippet:snippet});
-    $('#search-results').append(output);
 
-    $.each(snippetHighlights,function(snipkey,snipvalue){
-      $("#summary-"+key).mark(snipvalue);
+    const output = renderTemplate(templateContent, {
+      key,
+      title,
+      link: permalink,
+      tags,
+      categories,
+      snippet
     });
 
+    searchResults.insertAdjacentHTML('beforeend', output);
+
+    // Highlight matches
+    const summary = document.getElementById(`summary-${key}`);
+    if (summary) {
+      snippetHighlights.forEach(highlight => {
+        new Mark(summary).mark(highlight);
+      });
+    }
   });
 }
 
-function param(name) {
-    return decodeURIComponent((location.search.split(name + '=')[1] || '').split('&')[0]).replace(/\+/g, ' ');
+function getSearchParam(name) {
+  const searchParams = new URLSearchParams(window.location.search);
+  return searchParams.get(name) || '';
 }
 
-function render(templateString, data) {
-  var conditionalMatches,conditionalPattern,copy;
-  conditionalPattern = /\$\{\s*isset ([a-zA-Z]*) \s*\}(.*)\$\{\s*end\s*}/g;
-  //since loop below depends on re.lastInxdex, we use a copy to capture any manipulations whilst inside the loop
-  copy = templateString;
-  while ((conditionalMatches = conditionalPattern.exec(templateString)) !== null) {
-    if(data[conditionalMatches[1]]){
-      //valid key, remove conditionals, leave contents.
-      copy = copy.replace(conditionalMatches[0],conditionalMatches[2]);
-    }else{
-      //not valid, remove entire section
-      copy = copy.replace(conditionalMatches[0],'');
-    }
+function renderTemplate(template, data) {
+  // Handle conditionals
+  const conditionalPattern = /\$\{\s*isset ([a-zA-Z]*) \s*\}(.*)\$\{\s*end\s*}/g;
+  let processedTemplate = template;
+
+  let match;
+  while ((match = conditionalPattern.exec(template)) !== null) {
+    const [fullMatch, key, content] = match;
+    processedTemplate = processedTemplate.replace(
+      fullMatch,
+      data[key] ? content : ''
+    );
   }
-  templateString = copy;
-  //now any conditionals removed we can do simple substitution
-  var key, find, re;
-  for (key in data) {
-    find = '\\$\\{\\s*' + key + '\\s*\\}';
-    re = new RegExp(find, 'g');
-    templateString = templateString.replace(re, data[key]);
-  }
-  return templateString;
+
+  // Handle simple substitutions
+  return processedTemplate.replace(/\$\{\s*(\w+)\s*\}/g, (_, key) => data[key] || '');
 }

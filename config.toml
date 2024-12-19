@@ -105,29 +105,37 @@ expire_days = 2
 # css plugins
 [[params.plugins.css]]
 link = "css/vendor/bootstrap.min.css"
+attributes = "media='all'"
 [[params.plugins.css]]
 link = "css/vendor/slick.min.css"
 [[params.plugins.css]]
 link = "css/custom-nav.css"
 
-
-# js plugins
+# js plugins - Reordered and optimized
 [[params.plugins.js]]
 link = "js/vendor/jquery.min.js"
+attributes = "defer"
 [[params.plugins.js]]
 link = "js/vendor/bootstrap.min.js"
+attributes = "defer"
 [[params.plugins.js]]
 link = "js/vendor/slick.min.js"
+attributes = "defer"
 [[params.plugins.js]]
 link = "js/vendor/shuffle.min.js"
+attributes = "defer"
 [[params.plugins.js]]
 link = "js/vendor/fuse.min.js"
+attributes = "defer"
 [[params.plugins.js]]
 link = "js/vendor/mark.js"
+attributes = "defer"
 [[params.plugins.js]]
 link = "js/vendor/search.js"
+attributes = "defer"
 [[params.plugins.js]]
 link = "js/vendor/font-awesome/all.min.js"
+attributes = "defer"
 
 
 ############################## Social Site ##########################
@@ -266,6 +274,7 @@ name = "Terms & Conditions"
   keepWhitespace = false
 [minify.tdewolff.js]
   keepVarNames = false
+  precision = 0
 [minify.tdewolff.css]
   keepCSS2 = true
 
@@ -286,14 +295,28 @@ disableLatLong = true
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.gstatic.com *.shopify.com cdn.shopify.com *.myshopify.com shop.app; style-src 'self' 'unsafe-inline' *.googleapis.com *.gstatic.com *.shopify.com cdn.shopify.com *.myshopify.com; frame-src 'self' *.shopify.com *.myshopify.com shop.app; img-src 'self' data: * cdn.shopify.com *.shopifycdn.com; connect-src 'self' *.shopify.com monorail-edge.shopifysvc.com *.myshopify.com shop.app; font-src 'self' data: *.shopifycdn.com; media-src 'self' data: *.shopifycdn.com;"
+    Content-Security-Policy = "default-src 'self' *.shopify.com *.shopifycdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.shopify.com *.shopifycdn.com sdks.shopifycdn.com; style-src 'self' 'unsafe-inline' *.shopify.com *.shopifycdn.com; frame-src 'self' *.shopify.com *.myshopify.com; img-src 'self' data: * *.shopify.com *.shopifycdn.com; connect-src 'self' *.shopify.com *.myshopify.com monorail-edge.shopifysvc.com; font-src 'self' data: *.shopifycdn.com; base-uri 'self';"
 
 [server]
 [[server.headers]]
 for = "/**"
 [server.headers.values]
   Content-Encoding = ["gzip"]
+  Cache-Control = ["public, max-age=31536000"]
   Link = [
     "</css/vendor/bootstrap.min.css>; rel=preload; as=style",
     "</js/vendor/jquery.min.js>; rel=preload; as=script"
   ]
+  # Update your existing Content-Security-Policy to include cache settings
+  Content-Security-Policy = "default-src 'self' *.shopify.com *.shopifycdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.shopify.com *.shopifycdn.com sdks.shopifycdn.com; style-src 'self' 'unsafe-inline' *.shopify.com *.shopifycdn.com; frame-src 'self' *.shopify.com *.myshopify.com; img-src 'self' data: * *.shopify.com *.shopifycdn.com; connect-src 'self' *.shopify.com *.myshopify.com monorail-edge.shopifysvc.com; font-src 'self' data: *.shopifycdn.com; base-uri 'self';"
+
+[build]
+writeStats = true
+[build.processing]
+  skip_processing = false
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.css]
+  bundle = true
+  minify = true
