@@ -6,16 +6,11 @@ languageCode = "en-us"
 pagination.pagerSize = "10"
 # post excerpt
 summaryLength = "10"
-# disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
 # google analytics
 googleAnalytics = "" # example: UA-123-45, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
 
-# disable language
-disableLanguages = [""] # desable language from here
-
 [outputs]
-home = ["HTML", "AMP", "RSS", "JSON"]
+home = ["HTML", "AMP", "RSS", "JSON", "HEADERS"]
 [markup.goldmark.renderer]
     unsafe = true
 [markup.highlight]
@@ -265,6 +260,42 @@ name = "Terms & Conditions"
   disableJSON = false
   disableSVG = false
   minifyOutput = true
+[minify.tdewolff.html]
+  keepWhitespace = false
+[minify.tdewolff.js]
+  keepVarNames = false
+[minify.tdewolff.css]
+  keepCSS2 = true
 
 [build]
   writeStats = true
+  useResourceCacheWhen = "always"
+
+[imaging]
+quality = 75
+anchor = "Smart"
+resampleFilter = "Lanczos"
+
+[imaging.exif]
+includeFields = ""
+excludeFields = ""
+disableDate = true
+disableLatLong = true
+
+[security.headers]
+  [security.headers.customHeaders]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googleapis.com *.gstatic.com *.shopify.com cdn.shopify.com *.myshopify.com shop.app; style-src 'self' 'unsafe-inline' *.googleapis.com *.gstatic.com *.shopify.com cdn.shopify.com *.myshopify.com; frame-src 'self' *.shopify.com *.myshopify.com shop.app; img-src 'self' data: * cdn.shopify.com *.shopifycdn.com; connect-src 'self' *.shopify.com monorail-edge.shopifysvc.com *.myshopify.com shop.app; font-src 'self' data: *.shopifycdn.com; media-src 'self' data: *.shopifycdn.com;"
+
+[server]
+[[server.headers]]
+for = "/**"
+[server.headers.values]
+  Content-Encoding = ["gzip"]
+  Link = [
+    "</css/vendor/bootstrap.min.css>; rel=preload; as=style",
+    "</js/vendor/jquery.min.js>; rel=preload; as=script"
+  ]
