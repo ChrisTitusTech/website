@@ -3,7 +3,15 @@
   <div class="container">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-0">
-      <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}"><img loading="lazy" class="img-fluid" src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}" width="{{ site.Params.logoWidth }}" height="{{ site.Params.logoHeight }}"></a>
+      <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
+        <img loading="lazy" 
+             class="img-fluid" 
+             src="{{ site.Params.logo | absURL }}" 
+             alt="{{ site.Title }}" 
+             width="{{ site.Params.logoWidth }}" 
+             height="{{ site.Params.logoHeight }}"
+             style="aspect-ratio: {{ site.Params.logoWidth }}/{{ site.Params.logoHeight }}">
+      </a>
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation" aria-label="navigation">
         <i class="fas fa-bars h4 mb-0 text-dark"></i>
       </button>
