@@ -1,7 +1,8 @@
 {{ define "main" }}
 
 <!-- checking blog -->
-{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+{{ $blogSections := slice "post" "posts" "blog" "blogs" "news" "categories" "tags" }}
+{{ if in $blogSections .Section }}
 
 {{ $sidebar := site.Params.sidebar }}
 {{ $has_sidebar := or (eq $sidebar `left`) (eq $sidebar `right`)}}
@@ -33,7 +34,12 @@
             {{ end }}
           </div>
           {{ if .Params.Image }}
-          <!--img loading="lazy" src="{{ .Params.Image | absURL }}" class="img-fluid w-100 mb-4" alt="{{ .Title | markdownify }}"-->
+          <img loading="lazy" 
+               src="{{ .Params.Image | absURL }}" 
+               class="img-fluid w-100 mb-4" 
+               alt="{{ .Title | markdownify }}"
+               {{ with .Params.ImageWidth }}width="{{ . }}"{{ end }}
+               {{ with .Params.ImageHeight }}height="{{ . }}"{{ end }}>
           {{ end }}
 
           <div class="content mb-5">
@@ -59,12 +65,27 @@
         </div>
         {{ end }}
         <!-- Github Comments addition -->
-        <script src="https://utteranc.es/client.js"
-          repo="ChrisTitusTech/website"
-          issue-term="pathname"
-          theme="preferred-color-scheme"
-          crossorigin="anonymous"
-          async>
+        <div id="comments" class="comments"></div>
+        <script>
+          // Lazy load comments when user scrolls near them
+          document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  const script = document.createElement('script');
+                  script.src = 'https://utteranc.es/client.js';
+                  script.setAttribute('repo', 'ChrisTitusTech/website');
+                  script.setAttribute('issue-term', 'pathname');
+                  script.setAttribute('theme', 'preferred-color-scheme');
+                  script.setAttribute('crossorigin', 'anonymous');
+                  script.async = true;
+                  document.getElementById('comments').appendChild(script);
+                  observer.disconnect();
+                }
+              });
+            });
+            observer.observe(document.getElementById('comments'));
+          });
         </script>
         <!--Back to Top addition-->
         {{ partial "backtotop.html" . }}
@@ -73,7 +94,8 @@
       <!-- right sidebar -->
       {{ if eq $sidebar "right" }}
       <aside class="col-lg-4 mt-5 mt-lg-0">
-        <div class="stickyside {{ if eq $sidebar `left` }}pr-lg-4{{ end }}{{ if eq $sidebar `right` }}pl-lg-4{{ end }}">
+        <div class="stickyside {{ if eq $sidebar `left` }}pr-lg-4{{ end }}{{ if eq $sidebar `right` }}pl-lg-4{{ end }}"
+             style="position: sticky; top: 2rem;">
           {{- partial "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) -}}
         </div>
       </aside>
