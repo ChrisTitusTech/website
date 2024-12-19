@@ -3,6 +3,7 @@
 
 {{ $styles := slice }}
 
+<!-- Handle CSS plugins -->
 {{ range site.Params.plugins.css }}
   {{ if findRE "^http" .link }}
     <link crossorigin="anonymous" media="all" rel="stylesheet" href="{{ .link | absURL }}" {{with .attributes}}{{. | safeHTMLAttr}}{{end}}>
@@ -14,13 +15,15 @@
   {{ end }}
 {{ end }}
 
+<!-- Process SCSS first -->
 {{ with resources.Get "scss/style.scss" }}
-  {{ $mainStyle := . | resources.ExecuteAsTemplate "style.scss" $ | toCSS }}
+  {{ $mainStyle := . | resources.ExecuteAsTemplate "style.scss" $ | css.Sass }}
   {{ $styles = $styles | append $mainStyle }}
 {{ end }}
 
+<!-- Concat and output all styles -->
 {{ if $styles }}
-  {{ $allStyles := $styles | resources.Concat "css/style.css" | minify | fingerprint "sha512" }}
+  {{ $allStyles := $styles | resources.Concat "css/styles.css" | minify | fingerprint "sha512" }}
   {{ with $allStyles }}
     <style crossorigin="anonymous" media="all" type="text/css" integrity="{{ .Data.Integrity }}">
       {{.Content | safeCSS}}
