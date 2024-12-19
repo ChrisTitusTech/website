@@ -128,6 +128,17 @@
         var body = document.body;
         var switcher = document.getElementsByClassName('js-toggle')[0];
     
+        // Apply dark mode by default if no preference is stored
+        if (localStorage.getItem('darkMode') === null) {
+            localStorage.setItem('darkMode', 'true');
+        }
+    
+        //Check Storage. Keep user preference on page reload
+        if (localStorage.getItem('darkMode')) {
+            switcher.classList.add('js-toggle--checked');
+            body.classList.add('dark-mode');
+        }
+    
         //Click on dark mode icon. Add dark mode classes and wrappers. Store user preference through sessions
         switcher.addEventListener("click", function() {
             this.classList.toggle('js-toggle--checked');
@@ -148,12 +159,5 @@
                 detail: { darkMode: body.classList.contains('dark-mode') }
             }));
         })
-    
-        //Check Storage. Keep user preference on page reload
-        if (localStorage.getItem('darkMode')) {
-            //body.classList.add('dark-mode');
-            switcher.classList.add('js-toggle--checked');
-            body.classList.add('dark-mode');
-        }
     
     </script>
