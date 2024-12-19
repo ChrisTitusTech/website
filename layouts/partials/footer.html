@@ -23,7 +23,13 @@
       <div class="col-lg-4 text-lg-right text-center mb-4 mb-lg-0">
         <ul class="list-inline social-icon mb-0">
           {{ range site.Params.social }}
-          <li class="list-inline-item"><a href="{{ .link | safeURL }}" aria-label="social-profile"><i class="{{ .icon }}"></i></a></li>
+          <li class="list-inline-item">
+            <a href="{{ .link | safeURL }}" 
+               aria-label="social-profile" 
+               class="link-dark link-opacity-75-hover">
+              <i class="{{ .icon }}"></i>
+            </a>
+          </li>
           {{ end }}
         </ul>
       </div>
