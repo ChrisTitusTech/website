@@ -253,6 +253,8 @@ weight = 4
 url = "terms-conditions/"
 name = "Terms & Conditions"
 
+### Special build and Security settings
+
 [minify]
   disableCSS = false
   disableHTML = false
@@ -266,18 +268,6 @@ name = "Terms & Conditions"
   keepVarNames = false
 [minify.tdewolff.css]
   keepCSS2 = true
-
-[build]
-  writeStats = true
-  useResourceCacheWhen = "always"
-  [build.processing]
-    css = true
-    js = true
-    html = true
-    [build.processing.minify]
-      css = true
-      js = true
-      html = true
 
 [imaging]
 quality = 75
@@ -307,18 +297,3 @@ for = "/**"
     "</css/vendor/bootstrap.min.css>; rel=preload; as=style",
     "</js/vendor/jquery.min.js>; rel=preload; as=script"
   ]
-
-[module]
-  [[module.mounts]]
-    source = "assets"
-    target = "assets"
-  [[module.mounts]]
-    source = "static"
-    target = "static"
-  [[module.mounts]]
-    source = "assets/scss"
-    target = "assets/css"
-    includeFiles = ["*.scss"]
-
-[security.exec]
-  allow = ['^go$', '^npx$', '^postcss$']
