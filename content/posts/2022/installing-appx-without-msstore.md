@@ -17,8 +17,6 @@ Do you have a bare version of windows LTSC or highly stripped out ISO image that
 
 Using the powershell and a couple projects we can install winget. You need the Microsoft sanctioned script repository called PSGallery. It has some system admin scripts that are clutch when all you have is powershell. 
 
-{{< ghcode "https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/winget.ps1" >}}
-
 ## What this does
 
 It grabs the script from <https://www.powershellgallery.com/packages/winget-install/0.0.4> and runs it. The script itself utilizes NuGet and other tools that are in every Windows installation to install the dependancies, before retrieving the winget packages. 
