@@ -1,0 +1,14 @@
+{{ "<!-- about me -->" | safeHTML }}
+<div class="widget widget-about">
+  {{ with site.Params.about_me }}
+  <h5 class="widget-title">{{ .Title }}</h5>
+  <p>{{ .bio | markdownify }}</p>
+  {{ end }}
+  {{ with site.Params.social_profile }}
+  <ul class="list-unstyled list-inline">
+    {{ range . }}
+    <li class="list-inline-item mr-3"><a href="{{ .link }}" aria-label="Social Profile"><i class="{{ .icon }}"></i></a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

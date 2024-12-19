@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<title>{{ .Title }}</title>
+
+<meta name="author" content="{{ site.Params.author }}">
+<meta name="description" content="{{ with .Params.description }}{{.}}{{else}}{{ with site.Params.description }}{{.}}{{end}}{{end}}">
+
+{{ with site.Params.keywords }}
+<meta name="keywords" content="{{ . }}">{{ end }}
+{{ with site.Params.author }}
+<meta name="author" content="{{ . }}">{{ end }}
+{{ hugo.Generator }}
+
+{{ "<!-- mobile responsive meta -->" | safeHTML}}
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+{{ "<!-- Favicon -->" | safeHTML}}
+<link rel="icon" href="{{ site.Params.favicon | absURL }}" type="image/x-icon">
+
+<!-- google analytics 
+{{ template "_internal/google_analytics.html" . }}
+{{ partial "gtm.html" . }}
+-->
+<!-- RSS Feed Addition -->
+{{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
+<!-- Google Anchor Ad -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6679678361432308",
+    enable_page_level_ads: true,
+    overlays: {bottom: true}
+  });
+</script>
+
+<!-- CSS -->
+{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $bootstrap := resources.Get "css/vendor/bootstrap.min.css" }}
+{{ $slick := resources.Get "css/vendor/slick.min.css" }}
+
+{{ $styles := slice $bootstrap $slick }}
+{{ $css := $styles | resources.Concat "css/vendor.css" | resources.Minify | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

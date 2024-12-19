@@ -1,0 +1,139 @@
+{{ define "main" }}
+
+{{ $layout := .Params.layout }}
+{{ if eq $layout "classic" }}
+
+<!-- banner -->
+<section class="banner bg-cover" style="background-image: url('{{ .Params.banner.bg_image | absURL }}');">
+  {{ if .Params.banner.image }}
+  <img loading="lazy" src="{{ .Params.banner.image | absURL }}" class="img-fluid illustration" alt="{{ .Title }}">
+  {{ end }}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <h1>{{ .Params.banner.title | markdownify }}</h1>
+      </div>
+      {{ if .Params.banner.image }}
+      <div class="col-lg-5 illustration-mobile">
+        <img loading="lazy" loading="lazy" src="{{ .Params.banner.image | absURL }}" class="img-fluid" alt="{{ .Title }}">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<!-- /banner -->
+
+<!-- blog -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 mx-auto">
+        <div class="bg-white shadow block">
+          {{ range where site.RegularPages "Section" "in" site.Params.mainSections }}
+          {{ .Render "article" }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /blog -->
+
+<!-- cta -->
+{{ if site.Params.cta.enable }}
+<section class="section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 mx-auto">
+        <div class="shadow bg-white p-5">
+          <div class="row">
+            <div class="col-md-4 text-center text-md-left mb-4 mb-lg-0">
+              <img loading="lazy" src="{{ site.Params.cta.image | absURL }}" class="mr-4" alt="..."></div>
+            <div class="col-md-8 text-center text-md-left">
+              <h3 class="mt-0">{{ site.Params.cta.title | markdownify }}</h3>
+              <p>{{ site.Params.cta.description | markdownify }}</p>
+              {{ if site.Params.cta.button.enable }}
+              <a href="{{ site.Params.cta.button.link | absLangURL }}"
+                class="btn btn-primary">{{ site.Params.cta.button.label }}</a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- /cta -->
+
+{{ else if eq $layout "creative" }}
+
+<!-- banner -->
+<section class="banner-creative bg-cover" style="background-image: url('{{ site.Params.banner.bg_image | absURL }}');">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-lg-8 mb-4 mb-lg-0 order-1 order-lg-0">
+        <h1 class="title">{{ site.Params.banner.title | markdownify }}</h1>
+      </div>
+      {{ if site.Params.banner.image }}
+      <div class="col-lg-3 col-md-4 col-sm-6 order-0 order-lg-1 mb-5 mb-lg-0">
+        <img loading="lazy" class="banner-image img-fluid" src="{{ site.Params.banner.image | absURL }}" alt="{{ .Title }}">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<!-- /banner -->
+
+<!-- featured-post-slider -->
+<div class="featured-post-slider">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="row slider-block">
+          {{ range where site.RegularPages ".Params.featured" "=" true }}
+          <article class="card-overlapped col mb-5">
+            <div class="badge">Featured</div>
+            {{ if .Params.image }}
+            <img loading="lazy" class="w-100" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
+            {{ end }}
+            <div class="card-block">
+              <h2 class="h4 mb-4"><a class="post-title" href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+              <div class="mb-3 post-meta">
+                {{ .PublishDate.Format "Jan 2, 2006" }}
+                {{ if .Params.Categories }}
+                  <span class="mx-1">|</span>
+                  {{ range .Params.Categories }}
+                  <span class="post-category"><a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a></span>
+                  {{ end }}
+                {{ end }}
+              </div>
+            </div>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /featured-post-slider -->
+
+
+
+<!-- blog -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        {{ range where site.RegularPages "Section" "in" site.Params.mainSections }}
+        {{ .Render "article-w-image" }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /blog -->
+
+{{ end }}
+
+{{ end }}

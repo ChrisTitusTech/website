@@ -1,0 +1,20 @@
+{{ "<!-- recent post -->" | safeHTML }}
+<div class="widget">
+  <h5 class="widget-title">{{ i18n "featured_post" }}</h5>
+  {{ "<!-- post-item -->" | safeHTML }}
+  {{ range first 3 ( where site.RegularPages ".Params.featured" "=" true )}}
+  <article class="widget-card mt-4">
+    <div class="d-flex">
+      {{ with .Params.image }}
+      <img loading="lazy" src="{{ . | absURL }}" class="rounded-circle" loading="lazy" alt="post-thumb" style="height:70px;width:70px;object-fit:cover;">
+      {{ end }}
+      <div class="ml-3">
+        <h6 class="mb-1"><a class="post-title" href="{{.Permalink}}">{{ .Title }}</a></h6>
+        <div class="post-meta small">
+          {{ .PublishDate.Format "Jan 2, 2006" }}
+        </div>
+      </div>
+    </div>
+  </article>
+  {{ end }}
+</div>

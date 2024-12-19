@@ -5,7 +5,7 @@
 <script>
   WebFont.load({
     google: {
-      api: 'https://fonts.bunny.net/css2',
+      api: 'https://fonts.googleapis.com/css2',
       families: ['{{$pf}}{{if not $sf}}&display=swap{{end}}'{{with $sf}},'{{.}}&display=swap'{{end}}],
       version: 2
     },
@@ -21,12 +21,21 @@
 {{ if findRE "^http" .link }}
 <script src="{{ .link | absURL }}" type="application/javascript" {{.attributes | safeHTMLAttr}}></script>
 {{ else }}
-{{ $scripts = $scripts | append (resources.Get .link) }}
+{{ with resources.Get .link }}
+{{ $scripts = $scripts | append . }}
 {{ end }}
 {{ end }}
-{{ $scripts := $scripts | append (resources.Get "js/script.js" | minify) }}
-{{ $scripts := $scripts | resources.Concat "/js/script.js" | minify | fingerprint "sha512" }}
-<script crossorigin="anonymous" defer="defer" data-turbolinks-suppress-warning integrity="{{ $scripts.Data.Integrity }}" type="application/javascript">{{$scripts.Content | safeJS}}</script>
+{{ end }}
+
+{{ with resources.Get "js/script.js" }}
+{{ $scripts = $scripts | append . }}
+{{ end }}
+
+{{ if $scripts }}
+{{ $js := $scripts | resources.Concat "js/script.js" }}
+{{ $secureJS := $js | minify | fingerprint "sha512" }}
+<script crossorigin="anonymous" defer="defer" data-turbolinks-suppress-warning integrity="{{ $secureJS.Data.Integrity }}" type="application/javascript">{{$secureJS.Content | safeJS}}</script>
+{{ end }}
 
 <!-- cookie -->
 {{ if site.Params.cookies.enable }}

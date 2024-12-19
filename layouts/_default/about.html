@@ -1,0 +1,104 @@
+{{define "main"}}
+
+<section class="section about-banner overflow-hidden">
+  {{ with .Params.background_shape}}
+  <img class="background_shape" src="{{ . | absURL }}" alt="background shape">
+  {{ end }}
+  
+  <div class="container">
+    <div class="row justify-content-center align-items-center text-center text-lg-left">
+      {{ with .Params.image }}
+      <div class="col-lg-4">
+        <img loading="lazy" class="img-fluid" src="{{ . | absURL }}" alt="">
+      </div>
+      {{ end }}
+      <div class="col-lg-7">
+        <div class="block content">
+          {{ .Content | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ if .Params.my_experiences.enable }}
+{{ with .Params.my_experiences }}
+<section class="experiences">
+  <div class="container bg-light">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center mb-5 pb-5">
+        <h2>{{ .title | markdownify }}</h2>
+        <p>{{ .description | markdownify }}</p>
+      </div>
+    </div>
+    <div class="row experiences-items justify-content-between">
+      {{ $counter := 0 }}
+      {{ range .experiences_item }}
+      {{ $counter = add $counter 1 }}
+      <div class="col-lg-5 experiences-item">
+        <div class="card border-0 rounded-0 bg-white" data-item="{{if lt $counter 9}}0{{$counter}}{{else}}{{$counter}}{{end}}">
+          <div class="card-header bg-transparent border-0">
+            <h5 class="border-bottom pb-3">{{ .title | markdownify }}</h5>
+          </div>
+          <div class="card-body py-0 pr-5">
+            <ul class="list-unstyled mb-1">
+              <li class="d-flex mb-2"><span class="text-primary font-weight-bold mr-3">{{ i18n `requisition` }}:</span>{{ .requisition | markdownify }}</li>
+              <li class="d-flex mb-2"><span class="text-primary font-weight-bold mr-3">{{ i18n `time_period` }}:</span>{{ .time_period | markdownify }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+
+{{ if .Params.about_info.enable }}
+{{ with .Params.about_info }}
+<section class="section pb-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="row">
+          {{ range .item }}
+          <div class="col-lg-6 mb-4 pb-2">
+            <h3 class="mb-3">{{ .name }}</h3>
+            <div class="content">{{ .content }}</div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+
+{{ if .Params.compatibility.enable }}
+{{ with .Params.compatibility }}
+<section class="section">
+  <div class="container bg-light py-5">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-6 text-center mb-5">
+        <h3>{{ .title | markdownify }}</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center mb-2">
+      <div class="col-lg-10 text-center">
+      {{ range .item }}
+      <div class="m-4 d-inline-block"><img loading="lazy" src="{{ .image | absURL }}" alt="compatibility-image"></div>
+      {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+
+
+{{end}}

@@ -1,16 +1,32 @@
 <!-- plugins + stylesheet -->
-<link rel="preconnect" href="https://fonts.bunny.net">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
 {{ $styles := slice }}
+
 {{ range site.Params.plugins.css }}
-{{ if findRE "^http" .link }}
-<link crossorigin="anonymous" media="all" rel="stylesheet" href="{{ .link | absURL }}" {{.attributes | safeHTMLAttr}} >
-{{ else }}
-{{ $styles = $styles | append (resources.Get .link) }}
+  {{ if findRE "^http" .link }}
+    <link crossorigin="anonymous" media="all" rel="stylesheet" href="{{ .link | absURL }}" {{with .attributes}}{{. | safeHTMLAttr}}{{end}}>
+  {{ else }}
+    {{ $resource := resources.Get .link }}
+    {{ with $resource }}
+      {{ $styles = $styles | append . }}
+    {{ end }}
+  {{ end }}
 {{ end }}
+
+{{ with resources.Get "scss/style.scss" }}
+  {{ $mainStyle := . | resources.ExecuteAsTemplate "style.scss" $ | toCSS }}
+  {{ $styles = $styles | append $mainStyle }}
 {{ end }}
-{{ $styles := $styles | append (resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS) }}
-{{ $styles := $styles | resources.Concat "/css/style.css" | minify  | fingerprint "sha512"}}
-<link crossorigin="anonymous" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" rel="preload stylesheet" as="style">
+
+{{ if $styles }}
+  {{ $allStyles := $styles | resources.Concat "css/style.css" | minify | fingerprint "sha512" }}
+  {{ with $allStyles }}
+    <style crossorigin="anonymous" media="all" type="text/css" integrity="{{ .Data.Integrity }}">
+      {{.Content | safeCSS}}
+    </style>
+  {{ end }}
+{{ end }}
 
 <style>
   /* Unordered Lists */
@@ -84,18 +100,3 @@
     color: {{ with site.Params.variables }} {{.white}} {{ end }};
   }
 </style>
-
-  <!--Remove SVG list item
-  .content ul li:not(.nav-item) svg {
-    margin-right: 6px;
-    transform: scale(0.8);
-    color: {{ with site.Params.variables }} {{.primary_color}} {{ end }};
-  }
-  .content ul li:not(.nav-item)::before {
-    font-size: 14px;
-    font-family: "{{ with site.Params.variables }} {{.icon_font}} {{ end }}";
-    font-weight: 900;
-    content: "f0da";
-    display: none;
-  }
-  -->

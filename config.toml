@@ -1,8 +1,6 @@
 ############################ Default configuration #########################
 baseURL = "https://christitus.com/"
 title = "Chris Titus Tech | Tech Content Creator"
-# theme
-theme = "northendlab"
 languageCode = "en-us"
 # post pagination
 pagination.pagerSize = "10"
@@ -111,30 +109,30 @@ expire_days = 2
 ########################## Plugings ######################################
 # css plugins
 [[params.plugins.css]]
-link = "plugins/bootstrap/bootstrap.min.css"
+link = "css/vendor/bootstrap.min.css"
 [[params.plugins.css]]
-link = "plugins/slick/slick.min.css"
+link = "css/vendor/slick.min.css"
 [[params.plugins.css]]
 link = "css/custom-nav.css"
 
 
 # js plugins
 [[params.plugins.js]]
-link = "plugins/jquery/jquery.min.js"
+link = "js/vendor/jquery.min.js"
 [[params.plugins.js]]
-link = "plugins/bootstrap/bootstrap.min.js"
+link = "js/vendor/bootstrap.min.js"
 [[params.plugins.js]]
-link = "plugins/slick/slick.min.js"
+link = "js/vendor/slick.min.js"
 [[params.plugins.js]]
-link = "plugins/shuffle/shuffle.min.js"
+link = "js/vendor/shuffle.min.js"
 [[params.plugins.js]]
-link = "plugins/search/fuse.min.js"
+link = "js/vendor/fuse.min.js"
 [[params.plugins.js]]
-link = "plugins/search/mark.js"
+link = "js/vendor/mark.js"
 [[params.plugins.js]]
-link = "plugins/search/search.js"
+link = "js/vendor/search.js"
 [[params.plugins.js]]
-link = "plugins/font-awesome/all.min.js"
+link = "js/vendor/font-awesome/all.min.js"
 
 
 ############################## Social Site ##########################
@@ -259,3 +257,14 @@ name = "Privacy"
 weight = 4
 url = "terms-conditions/"
 name = "Terms & Conditions"
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  minifyOutput = true
+
+[build]
+  writeStats = true

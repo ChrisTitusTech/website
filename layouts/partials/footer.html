@@ -1,0 +1,39 @@
+<!-- main footer -->
+<footer class="py-4 bg-light border-top">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+        <a href="{{ site.BaseURL | absLangURL }}" class="d-block"><img loading="lazy" src="{{ site.Params.logo | absURL }}" class="img-fluid" alt="{{ site.Title }}"></a>
+      </div>
+      <div class="col-lg-4 text-center mb-4 mb-lg-0">
+        <ul class="list-inline mb-0">
+          {{ range site.Menus.footer }}
+          <li class="nav-item"><a class="nav-link d-block p-2" href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="col-lg-4 text-lg-right text-center mb-4 mb-lg-0">
+        <ul class="list-inline social-icon mb-0">
+          {{ range site.Params.social }}
+          <li class="list-inline-item"><a href="{{ .link | safeURL }}" aria-label="social-profile"><i class="{{ .icon }}"></i></a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <span>{{ site.Params.copyright | markdownify }}</span>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+{{ $jquery := resources.Get "js/vendor/jquery.min.js" }}
+{{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
+{{ $fuse := resources.Get "js/vendor/fuse.min.js" }}
+{{ $mark := resources.Get "js/vendor/mark.js" }}
+{{ $search := resources.Get "js/vendor/search.js" }}
+{{ $shuffle := resources.Get "js/vendor/shuffle.min.js" }}
+
+{{ $vendorScripts := slice $jquery $bootstrap $fuse $mark $search $shuffle }}
+{{ $js := $vendorScripts | resources.Concat "js/vendor.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

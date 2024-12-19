@@ -1,0 +1,102 @@
+@mixin mobile-xs{
+  @media(max-width:400px){
+    @content;
+  }
+}
+@mixin mobile{
+  @media(max-width:575px){
+    @content;
+  }
+}
+@mixin tablet{
+  @media(max-width:767px){
+    @content;
+  }
+}
+@mixin desktop{
+  @media(max-width:991px){
+    @content;
+  }
+}
+@mixin desktop-lg{
+  @media(max-width:1200px){
+    @content;
+  }
+}
+@mixin desktop-xl{
+  @media(max-width:1600px){
+    @content;
+  }
+}
+
+// https://stackoverflow.com/a/67297049
+@mixin media($keys...) {
+  @each $key in $keys {
+    @if ($key == mobile-xs) {
+      @include mobile-xs {
+        @content
+      }
+    } @else if ($key == mobile) {
+      @include mobile {
+        @content
+      }
+    } @else if ($key == tablet) {
+      @include tablet {
+        @content
+      }
+    } @else if ($key == desktop) {
+      @include desktop {
+        @content
+      }
+    } @else if ($key == desktop-lg) {
+      @include desktop-lg {
+        @content
+      }
+    } @else if ($key == desktop-xl) {
+      @include desktop-xl {
+        @content
+      }
+    }
+  }
+}
+
+@mixin size($size){
+  width: $size; height: $size;
+}
+
+@mixin button-base {
+  font-family: $primary-font;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: 1px solid;
+  position: relative;
+  z-index: 1;
+  transition: .2s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    box-shadow: none !important;
+  }
+}
+
+@mixin button-size($font-size, $padding) {
+  font-size: $font-size;
+  padding: $padding;
+}
+
+@mixin button-variant($background, $color, $border-color: $background) {
+  background: $background;
+  color: $color;
+  border-color: $border-color;
+
+  &:active,
+  &:hover,
+  &:focus,
+  &.active {
+    background: $background !important;
+    border-color: $border-color !important;
+    color: $color;
+  }
+}
