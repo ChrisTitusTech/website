@@ -1,5 +1,5 @@
 {{ "<!-- navigation -->" | safeHTML }}
-<header class="sticky-top navigation py-2 py-lg-0">
+<header class="sticky-top navigation py-2 py-lg-0 bg-light">
   <div class="container">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-0">
@@ -78,8 +78,13 @@
           {{ end }}
         </ul>
 
-        <!-- Dark Mode Addition-->
-        {{- partial "toggle" -}}
+        <!-- Theme Toggle -->
+        
+        <div class="theme-toggle ml-lg-3">
+          <button id="theme-toggle" class="btn btn-link border-0 p-0" aria-label="Toggle theme" style="vertical-align: middle;">
+            <i class="fa-solid {{ if eq (default `dark` site.Params.defaultTheme) `dark` }}fa-sun{{ else }}fa-moon{{ end }}"></i>
+          </button>
+        </div>
 
         {{ if site.Params.search }}
         {{ $search_layout := site.Params.header_search_layout }}

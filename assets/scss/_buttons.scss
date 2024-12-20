@@ -65,4 +65,7 @@
   border-bottom: 1px solid $primary-color;
   border-radius: 0;
   padding: 2px;
+  background-color: transparent;
+  border: 1px solid $secondary-color;
+  color: $secondary-color;
 }

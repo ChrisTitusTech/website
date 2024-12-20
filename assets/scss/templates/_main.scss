@@ -1,3 +1,8 @@
+a:hover {
+  text-decoration: none;
+  color: $secondary-color;
+}
+
 /* banner */
 .banner {
   padding: 220px 0 120px;
@@ -103,25 +108,6 @@
   }
 }
 
-// featured-post slider
-.featured-post-slider {
-  position: relative;
-  z-index: 1;
-  @include tablet {
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-  }
-  &::before {
-    position: absolute;
-    content: "";
-    height: 35%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: $light;
-    z-index: -1;
-  }
-}
 .card-overlapped {
   position: relative;
   font-size: 14px;
@@ -253,18 +239,9 @@
     &.active {
       .page-link {
         background: $primary-color;
-        color: $white;
+        color: $black;
       }
     }
-  }
-}
-
-.post-title {
-  color: $black;
-  font-weight: bold;
-
-  &:hover {
-    text-decoration: underline;
   }
 }
 
@@ -283,7 +260,7 @@
     color: inherit;
 
     &:hover {
-      color: $primary-color;
+      color: $secondary-color;
     }
   }
 }
@@ -531,8 +508,6 @@
   }
 
   a {
-    color: $primary-color;
-
     &:hover {
       text-decoration: underline;
     }
@@ -669,10 +644,11 @@
     text-align: center;
     display: block;
     color: $primary-color;
+    background-color: $text-color-dark;
 
     &:hover {
-      background: $primary-color;
-      color: $white;
+      background: $text-color;
+      color: $secondary-color;
       text-decoration: none;
     }
   }

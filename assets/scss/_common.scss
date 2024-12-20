@@ -43,10 +43,6 @@ select {
     padding: 0;
 }
 
-.slick-slide {
-  outline: 0;
-}
-
 .section {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -115,7 +111,7 @@ select {
 }
 
 .bg-light{
-  background: $light; //remove  !important
+  background: $light;
 }
 
 a.bg-light:hover{
@@ -132,7 +128,7 @@ a.bg-light:hover{
 
 a.text-dark:hover,
 a.text-primary:hover {
-  color: $primary-color !important;
+  color: $secondary-color;
 }
 
 .mb-10 {

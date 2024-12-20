@@ -25,23 +25,17 @@ home = ["HTML", "AMP", "RSS", "JSON", "HEADERS"]
 
 ######################### Default Parameters ###########################
 [params]
-# logo
+defaultTheme = "dark"
 logo = "images/navlogo.png"
 logoWidth = 248
 logoHeight = 50
-# favicon
 favicon = "images/favicon.png"
-# meta data
 author = "Chris Titus"
 description = "Having Fun with Technology"
-# homepage main section
 mainSections = ["posts"]
-# contact form action
 contact_form_action = "#" # contact form works with : https://formspree.io
-# copyright
 copyright = ""
 rssLimit = 20
-# search *** true or false (if Search is disable Menu will align in Right) ***
 search = true
 
 header_search_layout = "expanded" # "expanded" or "popupable"
@@ -58,14 +52,14 @@ code_copy_button = true # Turn on/off the code-copy-button for code-fields
 ######################## Site Variables #########################
 [params.variables]
 # Color Variables
-primary_color = "#47c4f1"
-secondary_color = "#9AC4F8"
-text_color = "#666666"
+primary_color = "#f5f5f5"
+secondary_color = "#47c4f1"
+text_color = "#444444"
 text_color_dark = "#222222"
-body_color = "#fff"
+body_color = "#f5f5f5"
 border_color = "#ACB9C4"
 black = "#000"
-white = "#fff"
+white = "#f5f5f5"
 light = "#F8F8F8"
 
 # font variable
@@ -73,7 +67,7 @@ light = "#F8F8F8"
 # example: "Work Sans:wght@400;500;600"
 primary_font = "PT Sans:wght@400;700"
 secondary_font = ""
-icon_font = "Font Awesome 5 Free"
+icon_font = "Font Awesome 6 Free"
 
 
 ######################## sidebar widgets #########################
@@ -107,8 +101,6 @@ expire_days = 2
 link = "css/vendor/bootstrap.min.css"
 attributes = "media='all'"
 [[params.plugins.css]]
-link = "css/vendor/slick.min.css"
-[[params.plugins.css]]
 link = "css/custom-nav.css"
 
 # js plugins - Reordered and optimized
@@ -119,7 +111,7 @@ attributes = "defer"
 link = "js/vendor/bootstrap.min.js"
 attributes = "defer"
 [[params.plugins.js]]
-link = "js/vendor/slick.min.js"
+link = "js/vendor/fontawesome/all.min.js"
 attributes = "defer"
 [[params.plugins.js]]
 link = "js/vendor/shuffle.min.js"
@@ -134,7 +126,7 @@ attributes = "defer"
 link = "js/vendor/search.js"
 attributes = "defer"
 [[params.plugins.js]]
-link = "js/vendor/font-awesome/all.min.js"
+link = "js/theme.js"
 attributes = "defer"
 
 
@@ -295,7 +287,7 @@ disableLatLong = true
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' *.shopify.com *.shopifycdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.shopify.com *.shopifycdn.com sdks.shopifycdn.com; style-src 'self' 'unsafe-inline' *.shopify.com *.shopifycdn.com; frame-src 'self' *.shopify.com *.myshopify.com; img-src 'self' data: * *.shopify.com *.shopifycdn.com; connect-src 'self' *.shopify.com *.myshopify.com monorail-edge.shopifysvc.com; font-src 'self' data: *.shopifycdn.com; base-uri 'self';"
+    Content-Security-Policy = "default-src 'self' *.shopify.com *.shopifycdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.shopify.com *.shopifycdn.com sdks.shopifycdn.com cdn.jsdelivr.net cdnjs.cloudflare.com *.google.com *.googletagmanager.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net utteranc.es *.utteranc.es *.youtube.com youtube.com *.ytimg.com; style-src 'self' 'unsafe-inline' *.shopify.com *.shopifycdn.com cdnjs.cloudflare.com fonts.googleapis.com; frame-src 'self' *.shopify.com *.myshopify.com *.doubleclick.net *.google.com *.youtube.com youtube.com *.youtu.be youtu.be github.com *.github.com utteranc.es; img-src 'self' data: * *.shopify.com *.shopifycdn.com *.google.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net *.youtube.com youtube.com *.youtu.be youtu.be *.ytimg.com; connect-src 'self' *.shopify.com *.myshopify.com monorail-edge.shopifysvc.com *.google-analytics.com *.doubleclick.net api.github.com *.youtube.com youtube.com *.ytimg.com; font-src 'self' data: *.shopifycdn.com fonts.gstatic.com cdnjs.cloudflare.com; base-uri 'self';"
 
 [server]
 [[server.headers]]
@@ -308,7 +300,7 @@ for = "/**"
     "</js/vendor/jquery.min.js>; rel=preload; as=script"
   ]
   # Update your existing Content-Security-Policy to include cache settings
-  Content-Security-Policy = "default-src 'self' *.shopify.com *.shopifycdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.shopify.com *.shopifycdn.com sdks.shopifycdn.com; style-src 'self' 'unsafe-inline' *.shopify.com *.shopifycdn.com; frame-src 'self' *.shopify.com *.myshopify.com; img-src 'self' data: * *.shopify.com *.shopifycdn.com; connect-src 'self' *.shopify.com *.myshopify.com monorail-edge.shopifysvc.com; font-src 'self' data: *.shopifycdn.com; base-uri 'self';"
+  Content-Security-Policy = "default-src 'self' *.shopify.com *.shopifycdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.shopify.com *.shopifycdn.com sdks.shopifycdn.com cdn.jsdelivr.net cdnjs.cloudflare.com *.google.com *.googletagmanager.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net utteranc.es *.utteranc.es *.youtube.com youtube.com *.ytimg.com; style-src 'self' 'unsafe-inline' *.shopify.com *.shopifycdn.com cdnjs.cloudflare.com fonts.googleapis.com; frame-src 'self' *.shopify.com *.myshopify.com *.doubleclick.net *.google.com *.youtube.com youtube.com *.youtu.be youtu.be github.com *.github.com utteranc.es; img-src 'self' data: * *.shopify.com *.shopifycdn.com *.google.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net *.youtube.com youtube.com *.youtu.be youtu.be *.ytimg.com; connect-src 'self' *.shopify.com *.myshopify.com monorail-edge.shopifysvc.com *.google-analytics.com *.doubleclick.net api.github.com *.youtube.com youtube.com *.ytimg.com; font-src 'self' data: *.shopifycdn.com fonts.gstatic.com cdnjs.cloudflare.com; base-uri 'self';"
 
 [build]
 writeStats = true
@@ -317,6 +309,10 @@ writeStats = true
 [build.processing.js]
   bundle = true
   minify = true
+  target = "es2015"
+  avoid_tdz = true
+  externals = ['SUMMARY_INCLUDE']
+
 [build.processing.css]
   bundle = true
   minify = true

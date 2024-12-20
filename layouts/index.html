@@ -1,36 +1,6 @@
 {{ define "main" }}
 {{ partial "banner.html" . }}
 
-<!-- featured-post-slider 
-<div class="featured-post-slider">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <div class="row slider-block">
-          {{ range where site.RegularPages ".Params.featured" "=" true }}
-          <article class="card-overlapped col mb-5">
-            <div class="badge">Featured</div>
-            {{ if .Params.image }}
-            <img class="w-100" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
-            {{ end }}
-            <div class="card-block">
-              <h2 class="h4 mb-4"><a class="post-title" href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
-              <div class="mb-3 post-meta">
-                <a href="{{ `author/` | absLangURL }}{{ .Params.Author | urlize | lower }}">{{ .Params.Author | title }}</a> <span class="mx-1">|</span>
-                {{ .PublishDate.Format "Jan 2, 2006" }} <span class="mx-1">|</span> {{ range .Params.Categories }}
-                <a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a>
-                {{ end }}
-              </div>
-            </div>
-          </article>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
- /featured-post-slider -->
-
 <!-- Popular Categories 
 <div class="popular-categories">
   <div class="container">

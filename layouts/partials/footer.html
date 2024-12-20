@@ -25,8 +25,7 @@
           {{ range site.Params.social }}
           <li class="list-inline-item">
             <a href="{{ .link | safeURL }}" 
-               aria-label="social-profile" 
-               class="link-dark link-opacity-75-hover">
+               aria-label="social-profile">
               <i class="{{ .icon }}"></i>
             </a>
           </li>
@@ -47,7 +46,8 @@
 {{ $mark := resources.Get "js/vendor/mark.js" }}
 {{ $search := resources.Get "js/vendor/search.js" }}
 {{ $shuffle := resources.Get "js/vendor/shuffle.min.js" }}
+{{ $theme := resources.Get "js/theme.js" }}
 
-{{ $vendorScripts := slice $jquery $bootstrap $fuse $mark $search $shuffle }}
+{{ $vendorScripts := slice $jquery $bootstrap $fuse $mark $search $shuffle $theme }}
 {{ $js := $vendorScripts | resources.Concat "js/vendor.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

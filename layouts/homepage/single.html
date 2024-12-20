@@ -85,41 +85,6 @@
 </section>
 <!-- /banner -->
 
-<!-- featured-post-slider -->
-<div class="featured-post-slider">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <div class="row slider-block">
-          {{ range where site.RegularPages ".Params.featured" "=" true }}
-          <article class="card-overlapped col mb-5">
-            <div class="badge">Featured</div>
-            {{ if .Params.image }}
-            <img loading="lazy" class="w-100" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
-            {{ end }}
-            <div class="card-block">
-              <h2 class="h4 mb-4"><a class="post-title" href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
-              <div class="mb-3 post-meta">
-                {{ .PublishDate.Format "Jan 2, 2006" }}
-                {{ if .Params.Categories }}
-                  <span class="mx-1">|</span>
-                  {{ range .Params.Categories }}
-                  <span class="post-category"><a href="{{ `categories/` | absLangURL }}{{ . | urlize | lower }}">{{ . | title }}</a></span>
-                  {{ end }}
-                {{ end }}
-              </div>
-            </div>
-          </article>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- /featured-post-slider -->
-
-
-
 <!-- blog -->
 <section class="section">
   <div class="container">

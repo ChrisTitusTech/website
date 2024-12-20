@@ -38,8 +38,6 @@
 <!-- CSS -->
 {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $bootstrap := resources.Get "css/vendor/bootstrap.min.css" }}
-{{ $slick := resources.Get "css/vendor/slick.min.css" }}
 
-{{ $styles := slice $bootstrap $slick }}
-{{ $css := $styles | resources.Concat "css/vendor.css" | resources.Minify | resources.Fingerprint "sha512" }}
+{{ $css := $bootstrap | resources.Minify | resources.Fingerprint "sha512" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">

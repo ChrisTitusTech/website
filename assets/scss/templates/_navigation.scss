@@ -15,7 +15,7 @@
   color: $text-color-dark;
 
   &:hover {
-    color: $primary-color;
+    color: $secondary-color;
   }
 }
 
@@ -46,7 +46,7 @@
       padding-bottom: 7px;
       &:focus,
       &:hover {
-        color: $text-color-dark;
+        color: $secondary-color;
         background-color: rgba($primary-color, 0.05);
         padding-left: 1.6rem;
       }
