@@ -22,13 +22,20 @@ const getTheme = () => {
 
 // Update icon based on current theme
 const updateIcon = () => {
-  const icon = document.querySelector('#theme-toggle i');
+  const button = document.querySelector('#theme-toggle');
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   
-  if (icon) {
-    icon.classList.remove('fa-sun', 'fa-moon', 'far', 'fas', 'fa-solid');
+  if (button) {
+    // Remove existing icon
+    button.innerHTML = '';
+    
+    // Create new icon element
+    const icon = document.createElement('i');
     icon.classList.add('fa-solid');
     icon.classList.add(isDark ? 'fa-sun' : 'fa-moon');
+    
+    // Add new icon to button
+    button.appendChild(icon);
   }
 };
 
