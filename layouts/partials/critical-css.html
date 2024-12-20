@@ -1,0 +1,15 @@
+<style>
+/* Only include styles needed for above-the-fold content */
+:root {
+  --primary-color: {{ site.Params.variables.primary_color }};
+  --primary-font: {{ site.Params.variables.primary_font }};
+}
+body {
+  margin: 0;
+  font-family: var(--primary-font, 'PT Sans');
+  background: var(--primary-color);
+}
+.navbar, .header {
+  /* Your essential header styles */
+}
+</style> 

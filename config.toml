@@ -10,7 +10,7 @@ summaryLength = "10"
 googleAnalytics = "" # example: UA-123-45, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
 
 [outputs]
-home = ["HTML", "AMP", "RSS", "JSON", "HEADERS"]
+home = ["HTML", "AMP", "RSS", "JSON"]
 [markup.goldmark.renderer]
     unsafe = true
 [markup.highlight]

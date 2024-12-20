@@ -1,6 +1,27 @@
 <meta charset="utf-8">
 <title>{{ .Title }}</title>
 
+<!-- Critical CSS -->
+{{ partial "critical-css.html" . }}
+
+<!-- Preload essential fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<!-- Bundle and minify CSS using Hugo Pipes -->
+{{ $styles := resources.Get "css/vendor/bootstrap.min.css" }}
+{{ $customStyles := resources.Get "css/custom-nav.css" }}
+{{ if and $styles $customStyles }}
+  {{ $styles = slice $styles $customStyles | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="print" onload="this.media='all'" integrity="{{ $styles.Data.Integrity }}">
+{{ else }}
+  <!-- Fallback if resources aren't found -->
+  <link rel="stylesheet" href="/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/custom-nav.css">
+{{ end }}
+
+<!-- Defer FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+
 <meta name="author" content="{{ site.Params.author }}">
 <meta name="description" content="{{ with .Params.description }}{{.}}{{else}}{{ with site.Params.description }}{{.}}{{end}}{{end}}">
 
@@ -25,19 +46,7 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<!-- Google Anchor Ad -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-6679678361432308",
-    enable_page_level_ads: true,
-    overlays: {bottom: true}
-  });
-</script>
-
-<!-- CSS -->
-{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $bootstrap := resources.Get "css/vendor/bootstrap.min.css" }}
-
-{{ $css := $bootstrap | resources.Minify | resources.Fingerprint "sha512" }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<!-- Google Ads (moved to load last) -->
+{{ if not .IsHome }}
+  <script defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{{ end }}
