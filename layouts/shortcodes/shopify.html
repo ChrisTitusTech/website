@@ -24,8 +24,16 @@
       storefrontAccessToken: 'd3832fa1046e2ebd19d3bfd837bf5eb3',
     });
 
-    function createButton(isDarkMode) {
-        var dynamicColor = isDarkMode ? '#f5f5f5' : '#000000';
+    function createButton() {
+        // Check if dark theme using data-theme attribute, fallback to localStorage
+        const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark' || 
+                          localStorage.getItem('theme') === 'dark';
+        // Use text-color-dark for dark mode, primary-color for light mode
+        const dynamicColor = isDarkMode ? '#f5f5f5' : '#222222';
+        
+        console.log('Shopify button theme:', isDarkMode ? 'dark' : 'light'); // Debug log
+        console.log('Shopify button color:', dynamicColor); // Debug log
+        
         ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('product', {
         id: '9430583542065',
@@ -44,7 +52,8 @@
               },
               "title": {
                 "font-size": "26px",
-                "color": dynamicColor
+                "color": dynamicColor,
+                "font-family": "inherit"
               },
               "button": {
                 "font-weight": "bold",
@@ -66,18 +75,22 @@
               },
               "price": {
                 "font-size": "18px",
-                "color": dynamicColor
+                "color": dynamicColor,
+                "font-family": "inherit"
               },
               "compareAt": {
                 "font-size": "15.299999999999999px",
-                "color": dynamicColor
+                "color": dynamicColor,
+                "font-family": "inherit"
               },
               "unitPrice": {
                 "font-size": "15.299999999999999px",
-                "color": dynamicColor
+                "color": dynamicColor,
+                "font-family": "inherit"
               },
               "description": {
-                "color": dynamicColor
+                "color": dynamicColor,
+                "font-family": "inherit"
               }
             },
             "buttonDestination": "checkout",
@@ -138,31 +151,36 @@
                 "font-family": "Helvetica Neue, sans-serif",
                 "font-weight": "bold",
                 "font-size": "26px",
-                "color": "#4c4c4c"
+                "color": dynamicColor,
+                "font-family": "inherit"
               },
               "price": {
                 "font-family": "Helvetica Neue, sans-serif",
                 "font-weight": "normal",
                 "font-size": "18px",
-                "color": "#4c4c4c"
+                "color": dynamicColor,
+                "font-family": "inherit"
               },
               "compareAt": {
                 "font-family": "Helvetica Neue, sans-serif",
                 "font-weight": "normal",
                 "font-size": "15.299999999999999px",
-                "color": "#4c4c4c"
+                "color": dynamicColor,
+                "font-family": "inherit"
               },
               "unitPrice": {
                 "font-family": "Helvetica Neue, sans-serif",
                 "font-weight": "normal",
                 "font-size": "15.299999999999999px",
-                "color": "#4c4c4c"
+                "color": dynamicColor,
+                "font-family": "inherit"
               },
               "description": {
                 "font-family": "Helvetica Neue, sans-serif",
                 "font-weight": "normal",
                 "font-size": "14px",
-                "color": "#4c4c4c"
+                "color": dynamicColor,
+                "font-family": "inherit"
               }
             },
             "text": {
@@ -214,15 +232,26 @@
     } // This closes the createButton function
 
     // Initial creation
-    createButton(document.body.classList.contains('dark-mode'));
+    createButton();
 
-    // Listen for dark mode changes
-    document.addEventListener('darkModeChange', function(e) {
-      // Remove the existing Shopify Buy Button
-      var node = document.getElementById('product-component-1711256048474');
-      node.innerHTML = ''; // Clear the container
-      // Recreate the button with the new color
-      createButton(e.detail.darkMode);
+    // Watch for attribute changes on documentElement
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'data-theme') {
+                console.log('Theme changed to:', document.documentElement.getAttribute('data-theme'));
+                var node = document.getElementById('product-component-1711256048474');
+                if (node) {
+                    node.innerHTML = '';
+                    createButton();
+                }
+            }
+        });
+    });
+
+    // Start observing data-theme attribute changes
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
     });
   } // This closes the ShopifyBuyInit function
 })(); // This closes the IIFE
