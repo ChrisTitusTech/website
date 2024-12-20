@@ -311,7 +311,7 @@ writeStats = true
   minify = true
   target = "es2015"
   avoid_tdz = true
-  externals = ['SUMMARY_INCLUDE']
+  includes = ["(?!vendor).*"]
 
 [build.processing.css]
   bundle = true
