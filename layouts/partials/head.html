@@ -37,15 +37,12 @@
 {{ "<!-- Favicon -->" | safeHTML}}
 <link rel="icon" href="{{ site.Params.favicon | absURL }}" type="image/x-icon">
 
-<!-- google analytics 
-{{ template "_internal/google_analytics.html" . }}
-{{ partial "gtm.html" . }}
--->
 <!-- RSS Feed Addition -->
 {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<!-- Google Ads (moved to load last) -->
+<!-- Google Ads (moved to load last) 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6679678361432308"
 crossorigin="anonymous"></script>
+-->
