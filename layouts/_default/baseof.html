@@ -11,11 +11,11 @@
   {{- partial "header.html" . -}}
   {{- block "main" . }}
   {{- end }}
-  <!-- Copy Code Titus -->
-  {{ if (findRE "pre.*?" .Content 1) }}
+  <!-- Copy Code Button -->
+  {{ if and (findRE "pre.*?" .Content 1) (.Site.Params.code_copy_button) }}
   <script src="/js/code-copy.js"></script>
   {{ end  }}
-  <!-- END Titus Mod-->
+  <!-- END Copy Code Button -->
   {{ partial "footer.html" . }}
   {{ partial "script.html" . }}
 </body>
