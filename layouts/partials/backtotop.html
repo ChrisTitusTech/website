@@ -1,8 +1,26 @@
-<!--
-<script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
-        <script>addBackToTop({
-          diameter: 56,
-          backgroundColor: 'rgb(154, 196, 248)',
-          textColor: '#fff'
-        })</script>
-        -->
+<button id="back-to-top" title="Go to top" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M12 4l8 8h-6v8h-4v-8H4z" fill="currentColor"/>
+  </svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const backToTop = document.getElementById('back-to-top');
+  
+  window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  };
+
+  backToTop.onclick = function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+});
+</script>
