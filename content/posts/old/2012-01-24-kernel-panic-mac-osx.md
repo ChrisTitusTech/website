@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2012-01-24T22:55:18+00:00
 url: /kernel-panic-mac-osx/
-image: images/2012/01/kernal-panic-mac-osx.png
+image: images/2012/01/kernal-panic-mac-osx.webp
 categories:
   - MacOS
 

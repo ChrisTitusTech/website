@@ -3,7 +3,7 @@ title: "Twitter Archive Offline"
 
 date: 2022-12-02
 url: /twitter-archive/
-image: images/2022-thumbs/twitter-archive.jpg
+image: images/2022-thumbs/twitter-archive.webp
 categories:
   - Linux
   - Windows
@@ -24,7 +24,7 @@ Leaving Twitter? Why not download all your tweets from archive and store it your
 ## Process of Offline Twitter
 
 1. Download Twitter Archive
-  ![](/images/2022/twitter-archive/twitter-archive.png)
+  ![](/images/2022/twitter-archive/twitter-archive.webp)
   _Note: This can take up to 72 hours to produce a downloadable zip_
 2. Unzip Archive to it's OWN folder
 3. Download the Archive parser
@@ -34,7 +34,7 @@ Leaving Twitter? Why not download all your tweets from archive and store it your
 4. Run `python3 parser.py`
     _I recommend selecting Yes to download all messages_
 5. Open `Your archive.html` in your browser
-    ![](/images/2022/twitter-archive/offline-twitter.png)
+    ![](/images/2022/twitter-archive/offline-twitter.webp)
 
 ## Limitations
 

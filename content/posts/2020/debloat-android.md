@@ -3,7 +3,7 @@ title: "Debloat Android"
 
 date: 2020-06-21T20:01:50-05:00
 url: /debloat-android/
-image: images/2020-thumbs/debloat-android.jpg
+image: images/2020-thumbs/debloat-android.webp
 categories:
   - Android
 tags:

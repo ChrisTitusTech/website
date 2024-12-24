@@ -3,7 +3,7 @@ title: "Update Any PC to Windows 11"
 
 date: 2021-06-29T11:21:54-05:00
 url: /update-any-pc-to-windows11/
-image: images/2021-thumbs/update-any-pc-to-windows11.jpg
+image: images/2021-thumbs/update-any-pc-to-windows11.webp
 categories:
   - Windows
 tags:
@@ -44,7 +44,7 @@ Download Reg File here: <https://christitus.com/files/win11bypass.zip>
 
 *REBOOT AFTER MODIFICATIONS MADE*
 
-![regedit](/images/2021/06-win11upgrade/regedit.png)
+![regedit](/images/2021/06-win11upgrade/regedit.webp)
 
 ## Upgrade
 
@@ -52,5 +52,5 @@ Now you can simply finish your insider build sign up and then click update
 
 Once it finishes updating you should see a screen to update to the latest Windows 11 build (22000.52) or Greater
 
-![winver](/images/2021/06-win11upgrade/winver.png)
+![winver](/images/2021/06-win11upgrade/winver.webp)
 

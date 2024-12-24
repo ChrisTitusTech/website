@@ -3,7 +3,7 @@ title: "Linux for Beginners"
 
 date: 2022-09-19
 url: /linux-for-beginners/
-image: images/2022-thumbs/linux-for-beginners.jpg
+image: images/2022-thumbs/linux-for-beginners.webp
 categories:
   - Linux
 tags:

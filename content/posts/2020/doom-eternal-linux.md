@@ -3,7 +3,7 @@ title: "Doom Eternal Linux"
 
 date: 2020-03-22T20:50:39-05:00
 url: /doom-eternal-linux/
-image: images/2020-thumbs/doom-eternal-linux.jpg
+image: images/2020-thumbs/doom-eternal-linux.webp
 categories:
   - Linux
 tags:

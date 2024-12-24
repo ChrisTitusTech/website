@@ -3,7 +3,7 @@ title: "Install Windows the Arch Linux Way"
 
 date: 2023-09-01
 url: /install-windows-the-arch-linux-way/
-image: images/2023-thumbs/install-windows-the-arch-linux-way.jpg
+image: images/2023-thumbs/install-windows-the-arch-linux-way.webp
 categories:
   - Windows
 tags:

@@ -3,7 +3,7 @@ title: "Saving a Business Thousands a Year in Telecom"
 
 date: 2023-09-15
 url: /saving-a-business-5000-a-year-in-telecom/
-image: images/2023-thumbs/saving-a-business-5000-a-year-in-telecom.jpg
+image: images/2023-thumbs/saving-a-business-5000-a-year-in-telecom.webp
 categories:
   - Linux
   - Windows
@@ -22,7 +22,7 @@ The best part is you will own your numbers directly and have NO contracts that s
 
 There are many solutions that can be self hosted where you register a telephony trunk, but the easiest I've found is 3CX. It has a variety of plans from free to under 10 users to a good small business setup for around 20 users, but the best part is you pay for the SERVER... NOT the user accounts.
 
-![](/images/2023/saving-a-business-5000-a-year-in-telecom/pricing.png)
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/pricing.webp)
 
 ## Installation
 
@@ -37,26 +37,26 @@ I've done videos on 3cx installation. Here are links to both self-hosted and usi
 
 To setup Call forwarding I'd recommend adding a mobile number in User Web Client -> Settings
 
-![](/images/2023/saving-a-business-5000-a-year-in-telecom/call-forwarding.png)
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/call-forwarding.webp)
 
 After that is setup, Specify My Mobile in different modes (DND, Away, Etc.). You can also specify different forwards for internal and external calls. 
 
-![](/images/2023/saving-a-business-5000-a-year-in-telecom/call-forwarding2.png)
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/call-forwarding2.webp)
 
 ### Office/Holiday Hours
 
-![](/images/2023/saving-a-business-5000-a-year-in-telecom/office-hours.png)
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/office-hours.webp)
 
 In the System configuration panel, You can specify Office Hours and Holiday Messages.
 
-![](/images/2023/saving-a-business-5000-a-year-in-telecom/holidays.png)
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/holidays.webp)
 
 ### Mobile Application
 
 The mobile app for android and iOS is amazing. Has a ton of functionality and can substitute as an extension. 
 
- ![](/images/2023/saving-a-business-5000-a-year-in-telecom/chat.png)![](/images/2023/saving-a-business-5000-a-year-in-telecom/recent.png)
-![](/images/2023/saving-a-business-5000-a-year-in-telecom/voicemail.png)
+ ![](/images/2023/saving-a-business-5000-a-year-in-telecom/chat.webp)![](/images/2023/saving-a-business-5000-a-year-in-telecom/recent.webp)
+![](/images/2023/saving-a-business-5000-a-year-in-telecom/voicemail.webp)
 
 ### Live Chat
 

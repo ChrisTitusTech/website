@@ -3,7 +3,7 @@ title: "Star Trek Window Management"
 
 date: 2022-07-21T12:07:52-05:00
 url: /star-trek-os/
-image: images/2022-thumbs/star-trek-os.jpg
+image: images/2022-thumbs/star-trek-os.webp
 categories:
   - Linux
 tags:

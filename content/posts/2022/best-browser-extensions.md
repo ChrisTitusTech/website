@@ -3,7 +3,7 @@ title: "Best Browser Extensions"
 
 date: 2022-11-23
 url: /best-browser-extensions/
-image: images/2022-thumbs/best-browser-extensions.jpg
+image: images/2022-thumbs/best-browser-extensions.webp
 categories:
   - Linux
   - Windows
@@ -28,15 +28,15 @@ These extensions make life easier when using a browser.
 - [Web Highlights](https://chrome.google.com/webstore/detail/web-highlights-pdf-web-hi/hldjnlbobkdkghfidgoecgmklcemanhm) - Highlight parts of a webpage
 
 ### Security
-![](/images/2022/best-browser-extensions/auth.png)
+![](/images/2022/best-browser-extensions/auth.webp)
 
 **Authenticator** is great for simple two factor, but I wouldn't use this for a bank account. These 2FA codes are synced to the cloud for convenience. 
 
-![](/images/2022/best-browser-extensions/clickandclean.png)
+![](/images/2022/best-browser-extensions/clickandclean.webp)
 
 **Click and Clean** will clean our history, cache, and much more. The built in browser cleaning and history management isn't good. This makes it a complete solution for security, privacy, and maintenance. 
 
-![](/images/2022/best-browser-extensions/roboform.png)
+![](/images/2022/best-browser-extensions/roboform.webp)
 
 **Password Manager** is something everyone should use. I've used [RoboForm](https://www.anrdoezrs.net/click-9109049-14329390) for over 10 years and my personal recommendation for automation. Bitwarden is a bit newer and some features like FIDO keys which make also makes it a strong choice. Both password manager offer easy export and import of ALL passwords, which is a vital feature when you use these services to avoid getting "locked in". 
 
@@ -46,31 +46,31 @@ The one thing I caution you against is using All-In-One password managers, like 
 
 ### Convenience 
 
-![](/images/2022/best-browser-extensions/checker-plus.png)
+![](/images/2022/best-browser-extensions/checker-plus.webp)
 
 **Checker Plus** perfect heads up calendar display with easy add for incoming events. 
 
-![](/images/2022/best-browser-extensions/rss-feeds.png)
+![](/images/2022/best-browser-extensions/rss-feeds.webp)
 
 **Get RSS Feed URL** will get those hidden RSS feeds for any website. 
 
-![](/images/2022/best-browser-extensions/fullscreen.png)
+![](/images/2022/best-browser-extensions/fullscreen.webp)
 
 **GoFullPage** captures the ENTIRE webpage and can output it to a PDF or PNG for later use. 
 
-![](/images/2022/best-browser-extensions/midnight-lizard.png)
+![](/images/2022/best-browser-extensions/midnight-lizard.webp)
 
 **Midnight Lizard** Dark mode and other color customizations. 
 
-![](/images/2022/best-browser-extensions/momentum.jpg)
+![](/images/2022/best-browser-extensions/momentum.webp)
 
 **Momentum** is an essential extension for any brave browser user. Brave has one of the worst start screens with crypto ads and other BS that no one likes. This extension fixes that.
 
-![](/images/2022/best-browser-extensions/github-notifications.png)
+![](/images/2022/best-browser-extensions/github-notifications.webp)
 
 **Notifier for GitHub** shows GitHub notifications.
 
-![](/images/2022/best-browser-extensions/highlights.png)
+![](/images/2022/best-browser-extensions/highlights.webp)
 
 **Web Highlights** is a great way to highlight a page as you read, which helps your mind retain what you are reading, but also saves it into the logged in account which can be referred to later. 
 

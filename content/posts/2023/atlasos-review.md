@@ -3,7 +3,7 @@ title: "AtlasOS Review"
 
 date: 2023-04-27
 url: /atlasos-review/
-image: images/2023-thumbs/atlasos-review.jpg
+image: images/2023-thumbs/atlasos-review.webp
 categories:
   - Windows
 tags:

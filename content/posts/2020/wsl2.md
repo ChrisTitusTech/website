@@ -3,7 +3,7 @@ title: "Wsl2"
 
 date: 2020-06-07T10:50:19-05:00
 url: /wsl2/
-image: images/2020-thumbs/wsl2.jpg
+image: images/2020-thumbs/wsl2.webp
 categories:
   - Windows
 tags:
@@ -43,13 +43,13 @@ wsl --set-default-version 2
 *Note: The update from WSL 1 to WSL 2 may take several minutes to complete depending on the size of your targeted distribution.*
 
 #### Troubleshooting WSL 2 set-default error
-![wsl-kernel](../images/2020/wsl/wsl-kernel.png)  
+![wsl-kernel](../images/2020/wsl/wsl-kernel.webp)  
 If you can't set the default version after enabling the virtual machine platform and linux subsystem for windows. Then you need to do a kernel upgrade. This done by running the following msi file: [https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
 
 ## Install your Linux distribution of choice
 
 Open the Microsoft Store and select your favorite Linux distribution.  
-![wsl-store](../images/2020/wsl/wsl-store.png)  
+![wsl-store](../images/2020/wsl/wsl-store.webp)  
 The following links will open the Microsoft store page for each distribution:
   - [Ubuntu 16.04 LTS](https://www.microsoft.com/store/apps/9pjn388hp8c9)
   - [Ubuntu 18.04 LTS](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
@@ -65,13 +65,13 @@ The following links will open the Microsoft store page for each distribution:
   - [Alpine WSL](https://www.microsoft.com/store/apps/9p804crf0395)
 
 From the distribution's page, select "Get".  
-![wsl-store2](../images/2020/wsl/wsl-store2.png)  
+![wsl-store2](../images/2020/wsl/wsl-store2.webp)  
 
 ## Set up a new distribution
 
 The first time you launch a newly installed Linux distribution, a console window will open and you'll be asked to wait for a minute or two for files to de-compress and be stored on your PC. All future launches should take less than a second.
 You will then need to create a user account and password for your new Linux distribution.  
-![wsl-prompt](../images/2020/wsl/wsl-prompt.png)  
+![wsl-prompt](../images/2020/wsl/wsl-prompt.webp)  
 Set your distribution version to WSL 1 or WSL 2  
 You can check the WSL version assigned to each of the Linux distributions you have installed by opening the PowerShell command line and entering the command (only available in Windows Build 19041 or higher): `wsl -l -v`  
 ```
@@ -95,7 +95,7 @@ Below are related errors and suggested fixes. Refer to the WSL troubleshooting p
 
 The Windows Subsystem for Linux only runs on your system drive (usually this is your C: drive). Make sure that distributions are stored on your system drive:  
 **Open Settings -> Storage -> More Storage Settings:** Change where new content is saved  
-![wsl-troubleshoot](../images/2020/wsl/wsl-troubleshoot.png)
+![wsl-troubleshoot](../images/2020/wsl/wsl-troubleshoot.webp)
 
 #### WslRegisterDistribution failed with error 0x8007019e
 

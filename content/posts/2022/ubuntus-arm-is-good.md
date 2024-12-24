@@ -3,7 +3,7 @@ title: "Ubuntus ARM Is Good"
 
 date: 2022-11-11
 url: /ubuntus-arm-is-good/
-image: images/2022-thumbs/ubuntus-arm-is-good.jpg
+image: images/2022-thumbs/ubuntus-arm-is-good.webp
 categories:
   - Linux
 tags:

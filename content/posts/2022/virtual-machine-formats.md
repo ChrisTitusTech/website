@@ -3,7 +3,7 @@ title: "Virtual Machine Formats"
 
 date: 2022-12-19
 url: /virtual-machine-formats/
-image: images/2022-thumbs/virtual-machine-formats.jpg
+image: images/2022-thumbs/virtual-machine-formats.webp
 categories:
   - Linux
   - Windows

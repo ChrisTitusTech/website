@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-09-16T00:55:12+00:00
 url: /latest-version-of-gimp/
-image: images/2019/09/GIMP.png
+image: images/2019/09/GIMP.webp
 categories:
   - Linux
 tags:

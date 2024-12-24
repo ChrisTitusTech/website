@@ -3,7 +3,7 @@ title: "5 Essential Terminal Utilities"
 
 date: 2022-11-18
 url: /5-terminal-commands/
-image: images/2022-thumbs/5-terminal-commands.jpg
+image: images/2022-thumbs/5-terminal-commands.webp
 categories:
   - Linux
   - Windows
@@ -17,19 +17,19 @@ draft: false
 
 ## TLDR
 
-![](/images/2022/5-terminal-commands/tldr.png)
+![](/images/2022/5-terminal-commands/tldr.webp)
 
 Too long didn't read? The perfect solution for long man pages that we just want some quick examples and basic syntax for a command. TLDR is a vital tool to save you time when learning the terminal. 
 
 ## CMatrix
 
-![](/images/2022/5-terminal-commands/cmatrix.png)
+![](/images/2022/5-terminal-commands/cmatrix.webp)
 
 How can you use Linux without using CMatrix... It's hard to be cool without it. 
 
 ## Trash-CLI
 
-![](/images/2022/5-terminal-commands/trash-cli.png)
+![](/images/2022/5-terminal-commands/trash-cli.webp)
 
 This is a life saver after you delete a directory or files in terminal and need to get them back. I highly recommend making the following alias in your `~/.bashrc` file. 
 
@@ -60,7 +60,7 @@ alias rm='trash -v'
 
 ## Autojump
 
-![](/images/2022/5-terminal-commands/autojump.png)
+![](/images/2022/5-terminal-commands/autojump.webp)
 
 This is my most used terminal utility that saves me the most amount of time. The catch to this program is you must have navigated to the directory at least once in terminal first. 
 

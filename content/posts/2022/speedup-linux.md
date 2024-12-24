@@ -3,7 +3,7 @@ title: "Speedup Linux"
 
 date: 2022-07-24T10:30:53-05:00
 url: /speedup-linux/
-image: images/2022-thumbs/speedup-linux.jpg
+image: images/2022-thumbs/speedup-linux.webp
 categories:
   - Linux
 tags:

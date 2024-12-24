@@ -3,7 +3,7 @@ title: "Fix Screen Tearing Linux"
 
 date: 2023-01-04
 url: /fix-screen-tearing-linux/
-image: images/2023-thumbs/fix-screen-tearing-linux.jpg
+image: images/2023-thumbs/fix-screen-tearing-linux.webp
 categories:
   - Linux
 tags:
@@ -30,7 +30,7 @@ In these there is options for VSync. This doesn't generally fix the issue, but i
 
 KWin (KDE) Example:
 
-![](/images/2023/fix-screen-tearing-linux/kwin.png)
+![](/images/2023/fix-screen-tearing-linux/kwin.webp)
 
 Mutter (Gnome) is enabled by default, but has made advancements with Variable Rate Refresh to fix some tearing back in July of 2022. This VRR improvement means you need to update to the latest GNOME and you can see improvements. 
 
@@ -81,7 +81,7 @@ I hope in 2 years nVidia cards stop sucking as bad in Linux, because it is an AW
 
 ### nvidia-settings
 
-![](/images/2023/fix-screen-tearing-linux/nvidia-settings.png)
+![](/images/2023/fix-screen-tearing-linux/nvidia-settings.webp)
 
 - Go to **X Server Display Configuration > Advanced**
 - Enable **Force Full Composition Pipeline**

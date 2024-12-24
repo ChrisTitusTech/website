@@ -3,7 +3,7 @@ title: "Windows to Linux for Powerusers"
 
 date: 2024-12-26
 url: /windows-to-linux/
-image: images/2024-thumbs/windows-to-linux.jpg
+image: images/2024-thumbs/windows-to-linux.webp
 categories:
   - Linux
   - Windows

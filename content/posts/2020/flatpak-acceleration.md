@@ -3,7 +3,7 @@ title: "Flatpak Acceleration"
 
 date: 2020-08-16T18:52:55-05:00
 url: /flatpak-acceleration/
-image: images/2020-thumbs/flatpak-acceleration.jpg
+image: images/2020-thumbs/flatpak-acceleration.webp
 categories:
   - Linux
 tags:

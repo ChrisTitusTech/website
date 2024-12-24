@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-03-12T20:35:00+00:00
 url: /aptitude-explained/
-image: images/2019/03/aptitude.jpg
+image: images/2019/03/aptitude.webp
 categories:
   - Linux
 tags:

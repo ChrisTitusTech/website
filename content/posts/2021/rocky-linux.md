@@ -3,7 +3,7 @@ title: "Rocky Linux"
 
 date: 2021-05-03T12:12:16-05:00
 url: /rocky-linux/
-image: images/2021-thumbs/rocky-linux.jpg
+image: images/2021-thumbs/rocky-linux.webp
 categories:
   - Linux
 tags:

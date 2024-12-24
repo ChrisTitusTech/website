@@ -3,7 +3,7 @@ title: "Script for Optimizing Images"
 
 date: 2023-01-30
 url: /script-for-optimizing-images/
-image: images/2023-thumbs/script-for-optimizing-images.jpg
+image: images/2023-thumbs/script-for-optimizing-images.webp
 categories:
   - Linux
 tags:
@@ -64,7 +64,7 @@ WIDTH=800
 HEIGHT=600
 
 #resize png or jpg to either height or width, keeps proportions using imagemagick
-find ${FOLDER} -iname '*.jpg' -o -iname '*.png' -exec convert \{} -verbose -resize $WIDTHx$HEIGHT\> \{} \;
+find ${FOLDER} -iname '*.webp' -o -iname '*.webp' -exec convert \{} -verbose -resize $WIDTHx$HEIGHT\> \{} \;
 img-optimize --std --path ${FOLDER}
 ```
 

@@ -3,7 +3,7 @@ title: "Switching to Ubuntu"
 
 date: 2022-11-28
 url: /switching-to-ubuntu/
-image: images/2022-thumbs/switching-to-ubuntu.jpg
+image: images/2022-thumbs/switching-to-ubuntu.webp
 categories:
   - Linux
 tags:
@@ -54,7 +54,7 @@ sudo apt install tasksel -y
 
 Run it with `sudo tasksel`
 
-![](/images/2022/switching-to-ubuntu/tasksel.png)
+![](/images/2022/switching-to-ubuntu/tasksel.webp)
 
 Select the Debian Desktop Environment at top and the desktop environment that you want to use. 
 
@@ -66,7 +66,7 @@ Using my window manager set up, which requires manual intervention from <https:/
 
 Final Result:
 
-![](/images/2022/switching-to-ubuntu/ubuntu-titus.jpg)
+![](/images/2022/switching-to-ubuntu/ubuntu-titus.webp)
 
 
 

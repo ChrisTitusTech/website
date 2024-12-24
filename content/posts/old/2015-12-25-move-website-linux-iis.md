@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2015-12-26T05:41:50+00:00
 url: /move-website-linux-iis/
-image: images/2015/12/move-wordpress-site.jpg
+image: images/2015/12/move-wordpress-site.webp
 categories:
   - Linux
   - Windows Server

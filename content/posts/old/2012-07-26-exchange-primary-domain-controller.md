@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2012-07-26T20:31:21+00:00
 url: /exchange-primary-domain-controller/
-image: images/2012/07/hosted-exchange-logo1.png
+image: images/2012/07/hosted-exchange-logo1.webp
 categories:
   - Windows Server
 tags:

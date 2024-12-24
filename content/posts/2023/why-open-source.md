@@ -3,7 +3,7 @@ title: "Why Open Source?"
 
 date: 2023-01-09
 url: /why-open-source/
-image: images/2023-thumbs/why-open-source.jpg
+image: images/2023-thumbs/why-open-source.webp
 categories:
   - Linux
   - Windows

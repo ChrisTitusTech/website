@@ -3,7 +3,7 @@ title: "Reagentc Windows Recovery Partition"
 
 date: 2022-11-02
 url: /reagentc-windows-recovery-partition/
-image: images/2022-thumbs/reagentc-windows-recovery-partition.jpg
+image: images/2022-thumbs/reagentc-windows-recovery-partition.webp
 categories:
   - Windows
 tags:
@@ -53,7 +53,7 @@ Another method to reach this screen is to have the boot fail 3 times. A reboot d
 
 F8 is an older method that doesn't work unless enabled, but was a great way to get to the menu. I'm adding this to my Windows Utility Tweaks section.
 
-![](/images/2022/reagentc-windows-recovery-partition/recovery.png)
+![](/images/2022/reagentc-windows-recovery-partition/recovery.webp)
 
 ### Startup Repair and Settings
 
@@ -67,17 +67,17 @@ Here are the highlights of a recovery partition:
 - Chkdsk for failing hard drives
 - SFC/DISM repairs corrupt system files (`sfc /scannow` and `dism /image:c:\ /cleanup-image /restorehealth`)
 
-![](/images/2022/reagentc-windows-recovery-partition/sfc.png)
+![](/images/2022/reagentc-windows-recovery-partition/sfc.webp)
 
 - Regedit for editing the registry
 
-![](/images/2022/reagentc-windows-recovery-partition/regedit.png)
+![](/images/2022/reagentc-windows-recovery-partition/regedit.webp)
 
 ### Uninstall Updates
 
 Bad update and now it doesn't work? Click this and revert it!
 
-![](/images/2022/reagentc-windows-recovery-partition/updates.png)
+![](/images/2022/reagentc-windows-recovery-partition/updates.webp)
 
 ### UEFI Firmware Settings
 

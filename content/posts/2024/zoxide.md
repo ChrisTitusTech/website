@@ -3,7 +3,7 @@ title: "Zoxide"
 
 date: 2024-04-21
 url: /zoxide/
-image: images/2024-thumbs/zoxide.jpg
+image: images/2024-thumbs/zoxide.webp
 categories:
   - Linux
   - Windows

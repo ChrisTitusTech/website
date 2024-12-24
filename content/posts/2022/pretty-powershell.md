@@ -3,7 +3,7 @@ title: "Pretty Powershell"
 
 date: 2022-10-31
 url: /pretty-powershell/
-image: images/2022-thumbs/pretty-powershell.jpg
+image: images/2022-thumbs/pretty-powershell.webp
 categories:
   - Windows
 tags:
@@ -15,7 +15,7 @@ PowerShell is UGLY and cumbersome by default. This Guide fixes that!
 
 The End Result:
 
-![](/images/2022/pretty-powershell/end-result.png)
+![](/images/2022/pretty-powershell/end-result.webp)
 
 ## Fixing the Visuals
 
@@ -31,13 +31,13 @@ The first thing that needs to be fixed is installing the correct font. Here are 
 
 ### Windows 11 Font Settings
 
-![](/images/2022/pretty-powershell/win11.png)
+![](/images/2022/pretty-powershell/win11.webp)
 
 ### Windows 10 Font Settings
 
 In the screenshot below you will see the stock font select and the missing icons. Selecting CaskaydiaCove above Consolas and saving will fix it. 
 
-![](/images/2022/pretty-powershell/win10.png)
+![](/images/2022/pretty-powershell/win10.webp)
 
 ## Fixing the Syntax
 

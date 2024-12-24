@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2016-10-31T20:29:26+00:00
 url: /exclude-shared-mailboxes-exchange/
-image: images/2014/01/logo-Exchange-Color.jpg
+image: images/2014/01/logo-Exchange-Color.webp
 categories:
   - Windows Server
 tags:
@@ -15,7 +15,7 @@ tags:
 ---
 This shows you how to exclude shared mailboxes from a Dynamic Distribution Group in Exchange Online. We will be using Powershell to make sure your shared mailboxes don&#8217;t get spam in them.<!--more-->
 
-![Exclude Shared Mailboxes](/images/2016/10/exclude-shared-mailboxes.png)
+![Exclude Shared Mailboxes](/images/2016/10/exclude-shared-mailboxes.webp)
 
 ### Commands
 

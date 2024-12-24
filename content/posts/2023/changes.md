@@ -3,7 +3,7 @@ title: "Changes"
 
 date: 2023-03-21
 url: /changes/
-image: images/2023-thumbs/changes.jpg
+image: images/2023-thumbs/changes.webp
 categories:
   - Titus
 tags:

@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2014-12-28T22:53:22+00:00
 url: /windows-software-raid/
-image: images/2014/12/RAID1.jpg
+image: images/2014/12/RAID1.webp
 categories:
   - Windows
 
@@ -13,7 +13,7 @@ I want to preface this article in saying that I would never use a software raid 
 
 The following solutions are how you&#8217;d fix the issue:
 
-![resyncing](/images/2014/12/resyncing.png)
+![resyncing](/images/2014/12/resyncing.webp)
 
 ### Solution One:
 

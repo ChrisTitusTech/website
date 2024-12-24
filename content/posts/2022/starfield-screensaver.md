@@ -3,7 +3,7 @@ title: "Screensavers"
 
 date: 2022-12-12
 url: /screensavers/
-image: images/2022-thumbs/screensavers.jpg
+image: images/2022-thumbs/screensavers.webp
 categories:
   - Linux
   - Windows
@@ -19,25 +19,25 @@ Screensavers might be the past, but they are still one of the coolest to do on y
 ## SCR File Screensavers
 
 - System47 SCR File - <https://www.mewho.com/system47/>
-  ![](/images/2022/starfield-screensaver/system47.png)
+  ![](/images/2022/starfield-screensaver/system47.webp)
 - [Microsoft BSOD](https://learn.microsoft.com/en-us/sysinternals/downloads/bluescreen)
 - [Screensavers Website](https://www.screensaversplanet.com/screensavers/?free=on)
 
 ## Website Screensavers
 
 - [Starfield meWho](https://www.mewho.com/starfield47/)
-  ![](/images/2022/starfield-screensaver/starfield.png)
+  ![](/images/2022/starfield-screensaver/starfield.webp)
 - [Gradient Colors](https://gradiyent.netlify.app/)
-  ![](/images/2022/starfield-screensaver/gradient.png)
+  ![](/images/2022/starfield-screensaver/gradient.webp)
 - [Really Slick Screensavers](https://sourceforge.net/projects/rssavers/)
-  ![](/images/2022/starfield-screensaver/hyperspace.png)
+  ![](/images/2022/starfield-screensaver/hyperspace.webp)
 - [Fake BSODs](https://www.ravbug.com/bsod/)
-  ![](/images/2022/starfield-screensaver/bsod.png)
+  ![](/images/2022/starfield-screensaver/bsod.webp)
 - [Crypto Prank](https://www.cryptoprank.com/#/)
-  ![](/images/2022/starfield-screensaver/crypto-prank.png)
+  ![](/images/2022/starfield-screensaver/crypto-prank.webp)
 - [Fake Updates](https://fakeupdate.net/)
 
-  ![](/images/2022/starfield-screensaver/xp.png)
+  ![](/images/2022/starfield-screensaver/xp.webp)
 - [Fake Screens](https://screen.vercel.app/)
 - [Update Faker](https://updatefaker.com/)
 

@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-09-13T20:49:56+00:00
 url: /issuing-ssl-certs/
-image: images/2018/09/Letsencrypt.jpg
+image: images/2018/09/Letsencrypt.webp
 categories:
   - Linux
 tags:

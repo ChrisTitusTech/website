@@ -3,7 +3,7 @@ title: "The Ultimate System"
 
 date: 2024-03-20
 url: /the-ultimate-system/
-image: images/2024-thumbs/the-ultimate-system.jpg
+image: images/2024-thumbs/the-ultimate-system.webp
 categories:
   - Linux
   - Windows
@@ -100,7 +100,7 @@ Linux is great, but sometimes it just isn't the right tool for what I need. That
 
 ### QuickPassthrough
 
-![](/images/2024/the-ultimate-system/quickpass.png)
+![](/images/2024/the-ultimate-system/quickpass.webp)
 
 Github: <https://github.com/HikariKnight/quickpassthrough>
 

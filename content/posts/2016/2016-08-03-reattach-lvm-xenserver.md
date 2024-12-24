@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2016-08-03T16:18:32+00:00
 url: /reattach-lvm-xenserver/
-image: images/2016/07/xenserver.jpg
+image: images/2016/07/xenserver.webp
 categories:
   - Virtualization
 tags:

@@ -3,7 +3,7 @@ title: "Laptop Power Management"
 
 date: 2022-08-26
 url: /laptop-power-management/
-image: images/2022-thumbs/laptop-power-management.jpg
+image: images/2022-thumbs/laptop-power-management.webp
 categories:
   - Linux
   - Windows
@@ -26,7 +26,7 @@ By default, almost any and every laptop has excessive thermal compound which lea
 
 Here is an example of excess factory thermal compound application:
 
-![termal](/images/2022/laptop-power/thermal.jpg)
+![termal](/images/2022/laptop-power/thermal.webp)
 
 ## Adjust Max CPU Frequency
 Set your CPU governor to the maximum power it can use. I NEVER use a 100% of the CPU and in most instances rarely break above 50% of its total power. Typically, around 2 GHz is perfect for my day-to-day work. When working on battery, I put this down to 25% on a beefy laptop to conserve most of its power. On weaker laptops, you'd probably double these numbers. 100% on AC Power and 50% on Battery. 
@@ -118,7 +118,7 @@ Cool python project that rebuilds the init system to exclude nvidia.
 ### Windows - GUI Power Management
 Launch the GUI power panel with Start ⇾ Run `powercfg.cpl`
 
-![win-power](/images/2022/laptop-power/win-power.png)
+![win-power](/images/2022/laptop-power/win-power.webp)
 
 Then change the Min / Max CPU Power. I typically set these to 5% Min and 50% Max, but on weaker laptops you can set these higher.
 

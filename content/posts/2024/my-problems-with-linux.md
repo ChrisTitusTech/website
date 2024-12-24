@@ -3,7 +3,7 @@ title: "My Problems With Linux"
 
 date: 2024-06-04
 url: /my-problems-with-linux/
-image: images/2024-thumbs/my-problems-with-linux.jpg
+image: images/2024-thumbs/my-problems-with-linux.webp
 categories:
   - Linux
 tags:

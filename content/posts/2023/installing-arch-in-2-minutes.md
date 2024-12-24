@@ -3,7 +3,7 @@ title: "Installing Arch in 2 Minutes"
 
 date: 2023-10-07
 url: /installing-arch-in-2-minutes/
-image: images/2023-thumbs/installing-arch-in-2-minutes.jpg
+image: images/2023-thumbs/installing-arch-in-2-minutes.webp
 categories:
   - Linux
 tags:

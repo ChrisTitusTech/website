@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-10-09T16:18:46+00:00
 url: /create-iscsi-sr/
-image: images/2018/10/xcp-ng-iscsi.png
+image: images/2018/10/xcp-ng-iscsi.webp
 categories:
   - Virtualization
 tags:
@@ -21,7 +21,7 @@ This guide goes over how to Create iSCSI SR on Xen to connect to an iSCSI target
   * iSCSI target (Check out FreeNAS in the video below for setting one up)
   * At LEAST a gigabit environment
 
-![xen-iscsi](/images/2018/10/xen-iscsi-sr.png)
+![xen-iscsi](/images/2018/10/xen-iscsi-sr.webp)
 
 ### Step-by-Step Guide to Create iSCSI SR
 

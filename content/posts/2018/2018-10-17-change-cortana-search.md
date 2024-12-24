@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-10-17T15:22:41+00:00
 url: /change-cortana-search/
-image: images/2018/10/change-cortana-search.jpg
+image: images/2018/10/change-cortana-search.webp
 categories:
   - Windows
 tags:

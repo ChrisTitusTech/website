@@ -3,7 +3,7 @@ title: "Fix Ticwatch Lag"
 
 date: 2020-08-27T09:49:33-05:00
 url: /fix-ticwatch-lag/
-image: images/2020-thumbs/fix-ticwatch-lag.jpg
+image: images/2020-thumbs/fix-ticwatch-lag.webp
 categories:
   - Android
 tags:
@@ -55,7 +55,7 @@ pm uninstall -k --user 0 com.mobvoi.wear.watchface.aw
 ```
 
 Screenshot  
-![ticwatch](/images/2020/ticwatch.jpg)
+![ticwatch](/images/2020/ticwatch.webp)
 
 ## Using Google Fit and other WearOS Apps
 

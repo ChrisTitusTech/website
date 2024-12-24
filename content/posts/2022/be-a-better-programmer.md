@@ -3,7 +3,7 @@ title: "Be a Better Programmer"
 
 date: 2022-09-30
 url: /be-a-better-programmer/
-image: images/2022-thumbs/be-a-better-programmer.jpg
+image: images/2022-thumbs/be-a-better-programmer.webp
 categories:
   - Linux
   - Windows
@@ -27,7 +27,7 @@ I'm constantly bouncing around and when I started I was getting discouraged. I'd
 
 To fix this, I ended up using a free tool called wakatime. This showed me what projects I was spending time on, editors I used, languages, and spit it all out on a dashboard. 
 
-![wakatime](/images/2022/wakatime.png)
+![wakatime](/images/2022/wakatime.webp)
 
 Check out my GitHub page @ <https://github.com/christitustech> for all my stats and share yours down below in the comments! I am extremely competitive and I code more knowing I have people watching my progress.
 

@@ -3,7 +3,7 @@ title: "3CX Version 20 Update"
 
 date: 2024-03-28
 url: /3cx-version-20-update/
-image: images/2024-thumbs/3cx-version-20-update.jpg
+image: images/2024-thumbs/3cx-version-20-update.webp
 categories:
   - Linux
   - Windows

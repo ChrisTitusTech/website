@@ -3,7 +3,7 @@ title: "The Ultimate Windows Utility"
 
 date: 2022-05-13T13:07:19-05:00
 url: /windows-tool/
-image: images/2022-thumbs/windows-tool.jpg
+image: images/2022-thumbs/windows-tool.webp
 categories:
   - Windows
 tags:
@@ -28,13 +28,13 @@ There are four main parts of this utility but I can expand this to an infinite n
 
 ### Install
 
-![install](/images/2022/winutil/screen-install.png)
+![install](/images/2022/winutil/screen-install.webp)
 
 The install is basically a better version of ninite that many people use. It leverages Microsoft's winget utility to not only install tons of software that you select with a check-mark, but also gives you the ability to upgrade all the software quickly. By using this utility you will save hours on the install, but also make it very easy to keep all your programs up to date. 
 
 ### Debloat 
 
-![debloat](/images/2022/winutil/screen-debloat.png)
+![debloat](/images/2022/winutil/screen-debloat.webp)
 
 Debloating windows is always a moving target and there are many utilities out there. Many of them are too heavy handed in my opinion. This takes a more minimal approach that should not damage your Windows install. At the top there are three buttons Desktop, Laptop, and Minimal. These are curated selections based on my recommendations
 
@@ -50,7 +50,7 @@ Note: This part of the utility can break an install if used carelessly, but it d
 
 ### Features and Legacy Win Panels
 
-![features](/images/2022/winutil/screen-features.png)
+![features](/images/2022/winutil/screen-features.webp)
 
 This tab makes it easier to enable built-in features that are off by default. Many new installs need these and I wanted to make it easier than going through and manually installing them one by one. 
 
@@ -58,7 +58,7 @@ There is also the old school legacy panels that I use on a daily basis. I still 
 
 ### Windows Updates
 
-![updates](/images/2022/winutil/screen-updates.png)
+![updates](/images/2022/winutil/screen-updates.webp)
 
 Windows updates set to defaults are crazy. They install and download at weird times and often update far too much. I give 2 options my recommended one that only installs security updates and allowing features updates after they have been proven over 1 year. 
 

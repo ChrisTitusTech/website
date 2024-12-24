@@ -3,7 +3,7 @@ title: "Is Sony Abusing FreeBSD with Playstation?"
 
 date: 2024-04-07
 url: /sony-playstation-and-freebsd/
-image: images/2024-thumbs/sony-playstation-and-freebsd.jpg
+image: images/2024-thumbs/sony-playstation-and-freebsd.webp
 categories:
   - Linux
   - FreeBSD

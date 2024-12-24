@@ -3,7 +3,7 @@ title: "Is Antivirus Worthless?"
 
 date: 2022-06-22T16:44:33-05:00
 url: /antivirus-worthless/
-image: images/2022-thumbs/antivirus-worthless.jpg
+image: images/2022-thumbs/antivirus-worthless.webp
 categories:
   - Windows
 tags:
@@ -32,17 +32,17 @@ So Never do any of these things!
 I've been giving out an exe file for my Debloat Utility to anyone that pays $5 on cttstore.com to help fund its future development. However, since it is a free and open source project that is a PowerShell script that gets converted to EXE it has caused MANY false positives. The reason is many Antivirus companies are lazy and block EVERY powershell script that is converted to EXE. Microsoft, AVG, Avast, etc. which you can see below. 
 
 PowerShell to EXE Disclaimer
-![ps1toexe](/images/2022/antivirus-worthless/virus-ps1-exe.png)
+![ps1toexe](/images/2022/antivirus-worthless/virus-ps1-exe.webp)
 
 VirusTotal Result from PowerShell Script to EXE
-![script-virustotal](/images/2022/antivirus-worthless/script-virus.png)
+![script-virustotal](/images/2022/antivirus-worthless/script-virus.webp)
 
 Obviously with false positives there are times where AntiVirus programs completely miss viruses. How does this happen and how I changed the exe to bypass antivirus programs. There are two methods I've used to reduce or even completely remove antivirus scans. 
 
 ### Code Signed EXEs have less false positives
 
 Code Signing is the practice of using cryptographic keys to sign EXE files like below. 
-![signed-file](/images/2022/antivirus-worthless/signed-file.png)
+![signed-file](/images/2022/antivirus-worthless/signed-file.webp)
 
 Good antivirus programs will NOT flag my EXE when I used a code signing key. However, if I don't sign the EXE it will flag it as a virus. So, why doesn't everyone use a code signing key? It's expensive. Roughly it is $100 a year for the "basic" code signing and to bypass Microsoft SmartScreen for "enhanced" code signing it will set you back almost $275 a year. Feels kinda like extortion, but I can appreciate that I now have a digital signature for my exe so folks know it came from me. 
 
@@ -53,7 +53,7 @@ Let's move on to the easiest way to obscure your exe to bypass Antivirus.
 Simply created an encrypted file will bypass any scans. I find the easiest way to do this is using 7-zip with SHA256 encryptioon and a password. This is how I distribute my EXE now so I don't have to worry about antiviruses. So, be EXTREMELY CAREFUL when opening files with passwords, as your antivirus can not scan it. If you do not trust the source you downloaded it... DO NOT OPEN IT!
 
 Here is an example of a encrypted file:
-![encrypted-file](/images/2022/antivirus-worthless/encrypted-file.png)
+![encrypted-file](/images/2022/antivirus-worthless/encrypted-file.webp)
 
 ## Recommended AntiVirus
 

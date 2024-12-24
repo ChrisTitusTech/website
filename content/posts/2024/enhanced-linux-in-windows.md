@@ -3,7 +3,7 @@ title: "Enhanced Linux in Windows"
 
 date: 2024-09-28
 url: /enhanced-linux-in-windows/
-image: images/2024-thumbs/enhanced-linux-in-windows.jpg
+image: images/2024-thumbs/enhanced-linux-in-windows.webp
 categories:
   - Linux
   - Windows

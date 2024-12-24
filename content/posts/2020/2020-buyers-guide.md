@@ -3,7 +3,7 @@ title: "2020 Buyers Guide"
 
 date: 2020-11-20T13:46:56-06:00
 url: /2020-buyers-guide/
-image: images/2020-thumbs/2020-buyers-guide.jpg
+image: images/2020-thumbs/2020-buyers-guide.webp
 categories:
   - Linux
   - Windows
@@ -18,13 +18,13 @@ Looking for a Tech Gift this holiday season? Here are the things I have my eye o
 - 7" <https://amzn.to/2UzZZ8T>
 - 10" <https://amzn.to/35H7Yax>
 
-![Debloat-Fire](/images/2020/buyers-guide/debloat-fire.jpg)
+![Debloat-Fire](/images/2020/buyers-guide/debloat-fire.webp)
 
 Video Overview on how to debloat: <https://youtu.be/yLoymK65dJE>
 
 ## Cell Phones
 
-![Cellphones](/images/2020/buyers-guide/cellphones.jpg)
+![Cellphones](/images/2020/buyers-guide/cellphones.webp)
 
 - Google 4a - $350 - <https://amzn.to/2IKfTLr>
 - PinePhone - $200 - <https://www.pine64.org/pinephone/>
@@ -36,7 +36,7 @@ Google 4a is the practical choice and is a rock solid phone that comes unlocked 
 
 ## Monitors
 
-![Monitors](/images/2020/buyers-guide/monitors.jpg)
+![Monitors](/images/2020/buyers-guide/monitors.webp)
 
 - Cheap Spectre Monitors - <https://amzn.to/3pxmv0l> - _Prices range from $80 to $250_
 - BenQ High-End Monitors - <https://amzn.to/2K9wxV0> - _Prices range from $300 to $450_
@@ -44,7 +44,7 @@ Google 4a is the practical choice and is a rock solid phone that comes unlocked 
 
 ## Peripherals
 
-![Razer](/images/2020/buyers-guide/razer.jpg)
+![Razer](/images/2020/buyers-guide/razer.webp)
 
 - Razer Cynosa Lite - $40 - <https://amzn.to/3f6ZfS1>  
 - Razer DeathAdder Essential Mouse - $30 - <https://amzn.to/3lGFAe9>
@@ -84,7 +84,7 @@ Here is Equipment I use for A/V and recommend to others. Below is a video going 
 
 ## Computers and Graphics Cards
 
-![OutofStock](/images/2020/buyers-guide/outofstock.jpg)
+![OutofStock](/images/2020/buyers-guide/outofstock.webp)
 
 Good Luck! All the stock out there is way out of date and any of the new hotness is Out of Stock. Wait til 2021!
 

@@ -3,7 +3,7 @@ title: "Custom Vim"
 
 date: 2020-06-04T15:05:41-05:00
 url: /custom-vim/
-image: images/2020-thumbs/custom-vim.jpg
+image: images/2020-thumbs/custom-vim.webp
 categories:
   - Linux
 tags:

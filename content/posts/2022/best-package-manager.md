@@ -3,7 +3,7 @@ title: "Best Package Manager"
 
 date: 2022-08-08
 url: /best-package-manager/
-image: images/2022-thumbs/best-package-manager.jpg
+image: images/2022-thumbs/best-package-manager.webp
 categories:
   - Linux
   - MacOS

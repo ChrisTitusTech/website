@@ -3,7 +3,7 @@ title: "Hastebin"
 
 date: 2024-05-08
 url: /hastebin/
-image: images/2024-thumbs/hastebin.jpg
+image: images/2024-thumbs/hastebin.webp
 categories:
   - Linux
   - Windows

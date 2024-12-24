@@ -3,7 +3,7 @@ title: "How to Speed Up Your Amazon Fire Tablet"
 
 date: 2020-07-21T12:37:54-05:00
 url: /amazon-fire-debloat/
-image: images/2020-thumbs/amazon-fire-debloat.jpg
+image: images/2020-thumbs/amazon-fire-debloat.webp
 categories:
   - Android 
 tags:
@@ -44,7 +44,7 @@ Amazon Fire HD6 (2014)
 ## Enabling Developer Mode
 
 ***
-![Dev Tools](/images/2020/debloat-amazon/dev-tools.jpg)
+![Dev Tools](/images/2020/debloat-amazon/dev-tools.webp)
 ***
 
 - Settings > Device Options > About Fire Tablet and tap on the Serial Number until you unlock Developer Options
@@ -58,7 +58,7 @@ After doing this plug your tablet in to your computer and tap authorize device. 
 ### Main Menu
 
 ***
-![Toolbox](/images/2020/debloat-amazon/toolbox.png)
+![Toolbox](/images/2020/debloat-amazon/toolbox.webp)
 ***
 
 #### Options you need
@@ -90,7 +90,7 @@ After doing this plug your tablet in to your computer and tap authorize device. 
 ### Second Menu
 
 ***
-![Toolbox2](/images/2020/debloat-amazon/toolbox2.jpg)
+![Toolbox2](/images/2020/debloat-amazon/toolbox2.webp)
 ***
 
 #### Recommended Options

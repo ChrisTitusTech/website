@@ -3,7 +3,7 @@ title: "NTLite Guide"
 
 date: 2022-10-05
 url: /ntlite-guide/
-image: images/2022-thumbs/ntlite-guide.jpg
+image: images/2022-thumbs/ntlite-guide.webp
 categories:
   - Windows
 tags:
@@ -12,7 +12,7 @@ draft: false
 ---
 This Guide shows you the easiest way to configure Windows and make an ISO with NTLite. 
 <!--more-->
-![ntlite](/images/2022/ntlite/ntlite.png)
+![ntlite](/images/2022/ntlite/ntlite.webp)
 
 ## Overview
 
@@ -29,7 +29,7 @@ That is where import existing profiles that have already been tested by the NTLi
  - Install 7zip to extract files from Windows ISO - Windows Terminal install with `winget install --id=7zip.7zip  -e`
  - Download the official Windows ISO <https://www.microsoft.com/en-us/software-download/windows10>
 
-![ms-download](/images/2022/ntlite/download-iso.png)
+![ms-download](/images/2022/ntlite/download-iso.webp)
 
 _Note: In windows it will default to "Media Creation Tool" to make the iso (see above) You can use Mac/Linux to direct download ISO or User Agent Switch Browser Extension to trick Microsoft_
 
@@ -51,7 +51,7 @@ Look at the image below and add the files you extracted above. Follow these step
   - Import the Presets XML File
 3. Apply to load the files _Note: This will take a LONG time 5-10 minutes on fast systems_
 
-![import-image](/images/2022/ntlite/import-image.png)
+![import-image](/images/2022/ntlite/import-image.webp)
 
 ### Customize Image
 
@@ -59,7 +59,7 @@ There are a TON of customizations you can do here, but DO NOT OVER DO IT! Past t
 
 Once you have everything the way you want it, simply apply the settings.
 
-![apply-settings](/images/2022/ntlite/apply-settings.png)
+![apply-settings](/images/2022/ntlite/apply-settings.webp)
 
 _Note: This is the longest of all the stages and took almost 15 minutes on a good system_
 
@@ -88,7 +88,7 @@ Here is the list of generic keys for various Windows 10 Editions.
 
 Finally, we are ready to make the ISO. Just Click "Create ISO" and select the location to save it. 
 
-![create-iso](/images/2022/ntlite/create-iso.png)
+![create-iso](/images/2022/ntlite/create-iso.webp)
 
 ## Next Steps
 

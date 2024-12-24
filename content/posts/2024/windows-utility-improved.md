@@ -3,7 +3,7 @@ title: "Windows Utility Improved"
 
 date: 2024-04-25
 url: /windows-utility-improved/
-image: images/2024-thumbs/windows-utility-improved.jpg
+image: images/2024-thumbs/windows-utility-improved.webp
 categories:
   - Windows
 tags:

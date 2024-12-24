@@ -3,7 +3,7 @@ title: "Windows 10 Scripts"
 
 date: 2020-08-14T11:43:17-05:00
 url: /windows-10-scripts/
-image: images/2020-thumbs/windows-10-scripts.jpg
+image: images/2020-thumbs/windows-10-scripts.webp
 categories:
   - Windows
 tags:
@@ -12,7 +12,7 @@ tags:
 Three Windows 10 Scripts
 <!--more-->
 
-![OneCommand](/images/onecommand.png)
+![OneCommand](/images/onecommand.webp)
 
 ---
 

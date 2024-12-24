@@ -3,7 +3,7 @@ title: "Uninstall Microsoft Edge"
 
 date: 2021-08-06T11:55:48-05:00
 url: /uninstall-edge/
-image: images/2021-thumbs/uninstall-edge.jpg
+image: images/2021-thumbs/uninstall-edge.webp
 categories:
   - Windows
 tags:

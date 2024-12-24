@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-03-14T15:23:56+00:00
 url: /wordpress-google-cloud-platform/
-image: images/2019/03/google-cloud-platform.png
+image: images/2019/03/google-cloud-platform.webp
 categories:
   - Linux
 tags:
@@ -15,7 +15,7 @@ tags:
 ---
 I am going over hosting WordPress on Google Cloud Platform in this article. This is a step by step guide on how to set up and host a WordPress website using a fresh installation. <!--more-->
 
-![nas_theapplication_3216](/images/2019/03/nas_theapplication_3216.png)
+![nas_theapplication_3216](/images/2019/03/nas_theapplication_3216.webp)
 
 ### Step 1: Fresh VM
 
@@ -34,7 +34,7 @@ sudo nano /etc/fstab
 ```
 `/swapfile swap swap defaults 0 0`
 
-![apache2](/images/2019/03/apache2.png)
+![apache2](/images/2019/03/apache2.webp)
 
 ### Step 3: Install LAMP Stack (Linux, Apache, MySQL, and PHP)
 
@@ -44,7 +44,7 @@ sudo tasksel install lamp-server
 sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 ```
 
-![Internet_Line-20-512](/images/2019/03/Internet_Line-20-512.png)
+![Internet_Line-20-512](/images/2019/03/Internet_Line-20-512.webp)
 
 ### Step 4: Configure Domain
 
@@ -69,7 +69,7 @@ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 `$ a2ensite example.com.conf`  
 `$ systemctl reload apache2`
 
-![san](/images/2019/03/san.png)
+![san](/images/2019/03/san.webp)
 
 ### Step 5: Prep Database and PHP
 
@@ -88,7 +88,7 @@ max\_input\_time = 30
 upload\_max\_filesize = 20M  
 post\_max\_size = 21M
 ```
-![WordPress-Logo-Download-PNG](/images/2019/03/WordPress-Logo-Download-PNG.png)
+![WordPress-Logo-Download-PNG](/images/2019/03/WordPress-Logo-Download-PNG.webp)
 
 ### Step 6: Install WordPress on Google Cloud Platform
 

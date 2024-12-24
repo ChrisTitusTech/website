@@ -3,7 +3,7 @@ title: "Worst Tech of 2022"
 
 date: 2022-12-30
 url: /worst-tech-of-2022/
-image: images/2022-thumbs/worst-tech-of-2022.jpg
+image: images/2022-thumbs/worst-tech-of-2022.webp
 categories:
 tags:
   - Technology

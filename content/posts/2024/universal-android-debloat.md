@@ -3,7 +3,7 @@ title: "Universal Android Debloat"
 
 date: 2024-04-09
 url: /universal-android-debloat/
-image: images/2024-thumbs/universal-android-debloat.jpg
+image: images/2024-thumbs/universal-android-debloat.webp
 categories:
   - Android
 tags:

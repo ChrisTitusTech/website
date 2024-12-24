@@ -3,7 +3,7 @@ title: "The Most Popular Windows Utility"
 
 date: 2024-09-13
 url: /winutil-install/
-image: images/2024-thumbs/winutil-install.jpg
+image: images/2024-thumbs/winutil-install.webp
 categories:
   - Windows
 tags:
@@ -14,7 +14,7 @@ This is the biggest update to WinUtil since its inception. It is now a full-fled
 <!--more-->
 The #1 Most Stared PowerShell project on GitHub!
 
-![](/images/2024/winutil-install/top-powershell.png)
+![](/images/2024/winutil-install/top-powershell.webp)
 
 ## Features
 
@@ -29,7 +29,7 @@ The #1 Most Stared PowerShell project on GitHub!
   - Disable Microsoft Copilot
   - Set Classic Right-Click Menu
 
-![](/images/2024/winutil-install/advanced-tweaks.png)
+![](/images/2024/winutil-install/advanced-tweaks.webp)
 
 **Note: DO NOT click everything in advanced tweaks... your system may become unstable.**
 

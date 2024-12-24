@@ -3,7 +3,7 @@ title: "BTRFS Guide - Basic Commands, Snapshots, and RAID"
 
 date: 2020-01-13T16:36:18-06:00
 url: /btrfs-guide/
-image: images/2020-thumbs/btrfs-guide.jpg
+image: images/2020-thumbs/btrfs-guide.webp
 categories:
   - Linux
 tags:
@@ -35,7 +35,7 @@ toplevel root level 5
   - Disk free  
 `sudo btrfs fi show`  
 > Output:  
-![File System Output](/images/2020/btrfs/fishow.png)
+![File System Output](/images/2020/btrfs/fishow.webp)
 
   - Disk Usage  
 `sudo btrfs fi du /` _Note: you can make / any other mount point_  
@@ -48,7 +48,7 @@ _Note: Use the musgae and dusage filters to only balance used blocks above 50 pe
   - List Subvolumes *based on mountpoint*  
 `sudo btrfs subv list /home`  
 > Output:  
-![Subvolume Output](/images/2020/btrfs/subv-list.png)
+![Subvolume Output](/images/2020/btrfs/subv-list.webp)
 
   - Mount Subvolume  
 `sudo mount -o subvolid=267 /dev/sda1 /media/games`  

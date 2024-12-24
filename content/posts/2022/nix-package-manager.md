@@ -3,7 +3,7 @@ title: "Nix Package Manager"
 
 date: 2022-08-22
 url: /nix-package-manager/
-image: images/2022-thumbs/nix-package-manager.jpg
+image: images/2022-thumbs/nix-package-manager.webp
 categories:
   - Linux
   - MacOS

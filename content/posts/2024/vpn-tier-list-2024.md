@@ -3,7 +3,7 @@ title: "VPN Tier List 2024"
 
 date: 2024-04-19
 url: /vpn-tier-list-2024/
-image: images/2024-thumbs/vpn-tier-list-2024.jpg
+image: images/2024-thumbs/vpn-tier-list-2024.webp
 categories:
   - Linux
   - Windows
@@ -58,7 +58,7 @@ These are independent VPNs that are owned by a single company and outside the 14
 
 ## Final Tier List
 
-![vpn-tier-list-2024](/images/2024/vpn-tier-list-2024/vpns.png)
+![vpn-tier-list-2024](/images/2024/vpn-tier-list-2024/vpns.webp)
 
 ## Walkthrough Video
 

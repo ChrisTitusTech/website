@@ -3,7 +3,7 @@ title: "Auto Mount with SystemD"
 
 date: 2022-09-22
 url: /auto-mount-systemd/
-image: images/2022-thumbs/auto-mount-systemd.jpg
+image: images/2022-thumbs/auto-mount-systemd.webp
 categories:
   - Linux
   - Networking

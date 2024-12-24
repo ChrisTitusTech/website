@@ -3,7 +3,7 @@ title: "AME Wizard - The Future of Debloat?"
 
 date: 2023-05-06
 url: /ame-wizard-the-future-of-debloat/
-image: images/2023-thumbs/ame-wizard-the-future-of-debloat.jpg
+image: images/2023-thumbs/ame-wizard-the-future-of-debloat.webp
 categories:
   - Windows
 tags:
@@ -21,7 +21,7 @@ Personally, I don't mind this approach, but it does give me pause. When they are
 
 Right now to immediately get verified you can go through their patreon and for $10/Month you get verified playbook publications.
 
-![](/images/2023/ame/verified.png)
+![](/images/2023/ame/verified.webp)
 
 ## My Recommendations
 

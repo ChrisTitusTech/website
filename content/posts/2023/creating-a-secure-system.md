@@ -3,7 +3,7 @@ title: "Creating a Secure System"
 
 date: 2023-09-24
 url: /creating-a-secure-system/
-image: images/2023-thumbs/creating-a-secure-system.jpg
+image: images/2023-thumbs/creating-a-secure-system.webp
 categories:
   - Linux
 tags:

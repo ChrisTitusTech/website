@@ -3,7 +3,7 @@ title: "Everything You Need to Know About Crypto"
 
 date: 2020-09-03T11:33:12-05:00
 url: /crypto/
-image: images/2020-thumbs/crypto.jpg
+image: images/2020-thumbs/crypto.webp
 categories:
   - Linux
   - Windows
@@ -13,7 +13,7 @@ tags:
 This article goes over everything you need to know about crypto in 2020. 
 <!--more-->
 
-![coins](/images/crypto/coins.png)
+![coins](/images/crypto/coins.webp)
 
 ## What is it and Practical Application
 
@@ -27,7 +27,7 @@ Practical application of crypto is all over our society today. Many banks are us
 - Send Private Transactions (Monero) - Send money between two entities completely that is completely private. _Please note: Bitcoin and other projects are actively tracked, while some are still privacy oriented, much like physical cash._ 
 - Insurance, Data Backup, and all kinds of data that you will always want a ledger of. 
 
-![wallet](/images/crypto/wallet.png)
+![wallet](/images/crypto/wallet.webp)
 
 ## How to Store Crypto
 
@@ -52,7 +52,7 @@ Cons:
 
 Recommended Wallets:
 - (Desktop & Mobile) Exodus <https://www.exodus.io> 
-![exodus](/images/crypto/exodus.png)
+![exodus](/images/crypto/exodus.webp)
 - Other advanced wallets I'd recommend come from the official projects or opensource on github.com 
 
 #### Cold Wallets
@@ -69,8 +69,8 @@ Cons:
 - Backups: If you misplace both the seed and device... everything is gone
 
 Recommended Wallets:
-- ![ledger](/images/crypto/ledger.png) Ledger <https://www.ledger.com>
-- ![trezor](/images/crypto/trezor.png) Trezor <https://trezor.io>
+- ![ledger](/images/crypto/ledger.webp) Ledger <https://www.ledger.com>
+- ![trezor](/images/crypto/trezor.webp) Trezor <https://trezor.io>
 
 ### Storing Crypto with a Custodian
 
@@ -78,7 +78,7 @@ These are companies that you are sending your money to for safe keeping, much li
 
 #### On and Off Ramp Companies
 
-![coinbase](/images/crypto/coinbase.jpg)
+![coinbase](/images/crypto/coinbase.webp)
 
 Companies like Coinbase or Gemini are the two I use often. These companies are based in the United States and you can link your bank account to them to transfer Crypto to Dollar directly into your checking account. The fees are high and they should only be used for the purpose. While they do offer other services, it will be at a premium. _Please Note: DO NOT use credit cards to purchase crypto! You will have exorbitant fees and it is NOT worth it!_  
 I don't recommend storing money here, but they do have a good track record. If you only want to hold crypto and do nothing with it, then it is relatively safe with these institutions. 
@@ -88,7 +88,7 @@ Gemini Referral Link: <https://christitus.com/gemini>
 
 #### Exchanges
 
-![bittrex](/images/crypto/bittrex.jpg)
+![bittrex](/images/crypto/bittrex.webp)
 
 These companies are all over the place. The two I like the most are Bittrex(US) and Binance(Japan). They are the juggernauts in the space and when making crypto to crypto transfers they have the most options with the lowest fees. Many exchanges have been hacked over the years, so I don't store any money here, but use it to exchange crypto. A good example is using Bittrex to transfer LBC tokens to ETH or BTC.  
 You don't have to use a company to exchange crypto, as you can use a decentralized exchange like Uniswap, but the fees are typically more. However, the convenience of not having to register with a form of ID is nice. Other exchange services like Uniswap exist but are centralized, examples are Simpleswap and Shapeshift, but they are starting to require ID (KYC Compliance) as well.  
@@ -102,7 +102,7 @@ Bittrex Referral Code: 4KR-KYJ-BQG
 
 ## Mining Crypto Using a Graphics Card
 
-![mining](/images/crypto/mining.jpg)
+![mining](/images/crypto/mining.webp)
 
 With the DeFi explosion and transaction fees going sky high we can make a profile with a good graphics card. Ethereum will be transitioning to Proof of Stake which means mining it with a graphics card will not be feasible sometime in 2021. However, until that time if interest stay the same or increases, mining will be profitable. Here is how I recommend mining during this time with just a single or small graphics card setup. 
 

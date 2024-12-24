@@ -3,7 +3,7 @@ title: "Making the Perfect Phone"
 
 date: 2022-10-10
 url: /making-the-perfect-phone/
-image: images/2022-thumbs/making-the-perfect-phone.jpg
+image: images/2022-thumbs/making-the-perfect-phone.webp
 categories:
   - Android
 tags:
@@ -85,17 +85,17 @@ Now download the release from their GitHub <https://github.com/0x192/universal-a
 
 Then launch the program
 
-![uad](/images/2022/android/uad.png)
+![uad](/images/2022/android/uad.webp)
 
 ## Usage
 
 As a minimalist I recommend starting with removing ALL the recommended packages. Simply select all with the following recommended settings at the top.
 
-![select](/images/2022/android/select.png)
+![select](/images/2022/android/select.webp)
 
 Then add back in any google related packages you might use while keeping your phone slimmed down. I only kept these 4 packages from the recommended settings after I finished.
 
-![final](/images/2022/android/final.png)
+![final](/images/2022/android/final.webp)
 
 Since I was using a Pixel 4a for my main device I also needed to change the default launcher to a more minimal one. Pixel launcher is problematic because of all the dependencies it has. I highly recommend [Niagara launcher](https://play.google.com/store/apps/details?id=bitpit.launcher&hl=en_US&gl=US). 
 
@@ -103,7 +103,7 @@ Since I was using a Pixel 4a for my main device I also needed to change the defa
 
 After the debloat and changing my launcher, this is what my phone looks like now. 
 
-![home](/images/2022/android/home.png)
+![home](/images/2022/android/home.webp)
 
 ## Walkthrough Video
 

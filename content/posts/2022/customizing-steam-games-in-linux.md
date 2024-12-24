@@ -3,7 +3,7 @@ title: "Customizing Steam Games in Linux"
 
 date: 2022-12-28
 url: /customizing-steam-games-in-linux/
-image: images/2022-thumbs/customizing-steam-games-in-linux.jpg
+image: images/2022-thumbs/customizing-steam-games-in-linux.webp
 categories:
   - Linux
 tags:
@@ -36,7 +36,7 @@ pipx install protontricks
 
 List all installed steam games with `protontricks -l` _Note: Old versions do NOT have this feature_
 
-![](/images/2022/customizing-steam-games-in-linux/list-proton.png)
+![](/images/2022/customizing-steam-games-in-linux/list-proton.webp)
 
 Adding corefonts to a prefix (this fixes a LOT of black screens or if launchers don't display fonts/text properly)
 
@@ -44,7 +44,7 @@ Syntax: `protontricks APPID corefonts`
 
 _Example of adding corefonts to Lord of The Rings Online._
 
-![](/images/2022/customizing-steam-games-in-linux/corefont-install.png)
+![](/images/2022/customizing-steam-games-in-linux/corefont-install.webp)
 
 Running custom commands (executables inside the game directories)
 
@@ -52,7 +52,7 @@ Syntax: `protontricks-launch --appid APPID COMMANDEXE`
 
 _Example launching a plugin installer for Lord of the Rings Online_
 
-![](/images/2022/customizing-steam-games-in-linux/plugin-launch.png)
+![](/images/2022/customizing-steam-games-in-linux/plugin-launch.webp)
 
 ## Walkthrough Video
 

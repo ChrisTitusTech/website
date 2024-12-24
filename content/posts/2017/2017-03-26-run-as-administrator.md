@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2017-03-27T02:26:36+00:00
 url: /run-as-administrator/
-image: images/2017/03/runasadmin.jpg
+image: images/2017/03/runasadmin.webp
 categories:
   - Windows
 tags:

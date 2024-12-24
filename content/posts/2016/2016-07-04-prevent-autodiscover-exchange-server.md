@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2016-07-04T16:44:02+00:00
 url: /prevent-autodiscover-exchange-server/
-image: images/2016/07/autodiscover-redirect-prompt.png
+image: images/2016/07/autodiscover-redirect-prompt.webp
 categories:
   - Windows Server
 tags:

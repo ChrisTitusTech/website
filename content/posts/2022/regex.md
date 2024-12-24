@@ -3,7 +3,7 @@ title: "Save HOURS of work with Regex"
 
 date: 2022-08-05
 url: /regex/
-image: images/2022-thumbs/regex.jpg
+image: images/2022-thumbs/regex.webp
 categories:
   - Linux
   - Windows
@@ -20,7 +20,7 @@ However, for many years I just couldn't be bothered to learn anything beside the
 ## Understanding RegEx
 Learning all the syntax for RegEx is not happening for me and probably many others. There is a solution for this and you don't need to... <https://regexr.com/>
 
-![text-example](/images/2022/regex/text-example.png)
+![text-example](/images/2022/regex/text-example.webp)
 
 Now that you have an explainer of all the syntax and cheat sheet. We just need to know a few basic features of RegEx, so you can perfect the pattern that you need. Also, the need to understand groups and variables will make the find and replace much more powerful. 
 

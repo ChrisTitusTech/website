@@ -3,7 +3,7 @@ title: "Easily moving Linux installs"
 
 date: 2022-04-25T17:04:25-05:00
 url: /chezmoi/
-image: images/2022-thumbs/chezmoi.jpg
+image: images/2022-thumbs/chezmoi.webp
 categories:
   - Linux
 tags:
@@ -16,7 +16,7 @@ Are you tired of having to reset all your app settings on a new install? Using a
 
 Chezmoi offers the most simplistic approach and versioning that is simply is my preferred solution over the other dot file tools below. Here is a brief diagram of how it works. _Note: I do not use git from command line in my tutorial for commits and pushes_
 
-![diagram.png](/images/2022/chezmoi/diagram.png)
+![diagram.webp](/images/2022/chezmoi/diagram.webp)
 
 ## Notes about other dot file tools
 
@@ -48,7 +48,7 @@ _Note: Most systems have ~/.local/bin, however a few do not_
 
 First Setup a new repository for your config files on GitHub
 
-![new-repo.png](/images/2022/chezmoi/new-repo.png)
+![new-repo.webp](/images/2022/chezmoi/new-repo.webp)
 
 I called mine "dotfiles" <https://github.com/ChrisTitusTech/dotfiles>
 
@@ -70,6 +70,6 @@ What happens if you edit the "original" file in the home directory? simply merge
 
 Now you are done for the day and you want to submit the changes to the remote repo so you can apply these changes to your other computers. You simply change directory to chezmoi with `chezmoi cd` or `cd ~/.local/share/chezmoi` and `git add files` -> `git commit -m "initial commit"` -> `git push` in the command line. However, I really like the desktop application GitHub desktop and prefer to add the ~/.local/share/chezmoi directory to it and do the add, commit, and push in that GUI GitHub Directory shown below. 
 
-![git-desktop.png](/images/2022/chezmoi/git-desktop.png)
+![git-desktop.webp](/images/2022/chezmoi/git-desktop.webp)
 
 

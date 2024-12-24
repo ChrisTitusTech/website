@@ -3,7 +3,7 @@ title: "Microsoft Is Driving Users Away"
 
 date: 2023-02-17
 url: /microsoft-is-driving-users-away/
-image: images/2023-thumbs/microsoft-is-driving-users-away.jpg
+image: images/2023-thumbs/microsoft-is-driving-users-away.webp
 categories:
   - Windows
 tags:

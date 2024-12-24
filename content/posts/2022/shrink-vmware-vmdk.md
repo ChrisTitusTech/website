@@ -3,7 +3,7 @@ title: "Shrink VMWare VMDK File"
 
 date: 2022-07-30T13:40:50-05:00
 url: /shrink-vmware-vmdk/
-image: images/2022-thumbs/shrink-vmware-vmdk.jpg
+image: images/2022-thumbs/shrink-vmware-vmdk.webp
 categories:
   - Linux
   - Windows
@@ -50,7 +50,7 @@ vmware-vdiskmanager.exe -k /path/to/shrink.vmdk
 
 #### Example
 
-![vdisk](/images/2022/vmware-vdisk.jpg)
+![vdisk](/images/2022/vmware-vdisk.webp)
 
 ## Still Too Big?
 
@@ -58,5 +58,5 @@ If it is still too large, you can simply export the VM to OVF format inside VMWa
 
 `export to ovf`
 
-![ovf](/images/2022/vmware-ovf.jpg)
+![ovf](/images/2022/vmware-ovf.webp)
 

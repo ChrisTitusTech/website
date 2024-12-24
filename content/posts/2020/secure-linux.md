@@ -3,7 +3,7 @@ title: "Secure Linux"
 
 date: 2020-08-18T13:02:25-05:00
 url: /secure-linux/
-image: images/2020-thumbs/secure-linux.jpg
+image: images/2020-thumbs/secure-linux.webp
 categories:
   - Linux
 tags:
@@ -15,7 +15,7 @@ This article covers basic security and settings I do with every Linux installati
 
 ## Check for Drovorub Malware
 
-![drovorub](/images/2020/drovorub/drovorub.jpg)
+![drovorub](/images/2020/drovorub/drovorub.webp)
 
 ```
 touch testfile
@@ -32,7 +32,7 @@ for mod in $(lsmod | tail -n +2 | cut -d' ' -f1); do modinfo ${mod} | grep -q "s
 
 ## Secure Boot
 
-![secure-boot](/images/2020/drovorub/secure-boot.jpg)
+![secure-boot](/images/2020/drovorub/secure-boot.webp)
 
 Secure Boot forces checks for kernel module signatures and is good not only for blocking Drovorub-style malware, but also prevents Evil Maid attacks as well. However, it can be complex and also make using bootable USB drives difficult. _Note: UEFI Boot Required... No Legacy/CSM._
 
@@ -50,7 +50,7 @@ Hard way involves signing packages that aren't stock which you might need on you
 
 ## Security Settings for All Linux Installs
 
-![github](/images/github.png)
+![github](/images/github.webp)
 
 I created a github script to make this easier but I wanted to break down what this script does. Secure-Linux Project <https://github.com/ChrisTitusTech/secure-linux/blob/master/secure.sh>
 

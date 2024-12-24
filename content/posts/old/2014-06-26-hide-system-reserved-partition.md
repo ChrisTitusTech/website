@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2014-06-26T17:55:42+00:00
 url: /hide-system-reserved-partition/
-image: images/2014/06/hard-disk-partition.png
+image: images/2014/06/hard-disk-partition.webp
 categories:
   - Windows
 

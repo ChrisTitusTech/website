@@ -3,7 +3,7 @@ title: "Change your Desktop Wallpaper"
 
 date: 2020-07-08T14:52:13-05:00
 url: /change-wallpaper/
-image: images/2020-thumbs/change-wallpaper.jpg
+image: images/2020-thumbs/change-wallpaper.webp
 categories:
   - Linux
   - Windows
@@ -21,7 +21,7 @@ GitHub Project: <https://github.com/Rawns/Reddit-Wallpaper-Changer>
 From the Releases Tab on GitHub download the latest version and install it.
 
 Here are the settings I recommend using:  
-![win10-wallsettings](/images/2020/wallpaper/wall-settings-w10.png)
+![win10-wallsettings](/images/2020/wallpaper/wall-settings-w10.webp)
 
 There is also an option to save all wallpapers locally. I like to save all downloaded wallpapers for future reference or build and offline repository.
 
@@ -67,11 +67,11 @@ Syntax Help `wallpaper-reddit --help`
   - Click "Show library" in the toolbar (if hidden)
 - Add "Run shell script" (from the Actions/Utilities)
   - Copy-and-paste your script into the window and Run- *Note: I used desktoppr to force wallpaper if script fails*
-  ![automator](/images/2020/wallpaper/macos-automator.jpg)
+  ![automator](/images/2020/wallpaper/macos-automator.webp)
 
 ```
 /usr/local/bin/wallpaper-reddit --startup
-/usr/local/bin/desktoppr ~/Pictures/Wallpapers/wallpaper.jpg
+/usr/local/bin/desktoppr ~/Pictures/Wallpapers/wallpaper.webp
 ```
 
 - Save it somewhere: a file called your_name.app will be created)
@@ -118,7 +118,7 @@ There is plenty of ways to have this automatically change the wallpaper on start
 
 ## Wallpaper-reddit Config File Settings
 
-The config file is in `~/.config/wallpaper-reddit`, and will be created automatically. Currently, the GNOME, XFCE, MATE, Unity, and Cinnamon Desktop Environments should be automatically detected and the program should set the wallpaper without any extra work. However, due to the varying nature of window managers, it is possible, even likely, that you may have to specify a custom command to set your wallpaper. The program will prompt you for this if this is the case; the exact command can be researched per desktop environment. If your desktop environment is not supported, leave the set command blank and it will auto download to the `~/Pictures/Wallpapers/` directory as wallpaper.jpg for the daily wallpaper. 
+The config file is in `~/.config/wallpaper-reddit`, and will be created automatically. Currently, the GNOME, XFCE, MATE, Unity, and Cinnamon Desktop Environments should be automatically detected and the program should set the wallpaper without any extra work. However, due to the varying nature of window managers, it is possible, even likely, that you may have to specify a custom command to set your wallpaper. The program will prompt you for this if this is the case; the exact command can be researched per desktop environment. If your desktop environment is not supported, leave the set command blank and it will auto download to the `~/Pictures/Wallpapers/` directory as wallpaper.webp for the daily wallpaper. 
 
 ### Config Options
 

@@ -3,7 +3,7 @@ title: "Hardest Game to Play on Steamdeck"
 
 date: 2023-02-06
 url: /hardest-game-to-play-on-steamdeck/
-image: images/2023-thumbs/hardest-game-to-play-on-steamdeck.jpg
+image: images/2023-thumbs/hardest-game-to-play-on-steamdeck.webp
 categories:
   - Linux
 tags:
@@ -35,15 +35,15 @@ Bottle Flatpak Install
 flatpak install flathub com.usebottles.bottles
 ```
 
-![](/images/2023/hardest-game-to-play-on-steamdeck/gaming-bottle.png)
+![](/images/2023/hardest-game-to-play-on-steamdeck/gaming-bottle.webp)
 
 Set Launch Options
 
-![](/images/2023/hardest-game-to-play-on-steamdeck/launch-options.png)
+![](/images/2023/hardest-game-to-play-on-steamdeck/launch-options.webp)
 
 **Bottles Bug: Nothing Happens when selection launch options**
 
-![](/images/2023/hardest-game-to-play-on-steamdeck/bottle-bug.png)
+![](/images/2023/hardest-game-to-play-on-steamdeck/bottle-bug.webp)
 
 If you run into this bug, then you need to manually edit the yml file at the root directory.
 

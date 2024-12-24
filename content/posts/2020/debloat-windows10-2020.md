@@ -3,7 +3,7 @@ title: "Debloat Windows in 2022"
 
 date: 2020-06-11T16:04:48-05:00
 url: /debloat-windows-10-2020/
-image: images/2022-thumbs/cleanup-windows-2022.jpg
+image: images/2022-thumbs/cleanup-windows-2022.webp
 categories:
   - Windows
 tags:

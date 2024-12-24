@@ -3,7 +3,7 @@ title: "Why I Hate Windows Defender"
 
 date: 2022-07-11T11:36:33-05:00
 url: /bad-windows-defender/
-image: images/2022-thumbs/bad-windows-defender.jpg
+image: images/2022-thumbs/bad-windows-defender.webp
 categories:
   - Windows
 tags:
@@ -27,7 +27,7 @@ Yes. It does detect a ton of viruses and have good detection rates as long as yo
 
 ## The Mafia for Software Developers
 
-![bad-defender](/images/2022-thumbs/bad-windows-defender.jpg)
+![bad-defender](/images/2022-thumbs/bad-windows-defender.webp)
 
 Smartscreen is powered by Windows Defender and you have to buy a $300 A YEAR code signing license with Extended Validation to bypass it. The EV cert is close to the mafia extorting business users for "protection". If you don't use Defender, you don't need to worry about smartscreen. Using standard code signing with an external anti-virus will work close to the same as Defender is disabled when you use a 3rd party av. 
 

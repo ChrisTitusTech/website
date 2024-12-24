@@ -3,7 +3,7 @@ title: "How I Setup My Website"
 
 date: 2022-10-07
 url: /how-i-setup-my-website/
-image: images/2022-thumbs/how-i-setup-my-website.jpg
+image: images/2022-thumbs/how-i-setup-my-website.webp
 categories:
   - Linux
   - Windows

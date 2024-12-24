@@ -3,7 +3,7 @@ title: "Linux Alternatives"
 
 date: 2024-05-29
 url: /linux-alternatives/
-image: images/2024-thumbs/linux-alternatives.jpg
+image: images/2024-thumbs/linux-alternatives.webp
 categories:
   - Linux
 tags:
@@ -1868,7 +1868,7 @@ _Everyone @ reddit.com/r/linux & reddit.com/r/ubuntu & vozforums.com & other for
 
 ## License
 
-[![Creative Commons License](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
+[![Creative Commons License](https://licensebuttons.net/l/by/4.0/88x31.webp)](https://creativecommons.org/licenses/by/4.0/)
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 

@@ -3,7 +3,7 @@ title: "Recovering Deleted Windows Boot Partition"
 
 date: 2023-04-24
 url: /recovering-deleted-windows-boot-partition/
-image: images/2023-thumbs/recovering-deleted-windows-boot-partition.jpg
+image: images/2023-thumbs/recovering-deleted-windows-boot-partition.webp
 categories:
   - Windows
 tags:
@@ -24,7 +24,7 @@ This is meant for a GPT Drive using EFI boot on a modern Windows. If you compute
 
 From Gparted in Linux create a FAT32 partition at least 300 MB in size with the `boot` flag.
 
-![bootflag](/images/2023/recover-deleted-partition/bootflag.png)
+![bootflag](/images/2023/recover-deleted-partition/bootflag.webp)
 
 ## Copy Boot Files from Windows ISO
 

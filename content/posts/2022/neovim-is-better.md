@@ -3,7 +3,7 @@ title: "Neovim Is Better"
 
 date: 2022-11-07
 url: /neovim-is-better/
-image: images/2022-thumbs/neovim-is-better.jpg
+image: images/2022-thumbs/neovim-is-better.webp
 categories:
   - Linux
   - Windows
@@ -63,7 +63,7 @@ Instead of making a big modular structure that you see in most Neovim projects, 
 
 USE `:checkhealth` FIRST!
 
-![](/images/2022/neovim-is-better/checkhealth.png)
+![](/images/2022/neovim-is-better/checkhealth.webp)
 
 Errors must be fixed to have a functional Neovim experience. Warnings can be ignored, but noted, because you may have failed installs for LSPs, Linters, and other tools. 
 
@@ -71,7 +71,7 @@ Errors must be fixed to have a functional Neovim experience. Warnings can be ign
 
 `:Mason`
 
-![](/images/2022/neovim-is-better/mason.png)
+![](/images/2022/neovim-is-better/mason.webp)
 
 _Note: I recommend ONLY installing what you USE!_
 

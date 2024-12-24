@@ -3,7 +3,7 @@ title: "The Teamviewer Scam"
 
 date: 2023-02-13
 url: /the-teamviewer-scam/
-image: images/2023-thumbs/the-teamviewer-scam.jpg
+image: images/2023-thumbs/the-teamviewer-scam.webp
 categories:
   - Linux
   - Windows
@@ -26,7 +26,7 @@ On June 1st, 2021 Teamviewer stopped supporting Teamviewr 9 & 10 versions that h
 
 Behind the scenes, Teamviewer has removed the ability to CANCEL any subscriptions. This used to not be the case, but you have to create a support ticket to cancel is the official text on their site.
 
-![](/images/2023/the-teamviewer-scam/cancel-ticket.png)
+![](/images/2023/the-teamviewer-scam/cancel-ticket.webp)
 
 Finding the support ticket creation is difficult and hidden through a sister site with a DIFFERENT login. 
 
@@ -34,7 +34,7 @@ Use this website: <https://support.teamviewer.com/en/support/tickets>
 
 If you do NOT cancel within 28 days of the renewal you WILL BE CHARGED for an ENTIRE YEAR!
 
-![](/images/2023/the-teamviewer-scam/28days.png)
+![](/images/2023/the-teamviewer-scam/28days.webp)
 
 Ticket answer time? 7-10 DAYS!
 

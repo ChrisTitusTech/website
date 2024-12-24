@@ -3,7 +3,7 @@ title: "Atomic Desktops: Revolutionizing the Linux Experience"
 
 date: 2024-05-11
 url: /linux-atomic-desktops/
-image: images/2024-thumbs/linux-atomic-desktops.jpg
+image: images/2024-thumbs/linux-atomic-desktops.webp
 categories:
   - Linux
 tags:

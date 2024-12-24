@@ -3,7 +3,7 @@ title: "Buying Cheap Ebay Graphics Cards"
 
 date: 2022-10-21
 url: /buying-cheap-ebay-graphics-card/
-image: images/2022-thumbs/buying-cheap-ebay-graphics-card.jpg
+image: images/2022-thumbs/buying-cheap-ebay-graphics-card.webp
 categories:
   - Linux
   - Windows
@@ -22,13 +22,13 @@ You can monitor these cards and get some amazing deals. The AMD 5700 XT I picked
 
 ## Buying through eBay
 
-![](/images/2022/buying-cheap-ebay-graphics-card/ebay-itemview.png)
+![](/images/2022/buying-cheap-ebay-graphics-card/ebay-itemview.webp)
 
 This particular post intrigued me because it the pictures that came with it and the extremely high feedback with high volumes. 
 
 The picture I paid the most attention to was the backplate. Notice over the screws the warranty symbol sticker. This is still there, even through they post says they upgraded the thermal pads. This tells me either the picture isn't of the card or the person took extreme care when doing this upgrade. The other thing that stood out was the card itself looked to be in very good condition.
 
-![](/images/2022/buying-cheap-ebay-graphics-card/backplate-5700x.png)
+![](/images/2022/buying-cheap-ebay-graphics-card/backplate-5700x.webp)
 
 ## Red Flags
 
@@ -42,9 +42,9 @@ There are couple things I look at when scanning the pictures.
 
 Even though I bought this card at $170 and that is below the retail and eBay historical pricing for the past couple years, I could have waited a bit longer. Once the new generation cards come out, these cards will drop even LOWER! That is the perfect time to scoop up a deal. For 1080p gaming, you'd have to hate yourself to buy a new generation card. These older gen cards give more performance than you could ever want at that resolution.
 
-![](/images/2022/buying-cheap-ebay-graphics-card/ebay.png)
+![](/images/2022/buying-cheap-ebay-graphics-card/ebay.webp)
 
-![](/images/2022/buying-cheap-ebay-graphics-card/retail.png)
+![](/images/2022/buying-cheap-ebay-graphics-card/retail.webp)
 
 ## Issues once you bought the card
 

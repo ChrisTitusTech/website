@@ -3,7 +3,7 @@ title: "Tiny11 Has Problems"
 
 date: 2023-04-07
 url: /tiny11-has-problems/
-image: images/2023-thumbs/tiny11-has-problems.jpg
+image: images/2023-thumbs/tiny11-has-problems.webp
 categories:
   - Windows
 tags:

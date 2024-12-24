@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-06-21T15:57:35+00:00
 url: /moving-unifi-access-point/
-image: images/2018/06/unifi-ap.png
+image: images/2018/06/unifi-ap.webp
 categories:
   - Networking
 tags:
@@ -20,7 +20,7 @@ This walkthrough goes over moving Unifi access point to another Unifi controll
 OR  
     - Reset the Unifi AP by the old paperclip method if you can&#8217;t putty or use existing controller
 
-![unifi reset](/images/2018/06/reset-unifi.png)
+![unifi reset](/images/2018/06/reset-unifi.webp)
 
 ### Second discover device or manually set-inform
 
@@ -34,7 +34,7 @@ Find the IP of the AP (You can easily grab this by looking at old controller OR 
   - Adopt AP in new controller webpage
     - Type AGAIN: `set-inform http://ip-of-controller:8080/inform`
 
-![unifi set-inform](/images/2018/06/unifi-set-inform.png)
+![unifi set-inform](/images/2018/06/unifi-set-inform.webp)
 
 We are now done moving Unifi access point on to the new Controller, and as a result, will be in the device list. From here you will be able to manage it, upgrade firmware, and do all the configuration options needed.
 

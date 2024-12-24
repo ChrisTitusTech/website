@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2017-02-14T21:16:13+00:00
 url: /create-swap-file/
-image: images/2017/02/swapfile.png
+image: images/2017/02/swapfile.webp
 categories:
   - Linux
 tags:

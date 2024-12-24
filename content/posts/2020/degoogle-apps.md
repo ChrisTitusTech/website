@@ -3,7 +3,7 @@ title: "Degoogle Apps"
 
 date: 2020-06-02T21:28:09-05:00
 url: /degoogle-apps/
-image: images/2020-thumbs/degoogle-apps.jpg
+image: images/2020-thumbs/degoogle-apps.webp
 categories:
   - Android 
 tags:

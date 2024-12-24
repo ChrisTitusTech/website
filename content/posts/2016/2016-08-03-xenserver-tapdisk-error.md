@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2016-08-03T16:12:57+00:00
 url: /xenserver-tapdisk-error/
-image: images/2016/07/xenserver.jpg
+image: images/2016/07/xenserver.webp
 categories:
   - Virtualization
 tags:

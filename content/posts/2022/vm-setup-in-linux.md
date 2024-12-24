@@ -3,7 +3,7 @@ title: "Setup Qemu in Debian Linux"
 
 date: 2022-01-12T16:28:59-05:00
 url: /vm-setup-in-linux/
-image: images/2022-thumbs/qemu.jpg
+image: images/2022-thumbs/qemu.webp
 categories:
   - Linux
 tags:
@@ -28,7 +28,7 @@ Verify that Libvirtd service is started
 ```
 sudo systemctl status libvirtd.service
 ```
-![libvirtd-service](/images/2022/libvirtd-service.png)
+![libvirtd-service](/images/2022/libvirtd-service.webp)
 
 ## Start Default Network for Networking
 

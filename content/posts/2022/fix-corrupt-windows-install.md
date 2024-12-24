@@ -3,7 +3,7 @@ title: "Fix Corrupted Windows Install"
 
 date: 2022-11-16
 url: /fix-corrupt-windows-install/
-image: images/2022-thumbs/fix-corrupt-windows-install.jpg
+image: images/2022-thumbs/fix-corrupt-windows-install.webp
 categories:
   - Windows
 tags:
@@ -19,7 +19,7 @@ Using SFC and DISM is often done in haste and incorrectly. If you need to fix a 
 
 ### Basic Online Command
 
-![](/images/2022/fix-corrupt-windows-install/dism-normal.png)
+![](/images/2022/fix-corrupt-windows-install/dism-normal.webp)
 
 ```
 DISM /Online /Cleanup-Image /CheckHealthDISM /Online /Cleanup-Image /CheckHealth

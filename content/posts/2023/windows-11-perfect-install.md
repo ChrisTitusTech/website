@@ -3,7 +3,7 @@ title: "Windows 11 Perfect Install"
 
 date: 2023-08-05
 url: /windows-11-perfect-install/
-image: images/2023-thumbs/windows-11-perfect-install.jpg
+image: images/2023-thumbs/windows-11-perfect-install.webp
 categories:
   - Windows
 tags:
@@ -23,7 +23,7 @@ Choose English World from initial boot screen (Credit to ThioJoe for this tip - 
 
 Run `intl.cpl` or launch the windows toolbox and use legacy panels to launch Region Settings. Then switch it to US region.
 
-![Alt text](/images/2023/windows-11-perfect-install/region.png)
+![Alt text](/images/2023/windows-11-perfect-install/region.webp)
 
 If you are using the Microsoft Store you need to search for Region in Settings and Set it to United States
 
@@ -31,7 +31,7 @@ If you are using the Microsoft Store you need to search for Region in Settings a
 
 Run `irm christitus.com/win | iex` from Administrator Terminal (Powershell)
 
-![Alt text](/images/2023/windows-11-perfect-install/winutil.png)
+![Alt text](/images/2023/windows-11-perfect-install/winutil.webp)
 
 ## (Optional) Browser Change from Edge
 

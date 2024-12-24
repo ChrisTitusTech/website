@@ -3,7 +3,7 @@ title: "Unlock Steam Deck"
 
 date: 2022-07-27T21:26:53-05:00
 url: /unlock-steam-deck/
-image: images/2022-thumbs/unlock-steam-deck.jpg
+image: images/2022-thumbs/unlock-steam-deck.webp
 categories:
   - Linux
 tags:
@@ -47,7 +47,7 @@ This solves all your signing issues.
 
 ## Making your own Steam Deck HTPC
 
-![holoiso](/images/2022/holo.png)
+![holoiso](/images/2022/holo.webp)
 
 The new steam interface for steam deck is absolutely a home run. It just works with so much functionality and much more when only controling your system with a controller. 
 

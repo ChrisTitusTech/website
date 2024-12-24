@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2017-03-09T17:35:18+00:00
 url: /benchmark-dns-server/
-image: images/2017/03/Secure-DNS.png
+image: images/2017/03/Secure-DNS.webp
 categories:
   - Networking
 tags:
@@ -18,7 +18,7 @@ Go to https://www.grc.com/dns/benchmark.htm and download the benchmark tool. Fro
 
 Here are my results, Enjoy!
 
-![DNS Results](/images/2017/03/dnsresults.png)  
+![DNS Results](/images/2017/03/dnsresults.webp)  
   * Red = Cached Time, Green = Uncached Time, and Blue = dotcom Time
   * Grey Dots = Filters bad domain names by default, Green Dots = No filtering
 

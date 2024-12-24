@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2015-12-03T22:47:50+00:00
 url: /ftp-credentials-required/
-image: images/2015/12/ftp-creds.png
+image: images/2015/12/ftp-creds.webp
 categories:
   - Linux
 

@@ -3,7 +3,7 @@ title: "Why I Hate Most Linux Distributions"
 
 date: 2022-10-28
 url: /hate-linux-distributions/
-image: images/2022-thumbs/hate-linux-distributions.jpg
+image: images/2022-thumbs/hate-linux-distributions.webp
 categories:
   - Linux
 tags:
@@ -29,7 +29,7 @@ Choice isn't bad... Right?
 
 The biggest pitfall is that they all take different design decisions and often fall short in areas. This couldn't be more evident than the success of the Steam Deck and Chrome OS. 
 
-![linux-suit](/images/2022/tux-suit.png)
+![linux-suit](/images/2022/tux-suit.webp)
 
 ## The Year of the CORPORATE Linux Desktop
 
@@ -41,7 +41,7 @@ You can ask any Linux neckbeard... they will say they have money, marketing, and
 
 Both Chrome OS and Steam Deck get update at least once a month and sometimes more often. This is where most Linux distributions fail because they don't have the man power to develop at such a rapid pace or the money to quality test it like these corporate system can. 
 
-![debian](/images/2022/debian.png)
+![debian](/images/2022/debian.webp)
 
 ## The Distribution I use
 
@@ -51,7 +51,7 @@ This is where the disconnect happens with normal users. They hear Linux is this 
 
 Last month, Arch Linux had a bad update that BROKE GRUB and users couldn't boot their system for example. 
 
-![](/images/2022/hate-linux-distributions/doom.png)
+![](/images/2022/hate-linux-distributions/doom.webp)
 
 ## Is Linux Desktop Doomed?
 

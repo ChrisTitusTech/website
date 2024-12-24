@@ -3,7 +3,7 @@ title: "Windows Explorer Stealing CPU"
 
 date: 2022-12-07
 url: /windows-explorer-stealing-cpu/
-image: images/2022-thumbs/windows-explorer-stealing-cpu.jpg
+image: images/2022-thumbs/windows-explorer-stealing-cpu.webp
 categories:
   - Windows
 tags:

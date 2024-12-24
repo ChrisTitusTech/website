@@ -3,7 +3,7 @@ title: "Steamdeck as a Desktop"
 
 date: 2023-01-16
 url: /steamdeck-as-a-desktop/
-image: images/2023-thumbs/steamdeck-as-a-desktop.jpg
+image: images/2023-thumbs/steamdeck-as-a-desktop.webp
 categories:
   - Linux
 tags:

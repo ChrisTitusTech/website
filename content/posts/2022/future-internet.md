@@ -2,7 +2,7 @@
 title: "Future Internet"
 date: 2022-06-11T15:07:10-05:00
 url: /future-internet/
-image: images/2022-thumbs/future-internet.jpg
+image: images/2022-thumbs/future-internet.webp
 categories:
   - Linux
   - Windows
@@ -28,7 +28,7 @@ Enable IPFS Companion Extension
 After installing IPFS Companion change the following brave settings under Settings -> IPFS
 - Enable IPFS Public Gateway Fallback (Not Required, but recommended)
 - Enable IPFS Companion 
-![ipfs-settings](/images/2022/future-internet/ipfs-settings.png)
+![ipfs-settings](/images/2022/future-internet/ipfs-settings.webp)
 
 Enable Blockchain domains - The Unstoppable Domains extension (In the future, this should be baked into many browsers. Brave natively supports .crypto)
  - https://unstoppabledomains.com/extension
@@ -45,7 +45,7 @@ The technology powering blockchains are amazing, but most just care about the mo
 ## Buying Websites Forever
 
 Currently ens domains requires renewing websites, while unstoppable domains provides them forever. This entire space is exploding, so getting a good name is becoming more and more difficult just like the traditional web. There is a very healthy resale market on Opensea.io that folks are using to squat or resell domains purchased through unstoppable domains. If adoption keeps moving this direction, we will soon see some pretty ridiculous prices on domain names. Buying direct from unstoppable domains ranges from $10 to $100 per domain name, depending on domain ending. 
-![domains](/images/2022/future-internet/domains.png)
+![domains](/images/2022/future-internet/domains.webp)
 
 Here is discount link for unstoppable if you are interested in picking up a domain: <https://unstoppabledomains.pxf.io/MX3zVM>
 

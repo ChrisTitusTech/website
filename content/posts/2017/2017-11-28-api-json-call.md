@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2017-11-28T22:03:53+00:00
 url: /api-json-call/
-image: images/2017/11/jsonapi.png
+image: images/2017/11/jsonapi.webp
 categories:
   - Linux
 tags:

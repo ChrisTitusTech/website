@@ -3,7 +3,7 @@ title: "Creating a Website on Raspberry Pi"
 
 date: 2021-04-20T10:02:56-05:00
 url: /pi-website/
-image: images/2021-thumbs/pi-website.jpg
+image: images/2021-thumbs/pi-website.webp
 categories:
   - Linux
 tags:

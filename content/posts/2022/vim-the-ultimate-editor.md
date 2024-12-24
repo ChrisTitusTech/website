@@ -3,7 +3,7 @@ title: "Vim the Ultimate Editor"
 
 date: 2022-10-14
 url: /vim-the-ultimate-editor/
-image: images/2022-thumbs/vim-the-ultimate-editor.jpg
+image: images/2022-thumbs/vim-the-ultimate-editor.webp
 categories:
   - Linux
   - Windows

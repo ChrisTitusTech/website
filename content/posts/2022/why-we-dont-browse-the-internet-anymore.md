@@ -3,7 +3,7 @@ title: "Why We Don't Browse the Internet Anymore"
 
 date: 2022-11-21
 url: /why-we-dont-browse-the-internet-anymore/
-image: images/2022-thumbs/why-we-dont-browse-the-internet-anymore.jpg
+image: images/2022-thumbs/why-we-dont-browse-the-internet-anymore.webp
 categories:
   - Linux
   - Windows
@@ -20,7 +20,7 @@ Subscribe to the sites and information you want to see and not have an algorithm
 
 ## How we used to browse the Internet
 
-![](/images/2022/why-we-dont-browse-the-internet-anymore/altavista.png)
+![](/images/2022/why-we-dont-browse-the-internet-anymore/altavista.webp)
 
 The era of altavista, dogpile, askjeeves, yahoo, excite, lycos, and others was an era of innovation and competition. There was a heated rivalry between Internet Exploader and Netscape, which Microsoft inevitably won with dirty business practices. That era was a time of discovery and businesses were figuring out how to make money on the internet.  
 
@@ -28,7 +28,7 @@ Information was scattered everywhere and the web was decentralized among hundred
 
 ## How we use the Internet today
 
- ![](/images/2022/why-we-dont-browse-the-internet-anymore/google.png)
+ ![](/images/2022/why-we-dont-browse-the-internet-anymore/google.webp)
 
  We google anything we want, use our chromium browsers, and social media for everything else. Between Google, Facebook (I'm not calling it Meta), and Amazon we have everything. Facebook is dying off and for old people raging about some political garbage, Amazon we order anything want to appear on our doorstep, and Google is what powers almost every search we do. 
 

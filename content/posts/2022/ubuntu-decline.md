@@ -3,7 +3,7 @@ title: "Ubuntu's Decline"
 
 date: 2022-06-27T15:52:45-05:00
 url: /ubuntu-decline/
-image: images/2022-thumbs/ubuntu-decline.jpg
+image: images/2022-thumbs/ubuntu-decline.webp
 categories:
   - Linux
 tags:
@@ -11,7 +11,7 @@ tags:
 ---
 When Ubuntu came on the scene in 2004, it made desktop Linux viable to many with its ease of use and friendly layout. Instead of constantly improving this and becoming the "King of All Distributions" it took a very different path. While I still use Ubuntu server with some caveats, I will NOT use Ubuntu Desktop. 
 <!--more-->
-![ubuntu](/images/2022/ubuntu-decline/ubuntu.png)
+![ubuntu](/images/2022/ubuntu-decline/ubuntu.webp)
 ## What Ubuntu does right
 
  Before we roast Ubuntu and its decline, we need to understand why they rose to the top. Not only did they make Linux desktop easy, but they did the same in the server realm as well. They also made highly successful and well designed products for Linux, like the Unity Desktop Environment. They were one of the first to also make it easy for us to use nVidia cards on our systems without much fuss. 
@@ -21,7 +21,7 @@ When Ubuntu came on the scene in 2004, it made desktop Linux viable to many with
 This is not going to be an exhaustive list, but rather the large things they have done to ensure their downfall and what has caused many to leave Ubuntu to never return. 
 
 ### Snaps
-![snaps](/images/2022/ubuntu-decline/snaps.png)
+![snaps](/images/2022/ubuntu-decline/snaps.webp)
 
 By far the biggest issue with Ubuntu is Snaps. They created a universal package manager that can work on any system. Sounds amazing, right? WRONG! The two biggest issues are simple: Its slow as hell and closed source. 
 

@@ -3,7 +3,7 @@ title: "Pros Use Bleachbit"
 
 date: 2022-10-12
 url: /pros-use-bleachbit/
-image: images/2022-thumbs/pros-use-bleachbit.jpg
+image: images/2022-thumbs/pros-use-bleachbit.webp
 categories:
   - Linux
   - Windows
@@ -27,7 +27,7 @@ I made a whole article on the CCleaner malware issue, but the main issue today i
 
 As a free and open source tool you simply run Bleachbit when you want to. No extra process run when you aren't using it and it does a fantastic job on ANY system. 
 
-![bleachbit](/images/2022/bleachbit.png)
+![bleachbit](/images/2022/bleachbit.webp)
 
 There is a TON of features and it deletes not only system temporary files, but also program specific temporary files like those stored from Discord or your web browser.
 

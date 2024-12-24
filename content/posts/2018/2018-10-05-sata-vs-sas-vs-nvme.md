@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-10-05T20:28:58+00:00
 url: /sata-vs-sas-vs-nvme/
-image: images/2018/10/ssdvsnvme.png
+image: images/2018/10/ssdvsnvme.webp
 categories:
   - Hardware
 tags:
@@ -42,7 +42,7 @@ This is a quick breakdown of the differences between SATA vs SAS vs NVMe. After
 
 No real surprises here but having it bullet-pointed makes the comparison very easy. I hope this helps those trying to decide on what to buy and typical performance you can expect from it.
 
-![nvmevssata-pic](/images/2018/10/ssdvsnvme.png)
+![nvmevssata-pic](/images/2018/10/ssdvsnvme.webp)
 
 ## SATA vs SAS vs NVMe | Performance Winner: NVMe
 

@@ -3,7 +3,7 @@ title: "Ultimate Windows Setup Guide"
 
 date: 2020-07-27T14:26:59-05:00
 url: /ultimate-windows-setup-guide/
-image: images/2020-thumbs/ultimate-windows-setup-guide.jpg
+image: images/2020-thumbs/ultimate-windows-setup-guide.webp
 categories:
   - Windows
 tags:
@@ -14,7 +14,7 @@ tags:
 
 ## One Command to Do Everything
 
-![OneCommand](/images/onecommand.png)
+![OneCommand](/images/onecommand.webp)
 
 ```
 powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io/JJ8R4')"
@@ -22,7 +22,7 @@ powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io
 
 ## GitHub Project for Debloating, Optimization, and Installing Programs
 
-![github](/images/github.png)
+![github](/images/github.webp)
 
 <https://github.com/ChrisTitusTech/win10script/tree/master>
 

@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-09-12T20:49:44+00:00
 url: /google-chrome-update-69-address-bar-and-how-to-fix-it/
-image: images/2018/09/chrome.jpg
+image: images/2018/09/chrome.webp
 categories:
   - Windows
   - Linux

@@ -3,7 +3,7 @@ title: "How to Use SSH with Github"
 
 date: 2020-09-03T10:57:46-05:00
 url: /ssh-github/
-image: images/github.png
+image: images/github.webp
 categories:
   - Linux
 tags:
@@ -12,7 +12,7 @@ tags:
 Setting Up SSH Authentication with GitHub for Secure Access with 2FA GitHub Accounts
 <!--more-->
 
-![ssh](/images/ssh.png)
+![ssh](/images/ssh.webp)
 
 ## Creating SSH Keys
 
@@ -37,7 +37,7 @@ ssh-add ~/.ssh/github
 
 Copy the contents of `~/.ssh/github.pub` to the new key field in GitHub. If you have xclip installed type this `cat ~/.ssh/github.pub | xclip -sel clip` to copy the contents. 
 
-![github-pub](/images/2020/github-ssh.jpg)
+![github-pub](/images/2020/github-ssh.webp)
 
 ## Test GitHub SSH Access
 

@@ -3,7 +3,7 @@ title: "Cursor Editor"
 
 date: 2024-04-05
 url: /cursor-editor/
-image: images/2024-thumbs/cursor-editor.jpg
+image: images/2024-thumbs/cursor-editor.webp
 categories:
   - Linux
   - Windows

@@ -3,7 +3,7 @@ title: "Crowdstrike Alternatives"
 
 date: 2024-07-26
 url: /crowdstrike-alternatives/
-image: images/2024-thumbs/crowdstrike-alternatives.jpg
+image: images/2024-thumbs/crowdstrike-alternatives.webp
 categories:
   - Windows
 tags:

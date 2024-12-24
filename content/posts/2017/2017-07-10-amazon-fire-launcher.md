@@ -18,11 +18,11 @@ The process to use Google Services and Googles Store instead is a bit involved b
 
   * Enable ADP USB Debugging (Settings -> Device -> Tap Serial 10 Times -> Select Developer options -> Turn ADP Debugging ON)
   
-![ADP Enable](/images/2017/07/ADP-Enable.png)
+![ADP Enable](/images/2017/07/ADP-Enable.webp)
 
   * Enable Downloads from Unknown Sources (Settings -> Security -> Allow Unknown Sources ON)
   
-![Unknown Sources](/images/2017/07/Unknown-Sources.png)
+![Unknown Sources](/images/2017/07/Unknown-Sources.webp)
 
   * Install Google Play Services 
       * Plug Device into USB on Computer and run the Supertool as Administrator 
@@ -33,7 +33,7 @@ The process to use Google Services and Googles Store instead is a bit involved b
           * Wait for it to Finish and Close the program
   * Launch Google Play using Search on Home Screen
   
-![Search Play](/images/2017/07/Search-Play.png)
+![Search Play](/images/2017/07/Search-Play.webp)
 
   * Sign-in to Google
   * Update Google Play Services (Note: you can type Google Play Services in or launch update from the notifications tray &#8212; This will take 5-10 minutes to update)
@@ -46,7 +46,7 @@ _Note: This is the shortlink for https://github.com/BaronKiko/LauncherHijackV2/
   * Select Nova Launcher in the App and hit Ok at the prompt
   * Go back to settings -> Accessibility ->To detect home button press -> Switch to On
   
-![Hijack Launcher](/images/2017/07/HijackLauncher.png)
+![Hijack Launcher](/images/2017/07/HijackLauncher.webp)
 
 **Finished, Enjoy being able to use Google Services on your Amazon Fire!**
 

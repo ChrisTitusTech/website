@@ -3,7 +3,7 @@ title: "Setting Up the Ultimate Windows 11"
 
 date: 2022-10-19
 url: /setting-up-the-ultimate-windows-11/
-image: images/2022-thumbs/setting-up-the-ultimate-windows-11.jpg
+image: images/2022-thumbs/setting-up-the-ultimate-windows-11.webp
 categories:
   - Windows
 tags:

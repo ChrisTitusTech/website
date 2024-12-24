@@ -3,7 +3,7 @@ title: "You Will Watch Ads"
 
 date: 2023-05-15
 url: /you-will-watch-ads/
-image: images/2023-thumbs/you-will-watch-ads.jpg
+image: images/2023-thumbs/you-will-watch-ads.webp
 categories:
   - Linux
   - Windows
@@ -18,7 +18,7 @@ This is happening in several different ways in the coming months. Let's go over 
 
 ## YouTube detecting Ad Blockers
 
-![](/images/2023/you-will-watch-ads/yt-ads.png)
+![](/images/2023/you-will-watch-ads/yt-ads.webp)
 
 YouTube is testing blocking ad blockers like so many different news websites do right now. This will bring the rise of secondary viewers and the use of other sites likes odysee or freetube. These sites rely on YouTube's API and public sync, which will also be in the cross-hairs very soon.
 

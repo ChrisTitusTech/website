@@ -3,7 +3,7 @@ title: "How to Sync Local Files"
 
 date: 2023-01-20
 url: /sync-local-files/
-image: images/2023-thumbs/sync-local-files.jpg
+image: images/2023-thumbs/sync-local-files.webp
 categories:
   - Linux
   - Windows
@@ -43,27 +43,27 @@ brew install --cask syncthing
 ```
 ## Configuration
 
-![](/images/2023/sync-local-files/config.png)
+![](/images/2023/sync-local-files/config.webp)
 
 With multiple syncthing clients you can connect one using "Connect Remote Device" this is what the server interface looks like.
 
-![](/images/2023/sync-local-files/server.png)
+![](/images/2023/sync-local-files/server.webp)
 
 On the other system it will prompt to connect the two.
 
-![](/images/2023/sync-local-files/client.png)
+![](/images/2023/sync-local-files/client.webp)
 
 I generally always have a main server that manages all the connects and hosts the share. You don't have to do this, but it's easier to manage. To start syncing -> Create a folder -> Edit Folder -> Click Sharing Options -> Check the other syncthing computers to share it to!
 
-![](/images/2023/sync-local-files/share.png)
+![](/images/2023/sync-local-files/share.webp)
 
 On the client computers click add and watch the sync happen. This is the final result of the sync:
 
-![](/images/2023/sync-local-files/final-sync.png)
+![](/images/2023/sync-local-files/final-sync.webp)
 
 ### Disable External Access
 
-![](/images/2023/sync-local-files/settings.png)
+![](/images/2023/sync-local-files/settings.webp)
 
 This simple configuration will set everything to LAN only. Making sure anon usage and Global Discovery are disabled will work for most.
 
@@ -76,7 +76,7 @@ However, for a deeper dive for those security minded and configuration junkies, 
 
 Here is Syncthing's wonderful backup system. I always use this for the times I delete something or need to recover from a bad sync. The options are: simple, trash can, staggered, and external. If you want basic backups, choose simple. Trash can is good for deleted files and often you want to grab an older version of an existing file when using sync. Personally, I do the overkill option of staggered versioning. This hold all the different version in a hour, day, week, month format til the end of the retention period. This will use a TON of space where the folder is synced from, so be CAREFUL!
 
-![](/images/2023/sync-local-files/backup.png)
+![](/images/2023/sync-local-files/backup.webp)
 
 ## Walkthrough Video
 

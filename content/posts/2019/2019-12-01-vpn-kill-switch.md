@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-12-02T05:31:59+00:00
 url: /vpn-kill-switch/
-image: images/2019/12/vpn-kill-switch-300x169.jpg
+image: images/2019/12/vpn-kill-switch-300x169.webp
 categories:
   - Linux
   - Networking
@@ -17,7 +17,7 @@ This will show you how to set up a VPN Kill Switch so all traffic will come from
 
 ## Install packages
 
-![install image](../images/2019/12/instal.png)
+![install image](../images/2019/12/instal.webp)
 
 `sudo apt install openvpn ufw -y`  
 _*Note: use apt instead of dnf on Ubuntu or Debian Servers_
@@ -37,7 +37,7 @@ My recommendation for a Public VPN Provider is Express VPN. It is what I use bel
 
 ## Service creation
 
-![sysinstall image](../images/2019/12/sysinstall.png)
+![sysinstall image](../images/2019/12/sysinstall.webp)
 
 `ls /lib/systemd/system/`  
 _*Check for openvpn-client@ or openvpn@_  
@@ -45,7 +45,7 @@ _*Check for openvpn-client@ or openvpn@_
 
 ## Disable ipv6 and Secure System
 
-![sysctl](../images/2019/12/sysctl.png)
+![sysctl](../images/2019/12/sysctl.webp)
 
 `sudo nano /etc/sysctl.conf`  
 > net.ipv6.conf.all.disable_ipv6=1   
@@ -60,7 +60,7 @@ _*Check for openvpn-client@ or openvpn@_
 
 ## Firewall ufw blocks &#8211; VPN Kill Switch
 
-![install image](../images/2019/12/vpnsetup.png)
+![install image](../images/2019/12/vpnsetup.webp)
 
 `sudo nano /etc/default/ufw`  
 > IPV6=no
@@ -82,7 +82,7 @@ _*check port by doing head /etc/openvpn/expressvpn.conf_
 
 ## External Program Setup on Server
 
-![install image](../images/2019/12/transmission.png)
+![install image](../images/2019/12/transmission.webp)
 
 **X11 Forwarding**  
 {{< youtube auePeI8vZA8 >}}  

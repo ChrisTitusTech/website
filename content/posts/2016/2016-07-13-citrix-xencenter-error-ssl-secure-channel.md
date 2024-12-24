@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2016-07-13T14:24:04+00:00
 url: /citrix-xencenter-error-ssl-secure-channel/
-image: images/2016/07/xenserver.jpg
+image: images/2016/07/xenserver.webp
 categories:
   - Virtualization
 tags:

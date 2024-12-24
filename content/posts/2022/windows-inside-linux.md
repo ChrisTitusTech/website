@@ -3,7 +3,7 @@ title: "Setting up Windows inside Linux"
 
 date: 2022-09-26
 url: /windows-inside-linux/
-image: images/2022-thumbs/windows-inside-linux.jpg
+image: images/2022-thumbs/windows-inside-linux.webp
 categories:
   - Linux
   - Windows
@@ -24,7 +24,7 @@ Another good resource for obtaining VirtIO drivers is from the proxmox wiki <htt
 ### Enable QEMU Guest Agent
 Now you need to modify the VM to make use of the guest agent drivers. We need to add the qemu agent channel. Add Hardware -> Channel and copy these settings
 
-![guest-agent](/images/2022/qemu/guest-agent.png)
+![guest-agent](/images/2022/qemu/guest-agent.webp)
 
 ## Passing Devices Through
 There are two main devices that you may want to pass through to a Windows VM. Hard Drives and Graphics Cards. Passing through a hard drive will give a good uplift in processing power and general VM response. The graphics card is very technical and frankly not recommended, but can be doable on some systems. 
@@ -32,7 +32,7 @@ There are two main devices that you may want to pass through to a Windows VM. Ha
 ### Dedicated Hard Drive
 Simply select Add Hardware -> Storage and copy these settings
 
-![hdd](/images/2022/qemu/hdd.png)
+![hdd](/images/2022/qemu/hdd.webp)
 
 ### Dedicated Graphics Card
 This is referred to as PCI Passthrough and can be dicey on some systems. I've had some motherboards that can't do this and others that can. The best guide and scripts I've found are from HikariKnight and his GitHub @ <https://github.com/HikariKnight/quickpassthrough>

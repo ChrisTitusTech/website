@@ -3,7 +3,7 @@ title: "Replace Windows Search"
 
 date: 2023-01-18
 url: /everything-toolbar/
-image: images/2023-thumbs/everything-toolbar.jpg
+image: images/2023-thumbs/everything-toolbar.webp
 categories:
   - Windows
 tags:
@@ -59,11 +59,11 @@ Easiest way to disable indexing and the performance hog that it is. Disable the 
 
 Open Run command: Right-click start button and select run
 
-![](/images/2023/everything-toolbar/run.png)
+![](/images/2023/everything-toolbar/run.webp)
 
 Disable the Service by stopping and disabling it
 
-![](/images/2023/everything-toolbar/service.png)
+![](/images/2023/everything-toolbar/service.webp)
 
 ## Walkthrough Video
 

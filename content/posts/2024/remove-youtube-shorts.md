@@ -3,7 +3,7 @@ title: "Remove Youtube Shorts"
 
 date: 2024-01-08
 url: /remove-youtube-shorts/
-image: images/2024-thumbs/remove-youtube-shorts.jpg
+image: images/2024-thumbs/remove-youtube-shorts.webp
 categories:
   - Linux
   - Windows
@@ -15,7 +15,7 @@ draft: false
 Remove YouTube shorts from your video browsing experience with the following blocklists!
 <!--more-->
 
-![](/images/2024/remove-youtube-shorts/youtube.png)
+![](/images/2024/remove-youtube-shorts/youtube.webp)
 
 ## Blocklist
 

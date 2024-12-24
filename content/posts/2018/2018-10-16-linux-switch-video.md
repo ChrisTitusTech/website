@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-10-16T17:59:04+00:00
 url: /linux-switch-video/
-image: images/2018/10/why-should-I-switch-to-linux.jpg
+image: images/2018/10/why-should-I-switch-to-linux.webp
 categories:
   - Linux
 tags:

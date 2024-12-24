@@ -3,7 +3,7 @@ title: "Macos Sysadmin Tips"
 
 date: 2020-12-14T17:25:22-06:00
 url: /macos-sysadmin-tips/
-image: images/2020-thumbs/macos-sysadmin-tips.jpg
+image: images/2020-thumbs/macos-sysadmin-tips.webp
 categories:
   - macos
 tags:
@@ -35,7 +35,7 @@ Kernel sources for macOS 11 have not been released yet, so I assume it is curren
 
 ## Smart Folders
 
-You can save Finder searches as a so called smart folder, where the found files will be symlinked into the folder. This is useful for a lot of things, such as symlinking all files of a certain file format to the same folder, so you can have a Photos folder that will contain symlinks of all .png files on the system. The symlinks refresh automatically, so when ever you add a new .png somewhere to the filesystem, it would get symlinked to this folder.
+You can save Finder searches as a so called smart folder, where the found files will be symlinked into the folder. This is useful for a lot of things, such as symlinking all files of a certain file format to the same folder, so you can have a Photos folder that will contain symlinks of all .webp files on the system. The symlinks refresh automatically, so when ever you add a new .webp somewhere to the filesystem, it would get symlinked to this folder.
 
 
 ## Automator and Folder Actions

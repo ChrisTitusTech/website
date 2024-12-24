@@ -3,7 +3,7 @@ title: "Ultimate Windows 10 Install ISO"
 
 date: 2021-01-20T10:23:43-06:00
 url: /Ultimate-Windows-10-Install-ISO/
-image: images/2021-thumbs/Ultimate-Windows-10-Install-ISO.jpg
+image: images/2021-thumbs/Ultimate-Windows-10-Install-ISO.webp
 categories:
   - Windows
 tags:
@@ -25,7 +25,7 @@ Download MSMG Toolkit from their website.
 
 <https://msmgtoolkit.in/download.html>
 
-![msmg](/images/2021/01-win10iso/msmg.png)
+![msmg](/images/2021/01-win10iso/msmg.webp)
 
 ### Expand and Mount Windows
 
@@ -71,7 +71,7 @@ Now let's make it so we will automatically install Windows 10 without answering 
 
 Fill out the form and then click download at the bottom of the page.
 
-![autounattend](/images/2021/01-win10iso/autounattend.jpg)
+![autounattend](/images/2021/01-win10iso/autounattend.webp)
 
 ### Apply Changes and Exit MSMG Toolkit
 
@@ -81,5 +81,5 @@ Select the Apply Changes option and exit MSMG Toolkit. We aren't done as we need
 
 Mount the completed ISO file. (*Right-Click the Windows10.ISO file and select mount*)
 
-![mount](/images/2021/01-win10iso/mount.png)
+![mount](/images/2021/01-win10iso/mount.webp)
 

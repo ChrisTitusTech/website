@@ -3,7 +3,7 @@ title: "Fix LibGL Errors"
 
 date: 2022-09-08
 url: /fix-libGL-errors/
-image: images/2022-thumbs/fix-libGL-error.jpg
+image: images/2022-thumbs/fix-libGL-error.webp
 categories:
   - Linux
 tags:
@@ -16,7 +16,7 @@ I recently had a debian install where Steam would not launch. Here is how I fixe
 
 ## Error Screen
 
-![libGL-error](/images/2022/fix-libGL-error.jpg)
+![libGL-error](/images/2022/fix-libGL-error.webp)
 
 `You are missing the following 32-bit libraries, and Steam may not run: libGL.so.1`
 

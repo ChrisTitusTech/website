@@ -3,7 +3,7 @@ title: "2022 Recap"
 
 date: 2022-12-24
 url: /2022-recap/
-image: images/2022-thumbs/2022-recap.jpg
+image: images/2022-thumbs/2022-recap.webp
 categories:
 
 tags:

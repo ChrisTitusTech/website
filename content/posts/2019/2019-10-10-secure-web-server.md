@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-10-10T13:37:49+00:00
 url: /secure-web-server/
-image: images/2019/10/secure-website-300x169.jpg
+image: images/2019/10/secure-website-300x169.webp
 categories:
   - Linux
   - Networking
@@ -19,7 +19,7 @@ In this article, I show you all the steps needed to secure a web server and impr
 
 # Secure A Web Server Steps
 
-![firewall-png-577&#215;359](/images/2019/10/firewall-png-577x359.png) 
+![firewall-png-577&#215;359](/images/2019/10/firewall-png-577x359.webp) 
 
 **Install UFW**  
 
@@ -42,7 +42,7 @@ sudo ufw default deny incoming
 sudo ufw default allow outgoing
 ```
 
-![ssh](/images/2019/09/ssh.png) 
+![ssh](/images/2019/09/ssh.webp) 
 
 ## Change SSH to Key
 
@@ -77,7 +77,7 @@ PermitRootLogin no
 
 Enable security features
 
-![settings](/images/2019/10/settings.png) 
+![settings](/images/2019/10/settings.webp) 
 
 ## Prevent IP Spoof /etc/host.conf
 

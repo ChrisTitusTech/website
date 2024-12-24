@@ -3,7 +3,7 @@ title: "Robocopy - Copying files the right way in Windows"
 
 date: 2022-01-19T17:39:34-06:00
 url: /robocopy/
-image: images/2022-thumbs/robocopy.jpg
+image: images/2022-thumbs/robocopy.webp
 categories:
   - Windows
   - Networking
@@ -27,7 +27,7 @@ The downsides of Window's standard file copy are:
 
 Launch into the Command Prompt or Powershell by right-clicking Start Menu
 
-![start-menu](/images/2022/01-Robocopy/start-menu.png)
+![start-menu](/images/2022/01-Robocopy/start-menu.webp)
 
 From this interface you can now run Robocopy.
 

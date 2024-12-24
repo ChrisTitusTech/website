@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-06-14T15:46:23+00:00
 url: /changing-file-permissions/
-image: images/2018/06/changing-file-permissions.png
+image: images/2018/06/changing-file-permissions.webp
 categories:
   - Windows
 tags:

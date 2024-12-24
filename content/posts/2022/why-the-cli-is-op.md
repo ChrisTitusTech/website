@@ -3,7 +3,7 @@ title: "Why the Command Line is Overpowered"
 
 date: 2022-10-17
 url: /why-the-cli-is-op/
-image: images/2022-thumbs/why-the-cli-is-op.jpg
+image: images/2022-thumbs/why-the-cli-is-op.webp
 categories:
   - Linux
   - Windows

@@ -3,7 +3,7 @@ title: "Fix Windows Network and Sharing"
 
 date: 2023-02-01
 url: /windows-network-and-sharing/
-image: images/2023-thumbs/windows-network-and-sharing.jpg
+image: images/2023-thumbs/windows-network-and-sharing.webp
 categories:
   - Windows
 tags:

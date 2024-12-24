@@ -3,7 +3,7 @@ title: "Raspberry Pi Laptop"
 
 date: 2020-08-12T10:19:20-05:00
 url: /raspberry-pi-laptop/
-image: images/2020-thumbs/raspberry-pi-laptop.jpg
+image: images/2020-thumbs/raspberry-pi-laptop.webp
 categories:
   - Linux
 tags:
@@ -17,7 +17,7 @@ The Custom Raspbian Linux that CrowPi uses is from <https://www.elecrow.com/down
 
 ## Programming Lessons
 
-![learning](/images/2020/crowpi/learning.jpg)
+![learning](/images/2020/crowpi/learning.webp)
 
 The interface for learning both Python and Scratch operate portions of the CrowPi such as making a sound or turning on one of the LEDs. While you can load the CrowPi 2 image on regular pi's without the laptop a lot of lessons would not be meaningful. That said the Minecraft section was fantastic no matter if you were using the CrowPi or not. 
 
@@ -27,7 +27,7 @@ As far as starting to learn and understand python, I thought this wasn't the bes
 
 ## Retro Gaming
 
-![retro](/images/2020/crowpi/retro.jpg)
+![retro](/images/2020/crowpi/retro.webp)
 
 The retro gaming aspect is something that is very familiar to the pi. I went ahead and did a custom RetroPie install only compiling SNES with Emulation Station and put that directly on the crow pi. If I were going to play a LOT of games on this, I'd highly recommend using a dedicated SD card for Retro pi so you can get maximum performance as running the crow pi desktop and applications along with the emulators will take away from some of the performance when emulating newer hardware like N64 / PS1 games. However, If you are just doing old school games like NES and SNES you won't need to. The one thing I noticed was that it wasn't already integrated and if you aren't already familiar with RetroPi this can be a challenging thing to add if you don't know Linux. 
 
@@ -35,7 +35,7 @@ Learn more about RetroPie here: <https://retropie.org.uk/>
 
 ## Overall Impressions
 
-![crowpi2](/images/2020/crowpi/crowpi2.jpg)
+![crowpi2](/images/2020/crowpi/crowpi2.webp)
 
 I love this laptop and am looking forward to making some lesson plans for the upcoming school year to teach my kids about it. This is the perfect product to experiment and learn about a variety of things in technology. Ever since the Raspberry Pi came out, I have been looking for this type of laptop to fill this need of showcasing all that the pi is capable of and the Crow Pi 2 exceeded all my expectations. 
 

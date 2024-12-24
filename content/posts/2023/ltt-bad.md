@@ -3,7 +3,7 @@ title: "Linus Tech Tips Problems"
 
 date: 2023-08-16
 url: /ltt-bad/
-image: images/2023-thumbs/ltt-bad.jpg
+image: images/2023-thumbs/ltt-bad.webp
 categories:
   - YouTube
 tags:
@@ -39,7 +39,7 @@ Overview:
 - Big company growing fast makes mistakes
 - Billet video stays as it was a bad product. Too Expensive and niche to a 3090 that was hard to get.
 
-![linus](/images/2023/ltt-bad/linus.png)
+![linus](/images/2023/ltt-bad/linus.webp)
 
 LinusTechTips forum - Linus Post 08/14/2023 @ <https://linustechtips.com/topic/1526180-gamers-nexus-alleges-lmg-has-insufficient-ethics-and-integrity/page/16/>
 

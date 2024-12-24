@@ -3,7 +3,7 @@ title: "Beautiful Bash"
 
 date: 2022-10-24
 url: /beautiful-bash/
-image: images/2022-thumbs/beautiful-bash.jpg
+image: images/2022-thumbs/beautiful-bash.webp
 categories:
   - Linux
 tags:
@@ -17,7 +17,7 @@ Tired of an Ugly prompt with no features? Fix it with this guide!
 
  The following is what the end result of the bash prompt will look like:
 
- ![](/images/2022/beautiful-bash/prompt.png)
+ ![](/images/2022/beautiful-bash/prompt.webp)
 
 ## Requirements
 
@@ -25,7 +25,7 @@ With all my guides I like to create bash scripts that will auto install and conf
 
 The setup file will also install autojump which helps you navigate between directories. 
 
-![](/images/2022/beautiful-bash/alias.png)
+![](/images/2022/beautiful-bash/alias.webp)
 
 ## Installation
 

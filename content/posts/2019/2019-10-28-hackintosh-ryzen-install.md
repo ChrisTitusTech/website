@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-10-29T01:13:21+00:00
 url: /hackintosh-ryzen-install/
-image: images/2019/10/hackintosh-Install-300x169.jpg
+image: images/2019/10/hackintosh-Install-300x169.webp
 categories:
   - MacOS
 tags:
@@ -12,7 +12,7 @@ tags:
 ---
 Here is the basic install instruction for the Hackintosh Ryzen install that I used on my Ryzen 2700 with an RX 580. <!--more-->
 
-![usb-drive](/images/2019/10/usb-drive-300x230.png) 
+![usb-drive](/images/2019/10/usb-drive-300x230.webp) 
 
 ## Download DMG File for Flash Drive
 
@@ -28,7 +28,7 @@ Note: I used the Clover Edition and is my recommendation
 
 ## Burn DMG File with TransMac (Windows) or DD (Linux)
 
-![transmac](/images/2019/10/transmac.jpeg) 
+![transmac](/images/2019/10/transmac.webp) 
 
 ### TransMac Download (Windows) <https://www.acutesystems.com/scrtm.htm>
 
@@ -38,7 +38,7 @@ Note: I used the Clover Edition and is my recommendation
   * `$ sudo dmg2img macoshs_download.dmg macoshs_drive.iso`
   * `$ sudo dd if=macoshs_drive.iso of=/dev/sdX bs=1M`
 
-![bios-1](/images/2019/10/bios-1.png) 
+![bios-1](/images/2019/10/bios-1.webp) 
 
 ## Change Your PC&#8217;s BIOS Settings for your Hackintosh Ryzen Install
 
@@ -52,19 +52,19 @@ Note: I used the Clover Edition and is my recommendation
   * UEFI options should be enabled
   * XHCI and EHCI Hand-Off = Enabled 
 
-![MacOSX](/images/2019/10/MacOSX-1-e1572309977936.png) 
+![MacOSX](/images/2019/10/MacOSX-1-e1572309977936.webp) 
 
 ## Insert Media and Start Installation
 
 Boot into macOS by using the USB media. Once in the launcher start disk utility and partition the disk for macOS. 
 
-![diskutility](/images/2019/10/diskutility.png) 
+![diskutility](/images/2019/10/diskutility.webp) 
 
 Once you have partitioned your drive, you will need to go ahead and continue the installation. Complete the installation and reboot your PC. 
 
 Launch back into the USB Drive Installer and this time we will launch terminal. From Terminal we will run the command **XLNC**
 
-![xlnc](/images/2019/10/xlnc.png) 
+![xlnc](/images/2019/10/xlnc.webp) 
 
 Select the following options when the XLNC installer pops up:
 
@@ -77,7 +77,7 @@ Reboot again, but this time when we launch the USB Menu, we will launch into the
 
 Setup your Mac with your account and details
 
-![clover](/images/2019/10/clover.png) 
+![clover](/images/2019/10/clover.webp) 
 
 Download the Clover Configurator Utility   
 <https://mackie100projects.altervista.org/download-clover-configurator/>

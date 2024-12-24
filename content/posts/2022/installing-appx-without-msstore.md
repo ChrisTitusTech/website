@@ -3,7 +3,7 @@ title: "Installing Appx Without Microsoft Store"
 
 date: 2022-10-26
 url: /installing-appx-without-msstore/
-image: images/2022-thumbs/installing-appx-without-msstore.jpg
+image: images/2022-thumbs/installing-appx-without-msstore.webp
 categories:
   - Windows
 tags:
@@ -35,11 +35,11 @@ Using the <https://store.rg-adguard.net/> site we can snatch any appx as long as
 
 Get product id from <https://apps.microsoft.com/store/apps>
 
-![](/images/2022/installing-appx-without-msstore/app-store.png)
+![](/images/2022/installing-appx-without-msstore/app-store.webp)
 
 Then grab the appx from rg-adguard AND its dependancies... like this:
 
-![](/images/2022/installing-appx-without-msstore/rg-adguard.png)
+![](/images/2022/installing-appx-without-msstore/rg-adguard.webp)
 
 ### Direct Download with Script
 

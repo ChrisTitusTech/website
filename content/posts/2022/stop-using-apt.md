@@ -3,7 +3,7 @@ title: "Stop Using APT"
 
 date: 2022-07-19T17:32:28-05:00
 url: /stop-using-apt/
-image: images/2022-thumbs/stop-using-apt.jpg
+image: images/2022-thumbs/stop-using-apt.webp
 categories:
   - Linux
 tags:
@@ -14,7 +14,7 @@ APT is slow... single downloading and generally uses slow mirrors as it doesn't 
 <!--more-->
 Welp, all that is now fixed with [Nala](https://gitlab.com/volian/nala) and it is absolutely wonderful. Not only does it fix all that listed above but it makes the updates look beautiful. 
 
-![nala-image](/images/2022/nala/nala.png)
+![nala-image](/images/2022/nala/nala.webp)
 
 ## Install
 Add Repository - NOT NEEDED FOR Debian SID/testing
@@ -39,7 +39,7 @@ sudo nala fetch
 ```
 
 Select the mirrors you want from the list. Typically you will want to select three. Here is an example:
-![nala-mirror](/images/2022/nala/mirror.png)
+![nala-mirror](/images/2022/nala/mirror.webp)
 
 ## View Update History
 Nala has a robust history and even an UNDO! These commands are a life saver.

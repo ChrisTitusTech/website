@@ -3,7 +3,7 @@ title: "The 3 Biggest Security Mistakes Linux Users Make"
 
 date: 2022-08-03
 url: /linux-security-mistakes/
-image: images/2022-thumbs/linux-security-mistakes.jpg
+image: images/2022-thumbs/linux-security-mistakes.webp
 categories:
   - Linux
 tags:
@@ -17,7 +17,7 @@ So after making a couple videos showing how to increase performance in desktop c
 
 Here are the 3 biggest things I see wrong in Linux installs that can easily be exploited or lead to massive problems. I'm choosing some of the worst offenders from the basic security layers an attacker goes through. 
 
-![basic-layers](/images/2022/linux-security-mistakes/basic-layers.png)
+![basic-layers](/images/2022/linux-security-mistakes/basic-layers.webp)
 
 ## Network Level - Not using a Firewall
 

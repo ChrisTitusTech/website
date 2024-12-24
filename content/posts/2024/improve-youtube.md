@@ -3,7 +3,7 @@ title: "Improve Youtube"
 
 date: 2024-04-23
 url: /improve-youtube/
-image: images/2024-thumbs/improve-youtube.jpg
+image: images/2024-thumbs/improve-youtube.webp
 categories:
   - Misc
 tags:

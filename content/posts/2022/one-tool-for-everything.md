@@ -3,7 +3,7 @@ title: "One Tool for Everything"
 
 date: 2022-11-25
 url: /one-tool-for-everything/
-image: images/2022-thumbs/one-tool-for-everything.jpg
+image: images/2022-thumbs/one-tool-for-everything.webp
 categories:
   - Windows
 tags:
@@ -41,7 +41,7 @@ irm christitus.com/win | iex
 
 ## New Tweak Options
 
-![](/images/2022/one-tool-for-everything/tweaks.png)
+![](/images/2022/one-tool-for-everything/tweaks.webp)
 
 ## GitHub Project
 

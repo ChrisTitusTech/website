@@ -3,7 +3,7 @@ title: "30 Days in ChromeOS"
 
 date: 2022-04-11T08:48:13-05:00
 url: /30days-chromeos/
-image: images/2022-thumbs/30days-chromeos.jpg
+image: images/2022-thumbs/30days-chromeos.webp
 categories:
   - ChromeOS
 tags:
@@ -23,11 +23,11 @@ The biggest thing about ChromeOS that it has a huge amount of Pros, but is missi
 
 By default setting up a Linux environment in Chrome is as easy as checking a box in Settings. We just need to modify the environment ChromeOS gives us. 
 
-![linux](/images/2022/04-chromeos/chromeos-linux.png)
+![linux](/images/2022/04-chromeos/chromeos-linux.webp)
 
 Then we change the stock repositories in the linux environment so that we can easily install our programs. All the below commands are done in Terminal --
 
-![terminal](/images/2022/04-chromeos/Terminal.png)
+![terminal](/images/2022/04-chromeos/Terminal.webp)
 
 **Install Text Editor**
 ```

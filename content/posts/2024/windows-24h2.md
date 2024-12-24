@@ -3,7 +3,7 @@ title: "Windows 24h2"
 
 date: 2024-04-15
 url: /windows-24h2/
-image: images/2024-thumbs/windows-24h2.jpg
+image: images/2024-thumbs/windows-24h2.webp
 categories:
   - Windows
 tags:

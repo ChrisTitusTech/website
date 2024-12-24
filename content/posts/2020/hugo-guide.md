@@ -3,7 +3,7 @@ title: "Hugo Static Site Guide"
 
 date: 2020-01-08T15:59:19-06:00
 url: /hugo-guide/
-image: images/2020-thumbs/hugo-guide.jpg
+image: images/2020-thumbs/hugo-guide.webp
 categories:
   - Linux
   - Networking
@@ -198,7 +198,7 @@ title: "{{ replace .Name "-" " " | title }}"
 
 date: {{ .Date }}
 url: /{{ .Name }}/
-image: images/2020-thumbs/{{ .Name }}.jpg
+image: images/2020-thumbs/{{ .Name }}.webp
 categories:
   - Linux
   - Windows

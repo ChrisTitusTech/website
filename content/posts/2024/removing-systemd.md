@@ -3,7 +3,7 @@ title: "Removing SystemD from Linux"
 
 date: 2024-12-18
 url: /removing-systemd/
-image: images/2024-thumbs/removing-systemd.jpg
+image: images/2024-thumbs/removing-systemd.webp
 categories:
   - Linux
 tags:

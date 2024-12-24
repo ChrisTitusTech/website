@@ -3,7 +3,7 @@ title: "Acronis Cyber Protect Home Office"
 
 date: 2022-12-16
 url: /acronis-true-image/
-image: images/2022-thumbs/acronis-true-image.jpg
+image: images/2022-thumbs/acronis-true-image.webp
 categories:
   - Linux
   - Windows
@@ -16,7 +16,7 @@ Acronis True Image has undergone an expansion and rename in the past couple year
 
 ## Backup
 
-![](/images/2022/acronis-true-image/backup.png)
+![](/images/2022/acronis-true-image/backup.webp)
 
 Acronis backup is what the company is known for as it offered block level backup over 10 years ago. Their backup services have always been some of the best and this still holds true today. The interface is simplified and intuitive. It can get a complete copy of the entire system while its online and back it up locally or to the cloud. 
 
@@ -24,13 +24,13 @@ Transfer rates to the cloud on my connection maxed out around 95 Mbps and went a
 
 ## Anti-Virus
 
-![](/images/2022/acronis-true-image/av.png)
+![](/images/2022/acronis-true-image/av.webp)
 
 One of the biggest additions is the inclusion of anti-virus. This protection is adequate and it brings the entire protection suite in-house. I'm not a fan of most AV implementations and what matters is a good backup when these inevitably fail. It makes sense that they included this, but to me it makes the software seem bloated and unnecessary. 
 
 ## File Sync
 
-![](/images/2022/acronis-true-image/sync.png)
+![](/images/2022/acronis-true-image/sync.webp)
 
 This addition is beneficial for those with space concerns or multiple computers. The archive feature removes the file from the local device once it uploads it to the Acronis online cloud. The sync function is like Dropbox and syncs files across devices. 
 
@@ -42,7 +42,7 @@ It uses 84 FOSS programs listed on their website: <https://kb.acronis.com/conten
 
 ## Cost
 
-![](/images/2022/acronis-true-image/cost.png)
+![](/images/2022/acronis-true-image/cost.webp)
 
 The product has moved to a subscription model. The essential model is local and offers the core backup services with no cloud. The advanced function could work for those that don't need a full image of their device, but to utilise the software to its fullest capacity it will cost you $124.99 per year for the software with 1 TB of storage. Each additional TB of storage adds $40. No doubt this is on the high end of cost when compared to the competition and why they added they expanded its offerings past backup to help justify the price. 
 

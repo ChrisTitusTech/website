@@ -3,7 +3,7 @@ title: "Theming Windows With Rainmeter"
 
 date: 2023-01-25
 url: /theming-windows-with-rainmeter/
-image: images/2023-thumbs/theming-windows-with-rainmeter.jpg
+image: images/2023-thumbs/theming-windows-with-rainmeter.webp
 categories:
   - Windows
 tags:

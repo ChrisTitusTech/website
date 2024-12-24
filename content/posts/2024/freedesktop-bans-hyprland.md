@@ -3,7 +3,7 @@ title: "Freedesktop Bans Hyprland"
 
 date: 2024-04-10
 url: /freedesktop-bans-hyprland/
-image: images/2024-thumbs/freedesktop-bans-hyprland.jpg
+image: images/2024-thumbs/freedesktop-bans-hyprland.webp
 categories:
   - Linux
 tags:

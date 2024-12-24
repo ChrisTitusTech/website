@@ -3,7 +3,7 @@ title: "XZ Backdoor Affected These Users"
 
 date: 2024-04-06
 url: /xz-affected-these-users/
-image: images/2024-thumbs/xz-affected-these-users.jpg
+image: images/2024-thumbs/xz-affected-these-users.webp
 categories:
   - Linux
 tags:

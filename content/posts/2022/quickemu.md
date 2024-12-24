@@ -3,7 +3,7 @@ title: "Quickemu"
 
 date: 2022-12-21
 url: /quickemu/
-image: images/2022-thumbs/quickemu.jpg
+image: images/2022-thumbs/quickemu.webp
 categories:
   - Linux
 tags:
@@ -62,9 +62,9 @@ This is pretty easy to manage with it's own dedicated directory. Ex. `~/VMs`
 
 Select your OS and Press Download (Yes, it's that easy!)
 
-![](/images/2022/quickemu/quickgui.png)
+![](/images/2022/quickemu/quickgui.webp)
 
-![](/images/2022/quickemu/kubuntu-download.png)
+![](/images/2022/quickemu/kubuntu-download.webp)
 
 
 ## Walkthrough Video

@@ -3,7 +3,7 @@ title: "Shell The Essential App"
 
 date: 2022-11-14
 url: /shell-the-essential-app/
-image: images/2022-thumbs/shell-the-essential-app.jpg
+image: images/2022-thumbs/shell-the-essential-app.webp
 categories:
   - Windows
 tags:
@@ -17,7 +17,7 @@ Context menus have become worse in Windows 11 and weren't good in Windows 10. Th
 
 ## The App
 
-![](/images/2022/shell-the-essential-app/shell.png)
+![](/images/2022/shell-the-essential-app/shell.webp)
 
 I install this app in both Windows 10 and Windows 11. Here is a breakdown of all the context menus that it adds and expands.
 
@@ -29,7 +29,7 @@ I install this app in both Windows 10 and Windows 11. Here is a breakdown of all
 - Create Shortcuts
 - Program your own command!
 
-![](/images/2022/shell-the-essential-app/menu.png)
+![](/images/2022/shell-the-essential-app/menu.webp)
 
 ## Build your own menu and items
 
@@ -37,7 +37,7 @@ Shell is extremely easy to add commands and custom menus. Launch custom commands
 
 Open `C:\Program Files\Nilesoft\Shell\shell.shl`
 
-![](/images/2022/shell-the-essential-app/shl.png)
+![](/images/2022/shell-the-essential-app/shl.webp)
 
 Add a custom command and pass arguments by editing the dynamic JSON section:
 

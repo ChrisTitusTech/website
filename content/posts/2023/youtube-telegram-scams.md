@@ -3,7 +3,7 @@ title: "Youtube Comment Scams"
 
 date: 2023-02-03
 url: /youtube-telegram-scams/
-image: images/2023-thumbs/youtube-telegram-scams.jpg
+image: images/2023-thumbs/youtube-telegram-scams.webp
 categories:
 
 tags:
@@ -13,7 +13,7 @@ draft: false
 YouTube telegram and whatsapp scams are everywhere in the comment section of every YouTube channel.
 <!--more-->
 
-![](/images/2023/youtube-telegram-scams/scam1.png)
+![](/images/2023/youtube-telegram-scams/scam1.webp)
 
 ## How the scam works
 
@@ -31,15 +31,15 @@ Red Flags:
 
 Yes - Here are screenshots from a victim that contacted me
 
-![](/images/2023/youtube-telegram-scams/victim1.png)
+![](/images/2023/youtube-telegram-scams/victim1.webp)
 
 Amount lost - Notice that it was sent via "Friends and Family" Gift that is NON-REFUNDABLE
 
-![](/images/2023/youtube-telegram-scams/victim2.png)
+![](/images/2023/youtube-telegram-scams/victim2.webp)
 
 The trick to give you to gift it? Faster Processing via bogus invoice. 
 
-![](/images/2023/youtube-telegram-scams/bogus-invoice.png)
+![](/images/2023/youtube-telegram-scams/bogus-invoice.webp)
 
 Folks get caught up in the excitement of winning something and ignore these red flags. Emotions are how we all make bad decisions and why you shouldn't rush into these scenarios.
 

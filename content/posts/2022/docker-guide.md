@@ -3,7 +3,7 @@ title: "Docker Guide"
 
 date: 2022-12-09
 url: /docker-guide/
-image: images/2022-thumbs/docker-guide.jpg
+image: images/2022-thumbs/docker-guide.webp
 categories:
   - Linux
   - Windows

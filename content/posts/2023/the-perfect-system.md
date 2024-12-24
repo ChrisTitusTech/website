@@ -3,7 +3,7 @@ title: "The Perfect System"
 
 date: 2023-05-24
 url: /the-perfect-system/
-image: images/2023-thumbs/the-perfect-system.jpg
+image: images/2023-thumbs/the-perfect-system.webp
 categories:
   - Linux
 tags:
@@ -36,19 +36,19 @@ This will be different for everyone. The idea is to have a system you enjoy bein
 
 I've attempted a bastardized version of the genome project from unixporn and made [ubuntu-titus](https://github.com/ChrisTitusTech/ubuntu-titus), [debian-titus](https://github.com/ChrisTitusTech/Debian-titus), and [fedora-titus](https://github.com/ChrisTitusTech/Fedora-Titus) repos that kinda work. It ends up looking like this:
 
-![mydesktop](/images/2023/the-perfect-system/fedora-mydesktop.jpg)
+![mydesktop](/images/2023/the-perfect-system/fedora-mydesktop.webp)
 
 The problem is I am not good at graphic design. I'm a function over form person and these desktop below are the opposite of that.
 
 This rice is interesting using hyprland, eww, and is clean.
 
-![hyprland](/images/2023/the-perfect-system/fedora-hyprland-eww.jpg)
+![hyprland](/images/2023/the-perfect-system/fedora-hyprland-eww.webp)
 
 Source: <https://github.com/Aylur/dotfiles>
 
 Another rice that is using awesomewm w/ bling utilties and rofi for menus. Simplistic and clean.
 
-![awesomewm](/images/2023/the-perfect-system/awesomewm-bling-rofi.jpg)
+![awesomewm](/images/2023/the-perfect-system/awesomewm-bling-rofi.webp)
 
 Source: <https://github.com/beastsongithub/AwesomeWMRice>
 
@@ -56,7 +56,7 @@ I mentioned the above projects for the simplistic nature and not requiring a TON
 
 What does my future desktop look like? Two versions... The pretty version in a year using Hyprland, Wayland, and the pretty desktop and the suckless barebones minimal one that just works like below.
 
-![dwm](/images/2023/the-perfect-system/dwm.jpg)
+![dwm](/images/2023/the-perfect-system/dwm.webp)
 
 ## Walkthrough Video
 

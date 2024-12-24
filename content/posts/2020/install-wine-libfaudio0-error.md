@@ -3,7 +3,7 @@ title: "Install Wine Libfaudio0 Error"
 
 date: 2020-05-25T13:14:23-05:00
 url: /install-wine-libfaudio0-error/
-image: images/2020-thumbs/install-wine-libfaudio0-error.jpg
+image: images/2020-thumbs/install-wine-libfaudio0-error.webp
 categories:
   - Linux
 tags:

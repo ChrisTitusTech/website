@@ -3,7 +3,7 @@ title: "Replace Google Fonts With Bunny Fonts"
 
 date: 2023-02-15
 url: /replace-google-fonts-with-bunny-fonts/
-image: images/2023-thumbs/replace-google-fonts-with-bunny-fonts.jpg
+image: images/2023-thumbs/replace-google-fonts-with-bunny-fonts.webp
 categories:
   - Linux
   - Windows

@@ -3,7 +3,7 @@ title: "Common Computer Issues"
 
 date: 2020-08-28T05:42:25-05:00
 url: /common-computer-issues/
-image: images/2020-thumbs/common-computer-issues.jpg
+image: images/2020-thumbs/common-computer-issues.webp
 categories:
   - Linux
   - Windows

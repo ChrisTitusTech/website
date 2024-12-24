@@ -3,7 +3,7 @@ title: "The TRUTH about Registry Cleaners"
 
 date: 2023-05-17
 url: /registry-cleaner/
-image: images/2023-thumbs/registry-cleaner.jpg
+image: images/2023-thumbs/registry-cleaner.webp
 categories:
   - Windows
 tags:
@@ -13,7 +13,7 @@ draft: false
 Registry cleaners are still everywhere in Windows utilities, but why? Microsoft itself has said NOT to use them.
 <!--more-->
 
-![](/images/2023/registry-cleaner/wise-regcleaner.png)
+![](/images/2023/registry-cleaner/wise-regcleaner.webp)
 
 ## They used to be good!
 

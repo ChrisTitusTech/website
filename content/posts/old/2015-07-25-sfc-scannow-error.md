@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2015-07-26T02:39:10+00:00
 url: /sfc-scannow-error/
-image: images/2015/07/win10slim.jpg
+image: images/2015/07/win10slim.webp
 categories:
   - Windows
 tags:
@@ -15,7 +15,7 @@ If you run into SFC scannow error which cannot be repaired chances are you have 
 
 Here is an example of the error you are seeing:
 
-![SFC Scannow Error](/images/2015/07/SFC-scannow-error-1.png)
+![SFC Scannow Error](/images/2015/07/SFC-scannow-error-1.webp)
 
   * Download Windows 10 ISO from <https://www.microsoft.com/en-us/software-download/windows10>
   * Mount the ISO file by double-clicking on it.

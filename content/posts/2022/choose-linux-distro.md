@@ -3,7 +3,7 @@ title: "Choosing the Right Linux Distro"
 
 date: 2022-06-28T17:12:25-05:00
 url: /choose-linux-distro/
-image: images/2022-thumbs/choose-linux-distro.png
+image: images/2022-thumbs/choose-linux-distro.webp
 categories:
   - Linux
 tags:
@@ -13,7 +13,7 @@ tags:
 ---
 Choosing a Linux distribution can be difficult, especially if you don't know much about Linux. However, over the past several years I've tried almost every Distribution that you can choose. There are some that I have not installed, because it was just more of the same. 
 <!--more-->
-![distros](/images/2022/choose-linux-distribution/distros.png)
+![distros](/images/2022/choose-linux-distribution/distros.webp)
 
 To start with there is a misconception that there is thousands of choices in Linux Distributions. While technically true, there is really only 3 distributions you need to know about for desktop use, but before we get into that you need to know about what makes up a distribution. This is mandatory to understand why there is so many different ones that splinter off of these three. 
 
@@ -57,7 +57,7 @@ This is how distributions install programs. Here are the major ones you need to 
 So now that you know what they are made up of we can easily get to deciding what you really want your computing experience to be like. Figure out what components above you like and do NOT like. Then swap them out for something better. The main gripe I have with Windows and Mac is I find their file manager absolutely terrible. I want to switch them and rip out the junk they give me, but we can't as they are integral to the function of the operating system. In Linux, we get that freedom. Here are the three "distributions" that pretty much everything is based on and what the base package installs are. Remember you can change the things you do NOT like from the stock settings. 
 
 ### Debian Linux
-![debian](/images/2022/choose-linux-distribution/debian.png)
+![debian](/images/2022/choose-linux-distribution/debian.webp)
 
 Debian uses a stable release cycle and generally has older packages, but they don't usually have many bugs and are very reliable. This is typically my go to for desktops I don't change much.
 - Bootloader - GRUB
@@ -68,7 +68,7 @@ Debian uses a stable release cycle and generally has older packages, but they do
 - Package Manager - APT
 
 ### Arch Linux
-![arch](/images/2022/choose-linux-distribution/arch.png)
+![arch](/images/2022/choose-linux-distribution/arch.webp)
 
 Very new packages with a massive user repository to grab programs you might be missing and builds them for you. The main issue is if you forget to update your system for a period of months it is prone to breaking. Backups are MANDATORY if you use this for your daily use. The benefits are you get the latest and greatest and is often thought to be the best for drivers and hardware that is just released. Its unique that you get to choose every component and can utilize pretty much any COMBINATION of components listed above. The only constant is its package manager which is PACMAN. The other unique aspect is it has a helper program that can install things through the AUR (Arch User Repository) and boy does it have options here... I'm going to recommend the top three
 - paru
@@ -77,7 +77,7 @@ Very new packages with a massive user repository to grab programs you might be m
 They follow the same syntax as pacman except you run them at a user level and they can install pretty much any package. For a complete list visit: <https://aur.archlinux.org/>
 
 ### Fedora Linux
-![fedora](/images/2022/choose-linux-distribution/fedora.png)
+![fedora](/images/2022/choose-linux-distribution/fedora.webp)
 
 This is a RHEL (Red Hat Enterprise Linux) based distribution. It strikes a balance between newer packages and Linux kernels between Debian and Arch. Its not as new as Arch, but not as old as Debian. It has different SPINS but its main download uses the following:
 - Bootloader - Systemd

@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-09-07T21:33:35+00:00
 url: /virtualization-introduction/
-image: images/2018/09/virtualization.jpg
+image: images/2018/09/virtualization.webp
 categories:
   - Virtualization
 tags:

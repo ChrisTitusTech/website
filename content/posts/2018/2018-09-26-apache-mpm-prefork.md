@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-09-26T17:31:24+00:00
 url: /apache-mpm-prefork/
-image: images/2018/09/apache.jpg
+image: images/2018/09/apache.webp
 categories:
   - Linux
 tags:
@@ -27,7 +27,7 @@ This guide goes over optimizing apache memory usage by configuring mpm prefork m
 
 > Total System Memory Free Buffer / Apache2 MB usage = MaxRequestWorkers, ServerLimit, and MaxClients
 
-![apache2](/images/2018/09/apache2.png)
+![apache2](/images/2018/09/apache2.webp)
 
 #### My Settings: Server Instance (Standard) 1 dedicated vCPU with 3.5 GB of Memory
 

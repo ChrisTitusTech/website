@@ -3,7 +3,7 @@ title: "Ext4 in Windows"
 
 date: 2023-01-11
 url: /ext4-in-windows/
-image: images/2023-thumbs/ext4-in-windows.jpg
+image: images/2023-thumbs/ext4-in-windows.webp
 categories:
   - Windows
 tags:

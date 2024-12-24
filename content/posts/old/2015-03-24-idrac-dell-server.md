@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2015-03-24T18:43:46+00:00
 url: /idrac-dell-server/
-image: images/2015/03/Dell-iDRAC.png
+image: images/2015/03/Dell-iDRAC.webp
 categories:
   - Hardware
   - Windows Server
@@ -12,7 +12,7 @@ categories:
 ---
 I recently had a server freeze up when I wasn&#8217;t on-site and needed to power cycle it. I had configured iDrac before but it was not responsive. Here are some useful commands that can configure, reboot, and reset the iDrac function on Dell Servers. The commands below are run from a command prompt on the server (unless otherwise stated) in the (C:\Program Files\Dell\SysMgt\idrac) path.<!--more-->
 
-![iDrac](/images/2015/03/idrac.png)
+![iDrac](/images/2015/03/idrac.webp)
 
 **Remote Commands (Workstation or another server)**
   

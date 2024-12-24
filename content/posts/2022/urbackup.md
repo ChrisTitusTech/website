@@ -3,7 +3,7 @@ title: "Urbackup"
 
 date: 2022-11-04
 url: /urbackup/
-image: images/2022-thumbs/urbackup.jpg
+image: images/2022-thumbs/urbackup.webp
 categories:
   - Linux
   - Windows
@@ -30,19 +30,19 @@ Synology Project: <https://github.com/josef109/spksrc>
 
 ### Server Dashboard
 
- ![](/images/2022/urbackup/dash.png)
+ ![](/images/2022/urbackup/dash.webp)
 
 ### Automated Terminal Install and Linux Setup
 
 Linux installs are a complete DREAM! Just paste the command listed under terminal when you use "Add New Client" Button. Here is an example install:
 
-![](/images/2022/urbackup/linux-term.png)
+![](/images/2022/urbackup/linux-term.webp)
 
 ### Enable Restore from Web
 
 You need to enable restoration in client configuration to completely control everything from server web interface. Here is a sample client configuration `/etc/default/urbackupclientbackend`
 
-![](/images/2022/urbackup/enable-web.png)
+![](/images/2022/urbackup/enable-web.webp)
 
 ## Windows Client Setup
 
@@ -68,7 +68,7 @@ sudo urbackupclientctl add-backupdir -d $HOME/.config/
 
 Then, check the status using the server web interface. 
 
-![](/images/2022/urbackup/linux-file.png)
+![](/images/2022/urbackup/linux-file.webp)
 
 ### Uninstall
 
@@ -78,7 +78,7 @@ Uninstallation is a bit weird and needs to be done with this command:
 sudo uninstall_urbackupclient
 ```
 
-![](/images/2022/urbackup/linux-uninstall.png)
+![](/images/2022/urbackup/linux-uninstall.webp)
 
 ## Alternatives
 

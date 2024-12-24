@@ -3,7 +3,7 @@ title: "The Ultimate Linux Gaming Guide"
 
 date: 2020-07-14T14:27:23-05:00
 url: /ultimate-linux-gaming-guide/
-image: images/2020/gaming-guide/gaming.jpg
+image: images/2020/gaming-guide/gaming.webp
 categories:
   - Linux
 tags:
@@ -13,7 +13,7 @@ featured: true
 This guide goes over setting up your Linux system for gaming. I will include multiple setup instructions for various Linux distributions.  
 <!--more-->
 
-![gaming](/images/2020/gaming-guide/gaming.jpg)
+![gaming](/images/2020/gaming-guide/gaming.webp)
 
 This guide will broken into parts that you will need to verify on your system. Each part, should be checked to guarantee an optimal experience. 
 
@@ -31,7 +31,7 @@ Enable 32-bit libraries
 sudo dpkg --add-architecture i386 
 ```
 
-![AMD](/images/amd-title.png)
+![AMD](/images/amd-title.webp)
 
 #### AMD Mesa Driver Install
 
@@ -43,7 +43,7 @@ sudo apt install libgl1-mesa-dri:i386 mesa-vulkan-drivers mesa-vulkan-drivers:i3
 
 *Note: Did you run into an error? Make sure you are running Ubuntu 20, Linux Mint 20, or Pop OS 20! - Older versions are not recommended*
 
-![nVidia](/images/nvidia-title.png)
+![nVidia](/images/nvidia-title.webp)
 
 #### Nvidia Proprietary Driver Install
 
@@ -144,7 +144,7 @@ ubuntu-mainline-kernel.sh -u # Uninstall mainline kernel
 
 ## ACO - Faster Compiling (AMD Only)
 
-![aco](/images/2020/gaming-guide/aco.jpg)
+![aco](/images/2020/gaming-guide/aco.webp)
 
 This is where Linus Tech Tips recently covered - Linux gaming is BETTER than windows? on June 17, 2020 <https://youtu.be/6T_-HMkgxt0> and I covered last year - Mesa ACO Linux | The Future is Now! on November 20, 2019 <https://youtu.be/fm_mzPBnWB0>
 
@@ -157,7 +157,7 @@ RADV_PERFTEST=aco
 ```
 
 ***
-![wine](/images/wine.png)
+![wine](/images/wine.webp)
 ***
 
 ## Wine Dependancies and Lutris
@@ -211,7 +211,7 @@ username hard nofile 524288
 *Note: Change username to your username!!!*
 
 ***
-![gamemode](/images/2020/gaming-guide/gamemode.jpg)
+![gamemode](/images/2020/gaming-guide/gamemode.webp)
 ***
 
 ## GameMode - No CPU Throttling
@@ -256,7 +256,7 @@ There are multiple ways to Use GameMode
 - **Gnome Tool** - If you use GNOME Desktop Environment install this extension: <https://extensions.gnome.org/extension/1852/gamemode/>
 
 ***
-![proton](/images/2020/gaming-guide/proton.jpg)
+![proton](/images/2020/gaming-guide/proton.webp)
 ***
 
 ## Custom Proton

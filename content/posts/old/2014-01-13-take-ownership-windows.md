@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2014-01-13T16:37:53+00:00
 url: /take-ownership-windows/
-image: images/2014/01/ownership.jpg
+image: images/2014/01/ownership.webp
 categories:
   - Windows
 

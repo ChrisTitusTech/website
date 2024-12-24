@@ -3,7 +3,7 @@ title: "Install Windows Update Powershell"
 
 date: 2022-12-14
 url: /install-windows-update-powershell/
-image: images/2022-thumbs/install-windows-update-powershell.jpg
+image: images/2022-thumbs/install-windows-update-powershell.webp
 categories:
   - Windows
 tags:

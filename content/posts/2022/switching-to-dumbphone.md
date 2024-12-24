@@ -3,7 +3,7 @@ title: "Life without a Smart Phone"
 
 date: 2022-08-17
 url: /switching-to-dumbphone/
-image: images/2022-thumbs/switching-to-dumbphone.jpg
+image: images/2022-thumbs/switching-to-dumbphone.webp
 categories:
   - Android
 tags:
@@ -60,7 +60,7 @@ Most of these are covered by using a computer and a webpage, however for those t
 ### Group Messages
 This is one of the downsides, because most dumbphones can't do MMS or groups messages. The Punkt MP02 doesn't do group messages but can receive them independently and GIFs come in, but emoji's do not. Depending on the phone, these things may or may NOT work. One workaround is to use Google Fi for your carrier and then <https://messages.google.com>
 
-![web-message](/images/2022/dumbphone/web-message.png)
+![web-message](/images/2022/dumbphone/web-message.webp)
 
 ### Camera and Photos
 Use an actual camera and then upload them your storage. Like we did back in the day!

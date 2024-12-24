@@ -3,7 +3,7 @@ title: "Bazzite Linux"
 
 date: 2024-04-17
 url: /bazzite-linux/
-image: images/2024-thumbs/bazzite-linux.jpg
+image: images/2024-thumbs/bazzite-linux.webp
 categories:
   - Linux
 tags:

@@ -3,7 +3,7 @@ title: "Im Sorry Netlify"
 
 date: 2023-02-08
 url: /im-sorry-netlify/
-image: images/2023-thumbs/im-sorry-netlify.jpg
+image: images/2023-thumbs/im-sorry-netlify.webp
 categories:
   - Linux
   - Windows
@@ -17,9 +17,9 @@ I've used Netlify for years on my website and it's a fantastic service! As I've 
 
 ## Excess Bandwidth
 
-![](/images/2023/im-sorry-netlify/intro.png)
+![](/images/2023/im-sorry-netlify/intro.webp)
 
-![](/images/2023/im-sorry-netlify/graph.png)
+![](/images/2023/im-sorry-netlify/graph.webp)
 
 The statistics on the website have grown with data usage. More Users = More Bandwidth Used. At this rate of growth I'm going to be spending well over $100 a month in bandwidth usage. Don't get me wrong for starting a website, Netlify limits won't be a problem. Heck, for the past year I had a 1TB of bandwidth per month for $19! The downside? Over 1TB it starts getting REALLY EXPENSIVE, every 100GB after that is $55! It isn't sustainable.
 
@@ -27,7 +27,7 @@ The statistics on the website have grown with data usage. More Users = More Band
 
 There are many competitors to Netlify launching competing services, but one in particular caught my eye. Cloudflare launched it's "Pages" service that hooks in with GitHub in 2020. The free tier even gives you UNLIMITED bandwidth! Having used Cloudflare extensively for DNS and DDoS setups in business this is a no brainer. The best part? Analytics are also free! 
 
-![](/images/2023/im-sorry-netlify/cloudflare.png)
+![](/images/2023/im-sorry-netlify/cloudflare.webp)
 
 ## The Experience
 
@@ -35,11 +35,11 @@ I setup pages and click "Connect to GitHub" then selected my existing Netlify we
 
 The stock hugo instance is v0.50 which is old (Netlify does the same thing) so I added an Environmental Variable. Fixed with the following:
 
-![](/images/2023/im-sorry-netlify/hugo-variable.png)
+![](/images/2023/im-sorry-netlify/hugo-variable.webp)
 
 The other downside? Netlify redirect rules do NOT apply. Cloudflare takes a different approach with Page Rules. This might get expensive for anyone doing a LOT of redirects, as you only get 20 rules for free or pro plan.
 
-![](/images/2023/im-sorry-netlify/rules.png)
+![](/images/2023/im-sorry-netlify/rules.webp)
 
 Overall, I'm pretty darn happy with Cloudflare.
 

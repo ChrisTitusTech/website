@@ -3,7 +3,7 @@ title: "Linux Laptops"
 
 date: 2024-08-29
 url: /linux-laptops/
-image: images/2024-thumbs/linux-laptops.jpg
+image: images/2024-thumbs/linux-laptops.webp
 categories:
   - Linux
 tags:

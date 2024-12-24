@@ -3,7 +3,7 @@ title: "Drivers in Windows"
 
 date: 2024-04-11
 url: /drivers-in-windows/
-image: images/2024-thumbs/drivers-in-windows.jpg
+image: images/2024-thumbs/drivers-in-windows.webp
 categories:
   - Windows
   - Networking

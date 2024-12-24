@@ -3,7 +3,7 @@ title: "Disable Snaps"
 
 date: 2020-09-08T13:44:58-05:00
 url: /disable-snaps/
-image: images/2020-thumbs/disable-snaps.png
+image: images/2020-thumbs/disable-snaps.webp
 categories:
   - Linux
 tags:

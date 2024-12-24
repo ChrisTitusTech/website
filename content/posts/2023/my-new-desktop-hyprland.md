@@ -3,7 +3,7 @@ title: "My New Desktop Hyprland"
 
 date: 2023-01-23
 url: /my-new-desktop-hyprland/
-image: images/2023-thumbs/my-new-desktop-hyprland.jpg
+image: images/2023-thumbs/my-new-desktop-hyprland.webp
 categories:
   - Linux
 tags:
@@ -17,7 +17,7 @@ _Please Note: This is beta and not for a beginner. You WILL encounter bugs!_
 
 # The Desktop
 
-![Screenshot](https://github.com/ChrisTitusTech/hyprland-titus/raw/main/hyprland-titus.png)
+![Screenshot](https://github.com/ChrisTitusTech/hyprland-titus/raw/main/hyprland-titus.webp)
 
 GitHub Project: <https://github.com/ChrisTitusTech/hyprland-titus>
 

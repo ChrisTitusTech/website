@@ -3,7 +3,7 @@ title: "Why You NEED to Contribute to Open Source"
 
 date: 2024-06-19
 url: /why-you-NEED-to-contribute-to-open-source/
-image: images/2024-thumbs/why-you-NEED-to-contribute-to-open-source.jpg
+image: images/2024-thumbs/why-you-NEED-to-contribute-to-open-source.webp
 categories:
   - Linux
   - Windows

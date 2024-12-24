@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-10-01T18:53:13+00:00
 url: /xenserver-cannot-connect/
-image: images/2016/07/xenserver.jpg
+image: images/2016/07/xenserver.webp
 categories:
   - Virtualization
 tags:
@@ -13,7 +13,7 @@ tags:
 ---
 Having problems and your XenServer cannot connect to XenCenter? Did you have high availability enabled? If you answered yes to both these questions here is how you get your XenServer back online and functioning properly. <!--more-->
 
-![xenserver-cannot](/images/2018/10/xenserver-cannot-connect.png)
+![xenserver-cannot](/images/2018/10/xenserver-cannot-connect.webp)
 
 ### Step-by-Step Guide
 

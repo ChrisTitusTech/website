@@ -3,7 +3,7 @@ title: "NixOS Explained"
 
 date: 2023-06-16
 url: /nixos-explained/
-image: images/2023-thumbs/nixos-explained.jpg
+image: images/2023-thumbs/nixos-explained.webp
 categories:
   - Linux
 tags:

@@ -3,7 +3,7 @@ title: "Docker Macos"
 
 date: 2022-11-30
 url: /docker-macos/
-image: images/2022-thumbs/docker-macos.jpg
+image: images/2022-thumbs/docker-macos.webp
 categories:
   - Linux
   - Windows
@@ -68,7 +68,7 @@ docker run -it \
 
 Use Disk Utility to "erase" the 270GB virtual disk: _Note: This is just virtual and doesn't erase your drive_
 
-![](/images/2022/docker-macos/disk-util.png)
+![](/images/2022/docker-macos/disk-util.webp)
 
 ## Start MacOS Docker Container
 
@@ -80,7 +80,7 @@ docker ps -a
 
 _Look for the NAMES column and pick the container name._
 
-![](/images/2022/docker-macos/container.png)
+![](/images/2022/docker-macos/container.webp)
 
 Start with the following command NAME = Name from column above
 
@@ -92,7 +92,7 @@ docker start NAME
 
 I love portainer because you can easily manage your containers. Start, Stop, and see resource usage... Portainer does it all! Here is what mine looks like:
 
-![](/images/2022/docker-macos/portainer.png)
+![](/images/2022/docker-macos/portainer.webp)
 
 
 ## Optimize the Container
@@ -125,7 +125,7 @@ defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
 ## Final Result
 
-![](/images/2022/docker-macos/macos-final.png)
+![](/images/2022/docker-macos/macos-final.webp)
 
 ## Walkthrough Video
 

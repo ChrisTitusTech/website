@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-02-15T22:20:57+00:00
 url: /garmin-express-linux/
-image: images/2019/02/garmin-express-icon-1.png
+image: images/2019/02/garmin-express-icon-1.webp
 categories:
   - Linux
 tags:
@@ -42,7 +42,7 @@ WINEPREFIX=/home/ctitus/GarminExpress wine explorer /desktop=garmin,1366x768 '/h
 
 Upon Launch you should see this screen which should recognize your Garmin device
 
-![Garmin Express on Linux](/images/2019/02/Selection_012.png) 
+![Garmin Express on Linux](/images/2019/02/Selection_012.webp) 
 
 With all this done you will be able to launch Garmin Express on Linux. 
 

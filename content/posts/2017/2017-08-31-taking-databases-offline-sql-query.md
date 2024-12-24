@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2017-08-31T17:00:08+00:00
 url: /taking-databases-offline-sql-query/
-image: images/2017/08/microsoft-Msyql-server.png
+image: images/2017/08/microsoft-Msyql-server.webp
 categories:
   - Windows Server
 tags:

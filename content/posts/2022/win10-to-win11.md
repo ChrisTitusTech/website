@@ -3,7 +3,7 @@ title: "Should you switch from Windows 10 to Windows 11"
 
 date: 2022-09-21
 url: /win10-to-win11/
-image: images/2022-thumbs/win10-to-win11.jpg
+image: images/2022-thumbs/win10-to-win11.webp
 categories:
   - Windows
 tags:

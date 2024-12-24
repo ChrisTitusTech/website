@@ -3,7 +3,7 @@ title: "Cleanup Docker"
 
 date: 2022-12-16
 url: /cleanup-docker/
-image: images/2022-thumbs/cleanup-docker.jpg
+image: images/2022-thumbs/cleanup-docker.webp
 categories:
   - Linux
   - Windows

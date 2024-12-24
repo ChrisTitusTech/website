@@ -3,7 +3,7 @@ title: "Linux MacOS"
 
 date: 2020-10-05T13:03:31-05:00
 url: /linux-macos/
-image: images/2020-thumbs/linux-macos.jpg
+image: images/2020-thumbs/linux-macos.webp
 categories:
   - Linux
   - MacOS
@@ -49,8 +49,8 @@ gsettings set org.gnome.desktop.interface gtk-theme "WhiteSur-dark"
 gsettings set org.gnome.desktop.wm.preferences theme "WhiteSur-dark"
 gsettings set org.gnome.desktop.interface icon-theme 'BigSur'
 gsettings set org.gnome.desktop.interface cursor-theme 'capitaine-cursors-light'
-gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/macOS-BS3.jpg'
-gsettings get org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/macOS-BS1.jpg'
+gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/macOS-BS3.webp'
+gsettings get org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/macOS-BS1.webp'
 ```
 
 ### Albert Search and Cairo Dock

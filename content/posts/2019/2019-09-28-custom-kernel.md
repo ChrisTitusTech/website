@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-09-29T00:32:45+00:00
 url: /custom-kernel/
-image: images/2019/09/customkernels-300x169.jpg
+image: images/2019/09/customkernels-300x169.webp
 categories:
   - Linux
 tags:
@@ -29,7 +29,7 @@ _Official Site [https://liquorix.net/](https://liquorix.net/) for the Liquorix K
 `sudo add-apt-repository ppa:damentz/liquorix && sudo apt-get update`  
 `sudo apt-get install linux-image-liquorix-amd64 linux-headers-liquorix-amd64`
 
-![arch](/images/2019/09/arch.png) 
+![arch](/images/2019/09/arch.webp) 
 
 ## Custom Kernel on Arch Linux, Manjaro, etc.
 

@@ -3,7 +3,7 @@ title: "Dism++"
 
 date: 2023-01-13
 url: /dism-plus/
-image: images/2023-thumbs/dism-plus.jpg
+image: images/2023-thumbs/dism-plus.webp
 categories:
   - Windows
 tags:
@@ -27,25 +27,25 @@ It is created by Chuyu, which is a Chinese developer and I'd recommend NOT using
 
 Advanced cleanup of Windows updates and misc. files.
 
-![](/images/2023/dism-plus/cleanup.png)
+![](/images/2023/dism-plus/cleanup.webp)
 
 ### Startup Check
 
 See what programs are starting and what programs will get installed when a new user is created.
 
-![](/images/2023/dism-plus/startup.png)
+![](/images/2023/dism-plus/startup.webp)
 
 ### Appx Uninstaller
 
 Bulk uninstall Microsoft Store Apps.
 
-![](/images/2023/dism-plus/appx.png)
+![](/images/2023/dism-plus/appx.webp)
 
 ### Updates
 
 Uninstalled Built-In Updates? Use the DISM++ Updates tab to scan and install new updates.
 
-![](/images/2023/dism-plus/updates.png)
+![](/images/2023/dism-plus/updates.webp)
 
 ### The Rest - Toolbox, Deploy, Drivers, etc.
 

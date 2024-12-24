@@ -3,7 +3,7 @@ title: "Disable Win Defender"
 
 date: 2022-08-12
 url: /disable-win-defender/
-image: images/2022-thumbs/disable-win-defender.jpg
+image: images/2022-thumbs/disable-win-defender.webp
 categories:
   - Windows
 tags:
@@ -21,7 +21,7 @@ There are a multitude of ways to disable defender or render it useless. Most pro
 ### Windows Settings
 Turn off Tamper Protection and Real-Time monitoring. 
 
-![real-monitoring](/images/2022/remove-win-defender/real-monitoring.png)
+![real-monitoring](/images/2022/remove-win-defender/real-monitoring.webp)
 
 ### Registry
 There are so many registry settings, but the main ones to focus on are below:

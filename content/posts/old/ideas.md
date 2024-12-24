@@ -3,7 +3,7 @@ title: "Ideas"
 
 date: 2012-11-14
 url: /ideas/
-image: images/2022-thumbs/ideas.jpg
+image: images/2022-thumbs/ideas.webp
 categories:
   - Linux
   - Windows

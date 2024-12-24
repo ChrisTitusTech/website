@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2013-04-04T19:04:14+00:00
 url: /update-is-pending/
-image: images/2013/04/error.png
+image: images/2013/04/error.webp
 categories:
   - Windows Server
 tags:

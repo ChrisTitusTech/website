@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2018-08-17T15:58:36+00:00
 url: /remove-asterisk/
-image: images/2018/08/Asterisk_003.png
+image: images/2018/08/Asterisk_003.webp
 categories:
   - Linux
 tags:

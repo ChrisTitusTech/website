@@ -3,7 +3,7 @@ title: "How to Create a Windows Service"
 
 date: 2020-06-15T23:33:56-05:00
 url: /create-windows-service/
-image: images/2020-thumbs/create-windows-service.jpg
+image: images/2020-thumbs/create-windows-service.webp
 categories:
   - Windows
 tags:

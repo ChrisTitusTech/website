@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2013-04-09T21:40:02+00:00
 url: /full-screen-rdp/
-image: images/2013/04/rdp.png
+image: images/2013/04/rdp.webp
 categories:
   - Windows
 

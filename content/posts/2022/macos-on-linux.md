@@ -3,7 +3,7 @@ title: "Macos on Linux"
 
 date: 2022-10-03
 url: /macos-on-linux/
-image: images/2022-thumbs/macos-on-linux.jpg
+image: images/2022-thumbs/macos-on-linux.webp
 categories:
   - Linux
   - MacOS
@@ -63,7 +63,7 @@ Obviously, the physical drive is considerably faster, but not possible in some i
 
 This is pretty simple as you just click Add Hardware -> Storage and then specify your hard drive.
 
-![hdd](/images/2022/qemu/hdd.png)
+![hdd](/images/2022/qemu/hdd.webp)
 
 _Note: while you can use drive short names `/dev/sda` I'd recommend using `/dev/disk/by-id/HARDDRIVESERIAL` as this doesn't ever change._
 

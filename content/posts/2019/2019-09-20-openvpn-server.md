@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-09-21T04:45:08+00:00
 url: /openvpn-server/
-image: images/2019/09/openvpn.png
+image: images/2019/09/openvpn.webp
 categories:
   - Linux
   - Networking
@@ -29,7 +29,7 @@ you will need to enable the OpenVPN service to auto-start so the VPN stays up af
 
 ### Troubleshooting:
 
-![tun-isnot-available](/images/2019/09/tun-isnot-available.png) 
+![tun-isnot-available](/images/2019/09/tun-isnot-available.webp) 
 
 **TUN is not available**  
 -Certain VPS servers do not have TUN enabled by default. Create the follow script and run it on startup to fix this issue.
@@ -60,7 +60,7 @@ Copy OVPN file to /etc/openvpn/client/client.ovpn
 Test client configuration in Terminal:  
 `sudo openvpn /etc/openvpn/client/client.ovpn`
 
-![import-vpn](/images/2019/09/import-vpn.png) 
+![import-vpn](/images/2019/09/import-vpn.webp) 
 
 Network manager Import VPN Connection: client.ovpn  
 Note: _Certificates stored in ~/.local/share/networkmanagement/certificates_
@@ -69,7 +69,7 @@ Connect via your Network Manager
 
 ### Troubleshooting:
 
-![tls-issue](/images/2019/09/tls-issue.png) 
+![tls-issue](/images/2019/09/tls-issue.webp) 
 
 Verify TLS key file is enabled and created. This is a known issue on KDE desktops. If it isn&#8217;t make sure to create it using the last TLS portion of the ovpn file.
 
@@ -77,11 +77,11 @@ Verify TLS key file is enabled and created. This is a known issue on KDE desktop
 
 Download OpenVPN client for your Windows @ https://openvpn.net/community-downloads/
 
-![clientovpn-winscp](/images/2019/09/clientovpn-winscp.png?fit=1024%2C451&ssl=1) 
+![clientovpn-winscp](/images/2019/09/clientovpn-winscp.webp?fit=1024%2C451&ssl=1) 
 
 Copy your client.ovpn from the server (WinSCP to connect and copy) and place the file in C:\Program Files\OpenVPN\config
 
-![openvpnconnect](/images/2019/09/openvpnconnect.jpg) 
+![openvpnconnect](/images/2019/09/openvpnconnect.webp) 
 
 Run the program and right click the icon in the tray and connect
 

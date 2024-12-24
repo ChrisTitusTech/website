@@ -3,7 +3,7 @@ title: "Windows Utility Update"
 
 date: 2023-05-19
 url: /winutil-may-23-update/
-image: images/2023-thumbs/winutil-may-23-update.jpg
+image: images/2023-thumbs/winutil-may-23-update.webp
 categories:
   - Windows
 tags:

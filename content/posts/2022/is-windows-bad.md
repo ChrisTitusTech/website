@@ -3,7 +3,7 @@ title: "Is Windows Bad"
 
 date: 2022-08-24
 url: /is-windows-bad/
-image: images/2022-thumbs/is-windows-bad.jpg
+image: images/2022-thumbs/is-windows-bad.webp
 categories:
   - Windows
 tags:
@@ -43,7 +43,7 @@ Let's say you don't mind some software or hardware not working or you want to pi
 ## The Microsoft HATE
 This all doesn't sound too bad, most people don't care about privacy or security as they freely give it away on social media. See this image if you want a good laugh at how bad people are at these practices.
 
-![social](/images/2022/social-eng.jpg)
+![social](/images/2022/social-eng.webp)
 
 So why do people hate Microsoft and try to get away from Windows? The monopoly and absolute ruthless business model it has built over the past 30 years is something to marvel at. 
 

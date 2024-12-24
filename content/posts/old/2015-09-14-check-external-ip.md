@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2015-09-14T18:33:12+00:00
 url: /check-external-ip/
-image: images/2015/09/ipaddress.jpg
+image: images/2015/09/ipaddress.webp
 categories:
   - Linux
 

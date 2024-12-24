@@ -3,7 +3,7 @@ title: "Ultra BASH Prompt"
 
 date: 2024-05-18
 url: /mybash/
-image: images/2024-thumbs/mybash.jpg
+image: images/2024-thumbs/mybash.webp
 categories:
   - Linux
 tags:

@@ -3,7 +3,7 @@ title: "You are NOT safe in Windows"
 
 date: 2022-07-15T13:14:39-05:00
 url: /not-safe-windows/
-image: images/2022-thumbs/not-safe-windows.jpg
+image: images/2022-thumbs/not-safe-windows.webp
 categories:
   - Windows
 tags:
@@ -41,7 +41,7 @@ A simple free hardening tool on Github will disable many of these attack surface
 
 HardenTools to disable services: <https://github.com/securitywithoutborders/hardentools>
 
-![harden](/images/2022/hardentools.png)
+![harden](/images/2022/hardentools.webp)
 
 ## Walkthrough Video
 

@@ -3,7 +3,7 @@ title: "Bspwm on KDE"
 
 date: 2021-07-20T14:46:40-05:00
 url: /bspwm-on-KDE/
-image: images/2021-thumbs/bspwm-on-KDE.jpg
+image: images/2021-thumbs/bspwm-on-KDE.webp
 categories:
   - Linux
 tags:

@@ -3,7 +3,7 @@ title: "You are using GitHub WRONG!"
 
 date: 2022-09-23
 url: /using-github-correctly/
-image: images/2022-thumbs/using-github-correctly.jpg
+image: images/2022-thumbs/using-github-correctly.webp
 categories:
   - Linux
   - Windows
@@ -108,7 +108,7 @@ Now in a perfect world I would be using `gcom "commit message"` several times a 
 ### Helping Projects
 A poorly documented issue is pointless and just gets closed in every project. Don't be that person! Document what you can and if you noticed a recent commit messed something up reference it by doing a copy paste of the Pull Request # like so. First, get to this screen by clicking "## commits" in top right of the project main page. Then copy the SHA from the "bad" commit. 
 
-![git-commit](/images/2022/github/git-commits.png)
+![git-commit](/images/2022/github/git-commits.webp)
 
 From here, you simply make your issue and paste that long sha hash in where you want to reference it. Don't worry the numbers will be truncated and it will look awesome in the issue page. 
 

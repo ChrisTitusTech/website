@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2017-05-02T19:53:16+00:00
 url: /spooler-subsystem-app-cpu-usage/
-image: images/2017/05/Spooler-subsystem-app.png
+image: images/2017/05/Spooler-subsystem-app.webp
 categories:
   - Windows
 tags:

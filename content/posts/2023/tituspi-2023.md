@@ -3,7 +3,7 @@ title: "TitusPi 3.0"
 
 date: 2023-04-25
 url: /tituspi-2023/
-image: images/2023-thumbs/tituspi-2023.jpg
+image: images/2023-thumbs/tituspi-2023.webp
 categories:
   - Linux
 tags:
@@ -28,7 +28,7 @@ A customized terminal using my [custom bash settings](https://github.com/ChrisTi
 
 | Terminal      | Desktop       | KDE Profile   |
 |:-------------:|:-------------:|:-------------:|
-|![](/images/2023/tituspi/terminal.png)|![](/images/2023/tituspi/desktop.png)|![](/images/2023/tituspi/konsave.png)|
+|![](/images/2023/tituspi/terminal.webp)|![](/images/2023/tituspi/desktop.webp)|![](/images/2023/tituspi/konsave.webp)|
 
 ### Build instructions
 

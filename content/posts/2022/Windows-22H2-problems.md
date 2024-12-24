@@ -3,7 +3,7 @@ title: "Windows 22H2 has Problems"
 
 date: 2022-11-09
 url: /Windows-22H2-problems/
-image: images/2022-thumbs/Windows-22H2-problems.jpg
+image: images/2022-thumbs/Windows-22H2-problems.webp
 categories:
   - Windows
 tags:
@@ -29,11 +29,11 @@ Source article: <https://learn.microsoft.com/en-us/windows/release-health/status
 
 _Issues on 10-22-2022_
 
-![](/images/2022/Windows-22H2-problems/ms-known-issues.png)
+![](/images/2022/Windows-22H2-problems/ms-known-issues.webp)
 
 _Issues update on 10-31-2022_
 
-![](/images/2022/Windows-22H2-problems/issue-update.png)
+![](/images/2022/Windows-22H2-problems/issue-update.webp)
 
 ## Should you Update?
 

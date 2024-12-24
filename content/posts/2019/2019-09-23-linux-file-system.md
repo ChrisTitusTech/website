@@ -4,7 +4,7 @@ author: Chris Titus
 
 date: 2019-09-23T17:23:00+00:00
 url: /linux-file-system/
-image: images/2019/09/linux-file-system-300x169.jpg
+image: images/2019/09/linux-file-system-300x169.webp
 categories:
   - Linux
 tags:
