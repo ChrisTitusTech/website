@@ -84,6 +84,37 @@ body {
   }
 }
 
+/* Search result highlight styling */
+.mark, mark {
+  padding: 0;
+  background-color: rgba(71, 196, 241, 0.15);
+  color: inherit;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  display: inline;
+}
+
+/* Optional: Add animation for better UX */
+.mark {
+  animation: highlight 0.5s ease-in-out;
+}
+
+@keyframes highlight {
+  from {
+      background-color: rgba(71, 196, 241, 0.5);
+  }
+  to {
+      background-color: rgba(71, 196, 241, 0.15);
+  }
+}
+
+/* Ensure search results container is properly positioned */
+#search-results {
+  position: relative;
+  z-index: 2;
+}
+
 // Dark theme styles
 [data-theme="dark"] {
   body, 
@@ -268,4 +299,35 @@ body {
       background-color: darken($secondary-color, 10%);
     }
   }
+
+  /* Search result highlight styling */
+.mark, mark {
+  padding: 0;
+  background-color: rgba(71, 196, 241, 0.1);
+  color: inherit;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+  display: inline;
+}
+
+/* Optional: Add animation for better UX */
+.mark {
+  animation: highlight 0.5s ease-in-out;
+}
+
+@keyframes highlight {
+  from {
+      background-color: rgba(71, 196, 241, 0.25);
+  }
+  to {
+      background-color: rgba(71, 196, 241, 0.1);
+  }
+}
+
+/* Ensure search results container is properly positioned */
+#search-results {
+  position: relative;
+  z-index: 2;
+}
 }
