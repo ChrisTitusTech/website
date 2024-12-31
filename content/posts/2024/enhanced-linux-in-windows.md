@@ -1,7 +1,7 @@
 ---
 title: "Enhanced Linux in Windows"
 
-date: 2024-09-28
+date: 2024-12-31
 url: /enhanced-linux-in-windows/
 image: images/2024-thumbs/enhanced-linux-in-windows.webp
 categories:
@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - Hyperv 
-draft: true
+draft: false
 ---
 Using WSL is great for a lot of things, but often I find it limiting or quirky bugs that don't happen on HyperV. 
 <!--more-->
@@ -133,6 +133,14 @@ echo "Reboot your machine to begin using XRDP."
 echo "Example: nano ~/.xinitrc" and launch your desktop environment or window manager. Enter "exec dwm" to launch dwm. 
 
 ```
+
+## Audio Issues
+
+Depending on your audio setup you may run into issues. Currently, pulseaudio-module-xrdp is not working on the AUR for Arch. I have been unsuccessful in getting pipewire working with xrdp. 
+
+Check <https://github.com/neutrinolabs/pulseaudio-module-xrdp> for more information.
+
+Alternatively, you should be able to use pipewire with xrdp at <https://github.com/neutrinolabs/pipewire-module-xrdp>. However, at the time of this writing it has not seen an update in 9 months. So this method will probably only work with fedora or debian based systems.
 
 ## Walkthrough Video
 

@@ -311,3 +311,23 @@ writeStats = true
 [build.processing.css]
   bundle = true
   minify = true
+
+[caches]
+  [caches.getresource]
+    dir = ':cacheDir/:project'
+    maxAge = "48h"
+  [caches.getjson]
+    dir = ':cacheDir/:project'
+    maxAge = "48h"
+  [caches.getcsv]
+    dir = ':cacheDir/:project'
+    maxAge = "48h"
+  [caches.images]
+    dir = ':resourceDir/_gen'
+    maxAge = "48h"
+  [caches.assets]
+    dir = ':resourceDir/_gen'
+    maxAge = "48h"
+  [caches.modules]
+    dir = ':cacheDir/modules'
+    maxAge = "168h"  # 1 week

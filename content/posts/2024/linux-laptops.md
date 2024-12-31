@@ -1,7 +1,7 @@
 ---
 title: "Linux Laptops"
 
-date: 2024-08-29
+date: 2024-12-31
 url: /linux-laptops/
 image: images/2024-thumbs/linux-laptops.webp
 categories:
@@ -17,7 +17,7 @@ Linux Laptops are a niche market, but often misunderstood as there are only 3 ac
 
 There are plenty of manufacturers that sell laptops with Linux pre-installed, but only 3 that I would recommend. The reason is simple, these 3 manufacturers have the best support for Linux, the best hardware compatibility, and have regression testing on updates.
 
-What about Dell, HP, Lenovo, and others? They are great manufacturers, but they are not Linux manufacturers. They do not have the same level of support for Linux as System76, Kfocus, and Tuxedo. They do not have the same level of hardware compatibility, and they do not have ANY regression testing on updates.
+What about the major manufacturers in big box retail stores? They are great manufacturers, but they are not Linux manufacturers. They do not have the same level of support for Linux as System76, Kfocus, and Tuxedo. They do not have the same level of hardware compatibility, and they do not have ANY regression testing on updates.
 
 Simply put, These vendors control the Linux updates so the hardware always performs well. They have the best support for Linux, and they have the best hardware compatibility.
 
@@ -29,9 +29,11 @@ Framework is amazing laptop from a modular and compatibility point of view. Many
 
 Yes and No. I find them just annoying most of the time. There has been numerous times that my sleep stopped working from a regression or having performance problems from a regression. These aren't "deal breakers", but they do require you to downgrade the kernel back to the last version while it gets fixed and hopefully reported.
 
+I'd recommend BTRFS and rollback in case you do have a regression. Kfocus provides this out of the box with their Recovery tools.
+
 ## Price Premium
 
-Most of these laptops I mentioned above come at a price premium and good hardware, but overpriced when looking at from a spec sheet. Almost every Linux laptop manufacture sources their hardware from Clevo Computers. However, each vendor above makes different build options and changes to their specifications. 
+Most of these laptops I mentioned above come at a price premium and good hardware, but overpriced when looking at from a spec sheet. Almost every Linux laptop manufacture sources their hardware from Clevo and a few other manufacturers. However, each vendor above makes different build options and changes to their specifications. Both Tuxedo and Kfocus use another chassis and different hardware than System76.
 
 The price premium comes into play when you look at the software that comes loaded on them. 
 
@@ -59,7 +61,7 @@ The price premium comes into play when you look at the software that comes loade
 
 ## BTW, I use Arch
 
-If you are going to load Arch Linux or Fedora on any of the above laptops. DO NOT BUY THEM! You are throwing away money buying from these vendors if you don't use any of their work. The benefits above are the REASON YOU BUY THEM! If you are just going to wipe out the system, use a Framework or other Linux compatible laptop that doesn't cost the premium. 
+If you are going to load Arch Linux or Fedora on any of the above laptops. You may not want to pay the premium since you are going to wipe out the system anyways. However, the one benefit is the hardware itself will be compatible and you will have an easier time than something from some of the other manufacturers.
 
 Personally, I use the (Kfocus ir16 laptop)[https://kfocus.org/spec/spec-ir16.html] right now because it is my business laptop that I want to ALWAYS work. I don't load Fedora or Arch on it. I don't want to worry about updates screwing something up. I just open it and go, but I've used Tuxedo for the same thing in the past for several years as well. I'm sure System76 would also be stable as well, but I hate GNOME's look and feel. 
 
