@@ -1,14 +1,14 @@
 ---
 title: "Removing SystemD from Linux"
 
-date: 2024-12-18
+date: 2024-12-31
 url: /removing-systemd/
 image: images/2024-thumbs/removing-systemd.webp
 categories:
   - Linux
 tags:
   - Systemd
-draft: true
+draft: false
 ---
 Systemd is great for standardization, but it is insanely bloated. Boot times average around 20 seconds when removing it and using a minimal init system will result in a boot time of only a few seconds. This is a guide on switching to OpenRC.
 <!--more-->
@@ -122,6 +122,6 @@ stop_pre() {
 }
 ```
 
-## Walkthrough Video
+## No Video Planned
 
-{{< youtube "WVQ_2hN_zzs" >}}
+Let me know below if you would like a video on this topic.
