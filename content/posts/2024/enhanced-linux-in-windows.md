@@ -142,6 +142,3 @@ Check <https://github.com/neutrinolabs/pulseaudio-module-xrdp> for more informat
 
 Alternatively, you should be able to use pipewire with xrdp at <https://github.com/neutrinolabs/pipewire-module-xrdp>. However, at the time of this writing it has not seen an update in 9 months. So this method will probably only work with fedora or debian based systems.
 
-## Walkthrough Video
-
-{{< youtube "WVQ_2hN_zzs" >}}
