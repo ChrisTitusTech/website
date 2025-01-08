@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 
 date: {{ now.Format "2006-01-02" }}
 url: /{{ .Name }}/
-image: images/2024-thumbs/{{ .Name }}.jpg
+image: images/2025-thumbs/{{ .Name }}.webp
 categories:
   - Linux
   - Windows

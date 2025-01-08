@@ -3,12 +3,12 @@ title: "The State of Linux Gaming"
 
 date: 2025-01-07
 url: /the-state-of-linux-gaming/
-image: images/2024-thumbs/the-state-of-linux-gaming.jpg
+image: images/2025-thumbs/the-state-of-linux-gaming.webp
 categories:
   - Linux
 tags:
   - steamos
-draft: true
+draft: false
 ---
 SteamOS 3.0 may NEVER get a widespread release. However, what valve is doing and what others in the space are doing are more important.
 <!--more-->
@@ -41,4 +41,4 @@ There are others mentioned around the web in other youtuber videos like HoloISO 
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "0toWysEA3vs" >}}
