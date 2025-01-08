@@ -1,9 +1,9 @@
 ---
 title: "Windows to Linux for Powerusers"
 
-date: 2024-12-26
+date: 2025-01-15
 url: /windows-to-linux/
-image: images/2024-thumbs/windows-to-linux.webp
+image: images/2025-thumbs/windows-to-linux.webp
 categories:
   - Linux
   - Windows

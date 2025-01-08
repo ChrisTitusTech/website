@@ -298,7 +298,6 @@ for = "/**"
   # Content-Security-Policy = "default-src 'self' *.shopify.com *.shopifycdn.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.shopify.com *.shopifycdn.com sdks.shopifycdn.com cdn.jsdelivr.net cdnjs.cloudflare.com *.google.com *.googletagmanager.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net utteranc.es *.utteranc.es *.youtube.com youtube.com *.ytimg.com; style-src 'self' 'unsafe-inline' *.shopify.com *.shopifycdn.com cdnjs.cloudflare.com fonts.googleapis.com *.fontawesome.com; font-src 'self' data: *.shopifycdn.com fonts.gstatic.com cdnjs.cloudflare.com *.fontawesome.com; frame-src 'self' *.shopify.com *.myshopify.com *.doubleclick.net *.google.com *.youtube.com youtube.com *.youtu.be youtu.be github.com *.github.com utteranc.es; img-src 'self' data: * *.shopify.com *.shopifycdn.com *.google.com *.google-analytics.com *.googlesyndication.com *.doubleclick.net *.youtube.com youtube.com *.youtu.be youtu.be *.ytimg.com; connect-src 'self' *.shopify.com *.myshopify.com monorail-edge.shopifysvc.com *.google-analytics.com *.doubleclick.net api.github.com *.youtube.com youtube.com *.ytimg.com; font-src 'self' data: *.shopifycdn.com fonts.gstatic.com cdnjs.cloudflare.com *.fontawesome.com; base-uri 'self';"
 
 [build]
-writeStats = true
 [build.processing]
   skip_processing = false
 [build.processing.js]
