@@ -81,7 +81,7 @@ From your command line interface (terminal, powershell, etc.) type `adb devices`
 
 Verify your phone is seen
 
-Now download the release from their GitHub <https://github.com/0x192/universal-android-debloater/releases>
+Now download the release from their GitHub <https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/releases>
 
 Then launch the program
 
