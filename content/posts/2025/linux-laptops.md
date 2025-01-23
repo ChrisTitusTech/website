@@ -1,7 +1,7 @@
 ---
 title: "Linux Laptops"
 
-date: 2024-12-31
+date: 2025-01-22
 url: /linux-laptops/
 image: images/2024-thumbs/linux-laptops.webp
 categories:

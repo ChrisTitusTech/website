@@ -1,7 +1,7 @@
 ---
 title: "Linux Game Mods"
 
-date: 2024-11-08
+date: 2025-11-08
 url: /linux-game-mods/
 image: images/2024-thumbs/linux-game-mods.webp
 categories:
@@ -25,6 +25,12 @@ There has been Mod Manager, Vortex, and many other apps out there, but none of t
 - Stardew Valley
 - Cyberpunk 2077
 - Baldur's Gate III
+- Bannerlord
+
+
+## Current Development
+
+They are working on load order and a few other additions. They are making steady progress and like that they have a good foundation of just releasing an AppImage/binaries. This is important because too many Linux projects only release deb or rpm distro specific releases and they are using a more universal road that will be Steamdeck compatible.
 
 ## Roadmap for Next Games
 

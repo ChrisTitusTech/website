@@ -27,7 +27,7 @@ Why do you want to switch? For me, I was tired of Windows and their update cycle
 
 ## Setup a Test Environment
 
-Before you nuke your Windows and install Linux, you need to understand what you are getting yourself into. The best way is to setup a test environment using either a Virtual Machine or even another PC.
+Before you nuke your Windows and install Linux, you need to understand what you are getting yourself into. The best way is to setup a test environment using either a Virtual Machine or even another PC. I personally recommend using a raspberry pi to cut your teeth in Linux and understanding terminal. 
 
 ### Choosing your Distribution
 
@@ -58,6 +58,17 @@ Linux can be changed in any way you want. Where a pre-packaged system like Windo
 - You don't like how the system boots? Change the bootloader from grub to systemd
 - Don't like the way Xorg handles displays? Change to Wayland
 - Want a completely different workflow from the GNOME Desktop Environment? Switch to KDE
+
+#### Notable Differences from Windows
+
+Here is a short list of things you need to know:
+- Drivers are baked into the Kernel and adding new "drivers" relies on a kernel module that needs to be rebuilt every time the kernel changes. These modules rely on dkms and linux-headers a lot of the time. 
+- Control Panel and GUI system applications are generally an after thought. System configuration is done in the `/etc` folder and User configuration is done in the `/home/user/.config` folder. Windows can spread config files everywhere and Linux doesn't and puts them in these folders depending on if it is systemwide or user based. 
+- Terminal is needed. Linux try hards always say you can do anything in the GUI and generally don't use Windows or Mac and don't know how bad the Linux GUI experience is in comparison. You will need to get comfortable with the terminal. Linux is built for the CLI experience in mind FIRST and the GUI ALWAYS is second or not at all in some cases.
+- EVERYTHING can be customized! 
+- Office 365 and Adobe Products do NOT work
+- Linux FOSS applications are generally less polished, but then again they are FREE!
+- Browser-based app alternatives are a way to get around the limitations of FOSS offerings
 
 #### How Programs are Installed
 
