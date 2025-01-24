@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - AI
-draft: false
+draft: true
 ---
 Do we really need Google Gemini, Apple Intelligence, or Microsoft CoPilot?
 <!--more-->
