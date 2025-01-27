@@ -14,7 +14,7 @@ draft: false
 Power management is a critical thing to understand in laptops. It's possible to buy an expensive laptop and end up not using it because of bad power management practices.
 <!--more-->
 
-{{< tweet user="christitustech" id="1560314657142964224" >}}
+{{< x user="christitustech" id="1560314657142964224" >}}
 
  Also, not taking care of the thermals on a laptop will lead to less laptop life, shorter battery, and unpleasant heat generation. 
 

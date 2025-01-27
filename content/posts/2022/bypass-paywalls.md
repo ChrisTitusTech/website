@@ -14,7 +14,7 @@ draft: false
 Tired of ads, paywalls, and other garbage in your web browsing experience? These add-ons will improve your experience!
 <!--more-->
 
-{{< tweet user="nerdz0ne" id="1596178362271207425" >}}
+{{< x user="nerdz0ne" id="1596178362271207425" >}}
 
 ## The Extensions
 

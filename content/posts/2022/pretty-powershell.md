@@ -43,7 +43,7 @@ In the screenshot below you will see the stock font select and the missing icons
 
 The defaults are clunky and take too long to type in even when using shorthand. Linux does this better, so lets bring in that syntax to fix it with Aliases in our PowerShell profile.
 
-{{< tweet user="christitustech" id="1581708112394096640" >}}
+{{< x user="christitustech" id="1581708112394096640" >}}
 
 ### New Aliases
 

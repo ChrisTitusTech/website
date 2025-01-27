@@ -24,7 +24,7 @@ I take issue with its main marketing being "secure", when it is anything but sec
 
 They did make a thread about this on twitter below addressing some of the backlash since the Linus Tech Tips coverage.
 
-{{< twitter user="AtlasOS" id="1651284816489336832" >}}
+{{< x user="AtlasOS" id="1651284816489336832" >}}
 
 AtlasOS 22H2 (Current Release) has the following security issues:
 
@@ -72,7 +72,7 @@ AtlasOS 22H2 (Current Release) has the following security issues:
 
 Its for someone with a specific purpose in mind. Playing a few games, a kiosk, or using the machine for simple tasks. It is NOT suitable for browsing the internet or using as a daily driver in it's current state. If you are aware of the security issues, and have the ability to navigate them, it *might* be for you. For the average user... HELL NO! 
 
-{{< twitter user="christitustech" id="1651325245209341959" >}}
+{{< x user="christitustech" id="1651325245209341959" >}}
 
 ## Walkthrough Video
 

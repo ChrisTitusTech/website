@@ -14,7 +14,7 @@ draft: false
 If you are running docker you will accumulate a lot of unused images and volumes as you update running containers. This makes maintenance a necessity.
 <!--more-->
 
-{{< tweet user="christitustech" id="1603766983274729472" >}}
+{{< x user="christitustech" id="1603766983274729472" >}}
 
 ## Do you need this?
 

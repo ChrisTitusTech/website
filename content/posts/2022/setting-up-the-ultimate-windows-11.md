@@ -13,7 +13,7 @@ draft: false
 This guide shows you how to get the best performing Windows in the lightest package possible.
 <!--more-->
 
-{{< tweet user="christitustech" id="1578070224896663553" >}}
+{{< x user="christitustech" id="1578070224896663553" >}}
 
 ## Before you begin
 

@@ -14,7 +14,7 @@ draft: false
 With GPU Market prices plummeting and about to go even further down... I picked up a used GPU from eBay.
 <!--more-->
 
-{{< tweet user="christitustech" id="1573043990018113539" >}}
+{{< x user="christitustech" id="1573043990018113539" >}}
 
 ## The Deal
 

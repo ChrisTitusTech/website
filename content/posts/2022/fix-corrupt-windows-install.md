@@ -13,7 +13,7 @@ draft: false
 Using SFC and DISM is often done in haste and incorrectly. If you need to fix a corrupted install, then a special DISM command MUST BE issued. 
 <!--more-->
 
-{{< tweet user="christitustech" id="1587911136879542273" >}}
+{{< x user="christitustech" id="1587911136879542273" >}}
 
 ## The Commands
 

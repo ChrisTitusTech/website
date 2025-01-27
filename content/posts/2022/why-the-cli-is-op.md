@@ -15,7 +15,7 @@ draft: false
 When I say "Overpowered", this means the command line interfaces can do things that are otherwise impossible.
 <!--more-->
 
-{{< tweet user="christitustech" id="1578822405518397442" >}}
+{{< x user="christitustech" id="1578822405518397442" >}}
 
 ## All Operating Systems
 

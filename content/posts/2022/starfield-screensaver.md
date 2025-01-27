@@ -14,7 +14,7 @@ draft: false
 Screensavers might be the past, but they are still one of the coolest to do on your PC. 
 <!--more-->
 
-{{< tweet user="christitustech" id="1594450349657821186" >}}
+{{< x user="christitustech" id="1594450349657821186" >}}
 
 ## SCR File Screensavers
 

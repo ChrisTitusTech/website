@@ -14,7 +14,7 @@ draft: false
 Don't know what ReAgentC is or how to use it? This is your guide.
 <!--more-->
 
-{{< tweet user="christitustech" id="1584603485261115392" >}}
+{{< x user="christitustech" id="1584603485261115392" >}}
 
 ## Setup Recovery Partition
 

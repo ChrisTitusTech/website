@@ -13,7 +13,7 @@ draft: false
 Windows 11 has a bug effecting some systems. Out of my 3 Windows 11 systems, one of them had this happen.
 <!--more-->
 
-{{< tweet user="christitustech" id="1597766834094211073" >}}
+{{< x user="christitustech" id="1597766834094211073" >}}
 
 ## Underlying Problem
 

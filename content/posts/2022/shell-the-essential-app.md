@@ -13,7 +13,7 @@ draft: false
 Context menus have become worse in Windows 11 and weren't good in Windows 10. This application will fix it for both modern Windows operating systems. 
 <!--more-->
 
-{{< tweet user="christitustech" id="1587824008342429696" >}}
+{{< x user="christitustech" id="1587824008342429696" >}}
 
 ## The App
 

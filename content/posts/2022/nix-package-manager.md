@@ -14,7 +14,7 @@ draft: false
 This standalone package manager is absolutely stunning and I can't believe I'm just now discovering it's true power. 
 <!--more-->
 
-{{< tweet user="christitustech" id="1559232526094417921" >}}
+{{< x user="christitustech" id="1559232526094417921" >}}
 
 ## Installation
 Source: <https://github.com/NixOS/nix>

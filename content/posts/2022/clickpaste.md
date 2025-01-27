@@ -12,7 +12,7 @@ draft: false
 ---
 This program is free and open source, while being absolutely a life saver. I use it for VNC sessions and when dealing with VMs through my host computer.<!--more-->
 
-{{< tweet user="christitustech" id="1572985183594242048" >}}
+{{< x user="christitustech" id="1572985183594242048" >}}
 
 GitHub Link: <https://github.com/Collective-Software/ClickPaste>
 

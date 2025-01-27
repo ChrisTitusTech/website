@@ -17,7 +17,7 @@ I've never experienced a program with such power and potential than Neovim. It d
 
 The following tweet encompasses my thoughts and feelings in my first week using Neovim.
 
-{{< tweet user="christitustech" id="1584944224700702720" >}}
+{{< x user="christitustech" id="1584944224700702720" >}}
 
 ## Is this the path for you?
 

@@ -15,7 +15,7 @@ Yes, the title is correct, I'm switching to Ubuntu. Don't you hate snaps and GNO
 
 But Why? ... Ubuntu does something right!?
 
-{{< tweet user="christitustech" id="1591540430226628608" >}}
+{{< x user="christitustech" id="1591540430226628608" >}}
 
 ## Starting with Server
 

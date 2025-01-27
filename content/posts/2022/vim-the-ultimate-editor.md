@@ -50,7 +50,7 @@ VIM Cheatsheets:
   - <https://devhints.io/vim>
   - <https://vim.rtorr.com/>
 
-{{< tweet user="christitustech" id="1577690702200590336" >}}
+{{< x user="christitustech" id="1577690702200590336" >}}
 
 ## Learning the basics
 

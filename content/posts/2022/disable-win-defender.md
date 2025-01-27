@@ -85,7 +85,7 @@ There are a ton of program files and logs for Windows Defender located at `C:\Pr
 ### Powershell
 This can be used to do temporary disable parts or all of Defender as well. Here is some basic command I used and shared on Twitter:
 
-{{< tweet user="christitustech" id="1556368265139585026" >}}
+{{< x user="christitustech" id="1556368265139585026" >}}
 
 ## GitHub Projects - CAUTION!
 Here are a couple GitHub projects that will completely destroy defender and when used improperly can even be used to deliver virus payloads onto systems

@@ -15,7 +15,7 @@ ARM Computing has gone mainstream with Raspberry Pi and Mac M1/M2 chips. Harness
 
 Ubuntu's ARM spin is fantastic at a server level. The main issue I've had with Ubuntu desktops in the past are it reliance on GNOME's desktop environment and SNAP packages. Both these issues get alleviated when we get in to the server realm. My new PC that I'm building on arm using the OrangePi 800 hardware is fantastic with the right software installed on it. That is where Ubuntu ARM enters...
 
-{{< tweet user="christitustech" id="1587141986942861315" >}}
+{{< x user="christitustech" id="1587141986942861315" >}}
 
 
 ## The Setup

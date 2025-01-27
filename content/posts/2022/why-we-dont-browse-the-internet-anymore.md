@@ -16,7 +16,7 @@ The problem with the modern internet is ads, sponsored posts, and pay walls. Ent
 
 Subscribe to the sites and information you want to see and not have an algorithm decide what influences you. This requires "fixing" RSS and downloading articles, but the payout is amazing. How many people use RSS? Here is poll I ran on Twitter. 
 
-{{< tweet user="christitustech" id="1589727064957284352" >}}
+{{< x user="christitustech" id="1589727064957284352" >}}
 
 ## How we used to browse the Internet
 

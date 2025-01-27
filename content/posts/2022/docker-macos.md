@@ -18,7 +18,7 @@ Don't have a Mac and need MacOS? No problem, run it in a docker container.
 
 Credit goes to this twitter user:
 
-{{< tweet user="justArRinze" id="1591779981390413826" >}}
+{{< x user="justArRinze" id="1591779981390413826" >}}
 
 ## Requirements
 
