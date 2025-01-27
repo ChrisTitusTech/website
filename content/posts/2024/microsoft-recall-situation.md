@@ -3,7 +3,7 @@ title: "The Microsoft Recall Situation"
 
 date: 2024-10-28
 url: /microsoft-recall-situation/
-image: images/2024-thumbs/microsoft-recall-situation.jpg
+image: images/2024-thumbs/microsoft-recall-situation.webp
 categories:
   - Windows
 tags:
@@ -99,4 +99,4 @@ Big shoutout to WitherorNot, CodingWonders, fish bazooka, and thecatontheceiling
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "gBqIUkmVel8" >}}
