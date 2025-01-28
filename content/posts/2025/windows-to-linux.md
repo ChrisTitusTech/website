@@ -1,7 +1,7 @@
 ---
 title: "Windows to Linux for Powerusers"
 
-date: 2025-01-15
+date: 2025-01-29
 url: /windows-to-linux/
 image: images/2025-thumbs/windows-to-linux.webp
 categories:
@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - Guide
-draft: true
+draft: false
 ---
 Windows to Linux is a hard transition for many users. I find this especially true for advanced Windows users. Here are all the things I wish I knew before trying to switch to Linux after using Windows for 20+ years.
 <!--more-->
@@ -66,7 +66,7 @@ Here is a short list of things you need to know:
 - Control Panel and GUI system applications are generally an after thought. System configuration is done in the `/etc` folder and User configuration is done in the `/home/user/.config` folder. Windows can spread config files everywhere and Linux doesn't and puts them in these folders depending on if it is systemwide or user based. 
 - Terminal is needed. Linux try hards always say you can do anything in the GUI and generally don't use Windows or Mac and don't know how bad the Linux GUI experience is in comparison. You will need to get comfortable with the terminal. Linux is built for the CLI experience in mind FIRST and the GUI ALWAYS is second or not at all in some cases.
 - EVERYTHING can be customized! 
-- Office 365 and Adobe Products do NOT work
+- Linux will NOT protect you from yourself. You can do anything you want and break your system.
 - Linux FOSS applications are generally less polished, but then again they are FREE!
 - Browser-based app alternatives are a way to get around the limitations of FOSS offerings
 
@@ -124,5 +124,5 @@ Start messing around with window managers and configuring the system from a comm
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "vlN5koqNY5U" >}}
 
