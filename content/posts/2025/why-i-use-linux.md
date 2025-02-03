@@ -8,7 +8,7 @@ categories:
   - Linux
 tags:
   - ArchLinux
-draft: true
+draft: false
 ---
 I use EVERY operating system, but I use Linux for my main machine. Its not for security, its not for privacy, its not for speed, and its not for stability.
 <!--more-->
@@ -27,9 +27,9 @@ Most Linux virgins will tell you its more secure, private, or stable than Window
 
 So Why Linux?
 
-Simply put, I get more done. I am able to develop more software, I am more creative for youtube videos, and I am able explore an endless world of possibilities in Linux. No one knows everything about Linux and I do mean NO ONE! Not even the most experienced Linux users knows everything about Linux. There is always something new to learn and I love it because of this. In Mac or Windows there is no mystery for me other than tracking down and fixing things Apple or Microsoft screwed up in recent years, but beyond that its rather boring. 
+Simply put, I get more done. I am able to develop more software, I am more creative for YouTube videos, and I am able explore an endless world of possibilities in Linux. No one knows everything about Linux and I do mean NO ONE! Not even the most experienced Linux users knows everything about Linux. There is always something new to learn and I love it because of this. In Mac or Windows there is no mystery for me other than tracking down and fixing things Apple or Microsoft screwed up in recent years, but beyond that its rather boring. 
 
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "7-UCkYlTr50" >}}
