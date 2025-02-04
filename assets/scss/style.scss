@@ -29,6 +29,22 @@ body {
   color: $text-color;
 }
 
+.widget-banner {
+  text-align: center;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .widget-banner {
+      margin: 1rem auto;
+      max-width: 90%;
+  }
+}
+
 // Back to top button styles
 #back-to-top {
   display: none;
