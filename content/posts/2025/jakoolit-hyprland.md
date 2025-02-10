@@ -1,14 +1,14 @@
 ---
 title: "Jakoolit Hyprland"
 
-date: 2025-02-03
+date: 2025-02-10
 url: /jakoolit-hyprland/
 image: images/2025-thumbs/jakoolit-hyprland.webp
 categories:
   - Linux
 tags:
   - Hyprland
-draft: true
+draft: false
 ---
 Hyprland has always been an elusive setup to a functional desktop that I enjoy. However, I recently explored JaKoolit and it has been a game changer. This is a guide on how to setup JaKoolit Hyprland on your system.
 <!--more-->
@@ -40,4 +40,4 @@ Look under System setup and you'll see the option to install JaKoolit Hyprland.
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "83ZZp8wJ-UY" >}}
