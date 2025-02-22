@@ -1,14 +1,1 @@
-{{ $img := .Page.Resources.GetMatch .Destination }}
-{{ with $img }}
-  {{ $small := $img.Resize "600x" }}
-  {{ $medium := $img.Resize "1200x" }}
-  {{ $large := $img.Resize "1800x" }}
-  <img
-    src="{{ $small.RelPermalink }}"
-    srcset="{{ $small.RelPermalink }} 600w, {{ $medium.RelPermalink }} 1200w, {{ $large.RelPermalink }} 1800w"
-    alt="{{ $.Text }}"
-    loading="lazy"
-    decoding="async"
-    width="{{ $img.Width }}"
-    height="{{ $img.Height }}">
-{{ end }} 
+<img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" class="img-fluid"> 
