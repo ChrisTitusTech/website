@@ -45,6 +45,11 @@ body {
   }
 }
 
+.stickyside {
+  position: sticky;
+  top: 2rem;
+}
+
 // Back to top button styles
 #back-to-top {
   display: none;
