@@ -56,7 +56,7 @@ primary_font = "PT Sans:wght@400;700"
 icon_font = "Font Awesome 6 Free"
 
 [params.widgets]
-sidebar = ["toc"]
+sidebar = ["toc", "google-ad"]
 
 [params.images]
   featured = true
