@@ -61,13 +61,6 @@ html {
 
 .googlead {
     margin: 1rem 0;
-    min-height: 280px;
     position: relative;
     text-align: center;
-}
-
-.ad-loading {
-    padding: 1rem;
-    color: #666;
-    font-size: 0.9rem;
 }
