@@ -46,6 +46,8 @@ I use to save my notes and is easily accessible from the terminal. It uses stand
 
 Warp AI is a feature that allows you to ask questions and get answers in the terminal. A good example of this is complex commands like github usage, regex, or O365 usage. Typically unique commands I'd use once every few months I don't have to to leave the terminal to find anymore.
 
+I don't like the agent mode of Warp AI. It takes over too easily and a lot of the time will run wild without properly displaying output of an error. Asking it simple questions or basic command lookup is great, but I caution against letting it run wild when using the terminal to manage your system.
+
 ## Pane Management
 
 This is a feature that allows you to manage multiple panes in the terminal. This is useful for those that need to have multiple terminals open at once.
