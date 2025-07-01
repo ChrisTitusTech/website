@@ -1,7 +1,7 @@
 ---
 title: "The Ai Problem"
 
-date: 2025-01-25
+date: 2025-07-01
 url: /the-ai-problem/
 image: images/2025-thumbs/the-ai-problem.webp
 categories:
@@ -9,7 +9,7 @@ categories:
   - Windows
 tags:
   - AI
-draft: true
+draft: false
 ---
 Do we really need Google Gemini, Apple Intelligence, or Microsoft CoPilot?
 <!--more-->
