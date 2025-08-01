@@ -17,7 +17,7 @@ Configuring Monitors in Hyprland is amazing! You can specify monitors by type AN
 
 Here is a screenshot of `hyprctl monitors`
 
-![hyprctl](/images/2025/hyprctl.webp)
+![hyprctl](/images/2025/hyprctl-monitors.webp)
 
 ## Add to hyprland.conf
 
