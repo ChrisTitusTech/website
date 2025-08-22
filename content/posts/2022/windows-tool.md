@@ -18,6 +18,8 @@ This comprehensive utility has been developed and refined over several years, ex
 
 ## One Command - Download and Usage
 
+**If you want to support the project, you can buy an exe version at <https://cttstore.com> or <https://christitus.com/downloads/>**
+
 Execute the following command from an elevated PowerShell prompt (Run as Administrator):
 
 ```
