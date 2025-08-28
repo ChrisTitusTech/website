@@ -1,0 +1,167 @@
+---
+title: "Setting Up Reshade on Linux with vkBasalt"
+
+date: 2025-08-26
+url: /setting-up-reshade-on-linux/
+image: images/2025-thumbs/setting-up-reshade-on-linux.webp
+categories:
+  - Linux
+tags:
+  - reshade
+  - vkbasalt
+draft: false
+---
+vkBasalt is a Vulkan post-processing layer that brings ReShade-like capabilities to Linux. It allows you to apply various visual effects to Vulkan-based games and applications, enhancing the overall graphical experience. 
+
+_Note: This does NOT work with OpenGL games!_
+<!--more-->
+
+# Setting up vkBasalt
+
+Requires 2 packages:
+- vkBasalt <https://github.com/DadSchoorse/vkBasalt>
+- Reshade Shaders/Textures <https://github.com/crosire/reshade-shaders>
+
+## Arch Installation
+
+```
+yay -S vkbasalt lib32-vkbasalt reshade-shaders-git
+```
+
+## Debian/Fedora Installs
+
+```
+sudo apt install vkbasalt
+```
+
+or
+
+```
+sudo dnf install vkbasalt
+```
+
+Manually download and extract reshade-shaders pack
+
+```
+sudo git clone https://github.com/crosire/reshade-shaders.git /opt/reshade
+```
+
+## Configuartion
+
+Install my vkbasalt configuartion with:
+
+```
+git clone https://github.com/ChrisTitusTech/vkbasalt-conf ~/.config/vkbasalt
+```
+
+### Configuration Explained
+
+```
+#effects is a colon seperated list of effect to use
+#e.g.: effects = fxaa:cas
+#effects will be run in order from left to right
+#one effect can be run multiple times e.g. smaa:smaa:cas
+#cas    - Contrast Adaptive Sharpening
+#dls    - Denoised Luma Sharpening
+#fxaa   - Fast Approximate Anti-Aliasing
+#smaa   - Enhanced Subpixel Morphological Antialiasing
+#lut    - Color LookUp Table
+effects = cas
+
+reshadeTexturePath = "/path/to/reshade-shaders/Textures"
+reshadeIncludePath = "/path/to/reshade-shaders/Shaders"
+depthCapture = off
+
+#toggleKey toggles the effects on/off
+toggleKey = Home
+
+#enableOnLaunch sets if the effects are enabled when started
+enableOnLaunch = True
+
+#casSharpness specifies the amount of sharpning in the CAS shader.
+#0.0 less sharp, less artefacts, but not off
+#1.0 maximum sharp more artefacts
+#Everything in between is possible
+#negative values sharpen even less, up to -1.0 make a visible difference
+casSharpness = 0.4
+
+#dlsSharpness specifies the amount of sharpening in the Denoised Luma Sharpening shader.
+#Increase to sharpen details within the image.
+#0.0 less sharp, less artefacts, but not off
+#1.0 maximum sharp more artefacts
+dlsSharpness = 0.5
+
+#dlsDenoise specifies the amount of denoising in the Denoised Luma Sharpening shader.
+#Increase to limit how intensely film grain within the image gets sharpened.
+#0.0 min
+#1.0 max
+dlsDenoise = 0.17
+
+#fxaaQualitySubpix can effect sharpness.
+#1.00 - upper limit (softer)
+#0.75 - default amount of filtering
+#0.50 - lower limit (sharper, less sub-pixel aliasing removal)
+#0.25 - almost off
+#0.00 - completely off
+fxaaQualitySubpix = 0.75
+
+#fxaaQualityEdgeThreshold is the minimum amount of local contrast required to apply algorithm.
+#0.333 - too little (faster)
+#0.250 - low quality
+#0.166 - default
+#0.125 - high quality 
+#0.063 - overkill (slower)
+fxaaQualityEdgeThreshold = 0.125
+
+#fxaaQualityEdgeThresholdMin trims the algorithm from processing darks.
+#0.0833 - upper limit (default, the start of visible unfiltered edges)
+#0.0625 - high quality (faster)
+#0.0312 - visible limit (slower)
+#Special notes: due to the current implementation you
+#Likely want to set this to zero.
+#As colors that are mostly not-green
+#will appear very dark in the green channel!
+#Tune by looking at mostly non-green content,
+#then start at zero and increase until aliasing is a problem.
+fxaaQualityEdgeThresholdMin = 0.0312
+
+#smaaEdgeDetection changes the edge detection shader
+#luma  - default
+#color - might catch more edges, but is more expensive
+smaaEdgeDetection = luma
+
+#smaaThreshold specifies the threshold or sensitivity to edges
+#Lowering this value you will be able to detect more edges at the expense of performance.
+#Range: [0, 0.5]
+#0.1 is a reasonable value, and allows to catch most visible edges.
+#0.05 is a rather overkill value, that allows to catch 'em all.
+smaaThreshold = 0.05
+
+#smaaMaxSearchSteps specifies the maximum steps performed in the horizontal/vertical pattern searches
+#Range: [0, 112]
+#4  - low
+#8  - medium
+#16 - high
+#32 - ultra
+smaaMaxSearchSteps = 32
+
+#smaaMaxSearchStepsDiag specifies the maximum steps performed in the diagonal pattern searches
+#Range: [0, 20]
+#0  - low, medium
+#8  - high
+#16 - ultra
+smaaMaxSearchStepsDiag = 16
+
+#smaaCornerRounding specifies how much sharp corners will be rounded
+#Range: [0, 100]
+#25 is a reasonable value
+smaaCornerRounding = 25
+
+#lutFile is the path to the LUT file that will be used
+#supported are .CUBE files and .png with width == height * height
+lutFile = "/path/to/lut"
+```
+
+## Walkthrough Video
+
+{{< youtube "WVQ_2hN_zzs" >}}
