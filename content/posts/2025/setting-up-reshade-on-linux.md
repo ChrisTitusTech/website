@@ -164,4 +164,4 @@ lutFile = "/path/to/lut"
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "l6h24cjmNyk" >}}
