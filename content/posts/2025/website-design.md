@@ -19,7 +19,7 @@ Hugo uses .md files for content and .html files for templates. It then compiles 
 
 This means no attack surface and will be loaded faster than any other site because there is no dynamic content. The largest part of the load is google ads. 
 
-The site has roughly 250,000 unique visiters per month and over 1TB of bandwidth usage.
+The site has roughly 250,000 unique visitors per month and over 1TB of bandwidth usage.
 
 ## Store
 
