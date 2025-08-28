@@ -7,7 +7,7 @@ date: 2024-03-19T15:25:58+00:00
 
 <br>
 
-## [WinUtil Documentation Website](https://christitustech.github.io/winutil/)
+## [WinUtil Documentation Website](https://winutil.christitus.com)
  
 ## [Troubleshooting](https://cttstore.com/pages/troubleshooting)
 
