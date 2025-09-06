@@ -16,8 +16,12 @@ tags:
 QEMU/KVM Dependancies to install:
 
 ```
-sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
+sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables nftables libguestfs
 ```
+
+![qemu-install-questions](/images/2025/qemu-install-questions.webp)
+
+I recommend using qemu-full and if you get a prompt to REMOVE iptables, select yes. nftables is the NEW package that replaces it.
 
 _Note: Make sure you update your system with a $ sudo pacman -Syu BEFORE you install the dependencies_
 
@@ -35,6 +39,12 @@ Then add your user and create group:
 ```
 sudo usermod -a -G libvirt $(whoami)
 newgrp libvirt
+```
+
+Start QEMU libvirt service automatically:
+
+```
+sudo systemctl enable --now libvirtd
 ```
 
 ## Reboot and launch virt-manager!
