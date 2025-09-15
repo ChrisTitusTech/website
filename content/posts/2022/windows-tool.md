@@ -84,7 +84,7 @@ Presets:
 - Recommended: Security-only; defer feature updates ~24 months
 - Disable All: Not recommended; use only for legacy/isolated systems (stability over security)
 
-Note: Windows may re-enable disabled updates. For stricter control, consider Sordum's Windows Update Blocker ([link](https://www.sordum.org/9470/windows-update-blocker-v1-8/)). It uses a service.
+_Note: The disable update has been revamped on 09-02-2025 to completely disable updates on every windows version. Use the Default button to restore update functionality!_
 
 ### MicroWin
 
