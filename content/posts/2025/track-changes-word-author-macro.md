@@ -144,3 +144,31 @@ Save and Return to Word
 Open the document you want to apply this to and run the macro with Alt+F8
 
 **Note: You can also bind this to a button on your ribbon/taskbar**
+
+### Just swaping authors with NO timestamp reset
+
+This way is not as comprehensive but it does not reset the timestamp on the changes.
+
+```
+Sub ChangeCommentCreator()
+    Dim I As Long
+    Dim Novo As String
+    Dim Corto As String
+    If Selection.Comments.Count = 0 Then
+        MsgBox "No comments in your selection!", vbInformation, "Alerta"
+        Exit Sub
+    End If
+    Novo = InputBox("New author name?", "Alerta")
+    Corto = InputBox("New author initials?", "Alerta")
+    If Novo = "" Or Corto = "" Then
+        MsgBox "The author name/initials can’t be empty.", vbInformation, "Alerta"
+        Exit Sub
+    End If
+    With Selection
+        For I = 1 To .Comments.Count
+            .Comments(I).Author = Novo
+            .Comments(I).Initial = Corto
+        Next I
+    End With
+End Sub
+```
