@@ -66,7 +66,7 @@ bcdboot c:\Windows /s G: /f ALL
 The Out of Box Experience is changing all the time. The requirement to be online or only use a Microsoft account. Bypass it with this command and using `Shift+F10` to bring up the command prompt. **NOTE: DISCONNECT FROM INTERNET before booting!**
 
 ```
-oobe\BypassNRO
+start ms-cxh:localonly
 ```
 
 System will restart after executing the command. Select `Continue with limited Setup` and name the device and create a local account.
