@@ -128,8 +128,10 @@ You should see your device listed. If it shows "unauthorized," check your phone 
 
 ### Critical Warnings
 
-⚠️ **NEVER use the "All" selection:** This will uninstall critical system components and brick your device
+ ⚠️ **NEVER use the "All" selection:** This will uninstall critical system components and brick your device
+
 ⚠️ **Avoid "Unsafe" or "Advanced" tabs:** These contain essential system apps like your network stack
+
 ⚠️ **Stick to "Recommended" settings:** This preset has been tested and is safe for all devices
 
 ### Restoring Accidentally Removed Apps
