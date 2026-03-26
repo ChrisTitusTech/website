@@ -17,13 +17,28 @@ Example of my WMI corruption (System Restore not supported from powershell)
 
 ![WMI-corruption](/images/2026/WMI-corruption.webp)
 
+Also verify with this command:
+
+```
+winmgmt /verifyrepository
+```
+
+Note: You should see `wmi repository is consistent` if the WMI repository is healthy. If you see `wmi repository is inconsistent`, it indicates that the WMI repository is corrupted and needs to be repaired.
+
 ## The Fix
 
-reset the WMI repository by running the following command in an elevated PowerShell:
+First check if you can salvage the repository by running the following command in an elevated PowerShell:
+
+```
+winmgmt /salvagerepository
+```
+
+Then proceed to reset the WMI repository by running the following command in an elevated PowerShell (if above failed):
 
 ```
 Stop-Service winmgmt -Force
 Remove-Item C:\Windows\System32\wbem\Repository -Recurse -Force
+winmgmt /resetrepository
 Start-Service winmgmt
 ```
 
