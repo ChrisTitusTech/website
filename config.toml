@@ -113,14 +113,8 @@ link = "https://youtube.com/c/ChrisTitusTech"
 icon = "fab fa-twitch"
 link = "https://twitch.tv/christitustech"
 [[params.social]]
-icon = "fab fa-twitter"
-link = "https://twitter.com/christitustech"
-[[params.social]]
 icon = "fab fa-github"
 link = "https://github.com/christitustech"
-[[params.social]]
-icon = "fab fa-linkedin"
-link = "https://www.linkedin.com/in/ctitus/"
 [[params.social]]
 icon = "fas fa-rss"
 link = "https://christitus.com/rss"
@@ -139,7 +133,10 @@ weight = 2
 url = "downloads/"
 name = "Downloads"
 [[menu.main]]
-weight = 3
+url = "live-streams/"
+name = "Live Streams"
+[[menu.main]]
+weight = 4
 url = "newsletter/"
 name = "Newsletter"
 [[menu.main]]
