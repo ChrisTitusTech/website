@@ -8,16 +8,20 @@
         <div class="content">{{ .Content }}</div>
         <form method="POST" action="{{ site.Params.contact_form_action | safeURL}}" class="row">
           <div class="col-md-6">
+            <label for="name" class="visually-hidden">Name</label>
             <input type="text" class="form-control mb-4" placeholder="Name" name="name" id="name">
           </div>
           <div class="col-md-6">
+            <label for="email" class="visually-hidden">Email address</label>
             <input type="email" class="form-control mb-4" placeholder="Email" name="email" id="email">
           </div>
           <div class="col-12">
+            <label for="subject" class="visually-hidden">Subject</label>
             <input type="text" class="form-control mb-4" placeholder="Subject" name="subject" id="subject">
           </div>
           <div class="col-12">
-            <textarea name="message" id="message" class="form-control mb-4" placeholder="Type You Message Here"
+            <label for="message" class="visually-hidden">Message</label>
+            <textarea name="message" id="message" class="form-control mb-4" placeholder="Type Your Message Here"
               rows="5"></textarea>
           </div>
           <div class="col-12">

@@ -10,6 +10,6 @@
     {{ end }}
   </div>
   <p>{{.Summary}}</p>
-  <a href="{{ .Permalink }}" class="btn btn-sm btn-transparent pl-0">read more</a>
+  <a href="{{ .Permalink }}" class="btn btn-sm btn-transparent pl-0" aria-label="Read more about {{ .Title | plainify }}">read more</a>
   <div style="border: 1px #eee solid; margin-top:40px"></div>
 </article>

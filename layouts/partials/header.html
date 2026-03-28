@@ -58,7 +58,7 @@
           {{ if .IsTranslated }}
           <li class="nav-item">
             <span class="nav-link pe-lg-0">
-              <select class="border-0" id="select-language" style="cursor:pointer;background:transparent" onchange="location = this.value;">
+              <select class="border-0" id="select-language" aria-label="Select language" style="cursor:pointer;background:transparent" onchange="location = this.value;">
                 {{ $siteLanguages := site.Languages}}
                 {{ $pageLang := .Page.Lang}}
                 {{ range .Page.AllTranslations }}

@@ -174,8 +174,9 @@ textarea.form-control{
   }
   small {
     display: inline-block;
-    color: $primary-color;
-    background-color: rgba($primary-color, .2);
+    // Solid primary bg with dark text: 6.3:1 contrast — WCAG AA pass
+    color: #212529;
+    background-color: $primary-color;
     height: 30px;
     width: 30px;
     text-align: center;

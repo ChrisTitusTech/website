@@ -8,8 +8,10 @@
 </head>
 
 <body>
+  <!-- WCAG 2.4.1: Skip navigation link - visually hidden until focused -->
+  <a class="visually-hidden-focusable position-absolute" href="#main-content">Skip to main content</a>
   {{- partial "header.html" . -}}
-  <main>
+  <main id="main-content">
   {{- block "main" . }}
   {{- end }}
   </main>
