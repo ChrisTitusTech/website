@@ -76,3 +76,7 @@ html {
     font-size: 0.8rem;
     color: white;
 }
+
+.navbar-nav .nav-link {
+  white-space: nowrap;
+}

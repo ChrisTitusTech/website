@@ -133,6 +133,7 @@ weight = 2
 url = "downloads/"
 name = "Downloads"
 [[menu.main]]
+weight = 3
 url = "live-streams/"
 name = "Live Streams"
 [[menu.main]]
