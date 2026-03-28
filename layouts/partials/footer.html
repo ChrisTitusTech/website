@@ -27,7 +27,7 @@
         <ul class="list-inline social-icon mb-0">
           {{ range site.Params.social }}
           <li class="list-inline-item">
-            <a href="{{ .link | safeURL }}" aria-label="{{ .name }}">
+            <a href="{{ .link | safeURL }}" aria-label="{{ .name }}" rel="me noopener noreferrer" target="_blank">
               {{ partial "icon.html" .name }}
             </a>
           </li>

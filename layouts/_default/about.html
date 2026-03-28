@@ -9,7 +9,7 @@
     <div class="row justify-content-center align-items-center text-center text-lg-left">
       {{ with .Params.image }}
       <div class="col-lg-4">
-        <img loading="lazy" class="img-fluid" src="{{ . | absURL }}" alt="">
+        <img loading="lazy" class="img-fluid" src="{{ . | absURL }}" alt="{{ $.Title }}">
       </div>
       {{ end }}
       <div class="col-lg-7">

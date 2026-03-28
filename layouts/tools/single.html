@@ -6,7 +6,7 @@
       <div class="col-lg-8 order-1 order-lg-0">
         <div class="shadow">
           {{ range .Params.tools_images }}
-            <img loading="lazy" class="img-fluid" src="{{ .image | absURL }}" alt="post-image">
+            <img loading="lazy" class="img-fluid" src="{{ .image | absURL }}" alt="{{ $.Title }}">
           {{ end }}
           <div class="block content">
             {{.Content}}

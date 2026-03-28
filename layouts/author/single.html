@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-lg-8 mx-auto text-center block shadow">
         {{ with .Params.Image }}
-        <img loading="lazy" src="{{ . | absURL }}" alt="" class="img-fluid d-block mx-auto rounded-circle mb-4 author-thumb">
+        <img loading="lazy" src="{{ . | absURL }}" alt="{{ $.Title }}" class="img-fluid d-block mx-auto rounded-circle mb-4 author-thumb">
         {{ end }}
         <h4>{{ .Title | markdownify }}</h4>
         <div class="content">
