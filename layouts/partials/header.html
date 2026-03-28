@@ -4,13 +4,16 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-0">
       <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
-        <img loading="lazy" 
-             class="img-fluid" 
-             src="{{ site.Params.logo | absURL }}" 
-             alt="{{ site.Title }}" 
-             width="{{ site.Params.logoWidth }}" 
-             height="{{ site.Params.logoHeight }}"
-             style="aspect-ratio: {{ site.Params.logoWidth }}/{{ site.Params.logoHeight }}">
+        <picture>
+          <source srcset="{{ site.Params.logo | absURL }}" type="image/webp">
+          <img loading="lazy"
+               class="img-fluid"
+               src="{{ "images/navlogo.png" | absURL }}"
+               alt="{{ site.Title }}"
+               width="{{ site.Params.logoWidth }}"
+               height="{{ site.Params.logoHeight }}"
+               style="aspect-ratio: {{ site.Params.logoWidth }}/{{ site.Params.logoHeight }}">
+        </picture>
       </a>
       <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>

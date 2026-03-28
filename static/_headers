@@ -1,0 +1,33 @@
+# Cloudflare Pages custom HTTP headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# Fingerprinted assets (Hugo Pipes adds a content hash to the URL) — safe to cache forever
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static assets that don't carry a hash — long TTL but not immutable
+/fonts/*
+  Cache-Control: public, max-age=31536000
+
+/images/*
+  Cache-Control: public, max-age=31536000
+
+/favicon/*
+  Cache-Control: public, max-age=31536000
+
+# HTML pages — must revalidate so updates are picked up promptly
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# JSON/XML feeds
+/index.json
+  Cache-Control: public, max-age=3600
+
+/index.xml
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400

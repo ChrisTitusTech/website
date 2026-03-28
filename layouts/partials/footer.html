@@ -4,13 +4,16 @@
     <div class="row justify-content-between align-items-center">
       <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
         <a href="{{ site.BaseURL | absLangURL }}" class="d-block">
-          <img loading="lazy" 
-               src="{{ site.Params.logo | absURL }}" 
-               class="img-fluid" 
-               alt="{{ site.Title }}"
-               width="{{ site.Params.logoWidth }}" 
-               height="{{ site.Params.logoHeight }}"
-               style="aspect-ratio: {{ site.Params.logoWidth }}/{{ site.Params.logoHeight }}">
+          <picture>
+            <source srcset="{{ site.Params.logo | absURL }}" type="image/webp">
+            <img loading="lazy"
+                 src="{{ "images/navlogo.png" | absURL }}"
+                 class="img-fluid"
+                 alt="{{ site.Title }}"
+                 width="{{ site.Params.logoWidth }}"
+                 height="{{ site.Params.logoHeight }}"
+                 style="aspect-ratio: {{ site.Params.logoWidth }}/{{ site.Params.logoHeight }}">
+          </picture>
         </a>
       </div>
       <div class="col-lg-4 text-center mb-4 mb-lg-0">

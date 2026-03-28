@@ -2,7 +2,17 @@
   {{ if .Params.image }}
   <div class="col-md-6">
     <!--a href="{{ .Permalink }}"><img loading="lazy" class="w-100" src="{{ .Params.image | absURL }}" alt="post-image"></a-->
-    <a href="{{ .Permalink }}"><img src="{{ .Params.image | absURL }}" width="300" height="169" class="rounded shadow"></a>
+    <a href="{{ .Permalink }}">
+      <img src="/cdn-cgi/image/width=300,height=169,fit=cover,format=auto/{{ .Params.image }}"
+           srcset="/cdn-cgi/image/width=300,height=169,fit=cover,format=auto/{{ .Params.image }} 1x,
+                   /cdn-cgi/image/width=600,height=338,fit=cover,format=auto/{{ .Params.image }} 2x"
+           width="300" height="169"
+           loading="lazy"
+           decoding="async"
+           alt="{{ .Title | plainify }}"
+           class="rounded shadow"
+           onerror="this.onerror=null;this.removeAttribute('srcset');this.src='{{ .Params.image | absURL }}'">
+    </a>
   </div>
   {{ end }}
   <div class="col-md-6">

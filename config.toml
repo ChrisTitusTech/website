@@ -29,7 +29,7 @@ noClasses = false
 
 [params]
 defaultTheme = "dark"
-logo = "images/navlogo.png"
+logo = "images/navlogo.webp"
 logoWidth = 248
 logoHeight = 50
 favicon = "images/favicon.png"
