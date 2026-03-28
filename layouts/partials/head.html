@@ -25,9 +25,9 @@
 <link rel="canonical" href="{{ .Permalink }}">
 
 {{ $ogImage := "" }}
-{{ with .Params.image }}{{ $ogImage = . | absURL }}{{ else }}{{ with site.Params.logo }}{{ $ogImage = . | absURL }}{{ end }}{{ end }}
+{{ if .Params.image }}{{ $ogImage = .Params.image | absURL }}{{ else if site.Params.og_image }}{{ $ogImage = site.Params.og_image | absURL }}{{ end }}
 {{ $ogDescription := "" }}
-{{ with .Params.description }}{{ $ogDescription = . }}{{ else }}{{ with site.Params.description }}{{ $ogDescription = . }}{{ end }}{{ end }}
+{{ if .Params.description }}{{ $ogDescription = .Params.description }}{{ else if .Summary }}{{ $ogDescription = .Summary | truncate 160 }}{{ else }}{{ $ogDescription = site.Params.description }}{{ end }}
 {{ $ogType := "website" }}
 {{ if in (slice "post" "posts" "blog" "blogs") .Section }}{{ $ogType = "article" }}{{ end }}
 
@@ -42,6 +42,8 @@
 <meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
 <meta name="twitter:description" content="{{ $ogDescription }}">
 {{ with $ogImage }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+{{ with site.Params.twitter }}<meta name="twitter:site" content="{{ . }}">{{ end }}
+{{ with site.Params.twitter }}<meta name="twitter:creator" content="{{ . }}">{{ end }}
 
 <meta name="author" content="{{ site.Params.author }}">
 <meta name="description" content="{{ $ogDescription }}">

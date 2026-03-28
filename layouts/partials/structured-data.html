@@ -1,7 +1,7 @@
 {{- $ogImage := "" -}}
-{{- with .Params.image }}{{ $ogImage = . | absURL }}{{ else }}{{ with site.Params.logo }}{{ $ogImage = . | absURL }}{{ end }}{{ end -}}
+{{- if .Params.image }}{{ $ogImage = .Params.image | absURL }}{{ else if site.Params.og_image }}{{ $ogImage = site.Params.og_image | absURL }}{{ end -}}
 {{- $ogDescription := "" -}}
-{{- with .Params.description }}{{ $ogDescription = . }}{{ else }}{{ with site.Params.description }}{{ $ogDescription = . }}{{ end }}{{ end -}}
+{{- if .Params.description }}{{ $ogDescription = .Params.description }}{{ else if .Summary }}{{ $ogDescription = .Summary | truncate 160 }}{{ else }}{{ $ogDescription = site.Params.description }}{{ end -}}
 
 {{- if .IsHome -}}
 <script type="application/ld+json">
@@ -34,6 +34,12 @@
   {{- with $ogImage }}
   "image": {{ . | jsonify }},
   {{- end }}
+  {{- with .Params.categories }}
+  "articleSection": {{ index . 0 | jsonify }},
+  {{- end }}
+  {{- with .Params.tags }}
+  "keywords": {{ delimit . ", " | jsonify }},
+  {{- end }}
   "author": {
     "@type": "Person",
     "name": {{ site.Params.author | jsonify }},
@@ -51,6 +57,40 @@
     "@type": "WebPage",
     "@id": {{ .Permalink | jsonify }}
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ site.BaseURL | jsonify }}
+    }{{- with .Params.categories -}},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ index . 0 | jsonify }},
+      "item": {{ (print site.BaseURL "categories/" (index . 0 | urlize | lower)) | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ $.Title | jsonify }},
+      "item": {{ $.Permalink | jsonify }}
+    }
+    {{- else -}},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+    {{- end }}
+  ]
 }
 </script>
 {{- else -}}
