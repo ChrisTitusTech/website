@@ -477,7 +477,7 @@ a:hover {
       background: $light;
 
       td {
-        text-align: left !important;
+        text-align: left;
       }
     }
   }
@@ -491,7 +491,7 @@ a:hover {
     p {
       margin-bottom: 0;
       color: $text-color-dark;
-      font-style: italic !important;
+      font-style: italic;
     }
   }
 
@@ -673,7 +673,7 @@ a:hover {
 .tools-filter-btn {
   .btn {
     border: 0;
-    border-radius: 4px !important;
+    border-radius: 4px;
     &.focus {
       box-shadow: none;
     }

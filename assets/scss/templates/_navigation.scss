@@ -110,7 +110,7 @@
   .navigation {
     .nav-item:not(.dropdown):last-child {
       .nav-link {
-        padding-right: 0 !important;
+        padding-right: 0;
       }
     }
   }
@@ -148,7 +148,7 @@
   padding: 0;
 
   &:focus {
-    box-shadow: none !important;
+    box-shadow: none;
     outline: 0;
   }
 }
