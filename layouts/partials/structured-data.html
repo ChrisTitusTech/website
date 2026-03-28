@@ -1,111 +1,34 @@
 {{- $ogImage := "" -}}
 {{- if .Params.image }}{{ $ogImage = .Params.image | absURL }}{{ else if site.Params.og_image }}{{ $ogImage = site.Params.og_image | absURL }}{{ end -}}
 {{- $ogDescription := "" -}}
-{{- if .Params.description }}{{ $ogDescription = .Params.description }}{{ else if .Summary }}{{ $ogDescription = .Summary | truncate 160 }}{{ else }}{{ $ogDescription = site.Params.description }}{{ end -}}
+{{- if .Params.description }}{{ $ogDescription = .Params.description }}{{ else if .Summary }}{{ $ogDescription = .Summary | plainify | truncate 160 }}{{ else }}{{ $ogDescription = site.Params.description }}{{ end -}}
 
 {{- if .IsHome -}}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": {{ site.Title | jsonify }},
-  "url": {{ site.BaseURL | jsonify }},
-  "description": {{ $ogDescription | jsonify }},
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": {{ (print site.BaseURL "search?s={search_term_string}") | jsonify }}
-    },
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
+{{- $searchTarget := dict "@type" "EntryPoint" "urlTemplate" (print site.BaseURL "search?s={search_term_string}") -}}
+{{- $searchAction := dict "@type" "SearchAction" "target" $searchTarget "query-input" "required name=search_term_string" -}}
+{{- $website := dict "@context" "https://schema.org" "@type" "WebSite" "name" site.Title "url" site.BaseURL "description" $ogDescription "potentialAction" $searchAction -}}
+<script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
 {{- else if in (slice "post" "posts" "blog" "blogs" "news") .Section -}}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": {{ .Title | jsonify }},
-  "description": {{ $ogDescription | jsonify }},
-  "url": {{ .Permalink | jsonify }},
-  "datePublished": {{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
-  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
-  {{- with $ogImage }}
-  "image": {{ . | jsonify }},
-  {{- end }}
-  {{- with .Params.categories }}
-  "articleSection": {{ index . 0 | jsonify }},
-  {{- end }}
-  {{- with .Params.tags }}
-  "keywords": {{ delimit . ", " | jsonify }},
-  {{- end }}
-  "author": {
-    "@type": "Person",
-    "name": {{ site.Params.author | jsonify }},
-    "url": {{ site.BaseURL | jsonify }}
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": {{ site.Title | jsonify }},
-    "logo": {
-      "@type": "ImageObject",
-      "url": {{ site.Params.logo | absURL | jsonify }}
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": {{ .Permalink | jsonify }}
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": {{ site.BaseURL | jsonify }}
-    }{{- with .Params.categories -}},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": {{ index . 0 | jsonify }},
-      "item": {{ (print site.BaseURL "categories/" (index . 0 | urlize | lower)) | jsonify }}
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": {{ $.Title | jsonify }},
-      "item": {{ $.Permalink | jsonify }}
-    }
-    {{- else -}},
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": {{ .Title | jsonify }},
-      "item": {{ .Permalink | jsonify }}
-    }
-    {{- end }}
-  ]
-}
-</script>
+{{- $sameAs := slice "https://youtube.com/c/ChrisTitusTech" "https://github.com/christitustech" "https://twitter.com/christitustech" -}}
+{{- $author := dict "@type" "Person" "name" site.Params.author "url" site.BaseURL "sameAs" $sameAs -}}
+{{- $logo := dict "@type" "ImageObject" "url" (site.Params.logo | absURL) -}}
+{{- $publisher := dict "@type" "Organization" "name" site.Title "logo" $logo -}}
+{{- $mainEntity := dict "@type" "WebPage" "@id" .Permalink -}}
+{{- $post := dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "description" $ogDescription "url" .Permalink "datePublished" (.PublishDate.Format "2006-01-02T15:04:05Z07:00") "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00") "author" $author "publisher" $publisher "mainEntityOfPage" $mainEntity -}}
+{{- if $ogImage -}}{{- $post = merge $post (dict "image" $ogImage) -}}{{- end -}}
+{{- with .Params.categories -}}{{- $post = merge $post (dict "articleSection" (index . 0)) -}}{{- end -}}
+{{- with .Params.tags -}}{{- $post = merge $post (dict "keywords" (delimit . ", ")) -}}{{- end -}}
+<script type="application/ld+json">{{ $post | jsonify | safeJS }}</script>
+{{- $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" site.BaseURL) -}}
+{{- with .Params.categories -}}
+  {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" (index . 0) "item" (print site.BaseURL "categories/" (index . 0 | urlize | lower))) -}}
+  {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 3 "name" $.Title "item" $.Permalink) -}}
 {{- else -}}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": {{ .Title | jsonify }},
-  "description": {{ $ogDescription | jsonify }},
-  "url": {{ .Permalink | jsonify }},
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": {{ site.Title | jsonify }},
-    "url": {{ site.BaseURL | jsonify }}
-  }
-}
-</script>
+  {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" .Title "item" .Permalink) -}}
+{{- end -}}
+{{- $breadcrumb := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs -}}
+<script type="application/ld+json">{{ $breadcrumb | jsonify | safeJS }}</script>
+{{- else -}}
+{{- $webpage := dict "@context" "https://schema.org" "@type" "WebPage" "name" .Title "description" $ogDescription "url" .Permalink "isPartOf" (dict "@type" "WebSite" "name" site.Title "url" site.BaseURL) -}}
+<script type="application/ld+json">{{ $webpage | jsonify | safeJS }}</script>
 {{- end -}}

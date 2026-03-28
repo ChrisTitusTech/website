@@ -23,11 +23,13 @@
 
 <!-- SEO: canonical, Open Graph, Twitter Card -->
 <link rel="canonical" href="{{ .Permalink }}">
+{{ if .Sitemap.Disable }}<meta name="robots" content="noindex, follow">{{ end }}
 
 {{ $ogImage := "" }}
 {{ if .Params.image }}{{ $ogImage = .Params.image | absURL }}{{ else if site.Params.og_image }}{{ $ogImage = site.Params.og_image | absURL }}{{ end }}
 {{ $ogDescription := "" }}
-{{ if .Params.description }}{{ $ogDescription = .Params.description }}{{ else if .Summary }}{{ $ogDescription = .Summary | truncate 160 }}{{ else }}{{ $ogDescription = site.Params.description }}{{ end }}
+{{ $contentPlain := .Plain | truncate 160 }}
+{{ if .Params.description }}{{ $ogDescription = .Params.description }}{{ else if .Summary }}{{ $ogDescription = .Summary | plainify | truncate 160 }}{{ else if $contentPlain }}{{ $ogDescription = $contentPlain }}{{ else }}{{ $ogDescription = site.Params.description }}{{ end }}
 {{ $ogType := "website" }}
 {{ if in (slice "post" "posts" "blog" "blogs") .Section }}{{ $ogType = "article" }}{{ end }}
 
@@ -36,6 +38,7 @@
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:type" content="{{ $ogType }}">
 <meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="en_US">
 {{ with $ogImage }}<meta property="og:image" content="{{ . }}">{{ end }}
 
 <meta name="twitter:card" content="summary_large_image">

@@ -23,7 +23,7 @@
 
       <div class="{{ if $has_sidebar }}col-lg-8{{ else }}col-lg-10{{ end }} {{ if eq $sidebar `left` }}order-1 order-lg-2{{ end }}">
         <div class="block shadow mb-4">
-          <h2>{{ .Title | markdownify }}</h2>
+          <h1 class="h2">{{ .Title | markdownify }}</h1>
           <div class="mb-4 mt-3 post-meta">
             {{ .PublishDate.Format "Jan 2, 2006" }}
             <span class="mx-1">·</span>
@@ -36,7 +36,7 @@
             {{ end }}
           </div>
           {{ if .Params.Image }}
-          <img loading="lazy" src="{{ .Params.Image | absURL }}" class="img-fluid w-100 mb-4" alt="{{ .Title | markdownify }}">
+          <img loading="lazy" src="{{ .Params.Image | absURL }}" class="img-fluid w-100 mb-4" alt="{{ .Title | plainify }}">
           {{ end }}
 
           <div class="content mb-5">
