@@ -57,6 +57,10 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "48e9040046c743328a1abd6b87ec22fd"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
 <!-- Google Ads — lazy loaded after first scroll/interaction -->
 <script>
 (function() {
