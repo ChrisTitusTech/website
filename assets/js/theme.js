@@ -53,5 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
   localStorage.setItem('theme', currentTheme);
   updateIcon();
 
-  // onclick attr on button handles clicks directly; nothing extra needed here
+  // Watch for the utterances iframe being injected (it loads lazily via IntersectionObserver)
+  // and immediately sync it to the current theme.
+  const utterancesObserver = new MutationObserver(() => {
+    const frame = document.querySelector('.utterances-frame');
+    if (!frame) return;
+    utterancesObserver.disconnect();
+    // The iframe needs a moment to finish initialising before it can receive postMessage
+    frame.addEventListener('load', () => syncUtterancesTheme(getTheme()), { once: true });
+  });
+  const commentsDiv = document.getElementById('comments');
+  if (commentsDiv) {
+    utterancesObserver.observe(commentsDiv, { childList: true, subtree: true });
+  }
 });
