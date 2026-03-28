@@ -113,20 +113,20 @@ $icon-font: '{{.icon_font}}';
 // Dark theme — Bootstrap 5.3 CSS variable overrides
 [data-bs-theme="dark"] {
   // Bootstrap component variables — no !important needed; components read these
-  --bs-body-bg: #2d2d2d;
-  --bs-body-bg-rgb: 45, 45, 45;
-  --bs-card-bg: #3a3a3a;
-  --bs-card-border-color: #444;
-  --bs-secondary-bg: #3a3a3a;
-  --bs-tertiary-bg: #323232;
-  --bs-border-color: #444;
-  --bs-dropdown-bg: #2d2d2d;
-  --bs-dropdown-link-color: #{$primary-color};
-  --bs-dropdown-link-hover-color: #{$secondary-color};
-  --bs-dropdown-link-hover-bg: #3a3a3a;
-  --bs-navbar-color: #{$primary-color};
-  --bs-navbar-hover-color: #{$secondary-color};
-  --bs-navbar-active-color: #{$secondary-color};
+  --bs-body-bg: #212529;
+  --bs-body-bg-rgb: 33, 37, 41;
+  --bs-card-bg: #2c3034;
+  --bs-card-border-color: #373b3e;
+  --bs-secondary-bg: #343a40;
+  --bs-tertiary-bg: #2b3035;
+  --bs-border-color: #495057;
+  --bs-dropdown-bg: #212529;
+  --bs-dropdown-link-color: #dee2e6;
+  --bs-dropdown-link-hover-color: #47c4f1;
+  --bs-dropdown-link-hover-bg: #343a40;
+  --bs-navbar-color: #dee2e6;
+  --bs-navbar-hover-color: #47c4f1;
+  --bs-navbar-active-color: #47c4f1;
 
   // Search highlight in dark
   --search-highlight-bg: rgba(71, 196, 241, 0.1);
@@ -134,20 +134,20 @@ $icon-font: '{{.icon_font}}';
 
   // Override hard-coded SCSS values from _typography.scss / _common.scss
   body {
-    background-color: #2d2d2d;
-    color: $primary-color;
+    background-color: #212529;
+    color: #dee2e6;
   }
 
   p, .paragraph {
-    color: $primary-color;
+    color: #dee2e6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: $primary-color;
+    color: #dee2e6;
   }
 
   a {
-    color: $primary-color;
+    color: #dee2e6;
     &:hover {
       color: $secondary-color;
       text-decoration: none;
@@ -155,7 +155,7 @@ $icon-font: '{{.icon_font}}';
   }
 
   blockquote p {
-    color: $text-color;
+    color: #dee2e6;
   }
 
   table {
@@ -164,14 +164,13 @@ $icon-font: '{{.icon_font}}';
   }
 
   // Bootstrap utility overrides — !important matches Bootstrap utility specificity
-  .bg-white  { background-color: #2d2d2d !important; }
   .shadow    { box-shadow: none !important; }
 
   // Site-specific elements
-  header.sticky-top  { background-color: #2d2d2d; }
-  .block             { background-color: #3a3a3a; }
-  .bannerpad         { background-color: #2d2d2d; }
-  div.widget         { background-color: #3a3a3a; }
+  header.sticky-top  { background-color: #212529; }
+  .block             { background-color: #343a40; }
+  .bannerpad         { background-color: #212529; }
+  div.widget         { background-color: #343a40; }
 
   .post-meta { color: #999; }
 

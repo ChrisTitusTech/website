@@ -43,15 +43,15 @@ sidebar = "right"
 code_copy_button = true
 
 [params.variables]
-primary_color = "#f5f5f5"
+primary_color = "#47c4f1"
 secondary_color = "#47c4f1"
-text_color = "#444444"
-text_color_dark = "#222222"
-body_color = "#f5f5f5"
-border_color = "#ACB9C4"
-black = "#000"
-white = "#f5f5f5"
-light = "#F8F8F8"
+text_color = "#212529"
+text_color_dark = "#000000"
+body_color = "#ffffff"
+border_color = "#dee2e6"
+black = "#212529"
+white = "#ffffff"
+light = "#f8f9fa"
 primary_font = "PT Sans:wght@400;700"
 icon_font = "Font Awesome 6 Free"
 

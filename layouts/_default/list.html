@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <h2 class="mb-4">{{ i18n `post_related_to` }} <span class="text-primary">{{ .Title }}</span></h2>
-        <div class="bg-white shadow block">
+        <div class="bg-body shadow block">
           {{ $paginator := .Paginate (where .Data.Pages "Section" "in" site.Params.mainSections ) }}
           {{ range $paginator.Pages }}
           {{ .Render "article" }}
