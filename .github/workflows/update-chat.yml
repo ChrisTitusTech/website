@@ -1,0 +1,115 @@
+name: Update Chat Replays
+
+on:
+  schedule:
+    # Run weekly on Sunday at 04:00 UTC (low-traffic window)
+    - cron: '0 4 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-chat:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install --quiet requests
+
+      # ── Step 1: match YouTube streams to Twitch VOD IDs ───────────────────
+      - name: Match Twitch VODs to YouTube streams
+        env:
+          TWITCH_CLIENT_ID:     ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+        run: python scripts/match-twitch-vods.py
+
+      # ── Step 2: download TwitchDownloader CLI ─────────────────────────────
+      - name: Download TwitchDownloader CLI
+        run: |
+          TDCLI_VERSION=$(curl -fsSL https://api.github.com/repos/lay295/TwitchDownloader/releases/latest \
+            | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": "\(.*\)".*/\1/')
+          echo "TwitchDownloader version: ${TDCLI_VERSION}"
+          curl -fsSL \
+            "https://github.com/lay295/TwitchDownloader/releases/download/${TDCLI_VERSION}/TwitchDownloaderCLI-${TDCLI_VERSION}-Linux-x64.zip" \
+            -o tdcli.zip
+          unzip -q tdcli.zip TwitchDownloaderCLI
+          chmod +x TwitchDownloaderCLI
+
+      # ── Step 3: download chat for any entry that has a VOD but no chat file ─
+      - name: Download missing chat replays
+        env:
+          TWITCH_CLIENT_ID:     ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+        run: |
+          mkdir -p static/chats
+
+          # Read livestreams.json and iterate over entries with twitchVodId but no chat file
+          python3 - <<'PYEOF'
+          import json, subprocess, os, sys
+          from pathlib import Path
+
+          data   = json.loads(Path("data/livestreams.json").read_text())
+          chats  = Path("static/chats")
+          errors = 0
+
+          client_id     = os.environ.get("TWITCH_CLIENT_ID", "")
+          client_secret = os.environ.get("TWITCH_CLIENT_SECRET", "")
+
+          for item in data.get("items", []):
+              vid_id  = item.get("videoId")
+              vod_id  = item.get("twitchVodId")
+              outfile = chats / f"{vid_id}.json"
+
+              if not vod_id or outfile.exists():
+                  continue  # skip: no VOD matched, or already downloaded
+
+              print(f"Downloading chat for VOD {vod_id} → {outfile}")
+              result = subprocess.run(
+                  [
+                      "./TwitchDownloaderCLI",
+                      "chatdownload",
+                      "--id",        str(vod_id),
+                      "--output",    str(outfile),
+                      "--temp-path", "/tmp",
+                      "--client-id",     client_id,
+                      "--client-secret", client_secret,
+                  ],
+                  capture_output=True,
+                  text=True,
+              )
+              if result.returncode != 0:
+                  print(f"  ERROR: {result.stderr.strip()}", file=sys.stderr)
+                  errors += 1
+                  # Remove partial output if any
+                  outfile.unlink(missing_ok=True)
+              else:
+                  print(f"  OK — {outfile.stat().st_size // 1024} KB")
+
+          if errors:
+              print(f"\n{errors} download(s) failed.", file=sys.stderr)
+              sys.exit(1)
+          PYEOF
+
+      # ── Step 4: refresh hasChatReplay flags in livestreams.json ───────────
+      - name: Refresh livestreams.json (hasChatReplay flags)
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python scripts/fetch-livestreams.py
+
+      # ── Step 5: commit and push if anything changed ────────────────────────
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name  "github-actions[bot]"
+          git add data/livestreams.json static/chats/
+          git diff --staged --quiet || git commit -m "chore: update chat replays"
+          git push

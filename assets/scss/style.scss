@@ -21,6 +21,7 @@ $icon-font: '{{.icon_font}}';
 @import 'buttons';
 @import 'common';
 @import 'templates/main.scss';
+@import 'player';
 
 .widget-banner {
   text-align: center;

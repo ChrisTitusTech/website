@@ -18,6 +18,7 @@ import requests
 API_KEY = os.environ.get("YOUTUBE_API_KEY", "")
 PLAYLIST_ID = os.environ.get("PLAYLIST_ID", "PLc7fktTRMBow1ksFW020hx2XEKabaD5Vd")
 OUTPUT_FILE = Path(__file__).parent.parent / "data" / "livestreams.json"
+CHATS_DIR   = Path(__file__).parent.parent / "static" / "chats"
 BASE_URL = "https://www.googleapis.com/youtube/v3/playlistItems"
 
 
@@ -82,6 +83,8 @@ def fetch_playlist_items() -> list:
                 "publishedAt": published_at,
                 "date": date_str,
                 "thumbnail": thumbnail,
+                "twitchVodId": None,
+                "hasChatReplay": False,
             })
 
         next_page_token = data.get("nextPageToken")
@@ -99,6 +102,27 @@ def main() -> None:
     print(f"Fetching playlist: {PLAYLIST_ID}")
     items = fetch_playlist_items()
     print(f"Fetched {len(items)} videos.")
+
+    # Preserve existing twitchVodId values so the chat workflow doesn't lose its data
+    existing_vod_ids: dict[str, str | None] = {}
+    if OUTPUT_FILE.exists():
+        try:
+            existing = json.loads(OUTPUT_FILE.read_text())
+            for entry in existing.get("items", []):
+                vid = entry.get("videoId")
+                tvid = entry.get("twitchVodId")
+                if vid and tvid:
+                    existing_vod_ids[vid] = tvid
+        except (json.JSONDecodeError, OSError):
+            pass
+
+    # Set twitchVodId and hasChatReplay
+    CHATS_DIR.mkdir(parents=True, exist_ok=True)
+    for item in items:
+        vid = item["videoId"]
+        if vid in existing_vod_ids:
+            item["twitchVodId"] = existing_vod_ids[vid]
+        item["hasChatReplay"] = (CHATS_DIR / f"{vid}.json").exists()
 
     output = {
         "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),

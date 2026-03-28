@@ -1,0 +1,163 @@
+// ── Stream Player layout ────────────────────────────────────────────────────
+// Used by layouts/live-streams/player.html
+// Colours intentionally rely on Bootstrap 5.3 CSS custom properties so the
+// panel adapts automatically to the dark / light theme toggle in theme.js.
+
+// ── Outer wrapper ───────────────────────────────────────────────────────────
+.player-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  // Video fills full width when no chat is present
+  .video-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  // Once JS adds .has-chat the layout shifts to 70/30
+  &.has-chat {
+    align-items: stretch;
+
+    .video-col {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
+    .chat-col {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+}
+
+// Responsive 16:9 container for the YouTube IFrame
+.yt-player-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;   // 16:9
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border-radius: 0.375rem;
+
+  // YouTube API replaces #yt-player with an <iframe>
+  #yt-player,
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    display: block;
+  }
+}
+
+// ── Chat panel ──────────────────────────────────────────────────────────────
+.chat-panel {
+  border-color: var(--bs-border-color) !important;
+  background: var(--bs-body-bg);
+  overflow: hidden;
+
+  // Match height to the video's intrinsic height via a CSS var that JS sets
+  // Fallback: 480px (reasonable for a 70%-wide 16:9 video on a 1280px screen)
+  max-height: var(--player-video-height, 480px);
+}
+
+.chat-header {
+  background: var(--bs-secondary-bg);
+  font-size: 0.875rem;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.chat-messages {
+  font-size: 0.8125rem;   // 13px — comfortable for dense chat
+  line-height: 1.4;
+  word-break: break-word;
+  overscroll-behavior: contain;
+}
+
+// ── Individual message ──────────────────────────────────────────────────────
+.chat-message {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem;
+  padding: 0.2rem 0.25rem;
+  border-radius: 3px;
+
+  &:hover {
+    background: var(--bs-tertiary-bg);
+  }
+
+  // Timestamp
+  .chat-ts {
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    opacity: 0.65;
+    min-width: 3.2rem;
+    text-align: right;
+  }
+
+  // Badge icons
+  .chat-badge {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+
+  // Username chip
+  .chat-user {
+    flex-shrink: 0;
+    cursor: default;
+  }
+
+  // Message text / emotes
+  .chat-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  // Inline emote images
+  .chat-emote {
+    height: 24px;
+    width: auto;
+    vertical-align: middle;
+  }
+}
+
+// ── Resume scroll button ────────────────────────────────────────────────────
+.chat-scroll-btn {
+  flex-shrink: 0;
+
+  button {
+    font-size: 0.75rem;
+    border-top: 1px solid var(--bs-border-color);
+    border-radius: 0 !important;
+  }
+}
+
+// ── Mobile stacking ─────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .player-wrapper,
+  .player-wrapper.has-chat {
+    flex-direction: column;
+    align-items: stretch;
+
+    .video-col {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
+
+    .chat-col {
+      flex: 0 0 auto;
+    }
+  }
+
+  .chat-panel {
+    max-height: 380px;
+  }
+}

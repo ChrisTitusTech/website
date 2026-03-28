@@ -1,0 +1,320 @@
+{{ define "main" }}
+<section class="section pt-3 pb-5">
+  <div class="container-fluid px-3 px-md-4">
+
+    <!-- Header row: back button + stream title -->
+    <div class="d-flex align-items-center flex-wrap gap-2 mb-3">
+      <a href="/live-streams/" class="btn btn-sm btn-outline-secondary">
+        <i class="fas fa-arrow-left me-1"></i>Back to Streams
+      </a>
+      <h5 id="stream-title" class="mb-0 text-truncate flex-fill"></h5>
+    </div>
+
+    <!-- Player row -->
+    <div id="player-wrapper" class="player-wrapper">
+      <!-- Video column: full-width until chat loads, then 70% -->
+      <div id="video-col" class="video-col">
+        <div id="yt-player-container" class="yt-player-container">
+          <div id="yt-player"></div>
+        </div>
+      </div>
+
+      <!-- Chat column: hidden until chat JSON available -->
+      <div id="chat-col" class="chat-col" style="display:none">
+        <div class="chat-panel h-100 d-flex flex-column border rounded">
+          <div class="chat-header px-3 py-2 border-bottom d-flex align-items-center">
+            <i class="fab fa-twitch me-2" style="color:#9147ff"></i>
+            <strong>Chat Replay</strong>
+            <span id="chat-status" class="ms-auto text-muted small"></span>
+          </div>
+          <div id="chat-messages" class="chat-messages flex-fill overflow-auto p-2"></div>
+          <div id="chat-scroll-btn" class="chat-scroll-btn d-none">
+            <button class="btn btn-sm btn-secondary w-100 rounded-0 py-1" onclick="window._chatScrollToBottom()">
+              <i class="fas fa-arrow-down me-1"></i>Resume auto-scroll
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer row: date + attribution -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mt-2 gap-2">
+      <p id="stream-date" class="text-muted small mb-0"></p>
+      <p id="chat-credit" class="text-muted small mb-0" style="display:none">
+        Chat replay via <a href="https://github.com/lay295/TwitchDownloader" target="_blank" rel="noopener noreferrer">TwitchDownloader</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Hugo-embedded stream metadata for client-side lookup -->
+<script>
+var STREAM_DATA = {{ site.Data.livestreams.items | jsonify }};
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  // ── URL param ──────────────────────────────────────────────────────────────
+  var params = new URLSearchParams(window.location.search);
+  var videoId = params.get('v');
+  if (!videoId || !/^[A-Za-z0-9_-]{6,16}$/.test(videoId)) {
+    window.location.href = '/live-streams/';
+    return;
+  }
+
+  // ── Look up stream metadata ────────────────────────────────────────────────
+  var stream = null;
+  for (var i = 0; i < STREAM_DATA.length; i++) {
+    if (STREAM_DATA[i].videoId === videoId) {
+      stream = STREAM_DATA[i];
+      break;
+    }
+  }
+  if (stream) {
+    document.getElementById('stream-title').textContent = stream.title;
+    document.title = stream.title + ' — Live Streams';
+    var dateEl = document.getElementById('stream-date');
+    dateEl.innerHTML = '<i class="fas fa-calendar-alt me-1"></i>' + escapeHtml(stream.date);
+  }
+
+  // ── Chat state ─────────────────────────────────────────────────────────────
+  var comments    = [];
+  var emoteMap    = {};   // emote id  → data-URI or CDN URL
+  var badgeMap    = {};   // "name/ver" → data-URI
+  var chatPointer = 0;
+  var lastTime    = -1;
+  var chatTimer   = null;
+  var autoScroll  = true;
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  function escapeHtml(s) {
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(s || ''));
+    return d.innerHTML;
+  }
+
+  function formatTime(secs) {
+    var s   = Math.floor(secs);
+    var h   = Math.floor(s / 3600);
+    var m   = Math.floor((s % 3600) / 60);
+    var sec = s % 60;
+    var mm  = (m   < 10 ? '0' : '') + m;
+    var ss  = (sec < 10 ? '0' : '') + sec;
+    return h > 0 ? h + ':' + mm + ':' + ss : mm + ':' + ss;
+  }
+
+  // ── Render one chat message ────────────────────────────────────────────────
+  function renderMessage(comment, suppressScroll) {
+    var msg      = comment.message || {};
+    var commenter = comment.commenter || {};
+    var row      = document.createElement('div');
+    row.className = 'chat-message';
+
+    // Timestamp
+    var ts = document.createElement('span');
+    ts.className = 'chat-ts text-muted me-2';
+    ts.textContent = formatTime(comment.content_offset_seconds);
+    row.appendChild(ts);
+
+    // Badges
+    (msg.user_badges || []).forEach(function (b) {
+      var key = b._id + '/' + b.version;
+      if (!badgeMap[key]) return;           // skip if not embedded
+      var img = document.createElement('img');
+      img.src       = badgeMap[key];
+      img.className = 'chat-badge me-1';
+      img.alt       = b._id;
+      row.appendChild(img);
+    });
+
+    // Username
+    var name = document.createElement('span');
+    name.className = 'chat-user me-1 fw-semibold';
+    name.style.color = msg.user_color || '#9147ff';
+    name.textContent = (commenter.display_name || commenter.name || 'unknown') + ':';
+    row.appendChild(name);
+
+    // Message body (fragments)
+    var body      = document.createElement('span');
+    body.className = 'chat-body';
+    var fragments = msg.fragments || [{ text: msg.body || '', emoticon: null }];
+    fragments.forEach(function (frag) {
+      if (frag.emoticon && frag.emoticon.emoticon_id) {
+        var eid  = frag.emoticon.emoticon_id;
+        var eimg = document.createElement('img');
+        eimg.className = 'chat-emote mx-1';
+        eimg.alt       = frag.text;
+        eimg.title     = frag.text;
+        eimg.src       = emoteMap[eid]
+          || ('https://static-cdn.jtvnw.net/emoticons/v2/' + eid + '/default/dark/1.0');
+        // Fallback: replace broken emote image with plain text
+        eimg.onerror = (function (t) {
+          return function () { this.parentNode.replaceChild(document.createTextNode(t), this); };
+        }(frag.text));
+        body.appendChild(eimg);
+      } else {
+        body.appendChild(document.createTextNode(frag.text || ''));
+      }
+    });
+    row.appendChild(body);
+
+    var container = document.getElementById('chat-messages');
+    container.appendChild(row);
+
+    if (!suppressScroll && autoScroll) {
+      container.scrollTop = container.scrollHeight;
+    }
+  }
+
+  // ── Binary-search for pointer at given time ────────────────────────────────
+  function pointerAt(time) {
+    var lo = 0, hi = comments.length;
+    while (lo < hi) {
+      var mid = (lo + hi) >> 1;
+      if (comments[mid].content_offset_seconds <= time) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo;
+  }
+
+  // ── Seek: clear chat, show last 50 messages before new time ───────────────
+  function seekChat(time) {
+    var container = document.getElementById('chat-messages');
+    container.innerHTML = '';
+    chatPointer = pointerAt(time);
+    var start = Math.max(0, chatPointer - 50);
+    for (var i = start; i < chatPointer; i++) {
+      renderMessage(comments[i], true);
+    }
+    container.scrollTop = container.scrollHeight;
+    lastTime = time;
+  }
+
+  // ── Chat sync tick ─────────────────────────────────────────────────────────
+  function syncChat() {
+    if (!player || typeof player.getCurrentTime !== 'function') return;
+    var t = player.getCurrentTime();
+    if (isNaN(t) || t < 0) return;
+
+    // Detect seek (time jumped more than 3 s from last known position)
+    if (lastTime >= 0 && Math.abs(t - lastTime) > 3) {
+      seekChat(t);
+      return;
+    }
+
+    lastTime = t;
+    while (chatPointer < comments.length &&
+           comments[chatPointer].content_offset_seconds <= t) {
+      renderMessage(comments[chatPointer]);
+      chatPointer++;
+    }
+
+    // Update status counter
+    var statusEl = document.getElementById('chat-status');
+    if (statusEl) {
+      statusEl.textContent = chatPointer + '/' + comments.length;
+    }
+  }
+
+  function startSync() { if (!chatTimer) chatTimer = setInterval(syncChat, 500); }
+  function stopSync()  { if (chatTimer) { clearInterval(chatTimer); chatTimer = null; } }
+
+  // ── Auto-scroll management ─────────────────────────────────────────────────
+  window._chatScrollToBottom = function () {
+    var c = document.getElementById('chat-messages');
+    if (c) { c.scrollTop = c.scrollHeight; }
+    autoScroll = true;
+    document.getElementById('chat-scroll-btn').classList.add('d-none');
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var c = document.getElementById('chat-messages');
+    if (!c) return;
+    c.addEventListener('scroll', function () {
+      var atBottom = c.scrollHeight - c.scrollTop - c.clientHeight < 80;
+      autoScroll = atBottom;
+      var btn = document.getElementById('chat-scroll-btn');
+      if (btn) { btn[atBottom ? 'classList' : 'classList'][atBottom ? 'add' : 'remove']('d-none'); }
+    });
+  });
+
+  // ── Load chat JSON ─────────────────────────────────────────────────────────
+  fetch('/chats/' + videoId + '.json')
+    .then(function (r) {
+      if (!r.ok) throw new Error('no-chat');
+      return r.json();
+    })
+    .then(function (data) {
+      // Build emote map from embedded first-party data
+      var ed = data.embeddedData || {};
+      (ed.firstParty || []).forEach(function (em) {
+        if (em.id && em.data) {
+          emoteMap[em.id] = 'data:image/' + (em.imageType || 'png') + ';base64,' + em.data;
+        }
+      });
+
+      // Build badge map from embedded data
+      (ed.twitchBadges || []).forEach(function (badge) {
+        var versions = badge.versions || {};
+        Object.keys(versions).forEach(function (ver) {
+          var b = versions[ver];
+          if (b.bytes) {
+            badgeMap[badge.Name + '/' + ver] = 'data:image/' + (b.imageType || 'png') + ';base64,' + b.bytes;
+          }
+        });
+      });
+
+      // Sort and store comments
+      comments = (data.comments || []).sort(function (a, b) {
+        return a.content_offset_seconds - b.content_offset_seconds;
+      });
+
+      // Reveal chat column and update layout
+      var chatCol = document.getElementById('chat-col');
+      var wrapper = document.getElementById('player-wrapper');
+      chatCol.style.display = '';
+      wrapper.classList.add('has-chat');
+
+      // Show attribution
+      var credit = document.getElementById('chat-credit');
+      if (credit) credit.style.display = '';
+    })
+    .catch(function () {
+      // No chat available — video stays full-width, chat panel hidden
+    });
+
+  // ── YouTube IFrame API ─────────────────────────────────────────────────────
+  var player;
+
+  window.onYouTubeIframeAPIReady = function () {
+    player = new YT.Player('yt-player', {
+      videoId: videoId,
+      playerVars: {
+        rel:            0,
+        modestbranding: 1,
+        origin:         window.location.origin
+      },
+      events: {
+        onStateChange: function (e) {
+          if (e.data === YT.PlayerState.PLAYING) {
+            // If time drifted from lastTime, seekChat handles it in syncChat
+            startSync();
+          } else {
+            stopSync();
+          }
+        }
+      }
+    });
+  };
+
+  // Load YouTube IFrame API
+  var ytTag = document.createElement('script');
+  ytTag.src = 'https://www.youtube.com/iframe_api';
+  document.head.appendChild(ytTag);
+
+}());
+</script>
+{{ end }}
