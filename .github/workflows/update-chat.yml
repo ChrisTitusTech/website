@@ -46,23 +46,17 @@ jobs:
 
       # ── Step 3: download chat for any entry that has a VOD but no chat file ─
       - name: Download missing chat replays
-        env:
-          TWITCH_CLIENT_ID:     ${{ secrets.TWITCH_CLIENT_ID }}
-          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: |
           mkdir -p static/chats
 
           # Read livestreams.json and iterate over entries with twitchVodId but no chat file
           python3 - <<'PYEOF'
-          import json, subprocess, os, sys
+          import json, subprocess, sys
           from pathlib import Path
 
           data   = json.loads(Path("data/livestreams.json").read_text())
           chats  = Path("static/chats")
           errors = 0
-
-          client_id     = os.environ.get("TWITCH_CLIENT_ID", "")
-          client_secret = os.environ.get("TWITCH_CLIENT_SECRET", "")
 
           for item in data.get("items", []):
               vid_id  = item.get("videoId")
@@ -80,8 +74,6 @@ jobs:
                       "--id",        str(vod_id),
                       "--output",    str(outfile),
                       "--temp-path", "/tmp",
-                      "--client-id",     client_id,
-                      "--client-secret", client_secret,
                   ],
                   capture_output=True,
                   text=True,
