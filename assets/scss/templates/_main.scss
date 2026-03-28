@@ -87,7 +87,6 @@ a:hover {
   .card-block {
     padding: 30px;
     margin-left: -60px;
-    background: $white;
     border-radius: 4px;
     @include desktop {
       margin-left: 0;
@@ -210,39 +209,6 @@ a:hover {
   height: 300px;
   width: 300px;
   object-fit: cover;
-}
-
-/* pagination */
-.pagination {
-  justify-content: center;
-
-  .page-item {
-    margin: 0 2px;
-
-    .page-link {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      line-height: 26px;
-      text-align: center;
-      color: $text-color;
-      border: 0;
-      border-radius: 0;
-      font-weight: bold;
-
-      &:hover {
-        background: $text-color;
-        color: $white;
-      }
-    }
-
-    &.active {
-      .page-link {
-        background: $primary-color;
-        color: $black;
-      }
-    }
-  }
 }
 
 .post-category {
@@ -636,19 +602,20 @@ a:hover {
 /* social icon */
 .social-icon {
   a {
-    height: 40px;
-    width: 40px;
-    font-size: 14px;
-    border: 1px solid $primary-color;
-    line-height: 40px;
-    text-align: center;
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+    font-size: 22px;
+    border-radius: 0;
     color: $primary-color;
-    background-color: $text-color-dark;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
     &:hover {
-      background: $text-color;
+      background-color: $text-color;
       color: $secondary-color;
+      border-color: $text-color;
       text-decoration: none;
     }
   }

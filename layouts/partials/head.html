@@ -4,6 +4,13 @@
 <!-- Critical CSS -->
 {{ partial "critical-css.html" . }}
 
+<!-- Font Awesome -->
+{{ $fa := resources.Get "js/vendor/font-awesome/all.min.js" }}
+{{ if $fa }}
+  {{ $fa = $fa | resources.Fingerprint }}
+  <script defer src="{{ $fa.RelPermalink }}" integrity="{{ $fa.Data.Integrity }}"></script>
+{{ end }}
+
 <!-- Bundle and minify Bootstrap CSS using Hugo Pipes -->
 {{ $styles := resources.Get "css/vendor/bootstrap.min.css" }}
 {{ if $styles }}

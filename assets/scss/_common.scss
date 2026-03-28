@@ -97,14 +97,6 @@ select {
   background: $secondary-color;
 }
 
-.bg-light{
-  background: $light;
-}
-
-a.bg-light:hover{
-  background: rgba($light, .2);
-}
-
 .text-primary {
   color: $primary-color;
 }
@@ -130,10 +122,6 @@ a.text-primary:hover {
 
 textarea.form-control{
   height: 150px;
-}
-
-.page-link:focus{
-  box-shadow: none;
 }
 
 .widget {
@@ -194,5 +182,51 @@ textarea.form-control{
     font-weight: 600;
     font-size: 90%;
     border-radius: 50px;
+  }
+}
+
+// Navigation
+.dropdown-menu {
+  border-top: 3px solid $primary-color;
+}
+
+.nav-item.dropdown .nav-link::after {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .nav-item.dropdown .nav-link::before {
+    right: 12px;
+  }
+
+  .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    width: 150px;
+    transition: 0.2s;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -15px);
+  }
+
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0 10px 30px rgba(22, 28, 45, .10);
+    transform: translate(-50%, -6px);
+  }
+}
+
+// Popup search overlay
+.search-wrapper {
+  z-index: 2;
+  visibility: hidden;
+  transition: .2s ease;
+  opacity: 0;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
   }
 }

@@ -21,6 +21,16 @@ const updateIcon = () => {
   button.innerHTML = isDark ? ICONS.sun : ICONS.moon;
 };
 
+// Sync the utterances iframe theme with the site theme
+const syncUtterancesTheme = (theme) => {
+  const frame = document.querySelector('.utterances-frame');
+  if (!frame) return;
+  frame.contentWindow.postMessage(
+    { type: 'set-theme', theme: theme === 'dark' ? 'github-dark' : 'github-light' },
+    'https://utteranc.es'
+  );
+};
+
 // Toggle theme
 window.toggleTheme = () => {
   const currentTheme = document.documentElement.getAttribute('data-bs-theme') || getTheme();
@@ -28,6 +38,7 @@ window.toggleTheme = () => {
   localStorage.setItem('theme', newTheme);
   document.documentElement.setAttribute('data-bs-theme', newTheme);
   updateIcon();
+  syncUtterancesTheme(newTheme);
 };
 
 // Set initial theme immediately (before DOMContentLoaded to avoid flash)
