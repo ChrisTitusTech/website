@@ -1,0 +1,68 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+
+        <div class="block shadow mb-5">
+          <h2 class="mb-4">{{ .Title }}</h2>
+          {{ if .Content }}
+          <div class="content mb-4">{{ .Content }}</div>
+          {{ end }}
+
+          {{ $streams := site.Data.livestreams }}
+          {{ if and $streams $streams.items }}
+            {{ range $streams.items }}
+            {{ if not (or (eq .title "Deleted video") (eq .title "Private video")) }}
+            <div class="row mb-4 pb-4 border-bottom align-items-start">
+
+              <div class="col-md-4 mb-3 mb-md-0">
+                <a href="https://www.youtube.com/watch?v={{ .videoId }}" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="{{ .thumbnail }}"
+                    alt="{{ .title }}"
+                    class="img-fluid rounded"
+                    loading="lazy"
+                    width="480"
+                    height="270"
+                    onerror="this.src='https://i.ytimg.com/vi/{{ .videoId }}/hqdefault.jpg'"
+                  >
+                </a>
+              </div>
+
+              <div class="col-md-8">
+                <h5 class="mb-1">
+                  <a href="https://www.youtube.com/watch?v={{ .videoId }}" target="_blank" rel="noopener noreferrer">
+                    {{ .title }}
+                  </a>
+                </h5>
+                <p class="text-muted mb-2">
+                  <small><i class="fas fa-calendar-alt mr-1"></i>{{ .date }}</small>
+                </p>
+                {{ if .description }}
+                <p class="mb-0 small">{{ .description | truncate 350 "…" }}</p>
+                {{ else }}
+                <p class="mb-0 small text-muted"><em>Description coming soon.</em></p>
+                {{ end }}
+              </div>
+
+            </div>
+            {{ end }}
+            {{ end }}
+
+            {{ if $streams.updated }}
+            <p class="text-muted small text-right mt-3">
+              Last updated: {{ $streams.updated }}
+            </p>
+            {{ end }}
+
+          {{ else }}
+          <p>No livestreams available yet. Check back soon!</p>
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
