@@ -83,7 +83,7 @@ the search config path is:
 {{- $table := (dict) -}}
 {{- if .Get 1 -}}
   {{/* get table data from site data */}}
-  {{- $table = (index .Site.Data.tables (.Get 0) (.Get 1)) -}}
+  {{- $table = (index hugo.Data.tables (.Get 0) (.Get 1)) -}}
 {{- else -}}
   {{/* get table data from page params */}}
   {{- $table = (index $.Page.Params "tables" (.Get 0)) -}}
