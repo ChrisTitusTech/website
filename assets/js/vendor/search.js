@@ -1,146 +1,159 @@
 (() => {
-  // Constants
-  const SUMMARY_INCLUDE = 60;
+  const SNIPPET_LENGTH = 160;
+
+  // Fuse.js v7 options — ignoreLocation is critical for long article content
   const FUSE_OPTIONS = {
     shouldSort: true,
     includeMatches: true,
-    threshold: 0.0,
-    tokenize: true,
-    location: 0,
-    distance: 100,
-    maxPatternLength: 32,
-    minMatchCharLength: 1,
+    includeScore: true,
+    ignoreLocation: true,
+    threshold: 0.3,
+    minMatchCharLength: 2,
     keys: [
-      { name: "title", weight: 0.8 },
-      { name: "contents", weight: 0.5 },
-      { name: "tags", weight: 0.3 },
-      { name: "categories", weight: 0.3 }
+      { name: 'title',      weight: 0.8 },
+      { name: 'contents',   weight: 0.4 },
+      { name: 'tags',       weight: 0.3 },
+      { name: 'categories', weight: 0.2 }
     ]
   };
 
-  // Initialize search on page load
-  document.addEventListener('DOMContentLoaded', () => {
-    const searchQuery = getSearchParam('s');
-    if (searchQuery) {
-      document.getElementById('search-query').value = searchQuery;
-      executeSearch(searchQuery);
+  let fuseIndex = null; // cache built index across searches
+
+  document.addEventListener('DOMContentLoaded', init);
+
+  function init() {
+    const input = document.getElementById('search-query');
+    if (!input) return;
+
+    // Run immediately if query param present
+    const query = getParam('s');
+    if (query) {
+      input.value = query;
+      runSearch(query);
     }
 
-    // Add event listener for search input
-    const searchInput = document.getElementById('search-query');
-    if (searchInput) {
-      searchInput.addEventListener('input', (e) => {
-        const query = e.target.value;
-        if (query) {
-          executeSearch(query);
-        } else {
-          document.getElementById('search-results').innerHTML = '';
-        }
-      });
-    }
-  });
-
-  // Execute search with better error handling
-  async function executeSearch(searchQuery) {
-    try {
-      const searchResults = document.getElementById('search-results');
-      if (!searchResults) return;
-
-      const response = await fetch(indexURL);
-      const pages = await response.json();
-      const fuse = new Fuse(pages, FUSE_OPTIONS);
-      const result = fuse.search(searchQuery);
-      
-      if (result.length > 0) {
-        populateResults(result, searchQuery);
-      } else {
-        searchResults.innerHTML = `
-          <div class="text-center">
-            <img loading="lazy" class="img-fluid mb-5" src="https://user-images.githubusercontent.com/17677384/110205559-d77c9580-7ea2-11eb-82b4-f1334db99530.png">
-            <h3>No Search Found</h3>
-          </div>`;
-      }
-    } catch (error) {
-      console.error('Search failed:', error);
-    }
-  }
-
-  function populateResults(results, searchQuery) {
-    const searchResults = document.getElementById('search-results');
-    const template = document.getElementById('search-result-template');
-    
-    if (!searchResults || !template) return;
-    
-    searchResults.innerHTML = ''; // Clear previous results
-    const templateContent = template.innerHTML;
-
-    results.forEach((value, key) => {
-      const { contents, permalink, title, tags, categories } = value.item;
-      let snippet = '';
-      const snippetHighlights = [];
-
-      if (FUSE_OPTIONS.tokenize) {
-        snippetHighlights.push(searchQuery);
-      } else {
-        value.matches.forEach(match => {
-          if (match.key === 'tags' || match.key === 'categories') {
-            snippetHighlights.push(match.value);
-          } else if (match.key === 'contents') {
-            const [start, end] = match.indices[0];
-            const snippetStart = Math.max(0, start - SUMMARY_INCLUDE);
-            const snippetEnd = Math.min(contents.length, end + SUMMARY_INCLUDE);
-            snippet += contents.substring(snippetStart, snippetEnd);
-            snippetHighlights.push(match.value.substring(start, end + 1));
-          }
-        });
-      }
-
-      if (!snippet) {
-        snippet = contents.substring(0, SUMMARY_INCLUDE * 2);
-      }
-
-      const output = renderTemplate(templateContent, {
-        key,
-        title,
-        link: permalink,
-        tags,
-        categories,
-        snippet
-      });
-
-      searchResults.insertAdjacentHTML('beforeend', output);
-
-      // Highlight matches
-      const summary = document.getElementById(`summary-${key}`);
-      if (summary) {
-        snippetHighlights.forEach(highlight => {
-          new Mark(summary).mark(highlight);
-        });
-      }
+    // Live search as user types (debounced 200 ms)
+    let timer;
+    input.addEventListener('input', (e) => {
+      clearTimeout(timer);
+      const q = e.target.value.trim();
+      if (!q) { clearResults(); return; }
+      timer = setTimeout(() => runSearch(q), 200);
     });
   }
 
-  function getSearchParam(name) {
-    const searchParams = new URLSearchParams(window.location.search);
-    return searchParams.get(name) || '';
+  async function runSearch(query) {
+    const container = document.getElementById('search-results');
+    if (!container) return;
+
+    showSpinner(container);
+
+    try {
+      if (!fuseIndex) {
+        const resp = await fetch(indexURL);
+        if (!resp.ok) throw new Error('Failed to load search index');
+        const pages = await resp.json();
+        fuseIndex = new Fuse(pages, FUSE_OPTIONS);
+      }
+
+      const results = fuseIndex.search(query);
+      renderResults(container, results, query);
+    } catch (err) {
+      container.innerHTML = '<div class="alert alert-danger">Search unavailable. Please try again later.</div>';
+      console.error('Search error:', err);
+    }
   }
 
-  function renderTemplate(template, data) {
-    // Handle conditionals
-    const conditionalPattern = /\$\{\s*isset ([a-zA-Z]*) \s*\}(.*)\$\{\s*end\s*}/g;
-    let processedTemplate = template;
-
-    let match;
-    while ((match = conditionalPattern.exec(template)) !== null) {
-      const [fullMatch, key, content] = match;
-      processedTemplate = processedTemplate.replace(
-        fullMatch,
-        data[key] ? content : ''
-      );
+  function renderResults(container, results, query) {
+    if (!results.length) {
+      container.innerHTML =
+        '<div class="text-center py-5">' +
+        '<p class="fs-5 text-muted">No results found for <strong>' + escapeHtml(query) + '</strong></p>' +
+        '</div>';
+      return;
     }
 
-    // Handle simple substitutions
-    return processedTemplate.replace(/\$\{\s*(\w+)\s*\}/g, (_, key) => data[key] || '');
+    const countBadge =
+      '<p class="text-muted mb-3">' + results.length +
+      ' result' + (results.length !== 1 ? 's' : '') +
+      ' for <strong>' + escapeHtml(query) + '</strong></p>';
+
+    const cards = results.map(function(r) {
+      const item = r.item;
+      const matches = r.matches;
+      const snippet = buildSnippet(item.contents, matches);
+      const tagBadges = buildBadges(item.tags, 'secondary');
+      const catBadges = buildBadges(item.categories, 'primary');
+      const badges = catBadges || tagBadges ? '<div class="mb-2">' + catBadges + tagBadges + '</div>' : '';
+
+      return '<article class="card mb-3 border-0 border-bottom rounded-0 pb-3">' +
+        '<div class="card-body px-0">' +
+        '<h5 class="card-title mb-1">' +
+        '<a href="' + escapeHtml(item.permalink) + '" class="text-decoration-none stretched-link">' +
+        escapeHtml(item.title) + '</a></h5>' +
+        badges +
+        '<p class="card-text text-muted small mb-0">' + snippet + '</p>' +
+        '</div></article>';
+    }).join('');
+
+    container.innerHTML = countBadge + cards;
+
+    // Highlight search terms in rendered results
+    new Mark(container).mark(query, { separateWordSearch: true, accuracy: 'partially' });
+  }
+
+  function buildSnippet(contents, matches) {
+    if (!contents) return '';
+
+    // Use Fuse match indices to anchor snippet around best hit
+    var bestPos = 0;
+    if (matches) {
+      var contentMatch = matches.find(function(m) { return m.key === 'contents'; });
+      if (contentMatch && contentMatch.indices && contentMatch.indices.length) {
+        bestPos = contentMatch.indices[0][0];
+      }
+    }
+
+    var half = Math.floor(SNIPPET_LENGTH / 2);
+    var start = Math.max(0, bestPos - half);
+    var end = Math.min(contents.length, start + SNIPPET_LENGTH);
+    var snippet = contents.substring(start, end);
+    if (start > 0) snippet = '\u2026' + snippet;
+    if (end < contents.length) snippet += '\u2026';
+    return escapeHtml(snippet);
+  }
+
+  function buildBadges(items, color) {
+    if (!items || !items.length) return '';
+    var list = Array.isArray(items) ? items : [items];
+    return list.map(function(t) {
+      return '<span class="badge text-bg-' + color + ' me-1">' + escapeHtml(String(t)) + '</span>';
+    }).join('');
+  }
+
+  function showSpinner(container) {
+    container.innerHTML =
+      '<div class="text-center py-5">' +
+      '<div class="spinner-border text-secondary" role="status">' +
+      '<span class="visually-hidden">Searching\u2026</span>' +
+      '</div></div>';
+  }
+
+  function clearResults() {
+    var container = document.getElementById('search-results');
+    if (container) container.innerHTML = '';
+  }
+
+  function getParam(name) {
+    return new URLSearchParams(window.location.search).get(name) || '';
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
   }
 
 })();

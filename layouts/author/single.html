@@ -22,7 +22,7 @@
     <div class="row">
       <div class="col-lg-8 mx-auto px-0">
         <h2 class="mb-4">Posts by {{ .Title }}</h2>
-        <div class="bg-white shadow block">
+        <div class="bg-body shadow block">
           {{ $name:= .Title }}
           {{ range where site.RegularPages "Params.author" $name }}
           {{ .Render "article" }}

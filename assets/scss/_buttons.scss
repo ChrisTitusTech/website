@@ -1,71 +1,50 @@
-/* Button style */
-@mixin button-base {
+// Bootstrap 5.3 button customization via CSS variables — no !important needed
+.btn {
   font-family: $primary-font;
   text-transform: capitalize;
-  border-radius: 5px;
-  border: 1px solid;
-  position: relative;
-  z-index: 1;
-  transition: .2s ease;
-
-  &:hover,
-  &:active,
   &:focus {
-    outline: 0;
-    box-shadow: none !important;
+    box-shadow: none;
+    outline: none;
   }
 }
 
-@mixin button-size($font-size, $padding) {
-  font-size: $font-size;
-  padding: $padding;
-}
-
-@mixin button-variant($background, $color, $border-color: $background) {
-  background: $background;
-  color: $color;
-  border-color: $border-color;
-
-  &:active,
-  &:hover,
-  &:focus,
-  &.active {
-    background: $background !important;
-    border-color: $border-color !important;
-    color: $color;
-  }
-}
-
-.btn {
-  @include button-base;
-  @include button-size(16px, 12px 20px);
-}
-
-.btn-sm{
-  @include button-size(15px, 6px 10px);
+.btn-sm {
+  font-size: 15px;
+  padding: 6px 10px;
 }
 
 .btn-primary {
-  @include button-variant($primary-color, $white);
+  --bs-btn-color: #{$text-color-dark};
+  --bs-btn-bg: #{$primary-color};
+  --bs-btn-border-color: #{$primary-color};
+  --bs-btn-hover-color: #{$text-color-dark};
+  --bs-btn-hover-bg: #{darken($primary-color, 8%)};
+  --bs-btn-hover-border-color: #{darken($primary-color, 8%)};
+  --bs-btn-active-color: #{$text-color-dark};
+  --bs-btn-active-bg: #{darken($primary-color, 12%)};
+  --bs-btn-active-border-color: #{darken($primary-color, 12%)};
 }
 
 .btn-outline-primary {
-  @include button-variant(transparent, $primary-color);
-  &:active,
-  &:hover,
-  &:focus,
-  &.active {
-    color: $white;
-  }
+  --bs-btn-color: #{$primary-color};
+  --bs-btn-border-color: #{$primary-color};
+  --bs-btn-hover-color: #{$text-color-dark};
+  --bs-btn-hover-bg: #{$primary-color};
+  --bs-btn-hover-border-color: #{$primary-color};
+  --bs-btn-active-color: #{$text-color-dark};
+  --bs-btn-active-bg: #{$primary-color};
+  --bs-btn-active-border-color: #{$primary-color};
 }
 
-
 .btn-transparent {
-  @include button-variant(transparent, $primary-color, 0);
-  border-bottom: 1px solid $primary-color;
+  --bs-btn-bg: transparent;
+  --bs-btn-color: #{$secondary-color};
+  --bs-btn-border-color: #{$secondary-color};
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-color: #{darken($secondary-color, 10%)};
+  --bs-btn-hover-border-color: #{darken($secondary-color, 10%)};
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-color: #{darken($secondary-color, 10%)};
   border-radius: 0;
-  padding: 2px;
-  background-color: transparent;
-  border: 1px solid $secondary-color;
-  color: $secondary-color;
+  padding: 2px 8px;
 }

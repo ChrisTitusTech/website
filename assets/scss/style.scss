@@ -20,14 +20,7 @@ $icon-font: '{{.icon_font}}';
 @import 'typography';
 @import 'buttons';
 @import 'common';
-@import 'templates/navigation.scss';
 @import 'templates/main.scss';
-
-// Base light theme styles
-body {
-  background: $light;
-  color: $text-color;
-}
 
 .widget-banner {
   text-align: center;
@@ -50,193 +43,175 @@ body {
   top: 2rem;
 }
 
-// Back to top button styles
+// Back to top button — positioning only; appearance via Bootstrap btn btn-primary rounded-circle
 #back-to-top {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 99;
-  border: none;
-  outline: none;
-  background-color: $primary-color;
-  color: $white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 50%;
-  width: 56px;
-  height: 56px;
-  transition: all 0.3s ease;
-  opacity: 0;
-  
-  &.show {
-    display: block;
-    opacity: 1;
-  }
-  
-  &:hover {
-    background-color: darken($primary-color, 10%);
-    transform: translateY(-3px);
-  }
+  width: 40px;
+  height: 40px;
+
+  &.show { display: block; }
 
   svg {
+    color: #fff;
     display: block;
     margin: 0 auto;
   }
 }
 
-// Theme toggle styles
+// Utterances util class overrides — styled to match the site palette.
+// These apply on the parent page; the iframe is synced via postMessage in theme.js.
+.text-link {
+  color: $primary-color;
+  &:hover { color: $secondary-color; text-decoration: underline; }
+}
 
-.theme-toggle {
-  .btn-link {
-    color: $text-color;
-    padding: 0;
-    font-size: 1.25rem;
-    line-height: 1;
-    box-shadow: none !important;
-    
-    &:hover {
-      color: $secondary-color;
-    }
+.octicon {
+  display: inline-block;
+  fill: currentColor;
+}
 
-    &:focus {
-      text-decoration: none;
-    }
+.v-align-bottom {
+  vertical-align: bottom !important;
+}
+
+.markdown-body-scrollable {
+  max-height: 450px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .highlight-source-js > pre {
+    -webkit-overflow-scrolling: touch;
   }
 }
 
-/* Search result highlight styling */
-.mark, mark {
-  padding: 0;
-  background-color: rgba(71, 196, 241, 0.15);
-  color: inherit;
-  border-radius: 2px;
-  position: relative;
-  z-index: 1;
-  display: inline;
+.btn-outline {
+  border-color: $border-color;
+  color: $text-color;
+  background-color: transparent;
+  &:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $white;
+  }
 }
 
-/* Optional: Add animation for better UX */
-.mark {
+.details-popover {
+  position: relative;
+
+  & > summary {
+    list-style-type: none;
+    cursor: pointer;
+    &::-webkit-details-marker { display: none; }
+  }
+}
+
+// Search highlight — single definition, colors adapt via CSS vars
+.mark, mark {
+  padding: 0;
+  background-color: var(--search-highlight-bg, rgba(71, 196, 241, 0.15));
+  color: inherit;
+  border-radius: 2px;
+  display: inline;
   animation: highlight 0.5s ease-in-out;
 }
 
 @keyframes highlight {
-  from {
-      background-color: rgba(71, 196, 241, 0.5);
-  }
-  to {
-      background-color: rgba(71, 196, 241, 0.15);
-  }
+  from { background-color: var(--search-highlight-start, rgba(71, 196, 241, 0.5)); }
+  to   { background-color: var(--search-highlight-bg,    rgba(71, 196, 241, 0.15)); }
 }
 
-/* Ensure search results container is properly positioned */
 #search-results {
   position: relative;
   z-index: 2;
 }
 
-// Dark theme styles
-[data-theme="dark"] {
-  body, 
-  body main * {
-    background: #2d2d2d;
-    color: $primary-color;
+// Code block copy button — applies in both light and dark modes
+.highlight {
+  position: relative;
+  pre { padding-right: 75px;
+  background: #eee; }
+}
+
+.highlight-copy-btn {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  border: 0;
+  border-radius: 4px;
+  padding: 1px;
+  font-size: 0.7em;
+  line-height: 1.8;
+  color: #fff;
+  background-color: #777;
+  min-width: 55px;
+  text-align: center;
+  cursor: pointer;
+  &:hover { background-color: #555; }
+}
+
+// Dark theme — Bootstrap 5.3 CSS variable overrides
+[data-bs-theme="dark"] {
+  // Bootstrap component variables — no !important needed; components read these
+  --bs-body-bg: #212529;
+  --bs-body-bg-rgb: 33, 37, 41;
+  --bs-card-bg: #2c3034;
+  --bs-card-border-color: #373b3e;
+  --bs-secondary-bg: #343a40;
+  --bs-tertiary-bg: #2b3035;
+  --bs-border-color: #495057;
+  --bs-dropdown-bg: #212529;
+  --bs-dropdown-link-color: #dee2e6;
+  --bs-dropdown-link-hover-color: #47c4f1;
+  --bs-dropdown-link-hover-bg: #343a40;
+  --bs-navbar-color: #dee2e6;
+  --bs-navbar-hover-color: #47c4f1;
+  --bs-navbar-active-color: #47c4f1;
+
+  // Search highlight in dark
+  --search-highlight-bg: rgba(71, 196, 241, 0.1);
+  --search-highlight-start: rgba(71, 196, 241, 0.25);
+
+  // Override hard-coded SCSS values from _typography.scss / _common.scss
+  body {
+    background-color: #212529;
+    color: #dee2e6;
   }
 
   p, .paragraph {
-    font-weight: 400;
-    color: $primary-color;
-    font-family: $primary-font;
+    color: #dee2e6;
   }
 
-  blockquote p {
-    font-weight: 400;
-    color: $text-color !important;
-    font-family: $primary-font;
-  }
-
-  table {
-    background: rgb(205, 205, 205);
-    color:#333;
-  }
-
-  header.sticky-top {
-    background: #2d2d2d;
-    
-    .navbar-nav {
-      .nav-link {
-        color: $text-color-dark;
-        &:hover {
-          color: $secondary-color;
-          text-decoration: none;
-        }
-      }
-    }
-
-    .dropdown-menu {
-      background: #2d2d2d;
-      
-      .dropdown-item {
-        color: $primary-color;
-        &:hover {
-          color: $secondary-color !important;
-          background: #3a3a3a;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
-  a.px-3 {
-    color: $text_color_dark;
-  }
-
-  .col-lg-8,
-  .bg-white,
-  li.list-inline-item,
-  div.widget,
-  .card-block,
-  .col-md-6 *,
-  .bannerpad {
-    background: #2d2d2d !important;
+  h1, h2, h3, h4, h5, h6 {
+    color: #dee2e6;
   }
 
   a {
-    color: #f5f5f5;
-    &:hover{
-      text-decoration: none;
+    color: #dee2e6;
+    &:hover {
       color: $secondary-color;
+      text-decoration: none;
     }
   }
 
-  a.text-dark {
-    color: #f5f5f5;
-    &:hover{
-      text-decoration: none;
-      color: $secondary-color;
-    }
+
+  table {
+    background: rgb(205, 205, 205);
+    color: #333;
   }
 
-  a.dropdown-item,a.nav-link {
-    color: $text_color_dark;
-    &:hover{
-      text-decoration: none;
-      color: $secondary-color;
-    }
-  }
+  // Bootstrap utility overrides — !important matches Bootstrap utility specificity
+  .shadow    { box-shadow: none !important; }
 
-  h1,h2,h3,h4,h5,h6 {
-    color: $primary-color;
-    font-family: $primary-font;
-    font-weight: 600;
-    line-height: 1.2;
-    a{
-        &:hover{
-        text-decoration: none;
-        }
-    }
-  }
+  // Site-specific elements
+  header.sticky-top  { background-color: #212529; }
+  .block             { background-color: #343a40; }
+  .bannerpad         { background-color: #212529; }
+  div.widget         { background-color: #343a40; }
 
   h2.article-center {
     display: block;
@@ -245,110 +220,32 @@ body {
     text-align: center;
   }
 
-  .highlight {
-    position: relative;
-  }
-  .highlight pre {
-    padding-right: 75px;
-  }
-  .highlight-copy-btn {
-    position: absolute;
-    bottom: 7px;
-    right: 7px;
-    border: 0;
-    border-radius: 4px;
-    padding: 1px;
-    font-size: 0.7em;
-    line-height: 1.8;
-    color: #fff;
-    background-color: #777;
-    min-width: 55px;
-    text-align: center;
-  }
-  .highlight-copy-btn:hover {
-    background-color: #666;
-  }
-  
-  .block {
-    background-color: #3A3A3A;
-  }
-
-  div.widget {
-    background-color: #3A3A3A !important;
-  }
-
-  .shadow {
-    box-shadow: none !important;
-  }
-
-  .post-meta {
-    color: #999999;
-  }
-
-  .card-block {
-    color: $primary-color;
-    background-color: #3a3a3a !important;
-  }
-
-  .card-block * {
-    color: $primary-color;
-    background-color: inherit !important;
-  }
-
-  ::selection {
-    background: $secondary-color;
-    color: $white;
-  }
-
-  ::-moz-selection {
-    background: $secondary-color;
-    color: $white;
-  }
-
   .theme-toggle .btn-link {
     color: $text-color-dark;
-    
+    &:hover { color: $secondary-color; }
+  }
+
+  // Utterances util overrides — dark theme
+  .text-link {
+    color: $secondary-color;
+    &:hover { color: lighten($secondary-color, 12%); text-decoration: underline; }
+  }
+
+  .btn-outline {
+    border-color: #495057;
+    color: #dee2e6;
+    background-color: transparent;
     &:hover {
-      color: $secondary-color;
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      color: #212529;
     }
   }
 
-  #back-to-top {
-    background-color: $secondary-color;
-    
-    &:hover {
-      background-color: darken($secondary-color, 10%);
-    }
+  .markdown-body-scrollable {
+    scrollbar-color: #495057 #2c3034;
   }
 
-  /* Search result highlight styling */
-.mark, mark {
-  padding: 0;
-  background-color: rgba(71, 196, 241, 0.1);
-  color: inherit;
-  border-radius: 2px;
-  position: relative;
-  z-index: 1;
-  display: inline;
-}
-
-/* Optional: Add animation for better UX */
-.mark {
-  animation: highlight 0.5s ease-in-out;
-}
-
-@keyframes highlight {
-  from {
-      background-color: rgba(71, 196, 241, 0.25);
-  }
-  to {
-      background-color: rgba(71, 196, 241, 0.1);
-  }
-}
-
-/* Ensure search results container is properly positioned */
-#search-results {
-  position: relative;
-  z-index: 2;
-}
+  ::selection    { background: $secondary-color; color: $white; }
+  ::-moz-selection { background: $secondary-color; color: $white; }
 }

@@ -28,7 +28,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-9 mx-auto">
-        <div class="bg-white shadow block">
+        <div class="bg-body shadow block">
           {{ range where site.RegularPages "Section" "in" site.Params.mainSections }}
           {{ .Render "article" }}
           {{ end }}
@@ -45,7 +45,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-9 mx-auto">
-        <div class="shadow bg-white p-5">
+        <div class="shadow bg-body p-5">
           <div class="row">
             <div class="col-md-4 text-center text-md-left mb-4 mb-lg-0">
               <img loading="lazy" src="{{ site.Params.cta.image | absURL }}" class="mr-4" alt="..."></div>

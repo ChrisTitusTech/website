@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}" data-theme="{{ site.Params.defaultTheme | default `dark` }}">
+<html lang="{{ .Site.Language.Lang }}" data-bs-theme="{{ site.Params.defaultTheme | default `dark` }}">
 
 <head>
   {{ partial "head.html" . }}
   {{ partialCached "style.html" . }}
+  {{ partial "structured-data.html" . }}
 </head>
 
 <body>
-  {{- partial "preloader.html" . -}}
   {{- partial "header.html" . -}}
   {{- block "main" . }}
   {{- end }}
   <!-- Copy Code Button -->
   {{ if and (findRE "pre.*?" .Content 1) (.Site.Params.code_copy_button) }}
-  <script src="/js/code-copy.js"></script>
+  <script defer src="/js/code-copy.js"></script>
   {{ end  }}
   <!-- END Copy Code Button -->
   {{ partial "footer.html" . }}

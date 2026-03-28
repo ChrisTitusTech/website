@@ -1,7 +1,7 @@
 baseURL = "https://christitus.com/"
 title = "Chris Titus Tech | Tech Content Creator"
 languageCode = "en-us"
-summaryLength = "10"
+summaryLength = 70
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
@@ -43,15 +43,15 @@ sidebar = "right"
 code_copy_button = true
 
 [params.variables]
-primary_color = "#f5f5f5"
+primary_color = "#47c4f1"
 secondary_color = "#47c4f1"
-text_color = "#444444"
-text_color_dark = "#222222"
-body_color = "#f5f5f5"
-border_color = "#ACB9C4"
-black = "#000"
-white = "#f5f5f5"
-light = "#F8F8F8"
+text_color = "#212529"
+text_color_dark = "#000000"
+body_color = "#ffffff"
+border_color = "#dee2e6"
+black = "#212529"
+white = "#ffffff"
+light = "#f8f9fa"
 primary_font = "PT Sans:wght@400;700"
 icon_font = "Font Awesome 6 Free"
 
@@ -73,50 +73,19 @@ sidebar = ["toc", "google-ad"]
     isPlainText = false
     isHTML = false
 
-[[params.plugins.css]]
-link = "css/vendor/bootstrap.min.css"
-attributes = "media='all'"
-[[params.plugins.css]]
-link = "css/custom-nav.css"
-[[params.plugins.css]]
-link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-
-[[params.plugins.js]]
-link = "js/vendor/jquery.min.js"
-attributes = "defer"
-[[params.plugins.js]]
-link = "js/vendor/bootstrap.min.js"
-attributes = "defer"
-[[params.plugins.js]]
-link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
-attributes = "defer"
-[[params.plugins.js]]
-link = "js/vendor/shuffle.min.js"
-attributes = "defer"
-[[params.plugins.js]]
-link = "js/vendor/fuse.min.js"
-attributes = "defer"
-[[params.plugins.js]]
-link = "js/vendor/mark.js"
-attributes = "defer"
-[[params.plugins.js]]
-link = "js/vendor/search.js"
-attributes = "defer"
-[[params.plugins.js]]
-link = "js/theme.js"
-attributes = "defer"
+# CSS and JS plugins are managed directly in layouts/partials/head.html and layouts/partials/footer.html
 
 [[params.social]]
-icon = "fab fa-youtube"
+name = "YouTube"
 link = "https://youtube.com/c/ChrisTitusTech"
 [[params.social]]
-icon = "fab fa-twitch"
+name = "Twitch"
 link = "https://twitch.tv/christitustech"
 [[params.social]]
-icon = "fab fa-github"
+name = "GitHub"
 link = "https://github.com/christitustech"
 [[params.social]]
-icon = "fas fa-rss"
+name = "RSS"
 link = "https://christitus.com/rss"
 
 [banner]

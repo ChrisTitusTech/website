@@ -1,51 +1,76 @@
 <meta charset="utf-8">
-<title>{{ .Title }}</title>
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
 
 <!-- Critical CSS -->
 {{ partial "critical-css.html" . }}
 
-<!-- Preload essential fonts -->
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-<!-- Preconnect to Cloudflare cdn -->
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-<!-- Bundle and minify CSS using Hugo Pipes -->
-{{ $styles := resources.Get "css/vendor/bootstrap.min.css" }}
-{{ $customStyles := resources.Get "css/custom-nav.css" }}
-{{ if and $styles $customStyles }}
-  {{ $styles = slice $styles $customStyles | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="print" onload="this.media='all'" integrity="{{ $styles.Data.Integrity }}">
-{{ else }}
-  <!-- Fallback if resources aren't found -->
-  <link rel="stylesheet" href="/css/vendor/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/custom-nav.css">
+<!-- Font Awesome -->
+{{ $fa := resources.Get "js/vendor/font-awesome/all.min.js" }}
+{{ if $fa }}
+  {{ $fa = $fa | resources.Fingerprint }}
+  <script defer src="{{ $fa.RelPermalink }}" integrity="{{ $fa.Data.Integrity }}"></script>
 {{ end }}
 
-<!-- Defer FontAwesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+<!-- Bundle and minify Bootstrap CSS using Hugo Pipes -->
+{{ $styles := resources.Get "css/vendor/bootstrap.min.css" }}
+{{ if $styles }}
+  {{ $styles = $styles | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="print" onload="this.media='all'" integrity="{{ $styles.Data.Integrity }}">
+  <noscript><link rel="stylesheet" href="{{ $styles.RelPermalink }}"></noscript>
+{{ end }}
+
+<!-- SEO: canonical, Open Graph, Twitter Card -->
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ $ogImage := "" }}
+{{ with .Params.image }}{{ $ogImage = . | absURL }}{{ else }}{{ with site.Params.logo }}{{ $ogImage = . | absURL }}{{ end }}{{ end }}
+{{ $ogDescription := "" }}
+{{ with .Params.description }}{{ $ogDescription = . }}{{ else }}{{ with site.Params.description }}{{ $ogDescription = . }}{{ end }}{{ end }}
+{{ $ogType := "website" }}
+{{ if in (slice "post" "posts" "blog" "blogs") .Section }}{{ $ogType = "article" }}{{ end }}
+
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $ogDescription }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+{{ with $ogImage }}<meta property="og:image" content="{{ . }}">{{ end }}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ $ogDescription }}">
+{{ with $ogImage }}<meta name="twitter:image" content="{{ . }}">{{ end }}
 
 <meta name="author" content="{{ site.Params.author }}">
-<meta name="description" content="{{ with .Params.description }}{{.}}{{else}}{{ with site.Params.description }}{{.}}{{end}}{{end}}">
-
-{{ with site.Params.keywords }}
-<meta name="keywords" content="{{ . }}">{{ end }}
-{{ with site.Params.author }}
-<meta name="author" content="{{ . }}">{{ end }}
+<meta name="description" content="{{ $ogDescription }}">
+{{ with site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 {{ hugo.Generator }}
 
-{{ "<!-- mobile responsive meta -->" | safeHTML}}
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
-{{ "<!-- Favicon -->" | safeHTML}}
 <link rel="icon" href="{{ site.Params.favicon | absURL }}" type="image/x-icon">
 
-<!-- RSS Feed Addition -->
+<!-- RSS Feed -->
 {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<!-- Google Ads (moved to load last) -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6679678361432308"
-crossorigin="anonymous"></script>
+<!-- Google Ads — lazy loaded after first scroll/interaction -->
+<script>
+(function() {
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6679678361432308';
+    s.crossOrigin = 'anonymous';
+    document.head.appendChild(s);
+  }
+  window.addEventListener('scroll', loadAds, {once: true, passive: true});
+  window.addEventListener('pointerdown', loadAds, {once: true, passive: true});
+})();
+</script>
+
 

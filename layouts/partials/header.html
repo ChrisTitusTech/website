@@ -1,5 +1,5 @@
 {{ "<!-- navigation -->" | safeHTML }}
-<header class="sticky-top navigation py-2 py-lg-0 bg-light">
+<header class="sticky-top py-2 py-lg-0 bg-body">
   <div class="container">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-0">
@@ -12,33 +12,33 @@
              height="{{ site.Params.logoHeight }}"
              style="aspect-ratio: {{ site.Params.logoWidth }}/{{ site.Params.logoHeight }}">
       </a>
-      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation" aria-label="navigation">
-        <i class="fas fa-bars h4 mb-0 text-dark"></i>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>
       </button>
 
-      <div class="collapse navbar-collapse text-center" id="navigation">
+      <div class="collapse navbar-collapse text-center align-items-center" id="navigation">
         {{ $menu_align:= site.Params.menu_align }}
 
         {{ if site.Params.search }}
         {{ if eq $menu_align "right" }}
-        <ul class="navbar-nav ml-auto mr-auto mr-lg-0">
+        <ul class="navbar-nav ms-auto me-auto me-lg-0 align-items-center">
         {{ else if eq $menu_align "left" }}
-        <ul class="navbar-nav mr-auto ml-auto ml-lg-0 pl-0 pl-lg-3">
+        <ul class="navbar-nav me-auto ms-auto ms-lg-0 ps-0 ps-lg-3 align-items-center">
         {{ else }}
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav mx-auto align-items-center">
         {{ end }}
         {{ else }}
-        <ul class="navbar-nav ml-auto mr-auto mr-lg-0">
+        <ul class="navbar-nav ms-auto me-auto me-lg-0 align-items-center">
         {{ end }}
 
           {{ range site.Menus.main }}
           {{ if .HasChildren }}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               {{ .Name }}
             </a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu rounded-0 border-0">
               {{ range .Children }}
               <a class="dropdown-item" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
               {{ end }}
@@ -54,7 +54,7 @@
           <!-- Language List -->
           {{ if .IsTranslated }}
           <li class="nav-item">
-            <span class="nav-link pr-lg-0">
+            <span class="nav-link pe-lg-0">
               <select class="border-0" id="select-language" style="cursor:pointer;background:transparent" onchange="location = this.value;">
                 {{ $siteLanguages := site.Languages}}
                 {{ $pageLang := .Page.Lang}}
@@ -78,38 +78,39 @@
           {{ end }}
         </ul>
 
-        <!-- Theme Toggle -->
-        
-        <div class="theme-toggle ml-lg-3">
-          <button id="theme-toggle" class="btn btn-link border-0 p-0" aria-label="Toggle theme" style="vertical-align: middle;">
-            <i class="fa-solid {{ if eq (default `light` site.Params.defaultTheme) `light` }}fa-moon{{ else }}fa-sun{{ end }}"></i>
+        <!-- Theme Toggle + Search -->
+        <div class="d-flex align-items-center justify-content-center flex-shrink-0 gap-2 ms-lg-3 py-2 py-lg-0">
+          <button id="theme-toggle" onclick="this.blur();window.toggleTheme&&window.toggleTheme()" class="btn btn-link border-0 p-0" aria-label="Toggle theme" style="width:18px; height:18px;">
+            {{- if eq (default "dark" site.Params.defaultTheme) "dark" -}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/></svg>
+            {{- else -}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/></svg>
+            {{- end -}}
           </button>
-        </div>
 
         {{ if site.Params.search }}
         {{ $search_layout := site.Params.header_search_layout }}
         {{ "<!-- search -->" | safeHTML }}
         {{ if eq $search_layout "expanded" }}
-        <div class="search ml-lg-4">
-          <div class="search-wrapper-expanded d-flex">
-            <form action="{{ `search` | absLangURL }}" class="w-100">
-              <input class="search-box" id="search-query" name="s" type="search" placeholder="{{ i18n `search_placeholder` }}" required>
+          <div class="d-flex border rounded-2">
+            <form action="{{ `search` | absLangURL }}" class="d-flex">
+              <input class="form-control form-control-sm border-0 shadow-none" style="width:160px" id="search-query" name="s" type="search" placeholder="{{ i18n `search_placeholder` }}" required>
+              <button type="submit" class="btn btn-sm btn-link border-0 px-2" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+              </button>
             </form>
-            <button class="search-btn pl-0 "><i class="fa fa-search"></i></button>
           </div>
-        </div>
         {{ else if eq $search_layout "popupable" }}
-        <div class="search">
-          <button id="searchOpen" class="search-btn ml-lg-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></button>
-          <div class="search-wrapper">
+          <button id="searchOpen" class="btn btn-link border-0 p-0" aria-label="Open search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg></button>
+          <div class="position-absolute top-0 start-0 end-0 h-100 bg-body">
             <form action="{{ `search` | absLangURL }}" class="h-100">
-              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="{{ i18n `search_placeholder` }}" required>
-              <button type="button" id="searchClose" class="search-close"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></button>
+              <input class="form-control border-0 shadow-none h-100 px-4" id="search-query" name="s" type="search" placeholder="{{ i18n `search_placeholder` }}" required>
+              <button type="button" id="searchClose" class="btn btn-link border-0 p-0 position-absolute end-0 top-50 translate-middle-y"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></button>
             </form>
           </div>
+        {{ end }}
+        {{ end }}
         </div>
-        {{ end }}
-        {{ end }}
       </div>
     </nav>
   </div>

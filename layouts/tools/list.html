@@ -31,7 +31,7 @@
             <div class="card border-0 shadow">
               <a href="{{ .Permalink }}" aria-label="{{ .Params.description }}"><img loading="lazy" src="{{.Params.thumbnail | absURL }}" alt="thumbnail-image" class="card-img-top"></a>
               <div class="card-body">
-                <h4 class="mb-3"><a class="text-dark" href="{{ .Permalink }}" aria-label="{{ .Params.description }}">{{ .Params.title }}</a></h4>
+                <h4 class="mb-3"><a href="{{ .Permalink }}" aria-label="{{ .Params.description }}">{{ .Params.title }}</a></h4>
                 <p class="mb-2">{{ .Params.description | truncate 90 }}</p>
                 <a href="{{ .Permalink }}" class="btn btn-transparent" aria-label="{{ .Params.description }}">Read More</a>
               </div>
