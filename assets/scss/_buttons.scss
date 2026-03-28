@@ -2,7 +2,8 @@
 .btn {
   font-family: $primary-font;
   text-transform: capitalize;
-  &:focus {
+  // Suppress focus ring only for mouse/touch; keyboard users retain it (WCAG 2.4.7)
+  &:focus:not(:focus-visible) {
     box-shadow: none;
     outline: none;
   }

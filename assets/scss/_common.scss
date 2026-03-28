@@ -34,7 +34,8 @@ select {
   cursor: pointer;
   transition: .2s ease;
 
-  &:focus {
+  // Hide focus ring for mouse/touch but keep it for keyboard navigation (WCAG 2.4.7)
+  &:focus:not(:focus-visible) {
     outline: 0;
   }
 }
