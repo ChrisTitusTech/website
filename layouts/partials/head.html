@@ -24,10 +24,12 @@
 <!-- SEO: canonical, Open Graph, Twitter Card -->
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if .Sitemap.Disable }}<meta name="robots" content="noindex, follow">{{ end }}
+{{- if .IsPage | not }}
 {{- with .Paginator }}
 {{- if gt .TotalPages 1 }}
 {{- if .HasPrev }}<link rel="prev" href="{{ .Prev.URL | absURL }}">{{ end }}
 {{- if .HasNext }}<link rel="next" href="{{ .Next.URL | absURL }}">{{ end }}
+{{- end }}
 {{- end }}
 {{- end }}
 
