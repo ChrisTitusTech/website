@@ -1,17 +1,5 @@
-<!-- plugins + stylesheet -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-
+<!-- SCSS stylesheet -->
 {{ $styles := slice }}
-
-{{ range site.Params.plugins.css }}
-  {{ if findRE "^http" .link }}
-  {{ else }}
-    {{ $resource := resources.Get .link }}
-    {{ with $resource }}
-      {{ $styles = $styles | append . }}
-    {{ end }}
-  {{ end }}
-{{ end }}
 
 {{ with resources.Get "scss/style.scss" }}
   {{ $mainStyle := . | resources.ExecuteAsTemplate "style.scss" $ | toCSS }}
@@ -24,6 +12,7 @@
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 {{ end }}
+
 
 <style>
   /* Unordered Lists */

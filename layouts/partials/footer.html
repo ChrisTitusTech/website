@@ -2,7 +2,7 @@
 <footer class="py-4 bg-light border-top">
   <div class="container">
     <div class="row justify-content-between align-items-center">
-      <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+      <div class="col-lg-4 text-center text-lg-start mb-4 mb-lg-0">
         <a href="{{ site.BaseURL | absLangURL }}" class="d-block">
           <img loading="lazy" 
                src="{{ site.Params.logo | absURL }}" 
@@ -20,13 +20,12 @@
           {{ end }}
         </ul>
       </div>
-      <div class="col-lg-4 text-lg-right text-center mb-4 mb-lg-0">
+      <div class="col-lg-4 text-lg-end text-center mb-4 mb-lg-0">
         <ul class="list-inline social-icon mb-0">
           {{ range site.Params.social }}
           <li class="list-inline-item">
-            <a href="{{ .link | safeURL }}" 
-               aria-label="social-profile">
-              <i class="{{ .icon }}"></i>
+            <a href="{{ .link | safeURL }}" aria-label="{{ .name }}">
+              {{ partial "icon.html" .name }}
             </a>
           </li>
           {{ end }}
@@ -40,7 +39,6 @@
 </footer>
 <!-- /footer -->
 
-{{ $jquery := resources.Get "js/vendor/jquery.min.js" }}
 {{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
 {{ $fuse := resources.Get "js/vendor/fuse.min.js" }}
 {{ $mark := resources.Get "js/vendor/mark.js" }}
@@ -48,6 +46,10 @@
 {{ $shuffle := resources.Get "js/vendor/shuffle.min.js" }}
 {{ $theme := resources.Get "js/theme.js" }}
 
-{{ $vendorScripts := slice $jquery $bootstrap $fuse $mark $search $shuffle $theme }}
+{{ $vendorScripts := slice $bootstrap $fuse $mark $search $shuffle $theme }}
 {{ $js := $vendorScripts | resources.Concat "js/vendor.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{ if hugo.IsProduction }}
 <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ else }}
+<script defer src="{{ $js.RelPermalink }}"></script>
+{{ end }}
