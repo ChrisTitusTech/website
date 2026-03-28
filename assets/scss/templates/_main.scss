@@ -85,12 +85,12 @@ a:hover {
   }
 
   .card-block {
-    padding: 30px;
+    padding: 15px;
     margin-left: -60px;
     border-radius: 4px;
     @include desktop {
       margin-left: 0;
-      padding: 15px;
+      padding: 10px;
     }
 
     @include media(mobile, tablet) {
