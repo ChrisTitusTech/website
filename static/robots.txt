@@ -1,10 +1,47 @@
+# Allow all search engine and social crawlers
 User-agent: *
 Allow: /
 
-User-agent: Amazonbot
-Disallow: /
+# Social media crawlers - drive referral traffic
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+# Allow major AI indexing bots
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
 
 User-agent: Applebot-Extended
+Allow: /
+
+# Block low-quality/scraper bots that don't drive traffic
+User-agent: Amazonbot
 Disallow: /
 
 User-agent: Bytespider
@@ -13,19 +50,16 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
-User-agent: ClaudeBot
-Disallow: /
-
 User-agent: CloudflareBrowserRenderingCrawler
 Disallow: /
 
-User-agent: Google-Extended
+User-agent: Diffbot
 Disallow: /
 
-User-agent: GPTBot
+User-agent: omgili
 Disallow: /
 
-User-agent: meta-externalagent
+User-agent: YouBot
 Disallow: /
 
 Sitemap: https://christitus.com/sitemap.xml
