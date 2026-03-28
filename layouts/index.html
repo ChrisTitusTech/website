@@ -35,8 +35,9 @@
     <div class="row">
       <div class="col-lg-10 mx-auto">
         {{ $paginator := .Paginate (where site.RegularPages "Section" "in" site.Params.mainSections ) }}
-        {{ range $paginator.Pages }}
-        {{ .Render "article-w-image" }}
+        {{ range $i, $p := $paginator.Pages }}
+        {{ if eq $i 0 }}{{ $p.Store.Set "isLCP" true }}{{ end }}
+        {{ $p.Render "article-w-image" }}
         {{ end }}
         <!-- pagination -->
         <div class="mt-5 pt-4">
@@ -58,7 +59,7 @@
               {{ if $paginator.HasPrev }}
               <li class="page-item">
                 <a href="{{ $paginator.Prev.URL }}" class="page-link" aria-label="See Newer Posts">
-                  <i class="fas fa-chevron-left"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>
                 </a>
               </li>
               {{ end }}
@@ -104,7 +105,7 @@
               {{ if $paginator.HasNext }}
               <li class="page-item">
                 <a href="{{ $paginator.Next.URL }}" class="page-link" aria-label="See Older Posts">
-                  <i class="fas fa-chevron-right"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
                 </a>
               </li>
               {{ end }}

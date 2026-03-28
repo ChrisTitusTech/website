@@ -44,4 +44,24 @@
   </div>
 </section>
 
+{{ $shuffle := resources.Get "js/vendor/shuffle.min.js" }}
+{{ $shuffleJs := $shuffle | resources.Fingerprint "sha512" }}
+{{ if hugo.IsProduction }}
+<script defer src="{{ $shuffleJs.RelPermalink }}" integrity="{{ $shuffleJs.Data.Integrity }}"></script>
+{{ else }}
+<script defer src="{{ $shuffleJs.RelPermalink }}"></script>
+{{ end }}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var wrapper = document.querySelector('.shuffle-wrapper');
+  if (!wrapper) return;
+  var shuffleInstance = new Shuffle(wrapper, { item: '.shuffle-item' });
+  document.querySelectorAll('[name="shuffle-filter"]').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      shuffleInstance.filter(this.value === 'all' ? Shuffle.ALL_ITEMS : this.value);
+    });
+  });
+});
+</script>
+
 {{ end }}

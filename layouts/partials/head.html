@@ -9,19 +9,16 @@
 <!-- Critical CSS -->
 {{ partial "critical-css.html" . }}
 
-<!-- Font Awesome -->
-{{ $fa := resources.Get "js/vendor/font-awesome/all.min.js" }}
-{{ if $fa }}
-  {{ $fa = $fa | resources.Fingerprint }}
-  <script defer src="{{ $fa.RelPermalink }}" integrity="{{ $fa.Data.Integrity }}"></script>
-{{ end }}
+<!-- Third-party preconnect hints -->
+<link rel="preconnect" href="https://utteranc.es" crossorigin>
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://i.ytimg.com">
 
-<!-- Bundle and minify Bootstrap CSS using Hugo Pipes -->
+<!-- Bootstrap CSS -->
 {{ $styles := resources.Get "css/vendor/bootstrap.min.css" }}
 {{ if $styles }}
-  {{ $styles = $styles | resources.Minify | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="print" onload="this.media='all'" integrity="{{ $styles.Data.Integrity }}">
-  <noscript><link rel="stylesheet" href="{{ $styles.RelPermalink }}"></noscript>
+  {{ $styles = $styles | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
 {{ end }}
 
 <!-- SEO: canonical, Open Graph, Twitter Card -->

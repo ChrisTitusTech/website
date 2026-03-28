@@ -43,14 +43,10 @@
 <!-- /footer -->
 
 {{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
-{{ $fuse := resources.Get "js/vendor/fuse.min.js" }}
-{{ $mark := resources.Get "js/vendor/mark.js" }}
-{{ $search := resources.Get "js/vendor/search.js" }}
-{{ $shuffle := resources.Get "js/vendor/shuffle.min.js" }}
 {{ $theme := resources.Get "js/theme.js" }}
 
-{{ $vendorScripts := slice $bootstrap $fuse $mark $search $shuffle $theme }}
-{{ $js := $vendorScripts | resources.Concat "js/vendor.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{ $coreScripts := slice $bootstrap $theme }}
+{{ $js := $coreScripts | resources.Concat "js/vendor.js" | resources.Minify | resources.Fingerprint "sha512" }}
 {{ if hugo.IsProduction }}
 <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 {{ else }}

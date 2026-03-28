@@ -15,4 +15,14 @@
 
 <script>var indexURL = {{ "index.json" | relURL | printf "%q" | safeJS }}</script>
 
+{{ $fuse := resources.Get "js/vendor/fuse.min.js" }}
+{{ $mark := resources.Get "js/vendor/mark.js" }}
+{{ $search := resources.Get "js/vendor/search.js" }}
+{{ $searchBundle := slice $fuse $mark $search | resources.Concat "js/search-bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{ if hugo.IsProduction }}
+<script defer src="{{ $searchBundle.RelPermalink }}" integrity="{{ $searchBundle.Data.Integrity }}"></script>
+{{ else }}
+<script defer src="{{ $searchBundle.RelPermalink }}"></script>
+{{ end }}
+
 {{ end }}

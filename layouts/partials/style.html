@@ -9,8 +9,7 @@
 {{ if $styles }}
   {{ $allStyles := $styles | resources.Concat "css/style.css" | minify | fingerprint "sha512" }}
   {{ with $allStyles }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}" media="print" onload="this.media='all'" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    <noscript><link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></noscript>
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 {{ end }}
 
