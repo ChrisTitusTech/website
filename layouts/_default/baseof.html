@@ -9,8 +9,10 @@
 
 <body>
   {{- partial "header.html" . -}}
+  <main>
   {{- block "main" . }}
   {{- end }}
+  </main>
   <!-- Copy Code Button -->
   {{ if and (findRE "pre.*?" .Content 1) (.Site.Params.code_copy_button) }}
   <script defer src="/js/code-copy.js"></script>
