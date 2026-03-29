@@ -24,7 +24,7 @@ The easiest way to launch the utility is directly from your terminal:
 irm christitus.com/win | iex
 ```
 
-Prefer an offline option? Head over to [cttstore.com](https://cttstore.com) to download the executable. The online version always pulls the latest release, while the offline executable is ideal for systems without internet access or for those who want a static version.
+**Prefer an offline or EXE option?** Head over to [cttstore.com](https://cttstore.com) to download the executable. The online version always pulls the latest release, while the offline executable is ideal for systems without internet access or for those who want a static version.
 
 ---
 
@@ -111,41 +111,21 @@ A **Default Updates** button resets everything back to Windows defaults.
 
 ---
 
-## What Happened to MicroWin?
+### Win11 Creator
 
-MicroWin — the tab that let you create a stripped-down Windows ISO — has been **removed from the main utility and forked into its own separate project**.
+**Win11 Creator** takes a different approach from the old MicroWin:
 
-### Why?
+- Removes AI integrations, bloatware, and pre-installed apps from the Windows image
+- Maintains **full program compatibility** — nothing is stripped that would break normal software
+- Produces a clean, privacy-respecting Windows install without the Microsoft cruft
 
-A few reasons:
+### Other Alternatives for Creating a Custom Windows ISO
 
-1. **PowerShell is slow for ISO creation.** Using async C# with .NET would be significantly faster and more capable.
-2. **New users were misusing it** — reinstalling Windows on top of Windows, causing all kinds of problems.
-3. **Feature creep.** Keeping the utility lean and focused is a priority. A 30,000-line PowerShell script isn't the goal.
+If you want a minimal or customized Windows install, here are additional tools:
 
-### Alternatives for Creating a Custom Windows ISO
-
-If you want a minimal or customized Windows install, here are the recommended tools:
-
-- **[MicroWin (Forked)](https://github.com/CodingWonders/MicroWin)** — The new standalone version, faster and built in C#
 - **[Tiny11 Builder](https://github.com/ntdevlabs/tiny11builder)** — By NTDEV (IntiDev), who has been creating Windows ISOs for 20+ years. Uses official Microsoft media.
 - **[NTLite](https://www.ntlite.com/)** — A veteran tool dating back to Windows XP. Highly configurable ISO modification.
 
----
-
-## What's Coming Next
-
-An offline **.NET application** built in **F#** is in active development and will eventually replace the current offline executable.
-
-Key advantages over the PowerShell-based version:
-
-- **Faster tweak application** — Directly interfaces with Windows APIs, no PowerShell overhead
-- **Shared codebase with WinUtil** — Tweaks and settings sync automatically as the main utility is updated
-- **Same functionality, better performance**
-
-The target is to have this ready within the next month or two.
-
----
 
 ## Stay in the Loop
 
@@ -156,7 +136,7 @@ Development is ongoing and moves fast. Catch live updates every **Tuesday and Th
 
 ---
 
-*Have thoughts on the MicroWin removal or what you'd like to see in the new .NET app? Drop a comment — feedback directly shapes where this project goes next.*
+*Have thoughts on Win11 Creator or what you'd like to see in the new .NET app? Drop a comment — feedback directly shapes where this project goes next.*
 
 
 ## Walkthrough Video
