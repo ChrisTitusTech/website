@@ -27,6 +27,16 @@ $icon-font: '{{.icon_font}}';
   text-align: center;
 }
 
+// Force utterances comments to full width
+#comments,
+#comments .utterances {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+#comments .utterances-frame {
+  width: 100% !important;
+}
+
 .responsive-img {
   max-width: 100%;
   height: auto;
