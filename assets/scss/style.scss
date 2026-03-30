@@ -28,12 +28,12 @@ $icon-font: '{{.icon_font}}';
 }
 
 // Force utterances comments to full width
-.comments,
-.utterances {
+#comments,
+#comments .utterances {
   width: 100% !important;
   max-width: 100% !important;
 }
-.utterances-frame {
+#comments .utterances-frame {
   width: 100% !important;
 }
 
