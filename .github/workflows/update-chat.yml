@@ -1,9 +1,10 @@
 name: Update Chat Replays
 
 on:
-  schedule:
-    # Run weekly on Sunday at 04:00 UTC (low-traffic window)
-    - cron: '0 4 * * 0'
+  workflow_run:
+    workflows: ["Update Livestreams Data"]
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
