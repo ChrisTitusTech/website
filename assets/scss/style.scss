@@ -303,6 +303,94 @@ footer {
   .dropdown-menu {
     transition: none !important;
   }
+
+  // Aggressive mobile mode: reduce expensive paint/compositing effects.
+  .banner,
+  .banner-creative,
+  .bg-cover {
+    background-image: none !important;
+    background-color: $light !important;
+  }
+
+  .overlay::before,
+  .section-title::after {
+    display: none !important;
+  }
+
+  .article-overlapped-list,
+  .block,
+  .widget,
+  .content pre,
+  .content table,
+  .content blockquote,
+  .highlight,
+  .highlight pre {
+    background-image: none !important;
+    filter: none !important;
+    contain: layout paint;
+  }
+
+  // Simplify decorative bullets that use gradients.
+  ul li:not(.nav-item,.banner-social,.list-inline-item,.page-item)::before,
+  .content ul li:not(.nav-item)::before {
+    background: currentColor !important;
+    opacity: 0.6;
+  }
+
+  // Sticky elements can trigger more repaints during scroll on low-end devices.
+  .stickyside {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  // Phone-only extreme mode: prioritize render speed over decorative styling.
+  .section,
+  .block,
+  .widget,
+  .article-overlapped-list .card-block,
+  .content,
+  footer {
+    padding: 0.75rem !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .container,
+  .col-lg-10,
+  .col-lg-9,
+  .col-lg-8,
+  .col-md-6 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .title,
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    line-height: 1.15;
+  }
+
+  .social-icon a,
+  .btn,
+  .nav-link {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  // Avoid expensive layout/paint for non-critical sidebar content on tiny screens.
+  .stickyside,
+  .widget,
+  .widget-banner {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 260px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
