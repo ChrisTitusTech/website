@@ -1,0 +1,125 @@
+// CSS-only performance overrides:
+// reduce offscreen rendering cost for long content lists and reduce paint-heavy effects on mobile
+.article-overlapped-list:not(:first-child),
+.widget,
+.content pre,
+.content table,
+footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 420px;
+}
+
+// Mobile paint optimization: complex shadows are expensive during scroll.
+@media (max-width: 768px) {
+  .shadow,
+  .widget,
+  .block,
+  .article-overlapped-list img {
+    box-shadow: none !important;
+  }
+
+  // Keep interactions snappy by removing non-essential transitions on mobile.
+  .dropdown-menu,
+  .social-icon a,
+  .article-overlapped-list .card-block,
+  .widget,
+  .btn {
+    transition: none !important;
+  }
+
+  // Aggressive mobile mode: reduce expensive paint/compositing effects.
+  .banner.bg-cover,
+  .banner-creative.bg-cover {
+    background-image: none !important;
+    background-color: $light !important;
+  }
+
+  .overlay::before,
+  .section-title::after {
+    display: none !important;
+  }
+
+  .article-overlapped-list,
+  .block,
+  .content pre,
+  .content table,
+  .content blockquote,
+  .highlight,
+  .highlight pre {
+    background-image: none !important;
+    filter: none !important;
+    contain: paint;
+  }
+
+  // Simplify decorative bullets that use gradients.
+  ul li:not(.nav-item,.banner-social,.list-inline-item,.page-item)::before,
+  .content ul li:not(.nav-item)::before {
+    background: currentColor !important;
+    opacity: 0.6;
+  }
+
+  // Sticky elements can trigger more repaints during scroll on low-end devices.
+  .stickyside {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  // Phone-only extreme mode: prioritize render speed while preserving readability.
+  .block,
+  .widget,
+  .article-overlapped-list .card-block {
+    padding: 0.75rem !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .content,
+  .section,
+  footer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .container,
+  .col-lg-10,
+  .col-lg-9,
+  .col-lg-8,
+  .col-md-6 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .title,
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    line-height: 1.15;
+  }
+
+  .social-icon a,
+  .btn,
+  .nav-link {
+    box-shadow: none !important;
+  }
+
+  // Avoid expensive layout/paint for non-critical sidebar content on tiny screens.
+  .stickyside,
+  .widget-banner {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 260px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

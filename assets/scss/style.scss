@@ -22,6 +22,7 @@ $icon-font: '{{.icon_font}}';
 @import 'common';
 @import 'templates/main.scss';
 @import 'player';
+@import 'performance';
 
 .widget-banner {
   text-align: center;
@@ -274,3 +275,4 @@ $icon-font: '{{.icon_font}}';
   ::selection    { background: $secondary-color; color: $white; }
   ::-moz-selection { background: $secondary-color; color: $white; }
 }
+
