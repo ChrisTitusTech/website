@@ -274,3 +274,44 @@ $icon-font: '{{.icon_font}}';
   ::selection    { background: $secondary-color; color: $white; }
   ::-moz-selection { background: $secondary-color; color: $white; }
 }
+
+// CSS-only performance overrides:
+// 1) reduce offscreen rendering cost for long content lists
+// 2) reduce paint-heavy effects on mobile
+.article-overlapped-list:not(:first-child),
+.widget,
+.content pre,
+.content table,
+footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 420px;
+}
+
+@media (max-width: 768px) {
+  // Mobile paint optimization: complex shadows are expensive during scroll.
+  .shadow,
+  .widget,
+  .block,
+  .article-overlapped-list img {
+    box-shadow: none !important;
+  }
+
+  // Keep interactions snappy by removing non-essential transitions on mobile.
+  a,
+  button,
+  select,
+  .social-icon a,
+  .dropdown-menu {
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
