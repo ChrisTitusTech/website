@@ -295,19 +295,18 @@ footer {
     box-shadow: none !important;
   }
 
-// Keep interactions snappy by removing non-essential transitions on mobile.
-  a,
-  button,
-  select,
+  // Keep interactions snappy by removing non-essential transitions on mobile.
+  .dropdown-menu,
   .social-icon a,
-  .dropdown-menu {
+  .article-overlapped-list .card-block,
+  .widget,
+  .btn {
     transition: none !important;
   }
 
   // Aggressive mobile mode: reduce expensive paint/compositing effects.
-  .banner,
-  .banner-creative,
-  .bg-cover {
+  .banner.bg-cover,
+  .banner-creative.bg-cover {
     background-image: none !important;
     background-color: $light !important;
   }
@@ -319,7 +318,6 @@ footer {
 
   .article-overlapped-list,
   .block,
-  .widget,
   .content pre,
   .content table,
   .content blockquote,
@@ -327,7 +325,7 @@ footer {
   .highlight pre {
     background-image: none !important;
     filter: none !important;
-    contain: layout paint;
+    contain: paint;
   }
 
   // Simplify decorative bullets that use gradients.
@@ -345,18 +343,21 @@ footer {
 }
 
 @media (max-width: 480px) {
-  // Phone-only extreme mode: prioritize render speed over decorative styling.
-  .section,
+  // Phone-only extreme mode: prioritize render speed while preserving readability.
   .block,
   .widget,
-  .article-overlapped-list .card-block,
-  .content,
-  footer {
+  .article-overlapped-list .card-block {
     padding: 0.75rem !important;
-    margin: 0 !important;
     border: 0 !important;
     border-radius: 0 !important;
     box-shadow: none !important;
+  }
+
+  .content,
+  .section,
+  footer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .container,
@@ -379,14 +380,11 @@ footer {
   .social-icon a,
   .btn,
   .nav-link {
-    background: transparent !important;
-    border-color: transparent !important;
     box-shadow: none !important;
   }
 
   // Avoid expensive layout/paint for non-critical sidebar content on tiny screens.
   .stickyside,
-  .widget,
   .widget-banner {
     content-visibility: auto;
     contain-intrinsic-size: 1px 260px;
