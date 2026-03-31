@@ -276,8 +276,7 @@ $icon-font: '{{.icon_font}}';
 }
 
 // CSS-only performance overrides:
-// 1) reduce offscreen rendering cost for long content lists
-// 2) reduce paint-heavy effects on mobile
+// reduce offscreen rendering cost for long content lists and reduce paint-heavy effects on mobile
 .article-overlapped-list:not(:first-child),
 .widget,
 .content pre,
@@ -287,8 +286,8 @@ footer {
   contain-intrinsic-size: 1px 420px;
 }
 
+// Mobile paint optimization: complex shadows are expensive during scroll.
 @media (max-width: 768px) {
-  // Mobile paint optimization: complex shadows are expensive during scroll.
   .shadow,
   .widget,
   .block,
@@ -296,7 +295,7 @@ footer {
     box-shadow: none !important;
   }
 
-  // Keep interactions snappy by removing non-essential transitions on mobile.
+// Keep interactions snappy by removing non-essential transitions on mobile.
   a,
   button,
   select,
