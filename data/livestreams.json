@@ -1,13 +1,13 @@
 {
-  "updated": "2026-03-30T18:28:47Z",
+  "updated": "2026-03-31T00:49:17Z",
   "items": [
     {
       "videoId": "BXnwRXLOvlA",
-      "title": "🔴 Linux + MicroWin Revisted",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Reddit ➜ https://www.reddit.com/r/ChrisTitusTech/\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "🔴 MicroWin Revisited, Linux Rant & What People STILL Don't Understand About Linux",
+      "description": "We test the new MicroWin beta (forked by Coding Wonders & Callum), compare it to Win11 Creator, rant about Windows 10 security update denial, and outline a video about what people fundamentally misunderstand about Linux distros — plus website revamps, DWM Titus updates, NAS backups, and more.\n\n00:00 Stream starts — no intro, straight into it\n00:32 Website revamp overview & live stream replay feature\n02:07 Windows debloaters, Vesktop, and Discord habits\n06:56 Taskbar poll — center vs. left alignment debate\n09:26 Poll results & why center alignment is gaining ground\n12:00 DWM Titus progress — control center & display settings plan\n14:45 Chrisstitus.com revamp walkthrough & PageSpeed scores\n22:42 Reviewing & merging Scotsman's CSS PR\n25:28 Hot take: AI vs. web developers & the death of WordPress\n33:48 Introducing MicroWin beta by Coding Wonders & Kalem\n36:49 Downloading & running MicroWin — first look\n41:27 ISO build in progress — what MicroWin does differently\n50:34 Package removal walkthrough & debloat script opinions\n55:30 Windows 10 security update rant — run your patches!\n1:02:13 MicroWin install — Rufus/Ventoy steps\n1:05:34 NFS regression bug found — filing issues live\n1:12:19 NFS fixed, SCP file transfer to VM\n1:19:29 NAS / Synology backup setup & TrueNAS discussion\n1:37:54 MicroWin beta install result — comparison with Win11 Creator\n1:47:45 Albert spotlight launcher on Linux — live setup attempt\n2:00:00 MicroWin barebones result — first impressions\n2:06:21 Trying to install DaVinci Resolve on Arch Linux\n2:15:31 Planning the \"What people don't understand about Linux\" video\n2:27:19 Recording begins — Linux distros, gaming distros, and the journey\n2:40:29 Chris's own Linux journey — Ubuntu → Arch\n2:50:49 Uncomfortable truth: Linux doesn't want Windows users\n2:58:49 Where Linux does win — Steam Deck & the steam machine era\n3:04:47 Wrap-up & what's coming next stream\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Reddit ➜ https://www.reddit.com/r/ChrisTitusTech/\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-03-30T17:48:40Z",
       "date": "March 30, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/BXnwRXLOvlA/maxresdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/BXnwRXLOvlA/maxresdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
     },
