@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-31T16:19:01Z",
+  "updated": "2026-03-31T16:19:21Z",
   "items": [
     {
       "videoId": "BXnwRXLOvlA",
@@ -8,8 +8,8 @@
       "publishedAt": "2026-03-30T17:48:40Z",
       "date": "March 30, 2026",
       "thumbnail": "https://i.ytimg.com/vi/BXnwRXLOvlA/maxresdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
+      "twitchVodId": "2735718511",
+      "hasChatReplay": true
     },
     {
       "videoId": "fC0ffOdeevc",
