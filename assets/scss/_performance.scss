@@ -1,16 +1,21 @@
 // CSS-only performance overrides:
 // reduce offscreen rendering cost for long content lists and reduce paint-heavy effects on mobile
 .article-overlapped-list:not(:first-child),
-.widget,
 .content pre,
-.content table,
-footer {
+.content table {
   content-visibility: auto;
-  contain-intrinsic-size: 1px 420px;
+  contain-intrinsic-size: auto 1px 420px;
 }
 
 // Mobile paint optimization: complex shadows are expensive during scroll.
 @media (max-width: 768px) {
+  // On mobile the sidebar ad stacks below content; reduce reserved height to
+  // match a typical mobile banner (320×50) or small rectangle, preventing a
+  // large empty gap followed by a shift when the ad fills less space.
+  .googlead {
+    min-height: 100px !important;
+  }
+
   .shadow,
   .widget,
   .block,

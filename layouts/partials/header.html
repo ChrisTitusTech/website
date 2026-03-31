@@ -6,7 +6,7 @@
       <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
         <picture>
           <source srcset="{{ site.Params.logo | absURL }}" type="image/webp">
-          <img loading="lazy"
+          <img loading="eager" fetchpriority="high"
                class="img-fluid"
                src="{{ "images/navlogo.png" | absURL }}"
                alt="{{ site.Title }}"

@@ -14,6 +14,8 @@
 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
 <link rel="dns-prefetch" href="https://i.ytimg.com">
 
+{{ if .Params.Image }}<link rel="preload" as="image" href="{{ .Params.Image | absURL }}">{{ end }}
+
 <!-- Bootstrap CSS -->
 {{ $styles := resources.Get "css/vendor/bootstrap.min.css" }}
 {{ if $styles }}

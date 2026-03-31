@@ -36,7 +36,7 @@
             {{ end }}
           </div>
           {{ if .Params.Image }}
-          <img loading="lazy" src="{{ .Params.Image | absURL }}" class="img-fluid w-100 mb-4" alt="{{ .Title | plainify }}">
+          <img loading="eager" fetchpriority="high" src="{{ .Params.Image | absURL }}" class="img-fluid w-100 mb-4" alt="{{ .Title | plainify }}" width="800" height="418">
           {{ end }}
 
           <div class="content mb-5">
