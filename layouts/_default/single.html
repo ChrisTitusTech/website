@@ -21,7 +21,7 @@
       {{ end }}
       <!-- /left sidebar -->
 
-      <div class="{{ if $has_sidebar }}col-lg-9{{ else }}col-lg-10{{ end }} {{ if eq $sidebar `left` }}order-1 order-lg-2{{ end }}">
+      <div class="{{ if $has_sidebar }}col-lg-9{{ else }}col-lg-10{{ end }} {{ if eq $sidebar `left` }}order-1 order-lg-2{{ else if eq $sidebar `right` }}order-1 order-lg-0{{ end }}">
         <div class="block shadow mb-4">
           <h1 class="h2">{{ .Title | markdownify }}</h1>
           <div class="mb-4 mt-3 post-meta">
@@ -94,13 +94,19 @@
         </script>
         <!--Back to Top addition-->
         {{ partial "backtotop.html" . }}
-        
+
+        <!-- google ad below article -->
+        {{ if eq $sidebar "right" }}
+        <div class="mt-4">
+          {{- partial "widgets/google-ad" . -}}
+        </div>
+        {{ end }}
       </div>
       <!-- right sidebar -->
       {{ if eq $sidebar "right" }}
-      <aside class="col-lg-3 mt-5 mt-lg-0">
-        <div class="stickyside {{ if eq $sidebar `left` }}pe-lg-4{{ end }}{{ if eq $sidebar `right` }}ps-lg-4{{ end }}">
-          {{- partial "widgets/widget-wrapper" ( dict "Widgets" $widget "Scope" . ) -}}
+      <aside class="col-lg-3 order-0 order-lg-1 mb-4 mb-lg-0">
+        <div class="stickyside ps-lg-4">
+          {{- partial "widgets/widget-wrapper" ( dict "Widgets" (slice "toc") "Scope" . ) -}}
         </div>
       </aside>
       {{ end }}
