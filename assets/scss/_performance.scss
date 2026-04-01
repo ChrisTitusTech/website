@@ -9,13 +9,6 @@
 
 // Mobile paint optimization: complex shadows are expensive during scroll.
 @media (max-width: 768px) {
-  // On mobile the sidebar ad stacks below content; reduce reserved height to
-  // match a typical mobile banner (320×50) or small rectangle, preventing a
-  // large empty gap followed by a shift when the ad fills less space.
-  .googlead {
-    min-height: 100px !important;
-  }
-
   .shadow,
   .widget,
   .block,
