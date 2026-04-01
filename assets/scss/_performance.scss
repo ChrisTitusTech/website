@@ -1,5 +1,13 @@
 // CSS-only performance overrides:
 // reduce offscreen rendering cost for long content lists and reduce paint-heavy effects on mobile
+
+// Ensure thumbnail images always display at their natural aspect ratio.
+// The width/height HTML attributes reserve layout space, but height:auto
+// ensures the rendered height matches the actual loaded image (CDN or fallback).
+.article-overlapped-list img {
+  height: auto;
+}
+
 .article-overlapped-list:not(:first-child),
 .content pre,
 .content table {
