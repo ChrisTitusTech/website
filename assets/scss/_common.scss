@@ -126,7 +126,7 @@ textarea.form-control{
 }
 
 .widget {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   padding: 20px 30px;
   border-radius: 4px;
   @extend .shadow;
@@ -134,8 +134,6 @@ textarea.form-control{
 
 // TOC widget specific list indentation
 .widget-about {
-  padding: 0;
-
   ul {
     padding-left: 1rem;
     margin-bottom: 0;
