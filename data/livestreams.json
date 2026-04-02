@@ -1,15 +1,15 @@
 {
-  "updated": "2026-04-02T18:27:21Z",
+  "updated": "2026-04-02T23:51:18Z",
   "items": [
     {
       "videoId": "kqkLYvJKxiU",
-      "title": "🔴 Exploiting old, unpatched, Windows 10",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Reddit ➜ https://www.reddit.com/r/ChrisTitusTech/\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "🔴 I Tried to Hack Unpatched Windows 10 with Metasploit (It Didn't Go as Planned) + WinUtil PRs",
+      "description": "Today I set up an old unpatched Windows 10 1607 VM and attempted to exploit it using Metasploit's EternalBlue/DoublePulsar — live, with zero prior experience. Spoiler: my own router's intrusion prevention stopped me cold. Then we dive into WinUtil pull requests including NTP fixes, Edge removal improvements, driver update settings, and more. Lab environment only — this is why you patch your systems!\n\n00:00:00 – Intro: Why patching matters (25 years as a sysadmin)\n00:01:40 – Choosing the exploit: EternalBlue vs PrintNightmare\n00:05:03 – Downloading old Windows 10 1607 ISO\n00:08:12 – Setting up the vulnerable VM\n00:09:35 – Attempting the hack on a modern patched system\n00:10:01 – The Claude Code source leak story\n00:30:55 – VM network issues & driver problems\n00:48:20 – Launching Metasploit for the first time\n00:51:09 – Running the SMB scanner\n01:04:13 – Fixing one-way VM connectivity (ping fix)\n01:09:06 – EternalBlue payload attempts\n01:36:45 – Installing Kali Linux to try again\n01:53:51 – Back from break — Kali Metasploit test\n02:01:00 – Discovery: Router intrusion prevention was blocking everything!\n02:10:34 – Switching to WinUtil Pull Requests\n02:17:07 – PR: Site 404 fix & page speed (99/100 score!)\n02:20:57 – PR: OneDrive startup entry removal\n02:24:26 – PR: GitHub Actions security hardening (declined)\n02:27:36 – PR: Security updates & driver install prevention\n02:30:23 – PR: Remove install/uninstall popup discussion\n02:44:38 – PR: FOSS key fix for Node.js\n02:45:25 – PR: Remove \"not recommended\" label from tweaks\n02:59:32 – PR: Screen reader accessibility improvements\n03:01:06 – PR: Updates disabled without restart fix\n03:02:11 – PR: NFS service regression fix\n03:05:21 – PR: Replace time.windows.com with pool.ntp.org\n03:11:27 – PR: Improved Edge removal logic\n03:18:44 – Testing Edge uninstall live\n03:24:19 – PR: Ambi White Noise app ID fix\n03:25:29 – PR: Remove left-aligned taskbar from WinUtil Creator\n03:27:38 – Poll: Left vs Center taskbar alignment\n03:34:58 – Creating the pre-release build\n03:44:33 – Fixing the release drafter workflow bug\n03:46:29 – Verifying the new dev release\n03:48:51 – Wrap-up & final thoughts\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Reddit ➜ https://www.reddit.com/r/ChrisTitusTech/\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-04-02T16:54:03Z",
       "date": "April 02, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/kqkLYvJKxiU/maxresdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/kqkLYvJKxiU/maxresdefault.jpg",
       "twitchVodId": "2738132775",
-      "hasChatReplay": true
+      "hasChatReplay": false
     },
     {
       "videoId": "BXnwRXLOvlA",
