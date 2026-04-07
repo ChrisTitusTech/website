@@ -1,6 +1,16 @@
 {
-  "updated": "2026-04-02T23:51:18Z",
+  "updated": "2026-04-07T18:27:56Z",
   "items": [
+    {
+      "videoId": "AaRmpaTAXxo",
+      "title": "🔴 What is the Linux install missing?",
+      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Reddit ➜ https://www.reddit.com/r/ChrisTitusTech/\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-04-07T16:58:06Z",
+      "date": "April 07, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/AaRmpaTAXxo/maxresdefault_live.jpg",
+      "twitchVodId": null,
+      "hasChatReplay": false
+    },
     {
       "videoId": "kqkLYvJKxiU",
       "title": "🔴 I Tried to Hack Unpatched Windows 10 with Metasploit (It Didn't Go as Planned) + WinUtil PRs",
