@@ -193,7 +193,7 @@ Edit `.env` and fill in:
 |---|---|
 | `PG_PASS` | Strong random password (e.g. `openssl rand -hex 32`) |
 | `AUTHENTIK_SECRET_KEY` | 50-character random string (e.g. `openssl rand -hex 25`) |
-| `AUTHENTIK_EMAIL__*` | Your SMTP credentials for notification emails |
+| `AUTHENTIK_EMAIL__*` | Amazon SES SMTP credentials — see comments in `.env.example` for field-by-field guidance. Generate SES SMTP credentials at **AWS Console → SES → SMTP Settings → Create SMTP credentials**. |
 | `AUTHENTIK_LDAP_TOKEN` | Leave blank for now — fill in after Step 5g |
 
 ### 5b. Start Authentik
@@ -274,9 +274,8 @@ These policies run after OAuth and handle two things:
 ### 5f. Create the `members` group
 
 1. **Admin → Directory → Groups → Create** → Name: `members`
-2. For each policy, add a **Post-execution stage** that adds the user to the `members` group on policy success:
-   - **Admin → Flows → default-source-authentication → Edit → Stage bindings**
-   - Add a **User Write Stage** that sets `groups` to include `members`
+
+The expression policies (Step 5e) call `pending_user.ak_groups.add()` directly, which writes to the database immediately. No additional User Write Stage is needed — group membership is fully handled by the policy binding.
 
 ### 5g. Create the LDAP outpost (for The Lounge IRC)
 
