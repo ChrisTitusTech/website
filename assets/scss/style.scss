@@ -168,6 +168,11 @@ $icon-font: '{{.icon_font}}';
   &:hover { background-color: #333; }
 }
 
+// Navbar active color for light theme (dark theme sets it in [data-bs-theme="dark"])
+.navbar {
+  --bs-navbar-active-color: #47c4f1;
+}
+
 // Dark theme — Bootstrap 5.3 CSS variable overrides
 [data-bs-theme="dark"] {
   // Bootstrap component variables — no !important needed; components read these
