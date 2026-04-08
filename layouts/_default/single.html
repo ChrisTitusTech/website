@@ -3,6 +3,7 @@
 <!-- checking blog -->
 {{ $blogSections := slice "post" "posts" "blog" "blogs" "news" "categories" "tags" }}
 {{ if in $blogSections .Section }}
+<div id="reading-progress" aria-hidden="true"></div>
 
 {{ $sidebar := site.Params.sidebar }}
 {{ $has_sidebar := or (eq $sidebar `left`) (eq $sidebar `right`)}}
@@ -114,6 +115,48 @@
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  // Reading progress bar
+  var bar = document.getElementById('reading-progress');
+  var article = document.querySelector('.content');
+  if (bar && article) {
+    function updateProgress() {
+      var scrolled = window.scrollY - article.offsetTop;
+      bar.style.width = (Math.min(Math.max(scrolled / article.offsetHeight, 0), 1) * 100) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  }
+
+  // Active ToC highlighting
+  var tocLinks = Array.from(document.querySelectorAll('#TableOfContents a'));
+  if (tocLinks.length) {
+    var headings = Array.from(document.querySelectorAll(
+      '.content h1,.content h2,.content h3,.content h4,.content h5,.content h6'
+    )).filter(function (h) { return h.id; });
+    if (headings.length) {
+      function getActiveHeading() {
+        var scrollY = window.scrollY + 88;
+        var active = headings[0];
+        for (var i = 0; i < headings.length; i++) {
+          if (headings[i].offsetTop <= scrollY) active = headings[i];
+        }
+        return active ? active.id : null;
+      }
+      function updateToc() {
+        var id = getActiveHeading();
+        tocLinks.forEach(function (link) {
+          link.classList.toggle('toc-active', link.getAttribute('href') === '#' + id);
+        });
+      }
+      window.addEventListener('scroll', updateToc, { passive: true });
+      updateToc();
+    }
+  }
+})();
+</script>
 
 {{ else }}
 

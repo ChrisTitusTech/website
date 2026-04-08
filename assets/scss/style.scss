@@ -281,3 +281,22 @@ $icon-font: '{{.icon_font}}';
   ::-moz-selection { background: $secondary-color; color: $white; }
 }
 
+// Reading progress bar
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: $primary-color;
+  z-index: 10000;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+// Active ToC link
+#TableOfContents a.toc-active {
+  color: $primary-color;
+  font-weight: 700;
+}
+
