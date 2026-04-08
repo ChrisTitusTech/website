@@ -74,14 +74,11 @@ irc.christitus.com {
     # Visitors who accidentally hit port 443 get a redirect to The Lounge.
     redir https://lounge.christitus.com{uri} 302
 
-    # Tell Caddy to write the cert to a location InspIRCd can read
-    tls {
-        # After cert is issued, Caddy writes to /var/lib/caddy/.local/share/caddy/...
-        # Use a Caddy event hook or a cron job to copy to infra/irc/certs/:
-        #   cp /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/irc.christitus.com/irc.christitus.com.crt infra/irc/certs/
-        #   cp /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/irc.christitus.com/irc.christitus.com.key infra/irc/certs/
-        #   docker compose -f infra/irc/docker-compose.yml restart inspircd
-    }
+    # Caddy automatically provisions a TLS cert for irc.christitus.com.
+    # Use a cron job to copy the cert to InspIRCd (see README Step 7b):
+    #   cp /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/irc.christitus.com/irc.christitus.com.crt infra/irc/certs/
+    #   cp /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/irc.christitus.com/irc.christitus.com.key infra/irc/certs/
+    #   docker compose -f infra/irc/docker-compose.yml restart inspircd
 }
 
 # ---------------------------------------------------------------------------
