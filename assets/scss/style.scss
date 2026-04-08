@@ -300,3 +300,28 @@ $icon-font: '{{.icon_font}}';
   font-weight: 700;
 }
 
+// Heading anchor copy links
+.content {
+  h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+    .anchor-link {
+      opacity: 0;
+      margin-left: 0.35em;
+      color: $primary-color;
+      text-decoration: none !important;
+      font-size: 0.75em;
+      vertical-align: middle;
+      transition: opacity 0.15s ease;
+      user-select: none;
+      &:hover { opacity: 1 !important; }
+    }
+    &:hover .anchor-link { opacity: 1; }
+  }
+}
+
+// Share buttons row
+.share-buttons .share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}
+

@@ -46,6 +46,56 @@
           <div class="mb-3 post-meta">
             {{range .Params.Tags }}<a class="badge bg-secondary text-decoration-none me-1" href="{{ `tags/` | absLangURL}}{{ . | urlize | lower }}">#{{ . | title }}</a>{{ end }}
           </div>
+          <!-- Share buttons -->
+          <div class="mt-3 pt-3 border-top share-buttons d-flex align-items-center gap-2 flex-wrap">
+            <span class="post-meta me-1 fw-semibold">Share:</span>
+            <a href="https://x.com/intent/tweet?url={{ .Permalink | urlquery }}&text={{ .Title | plainify | urlquery }}"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-sm btn-outline share-btn"
+               aria-label="Share on X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg>
+              X
+            </a>
+            <a href="https://www.reddit.com/submit?url={{ .Permalink | urlquery }}&title={{ .Title | plainify | urlquery }}"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-sm btn-outline share-btn"
+               aria-label="Share on Reddit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661m1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.353-1.107.467-1.67.467-.563 0-1.316-.114-1.67-.467a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.572.573 1.659.611 1.976.611m.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z"/><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165"/></svg>
+              Reddit
+            </a>
+            <a href="https://news.ycombinator.com/submitlink?u={{ .Permalink | urlquery }}&t={{ .Title | plainify | urlquery }}"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-sm btn-outline share-btn"
+               aria-label="Share on Hacker News">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 0h16v16H0V0zm9.07 7.583L11.72 2H10.3L8 6.26 5.7 2H4.28l2.65 5.583V12h2.14V7.583z"/></svg>
+              HN
+            </a>
+            <a href="https://bsky.app/intent/compose?text={{ .Title | plainify | urlquery }}%20{{ .Permalink | urlquery }}"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-sm btn-outline share-btn"
+               aria-label="Share on Bluesky">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M7.968 6.516C7.04 4.953 4.571 1.86 2.837 1.13.968.332.5 1.72.5 2.744c0 .212.028 1.493.044 1.742.056.88.57 3.706 4.735 4.052.58.048 1.061.047 1.061.047-.42.037-.965.114-1.465.24C2.217 9.353.9 10.72.9 12.38c0 3.316 5.164 4.62 7.068.452.038-.084.073-.17.105-.256.032.086.067.172.105.256 1.904 4.168 7.068 2.864 7.068-.452 0-1.66-1.317-3.027-3.975-3.557-.5-.126-1.045-.203-1.465-.24 0 0 .48 0 1.061-.047 4.165-.346 4.679-3.172 4.735-4.052.016-.25.044-1.53.044-1.742 0-1.023-.468-2.41-2.337-1.614-1.734.73-4.203 3.823-5.131 5.386Z"/></svg>
+              Bluesky
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-sm btn-outline share-btn"
+               aria-label="Share on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.threads.net/intent/post?text={{ .Title | plainify | urlquery }}%20{{ .Permalink | urlquery }}"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-sm btn-outline share-btn"
+               aria-label="Share on Threads">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.059 1.5 8.044 1.5c-3.69 0-5.544 2.031-5.544 6.494 0 4.582 2.254 6.006 5.756 6.006 2.421 0 4.756-1.158 4.756-3.575 0-1.973-1.651-2.925-3.665-2.671l.26 1.137c.31.315.507.729.507 1.273 0 1.235-.767 2.036-2.068 2.036-.946 0-1.736-.51-2.123-1.237-.384-.721-.463-1.65-.343-2.516L6.321 6.016zm-.97 2.58c-.126.803-.068 1.618.22 2.215.285.59.793.932 1.464.932.812 0 1.068-.52 1.068-1.036 0-.248-.079-.498-.274-.703l-.703-3.062c-.576-.016-1.178.133-1.559.414-.315.23-.538.583-.681 1.12a5 5 0 0 0-.535-.88z"/></svg>
+              Threads
+            </a>
+            <button type="button" class="btn btn-sm btn-outline share-btn" id="copy-link-btn" aria-label="Copy link to this post">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>
+              <span id="copy-link-label">Copy link</span>
+            </button>
+          </div>
         </div>
 
         {{ $related := site.RegularPages.Related . | first 5 }}
@@ -155,6 +205,49 @@
       updateToc();
     }
   }
+
+  // Copy link button
+  var copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var label = document.getElementById('copy-link-label');
+      var original = label ? label.textContent : null;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          if (label) label.textContent = 'Copied!';
+          copyBtn.classList.add('active');
+          setTimeout(function () {
+            if (label) label.textContent = original;
+            copyBtn.classList.remove('active');
+          }, 2000);
+        }).catch(function () {});
+      }
+    });
+  }
+
+  // Heading anchor copy links
+  document.querySelectorAll(
+    '.content h1[id],.content h2[id],.content h3[id],.content h4[id],.content h5[id],.content h6[id]'
+  ).forEach(function (h) {
+    var a = document.createElement('a');
+    a.className = 'anchor-link';
+    a.setAttribute('href', '#' + h.id);
+    a.setAttribute('aria-label', 'Copy link to this section');
+    a.textContent = '¶';
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var url = location.origin + location.pathname + '#' + h.id;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function () {
+          a.textContent = '✓';
+          setTimeout(function () { a.textContent = '¶'; }, 1500);
+        }).catch(function () { location.hash = h.id; });
+      } else {
+        location.hash = h.id;
+      }
+    });
+    h.appendChild(a);
+  });
 })();
 </script>
 
