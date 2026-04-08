@@ -1,0 +1,53 @@
+# IRC stack: InspIRCd (real IRC server) + The Lounge (web IRC client)
+#
+# Deploy:
+#   docker compose up -d
+#
+# Ports exposed to Caddy (localhost-only):
+#   InspIRCd: 6667 (plain, internal), 6697 (TLS — use this for public clients)
+#   The Lounge: 9001 (Caddy proxies lounge.christitus.com → here)
+#
+# Direct IRC access for native clients (opened to internet):
+#   irc.christitus.com:6697 (TLS required)
+
+version: "3.8"
+
+services:
+  inspircd:
+    image: inspircd/inspircd-docker:latest
+    restart: unless-stopped
+    ports:
+      # TLS on 6697 — the only port exposed publicly for IRC clients
+      - "6697:6697"
+      # Plain on 6667 — internal only for The Lounge container
+      - "127.0.0.1:6667:6667"
+    volumes:
+      - ./inspircd/conf:/inspircd/conf:ro
+      - ./inspircd/logs:/inspircd/logs
+      - ./certs:/inspircd/cert:ro
+    environment:
+      # Used by default inspircd.conf when no custom conf is provided
+      INSP_NET_SUFFIX: ".christitus.com"
+      INSP_NET_NAME:   "ChrisTitusTech"
+      INSP_SERVER_NAME: "irc.christitus.com"
+      INSP_ADMIN_NAME:  "Chris Titus"
+      INSP_ADMIN_NICK:  "ChrisTitus"
+      INSP_ADMIN_EMAIL: "admin@christitus.com"
+
+  thelounge:
+    image: thelounge/thelounge:latest
+    restart: unless-stopped
+    ports:
+      # Caddy proxies lounge.christitus.com → 127.0.0.1:9001
+      - "127.0.0.1:9001:9000"
+    volumes:
+      - thelounge-data:/var/opt/thelounge
+      # Mount custom config into the container
+      - ./thelounge/config.js:/var/opt/thelounge/config.js:ro
+    # Wait for InspIRCd to be ready before starting
+    depends_on:
+      - inspircd
+
+volumes:
+  thelounge-data:
+    driver: local

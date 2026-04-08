@@ -1,0 +1,92 @@
+# Caddyfile — reverse proxy for all self-hosted services on the VPS
+#
+# Deploy:
+#   apt install caddy   (or use the official install script)
+#   cp Caddyfile /etc/caddy/Caddyfile
+#   systemctl reload caddy
+#
+# Caddy automatically provisions and renews Let's Encrypt TLS for every
+# hostname defined here. No manual cert management required.
+#
+# DNS required (point these A records at your VPS IP before deploying):
+#   auth.christitus.com
+#   forum.christitus.com
+#   lounge.christitus.com
+#   irc.christitus.com      (also needs an SRV record for IRC clients — see below)
+#   (christitus.com itself is handled by Cloudflare Pages — do NOT add it here)
+
+# ---------------------------------------------------------------------------
+# auth.christitus.com — Authentik SSO
+# ---------------------------------------------------------------------------
+auth.christitus.com {
+    reverse_proxy 127.0.0.1:9000
+    encode gzip
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+}
+
+# ---------------------------------------------------------------------------
+# forum.christitus.com — Discourse
+# Discourse manages its own TLS via the discourse-docker app.yml template
+# (templates/web.ssl.template.yml + templates/web.letsencrypt.ssl.template.yml).
+# Remove this block if using Discourse's built-in TLS instead of Caddy.
+# ---------------------------------------------------------------------------
+# forum.christitus.com {
+#     reverse_proxy 127.0.0.1:8080
+# }
+
+# ---------------------------------------------------------------------------
+# lounge.christitus.com — The Lounge web IRC client
+# ---------------------------------------------------------------------------
+lounge.christitus.com {
+    reverse_proxy 127.0.0.1:9001
+
+    # WebSocket support — required for The Lounge real-time push
+    @websocket {
+        header Connection *Upgrade*
+        header Upgrade    websocket
+    }
+    reverse_proxy @websocket 127.0.0.1:9001
+
+    encode gzip
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+    }
+}
+
+# ---------------------------------------------------------------------------
+# irc.christitus.com — InspIRCd TLS (IRC-over-TLS for native clients)
+#
+# IRC uses TCP, not HTTP, so Caddy cannot proxy it with reverse_proxy.
+# Instead, Caddy issues the TLS cert and InspIRCd uses it directly.
+#
+# To have Caddy issue the cert and share it with InspIRCd:
+#   1. Add a dummy HTTPS site so Caddy obtains the cert:
+# ---------------------------------------------------------------------------
+irc.christitus.com {
+    # This HTTPS site exists only to trigger cert issuance.
+    # Visitors who accidentally hit port 443 get a redirect to The Lounge.
+    redir https://lounge.christitus.com{uri} 302
+
+    # Tell Caddy to write the cert to a location InspIRCd can read
+    tls {
+        # After cert is issued, Caddy writes to /var/lib/caddy/.local/share/caddy/...
+        # Use a Caddy event hook or a cron job to copy to infra/irc/certs/:
+        #   cp /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/irc.christitus.com/irc.christitus.com.crt infra/irc/certs/
+        #   cp /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/irc.christitus.com/irc.christitus.com.key infra/irc/certs/
+        #   docker compose -f infra/irc/docker-compose.yml restart inspircd
+    }
+}
+
+# ---------------------------------------------------------------------------
+# DNS SRV record for IRC auto-discovery (add in your DNS provider):
+#   _ircs._tcp.christitus.com  300  IN  SRV  10 0 6697 irc.christitus.com.
+# This lets IRC clients auto-discover the TLS port when users enter
+# "christitus.com" as their IRC network.
+# ---------------------------------------------------------------------------

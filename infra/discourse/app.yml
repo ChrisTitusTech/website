@@ -1,0 +1,90 @@
+# Discourse Docker Manager configuration — forum.christitus.com
+#
+# Prerequisites:
+#   git clone https://github.com/discourse/discourse_docker.git /var/discourse
+#   cd /var/discourse
+#   cp /path/to/this/app.yml containers/app.yml
+#
+# Deploy:
+#   ./launcher bootstrap app
+#   ./launcher start app
+#
+# After first boot, visit https://forum.christitus.com/admin to finish setup.
+# The OpenID Connect plugin (installed below) handles Authentik SSO login.
+# In Discourse Admin → Settings → Login, disable email/password login and
+# enable "discourse openid connect" as the only login method.
+
+templates:
+  - "templates/postgres.template.yml"
+  - "templates/redis.template.yml"
+  - "templates/web.template.yml"
+  - "templates/web.ratelimited.template.yml"
+  - "templates/web.ssl.template.yml"
+  - "templates/web.letsencrypt.ssl.template.yml"
+
+expose:
+  - "80:80"
+  - "443:443"
+
+params:
+  db_default_text_search_config: "pg_catalog.english"
+  db_shared_buffers: "256MB"
+  db_work_mem:       "40MB"
+
+env:
+  LANG: en_US.UTF-8
+  DISCOURSE_DEFAULT_LOCALE: en
+
+  # ----- Required -----
+  DISCOURSE_HOSTNAME:          'forum.christitus.com'
+  DISCOURSE_DEVELOPER_EMAILS: 'admin@christitus.com'
+
+  # ----- SMTP (for notifications and password resets) -----
+  DISCOURSE_SMTP_ADDRESS:          smtp.example.com
+  DISCOURSE_SMTP_PORT:             587
+  DISCOURSE_SMTP_USER_NAME:        noreply@christitus.com
+  DISCOURSE_SMTP_PASSWORD:         "REPLACE_WITH_SMTP_PASSWORD"
+  DISCOURSE_SMTP_ENABLE_START_TLS: true
+  DISCOURSE_SMTP_AUTHENTICATION:   login
+
+  # ----- Let's Encrypt TLS -----
+  LETSENCRYPT_ACCOUNT_EMAIL: admin@christitus.com
+
+  # ----- Authentik OIDC (discourse-openid-connect plugin) -----
+  # These env vars are picked up by the plugin at startup.
+  # Create a separate OAuth2/OIDC Provider in Authentik for Discourse.
+  # Redirect URI: https://forum.christitus.com/auth/oidc/callback
+  DISCOURSE_OPENID_CONNECT_DISCOVERY_DOCUMENT: >-
+    https://auth.christitus.com/application/o/discourse/.well-known/openid-configuration
+  DISCOURSE_OPENID_CONNECT_CLIENT_ID:     "REPLACE_WITH_DISCOURSE_CLIENT_ID"
+  DISCOURSE_OPENID_CONNECT_CLIENT_SECRET: "REPLACE_WITH_DISCOURSE_CLIENT_SECRET"
+  # Map the Authentik 'groups' claim → Discourse groups (optional but useful)
+  DISCOURSE_OPENID_CONNECT_GROUPS_CLAIM:  "groups"
+
+volumes:
+  - volume:
+      host:  /var/discourse/shared/standalone
+      guest: /shared
+  - volume:
+      host:  /var/discourse/shared/standalone/log/var-log
+      guest: /var/log
+
+hooks:
+  after_code:
+    - exec:
+        cd: $home/plugins
+        cmd:
+          - git clone https://github.com/discourse/docker_manager.git
+          # discourse-openid-connect provides SSO via Authentik
+          - git clone https://github.com/discourse/discourse-openid-connect.git
+
+run:
+  - exec: echo "=== Discourse bootstrap complete ==="
+  # Forums are open: anonymous users can read, any Authentik user (GitHub/Twitch/Patreon)
+  # can post and reply. Only the Members category is restricted to the members group.
+  - exec: rails r "SiteSetting.login_required = false rescue nil"
+  # Allow new users to post without requiring manual approval
+  - exec: rails r "SiteSetting.must_approve_users = false rescue nil"
+  # Trust level 0 (new user) can create topics so any logged-in user can participate
+  - exec: rails r "SiteSetting.min_trust_to_create_topic = 0 rescue nil"
+  - exec: rails r "SiteSetting.min_trust_to_post_links = 0 rescue nil"
