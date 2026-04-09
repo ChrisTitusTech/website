@@ -47,7 +47,13 @@ services:
     # Wait for InspIRCd to be ready before starting
     depends_on:
       - inspircd
+    networks:
+      - default
+      - ctt-shared
 
 volumes:
   thelounge-data:
     driver: local
+networks:
+  ctt-shared:
+    external: true

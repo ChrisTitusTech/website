@@ -279,12 +279,32 @@ The expression policies (Step 5e) call `pending_user.ak_groups.add()` directly, 
 
 ### 5g. Create the LDAP outpost (for The Lounge IRC)
 
+First, create an LDAP Provider and Application — the outpost needs an application to bind to.
+
+**Create the LDAP Provider:**
+1. **Admin → Applications → Providers → Create → LDAP Provider**
+2. Name: `ldap-provider`
+3. Base DN: `DC=christitus,DC=com`
+4. Search group: select `members` (or leave blank to allow all users to authenticate)
+5. Save
+
+**Create the Application:**
+1. **Admin → Applications → Applications → Create**
+2. Name: `ldap`, Slug: `ldap`
+3. Provider: select `ldap-provider`
+4. Save
+
+**Create the LDAP Outpost:**
 1. **Admin → Applications → Outposts → Create**
 2. Type: **LDAP**, Name: `ldap-outpost`
-3. Assign the application to it
+3. Under **Applications**, select `ldap`
 4. After save, copy the **token** from the outpost detail page
 5. Edit `/opt/ctt/infra/authentik/.env`, set `AUTHENTIK_LDAP_TOKEN=<token>`
-6. `docker compose up -d ldap` to start the LDAP container
+6. Create the shared Docker network (only needed once):
+   ```bash
+   docker network create ctt-shared
+   ```
+7. `cd /opt/ctt/infra/authentik && docker compose up -d ldap` to start the LDAP container
 
 ### 5h. Create OIDC providers for Discourse and The Lounge
 
@@ -296,11 +316,13 @@ For each downstream app, create an OAuth2/OIDC Provider in Authentik:
    - Redirect URI: `https://forum.christitus.com/auth/oidc/callback`
    - Signing Key: select the default RS256 key
    - Scopes: `openid email profile groups`
-   - Note the **Client ID** and **Client Secret** for Step 6
+   - Save, then open the provider detail page — the **Client ID** and **Client Secret** are shown at the top. Copy both for Step 6.
 3. Repeat for **Thelounge** if you want OIDC login there (redirect URI: `https://lounge.christitus.com/auth/callback`)
 
 Then create an Application for each:  
 **Admin → Applications → Applications → Create** → link to the matching Provider.
+
+> **Where are the credentials?** The **Client ID** is shown on the provider detail page. To find or regenerate the **Client Secret**, click **Edit** on the provider — the secret is in the edit form with a regenerate (↺) button beside it. Copy the secret before saving and closing the form.
 
 ---
 
@@ -321,7 +343,8 @@ Edit `/var/discourse/containers/app.yml` and replace:
 
 | Placeholder | Value |
 |---|---|
-| `REPLACE_WITH_SMTP_PASSWORD` | Your SMTP password |
+| `REPLACE_WITH_SES_SMTP_USERNAME` | SES SMTP username (from AWS Console → SES → SMTP Settings → Create SMTP credentials) |
+| `REPLACE_WITH_SES_SMTP_PASSWORD` | SES SMTP password (same credentials as Authentik's `AUTHENTIK_EMAIL__PASSWORD`) |
 | `REPLACE_WITH_DISCOURSE_CLIENT_ID` | Client ID from Authentik Step 5h |
 | `REPLACE_WITH_DISCOURSE_CLIENT_SECRET` | Client Secret from Authentik Step 5h |
 

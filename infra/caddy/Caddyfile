@@ -31,13 +31,21 @@ auth.christitus.com {
 
 # ---------------------------------------------------------------------------
 # forum.christitus.com — Discourse
-# Discourse manages its own TLS via the discourse-docker app.yml template
-# (templates/web.ssl.template.yml + templates/web.letsencrypt.ssl.template.yml).
-# Remove this block if using Discourse's built-in TLS instead of Caddy.
+# Discourse binds to 127.0.0.1:8080 only; Caddy handles TLS.
 # ---------------------------------------------------------------------------
-# forum.christitus.com {
-#     reverse_proxy 127.0.0.1:8080
-# }
+forum.christitus.com {
+    reverse_proxy 127.0.0.1:8080 {
+        header_up X-Forwarded-Proto https
+        header_up X-Forwarded-For {remote_host}
+    }
+    encode gzip
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "SAMEORIGIN"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+}
 
 # ---------------------------------------------------------------------------
 # lounge.christitus.com — The Lounge web IRC client

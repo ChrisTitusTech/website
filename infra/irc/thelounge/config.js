@@ -49,22 +49,22 @@ module.exports = {
     // if co-located, or auth.christitus.com if on a separate VPS)
     url: "ldap://authentik-ldap:3389",
 
-    // These match Authentik's LDAP outpost default base DN
-    baseDN: "DC=ldap,DC=goauthentik,DC=io",
+    // These match Authentik's LDAP outpost base DN
+    baseDN: "DC=christitus,DC=com",
 
     // Service account created in Authentik for directory searches
     // Admin → Directory → Users → Create service account → note DN
     primaryKey: "cn",
 
     searchDN: {
-      rootDN:       "cn=ldapservice,DC=ldap,DC=goauthentik,DC=io",
+      rootDN:       "cn=ldapservice,DC=christitus,DC=com",
       rootPassword: "REPLACE_WITH_SERVICE_ACCOUNT_PASSWORD",
 
       // Allow any user authenticated via GitHub, Twitch, or Patreon.
       // Paid subscribers also get the "members" group, but IRC itself is
       // open to everyone who has an account on any of the three platforms.
       filter: "(objectClass=user)",
-      base:   "DC=ldap,DC=goauthentik,DC=io",
+      base:   "DC=christitus,DC=com",
       scope:  "sub",
     },
 

@@ -1,109 +1,80 @@
----
-# Authentik docker-compose.yml
-# Reference: https://goauthentik.io/docs/installation/docker-compose
-#
-# Deploy:
-#   1. Copy .env.example to .env and fill in values
-#   2. docker compose pull
-#   3. docker compose up -d
-#   4. Visit https://auth.christitus.com/if/flow/initial-setup/ to create the admin account
-
-version: "3.4"
-
 services:
   postgresql:
-    image: docker.io/library/postgres:16-alpine
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
-      start_period: 20s
-      interval: 30s
-      retries: 5
-      timeout: 5s
-    volumes:
-      - database:/var/lib/postgresql/data
+    env_file:
+    - .env
     environment:
+      POSTGRES_DB: ${PG_DB:-authentik}
       POSTGRES_PASSWORD: ${PG_PASS:?database password required}
       POSTGRES_USER: ${PG_USER:-authentik}
-      POSTGRES_DB: ${PG_DB:-authentik}
-    env_file:
-      - .env
-
-  redis:
-    image: docker.io/library/redis:alpine
-    command: --save 60 1 --loglevel warning
-    restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
-      start_period: 20s
       interval: 30s
       retries: 5
-      timeout: 3s
-    volumes:
-      - redis:/data
-
-  server:
-    image: ${AUTHENTIK_IMAGE:-ghcr.io/goauthentik/server}:${AUTHENTIK_TAG:-2024.12.3}
+      start_period: 20s
+      test:
+      - CMD-SHELL
+      - pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}
+      timeout: 5s
+    image: docker.io/library/postgres:16-alpine
     restart: unless-stopped
-    command: server
-    environment:
-      AUTHENTIK_REDIS__HOST: redis
-      AUTHENTIK_POSTGRESQL__HOST: postgresql
-      AUTHENTIK_POSTGRESQL__USER: ${PG_USER:-authentik}
-      AUTHENTIK_POSTGRESQL__NAME: ${PG_DB:-authentik}
-      AUTHENTIK_POSTGRESQL__PASSWORD: ${PG_PASS}
     volumes:
-      - ./media:/media
-      - ./custom-templates:/templates
-    env_file:
-      - .env
-    ports:
-      - "127.0.0.1:9000:9000"   # Caddy proxies to this
+    - database:/var/lib/postgresql/data
+  server:
+    command: server
     depends_on:
       postgresql:
         condition: service_healthy
-      redis:
-        condition: service_healthy
-
-  worker:
-    image: ${AUTHENTIK_IMAGE:-ghcr.io/goauthentik/server}:${AUTHENTIK_TAG:-2024.12.3}
-    restart: unless-stopped
-    command: worker
+    env_file:
+    - .env
     environment:
-      AUTHENTIK_REDIS__HOST: redis
       AUTHENTIK_POSTGRESQL__HOST: postgresql
-      AUTHENTIK_POSTGRESQL__USER: ${PG_USER:-authentik}
       AUTHENTIK_POSTGRESQL__NAME: ${PG_DB:-authentik}
       AUTHENTIK_POSTGRESQL__PASSWORD: ${PG_PASS}
+      AUTHENTIK_POSTGRESQL__USER: ${PG_USER:-authentik}
+      AUTHENTIK_SECRET_KEY: ${AUTHENTIK_SECRET_KEY:?secret key required}
+    image: ${AUTHENTIK_IMAGE:-ghcr.io/goauthentik/server}:${AUTHENTIK_TAG:-2026.2.2}
+    ports:
+    - ${COMPOSE_PORT_HTTP:-9000}:9000
+    - ${COMPOSE_PORT_HTTPS:-9443}:9443
+    restart: unless-stopped
+    shm_size: 512mb
+    volumes:
+    - ./data:/data
+    - ./custom-templates:/templates
+  worker:
+    command: worker
+    depends_on:
+      postgresql:
+        condition: service_healthy
+    env_file:
+    - .env
+    environment:
+      AUTHENTIK_POSTGRESQL__HOST: postgresql
+      AUTHENTIK_POSTGRESQL__NAME: ${PG_DB:-authentik}
+      AUTHENTIK_POSTGRESQL__PASSWORD: ${PG_PASS}
+      AUTHENTIK_POSTGRESQL__USER: ${PG_USER:-authentik}
+      AUTHENTIK_SECRET_KEY: ${AUTHENTIK_SECRET_KEY:?secret key required}
+    image: ${AUTHENTIK_IMAGE:-ghcr.io/goauthentik/server}:${AUTHENTIK_TAG:-2026.2.2}
+    restart: unless-stopped
+    shm_size: 512mb
     user: root
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./media:/media
-      - ./certs:/certs
-      - ./custom-templates:/templates
-    env_file:
-      - .env
-    depends_on:
-      postgresql:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-
-  # Authentik LDAP outpost — exposes users as LDAP for The Lounge IRC client
+    - /var/run/docker.sock:/var/run/docker.sock
+    - ./data:/data
+    - ./certs:/certs
+    - ./custom-templates:/templates
   ldap:
-    image: ${AUTHENTIK_IMAGE:-ghcr.io/goauthentik/ldap}:${AUTHENTIK_TAG:-2024.12.3}
+    image: ghcr.io/goauthentik/ldap:${AUTHENTIK_TAG:-2026.2.2}
     restart: unless-stopped
-    ports:
-      - "127.0.0.1:3389:3389"   # LDAP over localhost only; Caddy or The Lounge connects here
     environment:
-      AUTHENTIK_HOST: http://server:9000
+      AUTHENTIK_HOST: https://auth.christitus.com
+      AUTHENTIK_TOKEN: ${AUTHENTIK_LDAP_TOKEN:?ldap token required}
       AUTHENTIK_INSECURE: "false"
-      AUTHENTIK_TOKEN: ${AUTHENTIK_LDAP_TOKEN:?LDAP outpost token required}
-    depends_on:
-      - server
-
+    networks:
+    - default
+    - ctt-shared
 volumes:
   database:
     driver: local
-  redis:
-    driver: local
+networks:
+  ctt-shared:
+    external: true
