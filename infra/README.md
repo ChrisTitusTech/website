@@ -152,7 +152,87 @@ ufw enable
 
 ---
 
-## Step 3 — Clone this repo onto the VPS
+## Step 3 — SSH hardening (key-only authentication)
+
+Disable password authentication so the server only accepts SSH public key logins.
+
+### 3a. Add your public key (run from your LOCAL machine)
+
+```bash
+# Replace user@YOUR_VPS_IP with your actual VPS user and IP
+ssh-copy-id -i ~/.ssh/id_ed25519.pub user@YOUR_VPS_IP
+```
+
+If you don't have an ed25519 key yet, generate one first:
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+Verify you can log in with the key **before** disabling password auth:
+
+```bash
+ssh -i ~/.ssh/id_ed25519 user@YOUR_VPS_IP
+```
+
+### 3b. Harden sshd_config (run on the VPS)
+
+```bash
+# Back up the original config
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+
+# Apply hardened settings
+sed -i 's/^#*PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
+sed -i 's/^#*PubkeyAuthentication.*/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+sed -i 's/^#*AuthenticationMethods.*/AuthenticationMethods publickey/' /etc/ssh/sshd_config
+
+# Add any missing directives if sed didn't find them
+grep -q '^PasswordAuthentication' /etc/ssh/sshd_config  || echo 'PasswordAuthentication no'  >> /etc/ssh/sshd_config
+grep -q '^PubkeyAuthentication'   /etc/ssh/sshd_config  || echo 'PubkeyAuthentication yes'   >> /etc/ssh/sshd_config
+grep -q '^AuthenticationMethods'  /etc/ssh/sshd_config  || echo 'AuthenticationMethods publickey' >> /etc/ssh/sshd_config
+
+# Validate the config before reloading
+sshd -t && systemctl reload ssh
+```
+
+> **Ubuntu 24.04 note:** The SSH service name is `ssh`, not `sshd`. If `systemctl reload ssh` fails, try `systemctl reload sshd`.
+
+### 3c. Verify hardening
+
+Open a **second terminal** and confirm you can still log in with your key before closing your current session:
+
+```bash
+ssh -i ~/.ssh/id_ed25519 user@YOUR_VPS_IP
+```
+
+Then confirm password auth is rejected:
+
+```bash
+ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no user@YOUR_VPS_IP
+# Expected: "Permission denied (publickey)"
+```
+
+### 3d. (Optional) Change the default SSH port
+
+Changing from port 22 reduces automated brute-force noise:
+
+```bash
+# Pick a high port, e.g. 2222
+NEW_PORT=2222
+sed -i "s/^#*Port .*/Port ${NEW_PORT}/" /etc/ssh/sshd_config
+grep -q '^Port ' /etc/ssh/sshd_config || echo "Port ${NEW_PORT}" >> /etc/ssh/sshd_config
+
+# Update UFW — allow new port BEFORE reloading SSH
+ufw allow ${NEW_PORT}/tcp
+ufw delete allow 22/tcp
+sshd -t && systemctl reload ssh
+```
+
+> Remember to reconnect on the new port: `ssh -p 2222 user@YOUR_VPS_IP`
+
+---
+
+## Step 4 — Clone this repo onto the VPS
 
 ```bash
 git clone https://github.com/ChrisTitusTech/website.git /opt/ctt
@@ -162,7 +242,7 @@ All paths below assume `/opt/ctt/infra/` as the working root.
 
 ---
 
-## Step 4 — Caddy reverse proxy
+## Step 5 — Caddy reverse proxy
 
 ```bash
 cp /opt/ctt/infra/caddy/Caddyfile /etc/caddy/Caddyfile
@@ -172,15 +252,15 @@ systemctl reload caddy
 
 Caddy will automatically obtain Let's Encrypt certificates for all four subdomains the first time each service comes online. No manual cert steps are needed.
 
-> **IRC certs**: After Caddy issues the cert for `irc.christitus.com`, copy it to the InspIRCd cert directory. A cron job handles this (see Step 7).
+> **IRC certs**: After Caddy issues the cert for `irc.christitus.com`, copy it to the InspIRCd cert directory. A cron job handles this (see Step 8).
 
 ---
 
-## Step 5 — Authentik (Identity Provider)
+## Step 6 — Authentik (Identity Provider)
 
 Authentik is the central SSO hub. Deploy it first — everything else depends on it.
 
-### 5a. Configure environment
+### 6a. Configure environment
 
 ```bash
 cd /opt/ctt/infra/authentik
@@ -194,9 +274,9 @@ Edit `.env` and fill in:
 | `PG_PASS` | Strong random password (e.g. `openssl rand -hex 32`) |
 | `AUTHENTIK_SECRET_KEY` | 50-character random string (e.g. `openssl rand -hex 25`) |
 | `AUTHENTIK_EMAIL__*` | Amazon SES SMTP credentials — see comments in `.env.example` for field-by-field guidance. Generate SES SMTP credentials at **AWS Console → SES → SMTP Settings → Create SMTP credentials**. |
-| `AUTHENTIK_LDAP_TOKEN` | Leave blank for now — fill in after Step 5g |
+| `AUTHENTIK_LDAP_TOKEN` | Leave blank for now — fill in after Step 6g |
 
-### 5b. Start Authentik
+### 6b. Start Authentik
 
 ```bash
 cd /opt/ctt/infra/authentik
@@ -209,7 +289,7 @@ Wait ~60 seconds for the database to initialise, then visit:
 
 Create the admin account.
 
-### 5c. Register OAuth applications on each platform
+### 6c. Register OAuth applications on each platform
 
 You need a Client ID and Client Secret from each platform.
 
@@ -236,7 +316,7 @@ You need a Client ID and Client Secret from each platform.
 3. Note the **Client ID** and generate a **Client Secret**.
 4. Required scope: `read:user`
 
-### 5d. Add OAuth sources in Authentik
+### 6d. Add OAuth sources in Authentik
 
 For each platform (Patreon, Twitch, GitHub), in the Authentik admin UI:
 
@@ -257,7 +337,7 @@ For each platform (Patreon, Twitch, GitHub), in the Authentik admin UI:
 
 **GitHub:** Use the built-in **GitHub OAuth Source** type — it pre-fills the endpoints.
 
-### 5e. Add membership verification policies
+### 6e. Add membership verification policies
 
 These policies run after OAuth and handle two things:
 - They **always return True** (any GitHub/Twitch/Patreon account can log in and use IRC).
@@ -271,13 +351,13 @@ These policies run after OAuth and handle two things:
    - Name `github-sponsor` — paste contents of `policies/github-sponsors.py`
 3. For each OAuth source, go to **Edit → Bindings** and bind the matching policy at Order 10
 
-### 5f. Create the `members` group
+### 6f. Create the `members` group
 
 1. **Admin → Directory → Groups → Create** → Name: `members`
 
-The expression policies (Step 5e) call `pending_user.ak_groups.add()` directly, which writes to the database immediately. No additional User Write Stage is needed — group membership is fully handled by the policy binding.
+The expression policies (Step 6e) call `pending_user.ak_groups.add()` directly, which writes to the database immediately. No additional User Write Stage is needed — group membership is fully handled by the policy binding.
 
-### 5g. Create the LDAP outpost (for The Lounge IRC)
+### 6g. Create the LDAP outpost (for The Lounge IRC)
 
 First, create an LDAP Provider and Application — the outpost needs an application to bind to.
 
@@ -300,13 +380,14 @@ First, create an LDAP Provider and Application — the outpost needs an applicat
 3. Under **Applications**, select `ldap`
 4. After save, copy the **token** from the outpost detail page
 5. Edit `/opt/ctt/infra/authentik/.env`, set `AUTHENTIK_LDAP_TOKEN=<token>`
+
 6. Create the shared Docker network (only needed once):
    ```bash
    docker network create ctt-shared
    ```
 7. `cd /opt/ctt/infra/authentik && docker compose up -d ldap` to start the LDAP container
 
-### 5h. Create OIDC providers for Discourse and The Lounge
+### 6h. Create OIDC providers for Discourse and The Lounge
 
 For each downstream app, create an OAuth2/OIDC Provider in Authentik:
 
@@ -326,7 +407,7 @@ Then create an Application for each:
 
 ---
 
-## Step 6 — Discourse (Forums)
+## Step 7 — Discourse (Forums)
 
 Discourse uses its own Docker launcher, not docker compose.
 
@@ -345,8 +426,8 @@ Edit `/var/discourse/containers/app.yml` and replace:
 |---|---|
 | `REPLACE_WITH_SES_SMTP_USERNAME` | SES SMTP username (from AWS Console → SES → SMTP Settings → Create SMTP credentials) |
 | `REPLACE_WITH_SES_SMTP_PASSWORD` | SES SMTP password (same credentials as Authentik's `AUTHENTIK_EMAIL__PASSWORD`) |
-| `REPLACE_WITH_DISCOURSE_CLIENT_ID` | Client ID from Authentik Step 5h |
-| `REPLACE_WITH_DISCOURSE_CLIENT_SECRET` | Client Secret from Authentik Step 5h |
+| `REPLACE_WITH_DISCOURSE_CLIENT_ID` | Client ID from Authentik Step 6h |
+| `REPLACE_WITH_DISCOURSE_CLIENT_SECRET` | Client Secret from Authentik Step 6h |
 
 Then build and start:
 
@@ -356,10 +437,47 @@ cd /var/discourse
 ./launcher start app
 ```
 
-After boot, visit **https://forum.christitus.com/admin** and:
-1. Go to **Admin → Settings → Login**
-2. Enable **discourse openid connect**
-3. Optionally disable **enable local logins** so users must log in via Authentik
+After boot, visit **https://forum.christitus.com/admin** and connect Discourse to Authentik via the built-in OIDC plugin (no separate plugin install needed — it ships with Discourse core).
+
+### 7a. Configure the OIDC plugin in Discourse
+
+Go to **Admin → Login & authentication → OIDC tab**.
+
+1. First, check **OpenID Connect enabled** and save — this causes the remaining credential fields to appear.
+2. After saving, the following fields will now be visible in the OIDC tab:
+
+| Setting | Value |
+|---|---|
+| `openid_connect_discovery_document` | `https://auth.christitus.com/application/o/discourse/.well-known/openid-configuration` |
+| `openid_connect_client_id` | Client ID from Authentik Step 6h |
+| `openid_connect_client_secret` | Client Secret from Authentik Step 6h |
+| `openid_connect_authorize_scope` | `openid email profile` |
+
+> **Discovery document URL:** Authentik publishes this at `https://auth.christitus.com/application/o/<application-slug>/.well-known/openid-configuration`. The slug is what you set in Step 6h (default: `discourse`). Discourse auto-fetches the authorize, token, and userinfo endpoints from it — no need to enter them manually. ([Discourse OIDC plugin docs](https://meta.discourse.org/t/discourse-openid-connect-oidc/103632))
+
+Save the settings. A **"Log in with OpenID Connect"** button will appear on the login page.
+
+### 7b. Verify the callback URL registered in Authentik
+
+The redirect URI you registered in Authentik (Step 6h) must exactly match what Discourse sends. Discourse uses:
+
+```
+https://forum.christitus.com/auth/oidc/callback
+```
+
+Double-check this in Authentik: **Admin → Applications → Providers → discourse → Edit → Redirect URIs**. If it does not match, users will get a redirect_uri_mismatch error.
+
+### 7c. (Optional) Disable local logins
+
+To force all logins through Authentik, go to **Admin → Settings → Login** and:
+- Disable **enable local logins** — removes the username/password form
+- Disable **enable local logins via email** — removes the magic-link fallback
+
+> Keep at least one admin account accessible via the Rails console before disabling local logins, in case the OIDC provider becomes unavailable.
+
+### 7d. Enable verbose OIDC logging (troubleshooting only)
+
+If login fails, go to **Admin → Settings** → search `openid_connect_verbose_logging` → enable it. Then attempt a login and check **Admin → Logs** for detailed token exchange output. Disable this setting again after debugging.
 
 **Forum access model:**
 - **Anonymous** — can read all public categories
@@ -373,9 +491,9 @@ To create the Members-only category:
 
 ---
 
-## Step 7 — IRC (InspIRCd + The Lounge)
+## Step 8 — IRC (InspIRCd + The Lounge)
 
-### 7a. Create directories and set the oper password
+### 8a. Create directories and set the oper password
 
 ```bash
 mkdir -p /opt/ctt/infra/irc/inspircd/logs
@@ -400,7 +518,7 @@ Also replace `REPLACE_WITH_RANDOM_32_CHAR_KEY` in `inspircd.conf` with the outpu
 openssl rand -hex 16
 ```
 
-### 7b. Copy TLS cert from Caddy to InspIRCd
+### 8b. Copy TLS cert from Caddy to InspIRCd
 
 Caddy writes certs under `/var/lib/caddy/.local/share/caddy/certificates/`.  
 Set up a daily cron to copy the renewed cert to the InspIRCd cert mount:
@@ -414,11 +532,11 @@ Add:
 0 3 * * * cp /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/irc.christitus.com/irc.christitus.com.crt /opt/ctt/infra/irc/certs/ && cp /var/lib/caddy/.local/share/caddy/certificates/acme-v02.api.letsencrypt.org-directory/irc.christitus.com/irc.christitus.com.key /opt/ctt/infra/irc/certs/ && docker compose -f /opt/ctt/infra/irc/docker-compose.yml restart inspircd
 ```
 
-### 7c. Configure The Lounge LDAP password
+### 8c. Configure The Lounge LDAP password
 
-Edit `infra/irc/thelounge/config.js` and replace `REPLACE_WITH_SERVICE_ACCOUNT_PASSWORD` with the password of the Authentik service account created in Step 5g.
+Edit `infra/irc/thelounge/config.js` and replace `REPLACE_WITH_SERVICE_ACCOUNT_PASSWORD` with the password of the Authentik service account created in Step 6g.
 
-### 7d. Start the IRC stack
+### 8d. Start the IRC stack
 
 ```bash
 cd /opt/ctt/infra/irc
@@ -434,7 +552,7 @@ docker compose logs inspircd | tail -20
 docker compose logs thelounge | tail -20
 ```
 
-### 7e. Verify the IRC SRV DNS record
+### 8e. Verify the IRC SRV DNS record
 
 The SRV record was added in Step 1b. Confirm it is live before telling users to connect:
 
@@ -447,7 +565,7 @@ This lets IRC clients auto-discover the TLS port when a user enters `christitus.
 
 ---
 
-## Step 8 — Cloudflare Access (gate /members/ on the website)
+## Step 9 — Cloudflare Access (gate /members/ on the website)
 
 This gates `christitus.com/members/*` so only verified subscribers can view it.
 
