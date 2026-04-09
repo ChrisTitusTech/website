@@ -37,8 +37,12 @@ env:
 
   # ----- Required -----
   DISCOURSE_HOSTNAME:          'forum.christitus.com'
-  DISCOURSE_DEVELOPER_EMAILS: 'admin@christitus.com'
+  DISCOURSE_DEVELOPER_EMAILS: 'contact@christitus.com'
 
+  # web.template.yml sets DISCOURSE_FORCE_HTTPS=true by default in newer Discourse.
+  # Override it here — Caddy handles TLS, Discourse must not redirect internally.
+  DISCOURSE_FORCE_HTTPS: false
+  DISCOURSE_TRUSTED_PROXIES: 127.0.0.1
   # ----- SMTP (for notifications and password resets) -----
   # Use the same Amazon SES credentials as Authentik (see infra/authentik/.env).
   # SES SMTP endpoint varies by region — find yours at:
@@ -46,14 +50,11 @@ env:
   # Username and password come from:
   #   AWS Console → SES → SMTP Settings → Create SMTP credentials
   DISCOURSE_SMTP_ADDRESS:          email-smtp.us-east-1.amazonaws.com
-  DISCOURSE_SMTP_PORT:             587
+  DISCOURSE_SMTP_PORT:             2587
   DISCOURSE_SMTP_USER_NAME:        "REPLACE_WITH_SES_SMTP_USERNAME"
   DISCOURSE_SMTP_PASSWORD:         "REPLACE_WITH_SES_SMTP_PASSWORD"
   DISCOURSE_SMTP_ENABLE_START_TLS: true
   DISCOURSE_SMTP_AUTHENTICATION:   login
-
-  # ----- TLS is handled by Caddy — tell Discourse it's behind an HTTPS proxy -----
-  DISCOURSE_TRUSTED_PROXIES: 127.0.0.1
 
   # ----- Authentik OIDC (discourse-openid-connect plugin) -----
   # These env vars are picked up by the plugin at startup.
