@@ -270,7 +270,7 @@ $icon-font: '{{.icon_font}}';
     color: #999;
   }
 
-  // #333 on dark widget bg #343a40 is ~1.1:1; override to light text
+  // #333 on dark widget bg #343a40 is ~1.1:1 override to light text
   .widget-categories-list li a {
     color: #dee2e6;
     border-bottom-color: #495057;
