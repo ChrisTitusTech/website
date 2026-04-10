@@ -67,11 +67,9 @@ def fetch_playlist_items() -> list:
 
             thumbnails = snippet.get("thumbnails", {})
             thumbnail = (
-                thumbnails.get("maxres", {}).get("url")
-                or thumbnails.get("high", {}).get("url")
-                or thumbnails.get("medium", {}).get("url")
+                thumbnails.get("medium", {}).get("url")
                 or thumbnails.get("default", {}).get("url")
-                or f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"
+                or f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg"
             )
 
             description = snippet.get("description", "").strip()
