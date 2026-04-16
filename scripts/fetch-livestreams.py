@@ -67,11 +67,9 @@ def fetch_playlist_items() -> list:
 
             thumbnails = snippet.get("thumbnails", {})
             thumbnail = (
-                thumbnails.get("maxres", {}).get("url")
-                or thumbnails.get("high", {}).get("url")
-                or thumbnails.get("medium", {}).get("url")
+                thumbnails.get("medium", {}).get("url")
                 or thumbnails.get("default", {}).get("url")
-                or f"https://i.ytimg.com/vi/{video_id}/hqdefault.jpg"
+                or f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg"
             )
 
             description = snippet.get("description", "").strip()
@@ -94,6 +92,14 @@ def fetch_playlist_items() -> list:
     return items
 
 
+def _emit_github_output(key: str, value: str) -> None:
+    """Write a key=value pair to GITHUB_OUTPUT if running in GitHub Actions."""
+    github_output = os.environ.get("GITHUB_OUTPUT")
+    if github_output:
+        with open(github_output, "a") as fh:
+            fh.write(f"{key}={value}\n")
+
+
 def main() -> None:
     if not API_KEY:
         print("Error: YOUTUBE_API_KEY environment variable is not set.", file=sys.stderr)
@@ -103,16 +109,17 @@ def main() -> None:
     items = fetch_playlist_items()
     print(f"Fetched {len(items)} videos.")
 
-    # Preserve existing twitchVodId values so the chat workflow doesn't lose its data
-    existing_vod_ids: dict[str, str | None] = {}
+    # Load existing data to preserve twitchVodId and detect meaningful changes
+    existing_by_id: dict[str, dict] = {}
+    existing_updated: str = ""
     if OUTPUT_FILE.exists():
         try:
-            existing = json.loads(OUTPUT_FILE.read_text())
-            for entry in existing.get("items", []):
+            existing_data = json.loads(OUTPUT_FILE.read_text())
+            existing_updated = existing_data.get("updated", "")
+            for entry in existing_data.get("items", []):
                 vid = entry.get("videoId")
-                tvid = entry.get("twitchVodId")
-                if vid and tvid:
-                    existing_vod_ids[vid] = tvid
+                if vid:
+                    existing_by_id[vid] = entry
         except (json.JSONDecodeError, OSError):
             pass
 
@@ -120,18 +127,45 @@ def main() -> None:
     CHATS_DIR.mkdir(parents=True, exist_ok=True)
     for item in items:
         vid = item["videoId"]
-        if vid in existing_vod_ids:
-            item["twitchVodId"] = existing_vod_ids[vid]
+        existing = existing_by_id.get(vid, {})
+        if existing.get("twitchVodId"):
+            item["twitchVodId"] = existing["twitchVodId"]
         item["hasChatReplay"] = (CHATS_DIR / f"{vid}.json").exists()
 
+    # Detect meaningful content changes: new videos or title/description updates
+    existing_ids = set(existing_by_id.keys())
+    new_ids = {item["videoId"] for item in items}
+    added = new_ids - existing_ids
+    changed = {
+        item["videoId"] for item in items
+        if item["videoId"] in existing_by_id
+        and (
+            item["title"] != existing_by_id[item["videoId"]].get("title", "")
+            or item["description"] != existing_by_id[item["videoId"]].get("description", "")
+        )
+    }
+    content_changed = bool(added or changed)
+
+    if content_changed:
+        if added:
+            print(f"New videos detected: {added}")
+        if changed:
+            print(f"Updated title/description for: {changed}")
+        updated_ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    else:
+        print("No new videos or description changes detected.")
+        updated_ts = existing_updated or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
     output = {
-        "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "updated": updated_ts,
         "items": items,
     }
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n")
     print(f"Written to {OUTPUT_FILE}")
+
+    _emit_github_output("data_changed", "true" if content_changed else "false")
 
 
 if __name__ == "__main__":

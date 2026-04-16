@@ -10,7 +10,7 @@
           <div class="content mb-4">{{ .Content }}</div>
           {{ end }}
 
-          {{ $streams := site.Data.livestreams }}
+          {{ $streams := hugo.Data.livestreams }}
           {{ if and $streams $streams.items }}
             {{ range $streams.items }}
             {{ if not (or (eq .title "Deleted video") (eq .title "Private video")) }}

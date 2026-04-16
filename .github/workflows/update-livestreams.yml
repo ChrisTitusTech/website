@@ -12,6 +12,8 @@ permissions:
 jobs:
   update-livestreams:
     runs-on: ubuntu-latest
+    outputs:
+      data_changed: ${{ steps.fetch.outputs.data_changed }}
 
     steps:
       - name: Checkout repository
@@ -26,12 +28,14 @@ jobs:
         run: pip install --quiet requests
 
       - name: Fetch playlist data
+        id: fetch
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           PLAYLIST_ID: PLc7fktTRMBow1ksFW020hx2XEKabaD5Vd
         run: python scripts/fetch-livestreams.py
 
       - name: Commit and push if data changed
+        if: steps.fetch.outputs.data_changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"

@@ -6,7 +6,7 @@
       <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
         <picture>
           <source srcset="{{ site.Params.logo | absURL }}" type="image/webp">
-          <img loading="lazy"
+          <img loading="eager" fetchpriority="high"
                class="img-fluid"
                src="{{ "images/navlogo.png" | absURL }}"
                alt="{{ site.Title }}"
@@ -35,21 +35,31 @@
         {{ end }}
 
           {{ range site.Menus.main }}
+          {{/* Determine active state: Hugo's helpers + URL-based fallback for home and sections */}}
+          {{ $menuURL := .URL | relLangURL }}
+          {{ $isActive := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+          {{ if not $isActive }}
+            {{ if and $.IsHome (eq .URL "/") }}
+              {{ $isActive = true }}
+            {{ else if and (ne .URL "/") (strings.HasPrefix $.RelPermalink $menuURL) }}
+              {{ $isActive = true }}
+            {{ end }}
+          {{ end }}
           {{ if .HasChildren }}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
+            <a class="nav-link dropdown-toggle{{ if $isActive }} active{{ end }}" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"{{ if $isActive }} aria-current="true"{{ end }}>
               {{ .Name }}
             </a>
             <div class="dropdown-menu rounded-0 border-0">
               {{ range .Children }}
-              <a class="dropdown-item" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+              <a class="dropdown-item{{ if $.IsMenuCurrent "main" . }} active{{ end }}" href="{{ .URL | absLangURL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
               {{ end }}
             </div>
           </li>
           {{ else }}
           <li class="nav-item">
-            <a class="nav-link" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+            <a class="nav-link{{ if $isActive }} active{{ end }}" href="{{ .URL | absLangURL }}"{{ if $isActive }} aria-current="page"{{ end }}>{{ .Name }}</a>
           </li>
           {{ end }}
           {{ end }}

@@ -1,1 +1,12 @@
-<img loading="lazy" decoding="async" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" class="img-fluid"> 
+{{ $imgSrc := .Destination | safeURL }}
+{{ $width := "" }}
+{{ $height := "" }}
+{{ if not (hasPrefix .Destination "http") }}
+  {{ $res := .Page.Resources.GetMatch (strings.TrimPrefix "/" .Destination) }}
+  {{ if $res }}
+    {{ $imgSrc = $res.RelPermalink }}
+    {{ $width = $res.Width }}
+    {{ $height = $res.Height }}
+  {{ end }}
+{{ end }}
+{{ if and $width $height }}<img loading="lazy" decoding="async" src="{{ $imgSrc }}" alt="{{ .Text }}" class="img-fluid" width="{{ $width }}" height="{{ $height }}">{{ else }}<img loading="lazy" decoding="async" src="{{ $imgSrc }}" alt="{{ .Text }}" class="img-fluid">{{ end }}
