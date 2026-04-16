@@ -55,7 +55,7 @@ This will show you all the TCP and UDP ports that are currently listening on you
 
 ### Check for Outside Addresses
 
-From your netstat or ss output, you can identify any external IP addresses that are connected to your system. This can help you detect unauthorized access or potential security threats. 
+From your netstat or ss output, you can identify any external IP addresses that are connected to your system. This can help you detect unauthorized access or potential security threats.
 
 ### Find what is Running on the Open Ports
 
@@ -99,6 +99,11 @@ If you are using a router your ISP provided, I'd recommend getting something lik
 
 Other 3rd party routers like Asus, TP-Link, etc. can be decent but they often have security vulnerabilities and may not receive regular updates. They probably are better than the ISP provided router but I would recommend going with a more reputable brand if you want better security.
 
+Resources for pfSense:
+
+- [Lawerence PC Security's pfSense Guide](https://www.youtube.com/playlist?list=PLjGQNuuUzvmsuXCoj6g6vm1N-ZeLJso6o)
+- [Netgate's pfSense Documentation](https://docs.netgate.com/pfsense/en/latest/)
+
 ### Firewall
 
 DO NOT buy a firewall or internet suite... they are terrible.
@@ -118,7 +123,7 @@ or configure with a gui like `gufw` or `firewall-config` depending on your linux
 #### 3rd Party Firewall Software
 
 | App | Platform | Description | Link |
-|-----|----------|-------------|------|
+| ----- | ---------- | ------------- | ------ |
 | **simplewall** | ![Windows](https://img.shields.io/badge/Windows-0078D4?logo=windows&logoColor=white) | Lightweight WFP-based per-app firewall, no background service required | [github.com/henrypp/simplewall](https://github.com/henrypp/simplewall) |
 | **Windows Firewall Control (WFC)** | ![Windows](https://img.shields.io/badge/Windows-0078D4?logo=windows&logoColor=white) | GUI front-end for the built-in Windows Firewall by Malwarebytes, free tier available | [binisoft.org/wfc](https://www.binisoft.org/wfc) |
 | **TinyWall** | ![Windows](https://img.shields.io/badge/Windows-0078D4?logo=windows&logoColor=white) | Lightweight wrapper around Windows Firewall, whitelist-based, very low resource usage | [tinywall.pados.hu](https://tinywall.pados.hu) |
@@ -134,13 +139,14 @@ All "security" influencers pushing VPNs are just trying to make a quick buck. A 
 
 ## Check Devices on Your Network
 
-You need to login to your router and check the list of connected devices. This will show you all the devices that are currently connected to your network, including their IP addresses and MAC addresses. Look for any devices that you do not recognize or that should not be on your network. If you find any suspicious devices, you can block them from accessing your network through your router's settings. 
+You need to login to your router and check the list of connected devices. This will show you all the devices that are currently connected to your network, including their IP addresses and MAC addresses. Look for any devices that you do not recognize or that should not be on your network. If you find any suspicious devices, you can block them from accessing your network through your router's settings.
 
-**ABOVE IS ACTIVE PROTECTION AND YOU MUST KEEP DOING IT TO MAINTAIN SECURITY** 
+**ABOVE IS ACTIVE PROTECTION AND YOU MUST KEEP DOING IT TO MAINTAIN SECURITY**
 
 Other than above, you can use software like Angry IP Scanner or Advanced IP Scanner to scan your network for connected devices. These tools will show you all the devices that are currently connected to your network, along with their IP addresses and other information. You can use this information to identify any unauthorized devices and take action to secure your network.
 
 Links:
+
 - [Angry IP Scanner](https://angryip.org/)
 - [Advanced IP Scanner](https://www.advanced-ip-scanner.com/)
 
