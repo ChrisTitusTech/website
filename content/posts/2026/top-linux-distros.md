@@ -31,9 +31,9 @@ CachyOS is a great choice for power users who want a stable and customizable ope
 
 Linux Mint is a great choice for users who just want a stable and user-friendly operating system. It is based on Ubuntu and comes with a lot of pre-installed software and tools for everyday use. Linux Mint has a large community of users who contribute to its development, and it is known for its ease of use and stability. This distro is perfect for users who want a simple and reliable operating system that just works without needing to tinker with it.
 
-## Omarchy (The Programmer's Choice)
+## Arch Linux
 
-If you program day in and day out it is a decent choice and based on Arch Linux with Hyprland as the default window manager. It is designed to be fast and efficient, and it has a large community of users who contribute to its development. Omarchy is perfect for programmers who want a customizable and powerful operating system that can handle their programming needs.
+Arch Linux is when you truly elevate into the elites of the world. You have made it and you are making your own thing that no one else has or can achieve. You transend the mortal realm and become a god.
 
 ## Conclusion
 

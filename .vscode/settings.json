@@ -29,7 +29,7 @@
     "workbench.appearance.useSystemAccentColor": false,
     "workbench.appearance.activityBarLocation": "default",
     "workbench.tree.renderIndentGuides": "none",
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Dark Modern",
     "terminal.integrated.smoothScrolling": false,
     "terminal.integrated.gpuAcceleration": "off",
     "window.zoomLevel": 0,
