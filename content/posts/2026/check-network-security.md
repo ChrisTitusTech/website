@@ -10,7 +10,7 @@ categories:
   - Networking
 tags:
   - Network Security
-draft: true
+draft: false
 ---
 This article explains how to check to see if your network is secure, and if you have any open ports or services that could be vulnerable to attack. It covers both Windows and Linux operating systems, and provides step-by-step instructions for using various tools to scan your network for vulnerabilities.
 <!--more-->
@@ -156,4 +156,4 @@ Security is a journey, not a destination. You need to continuously monitor and m
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "n7cjd5E_nsc" >}}
