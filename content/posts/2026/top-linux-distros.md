@@ -19,10 +19,6 @@ The Linux distros don't particulary matter if you know what your are doing in Li
 
 If you have ask, What distro should I use? Bazzite is a great answer if you are a gamer. It is consider an "Atomic" desktop where you can't change the system packages, but you can configure them. This is a perfect jumping off point for new Linux users who want to get into gaming on Linux. Bazzite has a large library of games available through its own store, and it also supports Steam and other popular gaming platforms.
 
-## Nobara (The Power User Gamer's Choice)
-
-Nobara is another great choice for gamers, but it is more geared towards power users who want more control over their system. It is based on Fedora and comes with a lot of pre-installed software and tools for gaming. Nobara also has a large library of games available through its own store, and it supports Steam and other popular gaming platforms. This distro was created by Glorious Eggroll, a well-known figure in the Linux gaming community, the creator of Proton-GE. Nobara is a great choice for gamers who want a more customizable experience and are willing to put in a little more effort to get their system set up just the way they like it.
-
 ## CachyOS (The Power User's Choice)
 
 CachyOS is a great choice for power users who want a stable and customizable operating system. It is based on Arch Linux and comes with a lot of pre-installed software and tools for power users. CachyOS is designed to be fast and efficient, and it has a large community of users who contribute to its development. This distro is perfect for users who want to have complete control over their system and are willing to put in the effort to learn how to use it. If you want to tinker and be on the bleeding edge, CachyOS is a great choice.
