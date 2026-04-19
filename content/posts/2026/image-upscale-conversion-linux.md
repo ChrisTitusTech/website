@@ -186,8 +186,8 @@ Output is written next to each source image as `.webp`.
 
 For most people, this order works best:
 
-1. `resize` to your target dimensions.
-2. `upscale` if the image still needs more detail.
+1. `upscale` if the image still needs more detail.
+2. `resize`  to your target dimensions.
 3. `convert-to-webp` for final web-friendly output.
 
 ## Troubleshooting
