@@ -15,13 +15,9 @@ Linux is not for everyone, but for those that want to get away from the evil cor
 
 The Linux distros don't particulary matter if you know what your are doing in Linux as you can install and change ANY distro to your needs, but for a noob the starting spot is important. The distros listed below are all great choices for different types of users, whether you are a gamer, a power user, or just looking for a stable and user-friendly operating system.
 
-## Bazzite (The Noob Gamer's Choice)
+## Bazzite (The Noob Gamer's Choice or HTPC)
 
 If you have ask, What distro should I use? Bazzite is a great answer if you are a gamer. It is consider an "Atomic" desktop where you can't change the system packages, but you can configure them. This is a perfect jumping off point for new Linux users who want to get into gaming on Linux. Bazzite has a large library of games available through its own store, and it also supports Steam and other popular gaming platforms.
-
-## Nobara (The Power User Gamer's Choice)
-
-Nobara is another great choice for gamers, but it is more geared towards power users who want more control over their system. It is based on Fedora and comes with a lot of pre-installed software and tools for gaming. Nobara also has a large library of games available through its own store, and it supports Steam and other popular gaming platforms. This distro was created by Glorious Eggroll, a well-known figure in the Linux gaming community, the creator of Proton-GE. Nobara is a great choice for gamers who want a more customizable experience and are willing to put in a little more effort to get their system set up just the way they like it.
 
 ## CachyOS (The Power User's Choice)
 
@@ -31,7 +27,7 @@ CachyOS is a great choice for power users who want a stable and customizable ope
 
 Linux Mint is a great choice for users who just want a stable and user-friendly operating system. It is based on Ubuntu and comes with a lot of pre-installed software and tools for everyday use. Linux Mint has a large community of users who contribute to its development, and it is known for its ease of use and stability. This distro is perfect for users who want a simple and reliable operating system that just works without needing to tinker with it.
 
-## Arch Linux
+## Arch Linux (For when you ascend and no longer need distros)
 
 Arch Linux is when you truly elevate into the elites of the world. You have made it and you are making your own thing that no one else has or can achieve. You transend the mortal realm and become a god.
 
