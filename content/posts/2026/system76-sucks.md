@@ -129,4 +129,4 @@ So the simple advice is this: if you want a stable Linux desktop today, skip Pop
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "MwZq2_J_lSY" >}}
