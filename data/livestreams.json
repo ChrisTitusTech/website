@@ -1,13 +1,13 @@
 {
-  "updated": "2026-04-21T18:33:00Z",
+  "updated": "2026-04-22T00:52:18Z",
   "items": [
     {
       "videoId": "iswmQsA2zf8",
-      "title": "🔴 WinUtil Updates and Project Forecasts",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "🔴 WinUtil Updates, Windows Services Audit & New Tools Added",
+      "description": "WinUtil is getting cleaned up! Today we audit Windows services, review community PRs, fix the RDP warning bug, test the Windows 11 ISO key validation issue, add new tools to WinUtil, and push a brand new stable release. Plus hot takes on NTFS drivers, SteamOS, Brave Origin browser, and why Microsoft probably can't make a good product anymore even if they tried.\n\n🔧 WinUtil: https://github.com/ChrisTitusTech/winutil\n\nTopics covered: Windows services audit, Brave Origin browser, NTFS & SteamOS reality check, RDP warning registry fix, Danger Zone PDF sanitizer, IrfanView, Blur Auto Clicker, Win11 ISO key bug testing, local AI thoughts, and 7TV emote setup.\n\n00:00 Intro & Project Overload\n10:00 NTFS, SteamOS & Brave Origin\n25:00 NeoVim Git Disaster Live\n35:00 Windows Services Deep Audit\n1:05:00 WinUtil PR Reviews\n1:25:00 RDP Fix & New Tools Added\n1:55:00 ISO Testing & Key Bug Hunt\n2:15:00 Local AI & Stable Release\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-04-21T18:10:31Z",
       "date": "April 21, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/iswmQsA2zf8/mqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/iswmQsA2zf8/mqdefault.jpg",
       "twitchVodId": "2753685818",
       "hasChatReplay": false
     },
