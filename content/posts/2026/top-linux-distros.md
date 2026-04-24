@@ -17,6 +17,8 @@ The Linux distros don't particulary matter if you know what your are doing in Li
 
 ## Bazzite (The Noob Gamer's Choice or HTPC)
 
+![bazzite](/images/2026/bazzite.webp)
+
 If you have ask, What distro should I use? Bazzite is a great answer if you are a gamer. It is consider an "Atomic" desktop where you can't change the system packages, but you can configure them. This is a perfect jumping off point for new Linux users who want to get into gaming on Linux. Bazzite has a large library of games available through its own store, and it also supports Steam and other popular gaming platforms.
 
 Unique commands and features of Bazzite:
@@ -29,6 +31,8 @@ Unique commands and features of Bazzite:
 
 ## CachyOS (The Power User's Choice)
 
+![cachyos](/images/2026/cachyos.webp)
+
 CachyOS is a great choice for power users who want a stable and customizable operating system. It is based on Arch Linux and comes with a lot of pre-installed software and tools for power users. CachyOS is designed to be fast and efficient, and it has a large community of users who contribute to its development. This distro is perfect for users who want to have complete control over their system and are willing to put in the effort to learn how to use it. If you want to tinker and be on the bleeding edge, CachyOS is a great choice.
 
 Unique features of CachyOS:
@@ -37,6 +41,8 @@ Unique features of CachyOS:
 - Optimized kernel and packages for modern PCs. (Bazzites kernels is heavily based off CachyOS) _Note: I personally use cachy repos on Arch because of this!_
 
 ## Linux Mint (The Old Man I just want it to work Choice)
+
+![mint](/images/2026/mint.webp)
 
 Linux Mint is a great choice for users who just want a stable and user-friendly operating system. It is based on Ubuntu and comes with a lot of pre-installed software and tools for everyday use. Linux Mint has a large community of users who contribute to its development, and it is known for its ease of use and stability. This distro is perfect for users who want a simple and reliable operating system that just works without needing to tinker with it.
 
@@ -57,4 +63,4 @@ Picking a distro is simply a starting spot, and you can change it to your needs.
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "hnNjFysodRo" >}}
