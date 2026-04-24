@@ -1,14 +1,14 @@
 ---
 title: "Top Linux Distros"
 
-date: 2026-03-10
+date: 2026-04-23
 url: /top-linux-distros/
 image: images/2026-thumbs/top-linux-distros.webp
 categories:
   - Linux
 tags:
   - Ubuntu
-draft: true
+draft: false
 ---
 Linux is not for everyone, but for those that want to get away from the evil corporate overloads like Microsoft and Apple, Linux is a great choice. There are many different Linux distributions (distros) to choose from, each with its own unique features and benefits. In this article, we will take a look at some of the top Linux distros available in 2026.
 <!--more-->
