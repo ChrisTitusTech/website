@@ -9,7 +9,7 @@ categories:
   - Networking
 tags:
   - NFS
-draft: true
+draft: false
 ---
 Most people mount NFS shares with a short line and move on. That works, but if you use network storage heavily (media libraries, VMs, homelab backups, project files), your mount options directly affect reliability, boot behavior, and performance.
 
