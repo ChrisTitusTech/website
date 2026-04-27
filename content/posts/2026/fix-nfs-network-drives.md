@@ -201,7 +201,3 @@ nas:/data /mnt/data nfs defaults,_netdev,nofail 0 0
 If you want stronger control over reliability and behavior under failures, your advanced line is a strong baseline, especially with `hard`, `nofail`, and `x-systemd.automount`.
 
 The best NFS config is not the longest one. It is the one you can explain, verify, and maintain.
-
-## Walkthrough Video
-
-{{< youtube "WVQ_2hN_zzs" >}}
