@@ -106,10 +106,14 @@ url = "downloads/"
 name = "Downloads"
 [[menu.main]]
 weight = 3
+url = "https://forum.christitus.com/"
+name = "Forums"
+[[menu.main]]
+weight = 4
 url = "live-streams/"
 name = "Live Streams"
 [[menu.main]]
-weight = 4
+weight = 5
 url = "newsletter/"
 name = "Newsletter"
 [[menu.main]]
