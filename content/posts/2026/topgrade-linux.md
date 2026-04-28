@@ -1,7 +1,7 @@
 ---
 title: "Topgrade Linux"
 
-date: 2026-04-29
+date: 2026-04-28
 url: /topgrade-linux/
 image: images/2026-thumbs/topgrade-linux.webp
 categories:
@@ -9,7 +9,7 @@ categories:
 tags:
   - topgrade
   - updates
-draft: true
+draft: false
 ---
 Most Linux users only run their package manager and call it a day. That updates your system packages, but it often leaves the rest of your machine in a partially updated state. If you use `pip`, `cargo`, `flatpak`, `snap`, `brew`, `oh-my-zsh`, VS Code extensions, or even dotfile repos, those pieces can all drift out of date separately.
 
@@ -363,4 +363,4 @@ Use it weekly, keep backups, and stop letting half your toolchain lag behind.
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "YuozYQ6kILg" >}}
