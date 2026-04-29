@@ -1,7 +1,7 @@
 ---
 title: "Brave Origin: The Browser Brave Power Users Have Been Asking For"
 
-date: 2026-04-22
+date: 2026-04-29
 url: /brave-origin-new-browser/
 image: images/2026-thumbs/brave-origin-new-browser.webp
 categories:
@@ -10,7 +10,7 @@ categories:
 tags:
   - Brave Browser
   - Privacy
-draft: true
+draft: false
 ---
 Brave Origin is Brave stripped back to what most of us actually want: fast browsing, strong privacy, and aggressive blocking. If you have ever opened a browser and thought, "Why is there a crypto wallet button, rewards UI, and extra services I never asked for?" this is the answer.
 <!--more-->
@@ -150,4 +150,4 @@ Yes. Brave documents a downgrade path using their flag toggle and relaunch.
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "7VTWbFqySxg" >}}
