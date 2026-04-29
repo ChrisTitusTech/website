@@ -1,13 +1,13 @@
 {
-  "updated": "2026-04-28T18:41:53Z",
+  "updated": "2026-04-29T01:01:32Z",
   "items": [
     {
       "videoId": "UUaRvKl3-GU",
-      "title": "🔴 Win1Shot - PRs - Projects",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "🔴 WinOneShot Dev Stream: Intel Arc B70 Local LLM, Brave Debloat PR & NuGet Dependency Hell",
+      "description": "In today's stream we're back on WinOneShot — scaffolding the app, wrestling with Visual Studio NuGet sources, and trying (and mostly failing) to get a slick WinUI 3 acrylic background going. Along the way: an honest review of the Intel Arc B70 for local LLMs and video editing, a new Brave debloat PR with extra telemetry removal, and a live demo of a local Gemma 4 model hallucinating its way through WinUtil source code.\n\n🔗 WinUtil: https://github.com/ChrisTitusTech/winutil\n🔗 NeoVim config: https://github.com/christitustech/neovim\n🔗 Craft Computing Intel B70 video: https://youtu.be/ (see chat)\n🔗 Self-hosted search (SearXNG): https://docs.searxng.org/\n\n⏱️ CHAPTERS\n\n00:00 Intro & stream plans\n01:20 Studio & camera gear\n02:45 Pi 800 DTB rebuild\n04:25 Building DTB with LLMs\n05:46 Brave Origin review\n06:34 Linux distros don't matter\n07:45 Helium browser 2FA issue\n09:39 WinUtil stable release\n10:56 Local LLM live demo\n13:47 Local vs premium models\n17:18 Claude hallucinates wildly\n19:21 B70 crushes Resolve encoding\n20:09 Switching AMD to Intel\n22:19 Real edge removal code\n33:10 NeoVim 0.12 is great\n34:46 Windows dev environment setup\n43:45 Fixing NuGet sources\n47:37 Intel B70 SRIOV explained\n51:25 llama.cpp vs Ollama\n54:47 WinOneShot runs finally\n57:43 Brave Origin on Linux\n59:45 Updating all packages\n1:15:03 WinOneShot XAML errors\n1:17:55 UI redesign begins\n1:19:47 AI GUI vibe attempt\n1:28:08 Stitch mockup tool\n1:37:48 Codex redesign fails\n1:42:45 WinUI 3 acrylic hunt\n1:45:51 Caleb's community project\n1:48:05 WPF vs WinUI 3\n1:50:36 Acrylic background saga\n2:09:06 Windows 3.11 story\n2:25:00 Microsoft docs to rescue\n2:32:31 Brave debloat expansion\n2:50:34 Opera GX sponsor rant\n2:52:20 Slim Brave script review\n3:13:09 Brave debloat PR merged\n3:27:19 Self-hosting overview\n3:34:06 Self-hosting email idea\n3:40:15 No more sponsors\n3:43:30 Free VPN with WARP\n3:46:07 SearXNG as default\n3:52:08 Stream wrap-up\n\n#WinOneShot #IntelArcB70 #LocalLLM #Linux #WinUtil #OpenSource #DaVinciResolve #SRIOV #NeoVim #SelfHosted\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-04-28T16:26:02Z",
       "date": "April 28, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/UUaRvKl3-GU/mqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/UUaRvKl3-GU/mqdefault.jpg",
       "twitchVodId": "2759197823",
       "hasChatReplay": false
     },
