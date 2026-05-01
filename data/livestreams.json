@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-30T18:39:57Z",
+  "updated": "2026-05-01T07:06:05Z",
   "items": [
     {
       "videoId": "0C_R_e2LbB0",
-      "title": "🔴 Linux Utility - Resolve Easy Setup and other fixes",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "🔴 I Ran Windows Apps Inside Linux (Without A VM Window)",
+      "description": "I tried to get Windows apps running natively inside my Linux DWM setup using WinApps, free RDP, and PCI passthrough — and it actually worked (mostly). Also: Brave debloat PRs, WinUtil cleanup, a cheap $15 controller recommendation, and the usual chaos.\n\n🔴 Live every Tuesday — Linux, Windows, open source projects & shenanigans.\n\n📁 WinUtil: https://github.com/ChrisTitusTech/winutil\n🐧 LinUtil: https://linutil.chrisitus.com\n💬 Community: https://forum.christitus.com\n\n— Chapters below —\n0:00 Stream intro\n1:31 $15 controller review\n6:26 Streaming income reality\n9:01 YouTube earnings revealed\n14:08 Linux kernel exploit\n17:14 Physical security talk\n22:18 WinUtil PRs begin\n38:04 Viewer projects forum\n43:10 Mango vs Hyperland\n48:26 DWM is king\n49:13 Mac vs Windows vs Linux\n1:11:54 WinApps setup begins\n1:26:54 VM boots up\n1:43:28 RDP testing\n2:10:10 WinUtil in Linux!\n2:22:02 VS Code via RDP\n2:23:39 Back to PRs\n2:43:20 Install cleanup PR\n3:17:44 Scheduled task cleanup\n3:30:49 Gabby deletes branch\n3:34:08 AI saves the day\n4:00:50 LinUtil docs fix\n4:14:28 Stream wrap-up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-04-30T16:08:38Z",
       "date": "April 30, 2026",
       "thumbnail": "https://i.ytimg.com/vi/0C_R_e2LbB0/mqdefault.jpg",
