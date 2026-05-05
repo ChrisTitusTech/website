@@ -1,7 +1,7 @@
 ---
 title: "Neovim the Elite Editor"
 
-date: 2026-05-06
+date: 2026-05-05
 url: /neovim-the-elite-editor/
 image: images/2026-thumbs/neovim-the-elite-editor.webp
 categories:
@@ -169,4 +169,4 @@ The official Project is at <https://github.com/ChrisTitusTech/neovim> and the RE
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "NYSYiiqk8SY" >}}
