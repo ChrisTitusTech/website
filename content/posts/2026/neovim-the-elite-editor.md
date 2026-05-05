@@ -20,6 +20,8 @@ Most editors today are bloated, slow, and pretending to be IDEs while burning yo
 This is the no-BS breakdown of what changed in my Neovim setup, why I removed the old pieces, and what actually matters in daily use.
 <!--more-->
 
+![neovim](/images/2026/neovim.webp)
+
 ## What Changed in the 0.12 Upgrade
 
 The big architectural change was ripping out the old plugin flow and moving to Neovim's native package path:
@@ -60,6 +62,8 @@ The result is opinionated, fast, and resilient.
 - Project switching
 - Diagnostics search
 - Explorer tree + status column enhancements
+
+![explorer-snacks](/images/2026/explorer-snacks.webp)
 
 If you bounce between repos all day, this is a massive quality-of-life upgrade.
 
