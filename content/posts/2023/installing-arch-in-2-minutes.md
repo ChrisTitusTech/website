@@ -15,8 +15,10 @@ You can install Arch Linux in 120 seconds with my script.
 
 ## One Line Command
 
+**2026 Update: ArchTitus has moved to Linutil project launch linutil -> System Settings -> Arch -> Server Setup**
+
 ```
-bash <(curl -L christitus.com/archtitus)
+curl -fsSL christitus.com/linux | sh
 ```
 
 ## The Evolution of ArchTitus
