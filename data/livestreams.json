@@ -12,16 +12,6 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "oHoBJp3ZTEc",
-      "title": "🔴 LTT Labs Linux Article (rough...) and other developments",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
-      "publishedAt": "2026-05-07T17:32:07Z",
-      "date": "May 07, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/oHoBJp3ZTEc/mqdefault.jpg",
-      "twitchVodId": "2766422433",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "8m28RrT6IQs",
       "title": "🔴 GitHub Is Breaking Everything — So I Self-Host All The Things (LinUtil PRs + Gitea Mirror Setup)",
       "description": "GitHub keeps going down, so I set up a Gitea mirror to keep LinUtil available 24/7. We also blast through a big stack of LinUtil and WinUtil PRs live, review a massive app cleanup PR, and I share my fix for getting DaVinci Resolve working on Arch Linux.\n\n🔗 theLinuxBook.com — free Linux desktop guide\n🔗 forum.christitus.com — community forums\n\n⏱ CHAPTERS\n\n0:00 GitHub reliability rant\n1:16 Self-hosting everything\n3:10 Copyfail exploit hype\n7:27 Gitea vs Forgejo\n10:15 Mac utility / Aerospace\n17:35 Forum & Discord bridge\n25:00 LinUtil PR review\n32:44 WinUtil app cleanup\n44:33 Calibre & e-readers\n52:33 Retro gaming & achievements\n58:31 Rust code & cargo build\n1:03:00 DaVinci Resolve on Linux\n1:31:49 Site stats flex\n1:39:23 Going full Neovim CLI\n2:01:22 All dependencies updated\n2:39:58 Linux book announcement\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
