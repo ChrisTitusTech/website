@@ -123,6 +123,18 @@ def main() -> None:
         except (json.JSONDecodeError, OSError):
             pass
 
+    # Deduplicate by videoId, preserving first occurrence (playlist order)
+    seen_ids: set[str] = set()
+    unique_items: list[dict] = []
+    for item in items:
+        vid = item["videoId"]
+        if vid not in seen_ids:
+            seen_ids.add(vid)
+            unique_items.append(item)
+    if len(unique_items) < len(items):
+        print(f"Removed {len(items) - len(unique_items)} duplicate video(s).")
+    items = unique_items
+
     # Set twitchVodId and hasChatReplay
     CHATS_DIR.mkdir(parents=True, exist_ok=True)
     for item in items:

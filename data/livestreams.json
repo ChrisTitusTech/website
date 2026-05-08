@@ -252,31 +252,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "xD8hYcRZR5g",
-      "title": "🔴 I Tried MangoWC (The New Wayland Window Manager) - First Impressions & Setup",
-      "description": "In this stream, I dive into MangoWC, the new lightweight Wayland window manager that's been getting a lot of buzz. We go through installation, configuration, troubleshooting, and my honest first impressions.\n\n🔴 Highlights:\n\n- GitHub automation and repository protection setup\n- MangoWC installation and dependencies walkthrough\n- System maintenance with Topgrade\n- Epic $500 accidental donation moment\n- Fixing screen dimming issues with WL-Sunset\n- Waybar configuration and customization\n- Why I'm planning to try a more minimal setup next time\n\n💻 Topics Covered:\n\n- Window manager configuration\n- AUR package management\n- Code signing and antivirus discussion\n- WinUtil documentation updates\n- Open source maintenance philosophy\n- GOG vs Steam and game ownership\n\n🔗 Links mentioned in stream available in comments\n\n#Linux #MangoWC #Wayland #WindowManager #OpenSource\n\n**00:00:00** Stream intro and GitHub automation plans\n**00:00:26** Adding repository rule sets and protections\n**00:01:59** MangoWC window manager first impressions\n**00:06:16** Installation dependencies and AUR packages\n**00:10:19** System update and package cleanup\n**00:13:52** SkySilk sponsorship story and free VPS\n**00:20:30** Topgrade configuration file setup complete\n**00:26:20** MangoWC initial launch and configuration\n**00:53:00** Antivirus and code signing discussion\n**00:54:47** $500 accidental donation moment shocked\n**00:56:39** WinUtil documentation merge and updates\n**01:10:06** MangoWC first boot attempt fails\n**01:16:16** Troubleshooting display manager and sessions\n**01:19:08** MangoWC successfully launches from TTY\n**01:26:20** Removing WL-Sunset fixes screen dimming\n**01:29:57** Configuring Waybar and pull kit\n**01:51:29** MangoWC impressions: too bloated currently\n**01:56:18** Code cleanup and maintenance philosophy\n**02:06:13** RAM prices and LLM progress\n**02:08:07** GOG vs Steam DRM discussion\n**02:11:00** Stream wrap-up and future plans\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/xD8hYcRZR5g/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "6tJ_Ca4a4no",
       "title": "🔴 Windows Utility Regression Testing & Updates",
       "description": "Testing and fixing critical regressions in WinUtil after discovering service count issues. Successfully merged important PRs including improved Edge removal, OneDrive cleanup, and SVC host split fixes.\nKey Updates:\n\nFixed service count regression (was 117, now 87 processes)\nNew Edge removal method (clean 3-line implementation)\nOneDrive removal improvements\nUTC/RTC registry fixes for dual-boot systems\nPre-release available now, stable release Thursday\n\nWinter Storm Edition - Streaming from the garage studio during Texas ice storm. Discussed Microsoft's recent outages, security issues, and growing tech debt problems.\nPre-Release Command:\nirm christitus.com/windev | iex\nLinks:\n\nWinUtil: https://github.com/ChrisTitusTech/winutil\nDocumentation: https://christitus.com/windows-tool/\n\n#Windows #WinUtil #TechDebt #Microsoft #PowerShell\n\nHere's the corrected timestamp list:\n\n**00:00:00** - Winter storm Texas, garage studio setup\n**00:25:56** - Microsoft outages and issues discussion\n**00:56:18** - Beginning regression testing, old vs new\n**01:00:02** - Service count regression found, major problem\n**01:31:47** - Gabby's SVC host fix works perfectly\n**01:54:06** - Clean Edge removal, only 3 lines\n**02:02:48** - Microsoft tech debt rant begins\n**02:12:06** - Pre-release version pushed to GitHub\n**02:27:00** - Reviewing issues, Razer hardware criticism\n**02:34:50** - Gamer supplements warning, avoid overpriced products\n**02:38:28** - Certificate authority changes, secure boot discussion\n**02:46:51** - Secure boot warning, critical don't disable\n**02:49:46** - Guillotine school project for daughter\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2026-01-27T17:11:56Z",
       "date": "January 27, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/6tJ_Ca4a4no/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "6tJ_Ca4a4no",
-      "title": "🔴 Windows Utility Regression Testing & Updates",
-      "description": "Testing and fixing critical regressions in WinUtil after discovering service count issues. Successfully merged important PRs including improved Edge removal, OneDrive cleanup, and SVC host split fixes.\nKey Updates:\n\nFixed service count regression (was 117, now 87 processes)\nNew Edge removal method (clean 3-line implementation)\nOneDrive removal improvements\nUTC/RTC registry fixes for dual-boot systems\nPre-release available now, stable release Thursday\n\nWinter Storm Edition - Streaming from the garage studio during Texas ice storm. Discussed Microsoft's recent outages, security issues, and growing tech debt problems.\nPre-Release Command:\nirm christitus.com/windev | iex\nLinks:\n\nWinUtil: https://github.com/ChrisTitusTech/winutil\nDocumentation: https://christitus.com/windows-tool/\n\n#Windows #WinUtil #TechDebt #Microsoft #PowerShell\n\nHere's the corrected timestamp list:\n\n**00:00:00** - Winter storm Texas, garage studio setup\n**00:25:56** - Microsoft outages and issues discussion\n**00:56:18** - Beginning regression testing, old vs new\n**01:00:02** - Service count regression found, major problem\n**01:31:47** - Gabby's SVC host fix works perfectly\n**01:54:06** - Clean Edge removal, only 3 lines\n**02:02:48** - Microsoft tech debt rant begins\n**02:12:06** - Pre-release version pushed to GitHub\n**02:27:00** - Reviewing issues, Razer hardware criticism\n**02:34:50** - Gamer supplements warning, avoid overpriced products\n**02:38:28** - Certificate authority changes, secure boot discussion\n**02:46:51** - Secure boot warning, critical don't disable\n**02:49:46** - Guillotine school project for daughter\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/6tJ_Ca4a4no/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -292,31 +272,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "3kfURnSF084",
-      "title": "🔴 Linux Utility - New TUI Look!",
-      "description": "Live stream working on Linutil 2E Revamp Edition release. Fixing Windows boot entry issues, reviewing pull requests for game emulators and UI improvements, and spending way too long automating a GitHub preview GIF. Also covered: old Google search tricks, Android debloating, AI article workflows, and why farming runs in the family.\n\nTimestamps:\n00:00:00 Intro\n00:04:27 Windows erased Linux boot entry\n00:09:02 Demonstrating EFI boot manager commands\n00:12:25 Creating \"Titus Ultimate OS\" entry\n00:16:26 Deleting all BIOS entries experiment\n00:22:48 Wife brings breakfast with smiley\n00:25:20 Old Google search setup tutorial\n00:36:41 Brother printers still recommended\n00:38:46 Reviewing game emulators pull request\n01:01:20 Universal Android Debloater 1.2 update\n01:05:40 AI workflow for article generation\n01:19:47 Beautiful new Linutil TUI design\n01:26:30 Testing new interface in TTY\n02:02:25 Releasing Linutil 2E Revamp Edition\n02:32:26 GitHub Actions preview generation struggle\n03:39:54 Giving up, doing preview locally\n04:14:42 Two hours making one GIF file\n04:18:31 Farming family background story\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/3kfURnSF084/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "uyQHrXHsXzM",
       "title": "🔴 Linux Journey and MicroWin Update",
       "description": "# Stream Highlights\n00:00:00 Cold garage stream start\n00:07:48 Windows Server 2008 R2 sunset\n00:30:09 Linux journey video planning\n01:05:15 First year Linux challenges\n01:18:35 Steam gaming evolution shown\n01:26:06 628-day Arch uptime revealed\n01:35:19 YouTube video recording begins\n01:40:47 MicroWin update testing starts\n01:48:15 Call of Duty graphics comparison\n02:08:20 Copilot GitHub integration praise\n02:12:48 Virtual machine installation process\n02:18:02 YouTube monetization discussion\n02:22:48 Intel ME security concerns\n03:00:01 Distro recommendations for beginners\n03:18:22 CoreBoot vs standard BIOS\n03:31:40 VPN honeypot theory discussion\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2026-01-15T18:04:53Z",
       "date": "January 15, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/uyQHrXHsXzM/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "uyQHrXHsXzM",
-      "title": "🔴 Linux Journey and MicroWin Update",
-      "description": "# Stream Highlights\n00:00:00 Cold garage stream start\n00:07:48 Windows Server 2008 R2 sunset\n00:30:09 Linux journey video planning\n01:05:15 First year Linux challenges\n01:18:35 Steam gaming evolution shown\n01:26:06 628-day Arch uptime revealed\n01:35:19 YouTube video recording begins\n01:40:47 MicroWin update testing starts\n01:48:15 Call of Duty graphics comparison\n02:08:20 Copilot GitHub integration praise\n02:12:48 Virtual machine installation process\n02:18:02 YouTube monetization discussion\n02:22:48 Intel ME security concerns\n03:00:01 Distro recommendations for beginners\n03:18:22 CoreBoot vs standard BIOS\n03:31:40 VPN honeypot theory discussion\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/uyQHrXHsXzM/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -332,31 +292,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "CdL1P7BHLHg",
-      "title": "🔴 WinUtil EXE Revamp",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/CdL1P7BHLHg/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "N5CUgO3-UIo",
       "title": "🔴 Building a GUI",
       "description": "Key Moments:\n**00:00:00** - Friday stream productivity catalyst\n**00:00:23** - Converting WinOneShot to GUI application\n**00:00:50** - Expanding beyond \"OneShot\" name limitations\n**00:01:16** - Night owl productivity windows explained\n**00:02:30** - WinGet UI inspiration and features\n**00:06:49** - Linux community advice problems discussed\n**00:11:06** - LibreOffice vs OnlyOffice debate begins\n**00:13:24** - Windows ISO editions explained simply\n**00:15:28** - Never do software subscriptions policy\n**00:19:12** - QuickBooks yearly version scam critique\n**00:25:21** - LLMs stole internet content successfully\n**00:26:41** - Adding four-page tab system\n**00:38:10** - AI can't perfect GUI polish\n**00:42:34** - Dark mode detection implementation struggles\n**01:03:13** - \"Skill issue\" Linux comment roasted\n**01:07:05** - Four stages of mastery explained\n**01:11:39** - Self-healing computers reading Event Viewer\n**01:22:22** - Theme directories debugging nightmare begins\n**01:27:11** - Still using .NET Framework 4?\n**01:34:30** - .NET Framework rebrand confusion clarified\n**01:38:14** - Windows Insider permanently traps you\n**01:44:24** - Upgrading to .NET 10 process\n**02:04:03** - Hot reload compatibility issues emerge\n**02:32:38** - Downgrading back to .NET 8\n**03:10:28** - Power plan duplication bug discovered\n**03:18:52** - AI minion deletes duplicate profiles\n**03:21:31** - Never underestimate people's stupidity truth\n**03:26:43** - Wrapping up Friday surprise stream\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2026-01-09T17:29:33Z",
       "date": "January 09, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/N5CUgO3-UIo/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "N5CUgO3-UIo",
-      "title": "🔴 Building a GUI",
-      "description": "Key Moments:\n**00:00:00** - Friday stream productivity catalyst\n**00:00:23** - Converting WinOneShot to GUI application\n**00:00:50** - Expanding beyond \"OneShot\" name limitations\n**00:01:16** - Night owl productivity windows explained\n**00:02:30** - WinGet UI inspiration and features\n**00:06:49** - Linux community advice problems discussed\n**00:11:06** - LibreOffice vs OnlyOffice debate begins\n**00:13:24** - Windows ISO editions explained simply\n**00:15:28** - Never do software subscriptions policy\n**00:19:12** - QuickBooks yearly version scam critique\n**00:25:21** - LLMs stole internet content successfully\n**00:26:41** - Adding four-page tab system\n**00:38:10** - AI can't perfect GUI polish\n**00:42:34** - Dark mode detection implementation struggles\n**01:03:13** - \"Skill issue\" Linux comment roasted\n**01:07:05** - Four stages of mastery explained\n**01:11:39** - Self-healing computers reading Event Viewer\n**01:22:22** - Theme directories debugging nightmare begins\n**01:27:11** - Still using .NET Framework 4?\n**01:34:30** - .NET Framework rebrand confusion clarified\n**01:38:14** - Windows Insider permanently traps you\n**01:44:24** - Upgrading to .NET 10 process\n**02:04:03** - Hot reload compatibility issues emerge\n**02:32:38** - Downgrading back to .NET 8\n**03:10:28** - Power plan duplication bug discovered\n**03:18:52** - AI minion deletes duplicate profiles\n**03:21:31** - Never underestimate people's stupidity truth\n**03:26:43** - Wrapping up Friday surprise stream\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/N5CUgO3-UIo/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -372,31 +312,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "F3QAoU9IzFk",
-      "title": "🔴 Publishing new WinUtil and WinOneShot",
-      "description": "Key Moments:\n**00:00** Stream intro and planning\n**00:48** WinUtil tweaks and WinOneShot intro\n**04:33** Being terrible in mornings\n**08:46** YouTube ban system explanation\n**14:07** Twitch vs YouTube earnings breakdown\n**20:28** Testing poll request updates\n**24:50** WinOneShot demo showing speed\n**38:43** Windows Update disable testing\n**55:15** MicroWin ISO creation starts\n**1:03:03** Debloat tweaks and cleanup\n**1:14:19** Windows ISO bloat discussion\n**1:31:29** AI usage and programming talk\n**1:46:05** Linux distro philosophy explained\n**2:02:52** Linus breaking Pop OS\n**2:14:56** MicroWin VM boot test\n**2:28:24** Chocolatey PR review merging\n**2:53:06** WinUtil dev release created\n**3:00:18** WinOneShot GitHub release success\n**3:36:28** American fast food rant\n**3:45:46** Stream ending and goodbye\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/F3QAoU9IzFk/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "h289E4lPFVs",
       "title": "🔴 WinOneShot F# Rewrite",
       "description": "Key Moments:\n**00:00:00** Dental appointment affects speech temporarily\n**00:09:03** Starting WinOneShot F# rewrite project\n**00:16:26** Package removal not working properly\n**00:30:27** Cleaning up unused libraries/references\n**00:50:26** Converting C# project to F#\n**01:06:02** F# conversion complete, testing failures\n**01:11:15** Fixing JSON deserialization issues\n**01:14:30** AppX package removal finally working\n**02:06:02** Direct .NET library speeds up removals\n**02:25:14** AppX removal working incredibly fast\n**03:03:29** Merging F# conversion to main\n**03:08:00** Converting WPF to Avalonia UI\n**03:41:22** Opening Visual Studio to fix issues\n**03:56:21** Simplifying window creation from scratch\n**04:06:43** Avalonia GUI miraculously displays correctly\n**04:19:08** Final working product demonstration\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2026-01-07T04:16:31Z",
       "date": "January 07, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/h289E4lPFVs/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "h289E4lPFVs",
-      "title": "🔴 WinOneShot F# Rewrite",
-      "description": "Key Moments:\n**00:00:00** Dental appointment affects speech temporarily\n**00:09:03** Starting WinOneShot F# rewrite project\n**00:16:26** Package removal not working properly\n**00:30:27** Cleaning up unused libraries/references\n**00:50:26** Converting C# project to F#\n**01:06:02** F# conversion complete, testing failures\n**01:11:15** Fixing JSON deserialization issues\n**01:14:30** AppX package removal finally working\n**02:06:02** Direct .NET library speeds up removals\n**02:25:14** AppX removal working incredibly fast\n**03:03:29** Merging F# conversion to main\n**03:08:00** Converting WPF to Avalonia UI\n**03:41:22** Opening Visual Studio to fix issues\n**03:56:21** Simplifying window creation from scratch\n**04:06:43** Avalonia GUI miraculously displays correctly\n**04:19:08** Final working product demonstration\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/h289E4lPFVs/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -412,31 +332,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "iih8kLYXMLA",
-      "title": "🔴 Winutil update for 2026",
-      "description": "# Winutil 2026 Update - Stream Highlights\n\n**00:00:00** - Holiday break recap and returns\n**00:02:13** - Windows vs Linux content evolution\n**00:06:26** - Linux distributions reality check explained\n**00:12:28** - DaVinci Resolve Linux limitations discussed\n**00:18:30** - Windows bloat and process optimization\n**00:27:03** - Fresh Windows install benchmark begins\n**00:31:04** - Microsoft's competence issues analyzed\n**00:35:57** - RAM prices rising concerns\n**00:46:09** - How Winutil makes money\n**01:14:10** - Fitness competition results shared\n**01:27:13** - Windows update takes over hour\n**01:40:07** - Winget package manager best practices\n**01:47:16** - PowerShell runspaces black magic\n**02:03:16** - Making money from free tools\n**02:15:42** - Process count reduced to 120\n**02:20:19** - Remove Windows AI tool review\n**02:46:16** - Legacy boot vs UEFI debate\n**02:56:25** - AI copyright theft discussion\n**03:12:31** - One PR merged after hours\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/iih8kLYXMLA/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "DnTNOPs5PKw",
       "title": "🔴 LinUtil Universal Steam Script",
       "description": "Key Moments:\n00:00 - Modding games on Linux discussion\n00:33 - Universal Steam script project begins\n01:44 - Arc Raiders optimization mod walkthrough\n07:14 - Gaming ban stories and confessions\n12:14 - LinUtil development update discussion\n18:20 - Why DWM over other managers\n29:20 - 600 days Arch uptime showcase\n35:05 - Linux desktop philosophy explained\n40:17 - Zorn OS tier list controversy\n45:39 - Distribution complexity myth debunked\n52:23 - Gaming peripherals Linux compatibility issues\n58:28 - Arc Raiders mod script testing\n1:09:13 - Browser security and privacy debate\n1:19:12 - Script compilation and GitHub push\n1:28:29 - Live Arch system update begins\n1:38:42 - Switching to CachyOS repositories experiment\n2:18:49 - Browser choice analysis continues\n2:58:27 - Opera predatory loans scandal exposed\n3:22:47 - Risky CachyOS repo migration starts\n3:33:18 - System survives major package replacement\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-12-18T17:59:17Z",
       "date": "December 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/DnTNOPs5PKw/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "DnTNOPs5PKw",
-      "title": "🔴 LinUtil Universal Steam Script",
-      "description": "Key Moments:\n00:00 - Modding games on Linux discussion\n00:33 - Universal Steam script project begins\n01:44 - Arc Raiders optimization mod walkthrough\n07:14 - Gaming ban stories and confessions\n12:14 - LinUtil development update discussion\n18:20 - Why DWM over other managers\n29:20 - 600 days Arch uptime showcase\n35:05 - Linux desktop philosophy explained\n40:17 - Zorn OS tier list controversy\n45:39 - Distribution complexity myth debunked\n52:23 - Gaming peripherals Linux compatibility issues\n58:28 - Arc Raiders mod script testing\n1:09:13 - Browser security and privacy debate\n1:19:12 - Script compilation and GitHub push\n1:28:29 - Live Arch system update begins\n1:38:42 - Switching to CachyOS repositories experiment\n2:18:49 - Browser choice analysis continues\n2:58:27 - Opera predatory loans scandal exposed\n3:22:47 - Risky CachyOS repo migration starts\n3:33:18 - System survives major package replacement\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/DnTNOPs5PKw/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -452,31 +352,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "Ka-h0qI4EFA",
-      "title": "🔴 Linux Dev - Tier List",
-      "description": "Key Moments:\n00:00:00 Stream technical difficulties & updates\n00:06:22 Linux gaming compatibility discussion\n00:17:11 BIOS spyware & CoreBoot alternatives\n00:25:25 IoT devices privacy concerns\n00:28:01 Windows LTSC gaming recommendations\n00:33:46 Email self-hosting & privacy options\n00:42:24 DWM window manager development\n00:59:26 Patching DWM with git commits\n01:22:47 GitHub release workflow setup\n01:53:06 Bill Gates background image creation\n02:06:30 Microsoft AI parody video planning\n02:12:37 Linux distribution tier list begins\n02:42:36 Security distros roasted (Kali/Parrot)\n02:56:29 Corporate distros controversy (Red Hat)\n03:07:49 Programming languages tier list starts\n03:14:53 PowerShell rated S-tier (controversial)\n03:22:05 F# crowned best language ever\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/Ka-h0qI4EFA/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "HQxIqlogrZg",
       "title": "🔴 Project Development Stream - Managing 85+ GitHub Repos",
       "description": "Key Moments:\n00:00:00 Intro\n00:01:04 DWM development discussion begins\n00:08:24 Arch Linux stability praise\n00:10:15 AUR package management tips\n00:13:47 Chaotic AUR repository recommendation\n00:18:51 App image management tutorial\n00:22:28 DWM binary size showcase\n00:25:03 Wayland vs X11 debate\n01:04:50 WinUtil PR review starts\n01:11:25 Edge uninstall tweak testing\n01:18:52 Windows Update disable logic\n01:27:02 Group policy security settings\n01:34:27 Edge uninstallable tweak approved\n01:57:08 Java version discussion\n02:02:59 IPv6 disable debate\n02:09:03 Dropbox security breach history\n02:15:51 WPBT execution vulnerability warning\n02:18:26 Storage sense tweak changes\n02:34:08 Stream wrap-up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-12-11T16:29:08Z",
       "date": "December 11, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/HQxIqlogrZg/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "HQxIqlogrZg",
-      "title": "🔴 Project Development Stream - Managing 85+ GitHub Repos",
-      "description": "Key Moments:\n00:00:00 Intro\n00:01:04 DWM development discussion begins\n00:08:24 Arch Linux stability praise\n00:10:15 AUR package management tips\n00:13:47 Chaotic AUR repository recommendation\n00:18:51 App image management tutorial\n00:22:28 DWM binary size showcase\n00:25:03 Wayland vs X11 debate\n01:04:50 WinUtil PR review starts\n01:11:25 Edge uninstall tweak testing\n01:18:52 Windows Update disable logic\n01:27:02 Group policy security settings\n01:34:27 Edge uninstallable tweak approved\n01:57:08 Java version discussion\n02:02:59 IPv6 disable debate\n02:09:03 Dropbox security breach history\n02:15:51 WPBT execution vulnerability warning\n02:18:26 Storage sense tweak changes\n02:34:08 Stream wrap-up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/HQxIqlogrZg/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -492,31 +372,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "7nyDbJU3F-U",
-      "title": "🔴 Windows Xbox Interface Tweaking",
-      "description": "Key Comments:\n0:00 - Cold weather complaints begin\n1:57 - Xbox fullscreen experience setup\n3:10 - Windows 11 build installation\n8:14 - Virtual machine configuration issues\n11:42 - Windows installation process starts\n14:04 - Wizard hat removal moment\n16:05 - Xbox interface discussion begins\n19:50 - Linux support complexity explained\n26:17 - Micron RAM market concerns\n31:19 - Local account bypass attempt\n35:04 - To-do list management struggles\n39:04 - System tweaks and debloating\n42:59 - Internet Explorer monopoly memories\n46:19 - Registry documentation discussion\n50:29 - OneDrive uninstall process\n55:46 - Desktop cleanup completion\n1:02:07 - Xbox fullscreen tool activation\n1:04:38 - Update check and installation\n1:09:31 - High IQ happiness discussion\n1:12:25 - Microsoft account sign-in required\n1:17:09 - Interface process count comparison\n1:20:50 - Terrible chess game testing\n1:28:26 - Minecraft installation begins\n1:32:41 - Controller passthrough attempted\n1:38:25 - Exit method discovery\n1:43:19 - Copilot accidentally shows forks project\n1:46:12 - LTSC Windows explanation\n1:51:19 - Final thoughts on experience\n1:57:22 - Intelligence versus dedication philosophy\n2:00:22 - Stream conclusion and advice\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/7nyDbJU3F-U/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "aB578qnJovc",
       "title": "🔴 LinUtil Work",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n**0:00 - LinUtil project overview**\n**0:27 - Steam games modding plans**\n**1:49 - Language choice story**\n**4:26 - Xbox ISO build discussion**\n**5:54 - Linus Torvalds LTT interview**\n**9:15 - Programming then vs now**\n**15:08 - Windows vs Linux gaming**\n**18:33 - Steam Machine future prediction**\n**22:21 - Reviewing terrible AI PR**\n**50:54 - Reviewing good cursor PR**\n**1:06:03 - Installing desktop environments script**\n**1:14:06 - Init system preferences**\n**1:41:18 - Adobe alternatives additions**\n**1:46:25 - Game emulator draft PR**\n**2:02:25 - TOML file sorting challenge**\n**2:56:09 - Folders at top debate**\n**3:02:45 - Linux computing experience**\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-12-02T17:48:05Z",
       "date": "December 02, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/aB578qnJovc/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "aB578qnJovc",
-      "title": "🔴 LinUtil Work",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n**0:00 - LinUtil project overview**\n**0:27 - Steam games modding plans**\n**1:49 - Language choice story**\n**4:26 - Xbox ISO build discussion**\n**5:54 - Linus Torvalds LTT interview**\n**9:15 - Programming then vs now**\n**15:08 - Windows vs Linux gaming**\n**18:33 - Steam Machine future prediction**\n**22:21 - Reviewing terrible AI PR**\n**50:54 - Reviewing good cursor PR**\n**1:06:03 - Installing desktop environments script**\n**1:14:06 - Init system preferences**\n**1:41:18 - Adobe alternatives additions**\n**1:46:25 - Game emulator draft PR**\n**2:02:25 - TOML file sorting challenge**\n**2:56:09 - Folders at top debate**\n**3:02:45 - Linux computing experience**\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/aB578qnJovc/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -532,31 +392,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "geIW9DSkRVQ",
-      "title": "🔴 WinUtil December Update",
-      "description": "**WinUtil December Update - Stream Highlights**\n\n0:00:00 - Back after month-long break\n0:00:25 - Microsoft AI concerns discussion\n0:01:33 - Agentic AI implementation issues\n0:03:13 - \"Where there's will there's way\"\n0:04:10 - Valve Linux Console excitement\n0:07:00 - Time travel vacation explanation\n0:10:40 - Wayland vs X.Org preferences\n0:13:26 - BitLocker encryption problems discussed\n0:16:59 - Password manager recommendations given\n0:19:30 - Linux distro philosophy explained\n0:20:29 - WinUtil #1 PowerShell project\n0:22:56 - Tiny11 Builder recommendation made\n0:25:30 - AI usage principles outlined\n0:29:05 - 12 Pull Requests reviewed\n0:33:34 - OneDrive removal update approved\n0:40:02 - Customization preferences toggle fixed\n0:46:44 - FastStone & ScreenBox rejected\n0:55:07 - Zed editor added successfully\n0:58:28 - Service cleanup PR discussion\n1:09:10 - Get installed button broken\n1:18:00 - Git education rant begins\n1:22:08 - Original WinUtil UI shown\n1:24:09 - 583 days Arch uptime\n1:32:37 - Linus Torvalds Fedora critique\n1:38:10 - Three main distro types\n1:43:50 - Mac utility project hiatus\n1:48:35 - Microsoft career built fixing\n1:58:27 - PowerShell 5 testing complete\n2:14:34 - Xbox full-screen experience teased\n2:29:31 - Dave Plummer shareware history\n2:36:39 - $190,000 judgment details revealed\n2:39:12 - 583 day Arch showcase\n2:42:55 - Thursday Xbox experience stream\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/geIW9DSkRVQ/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "rMvrbTdC7Hg",
       "title": "🔴 Omitus - Linux Desktop Config",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n0:00:00 Introduction and Texas Weather\n0:02:20 AWS US-East1 Outage Discussion\n0:06:06 WordPress Security Rant\n0:08:00 Desktop Setup Issues\n0:12:44 Proxmox vs Windows Home Lab Story\n0:15:48 Cursor Warping Feature Discussion\n0:19:08 Reading and Modifying DWM Source Code\n0:28:00 Linux WiFi Driver Troubleshooting with LLM\n0:30:32 Linux Hardware Compatibility Reality Check\n0:31:00 Corsair and Razer Hardware Rant\n0:38:02 Win Util Feature Request Discussion\n0:40:15 Looking Glass VM Setup\n0:43:04 Removing Cursor Warping from DWM\n0:46:50 Omitus vs Omakub Philosophy\n0:52:03 Omakub Hot Keys Roast\n0:56:47 Testing Mouse Warping Removal\n1:03:10 DWM Advantages Over i3\n1:05:04 Creating New DWM Release\n1:11:07 X Screen Saver Setup\n1:12:25 Xorg vs Wayland Gaming Analogy\n1:15:41 Final Thoughts and Discord Invite\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-21T20:33:33Z",
       "date": "October 21, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/rMvrbTdC7Hg/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "rMvrbTdC7Hg",
-      "title": "🔴 Omitus - Linux Desktop Config",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n0:00:00 Introduction and Texas Weather\n0:02:20 AWS US-East1 Outage Discussion\n0:06:06 WordPress Security Rant\n0:08:00 Desktop Setup Issues\n0:12:44 Proxmox vs Windows Home Lab Story\n0:15:48 Cursor Warping Feature Discussion\n0:19:08 Reading and Modifying DWM Source Code\n0:28:00 Linux WiFi Driver Troubleshooting with LLM\n0:30:32 Linux Hardware Compatibility Reality Check\n0:31:00 Corsair and Razer Hardware Rant\n0:38:02 Win Util Feature Request Discussion\n0:40:15 Looking Glass VM Setup\n0:43:04 Removing Cursor Warping from DWM\n0:46:50 Omitus vs Omakub Philosophy\n0:52:03 Omakub Hot Keys Roast\n0:56:47 Testing Mouse Warping Removal\n1:03:10 DWM Advantages Over i3\n1:05:04 Creating New DWM Release\n1:11:07 X Screen Saver Setup\n1:12:25 Xorg vs Wayland Gaming Analogy\n1:15:41 Final Thoughts and Discord Invite\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/rMvrbTdC7Hg/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -572,31 +412,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "mvbN8-pTMk8",
-      "title": "🔴 Repair Bootloader and VFIO Passthrough Enable with Looking Glass",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n0:00:00 - Introduction\n0:02:25 - Motherboard replaced, EFI entries missing\n0:06:22 - First boot after hardware swap\n0:11:09 - Mounting partitions for bootloader repair\n0:18:49 - Successfully chrooted into system\n0:20:15 - Deleting old EFI boot entries\n0:23:23 - Testing repaired bootloader\n0:28:09 - Two GPUs detected in system\n0:32:38 - Starting VFIO passthrough configuration\n0:33:16 - Explaining IOMMU groups\n0:35:42 - Identifying Nvidia 1660 for passthrough\n0:43:01 - Passthrough setup complete\n0:45:37 - Configuring BIOS for virtualization\n0:50:10 - Disabling HP remote management features\n0:54:06 - Verifying VFIO driver loaded correctly\n1:12:52 - Creating bridge network for VM\n1:29:06 - Adding GPU to VM configuration\n1:32:39 - Downloading Looking Glass B7\n1:35:21 - Building Looking Glass from source\n1:42:40 - Installing KVMFR kernel module\n1:46:14 - Creating udev rules for permissions\n1:51:21 - Modifying libvirt XML for passthrough\n2:03:01 - First VM boot fails permissions\n2:14:07 - Hikari Knight joins to help\n2:34:01 - Found missing cgroup configuration\n2:36:18 - VM launches successfully with passthrough\n2:38:16 - Looking Glass client connects\n2:40:25 - Windows running with GPU passthrough\n2:50:48 - Voice call with Hikari Knight\n2:52:00 - Adding QXL driver for fallback\n3:00:21 - FSR upscaling built into Looking Glass\n3:02:32 - Scroll lock hotkey demo\n3:12:39 - Creating Looking Glass config file\n3:16:44 - Colorblind mode feature discovered\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/mvbN8-pTMk8/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "CwPwwW60pyE",
       "title": "🔴 End of Windows 10 | Bypass Kernel Anti-Cheat? WinUtil Issues/PR Checks",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n00:00:00 Stream intro and planned updates\n00:02:03 Windows 10 support ending soon\n00:03:47 IoT LTSC 2021 recommended version\n00:04:32 Unsupported versions create security risks\n00:13:35 Kernel anti-cheat discussion starts\n00:15:31 Draft article on anti-cheat dangers\n00:18:24 AI updating kernel drivers poorly\n00:19:48 Fan Control vulnerability example shown\n00:24:09 Riot Vanguard causes blue screens\n00:26:51 EA acquired for $55 billion\n00:31:13 CrowdStrike caused massive system outages\n00:33:52 Better anti-cheat alternatives discussed\n00:48:47 WinUtil pull requests review starts\n00:52:05 Testing Cyberpunk with GPU passthrough\n01:00:52 Fan Control driver security warning\n01:08:19 New Edge disable method introduced\n01:24:33 Testing new Edge disable tweak\n01:45:05 Reviewing more pull requests\n01:52:05 Stream wrap up and plans\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-14T00:53:42Z",
       "date": "October 14, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/CwPwwW60pyE/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "CwPwwW60pyE",
-      "title": "🔴 End of Windows 10 | Bypass Kernel Anti-Cheat? WinUtil Issues/PR Checks",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n00:00:00 Stream intro and planned updates\n00:02:03 Windows 10 support ending soon\n00:03:47 IoT LTSC 2021 recommended version\n00:04:32 Unsupported versions create security risks\n00:13:35 Kernel anti-cheat discussion starts\n00:15:31 Draft article on anti-cheat dangers\n00:18:24 AI updating kernel drivers poorly\n00:19:48 Fan Control vulnerability example shown\n00:24:09 Riot Vanguard causes blue screens\n00:26:51 EA acquired for $55 billion\n00:31:13 CrowdStrike caused massive system outages\n00:33:52 Better anti-cheat alternatives discussed\n00:48:47 WinUtil pull requests review starts\n00:52:05 Testing Cyberpunk with GPU passthrough\n01:00:52 Fan Control driver security warning\n01:08:19 New Edge disable method introduced\n01:24:33 Testing new Edge disable tweak\n01:45:05 Reviewing more pull requests\n01:52:05 Stream wrap up and plans\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/CwPwwW60pyE/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -612,16 +432,6 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "6QdW183cD6A",
-      "title": "🔴 Windows 11 Local Account Bypass & Omitus",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nTimestamps:\n00:00:00 The Intro\n00:05:06 - Stream intro and discussing \"Omitus\" (DWM + Xorg window manager project)\n00:06:34 - Microsoft account bypass discussion - why there's always a workaround\n00:12:01 - Building Windows 11 25H2 Release Preview ISO using UUP Dump\n00:42:02 - Explaining why DWM on Linux is preferred over Windows solutions\n01:32:03 - Microsoft's strategy: forced online accounts vs business compatibility\n01:40:47 - Testing Windows 11 Dev Channel with all local account bypasses removed\n02:21:06 - Having fun interrogating Copilot AI about privacy and surveillance\n02:32:04 - Discussing why AI/LLM bubble may be reaching its peak\n03:22:54 Botched YouTube Video Attempt #1 \n03:31:20 Official YouTube Video Creation\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/6QdW183cD6A/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "x-TSKbnfKXE",
       "title": "🔴 Linux Utility, Canva destroys Affinity Photo, and Wordpress is the worst",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nTimestamps\n00:00:00 Stream Introduction and Today's Agenda\n00:12:00 DWM2 Cursor Warping Patch Removal\n00:23:00 LimeWire Nostalgia and File Sharing\n00:25:00 Server Setup EMMC PR Review\n00:28:00 Desktop Manager Installation Script Updates\n00:32:00 Universal Android Debloat Tool Recommendation\n00:38:00 Canva Acquires Affinity Photo Suite\n00:46:00 Automatic PR Labeling Workflow Addition\n00:55:00 Nix Flakes Integration Discussion Begins\n01:04:00 Windows 11 Edge Disable Feature\n01:14:00 WordPress Security and Performance Issues\n01:21:00 Linux Distribution Recommendations for Newcomers\n01:44:00 GPU Passthrough No Longer Necessary\n01:54:00 AI Generated YouTube Timestamps Demo\n02:02:00 Fabric Framework for AI Summarization\n02:04:00 Stream Wrap-up and Future Plans\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
@@ -632,31 +442,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "x-TSKbnfKXE",
-      "title": "🔴 Linux Utility, Canva destroys Affinity Photo, and Wordpress is the worst",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nTimestamps\n00:00:00 Stream Introduction and Today's Agenda\n00:12:00 DWM2 Cursor Warping Patch Removal\n00:23:00 LimeWire Nostalgia and File Sharing\n00:25:00 Server Setup EMMC PR Review\n00:28:00 Desktop Manager Installation Script Updates\n00:32:00 Universal Android Debloat Tool Recommendation\n00:38:00 Canva Acquires Affinity Photo Suite\n00:46:00 Automatic PR Labeling Workflow Addition\n00:55:00 Nix Flakes Integration Discussion Begins\n01:04:00 Windows 11 Edge Disable Feature\n01:14:00 WordPress Security and Performance Issues\n01:21:00 Linux Distribution Recommendations for Newcomers\n01:44:00 GPU Passthrough No Longer Necessary\n01:54:00 AI Generated YouTube Timestamps Demo\n02:02:00 Fabric Framework for AI Summarization\n02:04:00 Stream Wrap-up and Future Plans\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/x-TSKbnfKXE/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "ZK_XfXZWsIU",
       "title": "🔴 Is Microsoft just full of Vibe Coders now?",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n0:00:00 - Stream delayed due to work shenanigans\n0:01:10 - Microsoft's vibe-coded pull requests - legacy COM port code in PowerShell that makes no sense\n0:16:54 - Coding Wonders' Micro Win presentation review - evolution of customized Windows ISOs\n0:19:08 - Micro Win philosophy: Windows 7-style experience, not super debloated, everything just works\n0:32:24 - User problems with modified Windows ISOs breaking Micro Win functionality\n0:53:14 - Microsoft copyright striking bypass NRO videos on YouTube\n0:54:14 - THE BIG ONE: Analyzing Microsoft's vibe-coded SetDefaultUserFolders script - bloated with unnecessary COM port validation, should be 5 lines but it's massive\n0:56:48 - Microsoft executives bragging about 30-50% of code written by AI/Copilot - the tech debt nightmare\n1:01:18 - Passing through PCIe USB card in Linux VM for Xbox controller firmware update\n1:28:27 - Successfully fixing Xbox controller Bluetooth issues in Linux with firmware update\n1:30:44 - Why Mac has the best Bluetooth support, Windows is worst despite trillions in resources\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-27T15:51:23Z",
       "date": "October 27, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/ZK_XfXZWsIU/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "ZK_XfXZWsIU",
-      "title": "🔴 Is Microsoft just full of Vibe Coders now?",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n0:00:00 - Stream delayed due to work shenanigans\n0:01:10 - Microsoft's vibe-coded pull requests - legacy COM port code in PowerShell that makes no sense\n0:16:54 - Coding Wonders' Micro Win presentation review - evolution of customized Windows ISOs\n0:19:08 - Micro Win philosophy: Windows 7-style experience, not super debloated, everything just works\n0:32:24 - User problems with modified Windows ISOs breaking Micro Win functionality\n0:53:14 - Microsoft copyright striking bypass NRO videos on YouTube\n0:54:14 - THE BIG ONE: Analyzing Microsoft's vibe-coded SetDefaultUserFolders script - bloated with unnecessary COM port validation, should be 5 lines but it's massive\n0:56:48 - Microsoft executives bragging about 30-50% of code written by AI/Copilot - the tech debt nightmare\n1:01:18 - Passing through PCIe USB card in Linux VM for Xbox controller firmware update\n1:28:27 - Successfully fixing Xbox controller Bluetooth issues in Linux with firmware update\n1:30:44 - Why Mac has the best Bluetooth support, Windows is worst despite trillions in resources\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/ZK_XfXZWsIU/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -682,51 +472,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "Jeh3s3o1GlM",
-      "title": "🔴 Linux Day and No Local account in Windows?",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-10-08T02:15:03Z",
-      "date": "October 08, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/Jeh3s3o1GlM/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "Jeh3s3o1GlM",
-      "title": "🔴 Linux Day and No Local account in Windows?",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/Jeh3s3o1GlM/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "wCU7FBih9cM",
       "title": "🔴 Fixing 25H2",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n00:00:00 - Late start, schedule changes announced\n00:06:40 - PSA: Never update immediately\n00:12:20 - Checking version, attempting 25H2 upgrade\n00:19:00 - Upgrade fails, partition too small\n00:24:00 - Live partition resize with GParted\n00:28:00 - Windows partition tools discussion\n00:29:00 - Starting Coding Wonders' Windows quiz\n01:11:00 - Ranting about Apple AirPods Max\n01:14:00 - Rebuilding Windows boot partition live\n01:27:00 - Reviewing 25H2 features (mostly AI)\n01:33:00 - 25H2 ISO now 7.2GB\n01:37:00 - Discussing Windows certification exam dumps\n02:02:00 - Quiz results: 694/1000 (failed)\n02:11:00 - Successfully booted into 25H2\n02:21:00 - Testing WinUtil dev branch\n02:27:00 - Creating custom 25H2 MicroWin ISO\n02:40:00 - LTT employee departures discussion\n02:56:00 - MicroWin ISO successfully created/tested\n03:00:00 - Final recommendations and wrap-up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/wCU7FBih9cM/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "wCU7FBih9cM",
-      "title": "🔴 Fixing 25H2",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n00:00:00 - Late start, schedule changes announced\n00:06:40 - PSA: Never update immediately\n00:12:20 - Checking version, attempting 25H2 upgrade\n00:19:00 - Upgrade fails, partition too small\n00:24:00 - Live partition resize with GParted\n00:28:00 - Windows partition tools discussion\n00:29:00 - Starting Coding Wonders' Windows quiz\n01:11:00 - Ranting about Apple AirPods Max\n01:14:00 - Rebuilding Windows boot partition live\n01:27:00 - Reviewing 25H2 features (mostly AI)\n01:33:00 - 25H2 ISO now 7.2GB\n01:37:00 - Discussing Windows certification exam dumps\n02:02:00 - Quiz results: 694/1000 (failed)\n02:11:00 - Successfully booted into 25H2\n02:21:00 - Testing WinUtil dev branch\n02:27:00 - Creating custom 25H2 MicroWin ISO\n02:40:00 - LTT employee departures discussion\n02:56:00 - MicroWin ISO successfully created/tested\n03:00:00 - Final recommendations and wrap-up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-10-02T20:18:14Z",
-      "date": "October 02, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/wCU7FBih9cM/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "wCU7FBih9cM",
-      "title": "🔴 Fixing 25H2",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\nKey Moments:\n00:00:00 - Late start, schedule changes announced\n00:06:40 - PSA: Never update immediately\n00:12:20 - Checking version, attempting 25H2 upgrade\n00:19:00 - Upgrade fails, partition too small\n00:24:00 - Live partition resize with GParted\n00:28:00 - Windows partition tools discussion\n00:29:00 - Starting Coding Wonders' Windows quiz\n01:11:00 - Ranting about Apple AirPods Max\n01:14:00 - Rebuilding Windows boot partition live\n01:27:00 - Reviewing 25H2 features (mostly AI)\n01:33:00 - 25H2 ISO now 7.2GB\n01:37:00 - Discussing Windows certification exam dumps\n02:02:00 - Quiz results: 694/1000 (failed)\n02:11:00 - Successfully booted into 25H2\n02:21:00 - Testing WinUtil dev branch\n02:27:00 - Creating custom 25H2 MicroWin ISO\n02:40:00 - LTT employee departures discussion\n02:56:00 - MicroWin ISO successfully created/tested\n03:00:00 - Final recommendations and wrap-up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/wCU7FBih9cM/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -742,51 +492,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "sN1X7SK12B0",
-      "title": "🔴 MacOS rants followed by DWM-Titus",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-10-02T20:19:16Z",
-      "date": "October 02, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/sN1X7SK12B0/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "sN1X7SK12B0",
-      "title": "🔴 MacOS rants followed by DWM-Titus",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/sN1X7SK12B0/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "L87b01P7IxE",
       "title": "🔴 (Windows Tuesday) - Quiz, WinUtil, and Shenanigans",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/L87b01P7IxE/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "L87b01P7IxE",
-      "title": "🔴 (Windows Tuesday) - Quiz, WinUtil, and Shenanigans",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-30T20:36:10Z",
-      "date": "September 30, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/L87b01P7IxE/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "L87b01P7IxE",
-      "title": "🔴 (Windows Tuesday) - Quiz, WinUtil, and Shenanigans",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/L87b01P7IxE/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -802,51 +512,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "GIbNNup9OoM",
-      "title": "🔴 (Linux Monday) - Changing Motherboards, GPUs, and CPUs",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-29T16:25:04Z",
-      "date": "September 29, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/GIbNNup9OoM/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "GIbNNup9OoM",
-      "title": "🔴 (Linux Monday) - Changing Motherboards, GPUs, and CPUs",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/GIbNNup9OoM/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "4d7ox2IGeB0",
       "title": "🔴 (MacOS Thursday) - Desktop config and config changes",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/4d7ox2IGeB0/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "4d7ox2IGeB0",
-      "title": "🔴 (MacOS Thursday) - Desktop config and config changes",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-25T15:34:54Z",
-      "date": "September 25, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/4d7ox2IGeB0/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "4d7ox2IGeB0",
-      "title": "🔴 (MacOS Thursday) - Desktop config and config changes",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/4d7ox2IGeB0/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -862,51 +532,11 @@
       "hasChatReplay": true
     },
     {
-      "videoId": "6RjEJWT2T6c",
-      "title": "🔴 Desktop is down... MacOS time",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-20T16:02:58Z",
-      "date": "September 20, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/6RjEJWT2T6c/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "6RjEJWT2T6c",
-      "title": "🔴 Desktop is down... MacOS time",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/6RjEJWT2T6c/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
       "videoId": "xeyEf9tRaG0",
       "title": "🔴 Offline WinUtil",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/xeyEf9tRaG0/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "xeyEf9tRaG0",
-      "title": "🔴 Offline WinUtil",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-18T19:02:10Z",
-      "date": "September 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/xeyEf9tRaG0/mqdefault.jpg",
-      "twitchVodId": "2689857224",
-      "hasChatReplay": true
-    },
-    {
-      "videoId": "xeyEf9tRaG0",
-      "title": "🔴 Offline WinUtil",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2026-02-05T16:47:44Z",
-      "date": "February 05, 2026",
       "thumbnail": "https://i.ytimg.com/vi/xeyEf9tRaG0/mqdefault.jpg",
       "twitchVodId": "2689857224",
       "hasChatReplay": true
@@ -922,31 +552,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "hF3dAcTSivs",
-      "title": "🔴 WinUtil Sept Update",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-17T13:42:00Z",
-      "date": "September 17, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/hF3dAcTSivs/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "NJiQFkdwuMo",
       "title": "🔴 DWM-Titus Documentation",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/NJiQFkdwuMo/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "NJiQFkdwuMo",
-      "title": "🔴 DWM-Titus Documentation",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-17T13:42:13Z",
-      "date": "September 17, 2025",
       "thumbnail": "https://i.ytimg.com/vi/NJiQFkdwuMo/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -962,31 +572,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "SbvzUFtdwm4",
-      "title": "🔴 LinUtil - DWM update",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-17T13:42:57Z",
-      "date": "September 17, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/SbvzUFtdwm4/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "Jnu1-2pHcGk",
       "title": "🔴 Standardize Autostart",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/Jnu1-2pHcGk/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "Jnu1-2pHcGk",
-      "title": "🔴 Standardize Autostart",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-17T13:43:43Z",
-      "date": "September 17, 2025",
       "thumbnail": "https://i.ytimg.com/vi/Jnu1-2pHcGk/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1002,31 +592,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "pf9LYqwL6uQ",
-      "title": "🔴 Bar redesign day!",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-17T13:53:57Z",
-      "date": "September 17, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/pf9LYqwL6uQ/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "h8Fi-I_ienI",
       "title": "🔴 Building the ArchX User Install script",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/h8Fi-I_ienI/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "h8Fi-I_ienI",
-      "title": "🔴 Building the ArchX User Install script",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-17T13:54:13Z",
-      "date": "September 17, 2025",
       "thumbnail": "https://i.ytimg.com/vi/h8Fi-I_ienI/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1042,16 +612,6 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "bewXV1WVWLg",
-      "title": "🔴 DWM for everyone. Stream #1",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-01T05:00:47Z",
-      "date": "September 01, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/bewXV1WVWLg/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "-b1D8i14TFQ",
       "title": "🔴 Emergency STREAM 🔴 Return to DWM",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
@@ -1062,31 +622,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "-b1D8i14TFQ",
-      "title": "🔴 Emergency STREAM 🔴 Return to DWM",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-09-17T13:56:10Z",
-      "date": "September 17, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/-b1D8i14TFQ/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "lW0GSyE4yCI",
       "title": "🔴 .md expansion, winutil, project projections",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/lW0GSyE4yCI/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "lW0GSyE4yCI",
-      "title": "🔴 .md expansion, winutil, project projections",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-08-28T03:23:55Z",
-      "date": "August 28, 2025",
       "thumbnail": "https://i.ytimg.com/vi/lW0GSyE4yCI/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1122,31 +662,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "qHHWjrQmdZc",
-      "title": "🔴 Context Coding and MicroWin Tests",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n00:00:00 Context Coding\n01:52:00 MicroWin Tests\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-08-21T02:25:23Z",
-      "date": "August 21, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/qHHWjrQmdZc/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "CAZAuPIF2Jg",
       "title": "🔴 Linux Scripts",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/CAZAuPIF2Jg/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "CAZAuPIF2Jg",
-      "title": "🔴 Linux Scripts",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-08-14T19:08:41Z",
-      "date": "August 14, 2025",
       "thumbnail": "https://i.ytimg.com/vi/CAZAuPIF2Jg/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1172,16 +692,6 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "4gfxJgncMvM",
-      "title": "🔴 Utility Roadmaps and Testing new features",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-08-12T02:29:09Z",
-      "date": "August 12, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/4gfxJgncMvM/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "fFcHodk4q_I",
       "title": "🔴 Can we improve Omarchy installer? + LinUtil Work",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
@@ -1197,16 +707,6 @@
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:32:40Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/8Nu6J0s5K4U/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "8Nu6J0s5K4U",
-      "title": "🔴 Omarchy - DHH's Linux Config",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-08-06T03:46:21Z",
-      "date": "August 06, 2025",
       "thumbnail": "https://i.ytimg.com/vi/8Nu6J0s5K4U/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1242,16 +742,6 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "bJmGn1tlGwU",
-      "title": "🔴 WinUtil Work",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-31T20:24:59Z",
-      "date": "July 31, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/bJmGn1tlGwU/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "TnhNuMhnQ5Y",
       "title": "🔴 Vibing in Neovim",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
@@ -1272,31 +762,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "CMVpjwoIKa0",
-      "title": "🔴 Neovim config and Rants about changes to Neovim",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-29T17:12:51Z",
-      "date": "July 29, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/CMVpjwoIKa0/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "eL73KNgJN8k",
       "title": "🔴 F# Neovim Setup",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/eL73KNgJN8k/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "eL73KNgJN8k",
-      "title": "🔴 F# Neovim Setup",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-28T15:49:18Z",
-      "date": "July 28, 2025",
       "thumbnail": "https://i.ytimg.com/vi/eL73KNgJN8k/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1312,31 +782,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "2N_JgM61WIw",
-      "title": "🔴 macOS Yabai to Aerospace UI overhaul",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-25T20:38:26Z",
-      "date": "July 25, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/2N_JgM61WIw/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "NFDBIT7qvZk",
       "title": "🔴 v0.2.0 Code Signing and Release of .app",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/NFDBIT7qvZk/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "NFDBIT7qvZk",
-      "title": "🔴 v0.2.0 Code Signing and Release of .app",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-24T23:17:40Z",
-      "date": "July 24, 2025",
       "thumbnail": "https://i.ytimg.com/vi/NFDBIT7qvZk/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1352,31 +802,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "aaX52guipGY",
-      "title": "🔴 macUtil Publish",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-22T23:24:32Z",
-      "date": "July 22, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/aaX52guipGY/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "n5WoD2ZNLKY",
       "title": "🔴 macOS Dev Environment Setup",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/n5WoD2ZNLKY/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "n5WoD2ZNLKY",
-      "title": "🔴 macOS Dev Environment Setup",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-21T04:22:15Z",
-      "date": "July 21, 2025",
       "thumbnail": "https://i.ytimg.com/vi/n5WoD2ZNLKY/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1392,31 +822,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "INgs6YmCf8I",
-      "title": "🔴 Finishing Sketchybar Config and Guide",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-18T14:42:58Z",
-      "date": "July 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/INgs6YmCf8I/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "kdv-Swll5Jw",
       "title": "🔴 Yabai and New Dev Environment",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/kdv-Swll5Jw/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "kdv-Swll5Jw",
-      "title": "🔴 Yabai and New Dev Environment",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-17T16:36:16Z",
-      "date": "July 17, 2025",
       "thumbnail": "https://i.ytimg.com/vi/kdv-Swll5Jw/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1432,31 +842,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "JLcwiPMAwF8",
-      "title": "🔴 MacUtil v0.0.1 will be released TODAY!",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-17T16:48:40Z",
-      "date": "July 17, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/JLcwiPMAwF8/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "Uj7NYjkFEcE",
       "title": "🔴 Fixing MacOS",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/Uj7NYjkFEcE/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "Uj7NYjkFEcE",
-      "title": "🔴 Fixing MacOS",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-13T21:35:29Z",
-      "date": "July 13, 2025",
       "thumbnail": "https://i.ytimg.com/vi/Uj7NYjkFEcE/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1472,31 +862,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "B9PeZ91PF4o",
-      "title": "🔴 Linux Sysadmin Talk",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-13T15:27:59Z",
-      "date": "July 13, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/B9PeZ91PF4o/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "vqfoRJYkEW8",
       "title": "🔴 Goodbye WMs... Back to KDE?",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/vqfoRJYkEW8/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "vqfoRJYkEW8",
-      "title": "🔴 Goodbye WMs... Back to KDE?",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-13T15:28:11Z",
-      "date": "July 13, 2025",
       "thumbnail": "https://i.ytimg.com/vi/vqfoRJYkEW8/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1512,31 +882,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "U15eStnfMFI",
-      "title": "🔴 Linux",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-07-13T15:38:15Z",
-      "date": "July 13, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/U15eStnfMFI/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "jZwR8t4QqVo",
       "title": "🔴 Linux",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/jZwR8t4QqVo/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "jZwR8t4QqVo",
-      "title": "🔴 Linux",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-30T18:07:48Z",
-      "date": "June 30, 2025",
       "thumbnail": "https://i.ytimg.com/vi/jZwR8t4QqVo/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1552,16 +902,6 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "6Z-Pu08Tmt8",
-      "title": "🔴 WinUtil Update",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-24T19:20:44Z",
-      "date": "June 24, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/6Z-Pu08Tmt8/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "32TaheHnDLw",
       "title": "🔴 Linux and Windows enter a bar...",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
@@ -1572,41 +912,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "32TaheHnDLw",
-      "title": "🔴 Linux and Windows enter a bar...",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-20T17:29:44Z",
-      "date": "June 20, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/32TaheHnDLw/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "5iwwLm383l8",
       "title": "🔴 Linux and Windows enter a bar...",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/5iwwLm383l8/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "5iwwLm383l8",
-      "title": "🔴 Linux and Windows enter a bar...",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:59Z",
-      "date": "June 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/5iwwLm383l8/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "5iwwLm383l8",
-      "title": "🔴 Linux and Windows enter a bar...",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:15Z",
-      "date": "June 18, 2025",
       "thumbnail": "https://i.ytimg.com/vi/5iwwLm383l8/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1622,16 +932,6 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "5yErfLOpgZE",
-      "title": "🔴 Linux Hyprland Script",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:59Z",
-      "date": "June 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/5yErfLOpgZE/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "qj7DhogvQXQ",
       "title": "🔴 The Linux Book",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
@@ -1642,41 +942,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "qj7DhogvQXQ",
-      "title": "🔴 The Linux Book",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:59Z",
-      "date": "June 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/qj7DhogvQXQ/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "x3Q7d3ow5Tc",
       "title": "🔴 WinUtil Update and Linux Book",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/x3Q7d3ow5Tc/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "x3Q7d3ow5Tc",
-      "title": "🔴 WinUtil Update and Linux Book",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:59Z",
-      "date": "June 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/x3Q7d3ow5Tc/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "x3Q7d3ow5Tc",
-      "title": "🔴 WinUtil Update and Linux Book",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-05T16:02:19Z",
-      "date": "June 05, 2025",
       "thumbnail": "https://i.ytimg.com/vi/x3Q7d3ow5Tc/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1692,31 +962,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "MM5Vcezd6oI",
-      "title": "🔴 Quickshell Start Menu Design",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:59Z",
-      "date": "June 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/MM5Vcezd6oI/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "2pWHJ0o9TaM",
       "title": "🔴 Finishing Setup and Scripting it!",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/2pWHJ0o9TaM/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "2pWHJ0o9TaM",
-      "title": "🔴 Finishing Setup and Scripting it!",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:59Z",
-      "date": "June 18, 2025",
       "thumbnail": "https://i.ytimg.com/vi/2pWHJ0o9TaM/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1732,31 +982,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "M7sPm9lXqU8",
-      "title": "🔴 Finishing Setup and Scripting it!",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:59Z",
-      "date": "June 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/M7sPm9lXqU8/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "SWGdAZVTw7Y",
       "title": "🔴 Hello QuickShell, Goodbye Waybar",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/SWGdAZVTw7Y/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "SWGdAZVTw7Y",
-      "title": "🔴 Hello QuickShell, Goodbye Waybar",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:59Z",
-      "date": "June 18, 2025",
       "thumbnail": "https://i.ytimg.com/vi/SWGdAZVTw7Y/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1772,31 +1002,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "BQr19-D7_BI",
-      "title": "🔴 Brofist OS - Hyprland from Scratch",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:59Z",
-      "date": "June 18, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/BQr19-D7_BI/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "Laic1zz9Zv0",
       "title": "🔴 362 Days in Arch Linux",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/Laic1zz9Zv0/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "Laic1zz9Zv0",
-      "title": "🔴 362 Days in Arch Linux",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-06-18T16:53:37Z",
-      "date": "June 18, 2025",
       "thumbnail": "https://i.ytimg.com/vi/Laic1zz9Zv0/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1832,31 +1042,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "EkqSHCm7f6o",
-      "title": "🔴 Linux Utility - Adding Features",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-02-08T13:51:59Z",
-      "date": "February 08, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/EkqSHCm7f6o/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "l-ftvIDIqtQ",
       "title": "🔴 A New Dawn",
       "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:35:24Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/l-ftvIDIqtQ/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "l-ftvIDIqtQ",
-      "title": "🔴 A New Dawn",
-      "description": "Real Chat, Real Desktop, and Real Solutions... or we just break stuff.\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2025-02-07T16:34:36Z",
-      "date": "February 07, 2025",
       "thumbnail": "https://i.ytimg.com/vi/l-ftvIDIqtQ/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1882,31 +1072,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "IkMCtkDIhe8",
-      "title": "🔴 Live - Building the Perfect Linux Desktop for Gaming and Daily Driving",
-      "description": "Let's build out the perfect Linux Desktop and document it as we go, so you can use Linux faster, better, and more efficiently. \n\nAutomated Script Project for Setting up Linux: https://github.com/ChrisTitusTech/ArchMatic .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-10-13T18:45:55Z",
-      "date": "October 13, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/IkMCtkDIhe8/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "_3mNyZSWOiE",
       "title": "🔴 Live - Building the New Steam OS with One Script",
       "description": "Let's build out the perfect Linux Desktop and document it as we go, so you can use Linux faster, better, and more efficiently. \n\nAutomated Script Project for Setting up Linux: https://github.com/ChrisTitusTech/ArchMatic .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/_3mNyZSWOiE/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "_3mNyZSWOiE",
-      "title": "🔴 Live - Building the New Steam OS with One Script",
-      "description": "Let's build out the perfect Linux Desktop and document it as we go, so you can use Linux faster, better, and more efficiently. \n\nAutomated Script Project for Setting up Linux: https://github.com/ChrisTitusTech/ArchMatic .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-10-14T02:23:19Z",
-      "date": "October 14, 2021",
       "thumbnail": "https://i.ytimg.com/vi/_3mNyZSWOiE/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1922,31 +1092,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "DwGXMLy0uwU",
-      "title": "🔴 Live -  Time to Rice and Make the Best Looking Desktop",
-      "description": "We have our script that sets up the system... now we make our script to automatically make our desktop the best looking one out there!\n\nAutomated Script Project for Setting up Linux: https://github.com/ChrisTitusTech/ArchMatic .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-10-15T03:28:23Z",
-      "date": "October 15, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/DwGXMLy0uwU/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "U6Ie65px38Y",
       "title": "🔴 Live -  The Completion of the Automated Linux Install Project",
       "description": "Testing and Completion of the script after many hours of setup. \n\nAutomated Script Project for Setting up Linux: https://github.com/ChrisTitusTech/ArchMatic .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/U6Ie65px38Y/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "U6Ie65px38Y",
-      "title": "🔴 Live -  The Completion of the Automated Linux Install Project",
-      "description": "Testing and Completion of the script after many hours of setup. \n\nAutomated Script Project for Setting up Linux: https://github.com/ChrisTitusTech/ArchMatic .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-10-18T13:32:19Z",
-      "date": "October 18, 2021",
       "thumbnail": "https://i.ytimg.com/vi/U6Ie65px38Y/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -1962,31 +1112,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "pYq4PqZB4k0",
-      "title": "🔴 Live -  Upcoming Projects that will blow your mind...",
-      "description": "Lots of things in the pipeline for upcoming projects and answering chats questions LIVE! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-10-19T14:11:36Z",
-      "date": "October 19, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/pYq4PqZB4k0/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "FfTn0LCN3kQ",
       "title": "🔴 Live -  Windows 11 Bugs + Deleting the System... 3 Times!",
       "description": "Was a fun stream, right before start Windows 11 decided to throw a curve ball my way and we just went with it. Ended up deleting over 5+ partitions and doing many restores with other shenanigans. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/FfTn0LCN3kQ/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "FfTn0LCN3kQ",
-      "title": "🔴 Live -  Windows 11 Bugs + Deleting the System... 3 Times!",
-      "description": "Was a fun stream, right before start Windows 11 decided to throw a curve ball my way and we just went with it. Ended up deleting over 5+ partitions and doing many restores with other shenanigans. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-10-22T13:14:03Z",
-      "date": "October 22, 2021",
       "thumbnail": "https://i.ytimg.com/vi/FfTn0LCN3kQ/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2002,31 +1132,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "nxArXFPuUHY",
-      "title": "🔴 Live -  Designing a New Bootloader Theme",
-      "description": "I multi-boot into both Windows and Linux on the same machine often and want to make my own bootloader theme. In this live stream will work on designing it and implementing it into any grub boot system. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-10-25T18:26:10Z",
-      "date": "October 25, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/nxArXFPuUHY/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "srvz8-5qReo",
       "title": "🔴 Live -  Redesigning the Windows Toolbox",
       "description": "Let's cut down Windows 11 bloat. Adding service tweaks and various other tools to help you navigate Windows. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/srvz8-5qReo/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "srvz8-5qReo",
-      "title": "🔴 Live -  Redesigning the Windows Toolbox",
-      "description": "Let's cut down Windows 11 bloat. Adding service tweaks and various other tools to help you navigate Windows. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-10-25T18:37:19Z",
-      "date": "October 25, 2021",
       "thumbnail": "https://i.ytimg.com/vi/srvz8-5qReo/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2042,31 +1152,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "cjrduaFYb7A",
-      "title": "🔴 Live -   New Project Design and Build Out",
-      "description": "This past month I did a build out using Arch Linux, but this month we are going to use Debian, the grand daddy of most distros, in this build. We are going to tone down the package selection and make this more minimal with a clean look, but with a focus on size & reliability.\n\nTimestamps:\n00:00:00 Starting\n00:12:05 - 14:05 : Downloading the ISO\n00:14:57 / 19:48 - 27:30 : Booting into Usb\n00:27:30 / 29:30 - 30:30 : Fixing Console\ncommand: sudo dpkg-reconfigure console-setup\n00:30:30 : Neofetch\n00:33:39 - 36:30(ish) : Editing sources list and sudo apt update\n00:47:54 : Neofetch\n00:55:59 / 56:30 - 56:53 : Installing bspwm\n00:57:21 (ish) : Installing xorg\n00:57:42 - 1:00:00 : Installing Video Drivers\n00:58:18: Installing nvidia drivers\nFound out startx gave blank screen\nNeeded to reboot\n01:01:22: Starting startx and getting blank screen\n01:01:30: Installing htop\n01:15:47 - 1:17:00: Making directories in .config\n01:17:17 - 1:18:23 : looking at hotkeys\n01:20:44 - 1:21:23 : Installing dmenu\n01:25:15 - 1:25:30: Starting startx and getting blank screen\n01:30:07 vim sxhkd\n01:30:45 - 1:31:03 Super-Spacebar to get the top-menu (polybar)\n01:31:45 - 1:32:30 : Editing sxhkd\n01:32 playing with kitty (shortly)\n01:32:39: Making it look good\n01:33:27: Polybar\n01:32:39: Making it look good\n01:35:52: (the basics)\n01:45:30 : Neofetch\n01:46:31 : Installing Brave\n02:29 - 2:29:55 : binding keys in sxhkd\n02:34:11: Installing variety backgrounds\n02:34:36: Installing Polybar\n02:36 / 2:37:35 - : Configuring Polybar (copying default config)\n02:38:52 / 2:39 : uncommenting wm-restack\n02:40:39: startx\n02:42:30 polybar bar/titusbar\n02:44 : in sxhkd\n02:45 : installing picom\n02:45:10: Opening up thunar\n02:45:40 : opening up variety\n02:47:28 Variety with feh (get_wallpapers)\n02:49:51: Installing papirus\n02:51:01: Installing kvantum\n02:52:08 Choosing a theme Installing the ocs-url package\n02:55:36: Installing theme with an ocs-url\n03:00:56: Installing grub-customizer\n03:01:43: Starting startx (no polybar yet)\n03:02:38: Installing the theme with kvantummanager\n03:03:04: Installing rofi\n03:06:46: Grabbing capitaine cusors\n03:07:27: Installing the cursors\n03:08:18: changing rofi theme\n03:12:00 copying rofi theme to .config\n03:13:59: activating rofi\n03:22:18: changing hotkeys\n03:27:11: trying polybar from the terminal\n03:35:00 Adding LightDM\n03:36:41  Editing lightdm\n03:42:18 Launching polybar\n03:44:57 Launching polybar\n03:45:49 better example .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-11-01T19:15:57Z",
-      "date": "November 01, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/cjrduaFYb7A/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "ZoENdYFsCOY",
       "title": "🔴 Live -  TitusPi Revisited and Updated",
       "description": "Its been about a year since I made the TitusPi project for those that use a raspberry pi for computing. Let's update it and refresh the look and feel of the project in the new version. \n\nTimestamps - Let me know any extras to add in the comments!\n00:00:00 Intro\n00:56:20 Starting Raspberry Pi Setup .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/ZoENdYFsCOY/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "ZoENdYFsCOY",
-      "title": "🔴 Live -  TitusPi Revisited and Updated",
-      "description": "Its been about a year since I made the TitusPi project for those that use a raspberry pi for computing. Let's update it and refresh the look and feel of the project in the new version. \n\nTimestamps - Let me know any extras to add in the comments!\n00:00:00 Intro\n00:56:20 Starting Raspberry Pi Setup .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-11-01T19:57:13Z",
-      "date": "November 01, 2021",
       "thumbnail": "https://i.ytimg.com/vi/ZoENdYFsCOY/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2082,31 +1172,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "FaFE1a8Km6g",
-      "title": "🔴 Live - Building the Ultimate System... for everything!",
-      "description": "The work has already begun on building the ultimate system that will be better than anything out there... It will support 100% of games, be ultra productive and rule all! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-11-08T21:44:36Z",
-      "date": "November 08, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/FaFE1a8Km6g/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "aXuxxI7Y7OI",
       "title": "🔴 Live - Building Gaming Server... for everything!",
       "description": "Linux, Windows, Mac... It doesn't matter if you have a Gaming server! So let's build it live! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/aXuxxI7Y7OI/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "aXuxxI7Y7OI",
-      "title": "🔴 Live - Building Gaming Server... for everything!",
-      "description": "Linux, Windows, Mac... It doesn't matter if you have a Gaming server! So let's build it live! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-11-12T14:41:38Z",
-      "date": "November 12, 2021",
       "thumbnail": "https://i.ytimg.com/vi/aXuxxI7Y7OI/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2402,16 +1472,6 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "xTsY9TYTALw",
-      "title": "🔴 Live - Making the Ugliest Linux Distro Look Good",
-      "description": "Raspberry Pi distros look UGLY! Let's fix it with transforming the basic distro that comes with the pi400 into a desktop powerhouse! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2022-06-03T05:11:50Z",
-      "date": "June 03, 2022",
-      "thumbnail": "https://i.ytimg.com/vi/xTsY9TYTALw/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "ZnAVIP2sk_4",
       "title": "🔴 Live - Christmas Eve Live Stream",
       "description": "Upcoming Projects, Q&A, and General Shenanigans. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
@@ -2432,31 +1492,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "afJW0vTTBtc",
-      "title": "🔴 Live - Linux vs Windows 11 Gaming Benchmarks - The Tale of the tape...",
-      "description": "Windows 11 vs Linux LIVE... 4+ benchmarks populated live! See the progress as it is done @ https://openbenchmarking.org/result/2110045-CTT-CSGO206071\n\nThe Gaming Tests\n- Warframe built in test\n- PTS - CSGO\n- PTS - Shadow of the Tomb Raider\n- PTS - Quake II RTX\n\nSuggest yours in CHAT! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-10-04T18:06:03Z",
-      "date": "October 04, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/afJW0vTTBtc/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "UTbtfbLg7hg",
       "title": "🔴 Live - Linux Gaming Disaster and What NOT to do!",
       "description": "So many things coming out for Linux Gaming let's revisit it, update the system, and finally test out some games! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/UTbtfbLg7hg/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "UTbtfbLg7hg",
-      "title": "🔴 Live - Linux Gaming Disaster and What NOT to do!",
-      "description": "So many things coming out for Linux Gaming let's revisit it, update the system, and finally test out some games! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-09-27T18:20:12Z",
-      "date": "September 27, 2021",
       "thumbnail": "https://i.ytimg.com/vi/UTbtfbLg7hg/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2472,31 +1512,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "db2fsnQpx5Q",
-      "title": "🔴 Live - The Future Internet - Unlimited Storage & No Servers",
-      "description": "Let's go over IPFS and how it will impact our daily life in the future. Also, how we are using it today with a setup and demo. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-09-17T16:27:17Z",
-      "date": "September 17, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/db2fsnQpx5Q/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "EWqes0jGKGo",
       "title": "Part 2 - Build and Testing minecraft.christitus.com (Ubuntu 20 Server) - Live",
       "description": "Building out an Ubuntu 20 for Minecraft @ minecraft.christitus.com\n- Discord Server or invite https://discord.gg/4GZ8m55H\n- Floodgate & Geyser enabled: Bedrock and Java clients in one server\n- Paper Optimized \n\nServer Stats\n- VPS with 10GB dedicated internet\n- 12 core epyc \n- 24 GB of RAM .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/EWqes0jGKGo/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "EWqes0jGKGo",
-      "title": "Part 2 - Build and Testing minecraft.christitus.com (Ubuntu 20 Server) - Live",
-      "description": "Building out an Ubuntu 20 for Minecraft @ minecraft.christitus.com\n- Discord Server or invite https://discord.gg/4GZ8m55H\n- Floodgate & Geyser enabled: Bedrock and Java clients in one server\n- Paper Optimized \n\nServer Stats\n- VPS with 10GB dedicated internet\n- 12 core epyc \n- 24 GB of RAM .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-09-16T23:17:06Z",
-      "date": "September 16, 2021",
       "thumbnail": "https://i.ytimg.com/vi/EWqes0jGKGo/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2512,31 +1532,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "gGIY-dSap84",
-      "title": "Build and Testing minecraft.christitus.com (Ubuntu 20 Server) - Live",
-      "description": "Building out an Ubuntu 20 for Minecraft @ minecraft.christitus.com\n- Discord Server or invite https://discord.gg/4GZ8m55H\n- Floodgate & Geyser enabled: Bedrock and Java clients in one server\n- Paper Optimized \n\nServer Stats\n- VPS with 10GB dedicated internet\n- 12 core epyc \n- 24 GB of RAM .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-09-16T23:16:36Z",
-      "date": "September 16, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/gGIY-dSap84/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "1mvGRd6Flm8",
       "title": "Linux Gaming vs Windows Gaming - Live Comparison",
       "description": "I want to hear from you about what you'd like to see tried out LIVE on this stream! Let's do a true comparison of Linux vs Windows. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/1mvGRd6Flm8/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "1mvGRd6Flm8",
-      "title": "Linux Gaming vs Windows Gaming - Live Comparison",
-      "description": "I want to hear from you about what you'd like to see tried out LIVE on this stream! Let's do a true comparison of Linux vs Windows. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-09-03T17:38:28Z",
-      "date": "September 03, 2021",
       "thumbnail": "https://i.ytimg.com/vi/1mvGRd6Flm8/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2562,31 +1562,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "LT0G0xq9Mf8",
-      "title": "Windows 10 Toolbox Revamp",
-      "description": "Working on updating Windows 10 Toolbox, come make suggestions or just ask a question! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-04-26T18:37:18Z",
-      "date": "April 26, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/LT0G0xq9Mf8/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "UXXuJPvn1SQ",
       "title": "Tech Q&A - Ask me Anything - 300k Subscriber Special #2",
       "description": "The Second Stream for Other Time Zones .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/UXXuJPvn1SQ/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "UXXuJPvn1SQ",
-      "title": "Tech Q&A - Ask me Anything - 300k Subscriber Special #2",
-      "description": "The Second Stream for Other Time Zones .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-04-07T19:11:00Z",
-      "date": "April 07, 2021",
       "thumbnail": "https://i.ytimg.com/vi/UXXuJPvn1SQ/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2602,31 +1582,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "PmsO8iLvnmM",
-      "title": "Tech Q&A - Ask me Anything - 300k Subscriber Special",
-      "description": "Stream #1, next stream 4 PM CDT .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2021-04-07T19:11:00Z",
-      "date": "April 07, 2021",
-      "thumbnail": "https://i.ytimg.com/vi/PmsO8iLvnmM/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "QaQbtf7JMNU",
       "title": "Ryzen 5600 - Buying, Building, and Benchmarking",
       "description": "I managed to get one of these (yes, I stood in line!), re-built the studio PC last night, and let's do some benchmarks! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/QaQbtf7JMNU/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "QaQbtf7JMNU",
-      "title": "Ryzen 5600 - Buying, Building, and Benchmarking",
-      "description": "I managed to get one of these (yes, I stood in line!), re-built the studio PC last night, and let's do some benchmarks! .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-20T19:01:32Z",
-      "date": "December 20, 2020",
       "thumbnail": "https://i.ytimg.com/vi/QaQbtf7JMNU/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2642,31 +1602,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "rO9QY2B35EI",
-      "title": "Linux 5.10 Release | Starlink Beta | AMD Beats Nvidia",
-      "description": "This week in the news:\n-Linux 5.10 - https://www.theregister.com/2020/10/25/linux_5_10_rc1/ \n-Starlink - https://arstechnica.com/information-technology/2020/10/spacex-starlink-public-beta-begins-its-99-a-month-plus-500-up-front\n-AMD 6000 Benchmarks - https://www.slashgear.com/amd-radeon-rx-6000-series-benchmarks-claimed-vs-nvidia-rtx-28644924/ .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-20T19:01:32Z",
-      "date": "December 20, 2020",
-      "thumbnail": "https://i.ytimg.com/vi/rO9QY2B35EI/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "V9C3oBv16Zs",
       "title": "Windows Apps in Linux | Window 20H2 | KDE 5.20 Release",
       "description": "This week in the news:\n-Windows Calculator in Linux - Snap Store install via uno platform - https://platform.uno/blog/windows-calculator-on-linux-via-uno-platform/\n-Windows 20H2 Update and Windows Server Core Gaming Build out\n-KDE Plasma gets new release - https://kde.org/announcements/plasma-5.20.0\n\nTimestamps:\n00:00 Intro\n00:46 Windows Calculator on Linux\n03:40 Google API Chat\n05:15 Windows 20H2 Release and Features\n08:15 KDE Plasma 5.20 Released and Features\n11:37 Windows PowerToys - FancyZones\n15:57 Q&A\n17:55 When should I update Windows? .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/V9C3oBv16Zs/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "V9C3oBv16Zs",
-      "title": "Windows Apps in Linux | Window 20H2 | KDE 5.20 Release",
-      "description": "This week in the news:\n-Windows Calculator in Linux - Snap Store install via uno platform - https://platform.uno/blog/windows-calculator-on-linux-via-uno-platform/\n-Windows 20H2 Update and Windows Server Core Gaming Build out\n-KDE Plasma gets new release - https://kde.org/announcements/plasma-5.20.0\n\nTimestamps:\n00:00 Intro\n00:46 Windows Calculator on Linux\n03:40 Google API Chat\n05:15 Windows 20H2 Release and Features\n08:15 KDE Plasma 5.20 Released and Features\n11:37 Windows PowerToys - FancyZones\n15:57 Q&A\n17:55 When should I update Windows? .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-22T19:34:10Z",
-      "date": "December 22, 2020",
       "thumbnail": "https://i.ytimg.com/vi/V9C3oBv16Zs/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2682,16 +1622,6 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "D4OU93abiFU",
-      "title": "AMD Big Navi on Par with 3080 | PopOS Shell | Linux Mint Chromium | Q&A",
-      "description": "3 big news stories this week:\nAMD Big Navi on Par with 3080? - https://www.theverge.com/2020/10/8/21507911/amd-teases-rx-6000-gpu-big-navi-4k-gaming-60fps-benchmarks-hardware-rdna-2\nPopOS Tiling Windows gets Upgrade for Stacking - https://github.com/pop-os/shell OR try out Material Shell - https://github.com/material-shell/material-shell\nLinux Mint Chromium Package gets baked in - https://www.linuxjournal.com/content/linux-mint-201-ulyssa-will-arrive-mid-december-chromium-webapp-manager .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-20T19:01:32Z",
-      "date": "December 20, 2020",
-      "thumbnail": "https://i.ytimg.com/vi/D4OU93abiFU/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "j4ehoaLQKM4",
       "title": "Windows based on Linux | Facebook Withdrawl from Europe | Q&A",
       "description": "Let's do a quick rundown of this week's news and give some feedback on what is going on. \nMicrosoft based on Linux Kernel: https://www.zdnet.com/article/linux-based-windows-makes-perfect-sense/\nFacebook withdrawal from Europe: https://www.theguardian.com/technology/2020/sep/22/facebook-says-it-may-quit-europe-over-ban-on-sharing-data-with-us#:~:text=%E2%80%9CFacebook%20is%20not%20threatening%20to,order%20to%20operate%20their%20services.\nYouTube video going over the current facebook situation: https://youtu.be/uFNJDKAHlYs .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
@@ -2702,31 +1632,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "j4ehoaLQKM4",
-      "title": "Windows based on Linux | Facebook Withdrawl from Europe | Q&A",
-      "description": "Let's do a quick rundown of this week's news and give some feedback on what is going on. \nMicrosoft based on Linux Kernel: https://www.zdnet.com/article/linux-based-windows-makes-perfect-sense/\nFacebook withdrawal from Europe: https://www.theguardian.com/technology/2020/sep/22/facebook-says-it-may-quit-europe-over-ban-on-sharing-data-with-us#:~:text=%E2%80%9CFacebook%20is%20not%20threatening%20to,order%20to%20operate%20their%20services.\nYouTube video going over the current facebook situation: https://youtu.be/uFNJDKAHlYs .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-20T19:01:32Z",
-      "date": "December 20, 2020",
-      "thumbnail": "https://i.ytimg.com/vi/j4ehoaLQKM4/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "4dLKgmHgYPk",
       "title": "30 Series vs RDNA 2, Microsoft, and Linux+Windows Workstations",
       "description": "A quick rundown of the questions I've been getting asked this week and a peek into the future with how I am using my computers. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/4dLKgmHgYPk/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "4dLKgmHgYPk",
-      "title": "30 Series vs RDNA 2, Microsoft, and Linux+Windows Workstations",
-      "description": "A quick rundown of the questions I've been getting asked this week and a peek into the future with how I am using my computers. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-20T19:01:32Z",
-      "date": "December 20, 2020",
       "thumbnail": "https://i.ytimg.com/vi/4dLKgmHgYPk/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2737,16 +1647,6 @@
       "description": "Exploring Desktop Alternatives Live - This stream will do a full Debian Install and customize the Desktop Environment to something new. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:47:14Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/cd84zlTmzq0/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "cd84zlTmzq0",
-      "title": "Exploring Desktop Alternatives Live",
-      "description": "Exploring Desktop Alternatives Live - This stream will do a full Debian Install and customize the Desktop Environment to something new. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-20T19:01:32Z",
-      "date": "December 20, 2020",
       "thumbnail": "https://i.ytimg.com/vi/cd84zlTmzq0/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2767,16 +1667,6 @@
       "description": "This live stream we will be taking tech questions and also upgrading the hackintosh to Big Sur to see if it breaks. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:38:29Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/6wbN7LLgeXU/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "6wbN7LLgeXU",
-      "title": "Weekly Live Q&A - Hackintosh Upgrade and Upcoming Changes",
-      "description": "This live stream we will be taking tech questions and also upgrading the hackintosh to Big Sur to see if it breaks. .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-20T19:01:32Z",
-      "date": "December 20, 2020",
       "thumbnail": "https://i.ytimg.com/vi/6wbN7LLgeXU/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
@@ -2902,31 +1792,11 @@
       "hasChatReplay": false
     },
     {
-      "videoId": "hzNFZYvt6uQ",
-      "title": "5000 Subscribers | Q&A | Shadow of War on Linux",
-      "description": "5000 Subscriber Suprise Live Stream\nTaking Q&A for a couple hours while playing some Shadow of War on Linux .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-22T19:41:43Z",
-      "date": "December 22, 2020",
-      "thumbnail": "https://i.ytimg.com/vi/hzNFZYvt6uQ/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
       "videoId": "MlyBmwpeQgg",
       "title": "My Very First Live Stream... 1000 Subscribers",
       "description": "The Linux Wrap up and Live Chat. \n\nTopics for this video will be listed below:\n-Linux LTS Kernel moved to 4.19.13\n-Linux Kernel 4.20 Released to Arch\n-Arch 10-Day Challenge Completed\n-Overview of Reddit / Patreon and how to adopt Linux\n-i3 Sneak Peak .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
       "publishedAt": "2025-10-09T14:47:14Z",
       "date": "October 09, 2025",
-      "thumbnail": "https://i.ytimg.com/vi/MlyBmwpeQgg/mqdefault.jpg",
-      "twitchVodId": null,
-      "hasChatReplay": false
-    },
-    {
-      "videoId": "MlyBmwpeQgg",
-      "title": "My Very First Live Stream... 1000 Subscribers",
-      "description": "The Linux Wrap up and Live Chat. \n\nTopics for this video will be listed below:\n-Linux LTS Kernel moved to 4.19.13\n-Linux Kernel 4.20 Released to Arch\n-Arch 10-Day Challenge Completed\n-Overview of Reddit / Patreon and how to adopt Linux\n-i3 Sneak Peak .\n\n►► Digital Downloads ➜ https://www.cttstore.com\n\n►► Titus Tech Talk ➜ https://www.youtube.com/c/TitusTechTalk\n►► Twitch ➜ https://www.twitch.tv/christitustech",
-      "publishedAt": "2020-12-22T19:40:41Z",
-      "date": "December 22, 2020",
       "thumbnail": "https://i.ytimg.com/vi/MlyBmwpeQgg/mqdefault.jpg",
       "twitchVodId": null,
       "hasChatReplay": false
