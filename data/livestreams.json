@@ -1,10 +1,10 @@
 {
-  "updated": "2026-05-07T18:44:07Z",
+  "updated": "2026-05-08T06:47:08Z",
   "items": [
     {
       "videoId": "3_gq8Xd8xIU",
-      "title": "🔴 LTT Labs Linux Article (rough...) and other developments",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "🔴 LTT Labs Linux Article vs Proper Linux benchmarks",
+      "description": "LTT Labs dropped a Linux gaming distro article — and while the effort is appreciated, the AI-generated diagram and bare-bones benchmarks need some work. We tear it apart, talk proper Linux benchmarking with Phoronix Test Suite, wrestle with 3D Mark on Linux (spoiler: it fights back), and fix a critical linutil bug live.\n\nChapters:\n00:00 Stream Restart Drama\n01:17 LTT Labs Diagram Roast\n04:33 Game Testing Critique\n06:09 Distro Recommendations Review\n10:20 Veteran Linux Users\n17:43 SELinux Worth It?\n20:35 Building Benchmark Article\n28:23 Linux Kernel Versions\n31:57 Phoronix Test Suite Setup\n35:39 3D Mark Struggles\n44:55 G2A Warning\n55:48 Geekbench Results\n57:07 Disabling Kernel Mitigations\n1:14:56 Benchmarking Is Hard\n1:38:34 UniGen Heaven Benchmark\n2:00:42 Benchmark Finally Running\n2:15:00 Heaven Results\n2:21:19 Underrated Linux Tools\n2:30:32 Steam PTS Suite\n2:36:23 Cyberpunk Benchmark Run\n2:44:46 LTT Final Verdict\n2:55:29 WinUtil PR Review\n3:09:24 Critical Utils Bug Fix\n3:23:18 Live Bug Fix\n3:26:17 Migration Horror Story\n3:29:20 Stream Wrap Up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-05-07T17:50:54Z",
       "date": "May 07, 2026",
       "thumbnail": "https://i.ytimg.com/vi/3_gq8Xd8xIU/mqdefault.jpg",
