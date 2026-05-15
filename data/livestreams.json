@@ -1,10 +1,10 @@
 {
-  "updated": "2026-05-14T18:46:20Z",
+  "updated": "2026-05-15T18:42:50Z",
   "items": [
     {
       "videoId": "T8Oh-fey1ZI",
-      "title": "🔴 Projects, Projects, Projects.",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "🔴 Everything Is Broken (But We Ship Anyway) | Linux, Rust, Orange Pi & More",
+      "description": "Audio setup broke, Personis died, and we hit every possible dependency mismatch along the way — but we shipped anyway.\n\nIn this stream: we bump Ratatouille & Nyx dependencies in Linux Utility (written in Rust, don't ask), fix a broken logo renderer, merge a pile of PRs, set up an Announcements category on Discourse, get an Orange Pi 800 running on modern Arch Linux ARM, and spend way too long rebuilding Looking Glass from source.\n\nAlso: a rant on vibe coding AI bros, thoughts on X Libre vs Xorg vs Wayland, language hot takes (Rust, Go, C, F#, Haskell), what to do after installing Linux, and a react to LTT's Linux gaming video.\n\n🔴 Live every week — follow to catch the next one.\n\n📂 Linux Utility: https://github.com/ChrisTitusTech/linutil\n🪟 Win11 One Shot: coming before May 31st (holding myself to it)\n💬 Community: Discourse forum\n\nChapters below ↓\n0:00 Audio setup disaster\n1:55 Stream intro\n3:00 Linux Utility PRs\n13:30 Rust dependency fixes\n17:00 Why not Bash/Whiptail?\n22:00 Language hot takes\n28:30 OmareWM web apps\n35:30 DWM & lazy.g fixes\n38:30 X Libre discussion\n48:00 Merge PRs\n55:00 Vibe coder react\n1:02:30 \"Three Plates\" project\n1:07:00 Orange Pi 800 setup\n1:18:00 Why I make YouTube\n1:19:30 Discourse announcements\n1:29:00 Local LLM power costs\n1:34:00 New to Linux guide\n1:42:00 X Libre vs Xorg\n1:55:00 Orange Pi gaming plan\n2:01:00 Win11 May 31 promise\n2:11:00 Arch system cleanup\n2:23:00 GTK vs QT explained\n2:35:00 LTT Linux gaming react\n2:51:00 Xbox mode on Windows\n2:52:00 Looking Glass rebuild\n3:34:00 It works (barely)\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-05-14T15:52:42Z",
       "date": "May 14, 2026",
       "thumbnail": "https://i.ytimg.com/vi/T8Oh-fey1ZI/mqdefault.jpg",
