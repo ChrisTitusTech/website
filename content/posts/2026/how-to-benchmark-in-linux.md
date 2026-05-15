@@ -1,7 +1,7 @@
 ---
 title: "How to Benchmark in Linux"
 
-date: 2026-05-07
+date: 2026-05-15
 url: /how-to-benchmark-in-linux/
 image: images/2026-thumbs/how-to-benchmark-in-linux.webp
 categories:
@@ -11,7 +11,7 @@ tags:
   - benchmarking
   - proton
   - wine
-draft: true
+draft: false
 ---
 Proper Linux benchmarking is not about the biggest single run. It is about building a clean baseline, controlling variables, repeating runs for statistical validity, and generating charts that show the data clearly.
 
@@ -278,4 +278,4 @@ This is publication-ready data: controlled variables, multiple runs, statistical
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "gn0x-Tg1qxk" >}}
