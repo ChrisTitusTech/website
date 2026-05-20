@@ -1,13 +1,13 @@
 {
-  "updated": "2026-05-19T18:47:10Z",
+  "updated": "2026-05-20T01:10:08Z",
   "items": [
     {
       "videoId": "3zuQOKeB-uc",
-      "title": "🔴 WinUtil Updates, Security Review, Failure of Copilot Video, and Headless M1 Mac Server.",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "🔴 WinUtil Updates, Zero Day Exploit & Copilot's Billion Dollar Failure",
+      "description": "Live PR review session for WinUtil covering 15+ pull requests, patching a real zero-day GitHub Actions exploit, debugging a light mode regression, fixing Windows 11 ISO metadata issues, and a breakdown of Microsoft Copilot's massive financial failure — including the Twitter beef between an ex-Microsoft VP and their current communications lead.\n\n🔧 WinUtil: https://github.com/ChrisTitusTech/winutil\n\n0:00 Stream Overview\n0:47 WinUtil PR Review\n1:29 Zero Day Exploit\n4:49 AI Gets Booed\n6:05 M1 Mac Server Plans\n7:35 PBX Homelab Build\n10:53 ECC Memory Take\n14:28 Local LLM Picks\n18:26 PR Session Begins\n33:46 AME Wizard Warning\n37:00 PR: Invoke Cleanup\n43:40 PR: Game Mode Toggle\n50:27 BitLocker Tweak Added\n52:22 Security Hardening PR\n55:06 Prettier Rant\n1:03:30 Self-Hosting Options\n1:09:26 Clean PR Wins\n1:41:40 ISO Metadata Bug\n1:46:44 AI Fixes It Live\n2:05:02 Light Mode Regression\n2:08:28 WinUtil Origins\n2:34:54 GitHub Exploit Explained\n2:47:55 Copilot Video Recording\n2:51:38 Copilot Failure Breakdown\n3:11:14 Why People Try Linux\n3:22:46 Stream Wrap\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-05-19T16:27:08Z",
       "date": "May 19, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/3zuQOKeB-uc/mqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/3zuQOKeB-uc/mqdefault.jpg",
       "twitchVodId": "2775893139",
       "hasChatReplay": false
     },
