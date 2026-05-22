@@ -1,13 +1,13 @@
 {
-  "updated": "2026-05-21T18:47:16Z",
+  "updated": "2026-05-22T01:08:55Z",
   "items": [
     {
       "videoId": "UNRIf0uFj48",
-      "title": "🔴 Homelab day (building low power proxmox server), Linutil Release, and Zed 1.0 implementation",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "Building a Low-Power Proxmox Server (It Didn't Go Smoothly)",
+      "description": "Building a low-power Proxmox server from recycled hardware, pushing a Linutil release, and almost switching to Zed 1.0. Hardware fought back the whole way — wrong pin outs, mystery beep codes, and a PSU that sounds like a jet engine. We got there eventually.\n\n🔗 Linutil: https://github.com/ChrisTitusTech/linutil\n\n0:00 Stream Intro\n0:47 Hardware Overview\n1:29 Switching to Zed\n2:40 Old Server Teardown\n13:10 New Motherboard Install\n24:50 Pinout Problems\n47:56 First Boot Attempt\n1:11:40 Boot Success\n1:26:14 Into the BIOS\n1:29:14 Downloading Proxmox\n1:47:22 Proxmox Install\n2:13:39 Post-Install Scripts\n2:17:18 Docker Setup\n2:27:40 AdGuard Home\n2:38:37 Hardware Encoding Fix\n2:54:33 Linutil PR Review\n2:56:31 Starfield Mod Script\n3:18:32 Gaming Tab PRs\n3:27:31 DWM Titus Fix\n4:08:32 Linutil Release\n4:32:26 Stream Wrap-Up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-05-21T16:16:00Z",
       "date": "May 21, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/UNRIf0uFj48/mqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/UNRIf0uFj48/mqdefault.jpg",
       "twitchVodId": "2777482262",
       "hasChatReplay": false
     },
