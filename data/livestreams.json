@@ -1,6 +1,16 @@
 {
-  "updated": "2026-05-22T01:08:55Z",
+  "updated": "2026-05-26T18:57:12Z",
   "items": [
+    {
+      "videoId": "RnRrsSspo58",
+      "title": "🔴 Zed IDE Switch and Shenanigans with Github",
+      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-05-26T17:19:40Z",
+      "date": "May 26, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/RnRrsSspo58/mqdefault_live.jpg",
+      "twitchVodId": null,
+      "hasChatReplay": false
+    },
     {
       "videoId": "UNRIf0uFj48",
       "title": "Building a Low-Power Proxmox Server (It Didn't Go Smoothly)",
