@@ -1,13 +1,13 @@
 {
-  "updated": "2026-05-26T18:57:12Z",
+  "updated": "2026-05-27T01:10:38Z",
   "items": [
     {
       "videoId": "RnRrsSspo58",
-      "title": "🔴 Zed IDE Switch and Shenanigans with Github",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "I Tried Replacing VS Code with Zed IDE (It Got Weird)",
+      "description": "Switching IDEs is never smooth — today I gave Zed an honest try as a VS Code replacement for managing WinUtil's GitHub workflow. We fought with Git trust issues on Windows, discovered LazyGit and GH Dash as terminal-based PR tools, reviewed and merged several WinUtil PRs (power plan fix, new preset system, advanced tweaks tab), and had a real talk about where AI coding tools actually stand in 2026.\n\nWinUtil: https://github.com/ChrisTitusTech/winutil\nZed Editor: https://zed.dev\nGH Dash: https://github.com/dlvhdr/gh-dash\nLazyGit: https://github.com/jesseduffield/lazygit\n\n0:00 Stream Kickoff\n2:37 WinUtil ISO Creator History\n7:45 Murph Workout Recap\n9:06 Starfield Confession\n15:34 Installing Zed on Windows\n18:55 GitHub Copilot Setup\n26:47 Zed Git Trust Bug\n36:40 Terminal Font Config\n41:52 Fixing Git Trust\n55:23 Exploring LazyGit\n1:19:34 LazyGit Deep Dive\n1:32:54 GH Dash Install\n1:37:01 Merging PRs in GH Dash\n1:56:50 AI Coding Hot Take\n2:21:58 Zed Diff Editor\n2:23:07 Power Plan PR Review\n2:29:10 Squash and Merge\n2:43:55 More PR Reviews\n2:55:41 Stream Wrap-up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-05-26T17:19:40Z",
       "date": "May 26, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/RnRrsSspo58/mqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/RnRrsSspo58/mqdefault.jpg",
       "twitchVodId": "2781473291",
       "hasChatReplay": false
     },
