@@ -1,10 +1,50 @@
 {
-  "updated": "2026-05-14T18:46:20Z",
+  "updated": "2026-05-29T01:13:14Z",
   "items": [
     {
+      "videoId": "Gu-vNJxIVBE",
+      "title": "🔴 Win1Shot Update and LTT Linux Challenge Part 3 live reaction",
+      "description": "LTT is back with another Linux challenge and this time they might actually be getting better. We react to Linus, Luke, and Elijah tackling startup programs, file transfers, video editing, network drives, remote access, and formatting drives on Linux — with some actually decent results. Plus WinOneShot progress with invoke script support, scroll fixes, and some Zed editor adventures along the way.\n\n0:00 Stream Start\n1:30 Linutil & Starfield\n2:32 Medical Checkup TMI\n5:48 Steam Deck Prices\n10:12 WinOneShot Dev Start\n17:33 Merging PRs\n29:08 Invoke Script Fix\n44:30 Zed Theme Customization\n49:10 Agent Mode Thoughts\n1:03:58 InvokeScriptManager\n1:21:30 Tweaks Scroll Fix\n1:27:33 Parallel Threads\n1:41:13 LTT React Time\n1:56:13 Task 1: Startup Apps\n1:58:17 Task 2: File Transfer\n2:03:42 Task 3: Video Editing\n2:08:36 Task 4: Network Drive\n2:15:51 Task 5: Remote Access\n2:16:35 TeamViewer Is Terrible\n2:28:41 Task 6: Easy Anti-Cheat\n2:34:34 Task 7: Format Drive\n2:41:39 Balena Etcher Drama\n2:48:28 Final Thoughts\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-05-28T17:11:24Z",
+      "date": "May 28, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/Gu-vNJxIVBE/mqdefault.jpg",
+      "twitchVodId": "2783018107",
+      "hasChatReplay": true
+    },
+    {
+      "videoId": "RnRrsSspo58",
+      "title": "I Tried Replacing VS Code with Zed IDE (It Got Weird)",
+      "description": "Switching IDEs is never smooth — today I gave Zed an honest try as a VS Code replacement for managing WinUtil's GitHub workflow. We fought with Git trust issues on Windows, discovered LazyGit and GH Dash as terminal-based PR tools, reviewed and merged several WinUtil PRs (power plan fix, new preset system, advanced tweaks tab), and had a real talk about where AI coding tools actually stand in 2026.\n\nWinUtil: https://github.com/ChrisTitusTech/winutil\nZed Editor: https://zed.dev\nGH Dash: https://github.com/dlvhdr/gh-dash\nLazyGit: https://github.com/jesseduffield/lazygit\n\n0:00 Stream Kickoff\n2:37 WinUtil ISO Creator History\n7:45 Murph Workout Recap\n9:06 Starfield Confession\n15:34 Installing Zed on Windows\n18:55 GitHub Copilot Setup\n26:47 Zed Git Trust Bug\n36:40 Terminal Font Config\n41:52 Fixing Git Trust\n55:23 Exploring LazyGit\n1:19:34 LazyGit Deep Dive\n1:32:54 GH Dash Install\n1:37:01 Merging PRs in GH Dash\n1:56:50 AI Coding Hot Take\n2:21:58 Zed Diff Editor\n2:23:07 Power Plan PR Review\n2:29:10 Squash and Merge\n2:43:55 More PR Reviews\n2:55:41 Stream Wrap-up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-05-26T17:19:40Z",
+      "date": "May 26, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/RnRrsSspo58/mqdefault.jpg",
+      "twitchVodId": "2781473291",
+      "hasChatReplay": true
+    },
+    {
+      "videoId": "UNRIf0uFj48",
+      "title": "Building a Low-Power Proxmox Server (It Didn't Go Smoothly)",
+      "description": "Building a low-power Proxmox server from recycled hardware, pushing a Linutil release, and almost switching to Zed 1.0. Hardware fought back the whole way — wrong pin outs, mystery beep codes, and a PSU that sounds like a jet engine. We got there eventually.\n\n🔗 Linutil: https://github.com/ChrisTitusTech/linutil\n\n0:00 Stream Intro\n0:47 Hardware Overview\n1:29 Switching to Zed\n2:40 Old Server Teardown\n13:10 New Motherboard Install\n24:50 Pinout Problems\n47:56 First Boot Attempt\n1:11:40 Boot Success\n1:26:14 Into the BIOS\n1:29:14 Downloading Proxmox\n1:47:22 Proxmox Install\n2:13:39 Post-Install Scripts\n2:17:18 Docker Setup\n2:27:40 AdGuard Home\n2:38:37 Hardware Encoding Fix\n2:54:33 Linutil PR Review\n2:56:31 Starfield Mod Script\n3:18:32 Gaming Tab PRs\n3:27:31 DWM Titus Fix\n4:08:32 Linutil Release\n4:32:26 Stream Wrap-Up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-05-21T16:16:00Z",
+      "date": "May 21, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/UNRIf0uFj48/mqdefault.jpg",
+      "twitchVodId": "2777482262",
+      "hasChatReplay": true
+    },
+    {
+      "videoId": "3zuQOKeB-uc",
+      "title": "🔴 WinUtil Updates, Zero Day Exploit & Copilot's Billion Dollar Failure",
+      "description": "Live PR review session for WinUtil covering 15+ pull requests, patching a real zero-day GitHub Actions exploit, debugging a light mode regression, fixing Windows 11 ISO metadata issues, and a breakdown of Microsoft Copilot's massive financial failure — including the Twitter beef between an ex-Microsoft VP and their current communications lead.\n\n🔧 WinUtil: https://github.com/ChrisTitusTech/winutil\n\n0:00 Stream Overview\n0:47 WinUtil PR Review\n1:29 Zero Day Exploit\n4:49 AI Gets Booed\n6:05 M1 Mac Server Plans\n7:35 PBX Homelab Build\n10:53 ECC Memory Take\n14:28 Local LLM Picks\n18:26 PR Session Begins\n33:46 AME Wizard Warning\n37:00 PR: Invoke Cleanup\n43:40 PR: Game Mode Toggle\n50:27 BitLocker Tweak Added\n52:22 Security Hardening PR\n55:06 Prettier Rant\n1:03:30 Self-Hosting Options\n1:09:26 Clean PR Wins\n1:41:40 ISO Metadata Bug\n1:46:44 AI Fixes It Live\n2:05:02 Light Mode Regression\n2:08:28 WinUtil Origins\n2:34:54 GitHub Exploit Explained\n2:47:55 Copilot Video Recording\n2:51:38 Copilot Failure Breakdown\n3:11:14 Why People Try Linux\n3:22:46 Stream Wrap\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-05-19T16:27:08Z",
+      "date": "May 19, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/3zuQOKeB-uc/mqdefault.jpg",
+      "twitchVodId": "2775893139",
+      "hasChatReplay": true
+    },
+    {
       "videoId": "T8Oh-fey1ZI",
-      "title": "🔴 Projects, Projects, Projects.",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "🔴 Everything Is Broken (But We Ship Anyway) | Linux, Rust, Orange Pi & More",
+      "description": "Audio setup broke, Personis died, and we hit every possible dependency mismatch along the way — but we shipped anyway.\n\nIn this stream: we bump Ratatouille & Nyx dependencies in Linux Utility (written in Rust, don't ask), fix a broken logo renderer, merge a pile of PRs, set up an Announcements category on Discourse, get an Orange Pi 800 running on modern Arch Linux ARM, and spend way too long rebuilding Looking Glass from source.\n\nAlso: a rant on vibe coding AI bros, thoughts on X Libre vs Xorg vs Wayland, language hot takes (Rust, Go, C, F#, Haskell), what to do after installing Linux, and a react to LTT's Linux gaming video.\n\n🔴 Live every week — follow to catch the next one.\n\n📂 Linux Utility: https://github.com/ChrisTitusTech/linutil\n🪟 Win11 One Shot: coming before May 31st (holding myself to it)\n💬 Community: Discourse forum\n\nChapters below ↓\n0:00 Audio setup disaster\n1:55 Stream intro\n3:00 Linux Utility PRs\n13:30 Rust dependency fixes\n17:00 Why not Bash/Whiptail?\n22:00 Language hot takes\n28:30 OmareWM web apps\n35:30 DWM & lazy.g fixes\n38:30 X Libre discussion\n48:00 Merge PRs\n55:00 Vibe coder react\n1:02:30 \"Three Plates\" project\n1:07:00 Orange Pi 800 setup\n1:18:00 Why I make YouTube\n1:19:30 Discourse announcements\n1:29:00 Local LLM power costs\n1:34:00 New to Linux guide\n1:42:00 X Libre vs Xorg\n1:55:00 Orange Pi gaming plan\n2:01:00 Win11 May 31 promise\n2:11:00 Arch system cleanup\n2:23:00 GTK vs QT explained\n2:35:00 LTT Linux gaming react\n2:51:00 Xbox mode on Windows\n2:52:00 Looking Glass rebuild\n3:34:00 It works (barely)\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-05-14T15:52:42Z",
       "date": "May 14, 2026",
       "thumbnail": "https://i.ytimg.com/vi/T8Oh-fey1ZI/mqdefault.jpg",
