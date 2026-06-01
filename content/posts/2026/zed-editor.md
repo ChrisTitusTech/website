@@ -13,7 +13,7 @@ tags:
   - editor
   - ai
   - rust
-draft: true
+draft: false
 ---
 Zed is what happens when an editor is built for speed first. It is written in Rust, rendered with the GPU, and feels instant in a way most Electron-based editors never do.
 
@@ -103,4 +103,4 @@ If you want to try it, grab Zed at [zed.dev](https://zed.dev/) and see the exact
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "59jRdtEiSpA" >}}
