@@ -1,13 +1,13 @@
 {
-  "updated": "2026-06-02T19:26:14Z",
+  "updated": "2026-06-03T01:22:23Z",
   "items": [
     {
       "videoId": "bkFjaT-sVxg",
-      "title": "🔴 Expand myBash, The Zed Switch, Vibe Coders Nuked, Trash v Linux, Zimaboard 2 / low powered systems",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "title": "Vibe Coders Nuked, Trash v Linux, Zimaboard 2 w Rocky Linux",
+      "description": "Today's stream covered a LOT: the full Zed editor switch (spoiler: it's what happens when NeoVim and VS Code have a kid), expanding my .bashrc to handle paths properly, reacting to TrashDev's Linux journey (way more accurate than LTT), the open source dev who slipped a prompt injection into his library to nuke vibe coders' code, and setting up a ZimaBoard 2 with Rocky Linux — including building VA drivers from source because apparently I hate myself.\nLinks and resources mentioned in the stream:\n\nZimaBoard 2: https://www.zimaspace.com\nTrashDev Linux video: https://www.youtube.com/watch?v=AapTIwXPztM\nZed Editor: https://zed.dev\nRocky Linux: https://rockylinux.org\nJQWIK prompt injection article: https://arstechnica.com/security/2026/05/fed-up-with-vibe-coders-dev-sneaks-data-nuking-prompt-injection-into-their-code/\n\nCHAPTERS\n00:00 Stream kickoff\n00:45 Zed editor deep dive\n01:32 Linux book update\n02:02 TrashDev preview\n04:41 Vibe coders nuked\n05:35 ZimaBoard 2 unboxing\n06:25 WinUtil PR chaos\n11:46 PewDiePie AI project\n18:31 Expanding my bash\n22:08 Zed tasks demo\n26:32 Starfield tangent\n28:08 topgrade live update\n28:55 My bash fix\n36:44 Zed switch recap\n44:55 Cloning mybash\n57:27 Bad PR review\n1:05:00 PR feedback given\n1:09:52 Opening ZimaBoard\n1:19:49 Vibe coders article\n1:22:31 Prompt injection breakdown\n1:28:56 Git saves you\n1:38:34 TrashDev reacts\n1:40:18 Fedora first install\n1:44:30 Linux Mint moment\n1:47:47 Pop OS journey\n1:49:25 Hyperland rabbit hole\n1:54:54 OBS virtual camera tip\n1:57:35 TrashDev desktop reveal\n2:05:09 Linux future rant\n2:15:50 ZimaBoard assembly\n2:27:34 Hard drives added\n2:30:00 Privacy rant\n2:32:34 Rocky Linux idea\n2:45:00 Flashing Rocky Linux\n2:58:08 ZimaOS first boot\n3:02:41 CasaOS dashboard\n3:05:21 Remote access philosophy\n3:09:49 App store exploration\n3:12:47 N150 vs Ryzen V1500\n3:17:49 VM attempt fails\n3:25:28 QuickSync is insane\n3:32:47 Fan install break\n3:33:41 Rocky Linux install\n3:56:23 ZimaBoard BIOS\n4:07:27 Rocky Linux boots\n4:11:07 CLI setup begins\n4:21:30 Podman vs Docker\n4:30:34 DNF update pain\n4:34:54 RPM Fusion setup\n4:44:08 EPEL and CRB\n4:47:08 Zed wrap up\n4:57:32 Why Rocky Linux\n5:00:40 Red Hat betrayal rant\n5:06:52 Cockpit web UI\n5:11:06 Webmin vs Cockpit\n5:17:48 Plex on Rocky\n5:29:10 VA driver hell\n5:39:49 Intel media driver\n5:52:18 Building from source\n5:58:32 QuickSync confirmed\n6:00:22 Set and forget\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-06-02T15:43:07Z",
       "date": "June 02, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/bkFjaT-sVxg/mqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/bkFjaT-sVxg/mqdefault.jpg",
       "twitchVodId": "2786917006",
       "hasChatReplay": false
     },
