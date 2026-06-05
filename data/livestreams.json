@@ -1,13 +1,13 @@
 {
-  "updated": "2026-06-04T18:58:07Z",
+  "updated": "2026-06-05T01:13:01Z",
   "items": [
     {
       "videoId": "Lm1sqPQLKiM",
       "title": "🔴 Switching to MangoWM Full Time + WinUtil ISO Revamp",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "description": "Finally making the full switch to Mango WM (DWM-based Wayland compositor) paired with Dank Material Shell — and so far it's actually sticking. We work through real-world setup issues: fixing Zed Editor's black screen on Wayland, getting DaVinci Resolve launching properly, wrestling with DeskFlow/Synergy input sharing on Wayland, and configuring audio keybinds in DMS.\nOn the WinUtil side, we review Gabby's Windows 11 Creator revamp PR, test the new ISO build pipeline, and merge the PowerShell profile fixes. Plus a new \"detect reverted tweaks on launch\" PR that's genuinely useful.\n\n🔗 WinUtil: https://github.com/ChrisTitusTech/winutil\n🔗 LinUtil: https://github.com/ChrisTitusTech/linutil\n\n00:00 Intro & MangoWM\n00:52 DankShell Overview\n02:00 PowerShell Profile Fix\n05:20 Installing MangoWM\n14:08 Mango Config Setup\n17:17 Rebooting Into Mango\n19:50 Fixing Zed Editor\n43:43 Zed Wrapper Script\n47:55 Fixing DaVinci Resolve\n1:03:42 DeskFlow Setup\n1:08:42 Back to LandMouse\n1:19:50 XDG Portal Fix\n1:27:14 UWSM Session Wrap\n1:33:25 Rebooting Again\n1:39:30 DeskFlow Fails\n1:50:00 Back to WinUtil\n1:54:39 FOSS Indicator Discussion\n1:57:38 Win11 Creator PR\n2:07:30 Testing the ISO\n2:13:55 Media Creation Tool\n2:39:28 Revert Tweaks PR\n3:43:09 Merging the PR\n3:57:49 New Pre-Release\n4:09:50 Wayland Thoughts\n4:17:46 Stream Wrap-Up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-06-04T16:42:55Z",
       "date": "June 04, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/Lm1sqPQLKiM/mqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/Lm1sqPQLKiM/mqdefault.jpg",
       "twitchVodId": "2788525702",
       "hasChatReplay": false
     },
