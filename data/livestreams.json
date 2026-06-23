@@ -1,6 +1,46 @@
 {
-  "updated": "2026-05-29T01:13:14Z",
+  "updated": "2026-06-10T01:13:44Z",
   "items": [
+    {
+      "videoId": "wf9rLEjWmPE",
+      "title": "🔴 Taking a break",
+      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-06-09T19:25:38Z",
+      "date": "June 09, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/wf9rLEjWmPE/mqdefault.jpg",
+      "twitchVodId": "2792598020",
+      "hasChatReplay": true
+    },
+    {
+      "videoId": "hpBE5pcqdKo",
+      "title": "🔴 Project Odysseus - Initial Install",
+      "description": "PewDiePie's Project Odysseus promises a slick all-in-one front end for running local LLMs — but what does setup actually look like if you're not running four RTX 6000 Pros? We find out live.\n\nI'm running an Intel Arc Pro B70 (32GB VRAM, ~$1,000) and taking Odysseus from a fresh clone all the way to a working local AI assistant — hitting every GPU detection failure, broken dependency, and syscl build error along the way.\n\nBy the end of the stream we have Qwen 3 35B-A3B (MoE, Q5) running locally through llama.cpp with SYCL backend, wired into Odysseus, and doing real deep-research tasks — including drafting a port plan for DankMaterialShell from Wayland to X11.\n\n▶ What we cover:\n- Hardware reality check — what you actually need vs. what Pewds used (~$40K in RTX 6000 Pros)\n- Native vs. Docker install (and why Intel GPU users need native)\n- Building llama.cpp from source with Intel SYCL/oneAPI backend\n- GPU detection bug in Odysseus + open PR walkthrough\n- Picking and downloading the right Qwen 3 model for 32GB VRAM\n- Context sizing math — hitting 128K context on a Q5 quant\n- Writing a systemd service to auto-launch llama-server\n- SearXNG integration + Context7 MCP setup\n- Deep research demo: porting a Wayland shell to X11\n- Wayland vs. X11 window manager rant (RIP MangoWM)\n\n⚡ For most people: if you have a high-end NVIDIA card, just use the Docker install and you'll be up in ~30 min. Intel/AMD users, buckle up.\n\n📖 The Linux Desktop Guide (physical book): https://christitus.com\n🛠 WinUtil: https://github.com/ChrisTitusTech/winutil\n🐧 Linutil: https://github.com/ChrisTitusTech/linutil\n\n🔴 Stream schedule: Mon / Tue / Thu\n💬 Community forum: https://forum.christitus.com\n\n#Linux #LocalAI #LLM #ProjectOdysseus #IntelArc #llamacpp #Qwen\n\n00:00 Intro & hardware reality\n01:54 Intel B70 overview\n03:27 Project Odysseus overview\n06:54 Native vs. Docker decision\n08:50 PewDiePie's $40K GPU build\n11:31 Cloning & installing Odysseus\n18:30 Install complete\n22:14 GPU not detected\n26:34 Intel support bug & PR\n31:33 Building llama.cpp from source\n37:44 Reinstalling oneAPI toolkit\n42:45 SYCL AUR package attempt\n53:20 Build finally succeeds\n58:08 What we learned so far\n1:05:14 DistroBox attempt fails\n1:12:02 Back to native approach\n1:17:18 Full clean rebuild\n1:28:46 Past-Chris saves the day\n1:40:07 Llama server running\n1:51:13 Odysseus connected\n1:53:31 First AI test\n1:54:40 Deep research demo\n2:06:18 PewDiePie 200 IQ moment\n2:09:27 Downloading Qwen 3 35B\n2:26:47 128K context confirmed\n2:29:25 Qwen 3 live in Odysseus\n2:30:50 Systemd service with AI\n2:56:40 Full system working\n2:57:44 SearXNG integration\n2:59:32 MCP server setup\n3:08:28 Wrap-up & next stream\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-06-08T17:08:27Z",
+      "date": "June 08, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/hpBE5pcqdKo/mqdefault.jpg",
+      "twitchVodId": "2791814109",
+      "hasChatReplay": true
+    },
+    {
+      "videoId": "Lm1sqPQLKiM",
+      "title": "🔴 Switching to MangoWM Full Time + WinUtil ISO Revamp",
+      "description": "Finally making the full switch to Mango WM (DWM-based Wayland compositor) paired with Dank Material Shell — and so far it's actually sticking. We work through real-world setup issues: fixing Zed Editor's black screen on Wayland, getting DaVinci Resolve launching properly, wrestling with DeskFlow/Synergy input sharing on Wayland, and configuring audio keybinds in DMS.\nOn the WinUtil side, we review Gabby's Windows 11 Creator revamp PR, test the new ISO build pipeline, and merge the PowerShell profile fixes. Plus a new \"detect reverted tweaks on launch\" PR that's genuinely useful.\n\n🔗 WinUtil: https://github.com/ChrisTitusTech/winutil\n🔗 LinUtil: https://github.com/ChrisTitusTech/linutil\n\n00:00 Intro & MangoWM\n00:52 DankShell Overview\n02:00 PowerShell Profile Fix\n05:20 Installing MangoWM\n14:08 Mango Config Setup\n17:17 Rebooting Into Mango\n19:50 Fixing Zed Editor\n43:43 Zed Wrapper Script\n47:55 Fixing DaVinci Resolve\n1:03:42 DeskFlow Setup\n1:08:42 Back to LandMouse\n1:19:50 XDG Portal Fix\n1:27:14 UWSM Session Wrap\n1:33:25 Rebooting Again\n1:39:30 DeskFlow Fails\n1:50:00 Back to WinUtil\n1:54:39 FOSS Indicator Discussion\n1:57:38 Win11 Creator PR\n2:07:30 Testing the ISO\n2:13:55 Media Creation Tool\n2:39:28 Revert Tweaks PR\n3:43:09 Merging the PR\n3:57:49 New Pre-Release\n4:09:50 Wayland Thoughts\n4:17:46 Stream Wrap-Up\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-06-04T16:42:55Z",
+      "date": "June 04, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/Lm1sqPQLKiM/mqdefault.jpg",
+      "twitchVodId": "2788525702",
+      "hasChatReplay": true
+    },
+    {
+      "videoId": "bkFjaT-sVxg",
+      "title": "Vibe Coders Nuked, Trash v Linux, Zimaboard 2 w Rocky Linux",
+      "description": "Today's stream covered a LOT: the full Zed editor switch (spoiler: it's what happens when NeoVim and VS Code have a kid), expanding my .bashrc to handle paths properly, reacting to TrashDev's Linux journey (way more accurate than LTT), the open source dev who slipped a prompt injection into his library to nuke vibe coders' code, and setting up a ZimaBoard 2 with Rocky Linux — including building VA drivers from source because apparently I hate myself.\nLinks and resources mentioned in the stream:\n\nZimaBoard 2: https://www.zimaspace.com\nTrashDev Linux video: https://www.youtube.com/watch?v=AapTIwXPztM\nZed Editor: https://zed.dev\nRocky Linux: https://rockylinux.org\nJQWIK prompt injection article: https://arstechnica.com/security/2026/05/fed-up-with-vibe-coders-dev-sneaks-data-nuking-prompt-injection-into-their-code/\n\nCHAPTERS\n00:00 Stream kickoff\n00:45 Zed editor deep dive\n01:32 Linux book update\n02:02 TrashDev preview\n04:41 Vibe coders nuked\n05:35 ZimaBoard 2 unboxing\n06:25 WinUtil PR chaos\n11:46 PewDiePie AI project\n18:31 Expanding my bash\n22:08 Zed tasks demo\n26:32 Starfield tangent\n28:08 topgrade live update\n28:55 My bash fix\n36:44 Zed switch recap\n44:55 Cloning mybash\n57:27 Bad PR review\n1:05:00 PR feedback given\n1:09:52 Opening ZimaBoard\n1:19:49 Vibe coders article\n1:22:31 Prompt injection breakdown\n1:28:56 Git saves you\n1:38:34 TrashDev reacts\n1:40:18 Fedora first install\n1:44:30 Linux Mint moment\n1:47:47 Pop OS journey\n1:49:25 Hyperland rabbit hole\n1:54:54 OBS virtual camera tip\n1:57:35 TrashDev desktop reveal\n2:05:09 Linux future rant\n2:15:50 ZimaBoard assembly\n2:27:34 Hard drives added\n2:30:00 Privacy rant\n2:32:34 Rocky Linux idea\n2:45:00 Flashing Rocky Linux\n2:58:08 ZimaOS first boot\n3:02:41 CasaOS dashboard\n3:05:21 Remote access philosophy\n3:09:49 App store exploration\n3:12:47 N150 vs Ryzen V1500\n3:17:49 VM attempt fails\n3:25:28 QuickSync is insane\n3:32:47 Fan install break\n3:33:41 Rocky Linux install\n3:56:23 ZimaBoard BIOS\n4:07:27 Rocky Linux boots\n4:11:07 CLI setup begins\n4:21:30 Podman vs Docker\n4:30:34 DNF update pain\n4:34:54 RPM Fusion setup\n4:44:08 EPEL and CRB\n4:47:08 Zed wrap up\n4:57:32 Why Rocky Linux\n5:00:40 Red Hat betrayal rant\n5:06:52 Cockpit web UI\n5:11:06 Webmin vs Cockpit\n5:17:48 Plex on Rocky\n5:29:10 VA driver hell\n5:39:49 Intel media driver\n5:52:18 Building from source\n5:58:32 QuickSync confirmed\n6:00:22 Set and forget\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "publishedAt": "2026-06-02T15:43:07Z",
+      "date": "June 02, 2026",
+      "thumbnail": "https://i.ytimg.com/vi/bkFjaT-sVxg/mqdefault.jpg",
+      "twitchVodId": "2786917006",
+      "hasChatReplay": true
+    },
     {
       "videoId": "Gu-vNJxIVBE",
       "title": "🔴 Win1Shot Update and LTT Linux Challenge Part 3 live reaction",
