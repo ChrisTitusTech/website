@@ -10,7 +10,7 @@ tags:
   - Arch
   - Fedora
   - Security
-draft: true
+draft: false
 ---
 
 Arch Linux has always been the distro for people who want control, speed, and the newest packages as soon as they land. That is also the tradeoff. When you live on the bleeding edge and pull from community package scripts, you are taking on more responsibility than most desktop Linux users realize.
@@ -179,4 +179,4 @@ That is why switching from Arch to Fedora makes sense now.
 
 ## Walkthrough Video
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "ybm1KwlGKA0" >}}
