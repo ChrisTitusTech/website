@@ -1,5 +1,8 @@
 # ignore all logs
 .vscode/
+.venv/
+__pycache__/
+*.py[cod]
 public/
 resources/
 *.log
