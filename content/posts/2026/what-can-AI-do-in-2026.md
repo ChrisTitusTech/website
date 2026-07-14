@@ -94,4 +94,4 @@ The dividing line is simple: if you understand the system, AI can make you much 
 
 The video below covers these examples and shows how I use AI in real projects.
 
-{{< youtube "WVQ_2hN_zzs" >}}
+{{< youtube "fYxSGXpl6d4" >}}
