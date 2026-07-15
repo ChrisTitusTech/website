@@ -35,8 +35,88 @@ Phoronix Test Suite saves this metadata automatically. If you change multiple va
 
 ### Phoronix Test Suite
 
+#### Install Phoronix Test Suite on Debian
+
+Debian no longer ships `phoronix-test-suite`; its tracker marks the package as removed. The supported alternative is installing from the [upstream Git repository](https://github.com/phoronix-test-suite/phoronix-test-suite). See the [Debian Package Tracker](https://tracker.debian.org/pkg/phoronix-test-suite) for the package status.
+
+##### 1. Install prerequisites
+
 ```bash
-# Debian/Ubuntu
+sudo apt update
+sudo apt install git php-cli ca-certificates
+```
+
+Only PHP CLI is mandatory for the test-suite framework. Individual benchmarks may require additional compilers and libraries, which Phoronix can usually install through APT. See the [official download documentation](https://www.phoronix-test-suite.com/?k=downloads) for more information.
+
+##### 2. Download the source
+
+Keep the repository so it can be updated later:
+
+```bash
+mkdir -p "$HOME/src"
+cd "$HOME/src"
+
+git clone --depth 1 \
+  https://github.com/phoronix-test-suite/phoronix-test-suite.git
+
+cd phoronix-test-suite
+```
+
+Test it directly before installing:
+
+```bash
+./phoronix-test-suite version
+```
+
+##### 3. Install system-wide
+
+```bash
+sudo ./install-sh
+hash -r
+```
+
+Verify the installation:
+
+```bash
+phoronix-test-suite version
+phoronix-test-suite system-info
+```
+
+The command should now be installed as `/usr/bin/phoronix-test-suite`.
+
+##### 4. Run a benchmark
+
+For example:
+
+```bash
+phoronix-test-suite benchmark smallpt
+```
+
+Or inspect available tests:
+
+```bash
+phoronix-test-suite list-available-tests
+```
+
+Phoronix will prompt before downloading benchmarks, installing dependencies, or uploading results.
+
+##### Updating manually
+
+This installation is not managed by APT. Update it with:
+
+```bash
+cd "$HOME/src/phoronix-test-suite"
+git pull --ff-only
+sudo ./install-sh
+phoronix-test-suite version
+```
+
+Re-running `install-sh` replaces the existing installation with the updated source.
+
+#### Other distributions
+
+```bash
+# Ubuntu
 sudo apt install phoronix-test-suite
 
 # Fedora
