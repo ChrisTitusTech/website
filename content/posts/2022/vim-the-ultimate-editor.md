@@ -1,5 +1,5 @@
 ---
-title: "Vim the Ultimate Editor"
+title: "Neovim: The Ultimate Editor"
 
 date: 2022-10-14
 url: /vim-the-ultimate-editor/
@@ -9,70 +9,170 @@ categories:
   - Windows
   - MacOS
 tags:
-  - VIM
+  - Neovim
+  - Vim
 draft: false
 ---
-VIM editor is one of the most beloved, but often misunderstood editors in existence. Let's configure it from a noobs perspective and show you it's power.
+Neovim is one of the most powerful, but often misunderstood, editors in
+existence. Let's approach it from a beginner's perspective and show why it is
+now my editor of choice.
 <!--more-->
 
-## Why VIM?
+> This article originally covered Vim and my old `myvim` configuration. I no
+> longer use Vim, and the `myvim` project has been retired. I have moved to
+> Neovim, and my active configuration is the
+> [ChrisTitusTech/neovim](https://github.com/ChrisTitusTech/neovim) project. For
+> the latest deep dive into that setup, see
+> [Neovim the Elite Editor](/neovim-the-elite-editor/).
 
-There is so many things to learn about VIM, but before we start the question often pops up why not just use VS Code or IntelliJ?
+## Why Neovim?
 
-VS Code and IntelliJ have some fantastic ease of use, and great debugging capabilities. There is extension support to add some amazing functionality. So why do many programmers still use VIM? one word: SPEED!
+There is a lot to learn about Neovim, but the first question is usually: why
+not just use VS Code or IntelliJ?
 
-There is nothing that can even compare when it comes to speed from a veteran VIM user. They will blaze through code at the speed of light and change so much on their screen that you will have a hard time following just watching it. Don't believe me? Just watch ANY "[The Primeagen](https://www.youtube.com/c/ThePrimeagen/videos)" videos
+Those editors offer an easy starting point, excellent debugging, and huge
+extension ecosystems. Neovim takes a different approach. It gives you the
+speed and keyboard-driven editing model of Vim, then adds a modern Lua
+configuration system, built-in language server support, and a plugin ecosystem
+that can turn it into a focused development environment.
 
-So if it's so fast why don't most people use VIM? It's hard and has one of the biggest learning curves that I have ever seen from any program. It will take **YEARS** to master, months to be better than vs code/intellij editors, and weeks of learning to be comparable to any other editor on the market. 
+An experienced Neovim user can move through a project, search files, refactor
+code, and operate several tools without reaching for the mouse. If you want to
+see that editing style pushed to its limits, watch
+[ThePrimeagen](https://www.youtube.com/c/ThePrimeagen/videos).
 
-However, the payoff is beyond worth it to me. The reward feels so good when you start to _get_ it. The big thing... you can throw your mouse away, because when you get it... a mouse is no longer needed. 
+The tradeoff is the learning curve. Neovim is not something you completely
+master in a weekend. It takes time to build the motions into muscle memory, but
+the payoff is worth it when editing starts to feel immediate instead of being
+a series of menus and mouse movements.
 
-## Beginning steps
+## Learn the Vim fundamentals
 
-The very first thing you need to know about vim is the modes.
+Neovim uses the same modal editing model and motions that made Vim so
+effective. The first thing to understand is its modes:
 
-  - Normal Mode - The default mode you enter into on launch. This allows quick movement, exiting, commands, but you don't "type" in this mode. 
-  - Insert Mode - Pressing `i` on your keyboard will allow you enter insert mode. This allows you to type text and keyboard input to the open file.
-  - Visual Mode - Pressing `v` on your keyboard will put you in visual mode. This allows you to highlight and use commands on highlighted syntax.
+- **Normal mode** - The default mode. Use it for movement, commands, and editing
+  operations.
+- **Insert mode** - Press `i` to enter text.
+- **Visual mode** - Press `v` to select text and then run an operation on the
+  selection.
 
-_Note: You can escape Insert and Visual mode to go back to Normal mode with `esc` key_
+Press `Esc` to return to Normal mode from Insert or Visual mode. My
+configuration also maps `jj` in Insert mode as a faster escape.
 
-The other MEME you will always see about vim is you can't exit it... just turn your computer off. Haha, but seriously exiting vim is probably my favorite thing and that brings us to the first thing to remember:
+The running joke is that nobody knows how to exit Vim. The same commands work
+in Neovim:
 
-> "If something is slow in vim, there is a way to do it faster in vim"
+- Save and quit with `:wq`, `:x`, or `ZZ`.
+- Quit without saving with `:q!` or `ZQ`.
 
-The official way to save and quit vim is to press the following in normal mode: `:wq` or faster `:x` or even faster `ZZ`
+The important idea is still:
 
-To quit without saving: `:q!` or faster `ZQ`
+> If something feels slow in Neovim, there is probably a faster way to do it.
 
-VIM Cheatsheets:
+Useful Vim motion cheatsheets still apply to Neovim:
 
-  - <https://devhints.io/vim>
-  - <https://vim.rtorr.com/>
+- <https://devhints.io/vim>
+- <https://vim.rtorr.com/>
 
 {{< x user="christitustech" id="1577690702200590336" >}}
 
-## Learning the basics
+## Practice before you customize
 
-Now that you can actually function inside of vim, you might be thinking... "How in the hell do elite programmers use this damn program so fast?". 
+Run `:Tutor` inside Neovim and work through it repeatedly. Treat it like a
+speedrun: finish it, repeat it, and try to rely less on the hints each time.
+That repetition is how the motions stop being individual keys and become
+muscle memory.
 
-Movement and muscle memory are the biggest things with vim. It's not just knowing the keys, but using them without thinking. This may seem impossible, but the more you practice the better you will get. 
+Move as much of your real workflow into Neovim as you comfortably can. At the
+same time, do not blindly copy every keymap from somebody else's config. A
+configuration should reduce friction in your own work.
 
-You may have heard of `vimtutor` which walks you through the basics of vim. However, I'd encourage you to treat it like speed runners of your favorite video game. Run `vimtutor` as often as you can and treat it like a video game. How fast can you run it? Can you beat the old time? Can you complete the entire thing for the first time?!
+## My current Neovim project
 
-This is where you will pick up the speed. Between the constant cheatsheets and running `vimtutor` as often as possible.
+My old setup was a single `.vimrc` in the now-retired `myvim` repository. The
+replacement is a complete Lua-based Neovim project built on
+[kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
 
-Other tips are moving as much of your workflow into vim as possible and customizing it to **YOUR** needs. Don't just copy and paste some vimrc file your favorite programmer uses... it's made for that person NOT YOU! 
+The current setup includes:
 
-## Making VIM your own
+- `lazy.nvim` for plugin management and Mason for language tools.
+- LSP features, diagnostics, formatting, completion, and snippets.
+- Snacks and Oil for project search, file navigation, and an explorer.
+- WhichKey for discovering shortcuts as you learn the configuration.
+- Bufferline, Trouble, Aerial, Undotree, and an integrated terminal.
+- Markdown image pasting, linting, and distraction-free writing tools.
+- Optional GitHub Copilot completion and Copilot Chat integration.
 
-It is time to elevate your game to the elite status and making your own `.vimrc` file. This is where you make it feel awesome, even if you still suck at using vim. It's important that you make vim feel good as this will make you want to continue using it. 
+The leader key is `Space`. Press it in Normal mode and wait for WhichKey to
+show the available commands. A few shortcuts I use constantly are:
 
-I've been using VIM for a month and this is my `.vimrc` file. I use a lot of plugins, themes, and just a few hotkeys. This isn't what an experts .vimrc file looks like, as I still consider myself just now leaving the beginner stages into an intermediate user. As time goes on I will expand this file by adding more shortcuts and better hotkeys. 
+| Shortcut | Action |
+| --- | --- |
+| `<leader>ff` | Find files |
+| `<leader>fg` | Search text across the project |
+| `<leader>fe` | Open the file explorer |
+| `<leader><leader>` | Switch between open buffers |
+| `<leader>f` | Format the current buffer |
+| `<leader>xx` | Open project diagnostics |
+| `F5` | Open the persistent undo history |
 
-Source: <https://github.com/christitustech/myvim>
-{{< ghcode "https://raw.githubusercontent.com/ChrisTitusTech/myvim/master/.vimrc" >}}
+The complete keymap, plugin, dependency, and troubleshooting reference lives in
+the project's
+[configuration guide](https://github.com/ChrisTitusTech/neovim/blob/main/titus-kickstart/GUIDE.md).
 
-## Walkthrough Video
+## Install my Neovim configuration
 
-{{< youtube P88ydZVcm1s >}}
+The project supports Neovim 0.10 or newer and expects Git, a Nerd Font, and a
+few command-line dependencies. Clone the repository to a normal project
+directory so its dependency script can link the actual configuration into
+place.
+
+On Linux:
+
+```bash
+git clone https://github.com/ChrisTitusTech/neovim ~/neovim
+cd ~/neovim
+bash lin-depend.sh
+nvim
+```
+
+On Windows, run the equivalent repair script from PowerShell:
+
+```powershell
+git clone https://github.com/ChrisTitusTech/neovim "$HOME\neovim"
+Set-Location "$HOME\neovim"
+.\win-depend.ps1
+nvim
+```
+
+The repair scripts install or check the supporting tools and point Neovim at
+the `titus-kickstart` configuration. They leave an existing non-symlink config
+directory untouched, so rename your current Neovim config first if you want to
+switch to this setup.
+
+On first launch, `lazy.nvim` installs the plugins. After startup, use these
+commands to verify the environment:
+
+- `:checkhealth` checks Neovim and provider health.
+- `:Lazy` opens the plugin manager.
+- `:Mason` opens the language server and tool manager.
+- `:LspInfo` shows the language servers attached to the current buffer.
+
+## Make it your own
+
+Use my project as a starting point, not a configuration you are never allowed
+to touch. Options and core startup behavior live in
+`titus-kickstart/init.lua`, while the plugin configuration is split into files
+under `titus-kickstart/plugin/`.
+
+Change the mappings, theme, formatters, and language servers around the work
+you actually do. That is the real advantage of Neovim: the editor can grow
+with your workflow without forcing you into somebody else's idea of an IDE.
+
+For the most recent overview of where I have taken the project, read
+[Neovim the Elite Editor](/neovim-the-elite-editor/).
+
+## Walkthrough video
+
+{{< youtube "NYSYiiqk8SY" >}}
