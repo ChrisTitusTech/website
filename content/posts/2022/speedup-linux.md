@@ -30,7 +30,7 @@ GRUB_CMDLINE_LINUX="zswap.enabled=1 rhgb quiet mitigations=off"
 ```
 
 ## Systems older than Linux 5.11
-There is a cool website called <https://make-linux-fast-again.com/> that has a massive amount of the flags including the ones used above. However, this is mainly for older Linux installs and why I really don't use it. These are all the flags that website recommends:
+The now-retired Make Linux Fast Again project collected a massive amount of the flags including the ones used above. However, this is mainly for older Linux installs and why I really don't use it. These are all the flags that project recommended:
 ```
 noibrs noibpb nopti nospectre_v2 nospectre_v1 l1tf=off nospec_store_bypass_disable no_stf_barrier mds=off tsx=on tsx_async_abort=off mitigations=off
 ```
@@ -41,4 +41,3 @@ While all this above isn't really needed, it is a really neat way to squeeze a b
 ## Walkthrough Video
 
 {{< youtube 8XueTkMTNvc >}}
-

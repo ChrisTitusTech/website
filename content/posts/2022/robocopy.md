@@ -27,7 +27,7 @@ The downsides of Window's standard file copy are:
 
 Launch into the Command Prompt or Powershell by right-clicking Start Menu
 
-![start-menu](/images/2022/01-Robocopy/start-menu.webp)
+![start-menu](/images/2022/01-robocopy/start-menu.webp)
 
 From this interface you can now run Robocopy.
 

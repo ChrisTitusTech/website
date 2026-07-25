@@ -19,7 +19,7 @@ Current Ideas for Videos and Articles
 - [ ] TrueNAS Scale
 - [ ] Hyprland Window Manager for Wayland - https://github.com/hyprwm/Hyprland
 - [ ] Setting Up Linux Gaming
-- [ ] Live Stream Radio Browser Program https://strimio.com/
+- [ ] Live Stream Radio Browser Program (Strimio)
 - [ ] DSTask - https://github.com/naggie/dstask
 - [ ] [Portainer.io](http://Portainer.io)
 - [ ] PiKVM (https://pikvm.org/)[https://pikvm.org/](https://pikvm.org/)

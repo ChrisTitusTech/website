@@ -23,7 +23,7 @@ First, we need to identify the LVM Partition we need to expand. In my case, it w
   
 Command: `df -h`
 
-![lvm-selection8](/images/2018/11/Selection_008-300x111.webp)
+![lvm-selection8](/images/2018/11/Selection_008.webp)
 
 Second, lets verify there is space to expand on the physical drive.
   
@@ -43,4 +43,3 @@ Finally, with the logical volume extended we simply reclaim the free space now.
 Command: `resize2fs /dev/fedora/home`
 
 ![lvm-selection11](/images/2018/11/Selection_011.webp)
-

@@ -18,16 +18,15 @@ The following walkthrough shows you the process of moving GFI MailArchiver to an
 
 _Please Note: DO NOT re-install GFI before moving SQL Databases from_ the second _article unless you plan on leaving SQL on old server!_
 
-<http://kb.gfi.com/articles/SkyNet_Article/Is-it-possible-to-move-MailArchiver-to-a-new-server?retURL=%2Fapex%2FSupportHome&popup=true>
+<https://support.gfi.com/article/112712-moving-gfi-archiver-to-a-new-server>
 
 #### This Article describes the actual SQL Server Move
 
-<http://kb.gfi.com/articles/SkyNet_Article/How-to-move-a-GFI-MailArchiver-database-from-one-Microsoft-SQL-Server-to-another?retURL=%2Fapex%2FSupportHome&popup=true>
+<https://support.gfi.com/article/112612-how-to-move-a-gfi-archiver-database-to-another-microsoft-sql-server>
 
-![Moving GFI MailArchiver](/moving-gfi-mailarchiver/moving-gfi-mailarchiver-2/)
+![Moving GFI MailArchiver](/images/2013/04/Moving-GFI-MailArchiver.webp)
 
 ### Installation Notes:
 
   * I had to switch to SQL authentication because my old archive store kept popping up errors.
   * A very long process, because of the massive amount of emails in this archiver. Depending on the business it can take a few days or weeks!
-

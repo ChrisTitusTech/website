@@ -9,55 +9,36 @@ categories:
 tags:
   - Vim
 ---
-This article goes over customizing VIM and making a custom vim installation.<!--more--> This is my custom vim that I am constantly updating via GitHub and clone this to every installation I have. Let's go over the install, config, and usage. 
+This article originally documented my Vim setup and the retired `myvim`
+repository. I no longer use Vim and have moved my editor workflow to Neovim.
+<!--more-->
 
-## Installation of VIM
+## My current editor setup
 
-### Adding VIM-plug
-The first thing I do is install vim-plug from junegunn that has makes a lot of vim-based plugins. Here is the repository that I am using for this: https://github.com/junegunn/vim-plug  
-#### Installation
+My maintained configuration now lives in the
+[ChrisTitusTech/neovim](https://github.com/ChrisTitusTech/neovim) project. It
+is a Lua-based setup built on kickstart.nvim with LSP support, completion,
+formatting, project search, file navigation, and writing tools.
+
+For the full setup and current feature overview, read
+[Neovim: The Ultimate Editor](/vim-the-ultimate-editor/) and
+[Neovim the Elite Editor](/neovim-the-elite-editor/).
+
+## Quick installation
+
+On Linux, clone the project to a normal directory and run its dependency
+repair script:
+
+```bash
+git clone https://github.com/ChrisTitusTech/neovim ~/neovim
+cd ~/neovim
+bash lin-depend.sh
+nvim
 ```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
 
-### Using My Custom .vimrc
-This is the main repository that has all of my customization to VIM. https://github.com/ChrisTitusTech/myvim
-#### Installation
-```
-cd ~
-wget https://raw.githubusercontent.com/ChrisTitusTech/myvim/master/.vimrc
-```
+On first launch, Neovim installs the configured plugins. Use `:checkhealth` to
+check the environment, `:Lazy` to manage plugins, and `:Mason` to manage
+language servers and development tools.
 
-## Configuration of VIM
-  - Launch VIM
-  - Type :PlugInstall
-  - Exit (Shift+ZZ)
-
-## Overview of Plugins
-Let's go over all the plugins that were just installed. Feel free to edit the .vimrc to your needs. 
-
-#### LightLine
-This plugin adds a nice look to the bottom part of vim and adding a colored line that is now displayed and changes when VIM enters different modes.
-
-#### OneDark
-This is a theme for VIM that adds a greater contrast and dark theme to vim. This makes text and everything inside easier to read. 
-
-#### FZF (Fuzzy Search)
-This adds greater functionality to search that allows you to search for partial matches easier. See full syntax here: https://github.com/junegunn/fzf#usage
-
-#### GoYo
-This plugin removes all the numbers and formatting and makes it easier when writing documents in VIM. From Normal Mode - I made the hotkey Ctrl+\ to enter this special format. 
-
-#### UndoTree
-UndoTree is an amazing plugin that makes it easy to see everything you have done in your session. Simply press F5 from Normal mode and you will see the entire all your recent changes and undo them. 
-
-#### NerdTree
-NerdTree is a file management plugin. This hotkey is Ctrl+o and opens up a file tree on the left side for you switch files
-
-#### VimWiki
-VimWiki adds syntax formatting for markdown and is a fantastic plugin to have if you many markdown files.
-
-## Conclusion
-There is still a ton of other edits I need to make to this VIM and will be a work in progress for many years. Everyday I learn something new and powerful with VIM and if you can think about what you want, I am sure VIM will be able to accommodate that. Future additions that I am looking at is SpellCheck, VIM Tabs, and general improvements to the .vimrc file. My vimrc file currently has a lot of the most common tweaks, longer history, sorting, file numbering, and removal of auto comment formatting, However there is still a of things to improve. So come and check back often as I will update this project as it progresses. 
- 
+The old `.vimrc` and Vim-plug instructions are intentionally no longer
+included because the configuration they referenced no longer exists.

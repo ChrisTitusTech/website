@@ -26,11 +26,11 @@ We will be utilizing PowerShell to clean up Windows 10 and get rid of a bunch of
 
 ### Download PowerShell Script
 
-![Screenshot_20191014_144201](../../images/2019/10/Screenshot_20191014_144201.webp)
+![Screenshot_20191014_144201](/images/2019/10/Screenshot_20191014_144201.webp)
 
 #### Run PowerShell Script
 
-![runcmd](../../images/2019/10/runcmd.webp)
+![runcmd](/images/2019/10/runcmd.webp)
 
 `iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/debloat'))`
 
@@ -39,13 +39,13 @@ Source: https://github.com/Sycnex/Windows10Debloater
 
 ## Step 2: Clean Up Windows 10 Startup
 
-![taskmanager](../../images/2019/10/taskmanager.webp)
+![taskmanager](/images/2019/10/taskmanager.webp)
 
 **Launch Task Manager** and then click the startup tab. You need to disable any unneeded programs from here.
 
 ### Changing Startup Programs (Advanced Users)
 
-![startup10](../../images/2019/10/startup10.webp)
+![startup10](/images/2019/10/startup10.webp)
 
 You can change startup programs from Start-Run-Type:`shell:startup` and Start-Run-Type: `shell:common startup`
 
@@ -57,7 +57,7 @@ Cleanup **Task Scheduler**, as it accumulates many things that cause an install 
 
 There is literally hundreds of settings in Windows 10 that are privacy concerns and why I&#8217;d recommend using a 3rd party software for this. However, you can do all the same tweaks by simply going through settings and doing all these manually. That said, I recommend using O&O Shutup10 for optimal tweaks and privacy.
 
-![oo-shutup10](../../images/2019/10/oo-shutup10.webp)
+![oo-shutup10](/images/2019/10/oo-shutup10.webp)
 
 Download: <https://www.oo-software.com/en/shutup10>
 
@@ -72,4 +72,3 @@ I also tell everyone to use the **recommended settings** as the other settings c
 ## Video Walkthrough
 
 {{< youtube mWHiP9K8fQ0 >}}  
-

@@ -87,16 +87,7 @@ Example:
 
 ## Images
 
-You can download my completed images if you don't want to build this yourself @ <https://cttstore.com/star-trek-os>
-
-There is two image formats part of the download
-- VMDK - Virtual Machine Format - VMWare, Virtualbox, and QEMU will all play this.
-- Clonezilla tar.gz - Image Backup - You can restore this to any machine using clonezilla after unzipping the files to a USB drive. Clone Any System walkthrough video @ <https://youtu.be/yQ9NpWZ74BU>
-
-Login Information: 
-- User: Kirk
-- Pass: 1234
-- Hostname: Enterprise
+The prebuilt image download is no longer available. Use the build instructions above to create the environment.
 
 ## Walkthrough Video
 _Release Date: July 22, 2022_

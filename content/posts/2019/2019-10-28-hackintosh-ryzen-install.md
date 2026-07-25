@@ -12,23 +12,15 @@ tags:
 ---
 Here is the basic install instruction for the Hackintosh Ryzen install that I used on my Ryzen 2700 with an RX 580. <!--more-->
 
-![usb-drive](/images/2019/10/usb-drive-300x230.webp) 
+![usb-drive](/images/2019/10/usb-drive.webp)
 
 ## Download DMG File for Flash Drive
 
-_Source Article:_ <https://forum.amd-osx.com/viewtopic.php?p=33500#p33500>
-
-The above article is from XLNC and it goes over the creation process of the DMG file and everything he put into it. I must say he did a fantastic job with the media creation. 
-
-Download Links from Source Article:  
-CLOVER EDITION : <https://goo.gl/T3kBCN>   
-ENOCH EDITION : <https://goo.gl/SVZ4ea>
-
-Note: I used the Clover Edition and is my recommendation
+> The original XLNC forum post and Clover/Enoch downloads are no longer
+> available. This 2019 guide is preserved for historical reference. For a
+> current approach, use [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/).
 
 ## Burn DMG File with TransMac (Windows) or DD (Linux)
-
-![transmac](/images/2019/10/transmac.webp) 
 
 ### TransMac Download (Windows) <https://www.acutesystems.com/scrtm.htm>
 
@@ -52,7 +44,7 @@ Note: I used the Clover Edition and is my recommendation
   * UEFI options should be enabled
   * XHCI and EHCI Hand-Off = Enabled 
 
-![MacOSX](/images/2019/10/MacOSX-1-e1572309977936.webp) 
+![MacOSX](/images/2019/10/MacOSX.webp)
 
 ## Insert Media and Start Installation
 
@@ -90,4 +82,3 @@ FINISHED with the Hackintosh Ryzen Install!
 
 ## Video Walkthrough
 https://www.bitchute.com/video/P943EtODU3dH/
-

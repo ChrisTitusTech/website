@@ -15,7 +15,7 @@ If you run into SFC scannow error which cannot be repaired chances are you have 
 
 Here is an example of the error you are seeing:
 
-![SFC Scannow Error](/images/2015/07/SFC-scannow-error-1.webp)
+![SFC Scannow Error](/images/2015/07/SFC-scannow-error.webp)
 
   * Download Windows 10 ISO from <https://www.microsoft.com/en-us/software-download/windows10>
   * Mount the ISO file by double-clicking on it.
@@ -30,4 +30,3 @@ Here is an example of the error you are seeing:
       * `sfc /scannow`
 
 Once this is complete, you will see you now have a functional windows environment again. One other tip that I would suggest is to re-run windows updates because your windows components were damaged and the updates have not been happening.
-

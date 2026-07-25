@@ -133,7 +133,6 @@ You should use UTC time everywhere. Windows uses local time and it is terrible. 
   - Navigate to `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation`
   - Create new DWORD (32-bit) Value `RealTimeIsUniversal`
   - Set Value to `1`
-- You can also use REG files from this project <https://github.com/ChrisTitusTech/Windows-10-UTC> if you don't want to manually edit registry
 
 ## MacOS - OpenCore and Safety
 
@@ -178,4 +177,3 @@ Open Up PowerShell Admin (Right Click Start Button)
 ```
 %systemroot%\SysWOW64\OneDriveSetup.exe
 ```
-

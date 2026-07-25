@@ -45,7 +45,7 @@ sudo chmod +x /usr/local/bin/img-optimize
 
 Change the variables for FOLDER, WIDTH, and HEIGHT. 
 
-Current script used on this website: <https://raw.githubusercontent.com/ChrisTitusTech/website/master/content/images/opti>
+The script used at the time of writing is included below.
 
 ```
 #!/bin/bash

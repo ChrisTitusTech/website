@@ -5,8 +5,6 @@ author: Chris Titus
 date: 2013-04-09T16:50:22+00:00
 url: /mais-queue-folder/
 image: images/2013/04/MAIS-Queue-Folder.webp
-short-url:
-  - http://bit.ly/10FKCsL
 categories:
   - Windows Server
 tags:
@@ -26,4 +24,3 @@ Move all files to `C:\Program Files (x86)\GFIMailArchiver\MAIS\Pickup`
 ## In Closing
 
 This will force GFI Mailarchiver to reprocess all these emails. I&#8217;d highly recommend doing all these operations from a command prompt as the sheer number of files in the folders can potentially lock up your server when using a Graphic User Interface. Once you restart your processes wait for the MAIS Queue Folder to reduce in size before checking again.
-

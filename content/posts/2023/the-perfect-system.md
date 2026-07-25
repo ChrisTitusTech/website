@@ -34,7 +34,9 @@ Getting all your packages and updating them reliably can be a challenge. With LT
 
 This will be different for everyone. The idea is to have a system you enjoy being in and looking forward to coming back to it.
 
-I've attempted a bastardized version of the genome project from unixporn and made [ubuntu-titus](https://github.com/ChrisTitusTech/ubuntu-titus), [debian-titus](https://github.com/ChrisTitusTech/Debian-titus), and [fedora-titus](https://github.com/ChrisTitusTech/Fedora-Titus) repos that kinda work. It ends up looking like this:
+I've attempted a bastardized version of the genome project from unixporn and
+made several Ubuntu, Debian, and Fedora configurations that kinda worked. Those
+old repositories have since been retired. It ended up looking like this:
 
 ![mydesktop](/images/2023/the-perfect-system/fedora-mydesktop.webp)
 

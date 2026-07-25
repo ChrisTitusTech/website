@@ -38,10 +38,8 @@ This is an in-depth installation and configuration of the Plex plugin in FreeNAS
 
 Install Plex on FreeNAS Video: {{< youtube 99fQNbuAOlg >}}  
   
-Install FreeNAS Video: https://youtu.be/G2-s1_OkHGA  
-Setup FreeNAS Video: https://youtu.be/JexkrpeM_WA
+The original FreeNAS installation and setup videos are no longer available.
 
 In closing, This guide will get Plex up and running on your FreeNAS without much hassle. I highly recommend this setup as ZFS is far superior to a RAID setup and makes sure that your data stays stable and reliable. Consequently, I find that my Plex server does run considerably faster in this configuration than it ever did when it was on my Windows 10 machine.
 
 For general setup, configuration, and hardware setup, please refer to my guide @ <https://christitus.com/setup-freenas-11/>
-

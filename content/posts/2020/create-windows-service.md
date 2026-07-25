@@ -46,7 +46,7 @@ To remove a service without confirmation:
 `nssm remove <servicename> confirm`
 
 ## Create Windows Service with Windows Server Resource Kit 2003
-  - Download Windows Server Resource Kit [here](http://www.microsoft.com/downloads/details.aspx?FamilyID=9d467a69-57ff-4ae7-96ee-b18c4790cffd&DisplayLang=en)
+  - The Windows Server 2003 Resource Kit download is no longer available from Microsoft; these steps are preserved for historical reference.
   - Run the executable to install the Resource Kit
   - Open up a command prompt and run the following to install a service stub (default install location used in this example):
   - You may substitute "EQBC Service" with whatever name you would like to give to the service for display purposes
@@ -68,4 +68,3 @@ To remove a service without confirmation:
 
 ## Conclusion
 Each one of these ways have their uses and I have used each method for different programs. It is great to learn to use all of the above examples or at least make yourself familiar with them. 
-

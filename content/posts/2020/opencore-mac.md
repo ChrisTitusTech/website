@@ -29,13 +29,13 @@ AMD CPUs can technically work, but will require more tinkering and are more diff
 Here is a list of all the files and GitHub projects that are used for OpenCore.
 
   - OpenCore GitHub (Base Project) - https://github.com/acidanthera/OpenCorePkg/releases
-  - All Drivers, Kexts, and SSDTs - https://dortania.github.io/OpenCore-Desktop-Guide/ktext.html
+  - All Drivers, Kexts, and SSDTs - https://dortania.github.io/OpenCore-Install-Guide/ktext.html
   - GitMacOS GitHub (Download Official Apple PKGs) - https://github.com/corpnewt/gibMacOS
   - ProperTree (config.plist editing) - https://github.com/corpnewt/ProperTree
   - SSDTTime (DSDT Dump and SSDT creation) - https://github.com/corpnewt/SSDTTime
   - GenSMBIOS (Generate Serial and UUID) - https://github.com/corpnewt/GenSMBIOS
 
-## Checklist for https://dortania.github.io/OpenCore-Desktop-Guide
+## Checklist for https://dortania.github.io/OpenCore-Install-Guide/
 1. Check Hardware Compatibility - Document all device IDs and firmware
 2. Download All Projects and Files
 3. Boot Into Linux and do a DSDT dump followed by creating SSDT files for your computer (DO NOT USE PREBUILT!)
@@ -43,4 +43,3 @@ Here is a list of all the files and GitHub projects that are used for OpenCore.
 5. Put all Your Drivers in the EFI Folder *Note: I swapped AppleHDA for VoodooHDA on an old sound card. Do NOT just put every kext you find in one folder.*
 6. Build config.plist and configure EVERY SINGLE Fold in the config.plist file to your computers specifications
 7. Boot to Installer! *Note: This will probably fail the first couple times, it is very important to follow the config.plist guide and full auditing enabled*
-

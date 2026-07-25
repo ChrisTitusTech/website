@@ -44,7 +44,7 @@ Components Removed
 - Windows Activation (YOU MUST Activate Windows Before this Tweak!) _If you fail to do this, you will have a watermark you can't get rid of_
 - DirectX 12
 
-Source files for Tweaks <https://ameliorated.info/> or my GitHub mirror <https://github.com/ChrisTitusTech/windows-lite-2004>
+The AME project now lives at <https://amelabs.net/>. The old GitHub mirror has been retired.
 
 ![ame](/images/2021/01-win10/ame.webp)
 
@@ -64,7 +64,7 @@ Recommend using the Offline Snappy Driver Installer <https://sdi-tool.org/>. Thi
 
 ### AME Step-by-Step Documentation
 
-<https://wiki.ameliorated.info/doku.php?id=documentation_2004>
+<https://docs.ameliorated.io/>
 
 ### Running Updates
 
@@ -133,4 +133,3 @@ Based on User feedback, this no longer uninstalls OneDrive or Office.
 23. Windows Biometric Service (Required for Fingerprint logon)
 24. Program Compatibility Assistant Service
 25. Enterprise App Management Service
-

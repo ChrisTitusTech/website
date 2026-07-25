@@ -40,7 +40,7 @@ This article goes over the apps that work and don't work with a Degoogled phone 
 | Uber              | Broken | GPS and Google Error           |
 | Yi Home           | Works  | None                           |
 
-**Note: Uber and Lyft can be used via mobile site. ex: https://m.uber.com
+**Note: Uber and Lyft could be used through their mobile websites at the time of writing.
 
 ## F-Droid Apps (Free and Open Source)
 
@@ -59,4 +59,3 @@ This article goes over the apps that work and don't work with a Degoogled phone 
 | Twire                  | Twitch             |
 
 **Note: ImagePipe shrinks photos and does basic edits. I sync my photos with Synology Memories.
-

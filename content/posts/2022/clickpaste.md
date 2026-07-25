@@ -29,15 +29,15 @@ First of course, you need to have some text in your clipboard. Then:
 
 1.  Click the target notification icon to begin:
 
-[![Click to choose a target](https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToTarget.webp)](https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToTarget.webp)
+[![Click to choose a target](https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToTarget.png)](https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToTarget.png)
 
 2.  Click to choose a location you want to paste the text:
 
-[![Click to choose a location to paste](https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToPaste.webp)](https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToPaste.webp)
+[![Click to choose a location to paste](https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToPaste.png)](https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToPaste.png)
 
 3.  Your clipboard contents should be typed as keystrokes onto the window you selected:
 
-[![Your clipboard is typed as keystrokes onto the window you selected](https://github.com/Collective-Software/ClickPaste/raw/master/doc/Pasted.webp)](https://github.com/Collective-Software/ClickPaste/blob/master/doc/Pasted.webp)
+[![Your clipboard is typed as keystrokes onto the window you selected](https://github.com/Collective-Software/ClickPaste/raw/master/doc/Pasted.png)](https://github.com/Collective-Software/ClickPaste/blob/master/doc/Pasted.png)
 
 ## Walkthrough Video
 

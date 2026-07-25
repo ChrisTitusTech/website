@@ -25,8 +25,6 @@ Sources:
 
 <https://github.com/gijsdev/ublock-hide-yt-shorts>
 
-<https://letsblock.it/filters/youtube-shorts>
-
 ```
 ! Title: Hide YouTube Shorts
 ! Description: Hide all traces of YouTube shorts videos on YouTube

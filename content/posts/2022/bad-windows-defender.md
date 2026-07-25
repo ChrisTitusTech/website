@@ -50,7 +50,7 @@ Is there something better than windows defender that is free? I'd say [BitDefend
 This is a drastic shift in recommendation for me, because I used to say "All Free AV is worthless", but now I see this from a different angle. Don't get me wrong most FREE antivirus is glorified advertising for a paid product that essentially does the same thing. After looking at all the free offerings, I'd say BitDefender Free is better than using Defender. 
 
 ## Paid Anti-Virus
-For those that want good detection rates, better privacy, and low overhead. The antivirus I have recommend has stayed the same for years. I recommend [ESET](https://christitus.com/antivirus) for this because it is a proven antivirus that isn't as intrusive as the others. 
+For those that want good detection rates, better privacy, and low overhead. The antivirus I have recommend has stayed the same for years. I recommend [ESET](https://www.eset.com/) for this because it is a proven antivirus that isn't as intrusive as the others.
 
 ## Walkthrough Video
 

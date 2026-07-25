@@ -28,7 +28,7 @@ _*Note: use apt instead of dnf on Ubuntu or Debian Servers_
 
 ## Download OVPN Files
 
-My recommendation for a Public VPN Provider is Express VPN. It is what I use below and in my VPN videos due to its speed and amount of servers. This is my affiliate link where you will receive an extra 3 months free for signing up for a year. <https://christitus.com/expressvpn>  
+My recommendation for a public VPN provider at the time of writing was [ExpressVPN](https://www.expressvpn.com/).
 **However, you can use these instructions on ANY VPN that provides ovpn files which any reputable VPN provider has.** 
 
 `mv ~/Downloads/client.ovpn /etc/openvpn/test.conf`
@@ -96,4 +96,3 @@ _*enable rpc and whitelist, add blocklist_
 
 ## Full Video Walkthrough
 {{< youtube wc-Ti8UoPoA >}}  
-

@@ -50,12 +50,12 @@ First Setup a new repository for your config files on GitHub
 
 ![new-repo.webp](/images/2022/chezmoi/new-repo.webp)
 
-I called mine "dotfiles" <https://github.com/ChrisTitusTech/dotfiles>
+For this example, call the repository `dotfiles`.
 
 We now simply initialize chezmoi with that new GitHub repository
 
 ```
-chezmoi init https://github.com/ChrisTitusTech/dotfiles
+chezmoi init https://github.com/yourusername/dotfiles
 ```
 
 ## Adding files and Applying changes

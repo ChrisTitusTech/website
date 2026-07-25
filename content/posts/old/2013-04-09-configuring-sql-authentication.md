@@ -14,7 +14,9 @@ tags:
 ---
 Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.<!--more-->
 
-_Note: This article is taken from <http://kb.gfi.com/articles/SkyNet_Article/How-to-configure-SQL-Server-2005-2008-to-accept-SQL-Authentication> and all credit goes to them for the writing. I&#8217;m posting it here simply as a reference in case_ there _site changes the above link. _
+_Note: This article is based on GFI's
+[SQL authentication guide](https://support.gfi.com/article/106972-how-to-configure-microsoft-sql-server-to-accept-sql-authentication-for-gfi-software-products),
+and all credit for the original procedure goes to GFI._
 
 ### Fix Authentication in GFI ReportCenter
 
@@ -34,4 +36,3 @@ In order to use SQL Server authentication, you must first configure your server 
 6. Click &#8216;OK&#8217; to close the dialog
 
 Once you have walked through configuring SQL authentication, you can now change your instance to the type you need.
-

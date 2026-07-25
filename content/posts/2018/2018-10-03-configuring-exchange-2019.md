@@ -33,18 +33,14 @@ This article goes over what it takes for installing and configuring exchange 20
 
 ## Installing Exchange 2019
 
-This was a breeze, with only 2 pre-requirements missing on a server 2016 stock install. The only configuration during setup was the role (mailbox or edge) and naming the exchange organization. Check out this video below to see the time lapse install:
-
-https://youtu.be/xmDOdkOKQxQ
+This was a breeze, with only 2 pre-requirements missing on a server 2016 stock install. The only configuration during setup was the role (mailbox or edge) and naming the exchange organization. The original time-lapse installation video is no longer available.
 
 ## Configuring Exchange 2019
 
-Again, this was very easy with only a couple options needed before I was operational. Using only a mailbox role with no edge you only need to add your domain, send connector, and set an email address for mailboxes. Here is the basic configuration video:
+Again, this was very easy with only a couple options needed before I was operational. Using only a mailbox role with no edge you only need to add your domain, send connector, and set an email address for mailboxes. The original configuration video is no longer available.
 
-https://youtu.be/9n6JlEUS5fw  
 _Note: Do not forget to add the MX, SPF, DMARC records where your domain registrar DNS resides. _
 
 ## Conclusion
 
 I absolutely love Exchange 2019 due to the vast amount of improvements, that said, I am still bummed that they continue to not support DKIM through exchange server. Installing and configuring exchange 2019 was the easiest experience I&#8217;ve had to date, which is saying a lot! Overall I am liking the direction Microsoft is taking with the server line of products and I believe it will continue to have a very bright future, as long as they don&#8217;t do something stupid like including the Microsoft store.
-

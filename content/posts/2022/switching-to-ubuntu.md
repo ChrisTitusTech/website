@@ -62,7 +62,9 @@ _Note: While this method is easy, it will install some bloat that you may wish t
 
 ### Advanced Option
 
-Using my window manager set up, which requires manual intervention from <https://github.com/christitustech/ubuntu-titus/>. 
+My old `ubuntu-titus` window manager setup has been retired. My maintained
+desktop configuration now lives in
+<https://github.com/ChrisTitusTech/dwm-titus>.
 
 Final Result:
 

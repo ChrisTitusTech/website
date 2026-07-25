@@ -72,7 +72,7 @@ Remember the big thing with HUGO is everything is modular and everything can be 
 
 Once you figure out how you want your posts structured, change the `/archtypes/default.md`. This template is what each new post will use. This is where you really increase your efficiency as we often find ourselves writing the same few things on each new post we make.
 
-The next modification will probably comes from adding widgets or sidebar components. Instead of directly modifying the `/theme/zzo` files you can actually look through the partials directory and create your own `/layouts/partials` in your root that will take precedence over the ones in the theme directory. More in-depth explanation from the official site <https://gohugo.io/templates/partials/>. 
+The next modification will probably comes from adding widgets or sidebar components. Instead of directly modifying the `/theme/zzo` files you can actually look through the partials directory and create your own `/layouts/partials` in your root that will take precedence over the ones in the theme directory. More in-depth explanation from the official site <https://gohugo.io/functions/partials/include/>.
 
 ## Complex Theme Modifications
 

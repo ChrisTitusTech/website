@@ -54,7 +54,7 @@ _Output Example:
 `grub rescue> initrd /boot/initrd (tab complete)`  
 `grub rescue> boot`
 
-![grub](/images/2019/04/grub-300x211.webp)
+![grub](/images/2019/04/grub.webp)
 
 ## Fix GRUB Permanently
 
@@ -77,4 +77,3 @@ _Note: /dev/sda is the DEVICE&#8230;_**NOT THE PARTITION**.
 ## Video Walkthroughs
 
 {{< youtube r7meKJsjqfY >}}  
-

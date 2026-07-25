@@ -53,7 +53,6 @@ Microsoft has some talented employees, but it takes time to add polish and with 
 - <https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-22h2>
 - <https://windowsreport.com/windows-11-22h2-bugs/>
 - <https://www.techradar.com/news/windows-11-22h2-bug-breaks-windows-hello-security-feature>
-- <https://www.thurrott.com/forums/microsoft/windows/thread/major-bugs-in-win10-22h2>
 
 
 ## Walkthrough Video

@@ -91,7 +91,6 @@ This can be used to do temporary disable parts or all of Defender as well. Here 
 Here are a couple GitHub projects that will completely destroy defender and when used improperly can even be used to deliver virus payloads onto systems
 
  - <https://github.com/jbara2002/windows-defender-remover>
- - <https://github.com/swagkarna/Defeat-Defender-V1.2>
  - <https://github.com/qtkite/defender-control>
 
 ## Walkthrough Video

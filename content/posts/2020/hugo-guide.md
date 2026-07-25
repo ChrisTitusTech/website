@@ -32,7 +32,7 @@ Create your first site and install a theme using the [Quick Start](https://gohug
 ## The First Changes
 I made several changes when I first switched to HUGO and these were the changes I made. 
 ### Theme Modification
-I downloaded the the [Mainroad](https://themes.gohugo.io/mainroad/) Theme and installed it during the Quick Start. _Note: My Debian system had an old version of HUGO 0.40 and I had to update before the theme worked._
+I downloaded the the [Mainroad](https://github.com/vimux/mainroad) Theme and installed it during the Quick Start. _Note: My Debian system had an old version of HUGO 0.40 and I had to update before the theme worked._
 #### Changing Theme Widgets
 ##### Social Widget
 I first started to change the *social widget* by adding YouTube and Twitch from the following file `siteroot/themes/mainroad/layouts/partials/widgets/social.html`.  
@@ -217,4 +217,3 @@ Now everytime I run `hugo new posts/newpost.md` it will fill in the Title, date,
 
 ## Conclusion
 This has changed my life and has made it so I can make posts like this one for people to follow. This entire post took me about an hour to write and would have take twice as long if I were to do it in WordPress. 
-

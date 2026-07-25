@@ -13,7 +13,7 @@ This post goes over the CrowPi 2 Laptop. This is a modular laptop for the raspbe
 <!--more-->
 
 ## Using Elecrow CrowPi Image
-The Custom Raspbian Linux that CrowPi uses is from <https://www.elecrow.com/download/crowpi/>. You can load this on any raspberry pi if you just want to use the digital portions to teach. It has a wonderful interface for learning Python and Scratch with code directly operating portions of the CrowPi2. This image also includes Minecraft Pi lessons which is fantastic for teaching and learning for younger students. 
+The original custom Raspbian image that CrowPi used is no longer available from Elecrow.
 
 ## Programming Lessons
 
@@ -44,4 +44,3 @@ Learn more about the CrowPi 2 here: [Kickstarter Page](https://www.kickstarter.c
 ## Video Walkthrough
 
 {{< youtube uZmiWQbOBDw >}}  
-

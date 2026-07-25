@@ -29,8 +29,8 @@ I went into Add/Remove Programs (Start -> Run-> appwiz.cpl) and simply repaired 
 
 ### Troubleshooting/Download
 
-Afterward, restart your WWW Service in services.msc and your website will now be working. If you are unable to repair the IIS rewrite module using Add/Remove Programs, you will need to redownload them from Microsoft.
+Afterward, restart your WWW Service in services.msc and your website will now be working. If you are unable to repair the IIS rewrite module using Add/Remove Programs, download the current installer from the official IIS site.
   
-[IIS Url Rewrite Module 2.0 for Windows 10][5]
+[IIS URL Rewrite Module][5]
 
- [5]: https://www.microsoft.com/en-us/download/details.aspx?id=47337
+ [5]: https://www.iis.net/downloads/microsoft/url-rewrite

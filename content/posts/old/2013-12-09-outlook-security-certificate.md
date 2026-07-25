@@ -13,7 +13,8 @@ tags:
 ---
 The following article fixes the Outlook security certificate error your users get when they connect to your exchange server internally. This is typically from installing a 3rd party SSL Certificate.<!--more-->
 
-(Original Article Link: <http://community.spiceworks.com/how_to/show/48384-outlook-the-name-of-the-security-certificate-is-invalid-or-does-not-match-the-name-of-the-site>)
+This walkthrough was adapted from a Spiceworks article that is no longer
+available.
 
 Issue: Outlook anywhere works fine with third party cert, but internal Outlook clients get cert error with NETBIOS name of Exchange server.
   
@@ -45,4 +46,3 @@ Change the URLs for the appropriate Exchange 2007 components. To do this, follow
   8. Right-click MSExchangeAutodiscoverAppPool, and then click Recycle.
 
 Now that you have finished, you will not see anymore certificate popups. I highly recommend issuing a proper certificate if possible, but this typically happens when your active directory is not resolvable from the outside world. Such as `contsco.local` instead of `microsoft.com`.
-

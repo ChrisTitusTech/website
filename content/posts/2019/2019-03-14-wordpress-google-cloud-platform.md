@@ -118,4 +118,4 @@ I live stream on [Twitch][1] and encourage you to drop in and ask a question. I 
  [1]: https://twitch.tv/christitustech
  [2]: https://www.youtube.com/c/ChrisTitusTech
  [3]: /
- [4]: /discord
+ [4]: https://discord.gg/yDAqap7Y7Q

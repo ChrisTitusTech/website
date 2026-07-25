@@ -9,7 +9,7 @@ categories:
   - Networking
 
 ---
-These steps will show you how to connect to the encore bandit devices. I recently configured both a bandit II and a bandit III device for using a VPN over satellite. The devices are configured through a 9-pin serial port they call the &#8220;Supervisory Port&#8221;. I use a basic serial to USB adapter and putty to connect. All the white papers for this device are good, but the setup and login are not as clear as you would think, that said, below are the following steps I used to connect. <!--more-->Here is all of encore&#8217;s documentation for their devices: http://www.encorenetworks.com/document_catalog.htm
+These steps will show you how to connect to the encore bandit devices. I recently configured both a bandit II and a bandit III device for using a VPN over satellite. The devices are configured through a 9-pin serial port they call the &#8220;Supervisory Port&#8221;. I use a basic serial to USB adapter and putty to connect. All the white papers for this device are good, but the setup and login are not as clear as you would think, that said, below are the following steps I used to connect. <!--more-->Refer to Encore's [BANDIT II/III Expanded Configuration Guide](https://www.encorenetworks.com/wp-content/uploads/2021/04/cfg-main-1.pdf) for the complete device documentation.
 
 **Steps for connection**
 
@@ -17,4 +17,3 @@ These steps will show you how to connect to the encore bandit devices. I recentl
   * Run Putty and select Serial for Connection
   * Type default username and password (encore!1) for both
   * Configure Device according to Quick Setup
-

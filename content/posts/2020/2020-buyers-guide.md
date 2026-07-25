@@ -66,7 +66,8 @@ Razer has a bunch of cool features, but also has a great open source project cal
 {{< youtube wyvS1FxR4ic >}}  
 
 - Raspberry Pi 4 8GB Kit - $105 - <https://amzn.to/2K7CuBR>
-- Raspberry Pi 4 Image - $5 - <https://www.cttstore.com/tituspi> OR Build it yourself <https://github.com/ChrisTitusTech/TitusPi>
+- Raspberry Pi 4 Image - Build it yourself with
+  <https://github.com/ChrisTitusTech/TitusPi>
 
 ## Audio/Video Production Stuff
 
@@ -78,7 +79,7 @@ Here is Equipment I use for A/V and recommend to others. Below is a video going 
 - Camera Lens - Canon 22M 2.0 - $200 - <https://amzn.to/3pzW0r0>
 - Microphone - Rode VideoMicro - $60 - <https://amzn.to/2IBn093>
 - Capture Card - Magewell - $900 - <https://amzn.to/3pFZiZJ>
-- StreamDeck - Button Macros - $150 - <https://amzn.to/38SiJsk>
+- StreamDeck - Button Macros - $150
   - Streamdeck_ui Open Source Project <https://timothycrosley.github.io/streamdeck-ui/>
 - Microphone Standalone - Shure MV7 - $250 - <https://amzn.to/3kGstbi>
 
@@ -89,4 +90,3 @@ Here is Equipment I use for A/V and recommend to others. Below is a video going 
 Good Luck! All the stock out there is way out of date and any of the new hotness is Out of Stock. Wait til 2021!
 
 But... If you want to see something cool for a laptop in 2020, check out this "little" machine. <https://kfocus.org/> #NotSponsored
-

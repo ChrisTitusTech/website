@@ -10,9 +10,12 @@ categories:
 ---
 By default the standard outlk12.adm templates do not come with a configuration of Outlook Anywhere. You can configure the &#8220;**Configure Outlook Anywhere user interface options**&#8221; options to disable or grey out the settings. However, this DOES NOT disable Outlook anywhere, just user interaction with it.
 
-You will need to download a new administrative template that Microsoft released in this [hotfix][5]. If you don&#8217;t like reading Microsoft&#8217;s wonderful support site instructions or Microsoft changes their support site after this blog post, here is the file and instructions paraphrased.
+You will need the Article-961112 administrative template that Microsoft released
+for this configuration. Microsoft has retired the original KB article and
+download, so this walkthrough is retained for historical reference.
 
-1. Download Add-On Outlook Anywhere Administrative Template here&#8230;[article-961112][6] (unzip to reveal article-961112.adm file).
+1. Obtain the Article-961112 administrative template from a trusted archive
+   and unzip it to reveal the `article-961112.adm` file.
   
 2. In the Group Policy Object Editor add the Article-961112.adm file:
   
@@ -37,6 +40,3 @@ Click Close in the Add/Remove Templates dialog box.
 > Proxy authentication Setting -> Do not change
 
 5. Double-click each policy to configure the appropriate RPC/HTTP setting for your Outlook clients.
-
- [5]: http://support.microsoft.com/kb/961112
- [6]: http://localhost/images/2011/03/article-961112.zip

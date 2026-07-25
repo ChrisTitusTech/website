@@ -19,8 +19,7 @@ _Source Files in this project_
 - https://www.gnome-look.org/p/1148692/ - Capitine Cursors
 - https://www.pling.com/p/1403328/ - WhiteSur GTK Theme
 - https://www.pling.com/p/1399044/ - BigSur Icon Theme
-- https://github.com/PRATAP-KUMAR/focalgdm3 - Login Theme
-- https://albertlauncher.github.io/docs/installing/ - Albert
+- https://albertlauncher.github.io/installation/ - Albert
 - https://www.pling.com/p/1401527/ - Cairo Dock
 
 ## Installation
@@ -86,5 +85,3 @@ Install the Following Extensions
 - Cairo Dock Launchpad - Add Custom Launchpad Shortcut `dbus-send --session --type=method_call --dest=org.gnome.Shell /org/gnome/Shell org.gnome.Shell.Eval string:'Main.shellDBusService.ShowApplications();'`
 - Disable Ubuntu Dock (Not Needed on PopOS)
 - Dynamic Panel Transparency - Background Tab - Max Opacity 100 - Min Opacity 50
-
-
