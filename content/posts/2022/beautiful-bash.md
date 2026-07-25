@@ -10,22 +10,22 @@ tags:
   - Bash
 draft: false
 ---
-Tired of an Ugly prompt with no features? Fix it with this guide! 
+Tired of an Ugly prompt with no features? Fix it with this guide!
 <!--more-->
- 
+
 ## The Look
 
  The following is what the end result of the bash prompt will look like:
 
- ![](/images/2022/beautiful-bash/prompt.webp)
+ ![Prompt](/images/2022/beautiful-bash/prompt.webp)
 
 ## Requirements
 
 With all my guides I like to create bash scripts that will auto install and configure everything. You may have heard of the starship prompt, which this uses, but is heavily themed. I also have my included bashrc with a ton of useful aliases.
 
-The setup file will also install autojump which helps you navigate between directories. 
+The setup file will also install autojump which helps you navigate between directories.
 
-![](/images/2022/beautiful-bash/alias.webp)
+![Alias](/images/2022/beautiful-bash/alias.webp)
 
 ## Installation
 
@@ -36,6 +36,7 @@ git clone https://github.com/christitustech/mybash
 cd mybash
 ./setup.sh
 ```
+
 _Note: By default this will symlink your ~/.bashrc and wipe out any customizations you have made!_
 
 ## Walkthrough Video

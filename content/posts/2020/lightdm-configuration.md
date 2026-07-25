@@ -37,6 +37,7 @@ I will go over the 4 sections in the configuration that most will want to change
 ### Changing the Theme
 
 lightdm.conf  
+
 ```
 [Seat:*]
 #type=local
@@ -60,11 +61,13 @@ greeter-session=lightdm-slick-greeter ### CHANGE THIS
 #greeter-show-manual-login=false
 #greeter-show-remote-login=true
 ```
+
 Install what ever theme you want, this is called a greeter in lightdm, and then change the line above. After the changes are made you can either reboot or type `sudo systemctl restart lightdm` _Please Note: This will log you out_
 
 ### Changing the Default Desktop Environment
 
 lightdm.conf  
+
 ```
 [Seat:*]
 #type=local
@@ -92,6 +95,7 @@ user-session=default ################ CHANGE THIS
 #allow-guest=true
 #guest-session=
 ```
+
 To specify a specific desktop environment you need to change the user-session line to be your desktop environment. For example I use the awesome window manager for mine and I put `user-session=awesome`  
 _Note: If you don't know the name, the desktop environment list can be found with listing .desktop file from /usr/share/xsessions/*.desktop_  
 For complete listing of user sessions type: `ls /usr/share/xsessions/*.desktop`
@@ -101,6 +105,7 @@ For complete listing of user sessions type: `ls /usr/share/xsessions/*.desktop`
 Change the following part of the file to autologin. _Note: This does pose a security risk and should never be done in a business_
 
 lightdm.conf Under `[Seat:*]`
+
 ```
 autologin-guest=false
 autologin-user=username
@@ -108,6 +113,7 @@ autologin-user-timeout=0
 autologin-in-background=false
 #autologin-session=
 ```
+
 I generally uncomment the following lines above and just change this line `autologin-user=username` and then it will autologin that user on the next reboot. _Note: You can use the `autologin-guest` instead of user to have it autologin as a guest account._
 
 ### VNC Connection
@@ -115,6 +121,7 @@ I generally uncomment the following lines above and just change this line `autol
 At the buttom of the lightdm.conf file you will see VNC connection information. This information uses the `tigervnc` package and also is done using secure channel. This means you must establish a SSH connection with a portforward before you can connect to VNC. Example: `ssh 192.168.69.10 -L 9901:localhost:5901` This establishes ssh and port forwards your local port 9901 to 5901 of the remote machine. Then you could launch VNC viewer with `vncviewer localhost:9901`. Even though this says localhost it is forwarding the request through SSH to the remote machine.
 
 Now with that framework lets look at the conf file:
+
 ```
 #
 # VNC Server configuration
@@ -136,7 +143,9 @@ Now with that framework lets look at the conf file:
 #height=768
 #depth=8
 ```
+
 The main things to change here are `enabled=true` `width - height - depth` and then you are off. My typical defaults would look like the following:
+
 ```
 [VNCServer]
 enabled=true
@@ -149,5 +158,5 @@ depth=16
 ```
 
 ## Video Walkthrough
-{{< youtube _dYqisDIcC0 >}}  
 
+{{< youtube _dYqisDIcC0 >}}  

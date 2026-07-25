@@ -15,7 +15,8 @@ tags:
 This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. *Version 20+ is required*
 <!--more-->
 
-_Source Files in this project_
+*Source Files in this project*
+
 - https://www.gnome-look.org/p/1148692/ - Capitine Cursors
 - https://www.pling.com/p/1403328/ - WhiteSur GTK Theme
 - https://www.pling.com/p/1399044/ - BigSur Icon Theme
@@ -53,6 +54,7 @@ gsettings get org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backg
 ```
 
 ### Albert Search and Cairo Dock
+
 ```
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
 echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
@@ -71,6 +73,7 @@ sudo apt install albert cairo-dock cairo-dock-plug-ins -y
 Enable Extensions by visiting https://extensions.gnome.org/ install add-on and reload browser
 
 Install the Following Extensions
+
 - User Themes - https://extensions.gnome.org/extension/19/user-themes/
 - Frippery Move Clock - https://extensions.gnome.org/extension/2/move-clock/
 - Dynamic Panel Transparency - https://extensions.gnome.org/extension/1011/dynamic-panel-transparency/

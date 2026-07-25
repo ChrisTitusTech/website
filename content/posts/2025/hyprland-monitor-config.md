@@ -25,6 +25,7 @@ Syntax for adding specific monitors with configuration looks like this:
 `monitor=desc:MONITOR_DESCRIPTION,resolution,position,scale`
 
 Examples:
+
 ```
 ################
 ### MONITORS ###

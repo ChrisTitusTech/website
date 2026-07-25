@@ -16,14 +16,14 @@ This is an in-depth installation and configuration of the Plex plugin in FreeNAS
 
 ## Plex plugin in FreeNAS Steps
 
-  1. Install Plex Plugin 
+  1. Install Plex Plugin
       * Under Plugins -> Availiable
-  2. Set Static IP 
+  2. Set Static IP
       * Interface em0 (or your interface name), Static IP for Plex Server, and Netmask (/24 is 255.255.255.0)
   3. Stop Plugin
-  4. Edit Plex Jail &#8211; Mount Point &#8211; _Note: This is only used if you want a share to add movies to your plex from another computer_ 
+  4. Edit Plex Jail &#8211; Mount Point &#8211; _Note: This is only used if you want a share to add movies to your plex from another computer_
       * Set Source Share (/mnt/sharename/) and Set Destination (I selected the media folder in the jail directory)
-  5. Edit Plex Jail &#8211; Edit Confiuration 
+  5. Edit Plex Jail &#8211; Edit Confiuration
       1. Check VNET and Berkeley Packet Filter
       2. Set Default IPv4 Route to your Gateway or Router (Ex. 192.168.1.1)
       3. Next

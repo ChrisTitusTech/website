@@ -17,5 +17,4 @@ This is a virtualization introduction and when you should be using it. In the fo
 
 {{< youtube T0nywDkf1IE >}}  
 
-Now that you understand what it is and if you want to start getting your feet wet, please check out my other video to start installing your hypervisor and launching your first virtual machine [here][1]. I highly recommend starting out with VMware as it used the most. It also has the most material online if looking for virtualization introduction videos and how to guides.
-
+Now that you understand what it is and if you want to start getting your feet wet, check out my other videos about installing a hypervisor and launching your first virtual machine. I highly recommend starting out with VMware as it used the most. It also has the most material online if looking for virtualization introduction videos and how to guides.

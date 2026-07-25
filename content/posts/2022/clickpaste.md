@@ -17,25 +17,28 @@ This program is free and open source, while being absolutely a life saver. I use
 GitHub Link: <https://github.com/Collective-Software/ClickPaste>
 
 ## Install
+
 Simply extract the zip file from <https://github.com/Collective-Software/ClickPaste/releases> and run ClickPaste.exe
 
 ### Running at Startup
+
 The best way I've found is to create a shortcut to ClickPaste.exe then drag&drop that into shell:startup
 
 ![startup](/images/2022/startup.webp)
 
 ## Usage
+
 First of course, you need to have some text in your clipboard. Then:
 
-1.  Click the target notification icon to begin:
+1. Click the target notification icon to begin:
 
 [![Click to choose a target](https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToTarget.png)](https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToTarget.png)
 
-2.  Click to choose a location you want to paste the text:
+1. Click to choose a location you want to paste the text:
 
 [![Click to choose a location to paste](https://github.com/Collective-Software/ClickPaste/raw/master/doc/ClickToPaste.png)](https://github.com/Collective-Software/ClickPaste/blob/master/doc/ClickToPaste.png)
 
-3.  Your clipboard contents should be typed as keystrokes onto the window you selected:
+1. Your clipboard contents should be typed as keystrokes onto the window you selected:
 
 [![Your clipboard is typed as keystrokes onto the window you selected](https://github.com/Collective-Software/ClickPaste/raw/master/doc/Pasted.png)](https://github.com/Collective-Software/ClickPaste/blob/master/doc/Pasted.png)
 

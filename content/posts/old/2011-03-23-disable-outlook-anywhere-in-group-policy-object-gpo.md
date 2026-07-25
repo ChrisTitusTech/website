@@ -27,16 +27,13 @@ In the Policy Templates dialog box locate and select the Article-961112.adm file
   
 Click Close in the Add/Remove Templates dialog box.
   
-3. Under User Configuration in Administrative Templates expand the policy node labeled Article 961112 Policy Settings. (Note: You may see this under Classic Administrative Templates in a sub-menu)
+1. Under User Configuration in Administrative Templates expand the policy node labeled Article 961112 Policy Settings. (Note: You may see this under Classic Administrative Templates in a sub-menu)
   
-4. Select the Outlook Anywhere (RPC/HTTP) node to list the following policies under the Setting column in the right-pane:
+2. Select the Outlook Anywhere (RPC/HTTP) node to list the following policies under the Setting column in the right-pane:
 
 > RPC/HTTP Connection Flags -> Set to Enabled -> No Flags
-  
 > Proxy Server Name -> Do not change
-  
 > Only Connect if Proxy Server certificate has this principle name -> Do not change
-  
 > Proxy authentication Setting -> Do not change
 
-5. Double-click each policy to configure the appropriate RPC/HTTP setting for your Outlook clients.
+1. Double-click each policy to configure the appropriate RPC/HTTP setting for your Outlook clients.

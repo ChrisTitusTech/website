@@ -29,9 +29,9 @@ You can also see it display in `systeminfo`
 
 Source: <https://www.cvedetails.com/version/1824209/Microsoft-Windows-11-24H2-10.0.26100.1742.html>
 
-Check the website <https://www.cvedetails.com/product-search.php?vendor_id=0&search=Windows> and look up your version of windows. 
+Check the website <https://www.cvedetails.com/product-search.php?vendor_id=0&search=Windows> and look up your version of windows.
 
-You will see that typically the older a version the more exploits it will have. Not all exploits worry me, but the notiable columns to pay attention to are Code Execution and Privilege escalation. 
+You will see that typically the older a version the more exploits it will have. Not all exploits worry me, but the notiable columns to pay attention to are Code Execution and Privilege escalation.
 
 ## Conclusion
 

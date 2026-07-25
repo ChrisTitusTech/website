@@ -11,7 +11,7 @@ tags:
   - Docker
 draft: false
 ---
-This is a full walk-through and guide for Docker. 
+This is a full walk-through and guide for Docker.
 <!--more-->
 
 ## Install and Getting Started

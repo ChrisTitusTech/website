@@ -18,12 +18,11 @@ If you are running docker you will accumulate a lot of unused images and volumes
 
 ## Do you need this?
 
-Check your portainer status page and look for "unused" images and containers. If you are seeing a lot of these, then you are wasting space and I'd recommend running this script to clean them up! 
-
+Check your portainer status page and look for "unused" images and containers. If you are seeing a lot of these, then you are wasting space and I'd recommend running this script to clean them up!
 
 ## The Cleanup Script
 
-Run this bash script every week to ensure the cleanup gets performed. 
+Run this bash script every week to ensure the cleanup gets performed.
 
 ```
 #!/bin/bash

@@ -23,9 +23,10 @@ The kernel customizations that Bazzite and CachyOS use can be installed on Arch 
 
 >> "Its not about the destination, its about the journey" - Anonymous
 
-The Linux journey is about learning and exploring. It is about discovering new things and finding out what works best for you. It is not about finding the perfect distribution or the perfect desktop environment. It is about finding what works for you and enjoying the process of learning and exploring. 
+The Linux journey is about learning and exploring. It is about discovering new things and finding out what works best for you. It is not about finding the perfect distribution or the perfect desktop environment. It is about finding what works for you and enjoying the process of learning and exploring.
 
-What did my journey look like? 
+What did my journey look like?
+
 - November 2018: I started with Ubuntu
 - December 2018: I switched to Fedora
 - January 5th 2019: I switched to OpenSUSE
@@ -39,7 +40,7 @@ I really stopped switching when I found that each distro was just a different lo
 
 ## The Uncomfortable Truths
 
-- Linux users don't want Windows users to switch to Linux. 
+- Linux users don't want Windows users to switch to Linux.
 - Windows users don't want to learn Linux.
 - Companies and developers don't want to support Linux. (It's not profitable for them)
 

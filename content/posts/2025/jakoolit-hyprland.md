@@ -16,6 +16,7 @@ Hyprland has always been an elusive setup to a functional desktop that I enjoy. 
 ## What systems are compatile with JaKoolit Hyprland?
 
 [JaKoolit Hyprland](https://github.com/JaKooLit) is compatible with the following systems:
+
 - Ubuntu 24.04
 - Ubuntu 24.10
 - Arch Linux
@@ -36,7 +37,7 @@ curl -fsSL christitus.com/linux | sh
 
 Look under System setup and you'll see the option to install JaKoolit Hyprland.
 
-![](/images/2025/jakoolit-hyprland/linutil-hyprland.webp)
+![Linutil Hyprland](/images/2025/jakoolit-hyprland/linutil-hyprland.webp)
 
 ## Walkthrough Video
 

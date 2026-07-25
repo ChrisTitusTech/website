@@ -15,7 +15,7 @@ Perform the following steps to solve the Spooler subsystem app high CPU usage. I
 
 ## The Solution
 
-  * Open up command prompt as administrator and type the following
+* Open up command prompt as administrator and type the following
 
 ```
 net stop spooler
@@ -26,4 +26,3 @@ net start spooler
 ## Conclusion
 
 Now check task manager again and verify the Spooler subsystem app is now at 0% usage. Alternatively, you can disable the spooler service in services (Start -> Run -> Type: services.msc) and this will make sure it doesn&#8217;t run, however, it also means you can&#8217;t print.
-

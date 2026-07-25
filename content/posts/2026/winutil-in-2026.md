@@ -86,7 +86,7 @@ Highlights:
 #### Repair Tools
 
 | Tool | What It Does |
-|---|---|
+| --- | --- |
 | Reset Network | Runs `netsh int ip reset` and `netsh winsock reset` — restores network stack to defaults |
 | Reset Windows Update | Re-registers DLLs, restarts update services |
 | System Corruption Scan | Runs `sfc /scannow` and `DISM /RestoreHealth` |
@@ -126,7 +126,6 @@ If you want a minimal or customized Windows install, here are additional tools:
 - **[Tiny11 Builder](https://github.com/ntdevlabs/tiny11builder)** — By NTDEV (IntiDev), who has been creating Windows ISOs for 20+ years. Uses official Microsoft media.
 - **[NTLite](https://www.ntlite.com/)** — A veteran tool dating back to Windows XP. Highly configurable ISO modification.
 
-
 ## Stay in the Loop
 
 Development is ongoing and moves fast. Catch live updates every **Tuesday and Thursday** on:
@@ -137,7 +136,6 @@ Development is ongoing and moves fast. Catch live updates every **Tuesday and Th
 ---
 
 *Have thoughts on Win11 Creator or what you'd like to see in the new .NET app? Drop a comment — feedback directly shapes where this project goes next.*
-
 
 ## Walkthrough Video
 

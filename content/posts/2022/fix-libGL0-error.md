@@ -34,4 +34,4 @@ sudo apt install nvidia-driver-libs:i386
 
 ## Launch Steam
 
-You now can launch steam and have it launch properly. 
+You now can launch steam and have it launch properly.

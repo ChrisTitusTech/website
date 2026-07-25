@@ -24,21 +24,23 @@ Leaving Twitter? Why not download all your tweets from archive and store it your
 ## Process of Offline Twitter
 
 1. Download Twitter Archive
-  ![](/images/2022/twitter-archive/twitter-archive.webp)
+  ![Twitter Archive](/images/2022/twitter-archive/twitter-archive.webp)
   _Note: This can take up to 72 hours to produce a downloadable zip_
 2. Unzip Archive to it's OWN folder
 3. Download the Archive parser
+
     ```
     wget https://raw.githubusercontent.com/timhutton/twitter-archive-parser/main/parser.py
     ```
+
 4. Run `python3 parser.py`
     _I recommend selecting Yes to download all messages_
 5. Open `Your archive.html` in your browser
-    ![](/images/2022/twitter-archive/offline-twitter.webp)
+    ![Offline Twitter](/images/2022/twitter-archive/offline-twitter.webp)
 
 ## Limitations
 
-I put the other projects above to get around the limitations of using the Archive Parser. 
+I put the other projects above to get around the limitations of using the Archive Parser.
 
 - Bookmark Tool will change the t.co links to their proper links so it doesn't use Twitter servers.
 - Cleaner will cleanup the archive

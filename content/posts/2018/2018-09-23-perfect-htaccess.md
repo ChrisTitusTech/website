@@ -16,7 +16,7 @@ This walks you through what your htaccess should look like in a WordPress Insta
 
 ## The .htaccess file to rule them all
 
-##### Basic WordPress part
+### Basic WordPress part
 
 ```
 # BEGIN WordPress
@@ -31,7 +31,7 @@ RewriteRule . /index.php [L]
 # END WordPress
 ```
 
-##### Secure the WordPress install
+#### Secure the WordPress install
 
 ```
 # Allow mod_rewrite in htaccess
@@ -394,4 +394,3 @@ Deny from env=bad_bot
 ## In Closing
 
 I recommend and personally use all the above settings, however, I broke up each section of my htaccess so you can drop ones you don&#8217;t like or want. Pay close attention to the section Force HTTPS as this will force all http traffic to https and you must have a valid SSL Certificate.
-

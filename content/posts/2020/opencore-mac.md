@@ -11,31 +11,36 @@ tags:
 ---
 This goes over how to install macOS on pretty much any piece of hardware.<!--more--> OpenCore is a relatively young project, but is by far my favorite. It teaches you the proper way to setup your system to work long term in the macOS ecosystem.
 
-# OpenCore Wiki
+## OpenCore Wiki
+
 Source for the content in this post is from [https://dortania.github.io/](https://dortania.github.io/).  
-This knowledge base is fantastic for any information I glaze over or troubleshooting that isn't covered. It is much more indepth than this article, but can be confusing in parts. This article is meant to get you acquainted with OpenCore and fill in any missing gaps. 
+This knowledge base is fantastic for any information I glaze over or troubleshooting that isn't covered. It is much more indepth than this article, but can be confusing in parts. This article is meant to get you acquainted with OpenCore and fill in any missing gaps.
 
 ## Why I Use OpenCore?
+
 I use opencore for compatibility and everything can be setup in a non macOS environment. It also injects drivers support (kext) differently than past methods and is far more stable.
-This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster. 
+This also means updates are far less likely to break your system and boot times are just as fast as a regular mac, if not faster.
 I also find a larger amount of hardware is supported and the finished product is all contained neatly in an EFI partition.
 
 ## Hardware Compatibility
+
 Even with OpenCore supporting a lot more hardware there is still some hardware that simply will not work on macOS no matter what you do. Here is a definitive guide [https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/).
-The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops. 
-AMD CPUs can technically work, but will require more tinkering and are more difficult than the Intel counterparts. 
+The TLDR of that guide is the last two generations of nVidia Graphics Cards and future nVidia Cards are not compatible, and even old nVidia cards will not work past High Sierra (10.13.x). Also, almost every Intel Wireless card will not function properly or work at all. So buying a replacement is needed for laptops.
+AMD CPUs can technically work, but will require more tinkering and are more difficult than the Intel counterparts.
 
 ## Files and Projects you need to download and what they do
+
 Here is a list of all the files and GitHub projects that are used for OpenCore.
 
-  - OpenCore GitHub (Base Project) - https://github.com/acidanthera/OpenCorePkg/releases
-  - All Drivers, Kexts, and SSDTs - https://dortania.github.io/OpenCore-Install-Guide/ktext.html
-  - GitMacOS GitHub (Download Official Apple PKGs) - https://github.com/corpnewt/gibMacOS
-  - ProperTree (config.plist editing) - https://github.com/corpnewt/ProperTree
-  - SSDTTime (DSDT Dump and SSDT creation) - https://github.com/corpnewt/SSDTTime
-  - GenSMBIOS (Generate Serial and UUID) - https://github.com/corpnewt/GenSMBIOS
+- OpenCore GitHub (Base Project) - https://github.com/acidanthera/OpenCorePkg/releases
+- All Drivers, Kexts, and SSDTs - https://dortania.github.io/OpenCore-Install-Guide/ktext.html
+- GitMacOS GitHub (Download Official Apple PKGs) - https://github.com/corpnewt/gibMacOS
+- ProperTree (config.plist editing) - https://github.com/corpnewt/ProperTree
+- SSDTTime (DSDT Dump and SSDT creation) - https://github.com/corpnewt/SSDTTime
+- GenSMBIOS (Generate Serial and UUID) - https://github.com/corpnewt/GenSMBIOS
 
 ## Checklist for https://dortania.github.io/OpenCore-Install-Guide/
+
 1. Check Hardware Compatibility - Document all device IDs and firmware
 2. Download All Projects and Files
 3. Boot Into Linux and do a DSDT dump followed by creating SSDT files for your computer (DO NOT USE PREBUILT!)

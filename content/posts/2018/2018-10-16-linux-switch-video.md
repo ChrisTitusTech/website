@@ -12,7 +12,7 @@ tags:
 ---
 This will be the first article in a series of Linux articles, I am going over 6 reasons to switch to Linux and 1 big reason not to. Many people ask &#8220;Why should I switch to Linux from Windows?&#8221; and in this article below I break it down for you. <!--more-->
 
-### Pros
+## Pros
 
   1. It&#8217;s Free &#8211; Tons of Free software
   2. No big brother &#8211; Microsoft Telemetry reports on you!
@@ -23,7 +23,7 @@ This will be the first article in a series of Linux articles, I am going over 6 
 
 ### Cons
 
-  1. Windows only software 
+  1. Windows only software
       * Microsoft Office
       * Adobe Software Suite
       * Specific Games
@@ -31,4 +31,3 @@ This will be the first article in a series of Linux articles, I am going over 6 
 ## Video Walkthrough
 
 {{< youtube s5QGZ-DBYGs >}}  
-

@@ -20,4 +20,3 @@ Start-ADSyncSyncCycle -PolicyType Delta
 ```
 
 This is great for forcing a sync of time-sensitive distribution list updates or user updates. If you find yourself doing this frequently make a PowerShell script for ease of access.
-

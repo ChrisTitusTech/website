@@ -24,17 +24,17 @@ flatpak install flathub com.github.tchx84.Flatseal
 
 View each flatpak permissions
 
-![](/images/2023/flatseal-required-flatpak-addon/perms.webp)
+![Perms](/images/2023/flatseal-required-flatpak-addon/perms.webp)
 
 See user modified permissions
 
-![](/images/2023/flatseal-required-flatpak-addon/user-perms.webp)
+![User Perms](/images/2023/flatseal-required-flatpak-addon/user-perms.webp)
 
 Reset permissions in the top right corner
 
 The thing I use the most is filesystem access. This lets you specify the flatpak can read from other parts in the filesystem.
 
-![](/images/2023/flatseal-required-flatpak-addon/filesystem.webp)
+![Filesystem](/images/2023/flatseal-required-flatpak-addon/filesystem.webp)
 
 This is the best way to manage and maintain flatpaks with ease and it's the first thing I install after the base flatpak!
 

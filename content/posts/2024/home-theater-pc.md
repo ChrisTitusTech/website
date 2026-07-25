@@ -24,7 +24,7 @@ No external GPU is needed for this system, as it's powerful enough to handle 4K 
 
 Out of the box these mini PC systems are configured in a balanced mode, which is fine for most users. However, I wanted to tweak the system to get the most out of it for my use case. I set the power plan to high performance, disabled the sleep mode, and set the display to never turn off. I also modified bios settings to always run at max power.
 
-![](/images/2024/home-theater-pc/bios.webp)
+![Bios](/images/2024/home-theater-pc/bios.webp)
 
 Other Tweaks:
 
@@ -38,7 +38,7 @@ Other Tweaks:
 
 I tested this out on stream with various games and it performed well. I was able to match the advertised FPS per the manufacturer's website.
 
- ![](/images/2024/home-theater-pc/game-fps.webp)
+ ![Game Fps](/images/2024/home-theater-pc/game-fps.webp)
 
 ### Livestream Benchmarks
 
@@ -46,7 +46,7 @@ I tested this out on stream with various games and it performed well. I was able
 
 ## IO Ports for Beelink SER8
 
-![](/images/2024/home-theater-pc/io.webp)
+![Io](/images/2024/home-theater-pc/io.webp)
 
 ## Pros and Cons
 

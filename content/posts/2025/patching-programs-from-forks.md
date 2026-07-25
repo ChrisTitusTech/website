@@ -23,7 +23,7 @@ git format-patch -1 <COMMITSHA>
 ```
 
 Git commit sha located at:
- 
+
 ![git-sha](/images/2025/git-sha.webp)
 
 ## Patching the Original Repo
@@ -31,21 +31,25 @@ Git commit sha located at:
 Check the stats and if there will be any rejects from patching
 
 Stats:
+
 ```
 git apply --stat <PATCHFILE>
 ```
 
 Check for rejects:
+
 ```
 git apply --check <PATCHFILE>
 ```
 
 Apply a clean patch:
+
 ```
 git am <PATCHFILE>
 ```
 
 Apply a patch with rejects:
+
 ```
 git am --reject <PATCHFILE>
 ```

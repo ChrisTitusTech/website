@@ -17,13 +17,14 @@ I am going over hosting WordPress on Google Cloud Platform in this article. This
 
 ![nas_theapplication_3216](/images/2019/03/nas_theapplication_3216.webp)
 
-### Step 1: Fresh VM
+## Step 1: Fresh VM
 
 _Note: Be sure and install gcloud https://cloud.google.com/sdk/docs/downloads-apt-get
 Setup Project and VM (micro)_  
 ```sudo apt update && sudo apt upgrade```
 
 ### Step 2: Install Swap
+
 ```
 sudo fallocate -l 1G /swapfile  
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=1048576  
@@ -32,6 +33,7 @@ sudo mkswap /swapfile
 sudo swapon /swapfile  
 sudo nano /etc/fstab  
 ```
+
 `/swapfile swap swap defaults 0 0`
 
 ![apache2](/images/2019/03/apache2.webp)
@@ -51,6 +53,7 @@ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 **Setup DNS**  
 -Go to your web domain registrar and create A record pointing to your new server  
 **Configure Apache conf for website**  
+
 ```
 <Directory /var/www/example.com>  
         Require all granted  
@@ -74,6 +77,7 @@ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 ### Step 5: Prep Database and PHP
 
 **Create database**
+
 ```
 $ mysql -u root  
 > CREATE DATABASE wordpress;  
@@ -83,25 +87,28 @@ $ mysql_secure_installation
 ```
 
 **Edit /etc/php/7.2/apache2/php.ini**  
+
 ```
 max\_input\_time = 30  
 upload\_max\_filesize = 20M  
 post\_max\_size = 21M
 ```
+
 ![WordPress-Logo-Download-PNG](/images/2019/03/WordPress-Logo-Download-PNG.webp)
 
 ### Step 6: Install WordPress on Google Cloud Platform
 
 https://codex.wordpress.org/Installing_WordPress  
 `$ wget https://wordpress.org/latest.tar.gz`  
-`$ tar -xzvf latest.tar.gz` 
+`$ tar -xzvf latest.tar.gz`
 
 ### Step 7: Tune the new install and MPM_Prefork.conf
+
 https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl
 
 ### Step 8: Troubleshooting
 
-One important addition to setting up WordPress. Permission errors with the WordPress installation can be fixed with the following command. 
+One important addition to setting up WordPress. Permission errors with the WordPress installation can be fixed with the following command.
 
 `$ chown -R www-data:www-data /var/www/html/*`
 
@@ -111,7 +118,7 @@ This adds permissions for the Apache server user to use the files in the webpage
 
 {{< youtube vIJdypOqlL4 >}}  
 
-In Conclusion, you now have WordPress on Google Cloud Platform. Enjoy the experience and let me know in the comments if you have any issues. 
+In Conclusion, you now have WordPress on Google Cloud Platform. Enjoy the experience and let me know in the comments if you have any issues.
 
 I live stream on [Twitch][1] and encourage you to drop in and ask a question. I regularly publish on [YouTube][2] and [christitus.com][3], but if you need immediate assistance, check out the Terminal Cafe with [Discord Invite Link][4].
 

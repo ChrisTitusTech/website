@@ -14,9 +14,11 @@ Kernel anticheat software is a controversial topic in the gaming community. Whil
 <!--more-->
 
 ## What is Kernel Anticheat?
+
 Kernel anticheat software runs with high privileges in the operating system's kernel mode. This allows it to monitor and control various aspects of the system, including memory access and process management, to detect and prevent cheating behaviors in games.
 
 ## Risks and Dangers
+
 1. **Security Vulnerabilities**: Running software in kernel mode increases the attack surface of the operating system. If the anticheat software has vulnerabilities, they can be exploited by malicious actors to gain control over the entire system.
 2. **System Instability**: Kernel-level software can cause system crashes and instability if it conflicts with other drivers or software. This can lead to a poor user experience and potential data loss.
 3. **Privacy Concerns**: Kernel anticheat software often requires extensive access to system resources, which can lead to privacy issues. Users may not be fully aware of the extent of data being collected and how it is used. EA the Battlefield 6 anticheat is kernel level and the publisher was recently bought by Saudi Arabia's Public Investment Fund, and I don't know about you but that makes me nervous about privacy with this game.
@@ -32,7 +34,9 @@ Kernel anticheat software runs with high privileges in the operating system's ke
 6. **Boot Problems**: In some cases, kernel anticheat software can cause boot issues, preventing the operating system from starting correctly. This can require advanced troubleshooting to resolve. An example of this was when Riot Vanguard caused issues with Windows 11 updates. Even security software like CrowdStrike had a now infamous issue where it shut down multiple airports because of a bug in their kernel driver. Example and history here: <https://christitus.com/crowdstrike-alternatives/>
 
 ## Alternatives
+
 Instead of relying on kernel anticheat, game developers can explore other methods to ensure fair play, such as:
+
 - User-mode anticheat solutions that operate with lower privileges.
 - Behavioral analysis and machine learning to detect cheating patterns.
 - Community reporting systems to identify and address cheaters.

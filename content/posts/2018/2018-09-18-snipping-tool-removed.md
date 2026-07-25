@@ -28,4 +28,3 @@ Currently, this is labeled as Screen Sketch, however, this is changing to Snip a
 ## Conclusion
 
 With Snipping Tool gone, you might as well get used to something new, and Greenshot is a great freeware that has been around for 4 years. In the short week or so that I have been using this, I have grown to love it more than the old Snipping Tool. The features give me more options, but with its polish, I am much more efficient than I ever was.
-

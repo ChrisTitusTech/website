@@ -25,7 +25,7 @@ Source: <https://sourceforge.net/projects/risingos-for-bluejay/files/Android_14/
 XDA Developers: <https://xdaforums.com/t/rom-a14-official-risingos-2-0-gapps-bluejay-02-17-2024.4581557/>
 
 - Download the ROM (ZIP File), BOOT, DTBO, and VENDOR_BOOT from Sourceforge.
-- Install ADB and Fastboot from `adb` package using `choco install adb` in Windows or local package manager in Linux. 
+- Install ADB and Fastboot from `adb` package using `choco install adb` in Windows or local package manager in Linux.
 - Reboot to bootloader
   - *Note: if getting "Waiting for Device...", install google USB Drivers from <https://dl.google.com/android/repository/usb_driver_r13-windows.zip> for Windows.*
 - **Flashing Commands:** Prepare your device for flashing by entering the following commands:
@@ -40,24 +40,29 @@ XDA Developers: <https://xdaforums.com/t/rom-a14-official-risingos-2-0-gapps-blu
 - **System Reboot:** Finally, reboot your device to the system.
 
 ## Features
+
 Here's a concise overview of what's new and improved:
 
-### Core Improvements:
+### Core Improvements
+
 - **Framework Enhancements**: RisingOS 2.0 is rebased on the crDroid Android Project, incorporating AOSP QPR2 Framework fixes and improvements, such as Adaptive Charging and a reworked Boost Framework for better performance.
 - **Audio and Visual Upgrades**: Introduces Adaptive Sound Engine for audio effects, new wallpapers, and a revamped user interface in Recovery and Settings, including Material Design themes.
 - **Security and Accessibility**: Enhanced face unlock features and added accidental phone wakeup prevention in Pocket Mode.
 
-### Customization and Usability:
+### Customization and Usability
+
 - **UI Customizations**: New LockScreen Clock Styles, including an iOS widget, and the introduction of RisingUI with updated volume panel and boot animation.
 - **Launcher and Widgets**: Ortus Launcher with improved support for icon packs and freeform tasks, alongside new LockScreen Widgets for media playback.
 - **System Enhancements**: Improved memory management, ported Pixel features for a richer experience, and new Settings Styles for a personalized touch.
 
-### Unique Features:
+### Unique Features
+
 - **Shake Gestures**: A novel feature to perform actions like taking screenshots by shaking the device.
 - **QS Header Image**: Dynamic color changes for icons and text when QS Header Image is enabled.
 - **Deprecated Features**: Certain features like Columbus/Elmyra and Nothing Launcher have been removed due to deprecated dependencies.
 
-### Acknowledgments:
+### Acknowledgments
+
 RisingOS 2.0 incorporates features from various contributors across the Android community, including LineageOS, Pixel Experience, and individual developers. The RisingOS team extends gratitude to all contributors for their invaluable efforts.
 
 This release not only enhances the user experience with new features and improvements but also pays homage to the collaborative spirit of the Android development community.

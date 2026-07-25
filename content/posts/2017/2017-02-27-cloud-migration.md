@@ -15,7 +15,7 @@ tags:
   - Cloud Migration
 
 ---
-### Moving to the Cloud
+## Moving to the Cloud
 
 The following article outlines what it takes for a cloud migration to Google Cloud Compute, Amazon Web Services, or Microsoft Azure means. Most businesses want to move to the &#8220;cloud&#8221; but have no idea what that means. <!--more-->If you&#8217;re a small business you typically have a couple computers scattered around with one storage device. If you&#8217;re a medium or large business you probably already have several servers at a location in a contract. Moving to the cloud is often pitched to businesses using Software-as-a-Service replacing the current system with a web application that runs through your browser. While this is ideal, in most instances it isn&#8217;t practical. So you keep paying for a bloated IT infrastructure that is dated, isn&#8217;t as reliable, and unable to change with your business needs.
 
@@ -41,4 +41,3 @@ _Pitfalls_
 ### Conclusion
 
 I think every business should be leveraging this technology. The larger the business the harder the cloud migration will be. Small businesses I&#8217;ve done in the course of a day, whereas larger businesses take considerably longer. Stay the course and keep searching for talent capable of helping with this transition. I enjoy using all three of these major players in the market, however, for Website Hosting and Linux boxes I like Google Cloud Compute the most, and for businesses already running Office 365 Microsoft Azure makes for the easiest transition.
-

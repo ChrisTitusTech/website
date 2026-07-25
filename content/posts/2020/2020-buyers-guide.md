@@ -10,7 +10,7 @@ categories:
   - macOS
 tags:
 ---
-Looking for a Tech Gift this holiday season? Here are the things I have my eye on and are worth considering. 
+Looking for a Tech Gift this holiday season? Here are the things I have my eye on and are worth considering.
 <!--more-->
 
 ## Amazon Fire Tablet
@@ -32,7 +32,7 @@ Video Overview on how to debloat: <https://youtu.be/yLoymK65dJE>
 
 Both PinePhone and XDA Pro1-X are Linux phones and may not be practical for everyday use unless you load Lineage or a solid mobile OS on it, but man are they fun to play with.
 
-Google 4a is the practical choice and is a rock solid phone that comes unlocked to where you can wipe out Google and move to Lineage for those security and privacy oriented folks. This is the best value in my opinion. 
+Google 4a is the practical choice and is a rock solid phone that comes unlocked to where you can wipe out Google and move to Lineage for those security and privacy oriented folks. This is the best value in my opinion.
 
 ## Monitors
 
@@ -49,8 +49,8 @@ Google 4a is the practical choice and is a rock solid phone that comes unlocked 
 - Razer Cynosa Lite - $40 - <https://amzn.to/3f6ZfS1>  
 - Razer DeathAdder Essential Mouse - $30 - <https://amzn.to/3lGFAe9>
 
-Why Razer? Did they pay me or something? *Nope!*  
-Razer has a bunch of cool features, but also has a great open source project called OpenRazer <https://openrazer.github.io/> for any operating system. You can do all kinds of fun macros with them and I picked these two above because they are rather quiet and I hate noise. Most people would prefer a full mechanical and if you are interested in this check out the project above and pick a compatible device for your needs! 
+Why Razer? Did they pay me or something? _Nope!_  
+Razer has a bunch of cool features, but also has a great open source project called OpenRazer <https://openrazer.github.io/> for any operating system. You can do all kinds of fun macros with them and I picked these two above because they are rather quiet and I hate noise. Most people would prefer a full mechanical and if you are interested in this check out the project above and pick a compatible device for your needs!
 
 ### Logitech Options
 
@@ -71,7 +71,7 @@ Razer has a bunch of cool features, but also has a great open source project cal
 
 ## Audio/Video Production Stuff
 
-Here is Equipment I use for A/V and recommend to others. Below is a video going over my entire studio setup, but I left out the impractical gear that many wouldn't want. 
+Here is Equipment I use for A/V and recommend to others. Below is a video going over my entire studio setup, but I left out the impractical gear that many wouldn't want.
 
 {{< youtube cuBay8QzYH4 >}}  
 

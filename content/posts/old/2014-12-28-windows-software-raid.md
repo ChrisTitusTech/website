@@ -15,7 +15,7 @@ The following solutions are how you&#8217;d fix the issue:
 
 ![resyncing](/images/2014/12/resyncing.webp)
 
-### Solution One:
+## Solution One
 
   1. Open up Disk management (Start -> Run -> Type diskmgmt.msc)
   2. Right click disk to remove from Raid and select Offline (Click on Disk to left not the graphic on right)
@@ -23,11 +23,10 @@ The following solutions are how you&#8217;d fix the issue:
   4. Open Disk management back up, select disk, and put online.
   5. Immediately after, Right click graphic and select remove Mirror.
 
-### Solution Two:
+### Solution Two
 
   1. Physically unplug one of the disks
   2. Open Disk Management
   3. Remove Mirror
 
 In closing, this will get rid of your raid and give you the ability to repurpose these disks as you see fit. In the above experience, I still had my data on both disks so I just formatted one and repurposed it for other functions.
-

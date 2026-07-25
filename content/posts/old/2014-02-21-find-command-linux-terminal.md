@@ -16,8 +16,7 @@ How to find a file from the root directory and check the entire system:
 `find / -name filename.ext`  
 See directory structure without files (requires `tree` use yum or apt-get to install)
   
-`tree -d /var/www/`    
+`tree -d /var/www/`
 _Note: if you don&#8217;t include the -d it will list ALL files and folders_
 
 The two commands I use almost daily as they are fantastic for finding files or just seeing how a programs directories are structured.
-

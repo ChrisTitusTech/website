@@ -10,11 +10,12 @@ tags:
   - Ubuntu
   - Debian
 ---
-The LCARS system from Star Trek is a staple in the geek world. Ever since it made its first appearence in the Next Generation TV series in the 90s people have been obsessed with recreating that system. Leave it to Linux to give a functional LCARS recreation for those Star Trek fans out there. 
+The LCARS system from Star Trek is a staple in the geek world. Ever since it made its first appearence in the Next Generation TV series in the 90s people have been obsessed with recreating that system. Leave it to Linux to give a functional LCARS recreation for those Star Trek fans out there.
 <!--more-->
 
 ## The LCARS Desktop Environment
-This was created and hosted on <https://lcarsde.github.io/index.html>. The creator made 5 packages that you need to install before you can use it. The entire environment isn't all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design. This isn't very up to date so I recommend using debian version 10 (buster) for maximum compatibility. Newer version of Debian have issues with the `python3-posix-ipc` dependancy. 
+
+This was created and hosted on <https://lcarsde.github.io/index.html>. The creator made 5 packages that you need to install before you can use it. The entire environment isn't all that practical unless you have a massive monitor because of all the screen real estate lost to the LCARS design. This isn't very up to date so I recommend using debian version 10 (buster) for maximum compatibility. Newer version of Debian have issues with the `python3-posix-ipc` dependancy.
 
 Download base Debian 10 (buster) distro @ <https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/archive/10.12.0+nonfree/amd64/iso-cd/firmware-10.12.0-amd64-netinst.iso>
 
@@ -26,7 +27,7 @@ Install nothing but base system. No GUI components to keep it light.
 - LightDM
 - Firefox (or other browser)
 
-Set Graphical install `sudo systemctl set-default graphical.target` 
+Set Graphical install `sudo systemctl set-default graphical.target`
 
 *Note: There are a ton of different python dependancies and you need to track these down to utilize the full desktop environment*
 
@@ -45,12 +46,15 @@ sudo apt -f install
 ```
 
 ## Using LCARS
-To use it after installation, you logout of your desktop and select LCARS instead of KDE,GNOME, or whatever your current system is. This is an extremely minimal install so you don't have to worry about it conflicting with your current install. 
+
+To use it after installation, you logout of your desktop and select LCARS instead of KDE,GNOME, or whatever your current system is. This is an extremely minimal install so you don't have to worry about it conflicting with your current install.
 
 The complete manual is located @ <https://lcarsde.github.io/manual.html>
 
 ### Setting up intial configuration
+
 Edit the file @ `~/.config/lcarde/status-config.xml` look for these lines and change them to your system:
+
 ```
 <widget name="LcarsdeWifiStatus">
  41         <position x="4" y="2" width="1" height="1" />
@@ -70,6 +74,7 @@ Edit the file @ `~/.config/lcarde/status-config.xml` look for these lines and ch
 
 Change the programs to what you use in `~/.config/lcarde/settings.xml`
 Example:
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
   2 <lcarswm>
@@ -90,8 +95,7 @@ Example:
 The prebuilt image download is no longer available. Use the build instructions above to create the environment.
 
 ## Walkthrough Video
-_Release Date: July 22, 2022_
+
+_Release Date: July 22, 2022*
 
 {{< youtube hbg-QgKOdac >}}
-
-

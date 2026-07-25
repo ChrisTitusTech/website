@@ -17,16 +17,16 @@ Here is an example of the error you are seeing:
 
 ![SFC Scannow Error](/images/2015/07/SFC-scannow-error.webp)
 
-  * Download Windows 10 ISO from <https://www.microsoft.com/en-us/software-download/windows10>
-  * Mount the ISO file by double-clicking on it.
-  * Open &#8216;Windows Powershell&#8217; or &#8216;Command Prompt&#8217; with Admin privileges (right click -> Run as Administrator)
-  * Let&#8217;s check the System Health first, by running these commands: 
-      * `dism /online /cleanup-image /scanhealth`
-      * `dism /online /cleanup-image /checkhealth`
-      * `dism /online /cleanup-image /restorehealth`
-  * I&#8217;m sure that will give you an error stating that it could not perform the task. Afterward, Let&#8217;s specify the file from the ISO so that we can fix it. Run the following command: (Notice that X must be the drive letter on which your system has mounted the ISO) 
-      * `DISM /Online /Cleanup-Image /RestoreHealth /source:WIM:X:SourcesInstall.wim:1 /LimitAccess`
-  * Now let&#8217;s repair any damage in the system files, shall we? 
-      * `sfc /scannow`
+* Download Windows 10 ISO from <https://www.microsoft.com/en-us/software-download/windows10>
+* Mount the ISO file by double-clicking on it.
+* Open &#8216;Windows Powershell&#8217; or &#8216;Command Prompt&#8217; with Admin privileges (right click -> Run as Administrator)
+* Let&#8217;s check the System Health first, by running these commands:
+  * `dism /online /cleanup-image /scanhealth`
+  * `dism /online /cleanup-image /checkhealth`
+  * `dism /online /cleanup-image /restorehealth`
+* I&#8217;m sure that will give you an error stating that it could not perform the task. Afterward, Let&#8217;s specify the file from the ISO so that we can fix it. Run the following command: (Notice that X must be the drive letter on which your system has mounted the ISO)
+  * `DISM /Online /Cleanup-Image /RestoreHealth /source:WIM:X:SourcesInstall.wim:1 /LimitAccess`
+* Now let&#8217;s repair any damage in the system files, shall we?
+  * `sfc /scannow`
 
 Once this is complete, you will see you now have a functional windows environment again. One other tip that I would suggest is to re-run windows updates because your windows components were damaged and the updates have not been happening.

@@ -15,17 +15,17 @@ draft: false
 Many people want to be a programmer, but often find themselves flailing around in the dark. These are the things I've done to help aid myself in coding more, learning new things, and just becoming a better programmer.  
 <!--more-->
 
-## Use GitHub DAILY!
+## Use GitHub DAILY
 
 Ok, maybe you don't have to use GitHub specifically but choose a platform or host your own git and use it as much as you can. Finish a feature or part of a project... COMMIT IT! This makes it very easy when you leave and come back to the project.
 
-Collaborators can find your project and contribute or even fix errors you have made, which helps you improve quickly. 
+Collaborators can find your project and contribute or even fix errors you have made, which helps you improve quickly.
 
 ## Track Your Progress
 
-I'm constantly bouncing around and when I started I was getting discouraged. I'd start a project, move on or get busy, and not look at it again or even code for weeks! 
+I'm constantly bouncing around and when I started I was getting discouraged. I'd start a project, move on or get busy, and not look at it again or even code for weeks!
 
-To fix this, I ended up using a free tool called wakatime. This showed me what projects I was spending time on, editors I used, languages, and spit it all out on a dashboard. 
+To fix this, I ended up using a free tool called wakatime. This showed me what projects I was spending time on, editors I used, languages, and spit it all out on a dashboard.
 
 ![wakatime](/images/2022/wakatime.webp)
 
@@ -35,7 +35,7 @@ _Note: As a bonus, check out my hidden profile readme @ <https://github.com/chri
 
 ## Setup Your Ideal Workflow
 
-You have to like your work or at least enjoy parts of it. I follow this phrase and make sure I find something I do daily that I enjoy. 
+You have to like your work or at least enjoy parts of it. I follow this phrase and make sure I find something I do daily that I enjoy.
 
 > "Focus on the Journey, not the destination. Joy is not found in finishing an activity, but doing it!" - Greg Anderson
 
@@ -50,16 +50,17 @@ The point being is there will be things you will hate, but just make sure it's n
 
 This isn't a advertisement for you to use VIM! In fact, I'd recommend you NOT use VIM unless these things interest you and you want to go down that rabbit hole. It depends on you!
 
-Focus on what works for you and what you enjoy as far as an environment. This is more about how you *FEEL* than practical application. The better you feel in your workflow, the better your work product!
+Focus on what works for you and what you enjoy as far as an environment. This is more about how you _FEEL_ than practical application. The better you feel in your workflow, the better your work product!
 
 ## Set Goals
 
 If you are going to improve in anything you need to have a goal. For me it is all about putting in the time consistently. That is true with everything in life that you go to learn. **MORE TIME = BETTER RESULTS**
 
-Example Goals: 
+Example Goals:
+
 - 3 hours of coding per day
 - 500 Git Contributions in 2022
 
 Once you set these goals look at how you are doing. I recommend both short term and long term goals like I listed above.
 
-Now, go code! 
+Now, go code!

@@ -114,6 +114,7 @@ Hardware compatibility can make or break your Linux experience. Here's what you 
 #### NVIDIA vs AMD
 
 **AMD Graphics**:
+
 - Drivers built directly into the Linux kernel
 - No extra modules or installation required
 - Better out-of-the-box experience for most users
@@ -121,6 +122,7 @@ Hardware compatibility can make or break your Linux experience. Here's what you 
 - **Best for gamers** who want hassle-free compatibility
 
 **NVIDIA Graphics**:
+
 - Requires proprietary kernel modules
 - Installation needed (not built-in)
 - Can break during kernel updates (system won't boot or no video output)
@@ -134,12 +136,14 @@ Hardware compatibility can make or break your Linux experience. Here's what you 
 Five years ago, most Linux systems used X.org, which had significant limitations:
 
 **X.org Limitations**:
+
 - No native Variable Refresh Rate (VRR) support
 - Poor 4K support
 - Screen tearing (requires manual configuration to fix)
 - Older technology but still very stable
 
 **Wayland Advantages**:
+
 - Native VRR support
 - Excellent 4K and multi-monitor support
 - No screen tearing by default

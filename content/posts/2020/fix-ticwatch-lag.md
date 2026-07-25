@@ -28,17 +28,17 @@ Lets fix the lag on the TicWatch. There is tons of bloat that needs to be remove
     - Enable ADB Debugging
     - Enable ADB Debugging Wi-fi
 
-#### Note: Ensure both the Watch and Computer are on the same Wifi network
+### Note: Ensure both the Watch and Computer are on the same Wifi network
 
 ## Removing TicWatch Bloat
 
-This removes all the mobvoi crap that is junking up your watch. 
+This removes all the mobvoi crap that is junking up your watch.
 
 - Connect to your watch
   - `adb connect IP_ADDRESS:5555`
 - Check Devices
   - `adb devices`
-  - *Verify you see your watch!*
+  - _Verify you see your watch!_
 - Run the following commands to remove all the bloat:
 
 ```
@@ -59,5 +59,4 @@ Screenshot
 
 ## Using Google Fit and other WearOS Apps
 
-Now with all the garbage gone you can use all the other apps that are well maintained and optimized. You will notice that your watch is no longer lagging and it runs just like any other good wearable. 
-
+Now with all the garbage gone you can use all the other apps that are well maintained and optimized. You will notice that your watch is no longer lagging and it runs just like any other good wearable.

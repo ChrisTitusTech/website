@@ -28,4 +28,3 @@ pause
 ```
 
 I hope this helps you and keeps your server running until you are able to install it on another server. That said, try to avoid installing exchange on primary domain controller at all costs. You will avoid so many headaches by doing this.
-

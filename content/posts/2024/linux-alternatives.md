@@ -17,11 +17,12 @@ You can do ANYTHING you do in Windows/Mac in Linux. However, some of the softwar
 
 Original Source: <https://github.com/LewisVo/Awesome-Linux-Software/>
 
-- Brazilian Portuguese version : [here](https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_pt-BR.md).
-- Chinese version : [here](https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_zh-CN.md) or [here](https://github.com/eniqiz/Awesome-Linux-Software-zh_CN).
-- Spanish version : [here](https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_es-ES.md) or [here](https://github.com/SaintFenix/Awesome-Linux-Software/blob/master/README_es-ES.md).
-- Thai version : [here](https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_th-TH.md).
+- [Brazilian Portuguese version](https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_pt-BR.md).
+- Chinese versions: [original translation](https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_zh-CN.md) or [community translation](https://github.com/eniqiz/Awesome-Linux-Software-zh_CN).
+- Spanish versions: [original translation](https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_es-ES.md) or [community translation](https://github.com/SaintFenix/Awesome-Linux-Software/blob/master/README_es-ES.md).
+- [Thai version](https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_th-TH.md).
 
+## Table of Contents
 
 - [Applications](#applications)
   - [3D Printing](#3d-printing)
@@ -67,7 +68,7 @@ Original Source: <https://github.com/LewisVo/Awesome-Linux-Software/>
     - [Command Line](#command-line)
     - [Engine Re-creations (require the actual game)](#engine-re-creations-require-the-actual-game)
     - [FPS](#fps)
-    - [Miscellaneous](#miscellaneous)
+      - [Miscellaneous Games](#miscellaneous-games)
     - [Puzzle](#puzzle)
     - [Racing](#racing)
     - [RPG](#rpg)
@@ -90,7 +91,7 @@ Original Source: <https://github.com/LewisVo/Awesome-Linux-Software/>
     - [Graphic Creation](#graphic-creation)
     - [Image Editor](#image-editor)
     - [Image Management](#image-management)
-    - [Miscellaneous](#miscellaneous-1)
+      - [Miscellaneous Graphics](#miscellaneous-graphics)
     - [PSD, Sketch Inspection](#psd-sketch-inspection)
     - [Screen Recorder](#screen-recorder)
     - [Screenshot](#screenshot)
@@ -110,7 +111,7 @@ Original Source: <https://github.com/LewisVo/Awesome-Linux-Software/>
     - [Automation](#automation)
     - [Dock](#dock)
     - [Local Search](#local-search)
-    - [Miscellaneous](#miscellaneous-2)
+      - [Miscellaneous Productivity](#miscellaneous-productivity)
     - [Note Taking](#note-taking)
     - [Time and Task](#time-and-task)
     - [Time and Usage Tracker](#time-and-usage-tracker)
@@ -123,7 +124,7 @@ Original Source: <https://github.com/LewisVo/Awesome-Linux-Software/>
     - [Network Analysis](#network-analysis)
     - [Password Manager](#password-manager)
     - [Reverse Engineering](#reverse-engineering)
-    - [Other](#other)
+      - [Other Security](#other-security)
   - [Sharing Files](#sharing-files)
     - [Cloud Drive](#cloud-drive)
     - [Download Manager](#download-manager)
@@ -135,19 +136,19 @@ Original Source: <https://github.com/LewisVo/Awesome-Linux-Software/>
     - [Integrated Development Environment inspired / Common User Access based](#integrated-development-environment-inspired--common-user-access-based)
     - [Modal editors \& derivatives](#modal-editors--derivatives)
     - [Other editors](#other-editors)
-  - [Utilities](#utilities-1)
+    - [System Utilities](#system-utilities)
     - [Disk Utilities](#disk-utilities)
     - [System Maintenance](#system-maintenance)
     - [System Monitoring](#system-monitoring)
-    - [Other](#other-1)
+      - [Other Utilities](#other-utilities)
   - [Video](#video)
   - [VPN](#vpn)
   - [Wiki Software](#wiki-software)
   - [Others](#others)
 - [Command Line Utilities](#command-line-utilities)
-  - [Internet](#internet-1)
+  - [Internet CLI Tools](#internet-cli-tools)
   - [System Info / Monitoring](#system-info--monitoring)
-  - [Tools](#tools-1)
+  - [General CLI Tools](#general-cli-tools)
 - [Custom Linux Kernels](#custom-linux-kernels)
 - [Desktop Environments](#desktop-environments)
 - [Display manager](#display-manager)
@@ -161,8 +162,6 @@ Original Source: <https://github.com/LewisVo/Awesome-Linux-Software/>
 - [Linux News, Apps, and more:](#linux-news-apps-and-more)
 - [Reddit](#reddit)
 - [Contributors](#contributors)
-- [Guidelines to contribute](#guidelines-to-contribute)
-- [Unsure how to contribute?](#unsure-how-to-contribute)
 - [License](#license)
 
 ## Applications
@@ -174,7 +173,7 @@ Original Source: <https://github.com/LewisVo/Awesome-Linux-Software/>
 
 ### Audio
 
-_For a more comprehensive/advanced/better categorized/... list of Linux audio software, you may want to click [here](https://github.com/nodiscc/awesome-linuxaudio)_
+_For a more comprehensive and better categorized selection, see this [list of Linux audio software](https://github.com/nodiscc/awesome-linuxaudio)._
 
 #### Edit-Mix-Record
 
@@ -271,7 +270,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://github.com/chatty/chatty) [Chatty](https://chatty.github.io/) - Chatty is a Twitch chat client for everyone who wants to try something new and different from the webchat, but doesn't want the complexity of an IRC client or miss out on the Twitch specific features.
 - [![Open-Source Software][oss icon]](https://gitlab.gnome.org/GNOME/fractal) [Fractal](https://wiki.gnome.org/Apps/Fractal) - Fractal is a Matrix messaging app for GNOME written in Rust. Its interface is optimized for collaboration in large groups, such as free software projects.
 - [![Open-Source Software][oss icon]](https://invent.kde.org/network/neochat) [NeoChat](https://apps.kde.org/neochat/) - NeoChat is a Matrix client. It allows you to send text messages, videos and audio files to your family, colleagues and friends using the Matrix protocol.
-- [![Open-Source Software][oss icon]](https://github.com/Nheko-Reborn/nheko) [nheko](https://nheko-reborn.github.io/) - Desktop client for Matrix using Qt and C++20. 
+- [![Open-Source Software][oss icon]](https://github.com/Nheko-Reborn/nheko) [nheko](https://nheko-reborn.github.io/) - Desktop client for Matrix using Qt and C++20.
 - [![Open-Source Software][oss icon]](https://invent.kde.org/network/tokodon) [Tokodon](https://apps.kde.org/tokodon/) - Tokodon is a Mastodon client for Plasma and Plasma Mobile.
 - [![Open-Source Software][oss icon]](https://github.com/SpacingBat3/WebCord) [WebCord](https://github.com/SpacingBat3/WebCord) - A Discord and Fosscord web-based client made with the electron.
 - [![Open-Source Software][oss icon]](https://gitlab.com/zerkc/whatsdesk) [WhatsDesk](https://zerkc.gitlab.io/whatsdesk/) - WhatsDesk is a unofficial client of WhatsApp.
@@ -453,6 +452,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [Unity](https://unity.com/) - The world’s leading platform for real-time content creation.
 - [Unreal Engine](https://www.unrealengine.com/en-US) - The world’s most open and advanced real-time 3D creation tool.
 - [![Open-Source Software][oss icon]](https://github.com/turanszkij/WickedEngine) [Wicked Engine](https://wickedengine.net/) - 3D engine with modern graphics.
+
 #### Git
 
 - [![Open-Source Software][oss icon]](https://git.zx2c4.com/cgit/refs/tags) [cgit](https://git.zx2c4.com/cgit/about/) - A hyperfast web frontend for git repositories written in C.
@@ -511,6 +511,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - ![Non Free][money icon] [PyCharm Professional](https://www.jetbrains.com/pycharm/) - Commercial IDE by Jetbrains for scientific and web Python development.
 
 #### Ruby
+
 - ![Non Free][money icon] [RubyMine](https://www.jetbrains.com/ruby/) - Professional Ruby and Rails IDE.
 
 #### Shell
@@ -544,7 +545,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://phabricator.kde.org/source/heaptrack/repository/master/) [Heaptrack](https://phabricator.kde.org/source/heaptrack/repository/master/) - A heap memory profiler for Linux.
 - [![Open-Source Software][oss icon]](https://github.com/WindSoilder/hors) [hors](https://github.com/WindSoilder/hors) - Instant coding answers via the command line.
 - [![Open-Source Software][oss icon]](https://github.com/Kong/insomnia) [Insomnia](https://insomnia.rest/) - A simple, beautiful, and free REST API client.
-- [Intel® VTune™ Profiler](https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html) - GUI and Commandline tool from Intel for finding and fixing performance bottlenecks in software written in C/C++, C#, Java, and more. 
+- [Intel® VTune™ Profiler](https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html) - GUI and Commandline tool from Intel for finding and fixing performance bottlenecks in software written in C/C++, C#, Java, and more.
 - [![Open-Source Software][oss icon]](https://docs.jupyter.org/en/latest/install.html) [Jupyter Notebook](https://jupyter.org/) - An open source program that provides interactive data and scientific computing information across over 40 programming languages.
 - [![Open-Source Software][oss icon]](https://github.com/jesseduffield/lazydocker) [lazydocker](https://github.com/jesseduffield/lazydocker) - A simple terminal UI for both docker and docker-compose, written in Go with the gocui library.
 - [![Open-Source Software][oss icon]](https://gitlab.gnome.org/GNOME/meld/tree/main) [Meld](https://meldmerge.org/) - Meld is a visual diff and merge tool that helps you compare files, directories, and version controlled projects.
@@ -715,7 +716,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://osdn.net/projects/zandronum/scm/) [Zandronum](https://zandronum.com/) - Leading the way in newschool multiplayer Doom online.
 - [![Open-Source Software][oss icon]](https://github.com/coelckers/gzdoom) [Zdoom](https://zdoom.org/index) - ZDoom is a source port for the modern era, supporting current hardware and operating systems and sporting a vast array of user options.
 
-#### Miscellaneous
+#### Miscellaneous Games
 
 - [![Open-Source Software][oss icon]](https://wiki.flightgear.org/Portal:Developer) [FlightGear](https://www.flightgear.org/) - Professional quality 3D flight simulator.
 - [![Open-Source Software][oss icon]](https://github.com/Mudlet/Mudlet) [Mudlet](https://www.mudlet.org/) - A cross-platform, open source, and super fast MUD (text-only MMORPGs) client with scripting in Lua.
@@ -813,7 +814,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://github.com/sonic2kk/steamtinkerlaunch) [SteamTinkerLaunch](https://github.com/sonic2kk/steamtinkerlaunch) - Linux wrapper tool for use with the Steam client for custom launch options and 3rd party programs.
 - [![Open-Source Software][oss icon]](https://github.com/fastrizwaan/WineZGUI/) [WineZGUI](https://github.com/fastrizwaan/WineZGUI/) - GUI Frontend using Zenity for running Windows games with Wine that allows you to create, manage, and share game prefixes.
 
-##### W.I.N.E.
+##### W.I.N.E
 
 - [![Open-Source Software][oss icon]](https://github.com/GloriousEggroll/proton-ge-custom) [GE-Proton](https://github.com/GloriousEggroll/proton-ge-custom) - Compatibility tool for Steam Play based on Wine and additional components.
 - [![Open-Source Software][oss icon]](https://github.com/Kron4ek/Wine-Builds) [Kron4ek Wine Builds](https://github.com/Kron4ek/Wine-Builds) - Custom Wine builds and build scripts for Vanilla, Wine Staging, Wine-tkg and Proton.
@@ -938,7 +939,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://github.com/yurijmikhalevich/rclip) [rclip](https://github.com/yurijmikhalevich/rclip) - AI-Powered Command-Line Photo Search Tool.
 - [![Open-Source Software][oss icon]](https://gitlab.gnome.org/GNOME/shotwell) [Shotwell](https://wiki.gnome.org/Apps/Shotwell) - Shotwell is a photo manager for GNOME.
 
-#### Miscellaneous
+#### Miscellaneous Graphics
 
 - [![Open-Source Software][oss icon]](https://github.com/FreeCAD/FreeCAD) [FreeCAD](https://github.com/FreeCAD/FreeCAD) - FreeCAD is a free and opensource multiplatform 3D parametric modeler.
 - [![Open-Source Software][oss icon]](https://github.com/HandBrake/HandBrake) [Handbrake](https://handbrake.fr/) - HandBrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs.
@@ -1119,7 +1120,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://git.launchpad.net/synapse-project) [Synapse](https://launchpad.net/synapse-project) - Synapse is a semantic launcher written in Vala that you can use to start applications as well as find and access relevant documents and files by making use of the Zeitgeist engine.
 - [![Open-Source Software][oss icon]](https://github.com/Ulauncher/Ulauncher/) [Ulauncher](https://ulauncher.io/) - Ulauncher is a fast application launcher for Linux. It's is written in Python, using GTK+.
 
-#### Miscellaneous
+#### Miscellaneous Productivity
 
 - [![Open-Source Software][oss icon]](https://github.com/costales/anoise) [Ambient Noise](https://github.com/costales/anoise) - An ambient noise generator for Linux.
 - [![Open-Source Software][oss icon]](https://github.com/jarun/bcal) [bcal](https://github.com/jarun/bcal) - Perform storage conversions and calculations.
@@ -1149,7 +1150,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [Obsidian](https://obsidian.md/) - Obsidian is a powerful knowledge base on top of a local folder of plain text Markdown files.
 - [![Open-Source Software][oss icon]](https://github.com/patrikx3/onenote) [OneNote](https://www.corifeus.com/onenote) - Linux Electron OneNote.
 - [![Open-Source Software][oss icon]](https://orgmode.org/) [Org mode](https://orgmode.org/) - Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.
-- [![Open-Source Software][oss icon]](https://github.com/alainm23/planify) [Planify](https://github.com/alainm23/planify) - Task manager with Todoist and Nextcloud support designed for GNU/Linux 
+- [![Open-Source Software][oss icon]](https://github.com/alainm23/planify) [Planify](https://github.com/alainm23/planify) - Task manager with Todoist and Nextcloud support designed for GNU/Linux
 - [![Open-Source Software][oss icon]](https://github.com/pbek/QOwnNotes) [QOwnNotes](https://www.qownnotes.org/) - QOwnNotes is a plain-text file notepad and todo-list manager with markdown support and ownCloud / Nextcloud integration.
 - [Simplenote](https://simplenote.com/) - A Cross platform notetaking app and Evernote competitor.
 - [![Open-Source Software][oss icon]](https://github.com/spsdco/notes) [Springseed](https://github.com/spsdco/notes) - Simple and beautiful note taking app for daily user.
@@ -1269,7 +1270,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://github.com/NationalSecurityAgency/ghidra/releases) [ghidra](https://ghidra-sre.org/) - A software reverse engineering (SRE) suite of tools developed by NSA's Research Directorate in support of the Cybersecurity mission.
 - [![Open-Source Software][oss icon]](https://github.com/radareorg/radare2/releases) [radare2](https://rada.re/n/radare2.html) - A free/libre toolchain for easing several low level tasks like forensics, software reverse engineering, exploiting, debugging.
 
-#### Other
+#### Other Security
 
 - [![Open-Source Software][oss icon]](https://gitlab.gnome.org/World/Authenticator) [Authenticator](https://apps.gnome.org/app/com.belmoussaoui.Authenticator/) - Simple application for generating Two-Factor Authentication Codes.
 - [![Open-Source Software][oss icon]](https://github.com/Cisco-Talos/clamav-devel) [ClamAV](https://www.clamav.net/) - ClamAV is an open source antivirus engine for detecting trojans, viruses, malware & other malicious threats.
@@ -1426,7 +1427,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://github.com/notepadqq/notepadqq) [Notepadqq](https://notepadqq.com/wp/) - Notepadqq is a Notepad++-like editor for the Linux desktop.
 - [![Open-Source Software][oss icon]](https://github.com/dail8859/NotepadNext) [Notepad Next](https://github.com/dail8859/NotepadNext) - A cross-platform, reimplementation of Notepad++.
 
-### Utilities
+### System Utilities
 
 #### Disk Utilities
 
@@ -1479,7 +1480,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://bazaar.launchpad.net/~indicator-multiload/indicator-multiload/trunk/files) [Systemload](https://launchpad.net/indicator-multiload) - A program that shows current system load in a status bar.
 - [![Open-Source Software][oss icon]](https://github.com/vergoh/vnstat) [vnStat](https://humdi.net/vnstat/) - vnStat is a console-based network traffic monitor that uses the network interface statistics provided by the kernel as information source. This means that vnStat won't actually be sniffing any traffic and also ensures light use of system resources regardless of network traffic rate.
 
-#### Other
+#### Other Utilities
 
 - [![Open-Source Software][oss icon]](https://sourceforge.net/projects/alien-pkg-convert/files/) [Alien Package Converter](https://sourceforge.net/projects/alien-pkg-convert/) - Package converter. Converts between RPM, DPKG, SLP, and TGZ package formats.
 - [![Open-Source Software][oss icon]](https://github.com/angryip/ipscan) [Angry IP Scanner](https://angryip.org/) - Fast and friendly network scanner.
@@ -1597,7 +1598,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 
 ## Command Line Utilities
 
-### Internet
+### Internet CLI Tools
 
 - [![Open-Source Software][oss icon]](https://github.com/federicotorrielli/Daily-Reddit-Wallpaper) [Daily Reddit Wallpaper](https://federicotorrielli.github.io/Daily-Reddit-Wallpaper/) - Change your wallpaper to the most upvoted image of the day from /r/wallpapers or any other subreddit on system startup.
 - [![Open-Source Software][oss icon]](https://github.com/jarun/ddgr) [ddgr](https://github.com/jarun/ddgr) - DuckDuckGo from the command line.
@@ -1614,7 +1615,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://github.com/sdushantha/tmpmail) [tmpmail](https://github.com/sdushantha/tmpmail) - A temporary email right from your terminal written in POSIX sh.
 - [![Open-Source Software][oss icon]](https://github.com/soimort/translate-shell) [translate-shell](https://www.soimort.org/translate-shell) - Command-line translator using Google Translate, Bing Translator, Yandex.Translate, etc.
 - [![Open-Source Software][oss icon]](https://github.com/vasani-arpit/WBOT) [WBOT](https://github.com/vasani-arpit/WBOT) - A simple CLI based BOT for WhatsApp™ in NodeJS. reply to your friends quickly and have fun along the way.
-- [![Open-Source Software][oss icon]](https://github.com/iamtalhaasghar/yewtube) [yewtube](https://github.com/iamtalhaasghar/yewtube) - Terminal based YouTube player and downloader. No Youtube API key required. Forked from mps-youtube. Can be installed using pip as described [here](https://github.com/iamtalhaasghar/yewtube#using-pip).
+- [![Open-Source Software][oss icon]](https://github.com/iamtalhaasghar/yewtube) [yewtube](https://github.com/iamtalhaasghar/yewtube) - Terminal based YouTube player and downloader. No Youtube API key required. Forked from mps-youtube. See the [pip installation instructions](https://github.com/iamtalhaasghar/yewtube#using-pip).
 - [![Open-Source Software][oss icon]](https://github.com/rg3/youtube-dl) [youtube-dl](https://rg3.github.io/youtube-dl/) - youtube-dl is a command-line program to download videos from YouTube.com and a few more sites. It requires the Python interpreter (2.6, 2.7, or 3.2+), and it is not platform specific.
 - [![Open-Source Software][oss icon]](https://github.com/yt-dlp/yt-dlp) [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A youtube-dl fork with additional features and fixes.
 - [![Open-Source Software][oss icon]](https://github.com/deepjyoti30/ytmdl) [ytmdl](https://github.com/deepjyoti30/ytmdl) - A simple app to get songs from YouTube in mp3 format with artist name, album name etc from sources like iTunes, Spotify, LastFM, Deezer, Gaana etc.
@@ -1636,7 +1637,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://github.com/KittyKatt/screenFetch) [screenFetch](https://github.com/KittyKatt/screenFetch) - Fetches system/theme information in terminal for Linux desktop screenshots.
 - [![Open-Source Software][oss icon]](https://github.com/amanusk/s-tui) [s-tui](https://amanusk.github.io/s-tui/) - s-tui is an UI for monitoring your computer's CPU temperature, frequency and utilization in a graphical way from the terminal.
 
-### Tools
+### General CLI Tools
 
 - [![Open-Source Software][oss icon]](https://github.com/FiloSottile/age) [Age](https://github.com/FiloSottile/age) - Simple, Modern, Secure encryption tool.
 - [![Open-Source Software][oss icon]](https://github.com/sharkdp/bat) [bat](https://github.com/sharkdp/bat) - A cat clone with syntax highlighting and Git integration.
@@ -1766,7 +1767,7 @@ _For a more comprehensive/advanced/better categorized/... list of Linux audio so
 - [![Open-Source Software][oss icon]](https://github.com/codic12/worm) [Worm](https://github.com/codic12/worm) - A dynamic, tag-based window manager written in Nim.
 - [![Open-Source Software][oss icon]](https://github.com/xmonad/xmonad) [xmonad](https://xmonad.org) - A dynamically tiling X11 window manager that is written and configured in Haskell.
 
-## Linux News, Apps, and more:
+## Linux News, Apps, and more
 
 - [9To5Linux](https://9to5linux.com/)
 - [AllTop](https://linux.alltop.com/)
@@ -1875,7 +1876,6 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 [oss icon]: /images/2024/linux-alternatives/oss.svg
 [freeware icon]: /images/2024/linux-alternatives/freeware.svg
 [money icon]: /images/2024/linux-alternatives/money.svg
-
 
 ## Walkthrough Video
 

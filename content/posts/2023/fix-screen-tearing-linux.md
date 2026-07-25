@@ -26,15 +26,15 @@ There are 3 main compositors that Linux distributions generally use.
 - Mutter (GNOME)
 - picom/compton (Various - picom is the evolution of compton)
 
-In these there is options for VSync. This doesn't generally fix the issue, but it does help when you have BAD screen tearing when moving windows in you Linux system. 
+In these there is options for VSync. This doesn't generally fix the issue, but it does help when you have BAD screen tearing when moving windows in you Linux system.
 
 KWin (KDE) Example:
 
-![](/images/2023/fix-screen-tearing-linux/kwin.webp)
+![Kwin](/images/2023/fix-screen-tearing-linux/kwin.webp)
 
-Mutter (Gnome) is enabled by default, but has made advancements with Variable Rate Refresh to fix some tearing back in July of 2022. This VRR improvement means you need to update to the latest GNOME and you can see improvements. 
+Mutter (Gnome) is enabled by default, but has made advancements with Variable Rate Refresh to fix some tearing back in July of 2022. This VRR improvement means you need to update to the latest GNOME and you can see improvements.
 
-Compton/picom Configuration: (ex. ~/picom.conf) 
+Compton/picom Configuration: (ex. ~/picom.conf)
 
 ```
 #################################
@@ -81,7 +81,7 @@ I hope in 2 years nVidia cards stop sucking as bad in Linux, because it is an AW
 
 ### nvidia-settings
 
-![](/images/2023/fix-screen-tearing-linux/nvidia-settings.webp)
+![Nvidia Settings](/images/2023/fix-screen-tearing-linux/nvidia-settings.webp)
 
 - Go to **X Server Display Configuration > Advanced**
 - Enable **Force Full Composition Pipeline**
@@ -92,6 +92,7 @@ CLI Method
 ```
 nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
 ```
+
 Reboot!
 
 ## Walkthrough Video

@@ -14,7 +14,7 @@ tags:
 ---
 This article teaches you how to prevent autodiscover from happening on Exchange Server. This is important on an Office 365 migration when you still need to keep your local exchange server from resolving.<!--more-->
 
-### Commands
+## Commands
 
 First change your local DNS
   
@@ -33,8 +33,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Outlook\AutoDiscover]  
 "ExcludeScpLookup"=dword:00000001`
 ```
- 
+
 The above is Office 2010, Notice the 14.0, and make sure you change it to the version you have.
   
 Now simply create a new profile and your domain should now point to Office 365 by default.
-

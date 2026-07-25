@@ -15,7 +15,7 @@ tags:
 ---
 This guide goes over how to Move Website from Linux to IIS. If you&#8217;re in the tech field, you probably see moving from Linux to IIS on a WordPress platform and immediately cringed.<!--more-->
 
-### Migration
+## Migration
 
 The database migration from MySQL to MS SQL is actually pretty easy since you just push it through a large query, but I didn&#8217;t really want to mess with it, so I stuck with MySQL.
 
@@ -29,4 +29,3 @@ Using the Web Platform Install you can just select whatever install you want (Wo
 
  [5]: https://dev.mysql.com/downloads/mysql/
  [6]: https://go.microsoft.com/fwlink/?LinkID=286266
-

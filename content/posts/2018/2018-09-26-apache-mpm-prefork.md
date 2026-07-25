@@ -12,18 +12,18 @@ tags:
 ---
 This guide goes over optimizing apache memory usage by configuring mpm prefork module to the best values for your server. Afterword, you should notice substantial increases in performance especially if you are using free micro instances from Google Cloud or AWS.<!--more-->
 
-### Commands used:
+## Commands used
 
-  * Check Apache Memory usage 
-      * `ps -ylC apache2 --sort:rss | awk '{sum+=$8; ++n} END {print "Tot="sum"("n")";print "Avg="sum"/"n"="sum/n/1024"MB"}'`
+* Check Apache Memory usage
+  * `ps -ylC apache2 --sort:rss | awk '{sum+=$8; ++n} END {print "Tot="sum"("n")";print "Avg="sum"/"n"="sum/n/1024"MB"}'`
   
-        _Note: My result was between 68-71 MB with stock modules loaded, however, your results will vary._ 
-  * Launch Memory manager/resource viewer 
-      * &#8216;`htop`<span style="font-size: 1rem;">&#8216; OR you can use &#8216;</span>`top`<span style="font-size: 1rem;">&#8216; for fewer options and visuals</span>
-  * 10/4/2018 UPDATE: Follow this Github script if you want to take the guesswork out, due to this being a curl script you may want to review the code first. 
-      * `curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl`
+  _Note: My result was between 68-71 MB with stock modules loaded, however, your results will vary._
+* Launch Memory manager/resource viewer
+  * &#8216;`htop`<span style="font-size: 1rem;">&#8216; OR you can use &#8216;</span>`top`<span style="font-size: 1rem;">&#8216; for fewer options and visuals</span>
+* 10/4/2018 UPDATE: Follow this Github script if you want to take the guesswork out, due to this being a curl script you may want to review the code first.
+  * `curl -sL https://raw.githubusercontent.com/richardforth/apache2buddy/master/apache2buddy.pl | perl`
 
-#### Values to calculate:
+### Values to calculate
 
 > Total System Memory Free Buffer / Apache2 MB usage = MaxRequestWorkers, ServerLimit, and MaxClients
 
@@ -48,6 +48,7 @@ MaxClients 45
 MaxRequestWorkers 45
 MaxConnectionsPerChild 2000
 ```
+
 > 45 processes x 68 MB per = 3060 MB Free Memory needed for the above configuration
 
 Comparatively, a microserver with 600-700 MB of ram and shared CPU you will be looking at 1-3 Start/Min/Max Start and Spare servers, and no more than 10 for ServerLimit/MaxClients/MaxRequestWorkers. There are other modifications you need to make in culling down apache modules, therefore you can increase these values further.
@@ -55,4 +56,3 @@ Comparatively, a microserver with 600-700 MB of ram and shared CPU you will be 
 ### Video Walkthrough
 
 {{< youtube uGugeHVEeiU >}}  
-

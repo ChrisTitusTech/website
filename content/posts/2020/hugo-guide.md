@@ -11,9 +11,10 @@ tags:
   - Hugo
   - WordPress
 ---
-This article goes over the basics of hugo and guides you through the process of using a static site generator. 
+This article goes over the basics of hugo and guides you through the process of using a static site generator.
 <!--more-->
 ## Installing Hugo
+
 Arch-Based Users: `yay -S hugo`  
 Debian-Based Users: `sudo apt install hugo`  
 _Note: Debian packages are old and I recommend downloading the latest version of hugo from github_
@@ -22,37 +23,48 @@ Github Repo for Hugo (Latest Versions and Notes)
 [Hugo GitHub](https://github.com/gohugoio/hugo)  
 [Official Site](https://gohugo.io)
 
-Create your first site and install a theme using the [Quick Start](https://gohugo.io/getting-started/quick-start/) Page. 
+Create your first site and install a theme using the [Quick Start](https://gohugo.io/getting-started/quick-start/) Page.
 
 ## Common Hugo Commands
-  - `hugo` - builds static files in the `siteroot/public` folder
-  - `hugo server` - runs a test site so you can login to http://127.0.0.1:1313 and see your changes before pushing live
-  - `hugo new posts/dir/newpost.md` - you can make new posts on the fly with all your templates (see below) 
+
+- `hugo` - builds static files in the `siteroot/public` folder
+- `hugo server` - runs a test site so you can login to http://127.0.0.1:1313 and see your changes before pushing live
+- `hugo new posts/dir/newpost.md` - you can make new posts on the fly with all your templates (see below)
 
 ## The First Changes
-I made several changes when I first switched to HUGO and these were the changes I made. 
+
+I made several changes when I first switched to HUGO and these were the changes I made.
+
 ### Theme Modification
+
 I downloaded the the [Mainroad](https://github.com/vimux/mainroad) Theme and installed it during the Quick Start. _Note: My Debian system had an old version of HUGO 0.40 and I had to update before the theme worked._
+
 #### Changing Theme Widgets
+
 ##### Social Widget
-I first started to change the *social widget* by adding YouTube and Twitch from the following file `siteroot/themes/mainroad/layouts/partials/widgets/social.html`.  
+
+I first started to change the _social widget_ by adding YouTube and Twitch from the following file `siteroot/themes/mainroad/layouts/partials/widgets/social.html`.  
 The Most challengeing Part of this was the SVG files used by mainroad. However, once I figured out the SVG format can be edited in a simple text editor and I mirrored the size and types from the existing SVG files they showed up.
 
-Here are the Edits I made to *social.html*:
+Here are the Edits I made to _social.html_:
+
 ```
 {{- with .Site.Params.widgets.social.twitch }}
-		<div class="widget-social__item widget__item">
-			<a class="widget-social__link widget__link btn" title="Twitch" rel="noopener noreferrer" href="https://twitch.tv/{{ . }}" target="_blank">
-				{{ partial "svg/twitch.svg" (dict "class" "widget-social__link-icon") }}
-				<span>Twitch Live Streams</span>
-			</a>
-		</div>
-		{{- end }}
+  <div class="widget-social__item widget__item">
+   <a class="widget-social__link widget__link btn" title="Twitch" rel="noopener noreferrer" href="https://twitch.tv/{{ . }}" target="_blank">
+    {{ partial "svg/twitch.svg" (dict "class" "widget-social__link-icon") }}
+    <span>Twitch Live Streams</span>
+   </a>
+  </div>
+  {{- end }}
 ```
-Basically after getting the SVG setup and putting the twitch.svg and youtube.svg in this path `siteroot/mainroad/layouts/partials/svg` I was able to get the Social widget exactly how I wanted. 
+
+Basically after getting the SVG setup and putting the twitch.svg and youtube.svg in this path `siteroot/mainroad/layouts/partials/svg` I was able to get the Social widget exactly how I wanted.
 
 ##### Tags Widget
+
 Next up was fixing the tags on the sidebar. They were blocky and quite ugly, where I wanted a traditional tag cloud that you see on many other sites to help users navigate your content. So I began looking at other projects that had the proper code. I found the following code snippit:
+
 ```
 {{ if not (eq (len $.Site.Taxonomies.tags) 0) }}
     {{ $fontUnit := "rem" }}
@@ -82,26 +94,34 @@ Next up was fixing the tags on the sidebar. They were blocky and quite ugly, whe
 </div>
 {{ end }}
 ```
+
 After replacing `siteroot/themes/mainroad/layouts/partials/widgets/taglist.html` with the following code. The tag cloud was complete.
+
 #### Header/Footer Modification
-Replacing the Header and footer was extremely easy as it is just plain HTML. The files are located in `siteroot/themes/mainroad/layouts/partials/header.html or footer.html`. You can leave the stock, but I wanted to add a privacy policy and terms of service to be compliant. 
+
+Replacing the Header and footer was extremely easy as it is just plain HTML. The files are located in `siteroot/themes/mainroad/layouts/partials/header.html or footer.html`. You can leave the stock, but I wanted to add a privacy policy and terms of service to be compliant.
+
 #### Table of Contents Changes
+
 I replaced the title "PAGE CONTENTS" with share buttons using a share-buttons.html I created. This could all be done in the post-toc.html file, but I wanted to keep it modular and not make too many edits to the theme. Here were my changes:
 
-*siteroot/themes/mainroad/layouts/partials/post-toc.html*
+_siteroot/themes/mainroad/layouts/partials/post-toc.html_
+
 ```
 {{ if .Param "toc" }}
 <div class="post__toc toc">
-	<div class="toc__title">{{ partial "share-buttons.html" . }}</div>
-	<div class="toc__menu">
-		{{ .TableOfContents }}
-	</div>
+ <div class="toc__title">{{ partial "share-buttons.html" . }}</div>
+ <div class="toc__menu">
+  {{ .TableOfContents }}
+ </div>
 </div>
 {{ end }}
 ```
+
 _Note: I added the `{{ partial "share-buttons.html" . }}` to this and removed PAGE CONTENTS text_
 
-*/siteroot/layouts/partials/share-buttons.html* - NEW FILE
+_/siteroot/layouts/partials/share-buttons.html_ - NEW FILE
+
 ```
 {{ $pageurl := .Permalink }}
 
@@ -139,30 +159,45 @@ text-align: center;
 <div class="mail" title="Share this through Email" onclick="window.open('mailto:?&body={{ $pageurl }}');"><svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></div>
 </div>
 ```
+
 #### Adding AdSense and Custom Scripts to All Pages
+
 To add specific scripts to all pages, such as AdSense, you will need to modify `siteroot/themes/mainroad/_defaults/baseof.html`. I added the following before the `</head>` of this file to populate AdSense. You could put Analytics in here as well, but it isn't needed since mainroad theme has the option in `config.toml`. Here are my modifications:
 
-*baseof.html*
+_baseof.html_
+
 ```
 {{- if not .Site.IsServer }}
-		{{ template "_internal/google_analytics_async.html" . }}
-		{{ partial "adsense-auto.html" . }}
-	{{- end }}
+  {{ template "_internal/google_analytics_async.html" . }}
+  {{ partial "adsense-auto.html" . }}
+ {{- end }}
 </head>
 ```
-*siteroot/layouts/partials/adsense-auto.html* - NEW FILE
+
+*siteroot/layouts/partials/adsense-auto.html_ - NEW FILE
+
 ```
 <script data-ad-client="ca-pub-000000000000000" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 ```
-_Note: Make sure to use your *ca-pub-IDGOESHERE*
+
+_Note: Make sure to use your _ca-pub-IDGOESHERE_
+
 ### Configuration of config.toml
-In your siteroot you will see this file that you will need to configure. Most users will simply edit this and away they go. Everything in this file worked pretty darn well. There was a couple spots that tripped me up which I will go over now. 
+
+In your siteroot you will see this file that you will need to configure. Most users will simply edit this and away they go. Everything in this file worked pretty darn well. There was a couple spots that tripped me up which I will go over now.
+
 #### BaseURL
+
 Make sure you fill this out completely. I messed up the automated sitemap.xml because I simply put / instead of my entire address. This is what I have in the file now: `baseURL = "https://christitus.com/"`
+
 #### Analytics, Social, and Title/Description
+
 All of these options worked perfectly and I had no issues.
+
 #### Menu
+
 The last problem I had was the menu at the top of my theme. I soon learned there was a syntax to the config.toml file that I missed. I simply added this to the bottom and changed the weight to sort the menu properly. Here is that code snippit:
+
 ```
 [menu]
 
@@ -187,11 +222,15 @@ The last problem I had was the menu at the top of my theme. I soon learned there
     url = "https://download.teamviewer.com/download/TeamViewerQS.exe"
     weight = -100
 ```
+
 _Note: I added external site links and a proper home button_
+
 ### Templates to Optimze My Workflow
+
 This is where HUGO really shines and saves me a TON of time compared to WordPress and the like. Simply modifying the `siteroot/archetypes/default.md` file to put all the things I normally have in a post. Here is what I use:
 
-*default.md*
+_default.md_
+
 ```
 ---
 title: "{{ replace .Name "-" " " | title }}"
@@ -210,10 +249,13 @@ draft: true
 <!--more-->
 
 ```
-Now everytime I run `hugo new posts/newpost.md` it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase. 
+
+Now everytime I run `hugo new posts/newpost.md` it will fill in the Title, date, custom url, thumbnail, add the more directive for list view, and my closing phrase.
 
 ## Video Walkthrough
+
 {{< youtube 6JaBian3vgI >}}  
 
 ## Conclusion
-This has changed my life and has made it so I can make posts like this one for people to follow. This entire post took me about an hour to write and would have take twice as long if I were to do it in WordPress. 
+
+This has changed my life and has made it so I can make posts like this one for people to follow. This entire post took me about an hour to write and would have take twice as long if I were to do it in WordPress.

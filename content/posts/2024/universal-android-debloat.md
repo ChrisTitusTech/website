@@ -32,6 +32,7 @@ The Universal Android Debloater (UADNG) is a cross-platform tool that removes un
 ## Prerequisites
 
 Before starting, you'll need:
+
 - **ADB (Android Debug Bridge)** installed on your computer
 - **USB cable** to connect your device
 - **15-20 minutes** for the complete process
@@ -41,21 +42,25 @@ Before starting, you'll need:
 ### Installing ADB
 
 **Windows:**
+
 1. Download [Android Platform Tools](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
 2. Extract to a folder (e.g., `C:\platform-tools`)
 3. *Alternative:* Install via Chocolatey: `choco install adb`
 
 **Linux (Arch):**
+
 ```bash
 sudo pacman -S android-tools
 ```
 
 **Linux (Ubuntu/Debian):**
+
 ```bash
 sudo apt-get install adb
 ```
 
 **macOS:**
+
 ```bash
 brew install android-platform-tools
 ```
@@ -86,6 +91,7 @@ brew install android-platform-tools
 ### Verify ADB Connection
 
 Open your terminal/command prompt and run:
+
 ```bash
 adb devices
 ```
@@ -122,6 +128,7 @@ You should see your device listed. If it shows "unauthorized," check your phone 
 ### For Google Pixel Users
 
 **You MUST install a custom launcher** before debloating. The process can break Google's default launcher. Recommended options:
+
 - Niagara Launcher (minimal, simple interface)
 - Nova Launcher
 - Lawnchair
@@ -137,6 +144,7 @@ You should see your device listed. If it shows "unauthorized," check your phone 
 ### Restoring Accidentally Removed Apps
 
 If you accidentally remove an app:
+
 1. Open the **Google Play Store**
 2. Search for the app (e.g., YouTube, Wallet)
 3. Tap **Install**
@@ -147,10 +155,11 @@ If you accidentally remove an app:
 ### Disable USB Debugging (Optional)
 
 If you won't be using ADB regularly:
+
 1. Go to **Settings > Developer options**
 2. Toggle off **USB debugging**
 
-### Keep USB Debugging Enabled If:
+### Keep USB Debugging Enabled If
 
 - You use screen mirroring tools (scrcpy, Vysor)
 - You frequently manage apps via ADB
@@ -159,11 +168,13 @@ If you won't be using ADB regularly:
 ## Battery Life Results
 
 **Before Debloating:**
+
 - Typical usage: 24-48 hours per charge
 - Heavy background processes
 - Constant app updates and syncing
 
 **After Debloating:**
+
 - Typical usage: 3-4 days per charge
 - Minimal background processes
 - Only essential apps running
@@ -180,15 +191,18 @@ If you won't be using ADB regularly:
 ## Troubleshooting
 
 **Device not detected:**
+
 - Ensure USB debugging is enabled
 - Try a different USB cable or port
 - Run `adb devices` to verify connection
 
 **Launcher broken (Pixel devices):**
+
 - Install a custom launcher before debloating
 - Or reinstall Google Launcher from Play Store
 
 **App you need was removed:**
+
 - Simply reinstall from the Play Store
 - All removed apps can be restored
 

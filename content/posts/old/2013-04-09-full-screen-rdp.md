@@ -32,4 +32,3 @@ Windows Key Press on Remote Computer
 `Alt + Home`
 
 I often find myself using these hotkeys to move around, but these are needed especially when you have a locked up program in an RDP session.
-

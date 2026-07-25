@@ -26,4 +26,3 @@ Set WshShell = Nothing
 Now save the file as ProgramName.vbs
 
 You are done! Reboot and see that program launch.
-

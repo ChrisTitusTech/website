@@ -13,7 +13,7 @@ These steps will show you how to connect to the encore bandit devices. I recentl
 
 **Steps for connection**
 
-  * Hook Serial Adapter to your PC _Please Note the COM port_
-  * Run Putty and select Serial for Connection
-  * Type default username and password (encore!1) for both
-  * Configure Device according to Quick Setup
+* Hook Serial Adapter to your PC _Please Note the COM port_
+* Run Putty and select Serial for Connection
+* Type default username and password (encore!1) for both
+* Configure Device according to Quick Setup

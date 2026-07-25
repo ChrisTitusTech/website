@@ -10,12 +10,12 @@ tags:
   - Freedesktop
 draft: false
 ---
-Hyprland maintainer Vaxry has been banned by FreeDesktop. Meaning he can not report or patch anything in FreeDesktop which is a sad state of affairs for the Linux Desktop community as a whole, especially the wayland side of things. 
+Hyprland maintainer Vaxry has been banned by FreeDesktop. Meaning he can not report or patch anything in FreeDesktop which is a sad state of affairs for the Linux Desktop community as a whole, especially the wayland side of things.
 <!--more-->
 
 ## What happened?
 
-In 2022, the Hyprland Discord had a mod bully a transgender person by changing their nickname removing pronouns to (who/cares). Vaxry also made some off the cuff remarks about this, but I couldn't find anything worse than above. A transgender person that works for redhat and is part of the freedesktop leadership heard about this and demanded Vaxry respond to it on March, 19th 2024. 
+In 2022, the Hyprland Discord had a mod bully a transgender person by changing their nickname removing pronouns to (who/cares). Vaxry also made some off the cuff remarks about this, but I couldn't find anything worse than above. A transgender person that works for redhat and is part of the freedesktop leadership heard about this and demanded Vaxry respond to it on March, 19th 2024.
 
 ## Why Now?
 
@@ -29,7 +29,7 @@ Sometimes it takes a while before these things gain traction. Hyprland is now th
 
 ## Where to go from here?
 
-Banning Vaxry means he can't contribute to wlroots and keep putting patches which were very beneficial to wayland. He will still maintain and produce hyprland. 
+Banning Vaxry means he can't contribute to wlroots and keep putting patches which were very beneficial to wayland. He will still maintain and produce hyprland.
 
 ## Official Links to Information
 
@@ -40,8 +40,9 @@ Banning Vaxry means he can't contribute to wlroots and keep putting patches whic
 ### Other YouTuber Takes
 
 | Brodie Robertson | Nicco (KDE Dev) |
-|---------|---------|
+| --------- | --------- |
 | {{< youtube Lm3gLwyjawQ >}} | {{< youtube xjTdroiDCtc >}} |
+
 ## Walkthrough Video
 
 {{< youtube 0ws1SIbAQq8 >}}

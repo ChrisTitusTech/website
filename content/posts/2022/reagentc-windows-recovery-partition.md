@@ -22,15 +22,15 @@ Don't know what ReAgentC is or how to use it? This is your guide.
 2. Format the recovery partition as NTFS
 3. DISKPART Changes
 
-  	   - select disk 0
-  	   - select partition 3 (last partition)
-  	   - detail partition (list partition details)
-  	   - set id="de94bba4-06d1-4d40-a16a-bfd50179d6ac" (GPTDisk) _Note: id=27 on MBR_
-  	   NOTE: Reset ids to normal if you did the WRONG partition (MBR set id=7 and GPT set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7")
-			 - _Create Partition if Missing!_ `cre par pri size=605 id=de94bba4-06d1-4d40-a16a-bfd50179d6ac`
-			 - `format fs=ntfs quick label=WinRE`
-			 - `assign letter=z`
-			 - UEFI only: `gpt attributes=0x8000000000000001`
+      - select disk 0
+      - select partition 3 (last partition)
+      - detail partition (list partition details)
+      - set id="de94bba4-06d1-4d40-a16a-bfd50179d6ac" (GPTDisk) _Note: id=27 on MBR_
+      NOTE: Reset ids to normal if you did the WRONG partition (MBR set id=7 and GPT set id="ebd0a0a2-b9e5-4433-87c0-68b6b72699c7")
+      - _Create Partition if Missing!_ `cre par pri size=605 id=de94bba4-06d1-4d40-a16a-bfd50179d6ac`
+      - `format fs=ntfs quick label=WinRE`
+      - `assign letter=z`
+      - UEFI only: `gpt attributes=0x8000000000000001`
 
 4. `reagentc /disable`
 5. Verify `WinRE.wim` is installed on local system `ls "C:\Windows\System32\Recovery" | FindStr /I "WinRE.wim" ; ls "C:\Windows\System32\Recovery" -Hidden | FindStr /I "WinRE.wim"`
@@ -47,13 +47,13 @@ Don't know what ReAgentC is or how to use it? This is your guide.
 
 ## Rebooting to Recovery Partition
 
-If you can boot in to Windows, hold shift while pressing restart. This will reboot your PC into a menu. Select *Advanced Options*
+If you can boot in to Windows, hold shift while pressing restart. This will reboot your PC into a menu. Select _Advanced Options_
 
-Another method to reach this screen is to have the boot fail 3 times. A reboot during the load screen will count as a failure. 
+Another method to reach this screen is to have the boot fail 3 times. A reboot during the load screen will count as a failure.
 
 F8 is an older method that doesn't work unless enabled, but was a great way to get to the menu. I'm adding this to my Windows Utility Tweaks section.
 
-![](/images/2022/reagentc-windows-recovery-partition/recovery.webp)
+![Recovery](/images/2022/reagentc-windows-recovery-partition/recovery.webp)
 
 ### Startup Repair and Settings
 
@@ -67,17 +67,17 @@ Here are the highlights of a recovery partition:
 - Chkdsk for failing hard drives
 - SFC/DISM repairs corrupt system files (`sfc /scannow` and `dism /image:c:\ /cleanup-image /restorehealth`)
 
-![](/images/2022/reagentc-windows-recovery-partition/sfc.webp)
+![Sfc](/images/2022/reagentc-windows-recovery-partition/sfc.webp)
 
 - Regedit for editing the registry
 
-![](/images/2022/reagentc-windows-recovery-partition/regedit.webp)
+![Regedit](/images/2022/reagentc-windows-recovery-partition/regedit.webp)
 
 ### Uninstall Updates
 
 Bad update and now it doesn't work? Click this and revert it!
 
-![](/images/2022/reagentc-windows-recovery-partition/updates.webp)
+![Updates](/images/2022/reagentc-windows-recovery-partition/updates.webp)
 
 ### UEFI Firmware Settings
 

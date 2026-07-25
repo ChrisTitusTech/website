@@ -14,7 +14,7 @@ Use the following script for changing file permissions using PowerShell. I use t
 
 ## The Script
 
-Change $folder to the base directory you want for changing permissions.    
+Change $folder to the base directory you want for changing permissions.
 _Please note, you can use network UNC paths for this or a simple C:\._
   
 ```
@@ -40,4 +40,3 @@ set-acl $subFile.FullName $acl -Verbose
 ```
 
 I&#8217;ve never had takeown fail on local disks, but I have found that I needed to resort to using a PowerShell script when doing this through a network location. It&#8217;s a very powerful script, however always be careful when running this. Be sure to always test this in a subdirectory first. This can be catastrophic for a company with millions of files and folder to reset the permission on, therefore be very careful!
-

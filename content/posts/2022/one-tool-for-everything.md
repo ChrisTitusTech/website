@@ -10,7 +10,7 @@ tags:
   - PowerShell
 draft: false
 ---
-A massive update has arrived for the Windows Utility! Check out all the new features. 
+A massive update has arrived for the Windows Utility! Check out all the new features.
 <!--more-->
 
 Run Directly from PowerShell with Admin
@@ -34,14 +34,13 @@ irm christitus.com/win | iex
 - Undo Tweak Fixes
 - Better Button Placement
 
-
 ## Live Tracker
 
 <https://github.com/users/ChrisTitusTech/projects/1/views/1>
 
 ## New Tweak Options
 
-![](/images/2022/one-tool-for-everything/tweaks.webp)
+![Tweaks](/images/2022/one-tool-for-everything/tweaks.webp)
 
 ## GitHub Project
 

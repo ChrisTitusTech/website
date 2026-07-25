@@ -19,6 +19,7 @@ Option 2: Type the following or past this in a command line prompt one line at a
 takeown /f %1 /r /d y
 icacls %1 /grant administrators:F /t
 ```
+
 _Please Note: This will take a large amount of time on big drives_
 
 In closing, this will work in almost any situation, however, if you do have issues check out my PowerShell post on taking ownership of entire network drives.

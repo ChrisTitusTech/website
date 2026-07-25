@@ -26,6 +26,7 @@ A viewer of the channel also sent me this in-depth guide covering much more of N
 First Time Install: <https://youtu.be/_Z32SYFbxpw>
 
 Timestamps:
+
 - 00:00:00 - NixOS Overview
 - 00:04:05 - Finding Packages to use before install
 - 00:17:26 - Install Begins
@@ -55,6 +56,7 @@ Timestamps:
 NixOS Configuration: <https://youtu.be/IRRtk320j2A>
 
 Timestamps:
+
 - 00:00:00 - NixOS Config Overview
 - 00:01:41 - Overall feelings about NixOS
 - 00:02:20 - Improvements with Flatpak and XDG via Config
@@ -86,6 +88,7 @@ NixOS NFS Mounting: <https://youtu.be/l7HvMM6rLNE>
 NixOS Gaming Setup: <https://youtu.be/wpS3qIprHL0>
 
 Timestamps:
+
 - 00:00:00 - NixOS Gaming
 - 00:02:08 - Nix configuration changes for resolution
 - 00:03:22 - Diablo 4 problems with DWM

@@ -35,4 +35,3 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell
 7.Close Registry Editor.
 
 Re-run your setup program and you shouldn&#8217;t see &#8220;not a valid short file name&#8221; error. Also, I&#8217;d recommend running the registry cleaning portion of CCleaner and checking your Environmental Variables (Under System Properties, Advanced, then Environmental Variables.)
-

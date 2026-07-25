@@ -24,7 +24,7 @@ Syntax pulled from <https://learn.microsoft.com/en-us/windows/wsl/wsl2-mount-dis
 
 ## Determine Partition to Mount
 
-### PowerShell as Admin 
+### PowerShell as Admin
 
 List Drives
 
@@ -53,7 +53,7 @@ List Drive Types and IDs
 sudo blkid
 ```
 
-### PowerShell as Admin 
+### Mount from PowerShell as Admin
 
 _Note: By default Windows will always assume it is EXT4, unless the `-t vfat` option is used._
 
@@ -63,7 +63,7 @@ From Windows PowerShell
 wsl --mount \\.\PhysicalDrive1 --partition 2
 ```
 
-This will make it available in both Windows Explorer and WSL `/mnt/wsl/PhysicalDrive1` path. 
+This will make it available in both Windows Explorer and WSL `/mnt/wsl/PhysicalDrive1` path.
 
 #### Unmount
 

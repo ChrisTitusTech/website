@@ -9,7 +9,7 @@ categories:
 tags:
   - Powershell
 ---
- This guide will walk you through a fresh Windows installation and debloat the services, tasks, and apps that are running in the background. 
+ This guide will walk you through a fresh Windows installation and debloat the services, tasks, and apps that are running in the background.
 <!--more-->
 
 ## One Command to Do Everything
@@ -42,6 +42,7 @@ The script will remove scheduled tasks, windows applications, install common app
 ### Privacy Tweaks
 
 Disabled Services and Tasks
+
 - Telemetry
 - Wifi Sense
 - Smart Screen and Web Search
@@ -115,4 +116,3 @@ Comment any thing you don't want out... Example:
 ## Conclusion
 
 This script will be great for most users out there without losing much if any functionality. I typically run this on every system I setup, but I encourage you to fork this project and make the customizations that you need. Anything is possible, and everything can be automated. Save yourself hours of time and learn how to use not only this script, but using PowerShell.
-

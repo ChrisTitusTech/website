@@ -15,7 +15,7 @@ draft: false
 Remove YouTube shorts from your video browsing experience with the following blocklists!
 <!--more-->
 
-![](/images/2024/remove-youtube-shorts/youtube.webp)
+![Youtube](/images/2024/remove-youtube-shorts/youtube.webp)
 
 ## Blocklist
 

@@ -29,15 +29,15 @@ Any one of the following options will cause thumbnails NOT to work. Genius desig
 
 Make sure this option is UNCHECKED "Always show icons, never thumbnails" to DISPLAY thumbnails.
 
-![](/images/2023/thumbnails-in-windows/file-options.webp)
+![File Options](/images/2023/thumbnails-in-windows/file-options.webp)
 
 ### System Performance Options
 
 Open up this old hidden panel `sysdm.cpl` using run and you can configure it here as well!
 
-Make sure this one is CHECKED! "Show Thumbnails instead of icons". 
+Make sure this one is CHECKED! "Show Thumbnails instead of icons".
 
-![](/images/2023/thumbnails-in-windows/system-options.webp)
+![System Options](/images/2023/thumbnails-in-windows/system-options.webp)
 
 ### Group Policy
 
@@ -45,7 +45,7 @@ There are FOUR, yes, FOUR options to disable thumbnails in group policy. Launch 
 
 Make sure these aren't configured:
 
-![](/images/2023/thumbnails-in-windows/gpedit.webp)
+![Gpedit](/images/2023/thumbnails-in-windows/gpedit.webp)
 
 ### Registry
 
@@ -55,7 +55,7 @@ The main one is in `HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Adva
 
 Screenshot of `regedit`
 
-![](/images/2023/thumbnails-in-windows/regedit.webp)
+![Regedit](/images/2023/thumbnails-in-windows/regedit.webp)
 
 ## Walkthrough Video
 

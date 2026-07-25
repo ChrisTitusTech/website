@@ -48,7 +48,7 @@ winget install -e Rainmeter.Rainmeter
 
 ## Rainmeter Skins
 
-There are multiple download sites for Rainmeter skins, but here are some that I use. 
+There are multiple download sites for Rainmeter skins, but here are some that I use.
 
 - [Rainmeter DeviantArt group](https://www.deviantart.com/rainmeter) (downloads require an account)
 - [Rainmeter forums](https://forum.rainmeter.net/viewforum.php?f=27)
@@ -58,7 +58,7 @@ There are multiple download sites for Rainmeter skins, but here are some that I 
 
 After you download the skin that includes the `*.rmskin` file. You install it by opening it. _(Note: Some skins are inside zip files and require extraction of the rmskin file.)_
 
-Enable the components you want and edit the ini files to your needs. 
+Enable the components you want and edit the ini files to your needs.
 
 ## Issues
 

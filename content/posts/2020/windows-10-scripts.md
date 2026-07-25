@@ -32,7 +32,8 @@ powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://git.io
 
 ---
 
-## LTSC Style Debloat 
+## LTSC Style Debloat
+
 (*WARNING: WILL UNINSTALL LOTS OF STUFF*)  
 The old LTSC debloat script has been retired. Use [WinUtil](https://github.com/ChrisTitusTech/winutil) for the current Windows utility.
 

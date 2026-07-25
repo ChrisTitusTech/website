@@ -35,7 +35,7 @@ Run the utility `DISKPART`
 - `list vol` - list volumes and make note of what they are called
 - `select partition #` - select the new EFI Partition you created in Gparted
 - `assign letter g:` - pick something that is NOT C:
-- `exit` - exit the program 
+- `exit` - exit the program
 
 _Note: If you have problems your main partition with the installed windows is probably not assigned as C: and just follow the steps above to assign it letter C:_
 

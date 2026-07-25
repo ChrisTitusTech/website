@@ -24,4 +24,3 @@ Here is the fix using Diskpart:
   9. Remove assigned disk letter (remote letter X)
 
 With this, you should no longer see it, and you will Hide System Reserved Partition for good.
-

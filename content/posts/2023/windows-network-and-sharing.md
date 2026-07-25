@@ -39,7 +39,7 @@ _Note: Change Network # to the NAME of your Network from `Get-NetConnectionProfi
 
 ## Share your folders
 
-Right-click any folder and select "give access to" and select your login user. On new Windows 11/10 systems this is often your microsoft account (user@outlook.com). If you turned off password sharing and want EVERYONE to see those files then type "Everyone" and give access to them. 
+Right-click any folder and select "give access to" and select your login user. On new Windows 11/10 systems this is often your microsoft account (user@outlook.com). If you turned off password sharing and want EVERYONE to see those files then type "Everyone" and give access to them.
 
 Another option is to right-click the folder and select properties. Then select the sharing tab and give access through there.
 

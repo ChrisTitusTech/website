@@ -21,11 +21,11 @@ The best part is this is FREE and will produce a website faster than anything on
 
 Typically before I start recording any video, I write an outline and publish it on my website. It's almost like a video script, but also a copy paste guide for either a viewer or just someone searching google.
 
-This is done by using a static site generator. There are bunch on the market, but the one that suited my needs the best is [Hugo](https://gohugo.io). It has a bunch of themes ready to use out of the box @ <https://themes.gohugo.io/> and is extremely modular. 
+This is done by using a static site generator. There are bunch on the market, but the one that suited my needs the best is [Hugo](https://gohugo.io). It has a bunch of themes ready to use out of the box @ <https://themes.gohugo.io/> and is extremely modular.
 
 Then there are the annoyances of other website platforms like WordPress. You need to go on the web and use some terrible web based editor that just is slow and takes a long time. Hugo fixes this by using both GitHub and Netlify for deployment. Netlify will "host, build, and distribute" the content automatically and GitHub will be where you publish when it's ready for the publish stage that Netlify controls.
 
-What this looks like in practice is I issue a `hugo new posts/new-post.md`, edit it with `vim posts/new-post.md`, and post it with git commit and push. This allows me to create a page in seconds if I wanted. 
+What this looks like in practice is I issue a `hugo new posts/new-post.md`, edit it with `vim posts/new-post.md`, and post it with git commit and push. This allows me to create a page in seconds if I wanted.
 
 ## The Setup
 
@@ -53,13 +53,14 @@ I absolutely love the ZZO theme as a beginner. It has some of the best instructi
 
 ## Usage and First Steps
 
-The first thing you want to do is look over the sample post in `/themes` under `/themes/examplesite`. Under here you will see the structure that HUGO uses and how most of the content ends up in the `content` directory off of root. 
+The first thing you want to do is look over the sample post in `/themes` under `/themes/examplesite`. Under here you will see the structure that HUGO uses and how most of the content ends up in the `content` directory off of root.
 
-The second thing to note is the `/content/posts/` and seeing the examples here. This will show you the sample markdown file and how it's laid out. Change these and make your first post. Once you figure out a good structure for your posts, you can then edit the default template. 
+The second thing to note is the `/content/posts/` and seeing the examples here. This will show you the sample markdown file and how it's laid out. Change these and make your first post. Once you figure out a good structure for your posts, you can then edit the default template.
 
-For previewing the changes you can open up a new terminal and just type `hugo server` from the root `website` directory. 
+For previewing the changes you can open up a new terminal and just type `hugo server` from the root `website` directory.
 
 Now I have three different windows that I'm using for the bulk of my workflow:
+
 1. Chrome Window with <https://localhost:1313>
 2. IDE for editing my markdown files (vs code, vim, etc.)
 3. Extra terminal window running `hugo server` for real time updates for the chrome window

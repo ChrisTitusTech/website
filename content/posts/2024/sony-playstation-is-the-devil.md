@@ -65,4 +65,3 @@ The debate over Sony's use of FreeBSD's MIT License in the Playstation ecosystem
 ## Walkthrough Video
 
 {{< youtube "DwHKbQFf_uQ" >}}
-

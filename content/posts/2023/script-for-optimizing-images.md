@@ -43,7 +43,7 @@ sudo chmod +x /usr/local/bin/img-optimize
 
 ## My Custom Script
 
-Change the variables for FOLDER, WIDTH, and HEIGHT. 
+Change the variables for FOLDER, WIDTH, and HEIGHT.
 
 The script used at the time of writing is included below.
 

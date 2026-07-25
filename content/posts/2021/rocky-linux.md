@@ -9,15 +9,15 @@ categories:
 tags:
   - Rocky Linux
 ---
-This guide goes over setting up KDE on Rocky Linux from a base server install with no GUI. 
+This guide goes over setting up KDE on Rocky Linux from a base server install with no GUI.
 <!--more-->
 
 ## Download and Install Server Setup
 
 Download the Rocky Linux ISO from: <https://rockylinux.org/download/>  
-_Note: I downloaded DVD 8GB, which is offline and no downloading_ 
+_Note: I downloaded DVD 8GB, which is offline and no downloading_
 
-During Setup, I recommend a dedicated drive and choosing only SERVER with NO GUI! 
+During Setup, I recommend a dedicated drive and choosing only SERVER with NO GUI!
 
 Go ahead and walkthrough the rest of the install
 
@@ -31,6 +31,7 @@ sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release
 sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm
 sudo dnf config-manager --set-enabled PowerTools
 ```
+
 _Note: If you can't install PowerTools with config-manager, you can manually enable it through the repo file in `/etc/yum.repos.d`_
 
 ### Dependencies
@@ -52,7 +53,7 @@ _Note: If using GTK Apps, I highly recommend building and installing `Kvantum` f
 
 #### NVIDIA Cards ONLY
 
-If you have an nvidia card it can be tricky to install so I recommend doing it before Xorg is started and you have a GUI. 
+If you have an nvidia card it can be tricky to install so I recommend doing it before Xorg is started and you have a GUI.
 
 1. First install Dev tools below with dkms and kernel-devel
 
@@ -62,9 +63,9 @@ sudo dnf install kernel-devel epel-release
 sudo dnf install dkms
 ```
 
-2. Download NVIDIA Drivers from <https://www.nvidia.com/en-us/drivers/unix/>
+1. Download NVIDIA Drivers from <https://www.nvidia.com/en-us/drivers/unix/>
 
-3. Disable nouveau by editing `/etc/default/grub`
+2. Disable nouveau by editing `/etc/default/grub`
 
 ```
 GRUB_CMDLINE_LINUX="crashkernel=auto rhgb quiet nouveau.modeset=0"
@@ -79,9 +80,9 @@ EFI:
 $ sudo grub2-mkconfig -o /boot/efi/EFI/rocky/grub.cfg
 ```
 
-4. (GUI Only) If you booted into KDE or GUI interface from TTY2 (Ctrl+Alt+F2) login and type `sudo systemctl isolate multi-user.target`
+1. (GUI Only) If you booted into KDE or GUI interface from TTY2 (Ctrl+Alt+F2) login and type `sudo systemctl isolate multi-user.target`
 
-5. Now Install NVIDIA and reboot `sudo bash NVIDIA-Linux-x86_64-*`
+2. Now Install NVIDIA and reboot `sudo bash NVIDIA-Linux-x86_64-*`
 
 ### Setup your Development Tools for Builds
 
@@ -104,19 +105,19 @@ Add Homebrew to the end bash or zsh rc file
 eval $(~/.linuxbrew/bin/brew shellenv)
 ```
 
-
 ### Install Tools of your Choice
 
-This is a base install so you will need a file explorer, terminal, browser, etc. 
+This is a base install so you will need a file explorer, terminal, browser, etc.
 
-Choose whatever you want! 
+Choose whatever you want!
 
-Examples: 
+Examples:
+
 ```
 sudo dnf install terminator firefox zsh
 ```
 
-#### VSCodium on Rocky Linux 
+#### VSCodium on Rocky Linux
 
 Source: <https://github.com/VSCodium/vscodium>
 
@@ -139,9 +140,8 @@ Steam `sudo flatpak install flathub com.valvesoftware.Steam`
 
 ## The Rocky Difference
 
-*Security by default* - Be aware this uses Enforced SELinux and Firewalld on install. This means applications will more often than not be sandboxed and will block all incoming traffic
+_Security by default_ - Be aware this uses Enforced SELinux and Firewalld on install. This means applications will more often than not be sandboxed and will block all incoming traffic
 
-*Stability in mind* Yes, the packages are old by default but it means they stable
+_Stability in mind_ Yes, the packages are old by default but it means they stable
 
-*Productivity Machine* No constant updates, it just works...
-
+_Productivity Machine_ No constant updates, it just works...

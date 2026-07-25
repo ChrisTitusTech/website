@@ -16,8 +16,8 @@ Lets go over Grub Rescue and repairing your bootloader. This is a very misunders
 ## Repairing from a GRUB > Prompt
 
 **Find your Hard drive**  
-`ls`   
-_Output Example:    
+`ls`
+_Output Example:
 (hd0) (hd0,msdos2) (hd0,msdos1)_  
   
  **List Root partition on each drive til you find your Install**  
@@ -30,12 +30,11 @@ _Output Example:
 `grub> initrd /boot/initrd (tab complete)`  
 `grub> boot`  
 
-
 ## Repairing from a GRUB Rescue > Prompt
 
 **Find your Hard drive**  
 `ls`  
-_Output Example:    
+_Output Example:
 (hd0) (hd0,msdos2) (hd0,msdos1)_
 
  **List Root partition on each drive til you find your Install**  
@@ -43,7 +42,6 @@ _Output Example:
  _Check for the_ _directory_ _listing, if nothing, move to next_
 
  **Now that we have found the proper drive lets boot to it**  
-
 
 `grub rescue> set prefix=(hd0,msdos2)/boot/grub`  
 `grub rescue> set root=(hd0,msdos2)`  
@@ -67,12 +65,12 @@ With the Configuration rebuilt, we now simply need to reinstall grub
 
 `grub-install /dev/sda`  
   
-_Note: /dev/sda is the DEVICE&#8230;_**NOT THE PARTITION**. 
+_Note: /dev/sda is the DEVICE&#8230;_**NOT THE PARTITION**.
 
 ## Other Methods of Repairing GRUB
 
-  * Use the [https://www.supergrubdisk.org/ image on a USB drive to repair][1]
-  * Use a vanilla server distribution pen drive to boot to prompt, then chroot to your existing install and reinstall GRUB.
+* Use a [Super Grub2 Disk image](https://www.supergrubdisk.org/) on a USB drive to repair
+* Use a vanilla server distribution pen drive to boot to prompt, then chroot to your existing install and reinstall GRUB.
 
 ## Video Walkthroughs
 

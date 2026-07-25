@@ -37,7 +37,7 @@ DISM /Online /Disable-Feature /FeatureName:Recall
 
 Source files referenced in Feature located in `C:\Windows\SystemApps\MicrosoftWindows.Client.AIX_cw5n1h2txyewy`
 
-![](/images/2024/microsoft-recall-situation/recall-aix-files.png)
+![Recall Aix Files](/images/2024/microsoft-recall-situation/recall-aix-files.png)
 
 ## Recall Requirements
 
@@ -55,7 +55,7 @@ Source files referenced in Feature located in `C:\Windows\SystemApps\MicrosoftWi
 
 ## Explorer Recall Problems
 
-If you remove Recall from an offline image, the new file explorer will break and revert to the old one. This is was originally thought to be from the removal of the Recall feature, but it is actually due to the removal of the AIX package which in turn removes the `Microsoft.WindowsAppRuntime.CBS_cw5n1h2txyewy` package. 
+If you remove Recall from an offline image, the new file explorer will break and revert to the old one. This is was originally thought to be from the removal of the Recall feature, but it is actually due to the removal of the AIX package which in turn removes the `Microsoft.WindowsAppRuntime.CBS_cw5n1h2txyewy` package.
 
 This CBS package is a library responsible for the new file explorer and removing it will revert the file explorer to the old one.
 

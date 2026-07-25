@@ -18,15 +18,15 @@ I'm not a god programmer the likes of the primeagen, but a mere mortal that has 
 
 ## Neovim Problems
 
-I've done several iterations of setting up neovim from scratch, to using neovim distros like lazyvim, nvchad, and lunarvim. These "distros" just customize too much for my liking. 
+I've done several iterations of setting up neovim from scratch, to using neovim distros like lazyvim, nvchad, and lunarvim. These "distros" just customize too much for my liking.
 
 Starting from scratch is rough, because of all the options and customization that needs to be done. This is why people end up using vscode because it just works. However, there is a better way!
 
 ## Kickstart
 
-One of the devs of Neovim made an amazing kickstart project <https://github.com/nvim-lua/kickstart.nvim> that I have taken and make my own modifications to. 
+One of the devs of Neovim made an amazing kickstart project <https://github.com/nvim-lua/kickstart.nvim> that I have taken and make my own modifications to.
 
-The entire project is meant as a jumping off point. Giving you a functional LSP and the essentials that everyone wants in Neovim, but not a bunch of customizations that you may not want. I recommend referring back to this project often and checking for updates. 
+The entire project is meant as a jumping off point. Giving you a functional LSP and the essentials that everyone wants in Neovim, but not a bunch of customizations that you may not want. I recommend referring back to this project often and checking for updates.
 
 ## My Neovim
 

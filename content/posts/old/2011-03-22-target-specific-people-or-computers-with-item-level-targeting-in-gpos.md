@@ -21,4 +21,3 @@ Using Group Policy Objects can be a huge time saver, but if used improperly can 
 -Check Item-Level Targeting and Press Targeting&#8230;
 
 From here you will be able to select tons of critaria that you want to meet for your GPO. This can be system requirements to install a program, or only select certain Operating Systems. You can also add is not tags that will rule out any computer that meet that criteria. The options are limitless and its very easy to incorporate in your GPO. Personally, I never use the often complicated and time consuming WMI Filters anymore.
-

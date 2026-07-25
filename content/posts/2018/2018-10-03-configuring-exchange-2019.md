@@ -13,23 +13,23 @@ tags:
 ---
 This article goes over what it takes for installing and configuring exchange 2019. This step-by-step guide shows you the requirements, installation steps, and basic configuration.<!--more-->
 
-### Requirements
+## Requirements
 
-  * Microsoft recommends 128 GB of memory. If in a medium size environment (100-1000 users) 32-64 GB will be sufficient.
-  * Microsoft Windows Server 2012 R2/2016/2019
-  * Co-Existence with Exchange 2013/2016 that are up-to-date
-  * 30 GB of free disk space, however, you should have plenty of TBs of storage available for the mailbox stores.
-  * NTFS based file system
+* Microsoft recommends 128 GB of memory. If in a medium size environment (100-1000 users) 32-64 GB will be sufficient.
+* Microsoft Windows Server 2012 R2/2016/2019
+* Co-Existence with Exchange 2013/2016 that are up-to-date
+* 30 GB of free disk space, however, you should have plenty of TBs of storage available for the mailbox stores.
+* NTFS based file system
 
 ### Notable Improvements
 
-  * Exchange 2019 has the ability to now be installed on server core 2019.
-  * Exchange Admin Console &#8211; https://server/ecp &#8211; Refined and matches Office 365 layout
-  * Outlook Web Access has more features and a better look
+* Exchange 2019 has the ability to now be installed on server core 2019.
+* Exchange Admin Console &#8211; https://server/ecp &#8211; Refined and matches Office 365 layout
+* Outlook Web Access has more features and a better look
 
 ### Things I wished Exchange 2019 had
 
-  * **DKIM**&#8230; seriously, WTF Microsoft. Office 365 has this, therefore exchange 2019 should have this!
+* **DKIM**&#8230; seriously, WTF Microsoft. Office 365 has this, therefore exchange 2019 should have this!
 
 ## Installing Exchange 2019
 
@@ -39,7 +39,7 @@ This was a breeze, with only 2 pre-requirements missing on a server 2016 stock i
 
 Again, this was very easy with only a couple options needed before I was operational. Using only a mailbox role with no edge you only need to add your domain, send connector, and set an email address for mailboxes. The original configuration video is no longer available.
 
-_Note: Do not forget to add the MX, SPF, DMARC records where your domain registrar DNS resides. _
+_Note: Do not forget to add the MX, SPF, DMARC records where your domain registrar DNS resides._
 
 ## Conclusion
 

@@ -30,4 +30,3 @@ Overall, I&#8217;m happy to see Microsoft taking steps to transition the compute
 To Learn more about Windows Refresh PC and Restoring custom images go to <http://blogs.msdn.com/b/b8/archive/2012/01/04/refresh-and-reset-your-pc.aspx>
 
 This details creating a custom refresh image which would include 3rd party applications. This could be a godsend for IT Professionals in business, since the image would be local and easily a one-click fix all button, so to speak.
-

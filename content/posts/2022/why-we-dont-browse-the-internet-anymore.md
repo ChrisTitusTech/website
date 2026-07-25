@@ -11,28 +11,28 @@ tags:
   - RSS
 draft: false
 ---
-The problem with the modern internet is ads, sponsored posts, and pay walls. Enter RSS feeds as a solution. 
+The problem with the modern internet is ads, sponsored posts, and pay walls. Enter RSS feeds as a solution.
 <!--more-->
 
-Subscribe to the sites and information you want to see and not have an algorithm decide what influences you. This requires "fixing" RSS and downloading articles, but the payout is amazing. How many people use RSS? Here is poll I ran on Twitter. 
+Subscribe to the sites and information you want to see and not have an algorithm decide what influences you. This requires "fixing" RSS and downloading articles, but the payout is amazing. How many people use RSS? Here is poll I ran on Twitter.
 
 {{< x user="christitustech" id="1589727064957284352" >}}
 
 ## How we used to browse the Internet
 
-![](/images/2022/why-we-dont-browse-the-internet-anymore/altavista.webp)
+![Altavista](/images/2022/why-we-dont-browse-the-internet-anymore/altavista.webp)
 
 The era of altavista, dogpile, askjeeves, yahoo, excite, lycos, and others was an era of innovation and competition. There was a heated rivalry between Internet Exploader and Netscape, which Microsoft inevitably won with dirty business practices. That era was a time of discovery and businesses were figuring out how to make money on the internet.  
 
-Information was scattered everywhere and the web was decentralized among hundreds of companies. When we "logged on" you made decisions on what to do. Sometimes you wanted to play a game, or stumble upon a new website, or browse a news group. Almost nothing curated and uniform. This is often referred to as Web 1.0. 
+Information was scattered everywhere and the web was decentralized among hundreds of companies. When we "logged on" you made decisions on what to do. Sometimes you wanted to play a game, or stumble upon a new website, or browse a news group. Almost nothing curated and uniform. This is often referred to as Web 1.0.
 
 ## How we use the Internet today
 
- ![](/images/2022/why-we-dont-browse-the-internet-anymore/google.webp)
+ ![Google](/images/2022/why-we-dont-browse-the-internet-anymore/google.webp)
 
- We google anything we want, use our chromium browsers, and social media for everything else. Between Google, Facebook (I'm not calling it Meta), and Amazon we have everything. Facebook is dying off and for old people raging about some political garbage, Amazon we order anything want to appear on our doorstep, and Google is what powers almost every search we do. 
+ We google anything we want, use our chromium browsers, and social media for everything else. Between Google, Facebook (I'm not calling it Meta), and Amazon we have everything. Facebook is dying off and for old people raging about some political garbage, Amazon we order anything want to appear on our doorstep, and Google is what powers almost every search we do.
 
- When we find the site we are looking for, it ends up with tons of ads or paywalled. Even worse, some reputable sites sell "sponsored posts" where the advertising gets posted directly in the feed. Imagine watching a television show and then in the third episode its nothing but a giant Subway ad. This is our modern internet. 
+ When we find the site we are looking for, it ends up with tons of ads or paywalled. Even worse, some reputable sites sell "sponsored posts" where the advertising gets posted directly in the feed. Imagine watching a television show and then in the third episode its nothing but a giant Subway ad. This is our modern internet.
 
 ## How to fix it with RSS
 
@@ -40,7 +40,7 @@ Really Simple Syndication or RSS for short, is used to get updates from websites
 
 The problem? Ads, Brief Summaries, and redirects. We fix this by using a feed aggregator and never leave our RSS reader.
 
-The other problem with RSS Readers online are expensive using feedly($8), inoreader($10), and newsblur($3) per month. This used all be free with Google Reader, but in typical Google fashion they killed Reader. 
+The other problem with RSS Readers online are expensive using feedly($8), inoreader($10), and newsblur($3) per month. This used all be free with Google Reader, but in typical Google fashion they killed Reader.
 
 ### Feed Aggregation
 
@@ -73,8 +73,6 @@ docker run -d \
   --restart unless-stopped \
   lscr.io/linuxserver/freshrss:latest
 ```
-
-
 
 ## Walkthrough Video
 

@@ -26,4 +26,3 @@ org.freedesktop.Platform.VAAPI.Intel{,.i386}
 org.freedesktop.Platform.GL{,32}.default # Default Drivers
 org.freedesktop.Platform.GL{,32}.mesa-aco # Mesa ACO Drivers
 ```
-

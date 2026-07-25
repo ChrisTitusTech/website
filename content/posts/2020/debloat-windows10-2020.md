@@ -12,7 +12,7 @@ tags:
   - Windows 11
 
 ---
-This goes over debloating and slimming down Windows 10 and 11 so you get maximum performance from your PC. 
+This goes over debloating and slimming down Windows 10 and 11 so you get maximum performance from your PC.
 <!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved. I've also made a newer post going over the all the changes @ <https://christitus.com/windows-tool>
 
 ## April 2022 Update
@@ -23,7 +23,8 @@ This goes over debloating and slimming down Windows 10 and 11 so you get maximum
 - GUI Redesign
 - new Github <https://github.com/ChrisTitusTech/winutil>
 
-New command! 
+New command!
+
 ```
 iwr -useb https://christitus.com/win | iex
 ```
@@ -32,7 +33,7 @@ iwr -useb https://christitus.com/win | iex
 
 If you are coming here from the YouTube video I have taken all the scripts below and a system admin script I used a lot in the past to make a streamlined debloat script. This script will optimize Windows and can be run multiple times if you have an update ruin all the optimizations. I have also made it very easy to launch. Here is the source files: <https://github.com/ChrisTitusTech/win10script>
 
-If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below! 
+If you want to just run this on any system, you can easily copy and paste this into a Admin Powershell prompt and watch it do everything for you. It does have two prompts based on user feedback. Let me know what you think below!
 
 *OLD PROJECT - DEPRECATED*
 
@@ -48,7 +49,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
 - Deletes various schedules tasks that rebloat the system
 - Fixes problems that other scripts causes (lock screen and personalization options restricted)
 
-Based on User feedback Microsoft Store and Windows Defender is no longer touched. 
+Based on User feedback Microsoft Store and Windows Defender is no longer touched.
 
 ### Toolbox Walkthrough Video
 
@@ -60,14 +61,16 @@ Based on User feedback Microsoft Store and Windows Defender is no longer touched
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JTbKD'))
 ```
 
-This restore script pops up a GUI that lets you restore what you want to FACTORY DEFAULTS! 
+This restore script pops up a GUI that lets you restore what you want to FACTORY DEFAULTS!
 
 Current Lineup:
+
 - Cortana
 - Tray Icons
 - Action Center
 
 ## Old Methods from Prior Videos that I no longer use
+
 The project I use has been developed for many years now and is extremely good. Here is the source github project I use:  
 [https://github.com/Sycnex/Windows10Debloater](https://github.com/Sycnex/Windows10Debloater)
 
@@ -77,14 +80,16 @@ This is a new project that was brought to my attention, but has quickly made a n
 ## Optimal Way to Use this Tool
 
 I recommend running this tool under the following conditions:
-  - Before User Profile is Created
-  - Empty Desktop and Downloads (Past versions has deleted files from Desktop and Downloads)
-  - After installing New Feature Updates
+
+- Before User Profile is Created
+- Empty Desktop and Downloads (Past versions has deleted files from Desktop and Downloads)
+- After installing New Feature Updates
   
 Recommended Options:
-  - Disable Cortana
-  - Uninstall OneDrive
-  - Run Essential Tweaks
+
+- Disable Cortana
+- Uninstall OneDrive
+- Run Essential Tweaks
   
-I generally always enable Dark Mode and Install 3.5 .NET but that is entirely my personal preference. 
+I generally always enable Dark Mode and Install 3.5 .NET but that is entirely my personal preference.
   

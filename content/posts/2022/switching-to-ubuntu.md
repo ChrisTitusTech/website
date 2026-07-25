@@ -19,13 +19,13 @@ But Why? ... Ubuntu does something right!?
 
 ## Starting with Server
 
-I start with Ubuntu server download <https://ubuntu.com/download/server> and then strip out SNAPD before adding any desktop environment. This makes it so I can avoid all the things I don't like about Ubuntu, while getting the benefits of their Kernel optimizations and packaging. 
+I start with Ubuntu server download <https://ubuntu.com/download/server> and then strip out SNAPD before adding any desktop environment. This makes it so I can avoid all the things I don't like about Ubuntu, while getting the benefits of their Kernel optimizations and packaging.
 
-Will Ubuntu always be better than Debian for kernel and packaging? No, in fact, Debian is adding non-free firmware packages into their base installer and will no longer be second class citizen on new installs and you won't need to go hunting for a non-free ISO any longer. 
+Will Ubuntu always be better than Debian for kernel and packaging? No, in fact, Debian is adding non-free firmware packages into their base installer and will no longer be second class citizen on new installs and you won't need to go hunting for a non-free ISO any longer.
 
 ### Removing Snapcraft or Snaps
 
-Run the following commands to remove snapd and also hold the package to prevent it from reinstalling. 
+Run the following commands to remove snapd and also hold the package to prevent it from reinstalling.
 
 ```
 sudo apt purge snapd
@@ -34,7 +34,7 @@ sudo apt-mark hold snapd
 
 ### Avoiding certain packages
 
-The downside to the following approach is Ubuntu has packages, such as: Firefox and others that will try to install the snap version. 
+The downside to the following approach is Ubuntu has packages, such as: Firefox and others that will try to install the snap version.
 
 I highly recommend installing NIX OS env to get around this limitation, as this is what I do with every install on every distribution anyways.
 
@@ -46,7 +46,7 @@ _For a reference guide check out my Nix Package Manager article: <https://christ
 
 ## Installing Your Desktop
 
-The easiest method for installing your desktop is using `tasksel` from the terminal. 
+The easiest method for installing your desktop is using `tasksel` from the terminal.
 
 ```
 sudo apt install tasksel -y
@@ -54,9 +54,9 @@ sudo apt install tasksel -y
 
 Run it with `sudo tasksel`
 
-![](/images/2022/switching-to-ubuntu/tasksel.webp)
+![Tasksel](/images/2022/switching-to-ubuntu/tasksel.webp)
 
-Select the Debian Desktop Environment at top and the desktop environment that you want to use. 
+Select the Debian Desktop Environment at top and the desktop environment that you want to use.
 
 _Note: While this method is easy, it will install some bloat that you may wish to remove._
 
@@ -68,10 +68,7 @@ desktop configuration now lives in
 
 Final Result:
 
-![](/images/2022/switching-to-ubuntu/ubuntu-titus.webp)
-
-
-
+![Ubuntu Titus](/images/2022/switching-to-ubuntu/ubuntu-titus.webp)
 
 ## Walkthrough Video
 

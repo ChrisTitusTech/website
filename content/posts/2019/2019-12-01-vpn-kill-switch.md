@@ -29,7 +29,7 @@ _*Note: use apt instead of dnf on Ubuntu or Debian Servers_
 ## Download OVPN Files
 
 My recommendation for a public VPN provider at the time of writing was [ExpressVPN](https://www.expressvpn.com/).
-**However, you can use these instructions on ANY VPN that provides ovpn files which any reputable VPN provider has.** 
+**However, you can use these instructions on ANY VPN that provides ovpn files which any reputable VPN provider has.**
 
 `mv ~/Downloads/client.ovpn /etc/openvpn/test.conf`
 
@@ -48,8 +48,8 @@ _*Check for openvpn-client@ or openvpn@_
 ![sysctl](../images/2019/12/sysctl.webp)
 
 `sudo nano /etc/sysctl.conf`  
-> net.ipv6.conf.all.disable_ipv6=1   
-> net.ipv6.conf.default.disable_ipv6=1   
+> net.ipv6.conf.all.disable_ipv6=1
+> net.ipv6.conf.default.disable_ipv6=1
 > net.ipv6.conf.lo.disable_ipv6=1
 
 `sudo sysctl -p`
@@ -95,4 +95,5 @@ _*enable rpc and whitelist, add blocklist_
 `sudo systemctl start transmission-daemon`
 
 ## Full Video Walkthrough
+
 {{< youtube wc-Ti8UoPoA >}}  

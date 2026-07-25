@@ -18,7 +18,7 @@ In this article, we will clean up Windows 10. This will include debloat, startup
 
 Check out the updated debloat and utility toolbox here: <https://christitus.com/debloat-windows-10-2020/>
 
-Old Content is below with an older method of debloating Windows 10. 
+Old Content is below with an older method of debloating Windows 10.
 
 ## Step 1: Debloat Windows 10
 

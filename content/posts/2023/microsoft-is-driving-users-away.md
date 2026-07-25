@@ -17,7 +17,7 @@ I've been a lifelong Windows user since the 90s and even MS-DOS back in the 80s,
 
 ## The Problem
 
-Microsoft is in a panic from the continued loss of it's user base. They are making some improvements like the GUI and cleaning up other elements that give a more cohesive look. No more mixing Metro UI and Legacy panels like Windows 10. While this is good on the surface, they aren't fixing anything. In fact, things are about to get much worse with the removal of these panels. On Tuesday, I had a printer issue at a client site and I was going to pull up the "Devices and Printers" panel to manage the drives and printing default settings. In the most recent 22H2 Windows 11 update, they hid it! 
+Microsoft is in a panic from the continued loss of it's user base. They are making some improvements like the GUI and cleaning up other elements that give a more cohesive look. No more mixing Metro UI and Legacy panels like Windows 10. While this is good on the surface, they aren't fixing anything. In fact, things are about to get much worse with the removal of these panels. On Tuesday, I had a printer issue at a client site and I was going to pull up the "Devices and Printers" panel to manage the drives and printing default settings. In the most recent 22H2 Windows 11 update, they hid it!
 
 Using old Control Panel (Start->Run->`control`)
 

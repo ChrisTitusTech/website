@@ -26,4 +26,3 @@ Now simply install GIMP and it will automatically update to the latest version o
 
 Here is a video walkthrough of install special GIMP scripts as well if you want to unlock the complete capabilities of GIMP.  
 {{< youtube CysfnD7dYwM >}}  
-

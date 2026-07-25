@@ -14,8 +14,6 @@ draft: true
 ---
 <!--more-->
 
-
-
 ## Walkthrough Video
 
 {{< youtube "WVQ_2hN_zzs" >}}

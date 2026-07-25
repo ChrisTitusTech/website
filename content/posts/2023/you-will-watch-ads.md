@@ -18,7 +18,7 @@ This is happening in several different ways in the coming months. Let's go over 
 
 ## YouTube detecting Ad Blockers
 
-![](/images/2023/you-will-watch-ads/yt-ads.webp)
+![Yt Ads](/images/2023/you-will-watch-ads/yt-ads.webp)
 
 YouTube is testing blocking ad blockers like so many different news websites do right now. This will bring the rise of secondary viewers and the use of other sites likes odysee or freetube. These sites rely on YouTube's API and public sync, which will also be in the cross-hairs very soon.
 
@@ -30,7 +30,7 @@ Google's Manifest 3 is almost here in June 2023 and that will hamstring all Ad b
 
 Here was a good writeup from adguard on manifest v3: <https://adguard.com/en/blog/firefox-manifestv3-chrome-adblocking.html>
 
-TLDR; Firefox will see more adoption and regular chrome ad extensions will be limited. 
+TLDR; Firefox will see more adoption and regular chrome ad extensions will be limited.
 
 ## API Access and 3rd Party sites
 

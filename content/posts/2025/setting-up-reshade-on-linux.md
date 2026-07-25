@@ -11,14 +11,15 @@ tags:
   - vkbasalt
 draft: false
 ---
-vkBasalt is a Vulkan post-processing layer that brings ReShade-like capabilities to Linux. It allows you to apply various visual effects to Vulkan-based games and applications, enhancing the overall graphical experience. 
+vkBasalt is a Vulkan post-processing layer that brings ReShade-like capabilities to Linux. It allows you to apply various visual effects to Vulkan-based games and applications, enhancing the overall graphical experience.
 
 _Note: This does NOT work with OpenGL games!_
 <!--more-->
 
-# Setting up vkBasalt
+## Setting up vkBasalt
 
 Requires 2 packages:
+
 - vkBasalt <https://github.com/DadSchoorse/vkBasalt>
 - Reshade Shaders/Textures <https://github.com/crosire/reshade-shaders>
 

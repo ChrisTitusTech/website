@@ -15,11 +15,12 @@ I've been using a dumbphone for the past month and I see now all the things I've
 
 ## The Overview
 
-The problem with many "smartphones" of today is they do too much! Having the world of possibilities in your pocket can not only be distracting but can actively sabotage your life. The notifications or you actively avoid real life situations, because you use your phone as a crutch. 
+The problem with many "smartphones" of today is they do too much! Having the world of possibilities in your pocket can not only be distracting but can actively sabotage your life. The notifications or you actively avoid real life situations, because you use your phone as a crutch.
 
-This is why you see the rise of the "dumbphone", but these devices are far from perfect. I've used one for the past month and the amount of productivity I've gained is astonishing. However, it is not without it's problems. 
+This is why you see the rise of the "dumbphone", but these devices are far from perfect. I've used one for the past month and the amount of productivity I've gained is astonishing. However, it is not without it's problems.
 
 My dumbphone issues:
+
 - Mobile orders (I had a buffalo wild wings want to see my order # on my phone before they would give me my to-go order.)
 - Navigation (Go old school with printed maps or simply have a GPS in your car)
 - Uber / Lyft (These apps are life savers when visiting somewhere and you need to be picked up)
@@ -31,7 +32,8 @@ My dumbphone issues:
 Even with losing ALL of this... I still preferred the dumbphone experience because of how much it improved my life. It rewired my brain to really focus on the things that the smartphone does well and if I modified it to only do those things... It would be the PERFECT PHONE!
 
 So what ARE the problems with smartphones?
-- Web Browsing (Having this seems like a pro, but often we rely on this to look up everything and its more of a con in my experience) 
+
+- Web Browsing (Having this seems like a pro, but often we rely on this to look up everything and its more of a con in my experience)
 - Social Media (Time wasters... need I say more?)
 - Social Crutch (Elevators, Waiting Rooms, and many more... The addiction is REAL!)
 - Low Battery Life ( 1-2 days... but this is from bloat and constantly picking it up.)
@@ -41,24 +43,27 @@ So what ARE the problems with smartphones?
 This isn't that bad as you really are only giving up two things... Being bored and productivity. Right?
 
 To Simplify why those things are so important:
+
 - Being Bored = Creativity Fuel
 - Productivity = Realizing your potential
 
 ## The Solution
 
-Make the Smartphone only do the things that HELP YOU! Debloating your phone will extend your battery life and keep you from launching into the time wasting apps. The easiest way of doing this is with a fantastic project called [Universal Android Debloater](https://github.com/0x192/universal-android-debloater). 
+Make the Smartphone only do the things that HELP YOU! Debloating your phone will extend your battery life and keep you from launching into the time wasting apps. The easiest way of doing this is with a fantastic project called [Universal Android Debloater](https://github.com/0x192/universal-android-debloater).
 
-This makes it extremely easy to debloat your entire device in a single click. 
+This makes it extremely easy to debloat your entire device in a single click.
 
 ## Pre-Requisites
 
 You will need the following installed on your computer:
+
 - ADB tools (XDA Developers has a fantastic article going over this: [ADB Tool Installation Guide](https://www.xda-developers.com/install-adb-windows-macos-linux/)
 - Developer Mode (Simply click 7-times on the about in your phone to enable developer mode)
 
 ### ADB Tool Install Cheatsheet
 
 Debian Linux
+
 ```
 sudo apt install android-sdk-platform-tools
 ```
@@ -97,11 +102,11 @@ Then add back in any google related packages you might use while keeping your ph
 
 ![final](/images/2022/android/final.webp)
 
-Since I was using a Pixel 4a for my main device I also needed to change the default launcher to a more minimal one. Pixel launcher is problematic because of all the dependencies it has. I highly recommend [Niagara launcher](https://play.google.com/store/apps/details?id=bitpit.launcher&hl=en_US&gl=US). 
+Since I was using a Pixel 4a for my main device I also needed to change the default launcher to a more minimal one. Pixel launcher is problematic because of all the dependencies it has. I highly recommend [Niagara launcher](https://play.google.com/store/apps/details?id=bitpit.launcher&hl=en_US&gl=US).
 
 ## The Final Product
 
-After the debloat and changing my launcher, this is what my phone looks like now. 
+After the debloat and changing my launcher, this is what my phone looks like now.
 
 ![home](/images/2022/android/home.webp)
 

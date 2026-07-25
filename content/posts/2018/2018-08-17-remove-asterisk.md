@@ -32,6 +32,7 @@ cd asterisk-14
 ./configure --with-jansson-bundled ##Note: you may not need jansson-bundled so omit this if needed##
 make menuselect
 ```
+
 > ###Select any needed addons: MP3, etc.###
 
 `make`  
@@ -64,5 +65,4 @@ rm -rf /usr/lib64/asterisk
 reboot
 ```
 
-These instructions should work on any Linux Based system and it shouldn&#8217;t matter if it is Red Hat based or Debian based. 
-
+These instructions should work on any Linux Based system and it shouldn&#8217;t matter if it is Red Hat based or Debian based.

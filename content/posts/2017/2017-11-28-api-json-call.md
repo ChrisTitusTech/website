@@ -20,6 +20,7 @@ result = json.load(url) # Format the URL for JSON
 allhash = result['hashrate']['total'] # Pull a specific array of values
 checkhash= allhash[0] # Specify a single value in the array
 ```
+
 ## Making an API JSON call
 
 Using this basic script this will make a call from the JSON API on a website. I wanted a specific value 2 levels down. To determine which value you want to grab remember { open bracket will expand a level and a } close bracket will go back a level.
@@ -33,4 +34,3 @@ For instance, using this api.json
 ### In Closing
 
 Using the above API readout you can see I go into the hashrate brackets and pull the values for &#8220;total&#8221;. This creates an array and not a single string. So to make a call for the second value in &#8220;total&#8221; you would change the python code from allhash[0] to allhash[1]. You can use this to print out the values from the script, put them in a variable to be displayed on a website, or use it in a Nagios script for monitoring. The options are limitless.
-

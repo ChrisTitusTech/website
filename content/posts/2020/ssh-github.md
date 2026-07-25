@@ -23,6 +23,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
 Notes:
+
 - I typically save this in ~/.ssh/github
 - You don't have to put a password if you aren't worried about security
 
@@ -35,7 +36,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/github
 ```
 
-Copy the contents of `~/.ssh/github.pub` to the new key field in GitHub. If you have xclip installed type this `cat ~/.ssh/github.pub | xclip -sel clip` to copy the contents. 
+Copy the contents of `~/.ssh/github.pub` to the new key field in GitHub. If you have xclip installed type this `cat ~/.ssh/github.pub | xclip -sel clip` to copy the contents.
 
 ![github-pub](/images/2020/github-ssh.webp)
 
@@ -49,7 +50,7 @@ ssh -T git@github.com
 
 ## SSH GitHub Clone Syntax and Updating Repositories
 
-Here is how to clone new repositories instead of using https:// 
+Here is how to clone new repositories instead of using https://
 
 ```
 git clone git@github.com:USERNAME/Repo.git
@@ -61,8 +62,6 @@ Update existing repositories to use SSH instead of https
 git remote set-url origin git@github.com:USERNAME/Repo.git
 ```
 
-## Conclusion 
+## Conclusion
 
-This is the best way to clone and push updates to repositories if you have 2-Factor enabled on your GitHub account. 
-
-
+This is the best way to clone and push updates to repositories if you have 2-Factor enabled on your GitHub account.

@@ -9,7 +9,7 @@ tags:
   - Technology
 draft: false
 ---
-Last year I did the top 5 worst devices in 2021, lets go over the worst technology that hurts all of us daily for 2022. 
+Last year I did the top 5 worst devices in 2021, lets go over the worst technology that hurts all of us daily for 2022.
 <!--more-->
 
 ## Smartphones
@@ -31,11 +31,11 @@ What did I lose?
 - Social Media
 - Uber
 
-There are things above that many consider essential. However, as a business owner and an employee I have found none of them are. I did miss them, and as such decided to recreate my smart phone. I took a base Pixel 4a and stripped it down to the bare minimum and ONLY installed the essential apps that would not distract me or come with a negative side-effect. See "[Make the Perfect Phone](https://christitus.com/making-the-perfect-phone/)". 
+There are things above that many consider essential. However, as a business owner and an employee I have found none of them are. I did miss them, and as such decided to recreate my smart phone. I took a base Pixel 4a and stripped it down to the bare minimum and ONLY installed the essential apps that would not distract me or come with a negative side-effect. See "[Make the Perfect Phone](https://christitus.com/making-the-perfect-phone/)".
 
 ## Social Media
 
-Shocking, I know... It's bad for us. Welcome to 5 years ago! YouTube has become a substantial amount of my revenue. This makes it hard for me to just quit, but I always hate a good excuse. "You either do or do not!" - Yoda 
+Shocking, I know... It's bad for us. Welcome to 5 years ago! YouTube has become a substantial amount of my revenue. This makes it hard for me to just quit, but I always hate a good excuse. "You either do or do not!" - Yoda
 
 I'm not going to bore you with a 10 minute lecture about social media making us compare each other, making us materialistic, worried about others opinions, and the laundry list of other terrible things tearing the fabric of our society apart. I stole that last bit from Chamath Palihapitiya (One of the people responsible for the rise of Facebook).
 

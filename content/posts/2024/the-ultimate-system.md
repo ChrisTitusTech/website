@@ -14,7 +14,7 @@ draft: false
 The Ulimate System will look different for everyone, but here is an outline of what you need to consider when making yours as I overview mine.
 <!--more-->
 
-The purpose of my ultimate system is to have the most enjoyment out of my PC experience while sacrificing nothing to do everything I want to do at 100% efficiency. 
+The purpose of my ultimate system is to have the most enjoyment out of my PC experience while sacrificing nothing to do everything I want to do at 100% efficiency.
 
 ## Hardware
 
@@ -46,19 +46,19 @@ I always go back and forth between Debian and Arch Linux for my base. They are b
 
 There are many guides on how to install Arch Linux, but here are some of my videos going over the various ways I've done it in the past.
 
-|-- ArchTitus in 2 Minutes --|-- Archfi Install --| 
-|---|---|
+| -- ArchTitus in 2 Minutes -- | -- Archfi Install -- |
+| --- | --- |
 | {{< youtube hKpxMWm5l7w >}} | {{< youtube "GUtpHFI-vjg" >}} |
 
 ## The Desktop
 
-Most people need a user friendly desktop environment like plasma that you select during the install process. While that is nice for newer users, a tiling window manager is what feels the best to me these days. After years of switching between them all, there is only one that I find the best. DWM from suckless is the one I can do anything with and have zero limitations. I want a new feature, just patch it! Otherwise, everything just works as it always has. 
+Most people need a user friendly desktop environment like plasma that you select during the install process. While that is nice for newer users, a tiling window manager is what feels the best to me these days. After years of switching between them all, there is only one that I find the best. DWM from suckless is the one I can do anything with and have zero limitations. I want a new feature, just patch it! Otherwise, everything just works as it always has.
 
 Official Site for DWM <https://dwm.suckless.org/>
 My DWM Configuration <https://github.com/ChrisTitusTech/dwm-titus>
 
-|-- DWM Walkthrough --|
-|---|
+| -- DWM Walkthrough -- |
+| --- |
 | {{< youtube JXVle0nyA-o >}} |
 
 ### Removing Friction
@@ -93,25 +93,25 @@ Then issue user command **NO SUDO** `systemctl --user enable hugo.service`
 
 ## Windows in Linux with PCI Passthrough
 
-Linux is great, but sometimes it just isn't the right tool for what I need. That is why I have a full VM with a dedicated GPU, nvme, and usb card ready to go for anything I need. 
+Linux is great, but sometimes it just isn't the right tool for what I need. That is why I have a full VM with a dedicated GPU, nvme, and usb card ready to go for anything I need.
 
 > _Note_:
 > PCI passthrough is not for the faint of heart. Some motherboards do not separate IOMMU groups properly which means you can't isolate the PCI slots to pass them through and you CAN NOT do this on those systems. Laptops and cheap motherboards have the biggest issues.
 
 ### QuickPassthrough
 
-![](/images/2024/the-ultimate-system/quickpass.webp)
+![Quickpass](/images/2024/the-ultimate-system/quickpass.webp)
 
 Github: <https://github.com/HikariKnight/quickpassthrough>
 
-Made by HikariKnight it is an amazing project that makes passthrough much simpler. It will auto blocklist the PCI id's and make the needed system modifications while holding your hand through the process. If you watch my run of it, there was a bug with `mkinitcpio` that made a MODULES=() entry. He has fixed that and said that the latest version is even better. While there is no way to make this perfect and work on every system it has removed a LOT of the legwork. 
+Made by HikariKnight it is an amazing project that makes passthrough much simpler. It will auto blocklist the PCI id's and make the needed system modifications while holding your hand through the process. If you watch my run of it, there was a bug with `mkinitcpio` that made a MODULES=() entry. He has fixed that and said that the latest version is even better. While there is no way to make this perfect and work on every system it has removed a LOT of the legwork.
 
 ## My Setup Videos
 
 Here are all the livestreams where I go through the ENTIRE setup.
 
-|-- Arch Install --|-- QEMU/Windows Install --|-- Looking Glass --|
-|---|---|---|
+| -- Arch Install -- | -- QEMU/Windows Install -- | -- Looking Glass -- |
+| --- | --- | --- |
 | {{< youtube Y7LTdEwR9M8 >}} | {{< youtube K2gliga5Vwc >}} | {{< youtube 01R8Ft1BdxE >}} |
 
 ## Walkthrough Video

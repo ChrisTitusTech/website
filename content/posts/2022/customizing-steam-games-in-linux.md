@@ -28,6 +28,7 @@ sudo apt install python3-pip python3-setuptools python3-venv pipx winetricks
 ```
 
 Then use pipx to install protontricks
+
 ```
 pipx install protontricks
 ```
@@ -36,7 +37,7 @@ pipx install protontricks
 
 List all installed steam games with `protontricks -l` _Note: Old versions do NOT have this feature_
 
-![](/images/2022/customizing-steam-games-in-linux/list-proton.webp)
+![List Proton](/images/2022/customizing-steam-games-in-linux/list-proton.webp)
 
 Adding corefonts to a prefix (this fixes a LOT of black screens or if launchers don't display fonts/text properly)
 
@@ -44,7 +45,7 @@ Syntax: `protontricks APPID corefonts`
 
 _Example of adding corefonts to Lord of The Rings Online._
 
-![](/images/2022/customizing-steam-games-in-linux/corefont-install.webp)
+![Corefont Install](/images/2022/customizing-steam-games-in-linux/corefont-install.webp)
 
 Running custom commands (executables inside the game directories)
 
@@ -52,7 +53,7 @@ Syntax: `protontricks-launch --appid APPID COMMANDEXE`
 
 _Example launching a plugin installer for Lord of the Rings Online_
 
-![](/images/2022/customizing-steam-games-in-linux/plugin-launch.webp)
+![Plugin Launch](/images/2022/customizing-steam-games-in-linux/plugin-launch.webp)
 
 ## Walkthrough Video
 

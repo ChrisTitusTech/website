@@ -20,7 +20,7 @@ Choose a Stable Release that won't get many feature updates that change the expe
 
 Examples:
 
-- RHEL 10-year Support (Red Hat Enterprise Linux - Require Subscription) 
+- RHEL 10-year Support (Red Hat Enterprise Linux - Require Subscription)
   -Free Variants (Rocky and Alma Linux)
 - Debian 5-year Support (Stable - Bookworm(06/2023) or Bullseye)
 - Ubuntu 5-year Support (Version 22 or 20)

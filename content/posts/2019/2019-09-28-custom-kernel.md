@@ -14,7 +14,7 @@ This Guide walks your through how to install a custom kernel on Linux. I will go
 
 Custom kernels in Linux are based on the Zen project and have some workstation/desktop optimizations. They are **NOT** meant for server installations. These are meant for those using Linux Desktop and utilizing it for Gaming, Production, etc. and overall I don&#8217;t recommend using these. However, if you like to tinker and squeeze every bit of performance out of your kernel than you can proceed.
 
-![debian](/images/2019/09/debian.svg) 
+![debian](/images/2019/09/debian.svg)
 
 ## Custom Kernel on Ubuntu / Debian / Mint / Pop OS
 
@@ -29,11 +29,11 @@ _Official Site [https://liquorix.net/](https://liquorix.net/) for the Liquorix K
 `sudo add-apt-repository ppa:damentz/liquorix && sudo apt-get update`  
 `sudo apt-get install linux-image-liquorix-amd64 linux-headers-liquorix-amd64`
 
-![arch](/images/2019/09/arch.webp) 
+![arch](/images/2019/09/arch.webp)
 
-## Custom Kernel on Arch Linux, Manjaro, etc.
+## Custom Kernel on Arch Linux, Manjaro, etc
 
-For Arch-based systems the command to run is simplier than all of the above. However, this is **BUILDING** a kernel and on a low-end system this will take **HOURS**.   
+For Arch-based systems the command to run is simplier than all of the above. However, this is **BUILDING** a kernel and on a low-end system this will take **HOURS**.
 _Example: On my AMD Ryzen 2700 with 16 threads and 8 cores, this took almost 60 minutes!_
 
 `yay -S linux-lqx`  
@@ -43,13 +43,12 @@ For modifying which Kernel you are going to boot in check out these videos going
 
 ## Custom Boot (Grub, Rescue, and UKUU) YouTube Videos
 
-The following videos will help you if you need to revert your kernel or setup multiple kernels to boot into your Linux installation. This is highly recommended. 
+The following videos will help you if you need to revert your kernel or setup multiple kernels to boot into your Linux installation. This is highly recommended.
 
 Grub Customizer: <https://www.youtube.com/watch?v=3s7qBJ-H7vw>  
 Grub Rescue: <https://www.youtube.com/watch?v=r7meKJsjqfY>  
 Kernel Upgrade with UKUU: <https://www.youtube.com/watch?v=fnn_MzosdwA>
 
 ## Video Walkthrough
+
 {{< youtube nd0MysqLDB0 >}}  
-
-

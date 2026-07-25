@@ -21,4 +21,3 @@ I find a very annoying feature of Windows 7 is every device you install by defau
 4a. Also, &#8220;Install driver software from Windows Update if it is not found on my computer&#8221;
 
 Save Changes and you are done. You now install devices at lightning speed!
-

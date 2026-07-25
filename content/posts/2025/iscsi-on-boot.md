@@ -32,7 +32,8 @@ sudo systemctl enable iscsi.service
 sudo iscsiadm -m discovery -t sendtargets -p <target-ip>
 ```
 
-Example Usage: 
+Example Usage:
+
 ```
 192.168.1.100:3260,1 iqn.2023-01.com.example:storage.target1
 ```
@@ -54,16 +55,19 @@ sudo iscsiadm -m node -T <target-iqn> -p <target-ip> --login
 ### Set Auto-Login on Boot
 
 First setup Automatic Discovery of Target
+
 ```
 sudo iscsiadm -m node -T <target-iqn> -p <target-ip> --op update -n node.startup -v automatic
 ```
 
 Second grab the UUID from blkid
+
 ```
 sudo blkid
 ```
 
 Third Auto Mount with `/etc/fstab`
+
 ```
 UUID=<UUID from blkid> /mountpoint  <ext4/ntfs/btrfs>  x-systemd.after=network-online.target,x-systemd.automount,x-systemd.mount-timeout=90,_netdev 0 0
 ```
@@ -74,8 +78,9 @@ UUID=<UUID from blkid> /mountpoint  <ext4/ntfs/btrfs>  x-systemd.after=network-o
 sudo iscsiadm -m node -u
 sudo iscsiadm -m node -o delete -T <target_name> -p <ip_address>
 ```
+
 _Note: Also remove any added entries from `/etc/fstab`_
 
 ## Walkthrough Video
 
-Too Niche for a video. Let me know in the comments if you'd like to see this. 
+Too Niche for a video. Let me know in the comments if you'd like to see this.

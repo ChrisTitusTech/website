@@ -14,6 +14,7 @@ draft: false
 The question isn't if you should switch, but if you CAN switch. Windows 11 does a lot of things right as most of it's systems are identical to 10. However, there are some drawbacks which we need to dive into.<!--more-->
 
 ## Windows 11 Requirements
+
 There are two issues with Windows 11 that will catch some older computers.
 
 - CPU Requirement: Intel 8th Generation and AMD 2nd Generation
@@ -29,20 +30,22 @@ Value = `1`
 5. Close Regedit and continue install
 
 ## Why Upgrade
+
 Here are the main reason to upgade to Windows 11. **The Look**
 
-We can go round and round about the marketing of Microsoft and all the bullshit they like to say. However, at the end of the day if you want a new look and a cleaner looking OS... Windows 11 is it. The better sounds, rounded aesthetic, auto-hdr for games, and overall more cohesive visual experience is what Windows 11 does well. 
+We can go round and round about the marketing of Microsoft and all the bullshit they like to say. However, at the end of the day if you want a new look and a cleaner looking OS... Windows 11 is it. The better sounds, rounded aesthetic, auto-hdr for games, and overall more cohesive visual experience is what Windows 11 does well.
 
 What about all the other features Microsoft shills say are important and are NOT?
 
 1. Performance - I have seen negligible performance gains and even worse performance in some instances
 2. Widgets - This just reminds of Vista sidebar all over again. They are all sizzle and no steak.
-3. Security - Another marketing ploy that promotes it being more secure. While technically true, it mainly applies to the startup of your pc with TPM and Secureboot. Which frankly, doesn't matter as I can easily crack your Windows security with it's terrible SAM file exploits that are well documented and present in Windows 11. 
-4. Teams colloboration - Just more pre-installed crap that you probably won't use. 
+3. Security - Another marketing ploy that promotes it being more secure. While technically true, it mainly applies to the startup of your pc with TPM and Secureboot. Which frankly, doesn't matter as I can easily crack your Windows security with it's terrible SAM file exploits that are well documented and present in Windows 11.
+4. Teams colloboration - Just more pre-installed crap that you probably won't use.
 
-These are all just meh points that I view the exact same as Windows 10. 
+These are all just meh points that I view the exact same as Windows 10.
 
 ## Why NOT to Upgrade
+
 Windows 11 may look objectively better, but there are also some downsides. Here are the big ones I hate.
 
 1. Taskbar - It is just plain awful as it is based on a new UWP platform that isn't nearly as good as 10's taskbar. Also you can't move it to the left, right, or top like you can in 10.

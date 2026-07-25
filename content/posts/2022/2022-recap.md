@@ -21,7 +21,7 @@ Recap of 2022.
 - [ ] Custom Debian Build (Debian-Titus)
 - [ ] Studio Revamp
 
-The Live streams experiment were a failure. I've ramped up my virtualization content, but find a lot of it go over peoples heads. For GitHub contributions, I started to find my groove about midway through the year, and make substantive progress on projects. The studio revamp is an ongoing project, but to keep making the best use of the space. While I accomplished some of this in 2022, it will be an ongoing process that I will complete next year with a far better layout and feel. 
+The Live streams experiment were a failure. I've ramped up my virtualization content, but find a lot of it go over peoples heads. For GitHub contributions, I started to find my groove about midway through the year, and make substantive progress on projects. The studio revamp is an ongoing project, but to keep making the best use of the space. While I accomplished some of this in 2022, it will be an ongoing process that I will complete next year with a far better layout and feel.
 
 ## 2023 Goals
 

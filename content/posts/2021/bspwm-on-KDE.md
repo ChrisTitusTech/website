@@ -9,7 +9,7 @@ categories:
 tags:
   - KDE
 ---
-This goes over switching the window manager of KDE to bspwm. 
+This goes over switching the window manager of KDE to bspwm.
 <!--more-->
 
 ## Dependency Installs
@@ -18,7 +18,7 @@ This goes over switching the window manager of KDE to bspwm.
 sudo apt install bspwm
 ```
 
-## Configuration 
+## Configuration
 
 Create three files with the following contents
 
@@ -46,4 +46,3 @@ Name=Plasma bspwm
 ```
 
 bspwmrc and sxhkdrc are using both the stock example files @ `/usr/share/doc/bspwm/examples`
-

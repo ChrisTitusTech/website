@@ -22,9 +22,9 @@ Using any custom Windows ISO is problematic for many reasons outlined in this ar
 
 > But what about Virus scan? Tiny11 is CLEAN!
 
-Antivirus is just a security layer and should NEVER be relied on. More often than not, it will allow viruses through or classify legit programs as viruses. 
+Antivirus is just a security layer and should NEVER be relied on. More often than not, it will allow viruses through or classify legit programs as viruses.
 
-### How do they bypass Antivirus? 
+### How do they bypass Antivirus?
 
 When you are distributing an entire operating system, like Tiny11, anything can be modified. Keyloggers can be loaded before an antivirus or have them part of edge. You could steal session tokens from your logged in accounts, or modify Windows defender to exclude the viruses at a system level.
 
@@ -32,9 +32,9 @@ When you are distributing an entire operating system, like Tiny11, anything can 
 
 Redistributing any form of a modified Windows is illegal. A man was sentenced to 15 months in prison just for Redistributing restore discs preventing ewaste _Source:_ <https://www.polygon.com/windows/2018/4/25/17280178/eric-lundgren-windows-restore-disks-microsoft-prison>.
 
-Not only is the Tiny11 developer risking prison time if caught, but what motivates any custom iso maker given the risks? These are real questions that anyone with ANY common sense would come to the conclusion there has to be a payout somewhere. A small harmless program using your system to mine resources? keylogging passwords or credit cards? Spread chaos? or use you to attack others in a Botnet? 
+Not only is the Tiny11 developer risking prison time if caught, but what motivates any custom iso maker given the risks? These are real questions that anyone with ANY common sense would come to the conclusion there has to be a payout somewhere. A small harmless program using your system to mine resources? keylogging passwords or credit cards? Spread chaos? or use you to attack others in a Botnet?
 
-All these are strong motivators, but it's possible they are breaking the law just so you can have a clean version of Windows out of the goodness in their heart. You decide, but don't be shocked when you are compromised when using any custom ISO. 
+All these are strong motivators, but it's possible they are breaking the law just so you can have a clean version of Windows out of the goodness in their heart. You decide, but don't be shocked when you are compromised when using any custom ISO.
 
 ## Building Yourself
 

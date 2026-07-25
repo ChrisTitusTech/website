@@ -33,7 +33,7 @@ x-systemd.after=network-online.target,x-systemd.automount,x-systemd.mount-timeou
 This makes the `/etc/fstab` entry look like this:
 
 ```
-10.0.0.10:/volume2/Images		/media/images	nfs	x-systemd.after=network-online.target,x-systemd.automount,x-systemd.mount-timeout=30,_netdev	0	0
+10.0.0.10:/volume2/Images  /media/images nfs x-systemd.after=network-online.target,x-systemd.automount,x-systemd.mount-timeout=30,_netdev 0 0
 ```
 
 _Source: <https://wiki.archlinux.org/title/Fstab#Automount_with_systemd>_

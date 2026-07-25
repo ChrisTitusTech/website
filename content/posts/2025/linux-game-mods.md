@@ -27,7 +27,6 @@ There has been Mod Manager, Vortex, and many other apps out there, but none of t
 - Baldur's Gate III
 - Bannerlord
 
-
 ## Current Development
 
 They are working on load order and a few other additions. They are making steady progress and like that they have a good foundation of just releasing an AppImage/binaries. This is important because too many Linux projects only release deb or rpm distro specific releases and they are using a more universal road that will be Steamdeck compatible.
@@ -36,10 +35,7 @@ They are working on load order and a few other additions. They are making steady
 
 - Bethesda Games (Skyrim/Fallout/Starfield)
 - Xbox Game Pass
-- Witcher 3 
-
-
-
+- Witcher 3
 
 ## Walkthrough Video
 

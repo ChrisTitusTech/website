@@ -24,6 +24,7 @@ Two services are interacting with Windows Explorer that are the root of this pro
 Add these Registry entries to fix it!
 
 `FixRegistry.reg`
+
 ```
 Windows Registry Editor Version 5.00
 
@@ -33,11 +34,13 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Dsh]
 "IsPrelaunchEnabled"=dword:00000000
 ```
+
 ### Delete old programs
 
-Wallpaper Engine caused a big CPU elevation after I updated to 22H2 on Windows 11. Check your programs and if they haven't been updated in a while, they may not work that well on the new version. 
+Wallpaper Engine caused a big CPU elevation after I updated to 22H2 on Windows 11. Check your programs and if they haven't been updated in a while, they may not work that well on the new version.
 
-To uninstall old programs run: 
+To uninstall old programs run:
+
 ```
 appwiz.cpl
 ```

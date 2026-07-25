@@ -6,9 +6,9 @@ enableComment: false
 share: false
 enableWhoami: false
 ---
-# Thank you
+## Thank you
 
-I appreciate the time you took to visit my recommendations as I strive to become fully independant using this website, affiliates, and digital downloads through <https://www.cttstore.com>. 
+I appreciate the time you took to visit my recommendations as I strive to become fully independant using this website, affiliates, and digital downloads through <https://www.cttstore.com>.
 
 Visiting christitus.com and buying any digital downloads from cttstore.com helps tremendously, as well as using any of the below affiliate links. These are products that I use and recommend. Sometimes these links will offer discounts above their retail offerings.  
 

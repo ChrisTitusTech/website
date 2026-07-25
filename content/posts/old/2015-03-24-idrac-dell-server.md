@@ -65,4 +65,3 @@ racadm getconfig –g cfgUserAdmin –i 2
 ```
 
 From here you will use your web browser to enter the iDrac configuration GUI and finish setting up SMTP servers, alerts and other things. I only recommend the above from command line since it gives direct access when the web browser isn&#8217;t functions due to bad IP address or invalid username.
-

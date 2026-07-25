@@ -41,7 +41,7 @@ It is easy to ignore issues, because most issues do not fill out the basic form 
 
 ## Rolling back commits and Referencing them
 
-GitHub is truly amazing because of the ability to go back in time revert a single commit or create a branch based on the project at the time a commit was done! 
+GitHub is truly amazing because of the ability to go back in time revert a single commit or create a branch based on the project at the time a commit was done!
 
 ![revert](/images/2023/do-not-make-these-github-mistakes/revert.webp)
 

@@ -13,17 +13,21 @@ draft: false
 Windows Defender can be a massive drain on system performance and often can have a lot of false positives. While I recommend Anti-virus for most, I don't like having it enabled on my systems that aren't used for web browsing. <!--more-->
 
 ## How Secure is Windows Defender
-I often hear the phrase and have used the phrase "Windows Defender is good enough", but often get mistaken in to thinking Defender is a good Anti-Virus. For detection rates it is good, but for protection it is NOT! Why? Anyone with a little bit of knowledge knows how to disable it without the user even knowing it. The services, registry entries, and built-in windows policies are designed to make it easy for an administrator to disable it. Why does Microsoft make it so easy to disable it? Simple, Windows in business environments never use Defender and administrators need to disable it. 
+
+I often hear the phrase and have used the phrase "Windows Defender is good enough", but often get mistaken in to thinking Defender is a good Anti-Virus. For detection rates it is good, but for protection it is NOT! Why? Anyone with a little bit of knowledge knows how to disable it without the user even knowing it. The services, registry entries, and built-in windows policies are designed to make it easy for an administrator to disable it. Why does Microsoft make it so easy to disable it? Simple, Windows in business environments never use Defender and administrators need to disable it.
 
 ## What are the methods to disable defender?
+
 There are a multitude of ways to disable defender or render it useless. Most properly programmed viruses will utilize one or more of these methods below.
 
 ### Windows Settings
-Turn off Tamper Protection and Real-Time monitoring. 
+
+Turn off Tamper Protection and Real-Time monitoring.
 
 ![real-monitoring](/images/2022/remove-win-defender/real-monitoring.webp)
 
 ### Registry
+
 There are so many registry settings, but the main ones to focus on are below:
 
 ```
@@ -71,27 +75,31 @@ There are so many registry settings, but the main ones to focus on are below:
 For a more comprehensive list check out: <https://christitus.com/files/windefender_disable.reg>
 
 ### Services
+
 List of Services Windows Defender uses and relies upon.
 
- - WdNisSvc
- - WdNisDrv
- - WdFilter
- - WdBoot
- - wcncsvc
+- WdNisSvc
+- WdNisDrv
+- WdFilter
+- WdBoot
+- wcncsvc
 
 ### Files
+
 There are a ton of program files and logs for Windows Defender located at `C:\Program Files\Windows Defender`
 
 ### Powershell
+
 This can be used to do temporary disable parts or all of Defender as well. Here is some basic command I used and shared on Twitter:
 
 {{< x user="christitustech" id="1556368265139585026" >}}
 
-## GitHub Projects - CAUTION!
+## GitHub Projects - CAUTION
+
 Here are a couple GitHub projects that will completely destroy defender and when used improperly can even be used to deliver virus payloads onto systems
 
- - <https://github.com/jbara2002/windows-defender-remover>
- - <https://github.com/qtkite/defender-control>
+- <https://github.com/jbara2002/windows-defender-remover>
+- <https://github.com/qtkite/defender-control>
 
 ## Walkthrough Video
 

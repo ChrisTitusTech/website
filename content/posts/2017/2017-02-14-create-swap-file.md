@@ -14,7 +14,7 @@ tags:
 ---
 Use the commands below to create swap file on a micro instance with a Linux operating system. This creates a 2GB Swap file to help alleviate low system ram. Consequently, this is great for those using micro instances in the cloud that have under 1 GB of memory.<!--more-->
 
-### Commands
+## Commands
 
 Run the following from your SSH window
   
@@ -25,9 +25,9 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo swapon -s`
 ```
+
 then change fstab (**/etc/fstab**) so it automatically mounts your swap file on startup
   
 `/swapfile none swap sw 0 0`
 
 Afterward, check if your swap file is operating properly with`top` or `htop`.
-

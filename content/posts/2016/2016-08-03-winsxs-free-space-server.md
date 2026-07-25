@@ -23,4 +23,3 @@ FOLLOWUP:
 Windows 2008 Use: Dism.exe /online /Cleanup-Image /StartComponentCleanup
 Windows 2012 Use: Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 ```
-

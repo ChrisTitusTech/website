@@ -17,7 +17,7 @@ This script is made due to the frustration of the bloatware that gets install fo
 
  The hardware works fine without any software and just installing the BASE synapse software it runs almost 500 MB installer that has 3 services and 15 RUNNING PROCESSES! This gets worse the more software you select past Synapse. The worst part about all this? It auto-installs when you plug in ANY Razer USB product. It is classified as malware because the hardware doesn't need it AND it slow yours your computer down.
 
-![](/images/2022/block-razer-bloatware/bloatware.webp)
+![Bloatware](/images/2022/block-razer-bloatware/bloatware.webp)
 
 ## The Solution
 

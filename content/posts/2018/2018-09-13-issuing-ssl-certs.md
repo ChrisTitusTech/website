@@ -13,7 +13,7 @@ tags:
 ---
 This article goes over Issuing SSL Certs using Let&#8217;s Encrypt in Ubuntu 16.04. The basic steps outlined in the video are adding the repository, installing certbot, issuing a certificate, and enabling SSL.<!--more-->
 
-#### Video Guide:
+## Video Guide
 
 {{< youtube yC3GTHJRQuM >}}  
   
@@ -35,4 +35,3 @@ Certbot @ https://certbot.eff.org
 ## Finishing Up
 
 After performing these steps you will make your site secure and it will automatically renew this certificate. This is a great set it and forget solution, expecially if you are running your own site on a budget.
-

@@ -10,12 +10,12 @@ tags:
   - ArchLinux
 draft: false
 ---
-I've officially been on Arch Linux for 366 days and have DONE EVERYTHING I can do to break it. 
+I've officially been on Arch Linux for 366 days and have DONE EVERYTHING I can do to break it.
 <!--more-->
 
 Not only has it stood the test of time, updates, and my shenanigans, but it is just as good or BETTER than when I started. THE POWER OF LINUX!
 
-## It SHOULD of Broke!
+## It SHOULD of Broke
 
 Here is a list of things I've tried and many on live streams while working. These things I do not recommend doing ever, but I wanted to see how much it could withstand.
 
@@ -27,7 +27,7 @@ Here is a list of things I've tried and many on live streams while working. Thes
 
 ## The Bloat of Time
 
-With any operating system there is bloat from added programs, packages, and general usage over time. On Windows you are reloading and nuking your OS every couple years or sooner. With Linux you have the power to clean out anything that doesn't work for you. So you have all the functionality without any of the bloat. **However**, You must do the debloat and keep things running top notch. Here are a few areas I expanded and cleaned on my Arch Linux install. 
+With any operating system there is bloat from added programs, packages, and general usage over time. On Windows you are reloading and nuking your OS every couple years or sooner. With Linux you have the power to clean out anything that doesn't work for you. So you have all the functionality without any of the bloat. **However**, You must do the debloat and keep things running top notch. Here are a few areas I expanded and cleaned on my Arch Linux install.
 
 - Cleanup Flatpaks `flatpak uninstall --unused`
 - Find bloat in Root `ncdu / --exclude /media --exclude /run/timeshift` Note: My 100GB Root drive filled and ncdu found a bunch of files from ollama and running local LLMs

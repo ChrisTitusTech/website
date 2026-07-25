@@ -24,25 +24,25 @@ This program is absolutely amazing and free! All it's source code is on the inte
 
 There is a ton of different supported servers and even some that are unsupported that still work. Here is the official download page: <http://www.urbackup.org/download.html>
 
-One notable non-official project is for Synology NAS devices. I use a 64-bit Synology on DSM 7+, so pay attention to your current version if you want to use the project below. 
+One notable non-official project is for Synology NAS devices. I use a 64-bit Synology on DSM 7+, so pay attention to your current version if you want to use the project below.
 
 Synology Project: <https://github.com/josef109/spksrc>
 
 ### Server Dashboard
 
- ![](/images/2022/urbackup/dash.webp)
+ ![Dash](/images/2022/urbackup/dash.webp)
 
 ### Automated Terminal Install and Linux Setup
 
 Linux installs are a complete DREAM! Just paste the command listed under terminal when you use "Add New Client" Button. Here is an example install:
 
-![](/images/2022/urbackup/linux-term.webp)
+![Linux Term](/images/2022/urbackup/linux-term.webp)
 
 ### Enable Restore from Web
 
 You need to enable restoration in client configuration to completely control everything from server web interface. Here is a sample client configuration `/etc/default/urbackupclientbackend`
 
-![](/images/2022/urbackup/enable-web.webp)
+![Enable Web](/images/2022/urbackup/enable-web.webp)
 
 ## Windows Client Setup
 
@@ -50,7 +50,7 @@ Windows uses a executable that is made with the "Add New Client" button. By defa
 
 ## Linux Client Setup
 
-Linux clients can be installed via terminal and what I recommend. 
+Linux clients can be installed via terminal and what I recommend.
 
 _Note: The Linux GUI isn't good and terminal use of `urbackupclientctl` is used_
 
@@ -66,23 +66,23 @@ Here is a sample backup command to add my `~/.config` directory
 sudo urbackupclientctl add-backupdir -d $HOME/.config/
 ```
 
-Then, check the status using the server web interface. 
+Then, check the status using the server web interface.
 
-![](/images/2022/urbackup/linux-file.webp)
+![Linux File](/images/2022/urbackup/linux-file.webp)
 
 ### Uninstall
 
-Uninstallation is a bit weird and needs to be done with this command: 
+Uninstallation is a bit weird and needs to be done with this command:
 
 ```
 sudo uninstall_urbackupclient
 ```
 
-![](/images/2022/urbackup/linux-uninstall.webp)
+![Linux Uninstall](/images/2022/urbackup/linux-uninstall.webp)
 
 ## Alternatives
 
-There are a lot of free and open source backup solutions for backup. I picked urbackup because it is the most basic and probably the easiest to setup. However, if you need more features there are more backup solutions that I'd consider better for large environments or businesses. 
+There are a lot of free and open source backup solutions for backup. I picked urbackup because it is the most basic and probably the easiest to setup. However, if you need more features there are more backup solutions that I'd consider better for large environments or businesses.
 
 - BorgBackup <https://www.borgbackup.org/> for cloud paid offering, BorgBase <https://www.borgbase.com/>
 - Bacula <https://www.bacula.org/> Enterprise solutions and fantastic dashboard

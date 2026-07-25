@@ -21,4 +21,3 @@ If your XenCenter hangs or becomes unresponsive, you can also reset the toolstac
 `xe-toolstack-restart`
 
 It&#8217;s important to note what caused the XenServer tapdisk error. I experienced this on an old version of XenServer 6 when switching out the ISOs from the VMs.
-

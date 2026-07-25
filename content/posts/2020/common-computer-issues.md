@@ -20,7 +20,7 @@ These are all the issues we discussed on a live stream. I took all the community
 
 Q: How can I make a YouTube video sit there paused on someone's screen in Windows 10 and instantly start playing aloud upon unlocking the screen/waking from sleep?
 
-A: Task Scheduler can do all sorts of tasks and you can set the triggers to be on login or at certain times of the day. 
+A: Task Scheduler can do all sorts of tasks and you can set the triggers to be on login or at certain times of the day.
 
 ## Linux - Display Issues
 
@@ -61,7 +61,7 @@ Sample xrandr script:
 xrandr --output HDMI-1 --off --output HDMI-2 --auto
 ```
 
-_Note: You can use the tool *arandr* to grab the proper display script_
+_Note: You can use the tool _arandr_ to grab the proper display script_
 
 ## Windows/Linux/MacOS - Flashing Images to SD-Card or USB
 
@@ -94,7 +94,7 @@ systemd-analyze blame
                189ms systemd-logind.service
 ```
 
-*Note: Also try `systemd-analyze critical-chain` or `systemd-analyze plot > boot.svg` as this shows the chain of the startup*
+_Note: Also try `systemd-analyze critical-chain` or `systemd-analyze plot > boot.svg` as this shows the chain of the startup_
 
 ## Linux - USB Port stops working
 
@@ -108,7 +108,7 @@ systemd-analyze blame
     - `sudo update-grub`
   - Verify by running cat command again
 
-## Linux - Fixing No Display Drivers or Black Screen or Missing Desktop Environment 
+## Linux - Fixing No Display Drivers or Black Screen or Missing Desktop Environment
 
 Ctrl + Alt + F1 or F2
 
@@ -116,17 +116,17 @@ This drops you to TTY and no display drivers are needed. From this console you c
 
 ## All Computers - Can't Get into BIOS
 
-Open it up and remove the CMOS Battery. Press the power button without it plugged in to fully discharge. Then wait 60 seconds and put CMOS battery back in. 
+Open it up and remove the CMOS Battery. Press the power button without it plugged in to fully discharge. Then wait 60 seconds and put CMOS battery back in.
 
 ## General PC Maintenance - Updates & Shuting them down
 
-Updates should be done weekly with security only one applied. Feature Updates should be delayed at least 1 year. This is universal across all operating systems. I also recommend shutting down your PC every day and not using suspend/hibernate. If you want to schedule the updates you can leave your PC once a week overnight. 
+Updates should be done weekly with security only one applied. Feature Updates should be delayed at least 1 year. This is universal across all operating systems. I also recommend shutting down your PC every day and not using suspend/hibernate. If you want to schedule the updates you can leave your PC once a week overnight.
 
 ## Windows/Linux - Time Maintenance
 
 You should use UTC time everywhere. Windows uses local time and it is terrible. Change this with a registry setting
 
-- Disable Internet Time on Windows 10 
+- Disable Internet Time on Windows 10
   - Head to Settings > Time & language and disable “Set time automatically”.
 - Modify Windows Registry to use UTC
   - Start - Run - `regedit`
@@ -145,18 +145,18 @@ There are a variety of packages you can use, but highly suggest two:
 - tlp
 - xfce4-power-manager
 
-TLP will throttle your CPU and use less power and XFCE power manager will take care of brightness, suspend, and other power saving features as a standalone package even if you aren't using XFCE as a desktop environment. 
+TLP will throttle your CPU and use less power and XFCE power manager will take care of brightness, suspend, and other power saving features as a standalone package even if you aren't using XFCE as a desktop environment.
 
 ## MacOS - OpenCore Audio Issues
 
-This typically comes from using two codecs or the wrong one. *Use ONLY ONE!*
+This typically comes from using two codecs or the wrong one. _Use ONLY ONE!_
 
 - AppleALC - <https://github.com/acidanthera/AppleALC>
 - VoodooHDA - <https://sourceforge.net/projects/voodoohda/>
 
-## Linux - App won't launch it just disappears...
+## Linux - App won't launch it just disappears
 
-Run Application in Terminal and look at the errors. Chances are it is missing a dependency. 
+Run Application in Terminal and look at the errors. Chances are it is missing a dependency.
 
 ## Windows - "these settings are managed by your organization"
 
@@ -168,7 +168,7 @@ Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personaliza
 
 OR
 
-You can also open up Start - Run - `gpedit.msc` and then go to All Settings and look for enabled features and set them to *Not Configured*
+You can also open up Start - Run - `gpedit.msc` and then go to All Settings and look for enabled features and set them to _Not Configured_
 
 ## Windows - Reinstall OneDrive
 

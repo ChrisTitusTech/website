@@ -24,4 +24,3 @@ To resolve this problem, turn off Fast Logon Optimization. I recommend creating 
 Computer Configuration\Administrative Templates\System\Logon\Always wait for the network at computer startup and logon
 User Configuration\Administrative Templates\System\Scripts\Run logon scripts synchronously
 ```
-

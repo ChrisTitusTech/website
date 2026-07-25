@@ -15,7 +15,7 @@ Hyprland is an amazing desktop that feels amazing. Here is my current setup that
 
 _Please Note: This is beta and not for a beginner. You WILL encounter bugs!_
 
-# The Desktop
+## The Desktop
 
 ![Screenshot](https://github.com/ChrisTitusTech/hyprland-titus/raw/main/hyprland-titus.png)
 

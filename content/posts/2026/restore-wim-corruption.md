@@ -49,4 +49,3 @@ mofcomp C:\Windows\System32\wbem\sr.mof
 ```
 
 Then I tested it via the powershell commands Get-ComputerRestorePoint to pull existing restore points from system restore.
-

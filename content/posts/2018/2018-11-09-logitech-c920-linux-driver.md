@@ -48,7 +48,7 @@ Find your C920 Webcam or other webcams you need to switch the default settings o
   
 ![c920-selection3](/images/2018/11/Selection_003.webp)
 
-### There are two values we need to change to get the best performance from our webcam.
+### There are two values we need to change to get the best performance from our webcam
 
 **Here is the command syntax:**
   
@@ -60,4 +60,3 @@ Find your C920 Webcam or other webcams you need to switch the default settings o
 {{< youtube 7SZBQ5bqaWU >}}  
 
 Now that you know about the Logitech C920 Linux Driver support and how it functions, you can fix it. I hope this helps you as it took me quite a while to hunt down this information.
-

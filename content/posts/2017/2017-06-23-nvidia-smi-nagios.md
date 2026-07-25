@@ -36,6 +36,7 @@ Use this script to query nvidia-smi, thus reporting the temp of the card.
 ##nvidia-smi | grep '[0-9][0-9]C' | awk '{print $3}' | sed 's/C//'
 ############################################`
 ```
+
 Here is the script code:
   
 ```
@@ -62,4 +63,3 @@ esac`
 ```
 
 You will need to modify this as the nvidia-smi tool will be updated in the future and the grep command will have to be reconfigured if due to any output changes.
-

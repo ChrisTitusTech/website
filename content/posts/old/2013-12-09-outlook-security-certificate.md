@@ -22,7 +22,7 @@ Example: `https://NetBIOS_name.contoso.com/autodiscover/autodiscover.xml`
   
 Note: I tested this on Exchange 2010 as well.
 
-### Outlook Security Certificate Resolution
+## Outlook Security Certificate Resolution
 
 Change the URLs for the appropriate Exchange 2007 components. To do this, follow these steps:
 
@@ -30,13 +30,16 @@ Change the URLs for the appropriate Exchange 2007 components. To do this, follow
   2. Change the Autodiscover URL in the Service Connection Point. The Service Connection Point is stored in the Active Directory directory service. To change this URL, type the following command, and then press Enter:
   
     `Set-ClientAccessServer -Identity CAS_Server_Name -AutodiscoverServiceInternalUri https://mail.contoso.com/autodiscover/autodiscover.xml`
-  3. Change the InternalUrl attribute of the EWS. To do this, type the following command, and then press Enter:
+
+  1. Change the InternalUrl attribute of the EWS. To do this, type the following command, and then press Enter:
   
     `Set-WebServicesVirtualDirectory -Identity "CAS_Server_NameEWS (Default Web Site)" -InternalUrl https://mail.contoso.com/ews/exchange.asmx`
-  4. Change the InternalUrl attribute for Web-based Offline Address Book distribution. To do this, type the following command, and then press Enter:
+
+  1. Change the InternalUrl attribute for Web-based Offline Address Book distribution. To do this, type the following command, and then press Enter:
   
     `Set-OABVirtualDirectory -Identity "CAS_Server_nameoab (Default Web Site)" -InternalUrl https://mail.contoso.com/oab`
-  5. Change the InternalUrl attribute of the UM Web service. To do this, type the following command, and then press Enter:
+
+  1. Change the InternalUrl attribute of the UM Web service. To do this, type the following command, and then press Enter:
   
     `Set-UMVirtualDirectory -Identity "CAS_Server_Nameunifiedmessaging (Default Web Site)" -InternalUrl https://mail.contoso.com/unifiedmessaging/service.asmx`
   

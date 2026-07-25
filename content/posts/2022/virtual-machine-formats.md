@@ -12,7 +12,7 @@ tags:
   - Virtualization
 draft: false
 ---
-This Guide goes over transferring and what each type of virtual machine is used for. 
+This Guide goes over transferring and what each type of virtual machine is used for.
 <!--more-->
 
 ## The Types
@@ -23,11 +23,11 @@ The only time I've seen this format is in Virtualbox instances. They are always 
 
 ### VMDK - VMWare
 
-This is the market leader and what you will see the most in virtualization environments. Virtualbox and QEMU can run them without conversion. 
+This is the market leader and what you will see the most in virtualization environments. Virtualbox and QEMU can run them without conversion.
 
 ### VHD - Microsoft
 
-Leave it to Microsoft to make the worst container. VHD only holds a 2 TB capacity and why they created VHDX which improves this to 64 TB. Its not as performant as other containers, but gets the job done. The main benefit to these is they are read natively inside Windows without the need for extra software. You can mount and look at partition layouts with native windows tools like Disk Management. 
+Leave it to Microsoft to make the worst container. VHD only holds a 2 TB capacity and why they created VHDX which improves this to 64 TB. Its not as performant as other containers, but gets the job done. The main benefit to these is they are read natively inside Windows without the need for extra software. You can mount and look at partition layouts with native windows tools like Disk Management.
 
 ### QCOW2 - QEMU
 
@@ -42,7 +42,7 @@ qemu-img convert -O qcow2 original.vmdk original.qcow2
 
 This standard is widely adopted from VMWare, but you will be able to ingest these files into any hypervisor. VMWare, Virtualbox, and XenServer (XCP-ng) do this natively, where QEMU needs a little more conversion, but simple to use. Here is the [official website](https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-AE61948B-C2EE-436E-BAFB-3C7209088552.html)  right up on these files.
 
-The TLDR is use OVA as it grabs all the information from the VMs (VMDK, OVF, and other information) and packages it all into one file for you. This is by far the best way to share a Virtual Machine. 
+The TLDR is use OVA as it grabs all the information from the VMs (VMDK, OVF, and other information) and packages it all into one file for you. This is by far the best way to share a Virtual Machine.
 
 ## Walkthrough Video
 

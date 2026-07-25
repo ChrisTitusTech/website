@@ -19,7 +19,7 @@ Windows has been my main OS since the 90s and I've used it for everything. I've 
 
 ## MacOS isn't for me
 
-MacOS is also another refuge for Windows users, but I find the lack of customization and lack of control to be a bit much. I've used it for a few years, but I don't like it as much as Linux. I enjoy customizing my system and I have the same fears that Apple is going to start forcing updates and telemetry like Windows or even worse, start to limit what I can do with my system. 
+MacOS is also another refuge for Windows users, but I find the lack of customization and lack of control to be a bit much. I've used it for a few years, but I don't like it as much as Linux. I enjoy customizing my system and I have the same fears that Apple is going to start forcing updates and telemetry like Windows or even worse, start to limit what I can do with my system.
 
 ## Linux is the best of all worlds
 
@@ -27,8 +27,7 @@ Most Linux virgins will tell you its more secure, private, or stable than Window
 
 So Why Linux?
 
-Simply put, I get more done. I am able to develop more software, I am more creative for YouTube videos, and I am able explore an endless world of possibilities in Linux. No one knows everything about Linux and I do mean NO ONE! Not even the most experienced Linux users knows everything about Linux. There is always something new to learn and I love it because of this. In Mac or Windows there is no mystery for me other than tracking down and fixing things Apple or Microsoft screwed up in recent years, but beyond that its rather boring. 
-
+Simply put, I get more done. I am able to develop more software, I am more creative for YouTube videos, and I am able explore an endless world of possibilities in Linux. No one knows everything about Linux and I do mean NO ONE! Not even the most experienced Linux users knows everything about Linux. There is always something new to learn and I love it because of this. In Mac or Windows there is no mystery for me other than tracking down and fixing things Apple or Microsoft screwed up in recent years, but beyond that its rather boring.
 
 ## Walkthrough Video
 

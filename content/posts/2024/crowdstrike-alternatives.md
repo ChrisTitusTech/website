@@ -45,11 +45,11 @@ Blackpoint is the runner-up but also has a good track record in the MSP space. I
 
 <https://www.sentinelone.com/>
 
-Probably the cheapest on this list, but also has a decent track record. I personally don't like the client because it is heavy and the reporting is too noisy. However, it does give good protection. 
+Probably the cheapest on this list, but also has a decent track record. I personally don't like the client because it is heavy and the reporting is too noisy. However, it does give good protection.
 
 ### The Others
 
-BitDefender, Webroot, and other popular AV name brands are NOT suitable in my opinion for use in a large environment. 
+BitDefender, Webroot, and other popular AV name brands are NOT suitable in my opinion for use in a large environment.
 
 ## Walkthrough Video
 

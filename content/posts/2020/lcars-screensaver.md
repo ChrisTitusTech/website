@@ -29,16 +29,20 @@ Install the Screen saver and quit
 Test the Screensaver in wine  
 `WINEPREFIX=~/.lcars wine '/home/$USER/.lcars/drive_c/windows/system32/System47.scr' /s`
 ***
+
 ## Creating Screensaver Service
 
 Creating the screensaver service is done in three sections: service dependencies installation, script creation, and systemd service.
 
-#### Dependencies to install 
+### Dependencies to install
+
 Arch-based Installs `yay -S xscreensaver xprintidle`  
 Debian-based Installs `apt install xscreensaver xprintidle`
 
 #### Script Creation
+
 Create lcars.sh in your home directory (*replace titus with your user*)
+
 ```
 #!/bin/sh
 
@@ -70,9 +74,12 @@ while sleep $(((sleep_time+999)/1000)); do
     fi
 done
 ```
+
 #### Service Creation
+
 Create lcars.service (`sudo nano /etc/systemd/system/lcars.service`)
 *change titus to your user*
+
 ```
 [Unit]
 Description=Screensaver
@@ -85,11 +92,12 @@ ExecStart=/bin/bash /home/titus/lcars.sh
 [Install]
 WantedBy=multi-user.target
 ```
-  - Reload service daemon `sudo systemctl daemon-reload`
-  - Start lcars service to test `sudo systemctl start lcars`
-  - Verify service is running `sudo systemctl status lcars`
-  - Enable on startup `sudo systemctl enable lcars`
+
+- Reload service daemon `sudo systemctl daemon-reload`
+- Start lcars service to test `sudo systemctl start lcars`
+- Verify service is running `sudo systemctl status lcars`
+- Enable on startup `sudo systemctl enable lcars`
 
 ## Video Walkthrough
-{{< youtube J2zasJz5vuA >}}  
 
+{{< youtube J2zasJz5vuA >}}  

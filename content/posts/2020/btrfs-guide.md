@@ -17,13 +17,14 @@ Create the file system on an empty btrfs partition
 > `mkfs.btrfs /dev/sda1`  
 _Note: You will need to mount this file system after_
 
-Now we need to make a subvolume *before* we add data to the device  
+Now we need to make a subvolume _before_ we add data to the device  
 > `btrfs subvolume create /mnt/sda1` _/mnt/sda1 is the mount point!_
 
-After this is complete you can now write data to your BTRFS volume and use all it capabilities. 
+After this is complete you can now write data to your BTRFS volume and use all it capabilities.
 
 Basic BTRFS Layout  
 _Note: Top Level 5 is root and isn't a btrfs subvolume that can do snapshots and other btrfs features and therefore should not be mounted_  
+
 ```
 toplevel root level 5
   +-- root\@ level 256 (subvolume root mounted at / id varies)
@@ -32,52 +33,56 @@ toplevel root level 5
 
 ## Basic Commands
 
-  - Disk free  
+- Disk free  
 `sudo btrfs fi show`  
+
 > Output:  
 ![File System Output](/images/2020/btrfs/fishow.webp)
 
-  - Disk Usage  
+- Disk Usage  
 `sudo btrfs fi du /` _Note: you can make / any other mount point_  
-  - Scrub SubVolume *Recommended running every week!*  
+- Scrub SubVolume _Recommended running every week!_  
 `sudo btrfs scrub start /`  
-  - Balance Subvolume for Performance  
+- Balance Subvolume for Performance  
 `sudo btrfs balance start -musage=50 -dusage=50 /`  
 _Note: Use the musgae and dusage filters to only balance used blocks above 50 percent utilization_  
 `sudo btrfs balance cancel /` _Stops running balance_  
-  - List Subvolumes *based on mountpoint*  
+- List Subvolumes _based on mountpoint_  
 `sudo btrfs subv list /home`  
+
 > Output:  
 ![Subvolume Output](/images/2020/btrfs/subv-list.webp)
 
-  - Mount Subvolume  
+- Mount Subvolume  
 `sudo mount -o subvolid=267 /dev/sda1 /media/games`  
-*OR add this to* `/etc/fstab`  
+_OR add this to_ `/etc/fstab`  
 `UUID=IDGOESHERE /media/games rw,exec,subvolid=267 0 0`
 
 ## Snapshots
 
-Snapshots are one of the best things about BTRFS and I absolutely love them. They are incredible powerful and beneficial. 
+Snapshots are one of the best things about BTRFS and I absolutely love them. They are incredible powerful and beneficial.
 
 So Lets run through some scenarios when you use Snapshots.
 
-#### Create Snapshot  
+### Create Snapshot  
+>
 > `sudo btrfs subv snapshot /home /home/.snapshots/2020-01-13`
 
 Using this you can revert the snapshot by simply editing the `/etc/fstab` and changing the subvol=2020-01-13 or the corresponding subvolid you get from `sudo btrfs subv list /home`
 
 #### Restore Snapshot
+
 Restore Snapshot after reboot and successful rollback
 > `sudo btrfs subv delete /home`  
 `sudo btrfs subv snapshot /home/.snapshots/2020-01-13 /home`
 
-Now simply restore your fstab and reboot to be back on the /home subvolume. 
+Now simply restore your fstab and reboot to be back on the /home subvolume.
 
-The reason to do it using this method is to verify the data first. If it doesn't work out you can simply change the `/etc/fstab` back and you will be back to where you started. 
+The reason to do it using this method is to verify the data first. If it doesn't work out you can simply change the `/etc/fstab` back and you will be back to where you started.
 
 ## Multiple disks and RAID
 
-Oh boy, here we go. This is such a badly misunderstood subject and if you aren't careful you will be causing more problems than you are looking to solve. So with that let's get into RAID. I will *NOT* be cover RAID 5 as it is *unstable* and SHOULD NOT BE USED!
+Oh boy, here we go. This is such a badly misunderstood subject and if you aren't careful you will be causing more problems than you are looking to solve. So with that let's get into RAID. I will _NOT_ be cover RAID 5 as it is _unstable_ and SHOULD NOT BE USED!
 
 Must know commands for multiple disks:  
 > Add Disks before creating subvolume: `sudo btrfs device add /dev/sda1 /dev/sdb1`  
@@ -96,4 +101,3 @@ I could put RAID 0 here... but honestly you should just use EXT4 or XFS if you a
 ## Video Walkthrough
 
 {{< youtube J2QP4onqJKI >}}  
-

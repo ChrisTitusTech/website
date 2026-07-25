@@ -10,14 +10,14 @@ tags:
   - Windows 11
 draft: false
 ---
-Context menus have become worse in Windows 11 and weren't good in Windows 10. This application will fix it for both modern Windows operating systems. 
+Context menus have become worse in Windows 11 and weren't good in Windows 10. This application will fix it for both modern Windows operating systems.
 <!--more-->
 
 {{< x user="christitustech" id="1587824008342429696" >}}
 
 ## The App
 
-![](/images/2022/shell-the-essential-app/shell.webp)
+![Shell](/images/2022/shell-the-essential-app/shell.webp)
 
 I install this app in both Windows 10 and Windows 11. Here is a breakdown of all the context menus that it adds and expands.
 
@@ -29,7 +29,7 @@ I install this app in both Windows 10 and Windows 11. Here is a breakdown of all
 - Create Shortcuts
 - Program your own command!
 
-![](/images/2022/shell-the-essential-app/menu.webp)
+![Menu](/images/2022/shell-the-essential-app/menu.webp)
 
 ## Build your own menu and items
 
@@ -37,7 +37,7 @@ Shell is extremely easy to add commands and custom menus. Launch custom commands
 
 Open `C:\Program Files\Nilesoft\Shell\shell.shl`
 
-![](/images/2022/shell-the-essential-app/shl.webp)
+![Shl](/images/2022/shell-the-essential-app/shl.webp)
 
 Add a custom command and pass arguments by editing the dynamic JSON section:
 
@@ -50,7 +50,6 @@ dynamic
 The basic syntax is :
 
 > item(title='sample title' cmd='executable path and exe' args='extra commands')
-
 
 ## Walkthrough Video
 

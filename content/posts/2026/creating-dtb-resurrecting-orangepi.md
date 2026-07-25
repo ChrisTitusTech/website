@@ -22,7 +22,7 @@ The OrangePi 800 uses the Rockchip RK3399 SoC with a custom board layout (Motorc
 ## Hardware Support Overview
 
 | Component | Chip | Status |
-|---|---|---|
+| --- | --- | --- |
 | PMIC | RK808-D | ✅ Works |
 | RAM (4 GB LPDDR4) | 4× LPDDR4 BGA200 | ✅ Works |
 | eMMC (64 GB) | eMMC 5.0 BGA169 | ✅ Works |
@@ -59,7 +59,7 @@ sudo ./sdcard-setup.sh /dev/sdX   # replace sdX — find with lsblk
 U-Boot finds `extlinux/extlinux.conf` on the boot partition and loads the kernel automatically. Log in via SSH (check your router's DHCP table for the IP) or serial console (ttyS2, 1500000 baud, 8N1):
 
 | User | `alarm` / `alarm` |
-|---|---|
+| --- | --- |
 | Root | `root` / `root` |
 
 After first boot from the SD card, migrate to the onboard 64 GB eMMC:
@@ -69,4 +69,3 @@ sudo ./copy-to-emmc.sh
 ```
 
 Then power off, remove the SD card, and boot from eMMC.
-

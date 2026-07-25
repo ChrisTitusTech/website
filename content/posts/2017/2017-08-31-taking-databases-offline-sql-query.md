@@ -23,9 +23,12 @@ select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),'')+
 from master..sysdatabases where sid <> 0x01
 exec (@nsql)`
 ```
+
 Once all databases are offline you can drop them to clear out the entire instance with this SQL query.  
 _Note: This is extremely destructive so please use this with care._
-# *WARNING* Running this WILL DESTROY ALL DATABASES!!!
+
+## _WARNING_ Running this WILL DESTROY ALL DATABASES
+
 ```
 use master;
 declare @nsql nvarchar(max);
@@ -45,4 +48,3 @@ select @nsql=coalesce(@nsql+CHAR(13)+CHAR(10),'')+
 from master..sysdatabases where sid <> 0x01
 exec (@nsql)
 ```
-

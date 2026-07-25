@@ -18,6 +18,7 @@ Newer Source, but not as polished: <https://github.com/kholia/OSX-KVM>
 Mac KVM Repository: <https://github.com/foxlet/macOS-Simple-KVM>
 
 ## Requirements
+
 - A modern Linux distribution. E.g. Ubuntu 20.04 LTS 64-bit or later.
 - QEMU >= 4.2.0
 - A CPU with Intel VT-x / AMD SVM support is required (`grep -e vmx -e svm /proc/cpuinfo`)
@@ -36,7 +37,7 @@ cd macOS-Simple-KVM
 
 ## Installation Media
 
-This downloads our installation media and I'd recommend using Catalina for compatibility and performance. 
+This downloads our installation media and I'd recommend using Catalina for compatibility and performance.
 
 ```
 ./jumpstart.sh --catalina
@@ -55,11 +56,11 @@ sudo ./make.sh --add
 
 ### VM Modification
 
-Before we can start out VM we have to have a hard drive to load it. You have two options: physical hard drive passthrough or qcow2 file. 
+Before we can start out VM we have to have a hard drive to load it. You have two options: physical hard drive passthrough or qcow2 file.
 
-Obviously, the physical drive is considerably faster, but not possible in some instances such as laptops or if you can't afford a secondary drive. 
+Obviously, the physical drive is considerably faster, but not possible in some instances such as laptops or if you can't afford a secondary drive.
 
-#### Physical Hard Drive Passthrough 
+#### Physical Hard Drive Passthrough
 
 This is pretty simple as you just click Add Hardware -> Storage and then specify your hard drive.
 
@@ -73,24 +74,27 @@ This is even simpler as you just click Add Hardware -> Storage and create new fi
 
 ## Install Process
 
-Boot your machine and select the OS Install Partition on startup. 
+Boot your machine and select the OS Install Partition on startup.
 
 Use the `Disk Utility` tool within the macOS installer to partition, and
   format the virtual disk attached to the macOS VM.
 
 **TIP: Using a non-APFS filesystem is recommended.**
 
-Go ahead, and install macOS 
+Go ahead, and install macOS
 
 ### Post-Installation
 
 #### Bridge Networking
-*First* find your card interface name
+
+*First_ find your card interface name
+
 ```
 ip a
 ```
 
 Example: (Interface name is enp7s0)
+
 ```
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -106,7 +110,7 @@ Example: (Interface name is enp7s0)
     valid_lft forever preferred_lft forever
 ```
 
-*Second* Update `/etc/network/interfaces` 
+_Second_ Update `/etc/network/interfaces`
 
 ```
 source /etc/network/interfaces.d/*
@@ -130,7 +134,7 @@ iface tap0 inet dhcp
   pre-up tunctl -u MYUSERNAME -t tap0
 ```
 
-*Lastly* Restart the networking service or reboot computer. Then change your VM NIC (Network Hardware) to `br0` interface.
+_Lastly_ Restart the networking service or reboot computer. Then change your VM NIC (Network Hardware) to `br0` interface.
 
 ```
 sudo systemctl restart networking
@@ -142,8 +146,7 @@ sudo systemctl restart networking
 - Changing Screen Resolution - <https://github.com/foxlet/macOS-Simple-KVM/blob/master/docs/guide-screen-resolution.md>
 - Optimizing System Performance - <https://github.com/sickcodes/osx-optimizer>
 - Sound - Two methods, Pass the audio through HDMI if using GPU Passthrough OR Pass through a USB sound card that is macOS compatible
-    - _Note: There is a way to use Voodoo kext or AppleALC, but it will crackle and sound terrible_
-
+  - _Note: There is a way to use Voodoo kext or AppleALC, but it will crackle and sound terrible_
 
 ## Walkthrough Video
 

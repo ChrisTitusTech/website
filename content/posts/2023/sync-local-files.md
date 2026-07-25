@@ -16,7 +16,7 @@ A guide over how to set up Syncthing for local sync only.
 
 ## Things you NEED to know
 
-Syncthing by defaults it will sync files through relays across the internet. This is useful when needing to grab a file while you are outside your network, but slow and can cause security issues. While the information is encrypted, it still poses a threat to some. Also, the slowdown is relaying that information outside the network even in a LAN transfer. 
+Syncthing by defaults it will sync files through relays across the internet. This is useful when needing to grab a file while you are outside your network, but slow and can cause security issues. While the information is encrypted, it still poses a threat to some. Also, the slowdown is relaying that information outside the network even in a LAN transfer.
 
 The following guide shows you how to make it sync only in a LAN environment. Note: This will make your files NOT sync when outside your own network!
 
@@ -41,29 +41,30 @@ Homebrew install method:
 ```
 brew install --cask syncthing
 ```
+
 ## Configuration
 
-![](/images/2023/sync-local-files/config.webp)
+![Config](/images/2023/sync-local-files/config.webp)
 
 With multiple syncthing clients you can connect one using "Connect Remote Device" this is what the server interface looks like.
 
-![](/images/2023/sync-local-files/server.webp)
+![Server](/images/2023/sync-local-files/server.webp)
 
 On the other system it will prompt to connect the two.
 
-![](/images/2023/sync-local-files/client.webp)
+![Client](/images/2023/sync-local-files/client.webp)
 
 I generally always have a main server that manages all the connects and hosts the share. You don't have to do this, but it's easier to manage. To start syncing -> Create a folder -> Edit Folder -> Click Sharing Options -> Check the other syncthing computers to share it to!
 
-![](/images/2023/sync-local-files/share.webp)
+![Share](/images/2023/sync-local-files/share.webp)
 
 On the client computers click add and watch the sync happen. This is the final result of the sync:
 
-![](/images/2023/sync-local-files/final-sync.webp)
+![Final Sync](/images/2023/sync-local-files/final-sync.webp)
 
 ### Disable External Access
 
-![](/images/2023/sync-local-files/settings.webp)
+![Settings](/images/2023/sync-local-files/settings.webp)
 
 This simple configuration will set everything to LAN only. Making sure anon usage and Global Discovery are disabled will work for most.
 
@@ -76,7 +77,7 @@ However, for a deeper dive for those security minded and configuration junkies, 
 
 Here is Syncthing's wonderful backup system. I always use this for the times I delete something or need to recover from a bad sync. The options are: simple, trash can, staggered, and external. If you want basic backups, choose simple. Trash can is good for deleted files and often you want to grab an older version of an existing file when using sync. Personally, I do the overkill option of staggered versioning. This hold all the different version in a hour, day, week, month format til the end of the retention period. This will use a TON of space where the folder is synced from, so be CAREFUL!
 
-![](/images/2023/sync-local-files/backup.webp)
+![Backup](/images/2023/sync-local-files/backup.webp)
 
 ## Walkthrough Video
 

@@ -20,10 +20,10 @@ Create a new file in `/etc/X11/xorg.conf.d/10-amdfreesync.conf`
 
 ```
 Section "OutputClass" 
-	Identifier "AMD" 
-	MatchDriver "amdgpu" 
-	Driver "amdgpu" 
-	Option "VariableRefresh" "true" 
+ Identifier "AMD" 
+ MatchDriver "amdgpu" 
+ Driver "amdgpu" 
+ Option "VariableRefresh" "true" 
 EndSection
 ```
 
@@ -43,8 +43,8 @@ Example output:
 [     8.444] (II) LoadModule: "glamoregl"
 [     8.444] (II) Loading /usr/lib/xorg/modules/libglamoregl.so
 [     8.454] (II) Module glamoregl: vendor="X.Org Foundation"
-[     8.454] 	compiled for 1.21.1.18, module version = 1.0.1
-[     8.454] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[     8.454]  compiled for 1.21.1.18, module version = 1.0.1
+[     8.454]  ABI class: X.Org ANSI C Emulation, version 0.4
 [     9.059] (II) modeset(0): glamor X acceleration enabled on AMD Radeon RX 7800 XT (radeonsi, navi32, LLVM 20.1.8, DRM 3.64, 6.16.4-114.bazzite.fc42.x86_64)
 [     9.059] (II) modeset(0): glamor initialized
 [     9.059] (**) modeset(0): VariableRefresh: enabled

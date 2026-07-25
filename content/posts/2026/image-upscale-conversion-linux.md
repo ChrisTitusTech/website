@@ -27,7 +27,7 @@ This post walks through each one in plain language, with install and usage examp
 ## What Each Tool Is For
 
 | Tool | Best use case | Keeps original? | Output |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `image-resize` | Quickly fit images into a target size | **No** (overwrites originals) | Same file, resized |
 | `image-upscale` | Increase detail and resolution with AI | Yes | New PNG in `upscale/` |
 | `thunar-webp-convert` | Shrink file size for web uploads | Yes | New `.webp` beside source |
@@ -44,7 +44,7 @@ Use this when you want a quick resize to fit a resolution like `1920x1080` while
 
 Project: [ChrisTitusTech/image-resize](https://github.com/ChrisTitusTech/image-resize)
 
-### Install
+### Install Image Resize
 
 ```bash
 git clone https://github.com/ChrisTitusTech/image-resize
@@ -58,7 +58,7 @@ This installs:
 - `resize-selected` (Thunar wrapper)
 - `Resize Image` right-click action in Thunar
 
-### Usage
+### Use Image Resize
 
 ```bash
 # Single image
@@ -76,7 +76,7 @@ Supported formats: `.jpg`, `.jpeg`, `.png`, `.webp`, `.bmp`, `.tiff`, `.tif`
 
 Upscale any image — or a whole folder of images — straight from the terminal using [Real-ESRGAN](https://github.com/xinntao/Real-ESRGAN). Results land in an `upscale/` subfolder next to your originals, always as lossless PNG. It also includes a Thunar right-click action so you can upscale images directly from the file manager.
 
-### Install
+### Install Image Upscale
 
 ```bash
 git clone https://github.com/ChrisTitusTech/image-upscale
@@ -86,7 +86,7 @@ cd image-upscale
 
 This installs the `upscale` CLI, the `upscale-selected` Thunar wrapper, and registers an `Upscale Image (Real-ESRGAN)` right-click action in Thunar. A dedicated virtual environment is used to avoid system Python conflicts.
 
-### Usage
+### Use Image Upscale
 
 ```bash
 # Single image (4x upscale, default model)
@@ -110,7 +110,7 @@ Output is always written to an `upscale/` subfolder next to the source. The firs
 ### Models
 
 | Model | Best For | Scale |
-|---|---|---|
+| --- | --- | --- |
 | `x4plus` (default) | Photos, general images | 4x |
 | `x2plus` | Photos at 2x | 2x |
 | `x4plus-anime` | Anime, illustrations | 4x |
@@ -124,7 +124,7 @@ After running `install.sh`, select one or more images in Thunar, right-click, an
 
 Convert images to WebP format with a single command. This is ideal for saving disk space while maintaining good image quality. Like the upscale script, it also includes a Thunar right-click action for easy conversion from the file manager.
 
-### Install
+### Install WebP Conversion
 
 ```bash
 git clone https://github.com/ChrisTitusTech/thunar-webp-convert
@@ -173,7 +173,7 @@ Notes:
 - `output_suffix` must be a quoted string, for example `"-new"`.
 - Use an empty suffix (`""`) to output `photo.webp`.
 
-### Usage
+### Use WebP Conversion
 
 ```bash
 convert-to-webp path/to/image.png
@@ -195,4 +195,3 @@ For most people, this order works best:
 - No Thunar menu item: restart Thunar and rerun each project `install.sh`.
 - Command not found: confirm `~/.local/bin` is in your `PATH`.
 - WebP conversion fails: verify `cwebp` and ImageMagick `convert` are installed.
-

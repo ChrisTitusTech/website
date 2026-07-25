@@ -18,9 +18,10 @@ On many Linux systems, IPv6 is prioritized over IPv4 by default. This can lead t
 
 gai.conf is the best and in my opinion, the ONLY method you should use for pushing ipv4 ahead of ipv6. Most methods online show `sysctl` which DISABLES ipv6 and not a recommended way because ipv6 is so integrated in to many networks these days.
 
-Instead change the following file by editing `/etc/gai.conf` and no restart or systemctl restart commands are needed. 
+Instead change the following file by editing `/etc/gai.conf` and no restart or systemctl restart commands are needed.
 
 Here is the line to uncomment
+
 ```
 precedence ::ffff:0:0/96  100
 ```
@@ -33,4 +34,4 @@ That's it! Your system will now using ipv4 when it is availible, but can use ipv
 getent ahosts google.com
 ```
 
-or simply `ping google.com` and you will see that ipv4 is shown instead of a ipv6 address at the top. `getent` is a nice way of verifying that it will default back to ipv6 as it will show ipv6 addresses towards the bottom. 
+or simply `ping google.com` and you will see that ipv4 is shown instead of a ipv6 address at the top. `getent` is a nice way of verifying that it will default back to ipv6 as it will show ipv6 addresses towards the bottom.

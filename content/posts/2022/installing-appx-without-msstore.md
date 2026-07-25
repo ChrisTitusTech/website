@@ -10,20 +10,20 @@ tags:
   - Microsoft Store
 draft: false
 ---
-Do you have a bare version of windows LTSC or highly stripped out ISO image that doesn't have the Microsoft Store? This is the guide to show you how to install appx and other apps without it. 
+Do you have a bare version of windows LTSC or highly stripped out ISO image that doesn't have the Microsoft Store? This is the guide to show you how to install appx and other apps without it.
 <!--more-->
 
 ## Winget Installation
 
-Using the powershell and a couple projects we can install winget. You need the Microsoft sanctioned script repository called PSGallery. It has some system admin scripts that are clutch when all you have is powershell. 
+Using the powershell and a couple projects we can install winget. You need the Microsoft sanctioned script repository called PSGallery. It has some system admin scripts that are clutch when all you have is powershell.
 
 ## What this does
 
-It grabs the script from <https://www.powershellgallery.com/packages/winget-install/0.0.4> and runs it. The script itself utilizes NuGet and other tools that are in every Windows installation to install the dependancies, before retrieving the winget packages. 
+It grabs the script from <https://www.powershellgallery.com/packages/winget-install/0.0.4> and runs it. The script itself utilizes NuGet and other tools that are in every Windows installation to install the dependancies, before retrieving the winget packages.
 
 ## Why this is better
 
-This way is far superior to other methods as most will fail in a stripped down Windows like the one made from my [NTLite Build](https://christitus.com/ntlite-guide/). 
+This way is far superior to other methods as most will fail in a stripped down Windows like the one made from my [NTLite Build](https://christitus.com/ntlite-guide/).
 
 ![but-why](/images/2022/but-why.gif)
 
@@ -35,15 +35,15 @@ Using the <https://store.rg-adguard.net/> site we can snatch any appx as long as
 
 Get product id from <https://apps.microsoft.com/store/apps>
 
-![](/images/2022/installing-appx-without-msstore/app-store.webp)
+![App Store](/images/2022/installing-appx-without-msstore/app-store.webp)
 
 Then grab the appx from rg-adguard AND its dependancies... like this:
 
-![](/images/2022/installing-appx-without-msstore/rg-adguard.webp)
+![Rg Adguard](/images/2022/installing-appx-without-msstore/rg-adguard.webp)
 
 ### Direct Download with Script
 
-Here is quick snippit that you can toss the product id in to pull it down from PowerShell. 
+Here is quick snippit that you can toss the product id in to pull it down from PowerShell.
 
 ```
 $apiUrl = "https://store.rg-adguard.net/api/GetFiles"

@@ -26,4 +26,3 @@ First, if you’re getting shut out of the store (“Can’t connect to the Stor
 ```
 
 Either copy/paste that text into a text file, save it as storefix.reg & run it, or navigate to that tree & change the DWORD from 1 to 0. Next, go into services.msc & restart the Windows Update service.
-

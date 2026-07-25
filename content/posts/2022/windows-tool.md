@@ -131,7 +131,7 @@ Enable optional Windows components with a checkbox and a single click:
 One-click repairs for common system problems:
 
 | Fix | What It Does |
-|---|---|
+| --- | --- |
 | Set Up Autologin | Configures automatic login for the current user |
 | Reset Windows Update | Re-registers update DLLs and restarts update services |
 | Reset Network | Runs `netsh int ip reset` and `netsh winsock reset` to restore the network stack |
@@ -161,7 +161,7 @@ Enable an **OpenSSH server** on your Windows machine for remote access without t
 Three update modes to match your risk tolerance:
 
 | Mode | What It Does |
-|---|---|
+| --- | --- |
 | **Default** | Restores standard Windows Update behavior (out-of-box settings) |
 | **Security (Recommended)** | Delays feature updates by 365 days; delays security updates by 4 days to catch bad patches before they hit your machine |
 | **Disable ALL Updates** | Turns off all updates entirely — only for isolated or special-purpose systems. Leaves the system without security patches. Use the Default button to restore. |
@@ -174,15 +174,17 @@ Win11 Creator takes an official Windows 11 ISO and produces a customized, debloa
 
 **You need an official Windows 11 ISO from [Microsoft's website](https://www.microsoft.com/en-us/software-download/windows11) before starting.** Requires ~10–15 GB of temporary disk space.
 
-#### What it removes and changes:
+#### What it removes and changes
 
 **App & Component Removal:**
+
 - 40+ bloat apps removed — Clipchamp, Teams, Copilot, Dev Home, new Outlook, Bing apps, Solitaire, and more
 - OneDrive setup deleted from the image
 - Unused Windows editions stripped (saves 1–2 GB per removed edition)
 - Component store cleaned via DISM (reclaims 300–800 MB)
 
 **System Customization:**
+
 - Hardware requirement checks bypassed — installs on machines without TPM 2.0, Secure Boot, or supported CPUs
 - Local account setup enabled — skips the Microsoft account screen during OOBE
 - BitLocker and device encryption disabled
@@ -191,6 +193,7 @@ Win11 Creator takes an official Windows 11 ISO and produces a customized, debloa
 - Empty taskbar and Start Menu — no pinned apps
 
 **Privacy & Telemetry:**
+
 - Advertising ID, tailored experiences, input personalization, and speech online privacy disabled
 - Cloud content features, app suggestions, and Microsoft Store recommendations disabled
 - Telemetry scheduled tasks removed (CEIP, Appraiser, WaaSMedic, and others)
@@ -200,7 +203,7 @@ Win11 Creator takes an official Windows 11 ISO and produces a customized, debloa
 
 **Optional: Driver Injection** — injects all drivers from your current system into the install image, useful for offline installations on machines with missing drivers.
 
-#### Steps:
+#### Steps
 
 1. **Select ISO** — browse to your official Windows 11 ISO (4 GB+)
 2. **Mount & Verify** — Winutil mounts and validates the image, then lets you pick the edition (Pro selected by default)

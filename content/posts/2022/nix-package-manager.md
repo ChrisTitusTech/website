@@ -11,41 +11,46 @@ tags:
   - Nix
 draft: false
 ---
-This standalone package manager is absolutely stunning and I can't believe I'm just now discovering it's true power. 
+This standalone package manager is absolutely stunning and I can't believe I'm just now discovering it's true power.
 <!--more-->
 
 {{< x user="christitustech" id="1559232526094417921" >}}
 
 ## Installation
+
 Source: <https://github.com/NixOS/nix>
 
 ```
 curl -L https://nixos.org/nix/install | sh
 ```
+
 _Note: I'd recommend multi-user install if it prompts for it._
 
 ## Finding Packages
-I'd recommend using their website to find packages to install, but make sure to click the "unstable" button has NixOS stable is a Linux Distribution few use. 
+
+I'd recommend using their website to find packages to install, but make sure to click the "unstable" button has NixOS stable is a Linux Distribution few use.
 
 <https://search.nixos.org/packages>
 
 Or from terminal you can list all packages with `nix-env -qaP` then just grep what you are looking for. Example: `nix-env -qaP | grep hugo`
 
 ## Usage
+
 Here is the basic usage of nix, most revolve around the `nix-env` command. These are manually managed and require user intervention
 
- - List Installed packages `nix-env -q`
- - Install Packages `nix-env -iA nixpkgs.packagename`
- - Erase Packages `nix-env -e packagename`
- - Update All Packages `nix-env -u`
- - Update Specific Packages `nix-env -u packagename`
- - Hold Specific Package `nix-env --set-flag keep true packagename`
- - List Backups (Generations) `nix-env --list-generations`
- - Rollback to Last Backup `nix-env --rollback`
- - Rollback to Specific Generation `nix-env --switch-generation #`
+- List Installed packages `nix-env -q`
+- Install Packages `nix-env -iA nixpkgs.packagename`
+- Erase Packages `nix-env -e packagename`
+- Update All Packages `nix-env -u`
+- Update Specific Packages `nix-env -u packagename`
+- Hold Specific Package `nix-env --set-flag keep true packagename`
+- List Backups (Generations) `nix-env --list-generations`
+- Rollback to Last Backup `nix-env --rollback`
+- Rollback to Specific Generation `nix-env --switch-generation #`
 
 ## Help and Manual
-Official Manual is [here](https://nixos.org/manual/nix/stable/). You can also get more details with `man nix` or `man nix-env`. 
+
+Read the [official Nix manual](https://nixos.org/manual/nix/stable/). You can also get more details with `man nix` or `man nix-env`.
 
 ## Troubleshooting
 

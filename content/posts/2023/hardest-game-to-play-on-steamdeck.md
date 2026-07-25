@@ -35,15 +35,15 @@ Bottle Flatpak Install
 flatpak install flathub com.usebottles.bottles
 ```
 
-![](/images/2023/hardest-game-to-play-on-steamdeck/gaming-bottle.webp)
+![Gaming Bottle](/images/2023/hardest-game-to-play-on-steamdeck/gaming-bottle.webp)
 
 Set Launch Options
 
-![](/images/2023/hardest-game-to-play-on-steamdeck/launch-options.webp)
+![Launch Options](/images/2023/hardest-game-to-play-on-steamdeck/launch-options.webp)
 
 **Bottles Bug: Nothing Happens when selection launch options**
 
-![](/images/2023/hardest-game-to-play-on-steamdeck/bottle-bug.webp)
+![Bottle Bug](/images/2023/hardest-game-to-play-on-steamdeck/bottle-bug.webp)
 
 If you run into this bug, then you need to manually edit the yml file at the root directory.
 
@@ -67,7 +67,7 @@ Using the new HorizonXI fan made server, we can see that it is using Ashita. Ash
 
 The Official Horizon XI Launcher is written in 2022 Visual C++ and those libraries aren't possible yet, at least to my knowledge. So how do we get the game files? Use Windows with Syncthing if you have another PC or just load up a VM and share the local folder.
 
-Then add that folder in the the bottles directory so it has access to it, and the argument `horizonxi.ini` using the executable `Ashita-cli.exe` and we are almost done. 
+Then add that folder in the the bottles directory so it has access to it, and the argument `horizonxi.ini` using the executable `Ashita-cli.exe` and we are almost done.
 
 There are two modifications to make: Auto-Login and Controller Support for Steamdeck. The steamdeck uses an XInput (Xbox Style) controller scheme and autologin is just adding a few lines to the ini.
 
@@ -89,7 +89,7 @@ padmode000 = 1,0,0,0,0,1
 padsin000 = 8,9,13,12,10,0,1,3,2,15,-1,-1,14,-33,-33,32,32,-36,-36,35,35,6,7,5,4,16,-1
 ```
 
-Now when you run the FFXI Bottle it will auto launch into the game WITHOUT ANY LAUNCHER! 
+Now when you run the FFXI Bottle it will auto launch into the game WITHOUT ANY LAUNCHER!
 
 _Note: My personal setup is using syncthing on my windows machine and automatically syncing the files directly in the bottle.
 

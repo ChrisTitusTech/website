@@ -18,9 +18,10 @@ ZSH is an amazing shell that just makes everything a bit easier from auto sugges
 
 ## Before you Begin: Dependencies
 
-I built a resource for those starting out with my Github @ https://github.com/ChrisTitusTech/zsh and will be using many files from the project. 
+I built a resource for those starting out with my Github @ https://github.com/ChrisTitusTech/zsh and will be using many files from the project.
 
 Packages needed before you start:
+
 - zsh - ZSH Shell
 - zsh-syntax-highlighting - syntax highlighting for ZSH in standard repos
 - autojump - jump to directories with j or jc for child or jo to open in file manager
@@ -50,4 +51,3 @@ chsh $USER
 ## Video Walkthrough
 
 {{< youtube gGmBUfMaWMU >}}  
-

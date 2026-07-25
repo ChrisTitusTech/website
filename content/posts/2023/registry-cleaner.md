@@ -13,9 +13,9 @@ draft: false
 Registry cleaners are still everywhere in Windows utilities, but why? Microsoft itself has said NOT to use them.
 <!--more-->
 
-![](/images/2023/registry-cleaner/wise-regcleaner.webp)
+![Wise Regcleaner](/images/2023/registry-cleaner/wise-regcleaner.webp)
 
-## They used to be good!
+## They used to be good
 
 Back in the 2000s, registry cleaners were needed as programs like AOL, Games, and other applications would make a bunch of additions to the registry on install. When uninstalling these programs they would never remove all the entries which would lead to problems. Enter... THE REGISTRY CLEANER! You could run these before reinstalling a program and have it be successful where it would otherwise fail. Contrary to popular belief these cleaners NEVER made your system run faster.
 

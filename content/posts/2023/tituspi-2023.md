@@ -22,20 +22,20 @@ Linux ARM is at its roots using the Raspbian server lite spin. Official Raspbian
   
 ## How is Different from Raspbian Desktop?
 
-The desktop offers much better customization, style, and features compared to the official one. The stock KDE experience has performance issues due to the compositing. I optimized this by disabling the compositor in KWIN and making the entire interface much more responsive. 
+The desktop offers much better customization, style, and features compared to the official one. The stock KDE experience has performance issues due to the compositing. I optimized this by disabling the compositor in KWIN and making the entire interface much more responsive.
 
 A customized terminal using my [custom bash settings](https://github.com/ChrisTitusTech/mybash).
 
-| Terminal      | Desktop       | KDE Profile   |
-|:-------------:|:-------------:|:-------------:|
-|![](/images/2023/tituspi/terminal.webp)|![](/images/2023/tituspi/desktop.webp)|![](/images/2023/tituspi/konsave.webp)|
+| Terminal | Desktop | KDE Profile |
+| :-------------: | :-------------: | :-------------: |
+| ![Terminal](/images/2023/tituspi/terminal.webp) | ![Desktop](/images/2023/tituspi/desktop.webp) | ![Konsave](/images/2023/tituspi/konsave.webp) |
 
 ### Build instructions
 
 - Install Raspberry Pi OS LITE (NOT THE DESKTOP)
 - From console on login use `tasksel` and select KDE
 - Modify KDE to DISABLE composition in KWIN (Massive performance boost)
-- Modify `/boot/cmdline.txt` for leverage graphics acceleration and other boot modifications (quiet boot). 
+- Modify `/boot/cmdline.txt` for leverage graphics acceleration and other boot modifications (quiet boot).
 - Use [konsave](https://github.com/Prayag2/konsave) and tituspi.knsv (extracted from tituspi.7z files - 7Zip Required) to copy fonts, KDE settings and more!
 
 ```
@@ -56,7 +56,6 @@ dtoverlay=vc4-fkms-v3d
 [all]
 hdmi_enable_4kp60=1
 ```
-
 
 #### boot cmdline.txt explainations
 

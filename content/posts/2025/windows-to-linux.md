@@ -19,15 +19,16 @@ Windows to Linux is a hard transition for many users. I find this especially tru
 Understand that Linux is NOT Windows and they work differently. Figure out the shortcomings of Linux in your current workflow and be flexible in learning alternatives or be comfortable dual booting.
 
 Think about program alternatives and incompatibilities
+
 - Microsoft Office
 - Adobe Products
 - Gaming Titles that use Anti-Cheat (check <https://protondb.com> for compatibility)
 
-Why do you want to switch? For me, I was tired of Windows and their update cycle. 
+Why do you want to switch? For me, I was tired of Windows and their update cycle.
 
 ## Setup a Test Environment
 
-Before you nuke your Windows and install Linux, you need to understand what you are getting yourself into. The best way is to setup a test environment using either a Virtual Machine or even another PC. I personally recommend using a raspberry pi to cut your teeth in Linux and understanding terminal. 
+Before you nuke your Windows and install Linux, you need to understand what you are getting yourself into. The best way is to setup a test environment using either a Virtual Machine or even another PC. I personally recommend using a raspberry pi to cut your teeth in Linux and understanding terminal.
 
 ### Choosing your Distribution
 
@@ -43,7 +44,7 @@ Arch Linux is probably the most well known rolling release that has the most up 
 
 #### Stable Releases
 
-These packages can be relatively modern, but not as bleeding edge as Arch or rolling releases. There are three distributions I'd recommend. 
+These packages can be relatively modern, but not as bleeding edge as Arch or rolling releases. There are three distributions I'd recommend.
 
 - Fedora (13-month release cycle) - Most modern packages of many stable releases
 - Debian (24-month release cycle) - Most common distribution out of all of Linux with most things based on it and My MAIN recommendation.
@@ -51,9 +52,9 @@ These packages can be relatively modern, but not as bleeding edge as Arch or rol
 
 ### Understanding Linux
 
-Distributions are just pre-packaged components making up Linux. Unlike Windows or Mac, you can choose different options for bootloader, init systems, display rendering, display managers, desktop environments or window managers. Which are the basic components every system has, once on the desktop you can pickup your own file browser, start menu, bars, configuration tools and utilities. 
+Distributions are just pre-packaged components making up Linux. Unlike Windows or Mac, you can choose different options for bootloader, init systems, display rendering, display managers, desktop environments or window managers. Which are the basic components every system has, once on the desktop you can pickup your own file browser, start menu, bars, configuration tools and utilities.
 
-Linux can be changed in any way you want. Where a pre-packaged system like Windows or Mac all these decisions are made for you and can't be removed. 
+Linux can be changed in any way you want. Where a pre-packaged system like Windows or Mac all these decisions are made for you and can't be removed.
 
 - You don't like how the system boots? Change the bootloader from grub to systemd
 - Don't like the way Xorg handles displays? Change to Wayland
@@ -62,31 +63,32 @@ Linux can be changed in any way you want. Where a pre-packaged system like Windo
 #### Notable Differences from Windows
 
 Here is a short list of things you need to know:
-- Drivers are baked into the Kernel and adding new "drivers" relies on a kernel module that needs to be rebuilt every time the kernel changes. These modules rely on dkms and linux-headers a lot of the time. 
-- Control Panel and GUI system applications are generally an after thought. System configuration is done in the `/etc` folder and User configuration is done in the `/home/user/.config` folder. Windows can spread config files everywhere and Linux doesn't and puts them in these folders depending on if it is systemwide or user based. 
+
+- Drivers are baked into the Kernel and adding new "drivers" relies on a kernel module that needs to be rebuilt every time the kernel changes. These modules rely on dkms and linux-headers a lot of the time.
+- Control Panel and GUI system applications are generally an after thought. System configuration is done in the `/etc` folder and User configuration is done in the `/home/user/.config` folder. Windows can spread config files everywhere and Linux doesn't and puts them in these folders depending on if it is systemwide or user based.
 - Terminal is needed. Linux try hards always say you can do anything in the GUI and generally don't use Windows or Mac and don't know how bad the Linux GUI experience is in comparison. You will need to get comfortable with the terminal. Linux is built for the CLI experience in mind FIRST and the GUI ALWAYS is second or not at all in some cases.
-- EVERYTHING can be customized! 
+- EVERYTHING can be customized!
 - Linux will NOT protect you from yourself. You can do anything you want and break your system.
 - Linux FOSS applications are generally less polished, but then again they are FREE!
 - Browser-based app alternatives are a way to get around the limitations of FOSS offerings
 
 #### How Programs are Installed
 
-The biggest thing a specific distribution gives you is a Package Manager. How it installs programs is something that doesn't change very much. 
+The biggest thing a specific distribution gives you is a Package Manager. How it installs programs is something that doesn't change very much.
 
 Here are some examples so you don't go look dumb trying to install packages on a different distribution with a different package manager:
 
 - `sudo apt install name` - Debian, Ubuntu, and a TON of Linux distributions use `apt` as the package manager.
-- `sudo pacman -Sy name` - Arch-based also uses `yay` or `paru` to expand this to include almost any Linux package in existence. 
+- `sudo pacman -Sy name` - Arch-based also uses `yay` or `paru` to expand this to include almost any Linux package in existence.
 - `sudo dnf install name` - RHEL-based distros like Fedora use this package manager. It used to be `yum` instead, but was changed in recent years to dnf.
 
-There are a ton of others for different distros, like `zypper` for OpenSUSE or `swupd` for Clear Linux, but these are pretty niche and you shouldn't concern yourself with them. 
+There are a ton of others for different distros, like `zypper` for OpenSUSE or `swupd` for Clear Linux, but these are pretty niche and you shouldn't concern yourself with them.
 
 *Packages for ALL Distributions* are made using Flatpak, AppImage, Flatpak, and even installing a secondary package manager like homebrew or nix. Everything I just listed works on all distributions and are containerized for the most part.
 
 #### Typical Distribution
 
-_Common alternatives in parenthesis_
+*Common alternatives in parenthesis*
 
 - Bootloader = GRUB (Systemd-boot)
 - Init System = Systemd
@@ -99,7 +101,8 @@ _Common alternatives in parenthesis_
 
 Example Configuration
 
-Ubuntu 
+Ubuntu
+
 - Bootloader - Grub
 - Init System - Systemd
 - Display Render - Wayland
@@ -116,7 +119,7 @@ The basic netinst is fine for now. We just want a sample system to build up and 
 
 Use Arch Linux here: <https://archlinux.org/download/>
 
-Instead of using a wizard included with Arch, I recommend walking through all the steps @ <https://wiki.archlinux.org/title/Installation_guide> and learning about what goes into the setup process. Arch does a fantastic job of breaking down each step and I highly recommend their wiki as a resource even when NOT using arch. 
+Instead of using a wizard included with Arch, I recommend walking through all the steps @ <https://wiki.archlinux.org/title/Installation_guide> and learning about what goes into the setup process. Arch does a fantastic job of breaking down each step and I highly recommend their wiki as a resource even when NOT using arch.
 
 ### Third Installation
 
@@ -125,4 +128,3 @@ Start messing around with window managers and configuring the system from a comm
 ## Walkthrough Video
 
 {{< youtube "vlN5koqNY5U" >}}
-

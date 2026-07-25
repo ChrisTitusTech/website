@@ -13,7 +13,7 @@ tags:
 ---
 This article shows you what to do if you get the rewrite.dll failed to load in Windows 10 event viewer for Windows 10 IIS.<!--more-->
 
-### Commands
+## Commands
 
 Checked Event viewer when my website Showed up with
   

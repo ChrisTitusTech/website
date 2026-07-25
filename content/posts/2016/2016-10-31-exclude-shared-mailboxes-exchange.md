@@ -17,20 +17,20 @@ This shows you how to exclude shared mailboxes from a Dynamic Distribution Group
 
 ![Exclude Shared Mailboxes](/images/2016/10/exclude-shared-mailboxes.webp)
 
-### Commands
+## Commands
 
-#### Connect to O365 in PS:
+### Connect to O365 in PS
 
 ```
 $UserCredential = Get-Credential
 $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
 Import-PSSession $Session
 ```
-#### Exclude Shared Mailboxes with this filter command:
+
+#### Exclude Shared Mailboxes with this filter command
 
 `set-DynamicDistributionGroup -Name "all@yourcompany.com"  -RecipientFilter {((RecipientType -eq 'UserMailbox') -and -not (RecipientTypeDetailsValue -eq 'SharedMailbox'))}`
 
 ### Conclusion
 
 Afterward, Verify in Exchange Admin Console. You always want to prevent your shared mailboxes from getting spammed in a distribution group. Consequently, I&#8217;d highly recommend setting a requirement to send to-these dynamic mailboxes. This will prevent every employee from sending emails to everyone, which will be a bad thing.
-

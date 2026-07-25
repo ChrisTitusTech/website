@@ -14,69 +14,68 @@ draft: false
 ---
 <!--more-->
 
-
 ## TLDR
 
-![](/images/2022/5-terminal-commands/tldr.webp)
+![Tldr](/images/2022/5-terminal-commands/tldr.webp)
 
-Too long didn't read? The perfect solution for long man pages that we just want some quick examples and basic syntax for a command. TLDR is a vital tool to save you time when learning the terminal. 
+Too long didn't read? The perfect solution for long man pages that we just want some quick examples and basic syntax for a command. TLDR is a vital tool to save you time when learning the terminal.
 
 ## CMatrix
 
-![](/images/2022/5-terminal-commands/cmatrix.webp)
+![Cmatrix](/images/2022/5-terminal-commands/cmatrix.webp)
 
-How can you use Linux without using CMatrix... It's hard to be cool without it. 
+How can you use Linux without using CMatrix... It's hard to be cool without it.
 
 ## Trash-CLI
 
-![](/images/2022/5-terminal-commands/trash-cli.webp)
+![Trash Cli](/images/2022/5-terminal-commands/trash-cli.webp)
 
-This is a life saver after you delete a directory or files in terminal and need to get them back. I highly recommend making the following alias in your `~/.bashrc` file. 
+This is a life saver after you delete a directory or files in terminal and need to get them back. I highly recommend making the following alias in your `~/.bashrc` file.
 
 ```
 alias rm='trash -v'
 ```
 
- - Delete a file and send it to the trash:
+- Delete a file and send it to the trash:
    `trash path/to/file`
 
- - List all files in the trash:
+- List all files in the trash:
    `trash-list`
 
- - Interactively restore a file from the trash:
+- Interactively restore a file from the trash:
    `trash-restore`
 
- - Empty the trash:
+- Empty the trash:
    `trash-empty`
 
- - Permanently delete all files in the trash which are older than 10 days:
+- Permanently delete all files in the trash which are older than 10 days:
    `trash-empty 10`
 
- - Remove all files in the trash, which match a specific blob pattern:
+- Remove all files in the trash, which match a specific blob pattern:
    `trash-rm "*.o"`
 
- - Remove all files with a specific original location:
+- Remove all files with a specific original location:
    `trash-rm /path/to/file_or_directory`
 
 ## Autojump
 
-![](/images/2022/5-terminal-commands/autojump.webp)
+![Autojump](/images/2022/5-terminal-commands/autojump.webp)
 
-This is my most used terminal utility that saves me the most amount of time. The catch to this program is you must have navigated to the directory at least once in terminal first. 
+This is my most used terminal utility that saves me the most amount of time. The catch to this program is you must have navigated to the directory at least once in terminal first.
 
 - Jump to a directory that contains the given pattern:
    `j pattern`
 
- - Jump to a sub-directory (child) of the current directory that contains the given pattern:
+- Jump to a sub-directory (child) of the current directory that contains the given pattern:
    `jc pattern`
 
- - Open a directory that contains the given pattern in the operating system file manager:
+- Open a directory that contains the given pattern in the operating system file manager:
    `jo pattern`
 
- - Remove non-existing directories from the autojump database:
+- Remove non-existing directories from the autojump database:
    `j --purge`
 
- - Show the entries in the autojump database:
+- Show the entries in the autojump database:
    `j -s`
 
 ## Progress

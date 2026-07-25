@@ -25,7 +25,7 @@ Dependency requirements:
 sudo apt install qemu bash coreutils ovmf grep jq lsb procps python3 genisoimage usbutils util-linux sed spice-client-gtk swtpm wget xdg-user-dirs zsync unzip
 ```
 
-Install for Ubuntu 
+Install for Ubuntu
 
 ```
 sudo apt-add-repository ppa:flexiondotorg/quickemu
@@ -49,7 +49,7 @@ nix-env -iA nixpkgs.quickemu
 
 Build from Source for GUI <https://github.com/quickemu-project/quickgui>
 
-## CLI Usage 
+## CLI Usage
 
 ```
 quickget ubuntu-mate 22.04
@@ -62,10 +62,9 @@ This is pretty easy to manage with it's own dedicated directory. Ex. `~/VMs`
 
 Select your OS and Press Download (Yes, it's that easy!)
 
-![](/images/2022/quickemu/quickgui.webp)
+![Quickgui](/images/2022/quickemu/quickgui.webp)
 
-![](/images/2022/quickemu/kubuntu-download.webp)
-
+![Kubuntu Download](/images/2022/quickemu/kubuntu-download.webp)
 
 ## Walkthrough Video
 

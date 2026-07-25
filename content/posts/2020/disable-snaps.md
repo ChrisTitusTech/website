@@ -9,7 +9,7 @@ categories:
 tags:
   - Ubuntu
 ---
-This goes over how to Disable Snaps and making sure it doesn't automatically reinstall. 
+This goes over how to Disable Snaps and making sure it doesn't automatically reinstall.
 <!--more-->
 
 ## List and Uninstall Snaps
@@ -33,4 +33,3 @@ apt list --install | grep snap
 ```
 
 Check your Output for any snap packages
-

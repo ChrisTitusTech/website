@@ -279,7 +279,6 @@ In the Pages project, check **Settings > Builds & deployments**. Git integration
 
 Once this is working, content editors only need Pages CMS. Every save remains a normal Git commit, Cloudflare handles the build and hosting, and Hugo keeps the deployed site static and fast. You still retain the ability to edit locally, review history, revert a bad change, and use preview branches for larger updates.
 
-
 ## Walkthrough Video
 
 {{< youtube "WVQ_2hN_zzs" >}}

@@ -15,13 +15,13 @@ This guide goes over setting up your Linux system for gaming. I will include mul
 
 ![gaming](/images/2020/gaming-guide/gaming.webp)
 
-This guide will broken into parts that you will need to verify on your system. Each part, should be checked to guarantee an optimal experience. 
+This guide will broken into parts that you will need to verify on your system. Each part, should be checked to guarantee an optimal experience.
 
 ***
 
 ## Video Drivers
 
-Just like any operating system, having the latest drivers helps with performance in most games. 
+Just like any operating system, having the latest drivers helps with performance in most games.
 
 ### Ubuntu Based Distributions  
 
@@ -108,7 +108,7 @@ sudo apt-get install linux-image-liquorix-amd64 linux-headers-liquorix-amd64 -y
 
 ### Zen (Arch-based Only)
 
-Built into Arch Linux and part of the official pacman repositories. This does a lot of the same tweaks as Liquorix but for Arch based distributions. 
+Built into Arch Linux and part of the official pacman repositories. This does a lot of the same tweaks as Liquorix but for Arch based distributions.
 
 ```
 pacman -S linux-zen -y
@@ -120,7 +120,7 @@ Source Project: <https://github.com/pimlie/ubuntu-mainline-kernel.sh>
 
 This will update a debian stable release to the latest official kernel.
 
-#### Installation 
+#### Installation
 
 ```
 apt install wget -y
@@ -261,7 +261,7 @@ There are multiple ways to Use GameMode
 
 ## Custom Proton
 
-The stock steam proton is rather old and behind the Wine team. Which means there are a lot of performance tweaks and improvements that you aren't getting yet. This is why I recommend everyone install Custom proton as I find the releases a considerable improvement when gaming in Steam. 
+The stock steam proton is rather old and behind the Wine team. Which means there are a lot of performance tweaks and improvements that you aren't getting yet. This is why I recommend everyone install Custom proton as I find the releases a considerable improvement when gaming in Steam.
 
 **Note: DO NOT USE STEAM IN A FLATPAK! You will lose some performance and modifications are more difficult!**
 

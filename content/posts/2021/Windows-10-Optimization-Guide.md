@@ -9,7 +9,7 @@ categories:
 tags:
   - Powershell
 ---
-This guide goes over using a Custom ISO, Removing Windows 10 Components, and Optimizing Windows 10 Settings. 
+This guide goes over using a Custom ISO, Removing Windows 10 Components, and Optimizing Windows 10 Settings.
 <!--more-->
 
 ## Custom ISO
@@ -32,16 +32,17 @@ I highly recommend a video by Craft Computing going over Windows Deployment Serv
 
 ## Installing Windows 10 and Removing Components
 
-The Full AME Experience. Most people will NOT want to do this as it will remove functionality from Windows 10, that you CAN NOT put back in. Some of the components can be taken out in the Custom ISO phase, but this takes it to another level. 
+The Full AME Experience. Most people will NOT want to do this as it will remove functionality from Windows 10, that you CAN NOT put back in. Some of the components can be taken out in the Custom ISO phase, but this takes it to another level.
 
 *Note: I do NOT recommend this for MOST machines*
 
 Components Removed
+
 - Windows Update
 - Windows Store
 - Media Player Functions
 - Telemetry
-- Windows Activation (YOU MUST Activate Windows Before this Tweak!) _If you fail to do this, you will have a watermark you can't get rid of_
+- Windows Activation (YOU MUST Activate Windows Before this Tweak!) *If you fail to do this, you will have a watermark you can't get rid of*
 - DirectX 12
 
 The AME project now lives at <https://amelabs.net/>. The old GitHub mirror has been retired.
@@ -60,7 +61,7 @@ The AME project now lives at <https://amelabs.net/>. The old GitHub mirror has b
 
 ### Driver Installation
 
-Recommend using the Offline Snappy Driver Installer <https://sdi-tool.org/>. This is about 50 GB, but has every driver you need. 
+Recommend using the Offline Snappy Driver Installer <https://sdi-tool.org/>. This is about 50 GB, but has every driver you need.
 
 ### AME Step-by-Step Documentation
 
@@ -80,11 +81,11 @@ Reboot
 Reboot and Run  
 `dism /online /Cleanup-Image /StartComponentCleanup`
 
-_Note: File Names change and will be different from above!_
+*Note: File Names change and will be different from above!*
 
 ## Optimizing Windows 10 Settings
 
-To finish things off we do some custom tweaks with the Official CTT Windows 10 Toolbox. This is something I have been customizing for years and refining every single month to work on any Windows 10 Installation. 
+To finish things off we do some custom tweaks with the Official CTT Windows 10 Toolbox. This is something I have been customizing for years and refining every single month to work on any Windows 10 Installation.
 
 ```
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
@@ -92,15 +93,15 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JJ8R4'))
 
 ### What this script can do
 
-- Installs Chocolatey, Notepad++, Irfanview, VLC, Java, and asks if you want Adobe Reader or Brave. 
-- Removes all Windows Store Apps EXCEPT office, xbox, and WSL. 
+- Installs Chocolatey, Notepad++, Irfanview, VLC, Java, and asks if you want Adobe Reader or Brave.
+- Removes all Windows Store Apps EXCEPT office, xbox, and WSL.
 - Removed Telemetry
 - Disables Cortana
 - Deletes various schedules tasks that rebloat the system
 - Removes Other Bloatware (Candy Crush, etc.)
 - Fixes problems that other scripts causes (lock screen and personalization options restricted)
 
-Based on User feedback, this no longer uninstalls OneDrive or Office. 
+Based on User feedback, this no longer uninstalls OneDrive or Office.
 
 ### Toolbox Walkthrough Video
 
@@ -124,7 +125,7 @@ Based on User feedback, this no longer uninstalls OneDrive or Office.
 14. Application Layer Gateway Service
 15. Smart Card
 16. Windows Image Acquisition
-17. Security Center 
+17. Security Center
 18. Connected User Experiences and Telemetry
 19. Retail Demo Service
 20. Windows Media Player Network Sharing Service

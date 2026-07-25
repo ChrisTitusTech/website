@@ -14,7 +14,7 @@ This is the biggest update to WinUtil since its inception. It is now a full-fled
 <!--more-->
 The #1 Most Stared PowerShell project on GitHub!
 
-![](/images/2024/winutil-install/top-powershell.webp)
+![Top Powershell](/images/2024/winutil-install/top-powershell.webp)
 
 ## Features
 
@@ -29,7 +29,7 @@ The #1 Most Stared PowerShell project on GitHub!
   - Disable Microsoft Copilot
   - Set Classic Right-Click Menu
 
-![](/images/2024/winutil-install/advanced-tweaks.webp)
+![Advanced Tweaks](/images/2024/winutil-install/advanced-tweaks.webp)
 
 **Note: DO NOT click everything in advanced tweaks... your system may become unstable.**
 

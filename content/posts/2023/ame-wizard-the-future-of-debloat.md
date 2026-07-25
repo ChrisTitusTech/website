@@ -15,13 +15,13 @@ I recently made a review of AtlasOS and what drove it is the AME Wizard made by 
 
 ## Can we trust it?
 
-Their is parts of it that are open-source and other parts are closed source and gated behind the <https://ameliorated.io/> team. This is done for monetary purposes and security. They do gate the playbook process and AME Wizard verification. They can also charge for auto-updates related to the playbooks. 
+Their is parts of it that are open-source and other parts are closed source and gated behind the <https://ameliorated.io/> team. This is done for monetary purposes and security. They do gate the playbook process and AME Wizard verification. They can also charge for auto-updates related to the playbooks.
 
 Personally, I don't mind this approach, but it does give me pause. When they are getting money for maintaining multiple custom windows playbooks from different teams, it will make it more secure as the incentive to remain virus-free and legitimate is more important because they make money from their reputation.
 
 Right now to immediately get verified you can go through their patreon and for $10/Month you get verified playbook publications.
 
-![](/images/2023/ame/verified.webp)
+![Verified](/images/2023/ame/verified.webp)
 
 ## My Recommendations
 

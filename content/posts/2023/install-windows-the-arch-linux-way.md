@@ -37,7 +37,7 @@ Launch Command Prompt with `Shift+F10`
 
 ### Verify the Windows Version to Install
 
-DISM is at the heart of every Windows installation. You need to do a verification on your installation ISO to figure out the source index # that you will install. 
+DISM is at the heart of every Windows installation. You need to do a verification on your installation ISO to figure out the source index # that you will install.
 
 ```
 DISM /Get-ImageInfo /imagefile:x:\sources\install.wim

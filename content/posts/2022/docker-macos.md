@@ -13,7 +13,7 @@ tags:
   - Ubuntu
 draft: false
 ---
-Don't have a Mac and need MacOS? No problem, run it in a docker container. 
+Don't have a Mac and need MacOS? No problem, run it in a docker container.
 <!--more-->
 
 Credit goes to this twitter user:
@@ -45,7 +45,7 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
 portainer/portainer-ce:2.9.3
 ```
 
-Open up browser and navigate to <https://localhost:9443> 
+Open up browser and navigate to <https://localhost:9443>
 
 _Click Advanced and proceed with any certificate errors_
 
@@ -68,7 +68,7 @@ docker run -it \
 
 Use Disk Utility to "erase" the 270GB virtual disk: _Note: This is just virtual and doesn't erase your drive_
 
-![](/images/2022/docker-macos/disk-util.webp)
+![Disk Util](/images/2022/docker-macos/disk-util.webp)
 
 ## Start MacOS Docker Container
 
@@ -80,7 +80,7 @@ docker ps -a
 
 _Look for the NAMES column and pick the container name._
 
-![](/images/2022/docker-macos/container.webp)
+![Container](/images/2022/docker-macos/container.webp)
 
 Start with the following command NAME = Name from column above
 
@@ -92,8 +92,7 @@ docker start NAME
 
 I love portainer because you can easily manage your containers. Start, Stop, and see resource usage... Portainer does it all! Here is what mine looks like:
 
-![](/images/2022/docker-macos/portainer.webp)
-
+![Portainer](/images/2022/docker-macos/portainer.webp)
 
 ## Optimize the Container
 
@@ -125,7 +124,7 @@ defaults write com.apple.loginwindow TALLogoutSavesState -bool false
 
 ## Final Result
 
-![](/images/2022/docker-macos/macos-final.webp)
+![Macos Final](/images/2022/docker-macos/macos-final.webp)
 
 ## Walkthrough Video
 

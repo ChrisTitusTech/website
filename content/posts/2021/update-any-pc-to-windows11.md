@@ -9,7 +9,7 @@ categories:
 tags:
   - Windows 11
 ---
-This is a guide going over updating any PC to Windows 11 that "doesn't meet requirements" or doesn't use Secure Boot or has a TPM 2.0 chip. 
+This is a guide going over updating any PC to Windows 11 that "doesn't meet requirements" or doesn't use Secure Boot or has a TPM 2.0 chip.
 <!--more-->
 
 ## Methods
@@ -26,7 +26,7 @@ Insider builds can be registerd for use @ <https://insider.windows.com/>
 
 ## System Modifications
 
-Windows 11 does checks for TPM and Secure boot before it allows the upgrade process to start. However, these can be bypassed. 
+Windows 11 does checks for TPM and Secure boot before it allows the upgrade process to start. However, these can be bypassed.
 
 *Note: It is important to understand Microsoft can at ANY TIME enforce these rules or ignore these modifications which means you would NO LONGER recieve updates*
 
@@ -53,4 +53,3 @@ Now you can simply finish your insider build sign up and then click update
 Once it finishes updating you should see a screen to update to the latest Windows 11 build (22000.52) or Greater
 
 ![winver](/images/2021/06-win11upgrade/winver.webp)
-

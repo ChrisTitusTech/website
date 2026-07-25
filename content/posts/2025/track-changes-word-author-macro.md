@@ -10,7 +10,7 @@ tags:
   - Word 
 draft: false
 ---
-This is a method for changing ALL the authors in Microsoft Word to a single author for comments and revisions. 
+This is a method for changing ALL the authors in Microsoft Word to a single author for comments and revisions.
 <!--more-->
 
 ## Who is this for?

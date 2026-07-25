@@ -15,4 +15,3 @@ I recently had some issues where a bridged virtual machine in osx would disconne
 `sudo ifconfig en0 up`
 
 Obviously if you are renewing another interface other than your Ethernet port, en0 would need to be changed to the corresponding short name of the interface.
-

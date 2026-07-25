@@ -18,16 +18,18 @@ _Note: This article is based on GFI's
 [SQL authentication guide](https://support.gfi.com/article/106972-how-to-configure-microsoft-sql-server-to-accept-sql-authentication-for-gfi-software-products),
 and all credit for the original procedure goes to GFI._
 
-### Fix Authentication in GFI ReportCenter
+## Fix Authentication in GFI ReportCenter
 
 In order to use SQL Server authentication, you must first configure your server using the steps below.
+
 1. Right-click on the server node and select &#8216;Properties&#8217;
 2. Select &#8216;Security&#8217; from the left menu under &#8216;Select a page&#8217;
 3. Under &#8216;Server Authentication&#8217;, select the &#8216;SQL Server and Windows Authentication mode option&#8217;
 4. Click &#8216;OK&#8217; to close the dialog
 5. Right click on the server node and choose &#8216;Restart&#8217; for the changes to take effect
 
-#### SQL Server authentication login
+### SQL Server authentication login
+
 1. In the server node expand &#8216;Security&#8217; and &#8216;Logins&#8217;
 2. Right click on the login name and select &#8216;Properties&#8217;
 3. Enter a password and confirm the password for the login

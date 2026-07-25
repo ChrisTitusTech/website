@@ -11,12 +11,12 @@ tags:
   - Hyperv 
 draft: false
 ---
-Using WSL is great for a lot of things, but often I find it limiting or quirky bugs that don't happen on HyperV. 
+Using WSL is great for a lot of things, but often I find it limiting or quirky bugs that don't happen on HyperV.
 <!--more-->
 
-## What is a Enhanced HyperV Session in Windows? 
+## What is a Enhanced HyperV Session in Windows?
 
-This allows full 3D acceleration, large resolutions, audio passthrough, and shared clipboard. There are many other things that this can do, but these are main benefits. I was using WSLg and constantly found little problems about moving around or compiling taking a long time and other issues. 
+This allows full 3D acceleration, large resolutions, audio passthrough, and shared clipboard. There are many other things that this can do, but these are main benefits. I was using WSLg and constantly found little problems about moving around or compiling taking a long time and other issues.
 
 The biggest problem with WSL is it isn't Linux. It feels like a bolted on system that I have a hard time programming in.
 
@@ -96,7 +96,7 @@ echo "allowed_users=anybody" > /etc/X11/Xwrapper.config
 
 #Ensure hv_sock gets loaded
 if [ ! -e /etc/modules-load.d/hv_sock.conf ]; then
-	echo "hv_sock" > /etc/modules-load.d/hv_sock.conf
+ echo "hv_sock" > /etc/modules-load.d/hv_sock.conf
 fi
 
 # Configure the policy xrdp session
@@ -136,9 +136,8 @@ echo "Example: nano ~/.xinitrc" and launch your desktop environment or window ma
 
 ## Audio Issues
 
-Depending on your audio setup you may run into issues. Currently, pulseaudio-module-xrdp is not working on the AUR for Arch. I have been unsuccessful in getting pipewire working with xrdp. 
+Depending on your audio setup you may run into issues. Currently, pulseaudio-module-xrdp is not working on the AUR for Arch. I have been unsuccessful in getting pipewire working with xrdp.
 
 Check <https://github.com/neutrinolabs/pulseaudio-module-xrdp> for more information.
 
 Alternatively, you should be able to use pipewire with xrdp at <https://github.com/neutrinolabs/pipewire-module-xrdp>. However, at the time of this writing it has not seen an update in 9 months. So this method will probably only work with fedora or debian based systems.
-

@@ -7,7 +7,7 @@ date: 2024-03-19T15:25:58+00:00
 
 We have a 30-day return policy, which means you have 30 days after receiving your item to request a return.
 
-To start a return, you can contact us at contact@christitus.com. 
+To start a return, you can contact us at contact@christitus.com.
 
 You can always contact us for any return questions at contact@christitus.com.
 

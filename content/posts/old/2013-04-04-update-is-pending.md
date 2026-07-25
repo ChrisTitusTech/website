@@ -26,12 +26,11 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\ControlSession Manager\PendingFileRe
 
 The Setup MSI displays an error message if one of the following conditions is true:
 
-  * The value of the **UpdateExeVolatile **registry key is anything other than 0.
-  * The **PendingFileRenameOperations **registry key has any value.
+* The value of the **UpdateExeVolatile**registry key is anything other than 0.
+* The **PendingFileRenameOperations**registry key has any value.
 
 ### Microsoft Knowledgebase article
 
 You can read this article about regedit.
 
 <http://technet.microsoft.com/en-us/library/cc164360(v=exchg.80).aspx>
-

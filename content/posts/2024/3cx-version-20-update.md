@@ -36,13 +36,13 @@ All-in-One Admin/Client URL. Version 20 also uses a condensed URL to make it eas
 
 ### Call Processing Scripts
 
-You can now create custom scripts that route calls based on time, caller id, and a lot more variables. I'll leave a link below if you want to explore this, but programming specific phone numbers, or numbers with a certain country code and area codes to groups of agents can be huge for businesses. 
+You can now create custom scripts that route calls based on time, caller id, and a lot more variables. I'll leave a link below if you want to explore this, but programming specific phone numbers, or numbers with a certain country code and area codes to groups of agents can be huge for businesses.
 
 Source: <https://www.3cx.com/docs/manual/call-processing-script/>
 
 ### New APIs
 
-The update also brings new API access for both the system configuration and client configuration. Each has a new set of calls they will take and you can extract user information to your app or even website. 
+The update also brings new API access for both the system configuration and client configuration. Each has a new set of calls they will take and you can extract user information to your app or even website.
 
 ## Before You Move
 

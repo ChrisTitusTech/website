@@ -70,6 +70,7 @@ Host gitea
   User git
   IdentityFile ~/.ssh/id_ed25519
 ```
+
 _Note: This assumes you changed ssh port to 222 in Gitea. Adjust as needed._
 
 Use the alias in git remotes:

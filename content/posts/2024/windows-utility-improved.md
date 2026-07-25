@@ -18,7 +18,7 @@ The Chris Titus Tech WinUtil is now the #2 Most Popular Powershell utility in th
 It has 5 main tabs:
 
 - Program Installation - Check all the programs you want and click install in one go.
-- Tweaks - Disable Telemetry and cut down on running background services. 
+- Tweaks - Disable Telemetry and cut down on running background services.
 - Config - Configure your system and launch legacy Win7 Control Panels.
 - Updates - Change Windows Update to only use Security Updates or Disable them altogether.
 - MicroWin - Create a minimal ISO to Install Windows.

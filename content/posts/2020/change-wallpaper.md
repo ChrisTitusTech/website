@@ -12,7 +12,7 @@ tags:
   - wallpaper
 ---
 This article shows you how to automatically change your wallpaper on Windows, macOS, and Linux.<!--more-->
-To get the greatest variety and the highest quality it is best to use reddit as the voting system and variety ensure both these goals are met. 
+To get the greatest variety and the highest quality it is best to use reddit as the voting system and variety ensure both these goals are met.
 
 ## Change Wallpaper in Windows
 
@@ -118,7 +118,7 @@ There is plenty of ways to have this automatically change the wallpaper on start
 
 ## Wallpaper-reddit Config File Settings
 
-The config file is in `~/.config/wallpaper-reddit`, and will be created automatically. Currently, the GNOME, XFCE, MATE, Unity, and Cinnamon Desktop Environments should be automatically detected and the program should set the wallpaper without any extra work. However, due to the varying nature of window managers, it is possible, even likely, that you may have to specify a custom command to set your wallpaper. The program will prompt you for this if this is the case; the exact command can be researched per desktop environment. If your desktop environment is not supported, leave the set command blank and it will auto download to the `~/Pictures/Wallpapers/` directory as wallpaper.webp for the daily wallpaper. 
+The config file is in `~/.config/wallpaper-reddit`, and will be created automatically. Currently, the GNOME, XFCE, MATE, Unity, and Cinnamon Desktop Environments should be automatically detected and the program should set the wallpaper without any extra work. However, due to the varying nature of window managers, it is possible, even likely, that you may have to specify a custom command to set your wallpaper. The program will prompt you for this if this is the case; the exact command can be researched per desktop environment. If your desktop environment is not supported, leave the set command blank and it will auto download to the `~/Pictures/Wallpapers/` directory as wallpaper.webp for the daily wallpaper.
 
 ### Config Options
 
@@ -143,4 +143,3 @@ The config file is in `~/.config/wallpaper-reddit`, and will be created automati
 - multiwall
 - wallpapers
 - wallpaper
-

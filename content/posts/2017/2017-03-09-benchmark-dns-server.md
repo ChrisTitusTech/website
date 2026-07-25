@@ -19,6 +19,6 @@ Go to https://www.grc.com/dns/benchmark.htm and download the benchmark tool. Fro
 Here are my results, Enjoy!
 
 ![DNS Results](/images/2017/03/dnsresults.webp)  
-  * Red = Cached Time, Green = Uncached Time, and Blue = dotcom Time
-  * Grey Dots = Filters bad domain names by default, Green Dots = No filtering
 
+* Red = Cached Time, Green = Uncached Time, and Blue = dotcom Time
+* Grey Dots = Filters bad domain names by default, Green Dots = No filtering

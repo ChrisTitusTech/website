@@ -28,7 +28,7 @@ Systemd has a LOT of functions and can do the following, but often we swap out t
 
 ## Switch to OpenRC
 
-The switch is very easy 
+The switch is very easy
 
 ```
 sudo apt install openrc sysvinit-core
@@ -75,14 +75,13 @@ This is a comparison of the different init systems and run commands.
 Source: <https://wiki.archlinux.org/title/OpenRC#Usage>
 
 | SystemD | SysVinit | OpenRC | Description |
-| :---    | :---     | :---   | :--- |
+| :--- | :--- | :--- | :--- |
 | systemctl list-units | rc.d list | rc-status | List running services status |
-| systemctl --failed |  | rc-status --crashed | Check failed services |
-| systemctl --all |  | rc-update -v show | Display all available services. |
+| systemctl --failed | | rc-status --crashed | Check failed services |
+| systemctl --all | | rc-update -v show | Display all available services. |
 | systemctl (start, stop, restart, status) daemon.service | rc.d (start, stop, restart) daemon | rc-service daemon (start, stop, restart, status) | Change service state. |
 | systemctl (enable, disable) daemon.service | chkconfig daemon (on, off) | rc-update (add, del) daemon | Turn service on or off. |
-| systemctl daemon-reload | chkconfig daemon --add |  | Create or modify configuration. |
-
+| systemctl daemon-reload | chkconfig daemon --add | | Create or modify configuration. |
 
 ## Creating an OpenRC Service/Daemon
 

@@ -10,7 +10,7 @@ tags:
   - DISM
 draft: false
 ---
-Using SFC and DISM is often done in haste and incorrectly. If you need to fix a corrupted install, then a special DISM command MUST BE issued. 
+Using SFC and DISM is often done in haste and incorrectly. If you need to fix a corrupted install, then a special DISM command MUST BE issued.
 <!--more-->
 
 {{< x user="christitustech" id="1587911136879542273" >}}
@@ -19,11 +19,12 @@ Using SFC and DISM is often done in haste and incorrectly. If you need to fix a 
 
 ### Basic Online Command
 
-![](/images/2022/fix-corrupt-windows-install/dism-normal.webp)
+![Dism Normal](/images/2022/fix-corrupt-windows-install/dism-normal.webp)
 
 ```
 DISM /Online /Cleanup-Image /CheckHealthDISM /Online /Cleanup-Image /CheckHealth
 ```
+
 _Note: This will check it's health and cleanup basic corruption errors._
 
 ### Command to Fix From Windows ISO
@@ -48,9 +49,9 @@ Check the log file at `%windir%\Logs\DISM\dism.log`
 
 ## SFC - The Worthless Tool
 
-System file checker is WORTHLESS! In the best scenario it might tell you about some corruption, but I have never seen it actually repair anything. 
+System file checker is WORTHLESS! In the best scenario it might tell you about some corruption, but I have never seen it actually repair anything.
 
-Yet every damn guide on the internet recommends you run it. Save your time, and use DISM instead. 
+Yet every damn guide on the internet recommends you run it. Save your time, and use DISM instead.
 
 ## Walkthrough Video
 

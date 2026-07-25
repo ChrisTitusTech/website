@@ -318,6 +318,7 @@ python plot.py --log-dir ~/benchmark-logs
 ```
 
 Now you have:
+
 - One bar chart showing average FPS for each test under both kernels
 - Run counts, variance, and error bars on the chart
 - MangoHud frame-time heatmaps if you also logged with MangoHud
@@ -327,12 +328,14 @@ This is publication-ready data: controlled variables, multiple runs, statistical
 ## What the Charts Tell You
 
 **Bar chart reading:**
+
 - Higher bars = better performance
 - Variance labeled in red: if it is high, the result is noisy
 - Small error bars = consistent performance across runs
 - Large error bars = inconsistent or thermal-throttled performance
 
 **Heatmap reading:**
+
 - Tall narrow heatmap = consistent frame pacing
 - Wide scattered heatmap = erratic frame delivery, even if average FPS is high
 - Compare rows: if one kernel produces more consistent colors, it has better frame consistency

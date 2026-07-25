@@ -13,7 +13,7 @@ tags:
 ---
 In this guide, I show you how to Resize LVM Partition in Fedora 29. I recently ran out of space and had to clone my install from a 120SSD ssd to a 240 GB SSD. <!--more-->I first had issues with boot timing out and causing the /dev/mapper/home, /dev/mapper/swap, and /dev/mapper/root not being found. To fix this, I simply rebooted to the rescue kernel and ran `dracut --regenerate-all -f` to resolve this in Single-User Mode.
 
-#### Disclaimer: All these commands are done in Single-User Mode, therefore this will NOT work on a regular desktop.
+## Disclaimer: All these commands are done in Single-User Mode, therefore this will NOT work on a regular desktop
 
 Upon reboot, I found that I now can see all the space on the drive, but needed to resize the LVM Partition.
 

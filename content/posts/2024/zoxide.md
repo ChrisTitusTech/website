@@ -33,9 +33,11 @@ draft: false
 ### Installation Steps
 
 1. **Install Zoxide:** Available for Linux, macOS, Windows, BSD, and Android.
-  - All operating systems have zoxide in default repositories and can be installed by using the `zoxide` package
-2. **Shell Integration:** Easily integrate zoxide into your preferred shell (Bash, Fish, Zsh, and more).
-3. **Optional fzf Integration:** For enhanced interactive selection, install `fzf` (v0.33.0+).
+
+- All operating systems have zoxide in default repositories and can be installed by using the `zoxide` package
+
+1. **Shell Integration:** Easily integrate zoxide into your preferred shell (Bash, Fish, Zsh, and more).
+2. **Optional fzf Integration:** For enhanced interactive selection, install `fzf` (v0.33.0+).
 
 ### Configuration
 

@@ -75,7 +75,7 @@ Cons
 
 ## Livestream First Install
 
-{{< youtube MOcekLz18QU >}} 
+{{< youtube MOcekLz18QU >}}
 
 ## Walkthrough Video
 

@@ -14,6 +14,7 @@ draft: false
 In the vast ecosystem of Windows, managing device drivers can be a complex task, especially when dealing with third-party drivers. Tools like **Driver Store Explorer** (also known as **RAPR**), [hosted on GitHub](https://github.com/lostindark/DriverStoreExplorer), offer a streamlined approach to handling drivers in the Windows driver store.<!--more-->
 
 ## What is Driver Store Explorer?
+
 **Driver Store Explorer [RAPR]** is a user-friendly application designed to simplify interactions with the Windows driver store. It supports a range of operations including:
 
 - Listing
@@ -24,6 +25,7 @@ In the vast ecosystem of Windows, managing device drivers can be a complex task,
 This tool is invaluable for both casual users looking to clean up their driver store and professionals managing multiple systems.
 
 ## Key Features
+
 - **Driver Enumeration:** Lists all third-party driver packages stored in the driver store, along with the devices associated with each driver. It also allows exporting this list as a CSV file for further analysis.
 - **Driver Management:** Facilitates adding new driver packages to the store and deleting old or unused ones, helping in maintaining an optimal system performance.
 - **Offline and Online Store Management:** Works with both online (local machine) and offline driver stores, providing flexibility in various scenarios.
@@ -31,9 +33,11 @@ This tool is invaluable for both casual users looking to clean up their driver s
 - **User Interface:** Features a full-fledged GUI that supports grouping, sorting, and selecting specific columns for a customized view.
 
 ### Getting Started
+
 To start using Driver Store Explorer, download the latest version from the [releases page on GitHub](https://github.com/lostindark/DriverStoreExplorer/releases). Once downloaded, the application does not require installation and can be run directly, making it a portable tool for various uses.
 
 ## Practical Applications
+
 Driver Store Explorer is particularly useful in scenarios such as:
 
 - **System Cleanup:** Removing old and unused drivers to free up disk space.
@@ -49,10 +53,10 @@ I personally do NOT recommend any tools if you have internet access and download
 - **DriverPack Solution** ([visit website](https://driverpack.io/en/foradmin)) This is a popular tool that was made in Russia. **I do not trust it**, but in a pinch it can also do network driver installs. Only use the DriverPack Offline Network Driver Installer.
 
 ## Conclusion
+
 Driver Store Explorer is a powerful and user-friendly tool that simplifies the management of Windows drivers. Its ability to handle both online and offline driver stores, coupled with a comprehensive set of features, makes it an essential utility for anyone looking to manage drivers on Windows systems efficiently.
 
 Whether you're a professional IT administrator or a casual user wanting to keep your system lean, Driver Store Explorer offers the functionality needed to manage your drivers effectively.
-
 
 ## Walkthrough Video
 

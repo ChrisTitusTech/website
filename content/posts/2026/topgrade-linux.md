@@ -131,7 +131,7 @@ You may be prompted for `sudo` depending on what update steps need elevated priv
 ### Useful Flags
 
 | Flag | Description |
-|------|-------------|
+| ------ | ------------- |
 | `--dry-run` | Preview what would run without making changes |
 | `-y` / `--yes` | Skip all confirmation prompts |
 | `--only <step>` | Run only specific steps (e.g. `--only system flatpak`) |

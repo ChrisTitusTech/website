@@ -19,7 +19,7 @@ NIX is an amazing package manager and far better than the flatpak and other solu
 
 ### Install NIX on Steamdeck
 
-You may need to make the system writeable with `steamos-readonly disable`, but **DO NOT MODIFY EXISTING FILES!**. When steam updates, you could lose your customizations! We will only be making new files. 
+You may need to make the system writeable with `steamos-readonly disable`, but **DO NOT MODIFY EXISTING FILES!**. When steam updates, you could lose your customizations! We will only be making new files.
 
 Credit for this idea comes from <https://determinate.systems/posts/nix-on-the-steam-deck#enabling-an-install>
 
@@ -95,6 +95,7 @@ Enable and start it all with:
 ```
 sudo systemctl enable --now ensure-symlinked-units-resolve.service
 ```
+
 Install NIX
 
 ```
@@ -107,7 +108,7 @@ Search for packages @ <https://search.nixos.org/packages> Or you can use this fr
 
 _Note: Look under nix-env and "On Non NixOS"_
 
-Install packages with `nix-env -iA nixpkgs.packagename` 
+Install packages with `nix-env -iA nixpkgs.packagename`
 
 ## Improving Performance
 

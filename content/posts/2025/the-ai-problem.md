@@ -16,11 +16,11 @@ Do we really need Google Gemini, Apple Intelligence, or Microsoft CoPilot?
 
 ## A Solution without a Problem
 
-Big Tech (Google, Microsoft, and Apple) are pushing these AI assistants down our throat. They don't really solve anything that we have a problem with. It should also be noted that they understand how bad the optics of these AI assistants are, so they are very adamant at pointing out that the data gathered does NOT get uploaded to their servers. However, they are very vague on what they actually do with our data... other than it is always watching and keeping track of EVERYTHING we do on our devices. They have also never explicitly said that it doesn't create profiles of our usage, nor have they said they can NOT remotely access it. 
+Big Tech (Google, Microsoft, and Apple) are pushing these AI assistants down our throat. They don't really solve anything that we have a problem with. It should also be noted that they understand how bad the optics of these AI assistants are, so they are very adamant at pointing out that the data gathered does NOT get uploaded to their servers. However, they are very vague on what they actually do with our data... other than it is always watching and keeping track of EVERYTHING we do on our devices. They have also never explicitly said that it doesn't create profiles of our usage, nor have they said they can NOT remotely access it.
 
 The other issue is it ingesting all your data to "improve" AI. This has a variety of benefits for these large companies as they can use these profiles for advertising packages to sell to other companies. Companies like Roomba have even leaked the screenshots its vacuum took of a woman on the toilet back in 2020. *Source:* <https://www.technologyreview.com/2022/12/19/1065306/roomba-irobot-robot-vacuums-artificial-intelligence-training-data-privacy/> Do we really want to trust Microsoft, Apple, or Google with all our sensitive information? If the AI vacuum company did this... Think about everything you have ever done on your Phone or PC being looked at by "AI".
 
-They also use this data to improve "AI" and that data is ours. They are taking it without asking nor are they upfront about how its able to learn by ONLY using OUR DATA! 
+They also use this data to improve "AI" and that data is ours. They are taking it without asking nor are they upfront about how its able to learn by ONLY using OUR DATA!
 
 ## AI can be good
 

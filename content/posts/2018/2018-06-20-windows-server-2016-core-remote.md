@@ -18,9 +18,8 @@ This walkthrough shows you how to remotely access Window Server 2016 Core in Pow
 On Host &#8211; Windows Server 2016 Core  
 `Enable-PSRemoting -Force`
   
-Your Workstation    
-`Enter-PSSession -ComputerName 10.0.0.2`    
+Your Workstation
+`Enter-PSSession -ComputerName 10.0.0.2`
 _Note: you can use netbios name here as well_
 
 For any troubleshooting we will need to do make sure the initial setup is done by typing, `sconfig` once this has been completed you will have set the static IP, opened remote access, activated windows, and ran windows update.
-

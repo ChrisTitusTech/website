@@ -11,18 +11,18 @@ tags:
   - VMWare
   - VMDK
 ---
-This goes over reducing the size of a VMDK file using open-vm-tools and is used often in VMWare environments. 
+This goes over reducing the size of a VMDK file using open-vm-tools and is used often in VMWare environments.
 <!--more-->
 
 ## Tools Needed
 
-I'd recommend VMWare Workstation Pro, but you can get away with just using player if you don't have a license. 
+I'd recommend VMWare Workstation Pro, but you can get away with just using player if you don't have a license.
 
 Inside the Guest (Virtual Machine) you need to install `open-vm-tools` on Linux which should be in the base repository for most main distributions.
 
 ## Shrinking VMDK
 
-### On Guest 
+### On Guest
 
 These are done on the GUEST (Inside Virtual Machine)
 
@@ -34,7 +34,7 @@ If you are want to shrink a Windows Guest you need to install VMWare-Tools insid
 
 ### On Host
 
-From inside your VMWare Workstation install you will find the following program `vmware-vdiskmanager` this is where we finalize the vmdk by defragmenting it and doing the final shrink. 
+From inside your VMWare Workstation install you will find the following program `vmware-vdiskmanager` this is where we finalize the vmdk by defragmenting it and doing the final shrink.
 
 #### Defrag
 
@@ -54,9 +54,8 @@ vmware-vdiskmanager.exe -k /path/to/shrink.vmdk
 
 ## Still Too Big?
 
-If it is still too large, you can simply export the VM to OVF format inside VMWare Workstation. This will create a new vmdk file that will be considerably smaller. OVF is pretty easy to move to VirtualBox and other VM platforms as well. 
+If it is still too large, you can simply export the VM to OVF format inside VMWare Workstation. This will create a new vmdk file that will be considerably smaller. OVF is pretty easy to move to VirtualBox and other VM platforms as well.
 
 `export to ovf`
 
 ![ovf](/images/2022/vmware-ovf.webp)
-
