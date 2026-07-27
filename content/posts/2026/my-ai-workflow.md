@@ -26,7 +26,7 @@ The complete loop looks like this:
 
 ```text
 Install titus-ai once
-  -> global Codex instructions and reusable skills
+  -> global Codex instructions, reusable skills, and development plugins
   -> Idea
   -> AGENTS.md
   -> SPEC.md
@@ -56,19 +56,21 @@ On Linux or macOS, I clone the repository, preview the installation, and then ap
 mkdir -p "$HOME/github"
 git clone https://github.com/ChrisTitusTech/titus-ai.git "$HOME/github/titus-ai"
 cd "$HOME/github/titus-ai"
-./scripts/install.sh --dry-run
-./scripts/install.sh
+./scripts/install.sh --dry-run --plugins
+./scripts/install.sh --plugins
 ./scripts/validate.sh
 ```
 
 On Windows, I run the PowerShell installer from the cloned repository:
 
 ```powershell
-.\scripts\install.ps1 -DryRun
-.\scripts\install.ps1
+.\scripts\install.ps1 -DryRun -Plugins
+.\scripts\install.ps1 -Plugins
 ```
 
-I run the dry-run first because the installer manages files in my existing Codex setup. When applied, it links the repository's managed global `AGENTS.md`, Codex configuration, rules, local-model profiles, and skills into `~/.codex/` and `~/.agents/`. Existing managed files are backed up under `~/.codex/backups/`, while credentials, sessions, history, caches, and plugins are left alone.
+I run the dry-run first because the installer manages files in my existing Codex setup. When applied, it links the repository's managed global `AGENTS.md`, Codex configuration, rules, local-model profiles, and skills into `~/.codex/` and `~/.agents/`. Existing managed files are backed up under `~/.codex/backups/`, while credentials, sessions, history, and caches are left alone.
+
+The `--plugins` or `-Plugins` option also installs the Codex plugins selected in `codex-plugins.txt`. Superpowers is the initial default and adds structured planning, test-driven development, debugging, and delivery workflows. For GitHub-heavy development, I can extend that selection with the GitHub plugin for pull requests, issues, reviews, and repository operations, plus tools such as Codex Security and Sentry for security analysis and production debugging. Context7 and browser-testing tools such as Playwright or Chrome DevTools are complementary MCP servers that require separate setup. Together, these integrations give the agent more specialized workflows and context so the AI produces development-driven results instead of stopping at code generation.
 
 This is user-wide rather than a root-level installation, so it does not need `sudo`. After installation, I restart Codex and ask it to list the instruction sources and relevant skills active for the repository.
 
@@ -84,8 +86,8 @@ To update the shared setup later, I pull the repository and rerun the installer:
 
 ```bash
 git -C "$HOME/github/titus-ai" pull --ff-only
-"$HOME/github/titus-ai/scripts/install.sh" --dry-run
-"$HOME/github/titus-ai/scripts/install.sh"
+"$HOME/github/titus-ai/scripts/install.sh" --dry-run --plugins
+"$HOME/github/titus-ai/scripts/install.sh" --plugins
 ```
 
 This gives every new project a consistent foundation before an AI agent sees the first implementation prompt.
