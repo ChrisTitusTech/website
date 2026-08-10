@@ -242,6 +242,7 @@ Additional validation:
 - Validate JSON after editing `data/livestreams.json`.
 - Exercise affected Python scripts with safe environment variables or mocks when script behavior changes.
 - Inspect representative pages after high-impact template changes: home, post, category/tag list, search, live-stream archive, live-stream player, downloads, and legal pages.
+- Validate using markdownlint, HTML validators, and accessibility checkers as needed.
 
 ## Current Verified Build
 
