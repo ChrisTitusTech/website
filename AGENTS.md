@@ -143,9 +143,11 @@
   manual run reconciles the branch, PR, and check state idempotently: it reruns
   incomplete data jobs from the last confirmed SHA or completes missing PR/CI
   actions for an already confirmed final SHA. A canceled/rejected run caused by
-  the 100-run queue limit must be observable; the next accepted or manual run
-  performs a full current-state source reconciliation so missed schedules do not
-  leave data stale. The CI workflow accepts a
+  the 100-run queue limit is detected by a separate scheduled/workflow-run
+  watchdog with `actions: read` and `issues: write`; it opens or updates a durable
+  tracking issue. The next accepted or manual data run performs a full
+  current-state source reconciliation, then the watchdog closes the alert after
+  verified success. The CI workflow accepts a
   bot branch plus `expected_sha`, invokes its definition from `master`, checks
   out that SHA, and fails if the branch no longer matches. Do not
   assume bot-authored push or pull-request events will start required checks.
@@ -218,5 +220,5 @@
   on the bot branch's exact final SHA, and disable/drain the workflow again before
   the bot PR's final head/check audit. Record both PR head and `master` base SHAs;
   if either moves, update the branch and rerun CI. Enable no-bypass rules that
-  require the branch to be up to date (or a merge queue), merge with an exact-head
-  guard, then re-enable the workflow.
+  require the branch to be up to date, merge with an exact-head guard, then
+  re-enable the workflow. Merge queue is not part of this cutover contract.

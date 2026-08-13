@@ -104,9 +104,11 @@ site.
   before both data jobs succeed. After an interruption, the next queued or manual
   run idempotently reconciles branch, PR, and check state, rerunning incomplete
   jobs from the last confirmed SHA or completing missing PR/CI actions for an
-  already confirmed final SHA. Queue-limit cancellation/rejection is observable;
-  the next accepted or manual run performs a full current-state source
-  reconciliation so missed schedules cannot leave data stale.
+  already confirmed final SHA. A separate scheduled/workflow-run watchdog uses
+  `actions: read` and `issues: write` to detect queue-limit cancellation or
+  rejection through the Actions API and open/update a durable tracking issue.
+  The next accepted or manual run performs a full current-state reconciliation;
+  the watchdog closes the alert only after verified success.
 - `data/livestreams.json` retains `updated` and `items`. Items require
   `videoId`, `title`, `description`, `thumbnail`, `date`, and `publishedAt`;
   `twitchVodId` and `hasChatReplay` remain optional. The Python automation
@@ -211,8 +213,9 @@ site.
   administrators. Bot automation dispatches CI for its final branch head SHA
   with `GITHUB_TOKEN`; it does not depend on token-suppressed push or pull
   request events.
-- Repository rules require the PR branch to be current with `master`, or route
-  merges through a merge queue, so checks cannot be reused against a newer base.
+- Repository rules require the PR branch to be current with `master` so checks
+  cannot be reused against a newer base. Merge queue is excluded from the
+  cutover contract.
 - CodeQL, dependency review, Dependabot, and npm audit cover the new JavaScript
   supply chain. High and critical findings must be resolved or explicitly
   waived before merge.
@@ -304,7 +307,7 @@ site.
   refreshes the final head and reruns CI if needed, enables the captured
   no-bypass rules only with all checks green on recorded head/base SHAs. If
   either SHA moves, it updates the branch and reruns CI. It then merges through
-  the strict-up-to-date or merge-queue rule with an exact-head guard and
-  re-enables the workflow. Later bot PRs use the same freeze and head/base gate.
+  the strict-up-to-date rule with an exact-head guard and re-enables the
+  workflow. Later bot PRs use the same freeze and head/base gate.
 - CI, security checks, local review, independent review, and all actionable
   review threads are clean before merge.
