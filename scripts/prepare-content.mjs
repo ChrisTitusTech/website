@@ -110,8 +110,10 @@ function replaceOutsideInlineCode(line, data, file) {
       index = end;
       continue;
     }
-    if (codeFence === null && line.startsWith("{{<", index)) {
-      const end = line.indexOf(">}}", index + 3);
+    const opener = line.slice(index, index + 3);
+    if (codeFence === null && (opener === "{{<" || opener === "{{%")) {
+      const closer = opener === "{{<" ? ">}}" : "%}}";
+      const end = line.indexOf(closer, index + 3);
       if (end === -1) throw new Error(`${file}: unterminated Hugo shortcode`);
       result += line.slice(cursor, index);
       const token = line.slice(index + 3, end).trim();
@@ -152,13 +154,18 @@ export function transformBody(body, data, file) {
       output.push(line);
       continue;
     }
-    const notice = line.match(/^\s*\{\{<\s*notice\s+(tip|note)\s*>}}\s*$/);
+    const notice = line.match(
+      /^\s*(?:\{\{<\s*notice\s+(tip|note)\s*>}}|\{\{%\s*notice\s+(tip|note)\s*%}})\s*$/,
+    );
     if (notice) {
+      const noticeType = notice[1] ?? notice[2];
       const noticeBody = [];
       index += 1;
       while (
         index < lines.length &&
-        !/^\s*\{\{<\s*\/notice\s*>}}\s*$/.test(lines[index])
+        !/^\s*(?:\{\{<\s*\/notice\s*>}}|\{\{%\s*\/notice\s*%}})\s*$/.test(
+          lines[index],
+        )
       ) {
         noticeBody.push(lines[index]);
         index += 1;
@@ -166,11 +173,11 @@ export function transformBody(body, data, file) {
       if (index === lines.length)
         throw new Error(`${file}: unclosed notice shortcode`);
       output.push(
-        `<aside class="notice notice-${notice[1]}" role="note"><p class="notice-title">${notice[1] === "tip" ? "Tip" : "Note"}</p>${markdown.render(noticeBody.join("\n"))}</aside>`,
+        `<aside class="notice notice-${noticeType}" role="note"><p class="notice-title">${noticeType === "tip" ? "Tip" : "Note"}</p>${markdown.render(noticeBody.join("\n"))}</aside>`,
       );
       continue;
     }
-    if (/\{\{<\s*\/notice\s*>}}/.test(line)) {
+    if (/\{\{(?:<\s*\/notice\s*>|%\s*\/notice\s*%)}}/.test(line)) {
       throw new Error(`${file}: unmatched notice shortcode`);
     }
     output.push(replaceOutsideInlineCode(line, data, file));
@@ -189,12 +196,32 @@ export function validateDate(value, file) {
     }
     return;
   }
-  if (
-    /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:\d{2})$/.test(
-      value,
+  const timestamp = value.match(
+    /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2})(?:\.\d+)?)?(?:Z|[+-](\d{2}):(\d{2}))$/,
+  );
+  if (timestamp) {
+    const [
+      ,
+      year,
+      month,
+      day,
+      hour,
+      minute,
+      second = "00",
+      offsetHour = "00",
+      offsetMinute = "00",
+    ] = timestamp;
+    const calendar = new Date(`${year}-${month}-${day}T00:00:00Z`);
+    if (
+      Number.isNaN(calendar.getTime()) ||
+      calendar.toISOString().slice(0, 10) !== `${year}-${month}-${day}` ||
+      Number(hour) > 23 ||
+      Number(minute) > 59 ||
+      Number(second) > 59 ||
+      Number(offsetHour) > 23 ||
+      Number(offsetMinute) > 59 ||
+      Number.isNaN(Date.parse(value))
     )
-  ) {
-    if (Number.isNaN(Date.parse(value)))
       throw new Error(`${file}: invalid date ${value}`);
     return;
   }
@@ -207,7 +234,10 @@ export function validatePost(data, file) {
   if (typeof data.date !== "string")
     throw new Error(`${file}: date must remain a string`);
   validateDate(data.date, file);
-  if (typeof data.url !== "string" || !/^\/.*\/$/.test(data.url))
+  if (
+    typeof data.url !== "string" ||
+    !/^\/[A-Za-z0-9][A-Za-z0-9_-]*\/$/.test(data.url)
+  )
     throw new Error(`${file}: explicit trailing-slash URL is required`);
   if (data.draft !== undefined && typeof data.draft !== "boolean")
     throw new Error(`${file}: draft must be a boolean`);

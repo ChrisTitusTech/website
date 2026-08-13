@@ -11,6 +11,9 @@ interface Props {
   publishedTime?: string;
   robots?: string;
   preloadImage?: string;
+  previous?: string;
+  next?: string;
+  feed?: string;
 }
 
 const {
@@ -22,6 +25,9 @@ const {
   publishedTime,
   robots,
   preloadImage,
+  previous,
+  next,
+  feed,
 } = Astro.props;
 const pageTitle = title === site.title ? title : `${title} | ${site.name}`;
 const canonicalUrl = new URL(canonical, site.url).toString();
@@ -73,8 +79,10 @@ const structuredData = JSON.stringify({
     <meta name="description" content={description} />
     {robots && <meta name="robots" content={robots} />}
     <link rel="canonical" href={canonicalUrl} />
+    {previous && <link rel="prev" href={new URL(previous, site.url).toString()} />}
+    {next && <link rel="next" href={new URL(next, site.url).toString()} />}
     <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
-    <link rel="alternate" type="application/rss+xml" title={site.name} href="/index.xml" />
+    {feed && <link rel="alternate" type="application/rss+xml" title={site.title} href={new URL(feed, site.url).toString()} />}
     {preloadImage && <link rel="preload" href={preloadImage} as="image" fetchpriority="high" />}
     <link rel="preload" href="/fonts/pt-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/pt-sans-700.woff2" as="font" type="font/woff2" crossorigin />

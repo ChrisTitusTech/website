@@ -15,7 +15,7 @@ const topics = [...taxonomy(posts, "categories").entries()]
   .slice(0, 8);
 const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId)).slice(0, 3);
 ---
-<BaseLayout preloadImage={featuredImage}>
+<BaseLayout preloadImage={featuredImage} feed="/index.xml">
   <section class="hero container"><p class="eyebrow">Independent tech guides</p><h1>Make your technology work for you.</h1><p class="lede">Practical Linux, Windows, networking, software development, and open-source guidance from Chris Titus Tech.</p></section>
   <section class="container"><h2>Featured</h2><div class="grid post-grid">{featured.map((post, index) => <PostCard post={post} heading={index === 0 ? "h2" : "h3"} priority={index === 0} />)}</div></section>
   <section class="container hero"><h2>Explore topics</h2><div class="chips">{topics.map((topic) => <a class="chip" href={`/categories/${topic.slug}/`}>{topic.name} ({topic.count})</a>)}</div></section>

@@ -12,11 +12,11 @@ with `npm ci`. A single serial `npm run validate` invocation then passed:
   the one time-limited, development-only Lighthouse CI waiver recorded in
   `docs/security/npm-audit-waivers.json`; there are no critical findings.
 - Astro diagnostics with zero errors, warnings, or hints.
-- 47 unit and workflow-contract tests.
+- 51 unit and workflow-contract tests.
 - A deterministic 1,285-page production build with digest
-  `ab9a0d9d1cacfd64e86a69f057e7a5c1eb70f7db88dbe25e5895e8ad8a004b51`.
+  `5245fc43649b82f3fec7435ac7d40e4e36a5e392decc5e571237149a79533390`.
 - The 1,183-route Hugo compatibility contract and 312 search entries.
-- 51 applicable Chromium, Firefox, and mobile browser tests. Three
+- 54 applicable Chromium, Firefox, and mobile browser tests. Three
   engine-specific tests were skipped by design.
 - Twelve Lighthouse runs over home, article, taxonomy, and livestream routes.
   Accessibility and SEO scored 100 on every run; performance remained above
@@ -24,7 +24,7 @@ with `npm ci`. A single serial `npm run validate` invocation then passed:
   preview intentionally exercises third-party fallbacks.
 
 WebKit was also run in the supported
-`mcr.microsoft.com/playwright:v1.62.1-noble` container: 17 tests passed and one
+`mcr.microsoft.com/playwright:v1.62.1-noble` container: 18 tests passed and one
 engine-specific test was skipped.
 
 ## Workflow validation

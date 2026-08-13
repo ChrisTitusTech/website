@@ -55,6 +55,16 @@ export function publicationTimeData(
   return zonedMidnight(data.date, timeZone);
 }
 
+export function displayDateData(data: { date: string }): string {
+  const date = new Date(`${data.date.slice(0, 10)}T12:00:00Z`);
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "UTC",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(date);
+}
+
 export function zonedMidnight(date: string, timeZone = site.timeZone): number {
   const [year, month, day] = date.split("-").map(Number);
   const desired = Date.UTC(year, month - 1, day);

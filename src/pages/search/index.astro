@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Search" description="Search Chris Titus Tech articles" canonical="/search/">
+<BaseLayout title="Search" description="Search Chris Titus Tech articles" canonical="/search/" robots="noindex, follow">
   <section class="reading"><h1>Search</h1><form role="search" data-search-form><label for="search-query">Search articles</label><div class="search-row"><input id="search-query" name="s" type="search" autocomplete="off" /><button type="submit">Search</button></div></form><p class="muted" aria-live="polite" data-search-status>Enter a search term.</p><div class="grid" data-search-results></div></section>
   <script>
     const form = document.querySelector<HTMLFormElement>("[data-search-form]");
@@ -30,6 +30,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     const initial = new URLSearchParams(location.search).get("s") ?? "";
     if (input) input.value = initial;
     if (initial) void search(initial);
-    form?.addEventListener("submit", (event) => { event.preventDefault(); const query = input?.value.trim() ?? ""; history.replaceState({}, "", query ? `/search/?s=${encodeURIComponent(query)}` : "/search/"); if (query) void search(query); else if (status) status.textContent = "Enter a search term."; });
+    form?.addEventListener("submit", (event) => { event.preventDefault(); const query = input?.value.trim() ?? ""; history.replaceState({}, "", query ? `/search/?s=${encodeURIComponent(query)}` : "/search/"); if (query) void search(query); else { results?.replaceChildren(); if (status) status.textContent = "Enter a search term."; } });
   </script>
 </BaseLayout>

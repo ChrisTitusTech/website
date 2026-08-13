@@ -17,7 +17,9 @@ export async function getStaticPaths() {
   });
 }
 const page = Astro.props.page as number;
+const previous = page === 2 ? "/live-streams/" : `/live-streams/page/${page - 1}/`;
+const next = page < pages ? `/live-streams/page/${page + 1}/` : undefined;
 ---
-<BaseLayout title={`Live Streams - Page ${page}`} description="Chris Titus Tech live stream recordings" canonical={`/live-streams/page/${page}/`}>
+<BaseLayout title={`Live Streams - Page ${page}`} description="Chris Titus Tech live stream recordings" canonical={`/live-streams/page/${page}/`} previous={previous} next={next} feed="/live-streams/index.xml">
   <LivestreamArchive items={archive.slice((page - 1) * pageSize, page * pageSize)} page={page} pages={pages} />
 </BaseLayout>

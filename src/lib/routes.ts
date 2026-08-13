@@ -23,6 +23,8 @@ export type PageDescriptor =
       root: string;
       title: string;
       terms: Array<{ name: string; slug: string; count: number }>;
+      page: number;
+      pages: number;
     }
   | { kind: "redirect"; route: string; target: string };
 
@@ -98,6 +100,8 @@ function addTermPages(
       route: key,
       root,
       title,
+      page,
+      pages,
       terms: terms.slice(
         (page - 1) * site.postsPerPage,
         page * site.postsPerPage,
@@ -136,6 +140,7 @@ export function buildPageDescriptors(
   const output: PageDescriptor[] = [];
   const seen = new Set<string>(["/"]);
   const reserved = new Set([
+    "/archive/",
     "/search/",
     "/live-streams/",
     "/live-streams/player/",

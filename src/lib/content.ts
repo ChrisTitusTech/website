@@ -4,12 +4,14 @@ import buildState from "../../.astro-content/build.json";
 import site from "../data/site.json";
 import {
   isEligibleData,
+  displayDateData,
   publicationTimeData,
   selectHomepageItems,
   slugify,
   taxonomySlug,
   validateFeaturedOrders,
 } from "./content-logic";
+import { renderFeedContent } from "./feed-content";
 
 export type Post = CollectionEntry<"posts">;
 export type Page = CollectionEntry<"pages">;
@@ -56,16 +58,11 @@ export async function getPages(): Promise<Page[]> {
 }
 
 export function displayDate(post: Post): string {
-  const value = post.data.date;
-  const date = /^\d{4}-\d{2}-\d{2}$/.test(value)
-    ? new Date(`${value}T12:00:00Z`)
-    : new Date(value);
-  return new Intl.DateTimeFormat("en-US", {
-    timeZone: site.timeZone,
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  }).format(date);
+  return displayDateData(post.data);
+}
+
+export function feedContent(post: Post): string {
+  return renderFeedContent(post.body ?? "");
 }
 
 export function summary(post: Post, length = 220): string {

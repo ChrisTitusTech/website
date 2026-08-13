@@ -1,7 +1,7 @@
 import rss from "@astrojs/rss";
 import type { APIRoute } from "astro";
 
-import { getPublishedPosts, summary } from "../lib/content";
+import { feedContent, getPublishedPosts } from "../lib/content";
 
 export const GET: APIRoute = async (context) => {
   const posts = await getPublishedPosts();
@@ -10,15 +10,19 @@ export const GET: APIRoute = async (context) => {
     description: "Having Fun with Technology",
     site: context.site!,
     customData: "<language>en-US</language>",
-    items: posts.map((post) => ({
-      title: post.data.title,
-      description: summary(post),
-      link: post.data.url,
-      pubDate: new Date(
-        post.data.date.length === 10
-          ? `${post.data.date}T12:00:00Z`
-          : post.data.date,
-      ),
-    })),
+    items: posts.map((post) => {
+      const content = feedContent(post);
+      return {
+        title: post.data.title,
+        description: content,
+        content,
+        link: post.data.url,
+        pubDate: new Date(
+          post.data.date.length === 10
+            ? `${post.data.date}T12:00:00Z`
+            : post.data.date,
+        ),
+      };
+    }),
   });
 };

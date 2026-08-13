@@ -30,7 +30,11 @@ class MetadataParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.in_title = False
+        self.in_json_ld = False
         self.title_parts: list[str] = []
+        self.json_ld_parts: list[str] = []
+        self.json_ld_documents: list[object] = []
+        self.feed_discovery: list[dict[str, str]] = []
         self.metadata: dict[str, str] = {}
 
     def handle_starttag(
@@ -39,23 +43,77 @@ class MetadataParser(HTMLParser):
         values = {key.lower(): value or "" for key, value in attrs}
         if tag.lower() == "title":
             self.in_title = True
-        elif tag.lower() == "link" and values.get("rel") == "canonical":
-            self.metadata["canonical"] = values.get("href", "")
+        elif tag.lower() == "link":
+            rel = values.get("rel", "").split()
+            if "canonical" in rel:
+                self.metadata["canonical"] = values.get("href", "")
+            if "alternate" in rel and values.get("type") == "application/rss+xml":
+                self.feed_discovery.append(
+                    {
+                        "href": values.get("href", ""),
+                        "title": values.get("title", ""),
+                        "type": values.get("type", ""),
+                    }
+                )
         elif tag.lower() == "meta":
             key = values.get("name") or values.get("property")
-            if key in {"description", "og:title", "og:type", "og:url"}:
+            if key in {
+                "description",
+                "og:description",
+                "og:image",
+                "og:title",
+                "og:type",
+                "og:url",
+                "twitter:card",
+                "twitter:description",
+                "twitter:image",
+                "twitter:title",
+            }:
                 self.metadata[key] = values.get("content", "")
+        elif tag.lower() == "script" and values.get("type") == "application/ld+json":
+            self.in_json_ld = True
+            self.json_ld_parts = []
 
     def handle_endtag(self, tag: str) -> None:
         if tag.lower() == "title":
             self.in_title = False
+        elif tag.lower() == "script" and self.in_json_ld:
+            raw = "".join(self.json_ld_parts).strip()
+            if raw:
+                self.json_ld_documents.append(json.loads(raw))
+            self.in_json_ld = False
 
     def handle_data(self, data: str) -> None:
         if self.in_title:
             self.title_parts.append(data)
+        if self.in_json_ld:
+            self.json_ld_parts.append(data)
 
-    def result(self) -> dict[str, str]:
-        return {"title": "".join(self.title_parts).strip(), **self.metadata}
+    def result(self) -> dict[str, object]:
+        structured_types: set[str] = set()
+
+        def collect_types(value: object) -> None:
+            if isinstance(value, dict):
+                item_type = value.get("@type")
+                if isinstance(item_type, str):
+                    structured_types.add(item_type)
+                elif isinstance(item_type, list):
+                    structured_types.update(
+                        item for item in item_type if isinstance(item, str)
+                    )
+                for child in value.values():
+                    collect_types(child)
+            elif isinstance(value, list):
+                for child in value:
+                    collect_types(child)
+
+        collect_types(self.json_ld_documents)
+        return {
+            "title": "".join(self.title_parts).strip(),
+            **self.metadata,
+            "feedDiscovery": self.feed_discovery,
+            "structuredDataTypes": sorted(structured_types),
+        }
 
 
 def sha256(path: Path) -> str:
@@ -154,6 +212,12 @@ def semantic_outputs(build_dir: Path) -> dict[str, object]:
                     "link": item.findtext("link", default=""),
                     "pubDate": item.findtext("pubDate", default=""),
                     "guid": item.findtext("guid", default=""),
+                    "descriptionBytes": len(
+                        item.findtext("description", default="").encode("utf-8")
+                    ),
+                    "descriptionSha256": hashlib.sha256(
+                        item.findtext("description", default="").encode("utf-8")
+                    ).hexdigest(),
                 }
                 for item in channel.findall("item")
             ],
@@ -351,7 +415,7 @@ def capture(
         if target:
             aliases[route_for(relative)] = describe_alias_target(target)
 
-    metadata: dict[str, dict[str, str]] = {}
+    metadata: dict[str, dict[str, object]] = {}
     for route in REPRESENTATIVE_ROUTES:
         relative = "index.html" if route == "/" else f"{route.strip('/')}/index.html"
         page = build_dir / relative
@@ -388,7 +452,7 @@ def capture(
         }
 
     manifest = {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "capture": {
             "sourceCommit": commit,
             "hugoVersion": hugo_version,

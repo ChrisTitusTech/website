@@ -36,8 +36,13 @@ const toc = headings.filter((heading) => heading.depth === 2 || heading.depth ==
 const articleImage = descriptor.kind === "post" && descriptor.post.data.image ? `/${descriptor.post.data.image.replace(/^\//, "")}` : undefined;
 const listingImage = descriptor.kind === "listing" && descriptor.listing.posts[0]?.data.image ? `/${descriptor.listing.posts[0].data.image.replace(/^\//, "")}` : undefined;
 const transformedArticleImage = (width: number) => articleImage ? `/cdn-cgi/image/width=${width},height=${Math.round(width * 9 / 16)},fit=cover,format=auto${articleImage}` : "";
+const pagination = descriptor.kind === "listing" ? descriptor.listing : descriptor.kind === "terms" ? { page: descriptor.page, pages: descriptor.pages, base: descriptor.root } : undefined;
+const previous = pagination && pagination.page > 1 ? pagination.page === 2 ? pagination.base : `${pagination.base}page/${pagination.page - 1}/` : undefined;
+const next = pagination && pagination.page < pagination.pages ? `${pagination.base}page/${pagination.page + 1}/` : undefined;
+const robots = descriptor.kind === "page" && descriptor.page.data.sitemap?.disable === true ? "noindex, follow" : undefined;
+const feed = descriptor.kind === "listing" ? `${descriptor.listing.base}index.xml` : descriptor.kind === "terms" ? `${descriptor.root}index.xml` : undefined;
 ---
-<BaseLayout title={title} description={description} canonical={descriptor.route} image={descriptor.kind === "post" ? descriptor.post.data.image : undefined} type={descriptor.kind === "post" ? "article" : "website"} publishedTime={descriptor.kind === "post" ? descriptor.post.data.date : undefined} preloadImage={listingImage}>
+<BaseLayout title={title} description={description} canonical={descriptor.route} image={descriptor.kind === "post" ? descriptor.post.data.image : undefined} type={descriptor.kind === "post" ? "article" : "website"} publishedTime={descriptor.kind === "post" ? descriptor.post.data.date : undefined} preloadImage={listingImage} previous={previous} next={next} robots={robots} feed={feed}>
   {descriptor.kind === "post" && <>
     <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
     <article class="article-shell container">
@@ -59,5 +64,5 @@ const transformedArticleImage = (width: number) => articleImage ? `/cdn-cgi/imag
   </>}
   {descriptor.kind === "page" && <article class="reading"><header class="article-header"><h1>{descriptor.page.data.title}</h1>{descriptor.page.data.description && <p class="lede">{descriptor.page.data.description}</p>}</header><div class="article-body"><Content /></div></article>}
   {descriptor.kind === "listing" && <section class="container"><header class="article-header"><p class="eyebrow">Collection</p><h1>{descriptor.listing.title}</h1>{descriptor.listing.description && <p class="lede">{descriptor.listing.description}</p>}</header><PostList posts={descriptor.listing.posts} /><Pagination page={descriptor.listing.page} pages={descriptor.listing.pages} base={descriptor.listing.base} /></section>}
-  {descriptor.kind === "terms" && <section class="container"><h1>{descriptor.title}</h1><div class="chips">{descriptor.terms.map((term) => <a class="chip" href={`${descriptor.root}${term.slug}/`}>{term.name} ({term.count})</a>)}</div></section>}
+  {descriptor.kind === "terms" && <section class="container"><h1>{descriptor.title}</h1><div class="chips">{descriptor.terms.map((term) => <a class="chip" href={`${descriptor.root}${term.slug}/`}>{term.name} ({term.count})</a>)}</div><Pagination page={descriptor.page} pages={descriptor.pages} base={descriptor.root} /></section>}
 </BaseLayout>

@@ -45,7 +45,7 @@ const posts = defineCollection({
   }),
   schema: shared.extend({
     date: dateValue,
-    url: z.string().regex(/^\/.*\/$/),
+    url: z.string().regex(/^\/[A-Za-z0-9][A-Za-z0-9_-]*\/$/),
   }),
 });
 

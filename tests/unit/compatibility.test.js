@@ -49,6 +49,9 @@ describe("Hugo compatibility preprocessing", () => {
     expect(() =>
       transformBody("{{< unsupported value >}}", {}, "fixture.md"),
     ).toThrow("unsupported active Hugo shortcode unsupported");
+    expect(() =>
+      transformBody("{{% unsupported value %}}", {}, "fixture.md"),
+    ).toThrow("unsupported active Hugo shortcode unsupported");
   });
 
   it("does not let a single-line fenced command hide later shortcodes", () => {
@@ -82,6 +85,13 @@ describe("front matter validation", () => {
     expect(() =>
       validateDate("2026-08-13T18:00:00-05:00", "fixture.md"),
     ).not.toThrow();
+    for (const invalid of [
+      "2026-02-30T00:00:00Z",
+      "2026-01-01T24:00:00Z",
+      "2026-01-01T12:60:00Z",
+      "2026-01-01T12:00:60Z",
+    ])
+      expect(() => validateDate(invalid, "fixture.md")).toThrow("invalid date");
   });
 
   it("requires a canonical category for new posts", () => {
@@ -138,5 +148,26 @@ describe("front matter validation", () => {
     expect(() =>
       validatePost({ ...base, featuredOrder: 4 }, "fixture.md"),
     ).toThrow("featuredOrder");
+  });
+
+  it("requires genuinely root-relative canonical post URLs", () => {
+    const base = {
+      title: "Fixture",
+      date: "2026-08-13",
+      categories: ["Linux"],
+    };
+    for (const url of [
+      "//example.com/post/",
+      "/post//child/",
+      "/post/?preview=1",
+      "/post/#section",
+      "/post/../admin/",
+      "/post/%2e%2e/admin/",
+      "/post\\child/",
+      "/post name/",
+    ])
+      expect(() => validatePost({ ...base, url }, "fixture.md")).toThrow(
+        "explicit trailing-slash URL",
+      );
   });
 });

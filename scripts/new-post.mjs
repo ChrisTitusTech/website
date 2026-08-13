@@ -69,10 +69,16 @@ async function promptCategories() {
   site.categories.forEach((category, index) =>
     console.log(`${index + 1}. ${category}`),
   );
-  const input = await createInterface({
+  const prompt = createInterface({
     input: process.stdin,
     output: process.stdout,
-  }).question("Categories: ");
+  });
+  let input;
+  try {
+    input = await prompt.question("Categories: ");
+  } finally {
+    prompt.close();
+  }
   return [
     ...new Set(
       input

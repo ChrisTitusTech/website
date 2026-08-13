@@ -6,7 +6,8 @@ const items = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(
 const pageSize = 24;
 const featured = items[0];
 const archive = items.slice(1);
+const pages = Math.ceil(archive.length / pageSize);
 ---
-<BaseLayout title="Live Streams" description="Chris Titus Tech live stream recordings" canonical="/live-streams/">
-  <LivestreamArchive items={archive.slice(0, pageSize)} featured={featured} page={1} pages={Math.ceil(archive.length / pageSize)} />
+<BaseLayout title="Live Streams" description="Chris Titus Tech live stream recordings" canonical="/live-streams/" next={pages > 1 ? "/live-streams/page/2/" : undefined} feed="/live-streams/index.xml">
+  <LivestreamArchive items={archive.slice(0, pageSize)} featured={featured} page={1} pages={pages} />
 </BaseLayout>

@@ -17,7 +17,8 @@ This snapshot is the rollback and parity baseline for the Astro migration.
 
 `tests/baseline/hugo-public.json` records the source inventory, every emitted
 path and route, raw/classified alias targets, semantic search/feed/sitemap
-inventories, critical output hashes, and representative metadata. Regenerate it
+inventories with full-body description hashes, critical output hashes, and
+representative canonical, social, feed-discovery, and structured-data metadata. Regenerate it
 only with a checksum-verified official Hugo binary and a clean detached worktree:
 
 ```bash
@@ -57,8 +58,9 @@ known complete production contract (2,156 files, 244 aliases, and all
 representative pages), failing after ten attempts instead of recording the
 smaller 2,154-file variant.
 
-All 244 RSS outputs, channel metadata, Atom self-links, and ordered items are
-recorded. Hugo selects display casing nondeterministically for terms that
+All 244 RSS outputs, channel metadata, Atom self-links, ordered items, and item
+description sizes and hashes are recorded. Hugo selects display casing
+nondeterministically for terms that
 historically use multiple casings, so taxonomy channel titles and root taxonomy
 item titles/descriptions are case-folded in the semantic inventory; individual
 article titles and every other feed field remain exact.

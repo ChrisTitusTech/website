@@ -1,12 +1,14 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  displayDateData,
   isEligibleData,
   publicationTimeData,
   selectHomepageItems,
   taxonomySlug,
   validateFeaturedOrders,
 } from "../../src/lib/content-logic";
+import { renderFeedContent } from "../../src/lib/feed-content";
 
 describe("production eligibility", () => {
   const instant = new Date("2026-08-13T18:00:00Z");
@@ -113,5 +115,34 @@ describe("date-only publication keys", () => {
     expect(
       new Date(publicationTimeData({ date: "2026-11-01" })).toISOString(),
     ).toBe("2026-11-01T05:00:00.000Z");
+  });
+});
+
+describe("display dates", () => {
+  it("preserves the calendar date stated by an offset timestamp", () => {
+    expect(displayDateData({ date: "2016-09-19T00:07:43+00:00" })).toBe(
+      "September 19, 2016",
+    );
+  });
+});
+
+describe("RSS content", () => {
+  it("preserves full Markdown, raw HTML, images, and embeds", () => {
+    const body = [
+      "# Start",
+      "",
+      '<div class="fixture">Raw HTML</div>',
+      "",
+      "![Image](/images/fixture.webp)",
+      "",
+      '<iframe src="https://www.youtube-nocookie.com/embed/fixture" title="Video"></iframe>',
+      "",
+      "Tail marker.",
+    ].join("\n");
+    const result = renderFeedContent(body);
+    expect(result).toContain('<div class="fixture">Raw HTML</div>');
+    expect(result).toContain('src="/images/fixture.webp"');
+    expect(result).toContain("youtube-nocookie.com/embed/fixture");
+    expect(result).toContain("Tail marker.");
   });
 });

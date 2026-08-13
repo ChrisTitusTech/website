@@ -119,6 +119,19 @@ test("live archive paginates and validates player ids", async ({ page }) => {
     "href",
     "/live-streams/page/2/",
   );
+  await expect(page.locator('head link[rel="next"]')).toHaveAttribute(
+    "href",
+    "https://christitus.com/live-streams/page/2/",
+  );
+  await page.goto("/live-streams/page/2/");
+  await expect(page.locator('head link[rel="prev"]')).toHaveAttribute(
+    "href",
+    "https://christitus.com/live-streams/",
+  );
+  await expect(page.locator('head link[rel="next"]')).toHaveAttribute(
+    "href",
+    "https://christitus.com/live-streams/page/3/",
+  );
   await page.goto("/live-streams/player/?v=not-a-real-stream");
   await expect(page).toHaveURL(/\/live-streams\/$/);
 });
@@ -151,6 +164,46 @@ test("search returns generated index results", async ({ page }) => {
   await expect(
     page.locator("[data-search-results] article").first(),
   ).toBeVisible();
+  await page.getByLabel("Search articles").fill("");
+  await page.getByRole("button", { name: "Search" }).click();
+  await expect(page.locator("[data-search-results] article")).toHaveCount(0);
+  await expect(page.locator("[data-search-status]")).toHaveText(
+    "Enter a search term.",
+  );
+});
+
+test("taxonomy and head pagination expose complete navigation", async ({
+  page,
+}) => {
+  await page.goto("/archive/");
+  await expect(page.locator(".post-grid .card").first()).toBeVisible();
+  await page.goto("/categories/");
+  await expect(
+    page.locator('link[type="application/rss+xml"]'),
+  ).toHaveAttribute("href", "https://christitus.com/categories/index.xml");
+  await expect(
+    page.getByRole("navigation", { name: "Pagination" }),
+  ).toContainText("Page 1 of 2");
+  await expect(page.getByRole("link", { name: /older/i })).toHaveAttribute(
+    "href",
+    "/categories/page/2/",
+  );
+  await page.goto("/posts/page/2/");
+  await expect(page.locator('head link[rel="prev"]')).toHaveAttribute(
+    "href",
+    "https://christitus.com/posts/",
+  );
+  await expect(page.locator('head link[rel="next"]')).toHaveAttribute(
+    "href",
+    "https://christitus.com/posts/page/3/",
+  );
+  await page.goto("/my-ai-workflow/");
+  await expect(page.locator('link[type="application/rss+xml"]')).toHaveCount(0);
+  await page.goto("/search/");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    "content",
+    "noindex, follow",
+  );
 });
 
 test("downloads retain an intent-driven store fallback", async ({ page }) => {
@@ -198,7 +251,7 @@ test("known player states render and unknown ids redirect", async ({
 
 test("legacy redirects resolve", async ({ page }) => {
   await page.goto("/page/1/");
-  await expect(page).toHaveURL(/\/$/);
+  await expect(page).toHaveURL("http://127.0.0.1:4321/");
 });
 
 test("the not-found page resolves", async ({ page }) => {

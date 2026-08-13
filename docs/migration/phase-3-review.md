@@ -9,16 +9,15 @@ livestream archive, known chat and no-chat player states, invalid player IDs,
 search, downloads, newsletter, legacy redirects, 404, theme persistence,
 mobile navigation, and keyboard access to the main content.
 
-- Chromium: 16 passed, 1 mobile-only test skipped.
-- Firefox: 16 passed, 1 mobile-only test skipped.
-- Chromium mobile profile: 16 passed, 1 desktop-resize test skipped.
-- WebKit: 16 passed, 1 mobile-only test skipped. Fedora cannot launch the
+- Chromium: 18 passed, 1 mobile-only test skipped.
+- Firefox: 18 passed, 1 mobile-only test skipped.
+- Chromium mobile profile: 18 passed, 1 desktop-resize test skipped.
+- WebKit: 18 passed, 1 mobile-only test skipped. Fedora cannot launch the
   Playwright fallback WebKit binary because it targets older Ubuntu libraries,
-  so this project was run in `mcr.microsoft.com/playwright:v1.55.0-noble`.
-- `npm run validate` installs the locally supported Chromium and Firefox
-  binaries before running its browser and Lighthouse gates. WebKit remains a
-  separate `npm run test:browser:webkit` gate for the supported CI/container
-  environment.
+  so this project is run in `mcr.microsoft.com/playwright:v1.62.1-noble`.
+- `npm run validate` runs Chromium, Firefox, mobile Chromium, and the WebKit
+  container fallback before Lighthouse. CI installs and runs native WebKit on
+  its supported Ubuntu environment.
 - Axe: no WCAG A or AA violations on `/`, `/my-ai-workflow/`,
   `/categories/linux/`, or `/live-streams/` in the tested desktop and mobile
   projects. An initial 3.04:1 syntax-comment contrast failure was corrected

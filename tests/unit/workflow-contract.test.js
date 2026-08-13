@@ -39,6 +39,17 @@ afterEach(async () => {
 });
 
 describe("workflow contracts", () => {
+  it("isolates Astro preview state for containerized WebKit", async () => {
+    const wrapper = await readFile("scripts/test-webkit.mjs", "utf8");
+    const manifest = JSON.parse(await readFile("package.json", "utf8"));
+    expect(wrapper).toContain('"--tmpfs"');
+    expect(wrapper).toContain('",notmpcopyup"');
+    expect(wrapper).toContain('"--user"');
+    expect(wrapper).toContain("process.getuid()");
+    expect(wrapper).toContain("process.getgid()");
+    expect(manifest.scripts["setup:browsers"]).toContain("webkit");
+  });
+
   it("serializes data and chat before PR and CI reconciliation", async () => {
     const data = await workflow("update-livestreams.yml");
     expect(data.concurrency).toMatchObject({
