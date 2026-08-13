@@ -5,10 +5,11 @@ __pycache__/
 *.py[cod]
 public/
 resources/
+dist/
+.astro/
+.astro-content/
 *.log
 node_modules/
-package-lock.json
-package.json
 .env
 *.sh
 .DS_Store

@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
+import PostList from "../components/PostList.astro";
+import { getAllPosts, getPublishedPosts, homepagePosts, taxonomy } from "../lib/content";
+
+const allPosts = await getAllPosts();
+const posts = await getPublishedPosts();
+const featured = homepagePosts(allPosts);
+const topics = [...taxonomy(posts, "categories").entries()]
+  .map(([slug, group]) => ({ slug, name: group.name, count: group.posts.length }))
+  .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name))
+  .slice(0, 8);
+---
+<BaseLayout>
+  <section class="hero container"><p class="eyebrow">Independent tech guides</p><h1>Make your technology work for you.</h1><p class="lede">Practical Linux, Windows, networking, software development, and open-source guidance from Chris Titus Tech.</p></section>
+  <section class="container"><h2>Featured</h2><div class="grid post-grid">{featured.map((post, index) => <PostCard post={post} heading={index === 0 ? "h2" : "h3"} />)}</div></section>
+  <section class="container hero"><h2>Explore topics</h2><div class="chips">{topics.map((topic) => <a class="chip" href={`/categories/${topic.slug}/`}>{topic.name} ({topic.count})</a>)}</div></section>
+  <section class="container"><h2>Latest articles</h2><PostList posts={posts.slice(0, 10)} /><p><a href="/posts/">Browse all articles →</a></p></section>
+  <section class="container hero"><div class="card"><div class="card-body"><p class="eyebrow">Stay current</p><h2>Newsletter and YouTube</h2><p>Get the latest guides, livestreams, and independent takes on technology.</p><p><a href="/newsletter/">Join the newsletter</a> · <a href="https://youtube.com/@christitustech">Watch on YouTube</a></p></div></div></section>
+</BaseLayout>

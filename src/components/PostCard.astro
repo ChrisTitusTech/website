@@ -1,0 +1,18 @@
+---
+import type { Post } from "../lib/content";
+import { displayDate, summary, taxonomySlug } from "../lib/content";
+
+interface Props { post: Post; heading?: "h2" | "h3" }
+const { post, heading = "h2" } = Astro.props;
+const Heading = heading;
+const image = post.data.image ? `/${post.data.image.replace(/^\//, "")}` : "/images/bannerbackground.webp";
+---
+<article class="card">
+  <a href={post.data.url}><img src={image} width="640" height="360" loading="lazy" alt="" /></a>
+  <div class="card-body">
+    <p class="meta"><time datetime={post.data.date}>{displayDate(post)}</time></p>
+    <Heading><a href={post.data.url}>{post.data.title}</a></Heading>
+    <p>{summary(post, 150)}</p>
+    <div class="chips">{post.data.categories.map((category) => <a class="chip" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>)}</div>
+  </div>
+</article>

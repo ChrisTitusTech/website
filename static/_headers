@@ -8,12 +8,16 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
-# Fingerprinted assets (Hugo Pipes adds a content hash to the URL) — safe to cache forever
-/css/*
+# Fingerprinted Astro assets are safe to cache forever
+/_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Copied scripts and styles must revalidate
+/css/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
 /js/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=3600, must-revalidate
 
 # Static assets that don't carry a hash — long TTL but not immutable
 /fonts/*

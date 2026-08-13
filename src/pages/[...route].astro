@@ -1,0 +1,37 @@
+---
+import { render } from "astro:content";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Pagination from "../components/Pagination.astro";
+import PostList from "../components/PostList.astro";
+import { displayDate, getPages, getPublishedPosts, readingMinutes, relatedPosts, summary, taxonomySlug } from "../lib/content";
+import { buildPageDescriptors, routeParam, type PageDescriptor } from "../lib/routes";
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  const descriptors = buildPageDescriptors(posts, await getPages());
+  return descriptors.map((descriptor) => ({
+    params: { route: routeParam(descriptor.route) },
+    props: {
+      descriptor,
+      related: descriptor.kind === "post" ? relatedPosts(descriptor.post, posts) : [],
+    },
+  }));
+}
+
+interface Props { descriptor: PageDescriptor; related: import("../lib/content").Post[] }
+const { descriptor, related } = Astro.props;
+if (descriptor.kind === "redirect") return Astro.redirect(descriptor.target, 301);
+
+let Content: any;
+if (descriptor.kind === "post") ({ Content } = await render(descriptor.post));
+if (descriptor.kind === "page") ({ Content } = await render(descriptor.page));
+const title = descriptor.kind === "post" ? descriptor.post.data.title : descriptor.kind === "page" ? descriptor.page.data.title : descriptor.kind === "listing" ? descriptor.listing.title : descriptor.title;
+const description = descriptor.kind === "post" ? summary(descriptor.post) : descriptor.kind === "page" ? descriptor.page.data.description : descriptor.kind === "listing" ? descriptor.listing.description : undefined;
+---
+<BaseLayout title={title} description={description} canonical={descriptor.route} image={descriptor.kind === "post" ? descriptor.post.data.image : undefined} type={descriptor.kind === "post" ? "article" : "website"} publishedTime={descriptor.kind === "post" ? descriptor.post.data.date : undefined}>
+  {descriptor.kind === "post" && <article class="reading"><header class="article-header"><p class="eyebrow">Article</p><h1>{descriptor.post.data.title}</h1><p class="meta"><time datetime={descriptor.post.data.date}>{displayDate(descriptor.post)}</time> · {readingMinutes(descriptor.post)} min read</p><div class="chips">{descriptor.post.data.categories.map((category) => <a class="chip" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>)}</div></header>{descriptor.post.data.image && <img src={`/${descriptor.post.data.image.replace(/^\//, "")}`} alt="" width="1200" height="675" />}<div class="article-body"><Content /></div>{descriptor.post.data.tags.length > 0 && <footer><h2>Tags</h2><div class="chips">{descriptor.post.data.tags.map((tag) => <a class="chip" href={`/tags/${taxonomySlug(tag)}/`}>{tag}</a>)}</div></footer>}{related.length > 0 && <section aria-labelledby="related-heading"><h2 id="related-heading">Related articles</h2><PostList posts={related} /></section>}</article>}
+  {descriptor.kind === "page" && <article class="reading"><header class="article-header"><h1>{descriptor.page.data.title}</h1>{descriptor.page.data.description && <p class="lede">{descriptor.page.data.description}</p>}</header><div class="article-body"><Content /></div></article>}
+  {descriptor.kind === "listing" && <section class="container"><header class="article-header"><p class="eyebrow">Collection</p><h1>{descriptor.listing.title}</h1>{descriptor.listing.description && <p class="lede">{descriptor.listing.description}</p>}</header><PostList posts={descriptor.listing.posts} /><Pagination page={descriptor.listing.page} pages={descriptor.listing.pages} base={descriptor.listing.base} /></section>}
+  {descriptor.kind === "terms" && <section class="container"><h1>{descriptor.title}</h1><div class="chips">{descriptor.terms.map((term) => <a class="chip" href={`${descriptor.root}${term.slug}/`}>{term.name} ({term.count})</a>)}</div></section>}
+</BaseLayout>

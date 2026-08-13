@@ -1,0 +1,39 @@
+{
+  "name": "Chris Titus Tech",
+  "title": "Chris Titus Tech | Tech Content Creator",
+  "description": "Having Fun with Technology",
+  "url": "https://christitus.com",
+  "author": "Chris Titus",
+  "accent": "#47c4f1",
+  "timeZone": "America/Chicago",
+  "postsPerPage": 10,
+  "categories": [
+    "Android",
+    "ChromeOS",
+    "Development",
+    "FreeBSD",
+    "Hardware",
+    "Linux",
+    "MacOS",
+    "Misc",
+    "Networking",
+    "Software Dev",
+    "Titus",
+    "Virtualization",
+    "Windows",
+    "Windows Server",
+    "YouTube"
+  ],
+  "legacyUncategorizedUrls": [
+    "/2022-recap/",
+    "/worst-tech-of-2022/",
+    "/youtube-telegram-scams/"
+  ],
+  "legacyCategoryPairs": {
+    "/2020-buyers-guide/": "macOS",
+    "/change-wallpaper/": "macOS",
+    "/macos-sysadmin-tips/": "macos",
+    "/opencore-mac/": "macOS",
+    "/zed-editor/": "macOS"
+  }
+}

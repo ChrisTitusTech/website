@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Live Stream Player" canonical="/live-streams/player/">
+  <section class="container"><p><a href="/live-streams/">← Live stream archive</a></p><h1 data-video-title>Live Stream</h1><div class="media-embed" data-player></div><div data-chat></div></section>
+  <script>
+    const id = new URLSearchParams(location.search).get("v");
+    const player = document.querySelector<HTMLElement>("[data-player]");
+    if (id && /^[A-Za-z0-9_-]+$/.test(id) && player) {
+      const frame = document.createElement("iframe"); frame.src = `https://www.youtube-nocookie.com/embed/${id}`; frame.title = "YouTube live stream recording"; frame.allowFullscreen = true; frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"; player.append(frame);
+      fetch(`/chats/${id}.json`, { method: "HEAD" }).then((response) => { if (response.ok) { const chat = document.querySelector("[data-chat]"); if (chat) chat.innerHTML = `<p><a href="/chats/${encodeURIComponent(id)}.json">Download synchronized chat replay data</a></p>`; } }).catch(() => {});
+    } else if (player) player.textContent = "Choose a recording from the live stream archive.";
+  </script>
+</BaseLayout>

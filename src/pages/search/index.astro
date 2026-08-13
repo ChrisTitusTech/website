@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Search" description="Search Chris Titus Tech articles" canonical="/search/">
+  <section class="reading"><h1>Search</h1><form role="search" data-search-form><label for="search-query">Search articles</label><div class="search-row"><input id="search-query" name="s" type="search" autocomplete="off" /><button type="submit">Search</button></div></form><p class="muted" aria-live="polite" data-search-status>Enter a search term.</p><div class="grid" data-search-results></div></section>
+  <script>
+    const form = document.querySelector<HTMLFormElement>("[data-search-form]");
+    const input = document.querySelector<HTMLInputElement>("#search-query");
+    const status = document.querySelector<HTMLElement>("[data-search-status]");
+    const results = document.querySelector<HTMLElement>("[data-search-results]");
+    let index: Array<{ title: string; tags: string[]; categories: string[]; contents: string; permalink: string }> | undefined;
+    async function search(query: string) {
+      if (!status || !results) return;
+      status.textContent = "Loading search index...";
+      try {
+        index ??= await fetch("/index.json").then((response) => {
+          if (!response.ok) throw new Error("Search index failed to load");
+          return response.json();
+        });
+        const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+        const searchIndex = index ?? [];
+        const matches = searchIndex.filter((item) => {
+          const value = [item.title, item.contents, ...item.tags, ...item.categories].join(" ").toLowerCase();
+          return terms.every((term) => value.includes(term));
+        }).slice(0, 50);
+        status.textContent = matches.length ? `${matches.length} result${matches.length === 1 ? "" : "s"}` : "No results found.";
+        results.replaceChildren(...matches.map((item) => { const article = document.createElement("article"); article.className = "card card-body"; const heading = document.createElement("h2"); const link = document.createElement("a"); link.href = item.permalink; link.textContent = item.title; heading.append(link); article.append(heading); return article; }));
+      } catch (error) { status.textContent = error instanceof Error ? error.message : "Search failed."; }
+    }
+    const initial = new URLSearchParams(location.search).get("s") ?? "";
+    if (input) input.value = initial;
+    if (initial) void search(initial);
+    form?.addEventListener("submit", (event) => { event.preventDefault(); const query = input?.value.trim() ?? ""; history.replaceState({}, "", query ? `/search/?s=${encodeURIComponent(query)}` : "/search/"); if (query) void search(query); else if (status) status.textContent = "Enter a search term."; });
+  </script>
+</BaseLayout>
