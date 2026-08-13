@@ -59,10 +59,13 @@ Markdown rendering while Hugo remains available for comparison.
 
 ### Phase 2 exit criteria
 
-- `npm ci`, `npm run check`, unit tests, and `npm run build` pass.
+- `npm ci` and `npm run validate` pass from a clean install.
+- `npm run validate` includes the Phase 2 Astro checks, unit tests, production
+  build, and route/content validation.
 - All published Markdown renders; drafts and future-dated posts remain excluded
   from production routes, search, feeds, and sitemap, with fixture coverage for
-  both cases.
+  both cases. A homepage-selection fixture also proves that a future-dated,
+  non-draft post cannot fill a featured slot.
 - Route and redirect tests cover the Hugo baseline without duplicate URLs,
   confirm supported `_redirects` rules are present in `dist/`, and reject
   domain-level sources or external `200` proxies.
@@ -96,10 +99,10 @@ all required user workflows.
 - Browser tests pass for primary pages, states, viewports, and themes.
 - Axe reports no in-scope WCAG A or AA violations in tested routes. Any
   exception requires an explicit documented waiver with owner and follow-up.
-- The committed Lighthouse CI mobile profile runs three times against home, a
-  current media-rich post, a category page, and the livestream archive; median
-  scores are at least 90 in every required category, LCP is under 2.5 seconds,
-  and CLS is under 0.1 on each representative route.
+- The committed Lighthouse CI mobile profile runs three times against `/`,
+  `/my-ai-workflow/`, `/categories/linux/`, and `/live-streams/`; median scores
+  are at least 90 in every required category, LCP is under 2.5 seconds, and CLS
+  is under 0.1 on each representative route.
 - Manual keyboard, mobile, desktop, light, and dark review is recorded.
 - Search, feeds, metadata, redirects, livestream chat/no-chat, and third-party
   fallbacks behave as specified.
@@ -124,7 +127,10 @@ protection cutover.
 - Give the CI workflow a `workflow_dispatch` trigger accepting a ref, and have
   the data workflow dispatch CI for its final bot-branch head SHA with
   `GITHUB_TOKEN` after all data/chat commits. Do not rely on token-suppressed
-  push or pull-request events to create required checks.
+  push or pull-request events to create required checks. Grant the dispatcher
+  `actions: write`; reserve `contents: write` and `pull-requests: write` for the
+  data jobs that update the bot branch and manage its pull request, and keep CI
+  jobs otherwise read-only.
 - Commit the documented repository-rule configuration that will require the
   quality and security checks on `master`, including for administrators. Do not
   enable it while the old default-branch workflows are still active.

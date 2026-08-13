@@ -75,7 +75,8 @@
   future-content preview must be an explicit opt-in and must not affect the
   production command or generated route contract.
 - `featuredOrder` is a positive integer used to curate homepage features.
-  Missing feature slots are filled by the newest published posts.
+  Missing feature slots are filled by the newest production-eligible posts
+  (`draft: false` and `date <= build time`).
 - Preserve historical front-matter extensions such as `tables`; typed parsing
   must explicitly model them or pass unknown metadata through without loss.
 - Keep `<!--more-->` markers; list summaries depend on them.
@@ -119,6 +120,9 @@
   accept an explicit ref through `workflow_dispatch`, and the data workflow
   must dispatch it for the final bot-branch head SHA with `GITHUB_TOKEN`; do not
   assume bot-authored push or pull-request events will start required checks.
+  The dispatcher receives `actions: write`; `contents: write` and
+  `pull-requests: write` remain limited to the data jobs that update the bot
+  branch and manage its pull request, while CI jobs otherwise stay read-only.
   Never hard-code YouTube or Twitch credentials.
 
 ## Frontend conventions

@@ -43,7 +43,7 @@ site.
   creator action cards, topic discovery, recent livestreams, latest articles,
   and newsletter/YouTube promotion.
 - Ordered `featuredOrder` values select curated posts; remaining slots use the
-  newest non-draft posts.
+  newest production-eligible posts (`draft: false` and `date <= build time`).
 
 ### Articles and discovery
 
@@ -206,7 +206,8 @@ site.
   newsletter, livestream archive/player states, redirects, and 404 behavior in
   Chromium, Firefox, and WebKit projects.
 - Content validation fixtures prove the three legacy category exceptions pass
-  and a newly added uncategorized post fails.
+  and a newly added uncategorized post fails. A homepage-selection fixture
+  proves that a future-dated, non-draft post cannot fill a featured slot.
 - The pinned Lighthouse CI profile passes all representative routes for three
   runs using the median thresholds defined above.
 - Manual desktop/mobile and light/dark review is recorded with screenshots;
