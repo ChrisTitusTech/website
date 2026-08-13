@@ -12,7 +12,7 @@ with `npm ci`. A single serial `npm run validate` invocation then passed:
   the one time-limited, development-only Lighthouse CI waiver recorded in
   `docs/security/npm-audit-waivers.json`; there are no critical findings.
 - Astro diagnostics with zero errors, warnings, or hints.
-- 51 unit and workflow-contract tests.
+- 52 unit and workflow-contract tests.
 - A deterministic 1,285-page production build with digest
   `5245fc43649b82f3fec7435ac7d40e4e36a5e392decc5e571237149a79533390`.
 - The 1,183-route Hugo compatibility contract and 312 search entries.

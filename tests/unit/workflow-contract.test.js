@@ -120,8 +120,24 @@ describe("workflow contracts", () => {
     const source = monitor.jobs.monitor.steps[0].run;
     expect(source).toContain('$latest_head" == "master');
     expect(source).toContain("required_jobs");
+    expect(source).toContain("latest_created");
+    expect(source).toContain("latest_age_seconds <= 28800");
+    expect(source).toContain('$latest_fresh" == "true');
     expect(source).toContain('$final_sha" == "$master_sha');
     expect(source).toContain("not-required");
+  });
+
+  it("keeps the tag publisher outside the repository-wide branch bypass", async () => {
+    const template = await readFile(
+      ".github/repository-rules/branch-mutation.json.tmpl",
+      "utf8",
+    );
+    expect(template).toContain('"include": ["~ALL"]');
+    expect(template).toContain("GITHUB_ACTIONS_INTEGRATION_ID");
+    expect(template).toContain("BRANCH_MAINTAINER_REPOSITORY_ROLE_ID");
+    expect(template).not.toContain("DATA_CHECK_TAG_APP_INTEGRATION_ID");
+    for (const type of ["creation", "update", "deletion"])
+      expect(template).toContain(`"type": "${type}"`);
   });
 
   it("fails the audit gate on valid operational-error JSON", async () => {

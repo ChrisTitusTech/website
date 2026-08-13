@@ -33,6 +33,16 @@ jobs:
           latest_url=$(jq -r '.workflow_runs | sort_by(.created_at) | last | .html_url // "unavailable"' <<< "$runs")
           latest_id=$(jq -r '.workflow_runs | sort_by(.created_at) | last | .id // "null"' <<< "$runs")
           latest_head=$(jq -r '.workflow_runs | sort_by(.created_at) | last | .head_branch // "missing"' <<< "$runs")
+          latest_created=$(jq -r '.workflow_runs | sort_by(.created_at) | last | .created_at // "missing"' <<< "$runs")
+          latest_fresh="false"
+          latest_age_seconds="unknown"
+          if latest_epoch=$(date -u -d "$latest_created" +%s 2>/dev/null); then
+            now_epoch=$(date -u +%s)
+            latest_age_seconds=$((now_epoch - latest_epoch))
+            if (( latest_age_seconds >= 0 && latest_age_seconds <= 28800 )); then
+              latest_fresh="true"
+            fi
+          fi
           annotations=""
           required_jobs="missing"
           if [[ "$latest_id" != "null" ]]; then
@@ -46,7 +56,7 @@ jobs:
             --jq ".[] | select(.title == \"${ISSUE_TITLE}\") | .number" | head -n 1)
           ci_status="missing"
           data_healthy="false"
-          if [[ "$latest_status" == "completed:success" && "$latest_head" == "master" && "$required_jobs" == "success" ]]; then
+          if [[ "$latest_status" == "completed:success" && "$latest_head" == "master" && "$latest_fresh" == "true" && "$required_jobs" == "success" ]]; then
             data_healthy="true"
             final_sha=$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/automation/livestream-data" --jq '.object.sha' 2>/dev/null || true)
             if [[ "$final_sha" =~ ^[0-9a-f]{40}$ ]]; then
@@ -65,7 +75,7 @@ jobs:
             fi
             exit 0
           fi
-          body=$(printf "The retained livestream workflow is not reconciled.\n\nLatest data-workflow state: \`%s\`\nLatest run branch: \`%s\`\nRequired job state: \`%s\`\nExact-head immutable-tag CI state: \`%s\`\nLatest run: %s\nFailed or cancelled steps: \`%s\`\n\nThis includes queue-limit cancellations and requires the next accepted or manual run to complete data, chat, PR, and exact-head CI reconciliation." "$latest_status" "$latest_head" "$required_jobs" "$ci_status" "$latest_url" "${annotations:-unavailable}")
+          body=$(printf "The retained livestream workflow is not reconciled.\n\nLatest data-workflow state: \`%s\`\nLatest run branch: \`%s\`\nLatest run created: \`%s\`\nLatest run age in seconds: \`%s\`\nLatest run fresh (8-hour maximum): \`%s\`\nRequired job state: \`%s\`\nExact-head immutable-tag CI state: \`%s\`\nLatest run: %s\nFailed or cancelled steps: \`%s\`\n\nThis includes missing schedules and queue-limit cancellations and requires the next accepted or manual run to complete data, chat, PR, and exact-head CI reconciliation." "$latest_status" "$latest_head" "$latest_created" "$latest_age_seconds" "$latest_fresh" "$required_jobs" "$ci_status" "$latest_url" "${annotations:-unavailable}")
           if [[ -z "$issue_number" ]]; then
             gh issue create --title "$ISSUE_TITLE" --body "$body"
           else

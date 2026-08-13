@@ -243,6 +243,16 @@ for (const post of excludedPosts)
 
 const sitemap = await readFile(path.join(root, "dist/sitemap.xml"), "utf8");
 const feed = await readFile(path.join(root, "dist/index.xml"), "utf8");
+const sitemapUrls = new Set(
+  [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) =>
+    decodeXml(match[1]),
+  ),
+);
+const rootFeedUrls = new Set(
+  [...feed.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((match) =>
+    decodeXml(match[1].match(/<link>(.*?)<\/link>/)?.[1] ?? ""),
+  ),
+);
 let validatedFeedBodies = 0;
 const semanticFeedItems = (xml) =>
   [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((match) => ({
@@ -282,25 +292,25 @@ if (validatedFeedBodies < expectedPosts.length)
   throw new Error(
     "RSS full-body validation did not cover every published post",
   );
-if (!sitemap.includes("https://christitus.com/newsletter/"))
+if (!sitemapUrls.has("https://christitus.com/newsletter/"))
   throw new Error("newsletter is missing from sitemap");
 for (const post of expectedPosts) {
   if (
     post.sitemap?.disable !== true &&
-    !sitemap.includes(`https://christitus.com${post.url}`)
+    !sitemapUrls.has(`https://christitus.com${post.url}`)
   )
     throw new Error(`published post is missing from sitemap: ${post.url}`);
-  if (!feed.includes(`https://christitus.com${post.url}`))
+  if (!rootFeedUrls.has(`https://christitus.com${post.url}`))
     throw new Error(`published post is missing from RSS: ${post.url}`);
 }
 for (const post of excludedPosts) {
-  if (sitemap.includes(`https://christitus.com${post.url}`))
+  if (sitemapUrls.has(`https://christitus.com${post.url}`))
     throw new Error(`excluded post leaked into sitemap: ${post.url}`);
-  if (feed.includes(`https://christitus.com${post.url}`))
+  if (rootFeedUrls.has(`https://christitus.com${post.url}`))
     throw new Error(`excluded post leaked into RSS: ${post.url}`);
 }
 for (const disabled of ["/search/", "/live-streams/player/", "/rss/"]) {
-  if (sitemap.includes(`https://christitus.com${disabled}`))
+  if (sitemapUrls.has(`https://christitus.com${disabled}`))
     throw new Error(`sitemap-disabled route leaked into sitemap: ${disabled}`);
 }
 

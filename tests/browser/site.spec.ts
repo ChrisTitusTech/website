@@ -252,6 +252,8 @@ test("known player states render and unknown ids redirect", async ({
 test("legacy redirects resolve", async ({ page }) => {
   await page.goto("/page/1/");
   await expect(page).toHaveURL("http://127.0.0.1:4321/");
+  await page.goto("/live-streams/page/1/");
+  await expect(page).toHaveURL("http://127.0.0.1:4321/live-streams/");
 });
 
 test("the not-found page resolves", async ({ page }) => {

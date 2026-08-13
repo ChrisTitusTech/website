@@ -13,6 +13,10 @@ workflows are disabled and drained. Merge queue is not part of this contract.
 
 - `master-protection.json` requires a current pull request, resolved review
   threads, and all quality/security checks, including for administrators.
+- `branch-mutation.json.tmpl` restricts creation, updates, and deletion across
+  every branch. Replace both actor placeholders with the GitHub Actions App and
+  repository-role IDs that maintain the managed data branch; the dedicated tag
+  publisher App must not appear in this bypass list.
 - `data-check-tag-creation.json.tmpl` restricts creation under
   `refs/tags/data-check/**` to the dedicated tag-publisher GitHub App. Replace
   `DATA_CHECK_TAG_APP_INTEGRATION_ID` with the real integration ID before using
