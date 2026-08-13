@@ -49,9 +49,9 @@ Markdown rendering while Hugo remains available for comparison.
   generates the explicit URL and thumbnail path, defaults to `draft: true`,
   supports `--date YYYY-MM-DD` and repeatable `--category` flags, presents every
   canonical category defined in `SPEC.md`, and refuses invalid categories,
-  normalized URL collisions, or file overwrites. Serialize titles as
-  JSON-compatible double-quoted YAML scalars and require an exact parsed-title
-  round trip before writing.
+  collisions with the complete route/redirect/static inventory, or file
+  overwrites. Serialize titles as JSON-compatible double-quoted YAML scalars
+  and require an exact parsed-title round trip before writing.
 - Remove the legacy ignore rules for `package.json` and `package-lock.json`, add
   `dist/` and `.astro/` to `.gitignore`, commit both package files, and move root
   `_redirects` path rules to `static/_redirects`.
@@ -96,13 +96,24 @@ Markdown rendering while Hugo remains available for comparison.
   rendered table assertions cover the existing `tables` front matter.
 - The three explicit legacy uncategorized URLs render, while a new
   uncategorized-post fixture fails validation.
+- Only the five explicit legacy URLs in `SPEC.md` accept `macOS` or `macos`;
+  the same values fail for manually authored content at every other URL.
+- Homepage fixtures reject duplicate or out-of-range `featuredOrder` values,
+  exclude draft and future curated posts, and prove deterministic fallback
+  ordering for equal publication dates.
 - Scaffolder tests cover deterministic date/year and slug generation, required
   front matter, draft defaults, multiple categories including `Software Dev`,
   invalid-category rejection, non-interactive missing-category failure,
   rejection of historical casing as new input, migration acceptance of existing
   `macOS` and `macos` values, case-sensitive URL comparison, trailing-slash
-  collision variants, YAML metacharacters, colons, `#`, quotes, backslashes,
-  newlines, exact parsed-title round trips, and overwrite protection. Generated
+  collision variants, emitted output paths, derived standalone and collection/
+  taxonomy routes, pagination, aliases, feeds, utility endpoints, exact and
+  wildcard/parameterized redirects, static endpoints, file/directory ancestor
+  conflicts, YAML metacharacters, colons, `#`, quotes, backslashes, newlines,
+  exact parsed-title round trips, and overwrite protection. Route fixtures
+  virtually insert the candidate so newly created pagination, taxonomy, feed,
+  alias, and collection outputs are included in exact and wildcard/parameterized
+  redirect-overlap checks without self-comparing redirect entries. Generated
   fixtures pass the same content schema as manually authored posts.
 
 ## Phase 3: Editorial redesign and feature parity

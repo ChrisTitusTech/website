@@ -84,8 +84,10 @@
   Development, FreeBSD, Hardware, Linux, MacOS, Misc, Networking, Software Dev,
   Titus, Virtualization, Windows, Windows Server, and YouTube. New posts use
   `MacOS`; new-post category input rejects the historical `macOS` and `macos`
-  spellings, while the migration loader preserves and accepts them in existing
-  content. `Software Dev` maps to `/categories/software-dev/`.
+  spellings. The migration loader preserves and accepts those spellings only for
+  the exact five legacy URLs listed in `SPEC.md`; manually authored content does
+  not bypass that allowlist. `Software Dev` maps to
+  `/categories/software-dev/`.
 - Production captures one build instant. Offset-bearing timestamps compare as
   instants; date-only values are eligible when they are on or before the
   inclusive `America/Chicago` calendar date containing that instant. Production
@@ -93,9 +95,12 @@
   content. `npm run dev:content` is the only draft/future opt-in and uses Astro's
   local `content-preview` mode; standard development and every `npm run build`
   remain production-filtered.
-- `featuredOrder` is a positive integer used to curate homepage features.
-  Missing feature slots are filled by the newest production-eligible posts
-  using that same draft/date predicate.
+- `featuredOrder` may be 1, 2, or 3 and must be globally unique. Curated posts
+  fill those numbered homepage slots only when they are production-eligible;
+  draft or future curated posts leave slots for fallback. Remaining slots use
+  production-eligible posts ordered by the publication sort key in `SPEC.md`,
+  then by case-sensitive canonical URL, so ties never depend on content
+  traversal order.
 - Preserve historical front-matter extensions such as `tables`; typed parsing
   must explicitly model them or pass unknown metadata through without loss.
 - Keep `<!--more-->` markers; list summaries depend on them.

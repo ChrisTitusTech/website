@@ -42,8 +42,13 @@ site.
 - The homepage contains one primary and two secondary featured articles,
   creator action cards, topic discovery, recent livestreams, latest articles,
   and newsletter/YouTube promotion.
-- Ordered `featuredOrder` values select curated posts; remaining slots use the
-  newest production-eligible posts using the shared draft/date predicate.
+- `featuredOrder` accepts only 1, 2, or 3 and is globally unique; each value
+  selects its matching homepage slot only when that post is production-eligible.
+  A draft or future curated post does not render and leaves the slot for fallback.
+  Remaining slots use production-eligible unselected posts sorted by publication
+  key descending, then case-sensitive canonical URL ascending. Offset timestamps
+  normalize to UTC for that key; date-only values map to midnight in
+  `America/Chicago` on their stated date.
 
 ### Articles and discovery
 
@@ -83,16 +88,36 @@ site.
 - New posts use the canonical `MacOS` spelling, while migrated `macOS` and
   `macos` values remain unchanged. The canonical-set check applies to
   `--category` input; it rejects those historical variants for new posts. The
-  migration loader separately accepts them only when reading existing content.
-  `Software Dev` generates the normalized taxonomy route
-  `/categories/software-dev/`.
+  loader accepts only these exact URL/value pairs:
+  `/2020-buyers-guide/` + `macOS`, `/change-wallpaper/` + `macOS`,
+  `/macos-sysadmin-tips/` + `macos`, `/opencore-mac/` + `macOS`, and
+  `/zed-editor/` + `macOS`. Only content loading and schema validation apply this
+  pair allowlist to manually authored content and migrated fixtures; scaffolder
+  input always rejects both historical spellings. The opposite legacy spelling
+  fails at each allowlisted URL. `Software Dev` generates the normalized
+  taxonomy route `/categories/software-dev/`.
 - Generated posts use the same content schema and validation path as manually
-  authored Markdown. URL collision checks create comparison keys by enforcing
-  one leading and trailing slash and collapsing repeated slashes without
-  changing character case. Thus `/Post/` and `/post/` remain distinct, while
-  `/post`, `post/`, and `/post//` collide with `/post/`. Comparison never
-  rewrites historical front matter. Invalid categories, dates, normalized URL
-  collisions, and existing destination files fail with actionable errors.
+  authored Markdown. Before writing, the scaffolder virtually inserts the
+  candidate and builds the complete resulting public route inventory using the
+  same route-contract code as validation: explicit post URLs, derived standalone
+  page and collection/taxonomy routes, aliases, pagination, feeds and utility
+  endpoints, redirect sources, and static public endpoints. This includes new
+  pagination, taxonomy, and feed outputs caused by the candidate.
+  Collision keys enforce one leading and trailing slash and collapse repeated
+  slashes without changing character case. Thus `/Post/` and `/post/` remain
+  distinct, while `/post`, `post/`, and `/post//` collide with `/post/`.
+  A second key maps routes to emitted paths, so `/foo/` collides with static
+  `/foo/index.html` and `/` collides with `/index.html`. Candidate URLs also
+  collide with a file/directory conflict: no emitted file path may be a strict
+  ancestor of another emitted file path. Redirect patterns are separate from
+  emitted-route entries. Every candidate-induced route, including new taxonomy,
+  pagination, feed, alias, and collection routes, is matched against each exact,
+  wildcard, or parameterized redirect source under the deployed grammar.
+  Redirect patterns are never compared with themselves; existing pattern-to-
+  pattern behavior remains governed by the ordered redirect contract and is not
+  a scaffolder collision. Comparison never rewrites historical front matter.
+  Invalid categories, dates, route/output collisions, and existing destination
+  files fail with actionable errors.
 
 ### Livestreams
 
@@ -293,6 +318,12 @@ site.
   proves that a future-dated, non-draft post cannot fill a featured slot. A
   published fixture without a `draft` field remains present in routes, search,
   feeds, sitemap, and homepage selection.
+- Content fixtures prove that only the five exact legacy URLs accept `macOS` or
+  `macos` in their current URL/value pairs; the opposite spelling at each URL and
+  manually authored content using either value elsewhere fail. Homepage fixtures
+  reject duplicate and out-of-range `featuredOrder` values, exclude draft and
+  future curated posts, and resolve equal-date fallbacks by case-sensitive
+  canonical URL.
 - Fixed-clock tests cover offset-bearing timestamps immediately before, equal
   to, and after the build instant; date-only values before, equal to, and after
   the `America/Chicago` build date; and consistent filtering across homepage,
@@ -305,10 +336,15 @@ site.
   category, repeatable category flags, non-interactive failures, draft defaults,
   rejection of `macOS` and `macos` as new category inputs, acceptance of both in
   migrated fixtures, case-sensitive URL preservation, trailing-slash collision
-  variants, YAML metacharacters, colons, `#`, quotes, backslashes, newlines,
-  exact parsed-title round trips, and overwrite protection. The three
-  empty-category URL exceptions remain covered separately by the
-  content-validation fixtures.
+  variants, emitted output paths, derived standalone and collection/taxonomy
+  routes, pagination, aliases, feeds, utility endpoints, exact and wildcard/
+  parameterized redirects, static endpoints, file/directory ancestor conflicts,
+  YAML metacharacters, colons, `#`, quotes, backslashes, newlines, exact parsed-
+  title round trips, and overwrite protection. Fixtures virtually insert
+  candidates and cover newly induced pagination, taxonomy, feed, alias, and
+  collection outputs in exact and wildcard/parameterized redirect-overlap checks
+  without redirect self-comparisons. The three empty-category URL exceptions
+  remain covered separately by the content-validation fixtures.
 - The pinned Lighthouse CI profile passes all representative routes for three
   runs using the median thresholds defined above.
 - Manual desktop/mobile and light/dark review is recorded with screenshots;
