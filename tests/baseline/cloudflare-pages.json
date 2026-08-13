@@ -1,0 +1,80 @@
+{
+  "capturedAt": "2026-08-13T13:13:00-05:00",
+  "captureMethod": "Authenticated Cloudflare dashboard, read-only inspection",
+  "accountId": "2125f87b38551b0bff20500559e238e3",
+  "zone": "christitus.com",
+  "pagesProject": {
+    "name": "website",
+    "repository": "ChrisTitusTech/website",
+    "productionBranch": "master",
+    "rootDirectory": "",
+    "buildCommand": "hugo --gc --minify",
+    "outputDirectory": "public",
+    "buildComments": true,
+    "buildCache": true,
+    "automaticDeployments": true,
+    "includePaths": ["*"],
+    "buildSystemVersion": 3,
+    "environments": {
+      "production": {
+        "variablesAndSecrets": [
+          {"type": "text", "name": "HUGO_VERSION", "value": "0.158.0"}
+        ],
+        "bindings": [],
+        "runtime": {
+          "placement": "Default",
+          "compatibilityDate": "2023-01-22",
+          "compatibilityFlags": [],
+          "failMode": "open"
+        }
+      },
+      "preview": {
+        "variablesAndSecrets": [
+          {"type": "text", "name": "HUGO_VERSION", "value": "0.108.0"}
+        ],
+        "bindings": [],
+        "runtime": {
+          "placement": "Default",
+          "compatibilityDate": "2023-01-22",
+          "compatibilityFlags": [],
+          "failMode": "open"
+        }
+      }
+    },
+    "deployHooks": [
+      {
+        "name": "daily8am",
+        "branch": "master",
+        "credential": "redacted; regenerate the hook URL during rollback"
+      }
+    ],
+    "domains": ["website-dzb.pages.dev", "christitus.com"],
+    "activeProductionDeployment": {
+      "id": "68d265cd-60d7-4907-94ea-ab9672e4fb30",
+      "url": "https://68d265cd.website-dzb.pages.dev",
+      "branch": "master",
+      "commit": "b69302b71532890277940bd2a137986cb2409718",
+      "message": "Update Hugo website setup guide"
+    }
+  },
+  "zoneRedirectRules": [],
+  "pageRules": [
+    {"position": 1, "enabled": true, "source": "christitus.com/bypass", "status": 301, "target": "https://github.com/ChrisTitusTech/bypassnro/releases/latest/download/bypass.cmd"},
+    {"position": 2, "enabled": true, "source": "christitus.com/arch", "status": 301, "target": "https://raw.githubusercontent.com/ChrisTitusTech/linutil/refs/heads/main/core/tabs/system-setup/arch/server-setup.sh"},
+    {"position": 3, "enabled": true, "source": "christitus.com/mac", "status": 301, "target": "https://github.com/ChrisTitusTech/macutil/releases/latest/download/start.sh"},
+    {"position": 4, "enabled": true, "source": "christitus.com/linuxdev", "status": 301, "target": "https://github.com/ChrisTitusTech/linutil/releases/latest/download/startdev.sh"},
+    {"position": 5, "enabled": true, "source": "christitus.com/linux", "status": 301, "target": "https://github.com/ChrisTitusTech/linutil/releases/latest/download/start.sh"},
+    {"position": 6, "enabled": true, "source": "christitus.com/win", "status": 301, "target": "https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1"},
+    {"position": 7, "enabled": true, "source": "christitus.com/windev", "status": 301, "target": "https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/windev.ps1"},
+    {"position": 8, "enabled": true, "source": "www.christitus.com/windows-toolbox", "status": 301, "target": "https://christitus.com/downloads"},
+    {"position": 9, "enabled": true, "source": "store.christitus.com/*", "status": 301, "target": "https://christitus.com/downloads"},
+    {"position": 10, "enabled": true, "source": "christitus.com/join", "status": 301, "target": "https://www.youtube.com/channel/UCg6gPGh8HU2U01vaFCAsvmQ/join"},
+    {"position": 11, "enabled": true, "source": "www.christitus.com/*", "status": 302, "target": "https://christitus.com/$1"},
+    {"position": 12, "enabled": true, "source": "portal.christitus.com/*", "status": 301, "target": "https://christitus.com/downloads"}
+  ],
+  "target": {
+    "nodeVersion": "24",
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist"
+  }
+}
