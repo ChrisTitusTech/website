@@ -72,7 +72,9 @@ site.
   URL, and sets the image to `images/<year>-thumbs/<slug>.webp`.
 - The template includes the title, date, URL, image, selected categories, empty
   tags, `draft: true`, and a `<!--more-->` summary boundary. The command refuses
-  to overwrite an existing destination file.
+  to overwrite an existing destination file. It serializes the title as a
+  JSON-compatible double-quoted YAML scalar, parses the generated front matter,
+  and requires the parsed title to equal the input exactly before writing.
 - `--category` is repeatable. When it is omitted, an interactive terminal
   prompts for one or more choices; non-interactive use fails instead of guessing.
   Canonical choices are Android, ChromeOS, Development, FreeBSD, Hardware,
@@ -206,13 +208,31 @@ site.
 - Never commit or log YouTube API keys, Twitch credentials, access tokens,
   private keys, or environment files.
 - CI runs on pull requests, pushes, and explicit dispatches for an identified
-  ref. Dispatch accepts a bot branch plus `expected_sha`, invokes the definition
-  from `master`, checks out the expected commit, and fails unless the branch
-  still equals it. Repository rules require type checks, unit tests, production build,
-  route validation, and browser tests to pass before merge, including for
-  administrators. Bot automation dispatches CI for its final branch head SHA
-  with `GITHUB_TOKEN`; it does not depend on token-suppressed push or pull
-  request events.
+  ref. Dispatch accepts a bot branch `ref` plus `expected_sha`. Before dispatch,
+  automation compares `expected_sha` itself to `master`, proves that exact
+  commit changes only allowlisted generated data paths, and proves its workflow
+  and configuration files are byte-identical to `master`. Immediately before
+  tagging, it verifies the remote bot branch still equals `expected_sha`, creates
+  a unique tag pointing directly to that commit, and verifies the tag peels to
+  the same SHA. It dispatches the workflow at that immutable tag so its check
+  attaches to the validated commit. Before tests, CI requires the reserved tag
+  namespace and `github.sha == expected_sha`, resolves the bot branch to that
+  same SHA, and independently repeats the exact-commit path allowlist and
+  workflow/configuration comparisons. One tag ruleset restricts creation in the
+  reserved namespace and grants its only bypass to a dedicated GitHub App; an
+  overlapping ruleset forbids updates and deletion with no bypass, including for
+  administrators and that App. Repository rules require type checks, unit tests,
+  production build, route validation, and browser tests to pass before merge,
+  including for administrators. Bot automation dispatches CI for its final
+  branch head SHA with `GITHUB_TOKEN`; it does not depend on token-suppressed push
+  or pull request events. The App credential lives in a protected environment
+  available only to a tag-publisher job whose workflow definition runs from
+  `master`. Before minting its short-lived `contents: write` installation token,
+  that job runs no action or script from the candidate commit. Trusted publisher
+  code creates only the validated reserved-tag-to-`expected_sha` mapping and
+  revokes the token after use. The App has no bypass on repository-wide branch
+  creation, update, or deletion rules. The dispatcher receives only
+  `actions: write`, and CI jobs remain read-only.
 - Repository rules require the PR branch to be current with `master` so checks
   cannot be reused against a newer base. Merge queue is excluded from the
   cutover contract.
@@ -285,8 +305,10 @@ site.
   category, repeatable category flags, non-interactive failures, draft defaults,
   rejection of `macOS` and `macos` as new category inputs, acceptance of both in
   migrated fixtures, case-sensitive URL preservation, trailing-slash collision
-  variants, and overwrite protection. The three empty-category URL exceptions
-  remain covered separately by the content-validation fixtures.
+  variants, YAML metacharacters, colons, `#`, quotes, backslashes, newlines,
+  exact parsed-title round trips, and overwrite protection. The three
+  empty-category URL exceptions remain covered separately by the
+  content-validation fixtures.
 - The pinned Lighthouse CI profile passes all representative routes for three
   runs using the median thresholds defined above.
 - Manual desktop/mobile and light/dark review is recorded with screenshots;

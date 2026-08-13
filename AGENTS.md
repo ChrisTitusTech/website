@@ -77,7 +77,9 @@
   The repository-owned scaffolder renders `templates/post.md.tmpl` into
   `content/posts/<year>/<slug>.md`, defaults new posts to drafts, uses the
   current `America/Chicago` calendar date when `--date` is absent, and refuses
-  to overwrite files. Follow `SPEC.md` for exact slug and URL-collision rules.
+  to overwrite files. It serializes titles as JSON-compatible double-quoted
+  YAML scalars and verifies an exact parsed-title round trip before writing.
+  Follow `SPEC.md` for exact slug and URL-collision rules.
 - The scaffolder requires at least one category and offers Android, ChromeOS,
   Development, FreeBSD, Hardware, Linux, MacOS, Misc, Networking, Software Dev,
   Titus, Virtualization, Windows, Windows Server, and YouTube. New posts use
@@ -147,13 +149,31 @@
   watchdog with `actions: read` and `issues: write`; it opens or updates a durable
   tracking issue. The next accepted or manual data run performs a full
   current-state source reconciliation, then the watchdog closes the alert after
-  verified success. The CI workflow accepts a
-  bot branch plus `expected_sha`, invokes its definition from `master`, checks
-  out that SHA, and fails if the branch no longer matches. Do not
-  assume bot-authored push or pull-request events will start required checks.
-  The dispatcher receives `actions: write`; `contents: write` and
-  `pull-requests: write` remain limited to the data jobs that update the bot
-  branch and manage its pull request, while CI jobs otherwise stay read-only.
+  verified success. The CI workflow accepts a bot branch `ref` plus
+  `expected_sha`. Before dispatch, automation compares `expected_sha` itself to
+  `master`, proves that exact commit changes only allowlisted generated data
+  paths, and proves its workflow and configuration files are byte-identical to
+  `master`. Immediately before tagging, it verifies the remote bot branch still
+  equals `expected_sha`, creates a unique tag pointing directly to that commit,
+  verifies the tag peels to the same SHA, and dispatches the workflow at that
+  immutable tag so the check attaches to the validated commit. Before tests, CI
+  requires the reserved tag namespace and `github.sha == expected_sha`, resolves
+  the bot branch to that same SHA, and independently repeats the exact-commit
+  path allowlist and workflow/configuration comparisons. One tag ruleset
+  restricts creation in the reserved namespace and grants its only bypass to a
+  dedicated GitHub App; an overlapping ruleset forbids updates and deletion
+  with no bypass, including for administrators and that App. Do not assume
+  bot-authored push or pull-request events will start required checks.
+  The App credential lives in a protected environment available only to a
+  tag-publisher job whose workflow definition runs from `master`; before minting
+  the short-lived `contents: write` token, that job executes no action or script
+  from the candidate commit. Trusted publisher code creates only the already
+  validated reserved-tag-to-`expected_sha` mapping and revokes the token after
+  use. The App has no bypass on repository-wide branch creation, update, or
+  deletion rules. The dispatcher receives only `actions: write`. Other
+  `contents: write` and
+  `pull-requests: write` permissions remain limited to the data jobs that update
+  the bot branch and manage its pull request, while CI jobs stay read-only.
   Never hard-code YouTube or Twitch credentials.
 
 ## Frontend conventions

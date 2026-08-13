@@ -49,7 +49,9 @@ Markdown rendering while Hugo remains available for comparison.
   generates the explicit URL and thumbnail path, defaults to `draft: true`,
   supports `--date YYYY-MM-DD` and repeatable `--category` flags, presents every
   canonical category defined in `SPEC.md`, and refuses invalid categories,
-  normalized URL collisions, or file overwrites.
+  normalized URL collisions, or file overwrites. Serialize titles as
+  JSON-compatible double-quoted YAML scalars and require an exact parsed-title
+  round trip before writing.
 - Remove the legacy ignore rules for `package.json` and `package-lock.json`, add
   `dist/` and `.astro/` to `.gitignore`, commit both package files, and move root
   `_redirects` path rules to `static/_redirects`.
@@ -99,8 +101,9 @@ Markdown rendering while Hugo remains available for comparison.
   invalid-category rejection, non-interactive missing-category failure,
   rejection of historical casing as new input, migration acceptance of existing
   `macOS` and `macos` values, case-sensitive URL comparison, trailing-slash
-  collision variants, and overwrite protection. Generated fixtures pass the
-  same content schema as manually authored posts.
+  collision variants, YAML metacharacters, colons, `#`, quotes, backslashes,
+  newlines, exact parsed-title round trips, and overwrite protection. Generated
+  fixtures pass the same content schema as manually authored posts.
 
 ## Phase 3: Editorial redesign and feature parity
 
@@ -166,12 +169,30 @@ protection cutover.
   closes it only after a successful full reconciliation. The next accepted or
   manual data run performs that reconciliation idempotently.
 - Give the CI workflow a `workflow_dispatch` trigger accepting `ref` and
-  `expected_sha`. Invoke its definition from `master` with the bot branch as
-  `ref`; CI checks out `expected_sha` and fails unless the branch still equals
-  it. Dispatch only after all data/chat commits and the final branch-head check.
-  Do not rely on token-suppressed events to create required checks. Grant the
-  dispatcher `actions: write`; reserve `contents: write` and
-  `pull-requests: write` for the data jobs, and keep CI jobs otherwise read-only.
+  `expected_sha`. Before dispatch, compare `expected_sha` itself to `master`,
+  prove that exact commit changes only allowlisted generated data paths, and
+  prove its workflow and configuration files are byte-identical to `master`.
+  Immediately before tagging, verify the remote bot branch still equals
+  `expected_sha`; create a unique tag pointing directly to that commit, verify
+  that the tag peels to the same SHA, and dispatch the workflow at that immutable
+  tag so its check attaches to the validated commit. Before tests, CI requires
+  the reserved tag namespace and `github.sha == expected_sha`, resolves the bot
+  branch to that same SHA, and independently repeats the exact-commit path
+  allowlist and workflow/configuration comparisons. Configure one tag ruleset
+  that restricts creation in the reserved namespace and grants its only bypass
+  to a dedicated GitHub App, plus an overlapping ruleset that forbids updates
+  and deletion with no bypass, including for administrators and that App.
+  Dispatch only after all
+  data/chat commits and the final branch-head check. Do not rely on
+  token-suppressed events to create required checks. Store the dedicated App's
+  credential in a protected environment available only to a tag-publisher job
+  whose workflow definition runs from `master`. Before minting its short-lived
+  `contents: write` token, run no action or script from the candidate commit;
+  create only the validated reserved-tag-to-`expected_sha` mapping, then revoke
+  the token. Give the App no bypass on repository-wide branch creation, update,
+  or deletion rules. Give the dispatcher only `actions: write`, reserve other
+  `contents: write` and `pull-requests: write` permissions for the data jobs,
+  and keep CI jobs read-only.
 - Commit the documented repository-rule configuration that will require the
   quality and security checks on `master`, including for administrators. Do not
   enable it while the old default-branch workflows are still active. Require PR
