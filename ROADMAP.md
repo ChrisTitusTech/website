@@ -158,7 +158,10 @@ protection cutover.
   manual run reconciles branch, PR, and check state idempotently after an
   interruption: rerun incomplete jobs from the last confirmed SHA, or complete
   missing PR/CI actions for an already confirmed final SHA. Do not grant the
-  workflow a protected-branch bypass.
+  workflow a protected-branch bypass. If the 100-run queue limit cancels or
+  rejects a run, surface that state and require the next accepted or manual run
+  to perform a full current-state source reconciliation so missed schedules are
+  recovered idempotently.
 - Give the CI workflow a `workflow_dispatch` trigger accepting `ref` and
   `expected_sha`. Invoke its definition from `master` with the bot branch as
   `ref`; CI checks out `expected_sha` and fails unless the branch still equals
@@ -168,7 +171,9 @@ protection cutover.
   `pull-requests: write` for the data jobs, and keep CI jobs otherwise read-only.
 - Commit the documented repository-rule configuration that will require the
   quality and security checks on `master`, including for administrators. Do not
-  enable it while the old default-branch workflows are still active.
+  enable it while the old default-branch workflows are still active. Require PR
+  branches to be current with `master`, or use a merge queue, so a validated head
+  cannot merge against a newer untested base.
 - Rewrite `static/_headers` for Astro output: preserve security and feed rules,
   cache fingerprinted `/_astro/*` assets immutably, and give copied CSS/JS a
   bounded non-immutable or revalidating policy.
@@ -221,8 +226,13 @@ available.
   absent and the retained `update-livestreams.yml` workflow is still disabled,
   then re-enable and dispatch it. Confirm it creates or refreshes the managed bot
   PR and explicitly dispatches CI for that branch's final head SHA. After every
-  required check is attached and green, enable the new no-bypass repository rules
-  before merging the bot PR or any later change.
+  required check is attached and green, disable the data workflow again, drain
+  queued/running work, and refresh the bot PR head. If it changed, dispatch and
+  await CI again. Record the PR head and `master` base SHAs; if either changes,
+  update the branch and rerun CI. Enable the new no-bypass, strict-up-to-date (or
+  merge-queue) rules only when every check is attached and green on that pair,
+  merge the bot PR with an exact-head guard, then re-enable the workflow. Apply
+  the same freeze and exact-head/base gate to later bot PRs.
 - Verify the custom domain and production behavior after deployment.
 
 ### Phase 5 exit criteria
@@ -235,6 +245,8 @@ available.
 - The first post-merge bot PR has all required checks on its final head SHA, and
   a controlled failed-check test proves the new no-bypass rule prevents merges
   to `master`, including for administrators.
+- Queue-limit and interruption fixtures prove a later reconciliation run rebuilds
+  current desired data and completes any missing PR/check state idempotently.
 - Home, current/legacy posts, taxonomies, search, downloads, newsletter,
   livestream/player, feeds, sitemap, static downloads, and redirects pass smoke
   tests on the public domain.

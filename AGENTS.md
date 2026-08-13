@@ -142,7 +142,10 @@
   begin before both data jobs succeed. After an interruption, the next queued or
   manual run reconciles the branch, PR, and check state idempotently: it reruns
   incomplete data jobs from the last confirmed SHA or completes missing PR/CI
-  actions for an already confirmed final SHA. The CI workflow accepts a
+  actions for an already confirmed final SHA. A canceled/rejected run caused by
+  the 100-run queue limit must be observable; the next accepted or manual run
+  performs a full current-state source reconciliation so missed schedules do not
+  leave data stale. The CI workflow accepts a
   bot branch plus `expected_sha`, invokes its definition from `master`, checks
   out that SHA, and fails if the branch no longer matches. Do not
   assume bot-authored push or pull-request events will start required checks.
@@ -212,5 +215,8 @@
   PR must merge before its managed-branch workflow can run. Verify after merge
   that `update-chat.yml` is absent and the retained `update-livestreams.yml`
   identity is still disabled, then re-enable and manually dispatch it, verify CI
-  on the bot branch's exact final SHA, and enable the new no-bypass rules before
-  any subsequent PR merges.
+  on the bot branch's exact final SHA, and disable/drain the workflow again before
+  the bot PR's final head/check audit. Record both PR head and `master` base SHAs;
+  if either moves, update the branch and rerun CI. Enable no-bypass rules that
+  require the branch to be up to date (or a merge queue), merge with an exact-head
+  guard, then re-enable the workflow.
