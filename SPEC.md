@@ -1,256 +1,221 @@
-# Website Specification
-
-## Purpose
-
-This repository builds and deploys the Chris Titus Tech website at `https://christitus.com/`. The site is a static Hugo website for technology articles, guides, downloads, live-stream archives, recommendations, newsletter pages, RSS/search, and legal/support pages.
-
-The site should remain fast, searchable, durable for old links, and simple to maintain without requiring a JavaScript application framework.
-
-## Primary Audiences
-
-- Viewers looking for Chris Titus Tech articles, Windows/Linux guides, utilities, downloads, and recommendations.
-- Returning readers who browse by category, tag, search, RSS, or older post URLs.
-- Live-stream viewers looking for recent stream recordings and optional Twitch chat replay context.
-- Site maintainers and automation that publish new posts, refresh live-stream data, and deploy static output.
-
-## Platform
-
-- Static site generator: Hugo Extended.
-- Current verified version: `hugo v0.162.0+extended`.
-- Deployment target: Cloudflare Pages.
-- Public canonical URL: `https://christitus.com/`.
-- Primary source configuration: `config.toml`.
-- Generated output directory: `public/`.
-
-## Non-Goals
-
-- The site is not a single-page application.
-- The repository does not currently require a Node package manager build pipeline.
-- The generated `public/` directory is not the canonical source for templates, content, or data.
-- Live-stream automation should not store API keys, OAuth secrets, or downloaded tool credentials in the repository.
-
-## Information Architecture
-
-### Main Navigation
-
-The main menu is configured in `config.toml` and includes:
-
-- Home
-- Downloads
-- Forums
-- Live Streams
-- Newsletter
-- Sections, with category children for Android, Linux, MacOS, Networking, and Windows
-- YouTube
-
-### Footer Navigation
-
-The footer menu includes Privacy and Terms & Conditions. Additional legal/support pages exist as standalone content pages, including refund and RSS.
-
-### Content Types
-
-- Posts: long-form articles and guides under `content/posts/`.
-- Pages: top-level standalone Markdown pages under `content/`.
-- Live streams: section and player pages under `content/live-streams/`.
-- Archive: archive section under `content/archive/`.
-- Data-driven pages: live streams use `data/livestreams.json`.
-
-## Content Model
-
-### Posts
-
-Posts should include front matter with:
-
-- `title`: human-readable page title.
-- `date`: publish date in `YYYY-MM-DD` format.
-- `url`: explicit root-relative permalink.
-- `image`: featured image path, normally `images/<year>-thumbs/<slug>.webp`.
-- `categories`: list of category names.
-- `tags`: list of tag names.
-- `draft`: boolean publication flag.
-
-Posts may include `<!--more-->` to control summaries. Published URLs should be stable once released.
-
-### Images
-
-Featured images and historical post images live under `static/images/`. Current yearly thumbnails use directories such as `static/images/2026-thumbs/`. Hugo imaging is configured for quality 75, Lanczos resampling, smart anchor, and WebP support.
-
-### Search
-
-The home output includes JSON. `layouts/_default/index.json` serializes regular pages from `site.Params.mainSections` with title, tags, categories, content text, and permalink. Search behavior depends on this JSON shape.
-
-### RSS
-
-RSS is enabled for home output. Custom RSS templates exist under `layouts/_default/rss.*`.
-
-## Layout And Rendering
-
-### Base Shell
-
-`layouts/_default/baseof.html` provides:
-
-- HTML document shell.
-- Dark theme attribute from site params.
-- Head, style, structured data, header, footer, and script partials.
-- A skip-to-main-content link.
-- Conditional code-copy script for pages with code blocks.
-
-### Article Pages
-
-Article pages should render:
-
-- Title, publication date, reading time, categories, tags, and featured image.
-- Content with Hugo Goldmark rendering.
-- Reading progress indicator.
-- Sidebar table of contents on configured layouts.
-- Related posts.
-- Social sharing links.
-- Lazy-loaded Utterances comments tied to `ChrisTitusTech/website`.
-- Optional Google ad widgets based on sidebar settings.
-
-### Lists And Taxonomies
-
-List pages paginate posts from `site.Params.mainSections`, render article summaries, and expose category/tag browsing. Existing taxonomy URL behavior should be preserved.
-
-### Metadata And Structured Data
-
-Head and structured-data partials are responsible for:
-
-- SEO metadata.
-- Open Graph and Twitter card data.
-- Canonical URL behavior.
-- Favicons and feed links.
-- JSON-LD for site, page, article, and breadcrumb data where applicable.
-
-Changes to these partials affect every page and require full-site build validation.
-
-## Live-Stream Feature
-
-### Data Source
-
-`data/livestreams.json` contains:
-
-- `updated`: ISO timestamp for the data refresh.
-- `items`: ordered live-stream entries.
-
-Each entry is expected to include:
-
-- `videoId`
-- `title`
-- `description`
-- `thumbnail`
-- `date`
-
-Optional fields:
-
-- `twitchVodId`
-- `hasChatReplay`
-
-### Archive Page
-
-`layouts/live-streams/list.html` renders the live-stream archive from `hugo.Data.livestreams`, filters deleted/private videos, links thumbnails and titles to `/live-streams/player/?v=<videoId>`, and displays a chat badge when `hasChatReplay` is true.
-
-### Player Page
-
-`layouts/live-streams/player.html` reads the `v` query parameter, loads the matching YouTube stream, and can synchronize Twitch chat replay comments from `static/chats/<videoId>.json`.
-
-### Automation
-
-`scripts/fetch-livestreams.py`:
-
-- Reads `YOUTUBE_API_KEY` and playlist configuration.
-- Fetches YouTube playlist items.
-- Writes `data/livestreams.json`.
-- Preserves existing Twitch VOD IDs.
-- Updates `hasChatReplay` based on files in `static/chats/`.
-
-`scripts/match-twitch-vods.py`:
-
-- Reads Twitch credentials from environment variables.
-- Matches Twitch VODs to YouTube livestream entries using timestamp proximity.
-- Updates livestream entries with matched Twitch VOD IDs.
-
-GitHub Actions run these scripts on a schedule and commit changed data files.
-
-## Assets
-
-### CSS
-
-- SCSS source is under `assets/scss/`.
-- Bootstrap and other vendor assets are checked into `assets/css/vendor/` and `assets/js/vendor/`.
-- Additional static CSS lives under `static/css/`.
-
-### JavaScript
-
-- Core theme behavior lives under `assets/js/` and `static/js/`.
-- Search uses vendored Fuse and Mark libraries.
-- Code-copy behavior is loaded only when a page contains code blocks and `params.code_copy_button` is enabled.
-- Live-stream player behavior is embedded in the player template.
-
-### Fonts
-
-Local PT Sans web fonts live under `static/fonts/` and are preloaded by the head partial.
-
-## Configuration Requirements
-
-`config.toml` should preserve:
-
-- `baseURL = "https://christitus.com/"`.
-- `enableGitInfo = true`.
-- Home outputs: HTML, RSS, JSON.
-- Goldmark unsafe rendering and attribute support, because existing content/templates rely on embedded HTML and attributes.
-- Search enabled through params.
-- `mainSections = ["posts"]`.
-- Current social links, logo, favicon, default theme, sidebar, and widget settings unless a task intentionally changes them.
-
-## Redirects And URL Stability
-
-The `_redirects` file supports deployment redirects. Existing post `url` front matter and redirect entries should be treated as compatibility contracts. Avoid changing slugs, deleting redirects, or moving content in ways that break old links unless the task explicitly requires it.
-
-## Security And Privacy
-
-- Never commit API keys, OAuth secrets, private keys, tokens, or secret values.
-- Scripts and workflows should read secrets from environment variables or GitHub Actions secrets.
-- Do not log secrets in automation output.
-- Avoid adding third-party scripts unless their privacy, performance, and security implications are intentional.
-- Keep external embeds limited and documented: YouTube, Twitch/chat replay data, Utterances comments, Google ads, and configured social links are current examples.
-
-## Performance And Accessibility
-
-The site should prioritize:
-
-- Static rendering and minimal client-side JavaScript.
-- Local fonts with preload hints.
-- Lazy loading for non-critical images and comments.
-- WebP thumbnails where available.
-- Clear headings and semantic structure.
-- Keyboard-accessible navigation and controls.
-- Meaningful alt text for content images.
-- Preserving the skip-to-main-content link.
-
-## Validation
-
-Baseline validation for repository changes:
-
-```bash
-hugo --gc --minify
-```
-
-Additional validation:
-
-- Run `hugo server --buildDrafts --buildFuture` for draft/future post visual review.
-- Validate JSON after editing `data/livestreams.json`.
-- Exercise affected Python scripts with safe environment variables or mocks when script behavior changes.
-- Inspect representative pages after high-impact template changes: home, post, category/tag list, search, live-stream archive, live-stream player, downloads, and legal pages.
-- Validate using markdownlint, HTML validators, and accessibility checkers as needed.
-
-## Current Verified Build
-
-As of 2026-06-23, `hugo --gc --minify` succeeds locally with Hugo Extended 0.162.0 and reports:
-
-- 797 pages.
-- 152 paginator pages.
-- 959 static files.
-- 239 aliases.
-
-This build summary is a baseline, not a strict invariant; content changes can legitimately alter counts.
+# Christitus.com Astro Specification
+
+## Product goal
+
+Build `https://christitus.com/` as a fast, durable Astro publication and
+creator hub. The redesign should make articles, downloads, live streams,
+newsletter signup, topics, and YouTube immediately discoverable while
+preserving the archive, integrations, and public URLs accumulated by the Hugo
+site.
+
+## Users and primary workflows
+
+- Readers find current and historical technology guides through the homepage,
+  categories, tags, archive, search, feeds, and existing inbound links.
+- Viewers browse livestream recordings and play a selected YouTube video with
+  synchronized Twitch chat when replay data exists.
+- Customers reach digital downloads, troubleshooting, and recommendations.
+- Subscribers use the newsletter form and its existing reCAPTCHA-backed
+  service.
+- Maintainers publish Markdown and refresh livestream/chat data through the
+  existing Python and GitHub Actions automation.
+
+## Required experience
+
+### Visual system
+
+- Use a modern tech-editorial design that retains the existing Chris Titus Tech
+  logo and cyan `#47c4f1` accent.
+- Provide polished dark and light themes using custom CSS, strong typography,
+  restrained effects, responsive cards, and consistent spacing tokens.
+- Use Astro components and vanilla JavaScript. No Bootstrap, Tailwind, React,
+  Vue, or other client UI runtime is required.
+
+### Navigation and homepage
+
+- Header destinations are Articles, Downloads, Live, Newsletter, and Topics,
+  with search, theme toggle, and a YouTube action. The logo links home.
+- Forums, Recommendations, Archive, RSS, legal pages, and social destinations
+  remain available through secondary/footer navigation.
+- `/videos/` redirects to the public YouTube channel because the source page is
+  empty.
+- The homepage contains one primary and two secondary featured articles,
+  creator action cards, topic discovery, recent livestreams, latest articles,
+  and newsletter/YouTube promotion.
+- Ordered `featuredOrder` values select curated posts; remaining slots use the
+  newest non-draft posts.
+
+### Articles and discovery
+
+- Article pages include title, publish date, reading time, categories, tags,
+  featured media, reading progress, responsive table of contents, sharing,
+  related posts, lazy ads, and lazy Utterances comments.
+- List, category, and tag pages use ten posts per page and retain Hugo-compatible
+  pagination routes. Page-one aliases redirect to the canonical list URL.
+- Search accepts `/search/?s=<query>`, fetches `/index.json` on demand, searches
+  title/content/tags/categories, and exposes loading, results, empty, and error
+  states accessibly.
+- Archive, RSS directory, downloads, newsletter, recommendations, privacy,
+  refund, terms, and 404 pages use the shared redesigned shell.
+
+### Livestreams
+
+- `data/livestreams.json` retains `updated` and `items`. Items require
+  `videoId`, `title`, `description`, `thumbnail`, `date`, and `publishedAt`;
+  `twitchVodId` and `hasChatReplay` remain optional. The Python automation
+  continues to use `publishedAt` when matching unmatched Twitch VODs.
+- The archive features the newest valid stream and paginates remaining streams
+  at 24 items per static page. Deleted/private entries are not rendered.
+- `/live-streams/player/?v=<videoId>` validates the ID, redirects invalid values
+  to the archive, loads YouTube playback, and displays metadata for known IDs.
+- Chat JSON is requested only when present. Missing chat keeps video full width.
+  Loaded chat supports embedded badges/emotes, seek resynchronization, play/
+  pause synchronization, automatic scrolling, and manual resume.
+
+## Content and rendering model
+
+- Astro loads post Markdown from `content/posts/` and standalone page Markdown
+  from the repository's existing `content/` tree.
+- Content with Hugo `build.render: never`, including the duplicate
+  `content/live-streams.md` source, remains excluded from Astro routes. The
+  renderable `content/live-streams/_index.md` owns `/live-streams/`.
+- Published posts require valid `title`, `date`, and `url`. New posts require at
+  least one category, but the loader accepts the existing published posts with
+  empty category lists only for `/2022-recap/`, `/worst-tech-of-2022/`, and
+  `/youtube-telegram-scams/`, and renders those posts without category links.
+  The allowlist is explicit in source and tests; any other uncategorized post
+  fails validation. Draft defaults to false. Duplicate normalized URLs fail the
+  build.
+- Production collections and generated routes exclude drafts and posts whose
+  date is later than the build time. Rendering scheduled content is available
+  only through an explicit local preview mode and is never enabled by the
+  production build command.
+- Preserve historical front-matter extensions. In particular, the `tables`
+  object on `/bad-windows-defender/` supplies both table shortcodes and must
+  survive typed parsing; a test asserts its existing headers and values render.
+- Historical raw HTML remains renderable. `<!--more-->` defines the preferred
+  summary boundary; otherwise a plain-text excerpt is generated.
+- The compatibility renderer supports the only Hugo shortcodes present in
+  published content: `youtube`, `x`, `notice`, `table`, and `shopify`. Unsupported
+  active shortcode syntax is a build error. Hugo examples inside inline or
+  fenced code remain escaped literal content and are excluded from this gate.
+- YouTube embeds use privacy-enhanced URLs and descriptive titles. X embeds have
+  a usable link fallback. Notice and table output is semantic and accessible.
+- Static images, fonts, downloads, chat JSON, and custom files remain under
+  `static/`. Move or copy the tracked `content/posts/2023/english.png` into the
+  Astro public asset tree so `/posts/2023/english.png` remains byte-identical
+  and routable. The site may use Cloudflare image transforms with direct
+  fallback.
+
+## Public interfaces and URL compatibility
+
+- Canonical published `url` values are immutable unless a task explicitly
+  includes redirects and migration approval.
+- Preserve `/`, `/page/N/`, categories, tags, category/tag pagination, top-level
+  utility pages, all post URLs, legacy source-path aliases, and curated rules in
+  `_redirects`.
+- Preserve `/index.json` with entries shaped as `title`, `tags`, `categories`,
+  `contents`, and absolute `permalink`.
+- Preserve `/index.xml`, category/tag RSS endpoints, `/rss/`, and
+  `/sitemap.xml`. Drafts and sitemap-disabled pages are excluded where expected.
+- Canonical, previous/next pagination links, Open Graph, Twitter cards,
+  WebSite/WebPage/BlogPosting/Breadcrumb JSON-LD, favicons, and feed discovery
+  must remain valid.
+- Move supported path rules from the tracked root `_redirects` file into
+  Astro's copied public tree. Pages file redirects must use relative sources.
+  Configure HTTP/HTTPS `www.christitus.com/*` canonicalization as a Cloudflare
+  Single Redirect wildcard rule matching `http*://www.christitus.com/*` and
+  targeting `https://christitus.com/${2}` with query preservation; `${1}` is
+  the optional scheme `s`, while `${2}` is the path capture. These are
+  zone-rule wildcard captures, not the Pages `_redirects` `:splat` placeholder.
+- Replace the unsupported external `/winget` `200` proxy with a supported
+  `/winget` external redirect to
+  `https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1`.
+  Clients following redirects must receive the release script successfully; no
+  Worker/Function proxy is introduced.
+- Preserve `static/_headers` security and feed caching behavior, but replace the
+  Hugo `/css/*` and `/js/*` immutable rules. Only fingerprinted `/_astro/*`
+  assets receive one-year immutable caching; copied CSS and JavaScript use a
+  revalidating or bounded non-immutable policy.
+
+## Integrations, security, and privacy
+
+- Retain Cloudflare Web Analytics, Google ads, Utterances, Shopify Buy Button,
+  YouTube, Twitch chat data, newsletter reCAPTCHA, and configured social links.
+- Cloudflare Web Analytics loads with `defer` on every page so no-interaction
+  pageviews remain counted. Ads, comments, media APIs, and search data load
+  lazily or after user intent where practical.
+- Never commit or log YouTube API keys, Twitch credentials, access tokens,
+  private keys, or environment files.
+- CI runs on pull requests, pushes, and explicit dispatches for an identified
+  ref. Repository rules require type checks, unit tests, production build,
+  route validation, and browser tests to pass before merge, including for
+  administrators. Bot automation dispatches CI for its final branch head SHA
+  with `GITHUB_TOKEN`; it does not depend on token-suppressed push or pull
+  request events.
+- CodeQL, dependency review, Dependabot, and npm audit cover the new JavaScript
+  supply chain. High and critical findings must be resolved or explicitly
+  waived before merge.
+
+## Accessibility, compatibility, and performance
+
+- Target WCAG 2.2 AA. All controls are keyboard operable, have visible focus,
+  and expose correct labels/states. Navigation, search, dialogs, pagination,
+  media, tables, and forms use semantic markup.
+- Support current stable Chrome, Firefox, Safari, and Edge plus current mobile
+  Safari and Chrome. Automated browser tests run Chromium, Firefox, and WebKit
+  projects; manual release evidence covers real Safari, Edge, mobile Safari,
+  and mobile Chrome where Playwright engines are not identical to the shipped
+  browser. Core content remains readable without JavaScript.
+- Respect `prefers-reduced-motion` and avoid layout-dependent animation.
+- Lighthouse CI runs against a local production server using its pinned mobile
+  preset and Chromium dependency. It measures `/`, `/my-ai-workflow/`,
+  `/categories/linux/`, and `/live-streams/` three times and gates on the median
+  run. Each representative route must score at least 90 for performance,
+  accessibility, best practices, and SEO, with LCP under 2.5 seconds and CLS
+  under 0.1. Tool versions and profile settings are committed with the lockfile
+  so local and CI runs are reproducible.
+- Local fonts, responsive images, lazy third-party scripts, and minimal client
+  JavaScript are required performance boundaries.
+
+## Non-goals
+
+- Server-side rendering, Cloudflare Workers application logic, accounts, a CMS,
+  comments hosted by this repository, or a JavaScript single-page application.
+- Rewriting historical article prose or normalizing all historical taxonomy
+  spelling during the framework migration.
+- Replacing the Python livestream/chat data automation or changing its secret
+  contract.
+- Redesigning the logo or introducing a new brand identity.
+
+## Acceptance criteria
+
+- `npm ci` and `npm run validate` pass from a clean checkout using Node 24.
+- All non-draft, non-future content builds; draft and scheduled fixtures are
+  absent from production routes, search, feeds, and sitemap; every supported
+  shortcode has tested output; and no unresolved Hugo template syntax appears
+  outside literal code or `pre` content in generated pages.
+- The generated route/redirect contract covers the Hugo baseline, including
+  mixed-case URLs, feeds, pagination, aliases, and static files.
+- The production artifact contains `_headers` and supported `_redirects`; tests
+  assert `/_astro/*` is immutable, copied CSS/JS are not immutable, and
+  security/feed rules remain present. Preview/production request tests verify
+  the `www` canonical redirect, legacy path redirect, and followed `/winget`
+  response rather than relying on file presence alone.
+- Automated browser tests cover home, post, taxonomy, search, downloads,
+  newsletter, livestream archive/player states, redirects, and 404 behavior in
+  Chromium, Firefox, and WebKit projects.
+- Content validation fixtures prove the three legacy category exceptions pass
+  and a newly added uncategorized post fails.
+- The pinned Lighthouse CI profile passes all representative routes for three
+  runs using the median thresholds defined above.
+- Manual desktop/mobile and light/dark review is recorded with screenshots;
+  keyboard navigation and third-party fallbacks are exercised.
+- A Cloudflare preview uses `npm run build` and `dist/` successfully before
+  production settings change.
+- The post-merge cutover transaction manually dispatches the merged data
+  automation, dispatches CI for the resulting bot-branch head SHA, confirms its
+  pull request has every required check, and only then enables the captured
+  no-bypass repository rules before any bot PR or later change merges.
+- CI, security checks, local review, independent review, and all actionable
+  review threads are clean before merge.

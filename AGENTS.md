@@ -1,140 +1,175 @@
 # Repository Instructions
 
-## Command Execution
+## Command execution
 
-- Prefix shell commands with `rtk` when `rtk` is installed.
-- If `rtk` is unavailable, state that once and use the raw command.
-- In command chains, apply `rtk` to each supported command segment.
-- If `rtk` rejects an unsupported command or flag, retry it raw.
-- Use raw commands when debugging command filtering or shell startup noise.
+- Prefix shell commands with `rtk` when it is installed. If a command or flag
+  is rejected by RTK, retry it raw.
+- Use raw commands when exact stdout, stderr, or exit status is the behavior
+  being tested.
+- Preserve unrelated worktree changes and inspect `git status --short` before
+  editing.
+- Do not expose secrets, tokens, private keys, sessions, or environment files.
 
-## Project Overview
+## Project overview and migration state
 
-- This repository is the Hugo source for `https://christitus.com/`, a static content site for Chris Titus Tech articles, downloads, live-stream archives, newsletter pages, legal pages, and search.
-- The production target is Cloudflare Pages with a custom domain and SSL.
-- The site is intentionally simple: Hugo templates, Markdown content, TOML config, SCSS/CSS, vanilla JavaScript, vendored frontend assets, Python data scripts, and generated static output.
-- There is no Node package manifest in the current project. Do not introduce a Node build step unless the task explicitly requires it and the tradeoff is documented.
+- This repository currently builds `https://christitus.com/` with Hugo and is
+  planned for conversion to a fully static Astro site deployed to Cloudflare
+  Pages. `ROADMAP.md` is the migration source of truth.
+- The site is a modern tech publication and creator hub for articles,
+  downloads, live-stream archives, newsletter signup, recommendations, search,
+  feeds, and legal pages.
+- Astro components, TypeScript, custom CSS, and vanilla browser JavaScript are
+  the preferred implementation. Do not add a client UI framework without an
+  explicit architecture decision.
+- Read `SPEC.md` for product and compatibility requirements and `ROADMAP.md`
+  for phase order, validation gates, and cutover requirements.
 
-## Toolchain
+## Current and target toolchains
 
-- Use Hugo Extended. The current verified local version is `hugo v0.162.0+extended`.
-- Baseline validation: `hugo --gc --minify`.
-- Local preview: `hugo server --buildDrafts --buildFuture` when draft/future content needs review; otherwise `hugo server`.
-- Python scripts under `scripts/` use Python 3.12 in GitHub Actions and rely on `requests`.
-- Markdown lint configuration lives in `.markdownlint-cli2.yaml`, but there is no checked-in package manager setup for running it.
+- Until the Astro foundation exists, use Hugo Extended and validate with
+  `hugo --gc --minify`; generated output is `public/` and is not source.
+- Capture Hugo route baselines in an empty temporary destination or with
+  `--cleanDestinationDir`; never derive contracts from a previously populated
+  `public/` tree because it can contain stale routes.
+- The target runtime is Node.js 24 with npm and a committed lockfile.
+- Once the Astro foundation lands, install with `npm ci`, develop with
+  `npm run dev`, run focused checks with `npm run check` and `npm test`, build
+  with `npm run build`, and use `npm run validate` as the complete local gate.
+- Phase 2 must remove the legacy `.gitignore` entries for `package.json` and
+  `package-lock.json`, add `dist/` and `.astro/`, and commit both package files
+  as reviewed source artifacts.
+- The target Astro production output is `dist/`; `.astro/` is generated type and
+  content metadata. Never edit or commit either directory as source.
 
-## Repository Layout
+## Repository layout
 
-- `config.toml` is the primary Hugo configuration: site metadata, menu items, markup settings, theme parameters, output formats, imaging settings, and social links.
-- `content/` contains Markdown pages and posts.
-- `content/posts/<year>/` contains current dated posts; `content/posts/old/` preserves older migrated posts.
-- `content/live-streams/` defines the live-stream section and player page.
-- `data/livestreams.json` is generated data consumed by live-stream templates.
-- `layouts/` contains all Hugo templates and partials. There is no external Hugo theme directory.
-- `assets/scss/` and `assets/js/` contain Hugo-pipeline and vendored assets used by templates.
-- `static/` contains files copied directly into the published site, including images, fonts, custom JS/CSS, downloads, and chat replay JSON.
-- `public/` is generated Hugo output. Avoid editing it as source unless the user explicitly asks for generated artifact changes.
-- `_redirects` is a deployment artifact for redirects and should be preserved when changing URL behavior.
+- During migration, Hugo source remains under `layouts/`, `assets/`,
+  `archetypes/`, and `config.toml`; do not remove it before the Phase 4 parity
+  gate in `ROADMAP.md`.
+- Target `src/pages/` owns public routes and static endpoints.
+- `src/layouts/` and `src/components/` own the document shell and reusable UI.
+- `src/lib/` owns content queries, route generation, summaries, metadata,
+  redirects, and Markdown compatibility behavior.
+- `src/styles/` owns global design tokens and shared styles.
+- `content/posts/` contains article Markdown. Top-level Markdown under
+  `content/` contains standalone page content.
+- `data/livestreams.json` is generated data consumed by Astro routes.
+- `static/` is Astro's public asset directory and is copied without processing.
+- Hugo also publishes the tracked `content/posts/2023/english.png` at
+  `/posts/2023/english.png`; Phase 2 must move or copy it into Astro's public
+  tree without changing its bytes or public route.
+- `scripts/` and `.github/workflows/` maintain livestream and chat replay data.
+- `tests/` contains unit, route-contract, and browser tests.
 
-## Content Conventions
+## Content contracts
 
-- New posts should use `archetypes/default.md` unless there is a specific reason to diverge.
-- Post front matter should include `title`, `date`, `url`, `image`, `categories`, `tags`, and `draft`.
-- Post URLs are explicit and root-relative, for example `/windows-tool/`. Preserve existing URLs to avoid breaking inbound links.
-- Featured images normally live under `static/images/<year>-thumbs/` and are referenced as `images/<year>-thumbs/<slug>.webp`.
-- Use `<!--more-->` to control summaries on list pages where appropriate.
-- Keep categories aligned with the main navigation taxonomy where possible: Android, Linux, MacOS, Networking, and Windows.
-- Legal and utility pages such as privacy, refund, RSS, search, terms, recommendations, downloads, and newsletter live directly under `content/`.
-- Do not expose credentials, private keys, API tokens, or secret values in content, data files, logs, or documentation.
+- Preserve every published post's explicit, root-relative `url`. URLs are
+  case-sensitive compatibility contracts and must end in `/`.
+- Post front matter requires `title`, `date`, and `url`. New posts also require
+  at least one category. The migration must accept existing published posts
+  with an empty category list only through the exact legacy URL allowlist in
+  `SPEC.md` and render them without category links. Other uncategorized posts
+  fail validation. `image`, `tags`, `draft`, `description`, `author`, and
+  `featuredOrder` are optional.
+- Production builds exclude drafts and posts dated after the build time. A
+  future-content preview must be an explicit opt-in and must not affect the
+  production command or generated route contract.
+- `featuredOrder` is a positive integer used to curate homepage features.
+  Missing feature slots are filled by the newest published posts.
+- Preserve historical front-matter extensions such as `tables`; typed parsing
+  must explicitly model them or pass unknown metadata through without loss.
+- Keep `<!--more-->` markers; list summaries depend on them.
+- Historical Markdown may contain Hugo shortcode syntax. The Astro compatibility
+  renderer supports `youtube`, `x`, paired `notice`, `table`, and `shopify`.
+  Unknown active shortcodes must fail the build, while literal Hugo examples in
+  inline code and fenced code blocks remain escaped article content.
+- Raw HTML is allowed for the historical archive but new content should prefer
+  Markdown and established components.
+- Preserve taxonomy spelling in front matter. Route helpers normalize category
+  and tag URLs consistently without rewriting historical content.
+- Do not rewrite archived posts broadly as part of unrelated work.
 
-## Template And Frontend Conventions
+## URL, metadata, and integration boundaries
 
-- Templates use Hugo Go templates with Bootstrap-oriented markup and custom partials.
-- `layouts/_default/baseof.html` defines the document shell, skip link, header, footer, scripts, and conditional code-copy script.
-- `layouts/partials/head.html`, `style.html`, `script.html`, and `structured-data.html` control metadata, critical CSS, asset loading, and JSON-LD. Treat these as high-impact files.
-- Search is generated from `layouts/_default/index.json` and includes regular pages from `site.Params.mainSections`.
-- Single posts include reading progress, sidebar table of contents, related posts, social sharing, lazy-loaded Utterances comments, and optional Google ad widgets.
-- Prefer existing partials and SCSS structure over adding inline one-off markup or styles.
-- Use accessible markup: preserve the skip link, meaningful `alt` text, semantic headings, focusable controls, and `aria` labels on icon-only controls.
-- Keep performance-sensitive choices intact unless the task is specifically about changing them: local fonts, preload/preconnect hints, lazy loading, minification, and WebP thumbnails.
+- Preserve canonical posts/pages, homepage and taxonomy pagination, legacy
+  aliases, `/search/`, `/index.json`, `/index.xml`, taxonomy feeds,
+  `/sitemap.xml`, `/live-streams/`, and `/live-streams/player/?v=...`.
+- Redirect the empty historical `/videos/` page to the YouTube channel.
+- Move supported path rules from root `_redirects` to `static/_redirects` during
+  Phase 2. Configure `www` canonicalization as a Cloudflare zone redirect, not
+  a Pages file rule; the dual-scheme wildcard matches
+  `http*://www.christitus.com/*` and targets `https://christitus.com/${2}`
+  because `${1}` captures the optional scheme `s`. Replace the unsupported
+  external `/winget` `200` proxy with a relative-source redirect to the latest
+  WinUtil release asset and validate the followed response.
+- Migrate `static/_headers` before cutover: immutable caching applies only to
+  Astro's fingerprinted `/_astro/*` output, while copied CSS/JS must not inherit
+  the old Hugo immutable policy. Preserve security and feed cache headers.
+- Treat head metadata, structured data, feeds, sitemap, redirect generation,
+  search indexing, and the base layout as high-impact code.
+- Retain Cloudflare analytics as a deferred script on every page so passive
+  pageviews remain visible. Keep Google ads, Utterances, YouTube/Twitch, and
+  Shopify lazy or intent-driven where practical, and retain configured social
+  links. Do not add new third-party scripts without documenting privacy,
+  performance, and security impact.
+- The livestream JSON, Python script, and secret contracts remain stable;
+  `publishedAt` remains required because Twitch VOD matching consumes it. Phase
+  4 may change the workflows' delivery path from direct pushes to a bot branch
+  and pull request so protected-branch checks still apply. The CI workflow must
+  accept an explicit ref through `workflow_dispatch`, and the data workflow
+  must dispatch it for the final bot-branch head SHA with `GITHUB_TOKEN`; do not
+  assume bot-authored push or pull-request events will start required checks.
+  Never hard-code YouTube or Twitch credentials.
 
-## Live-Stream Data Contract
+## Frontend conventions
 
-- `data/livestreams.json` has an `updated` timestamp and an `items` array.
-- Live-stream items are expected to include YouTube fields such as `videoId`, `title`, `description`, `thumbnail`, and `date`.
-- Optional Twitch replay fields include `twitchVodId` and `hasChatReplay`.
-- `layouts/live-streams/list.html` renders the archive from `hugo.Data.livestreams`.
-- `layouts/live-streams/player.html` expects a `v` query parameter, embeds the YouTube player, and can synchronize Twitch chat replays from `static/chats/<videoId>.json`.
-- `scripts/fetch-livestreams.py` fetches YouTube playlist data and preserves existing Twitch/chat fields when refreshing `data/livestreams.json`.
-- `scripts/match-twitch-vods.py` matches Twitch VODs to YouTube streams by timestamp.
-- GitHub Actions update livestream data and chat replays using repository secrets. Do not hard-code those secrets.
+- Use semantic HTML and WCAG 2.2 AA behavior: a skip link, keyboard-operable
+  navigation, visible focus, meaningful labels, logical headings, reduced
+  motion support, and useful image alt text.
+- Use the custom CSS token system and scoped component styles. Do not re-add
+  Bootstrap or Tailwind.
+- Default to dark theme while providing a complete light theme and respecting
+  stored user preference.
+- Keep browser JavaScript progressive, small, and local to the feature that
+  needs it. Media, comments, ads, and search data should load lazily.
+- Preserve Cloudflare image resizing with a direct asset fallback.
 
-## GitHub Actions
+## Change and validation rules
 
-- `.github/workflows/update-livestreams.yml` refreshes `data/livestreams.json` on a six-hour schedule and commits changes when data changed.
-- `.github/workflows/update-chat.yml` runs after the livestream workflow, matches Twitch VODs, downloads chat replay JSON, refreshes chat flags, and commits changes.
-- Workflow scripts require `YOUTUBE_API_KEY`, `TWITCH_CLIENT_ID`, and `TWITCH_CLIENT_SECRET` secrets.
-- If workflow behavior changes, validate both local script behavior and the generated data shape consumed by Hugo templates.
+- Make small reviewable commits even though the migration is delivered in one
+  pull request.
+- Validate focused behavior while implementing. Before the Astro foundation
+  exists, run `hugo --gc --minify`; after it lands, run `npm run validate` as
+  the complete gate.
+- For content changes, verify schema parsing, draft and future-date exclusion,
+  and production rendering.
+- For route or metadata changes, compare the generated route contract and
+  inspect JSON/XML output.
+- For visual changes, inspect representative mobile and desktop pages in both
+  themes and preserve approved screenshots. Automated browser coverage must
+  run Chromium, Firefox, and WebKit; release evidence also records real Safari,
+  Edge, mobile Safari, and mobile Chrome validation.
+- Run the pinned Lighthouse CI mobile profile against the representative routes
+  defined in `SPEC.md`; use three runs and enforce the median score and metric
+  thresholds in CI.
+- For automation changes, use mocked or safe inputs and ensure logs cannot
+  reveal secrets.
+- Before reporting completion, inspect the final diff and status, run local
+  review including untracked files, obtain independent review, resolve valid
+  findings, and report skipped manual validation explicitly.
 
-## Change Guidelines
+## Deployment
 
-- Inspect current git status before editing and preserve unrelated user changes.
-- Keep changes small and reviewable. Avoid broad formatting passes across archived content unless requested.
-- Do not rewrite historical posts, URLs, redirects, generated chat JSON, or generated `public/` output as part of unrelated work.
-- When changing templates, verify both desktop and mobile layout implications, especially article pages, navigation, search, and live-stream player pages.
-- When changing content, verify front matter parses and the Hugo build still succeeds.
-- When changing data scripts or workflows, verify failure behavior and avoid logging secrets or raw tokens.
-- Prefer structured parsers for TOML, JSON, YAML, and Markdown front matter when doing bulk edits.
-
-## Validation Checklist
-
-- Run `hugo --gc --minify` for any template, config, data, static asset, or content change.
-- For draft or future posts, also run `hugo server --buildDrafts --buildFuture` when visual review matters.
-- For Python script changes, run the affected script with safe test inputs or mocked environment where practical.
-- For live-stream changes, confirm `data/livestreams.json` remains valid JSON and the list/player templates still have the fields they expect.
-- Report any skipped validation and why.
-
-<!-- headroom:rtk-instructions -->
-## RTK (Rust Token Killer) - Token-Optimized Commands
-
-When running shell commands, **always prefix with `rtk`**. This reduces context
-usage by 60-90% with zero behavior change. If rtk has no filter for a command,
-it passes through unchanged — so it is always safe to use.
-
-## Key Commands
-
-```bash
-# Git (59-80% savings)
-rtk git status          rtk git diff            rtk git log
-
-# Files & Search (60-75% savings)
-rtk ls <path>           rtk read <file>         rtk grep <pattern>
-rtk find <pattern>      rtk diff <file>
-
-# Test (90-99% savings) — shows failures only
-rtk pytest tests/       rtk cargo test          rtk test <cmd>
-
-# Build & Lint (80-90% savings) — shows errors only
-rtk tsc                 rtk lint                rtk cargo build
-rtk prettier --check    rtk mypy                rtk ruff check
-
-# Analysis (70-90% savings)
-rtk err <cmd>           rtk log <file>          rtk json <file>
-rtk summary <cmd>       rtk deps                rtk env
-
-# GitHub (26-87% savings)
-rtk gh pr view <n>      rtk gh run list         rtk gh issue list
-
-# Infrastructure (85% savings)
-rtk docker ps           rtk kubectl get         rtk docker logs <c>
-
-# Package managers (70-90% savings)
-rtk pip list            rtk pnpm install        rtk npm run <script>
-```
-
-## Rules
-
-- In command chains, prefix each segment: `rtk git add . && rtk git commit -m "msg"`
-- For debugging, use raw command without rtk prefix
-- `rtk proxy <cmd>` runs command without filtering but tracks usage
-<!-- /headroom:rtk-instructions -->
+- Current Cloudflare Pages build command/output are `hugo --gc --minify` and
+  `public`. Do not change them before the preview and cutover gate.
+- Target Cloudflare Pages build command/output are `npm run build` and `dist`.
+- Do not add the Cloudflare Astro server adapter; this project uses static
+  output.
+- Validate a preview deployment before production cutover. Rollback is the
+  previous Cloudflare deployment, restoration of the captured Hugo Pages
+  settings, redirects, and pre-migration repository rules, plus a revert of the
+  migration pull request.
+- Treat repository-rule activation as a post-merge cutover step. The migration
+  PR must merge before its managed-branch workflows can run; then manually
+  dispatch them, verify CI on the bot branch's exact final SHA, and enable the
+  new no-bypass rules before any subsequent PR merges.
