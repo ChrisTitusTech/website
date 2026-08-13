@@ -39,6 +39,12 @@ Markdown rendering while Hugo remains available for comparison.
 
 - Add Astro, TypeScript, npm scripts, content collections, site configuration,
   shared layouts, and core utilities.
+- Add `templates/post.md.tmpl` and a repository-owned
+  `npm run new:post -- "<title>"` scaffolder. It writes the dated Markdown path,
+  generates the explicit URL and thumbnail path, defaults to `draft: true`,
+  supports `--date YYYY-MM-DD` and repeatable `--category` flags, presents every
+  canonical category defined in `SPEC.md`, and refuses invalid categories,
+  normalized URL collisions, or file overwrites.
 - Remove the legacy ignore rules for `package.json` and `package-lock.json`, add
   `dist/` and `.astro/` to `.gitignore`, commit both package files, and move root
   `_redirects` path rules to `static/_redirects`.
@@ -75,6 +81,13 @@ Markdown rendering while Hugo remains available for comparison.
   rendered table assertions cover the existing `tables` front matter.
 - The three explicit legacy uncategorized URLs render, while a new
   uncategorized-post fixture fails validation.
+- Scaffolder tests cover deterministic date/year and slug generation, required
+  front matter, draft defaults, multiple categories including `Software Dev`,
+  invalid-category rejection, non-interactive missing-category failure,
+  rejection of historical casing as new input, migration acceptance of existing
+  `macOS` and `macos` values, case-sensitive URL comparison, trailing-slash
+  collision variants, and overwrite protection. Generated fixtures pass the
+  same content schema as manually authored posts.
 
 ## Phase 3: Editorial redesign and feature parity
 

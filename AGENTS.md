@@ -71,6 +71,18 @@
   `SPEC.md` and render them without category links. Other uncategorized posts
   fail validation. `image`, `tags`, `draft`, `description`, `author`, and
   `featuredOrder` are optional.
+- Once the Phase 2 Astro foundation lands, create posts with
+  `npm run new:post -- "<title>" [--date YYYY-MM-DD] [--category "<name>" ...]`.
+  The repository-owned scaffolder renders `templates/post.md.tmpl` into
+  `content/posts/<year>/<slug>.md`, defaults new posts to drafts, uses the
+  current `America/Chicago` calendar date when `--date` is absent, and refuses
+  to overwrite files. Follow `SPEC.md` for exact slug and URL-collision rules.
+- The scaffolder requires at least one category and offers Android, ChromeOS,
+  Development, FreeBSD, Hardware, Linux, MacOS, Misc, Networking, Software Dev,
+  Titus, Virtualization, Windows, Windows Server, and YouTube. New posts use
+  `MacOS`; new-post category input rejects the historical `macOS` and `macos`
+  spellings, while the migration loader preserves and accepts them in existing
+  content. `Software Dev` maps to `/categories/software-dev/`.
 - Production builds exclude drafts and posts dated after the build time. A
   future-content preview must be an explicit opt-in and must not affect the
   production command or generated route contract.

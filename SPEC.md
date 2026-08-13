@@ -58,6 +58,40 @@ site.
 - Archive, RSS directory, downloads, newsletter, recommendations, privacy,
   refund, terms, and 404 pages use the shared redesigned shell.
 
+### Editorial authoring
+
+- `npm run new:post -- "<title>" [--date YYYY-MM-DD]
+  [--category "<name>" ...]` provides the Astro replacement for Hugo archetypes.
+  The date defaults to the current calendar day in `America/Chicago`; explicit
+  dates use strict `YYYY-MM-DD`. The date determines both front matter and the
+  `content/posts/<year>/` directory.
+- Slugs are deterministic: trim the title, apply Unicode NFKD normalization,
+  remove combining marks, lowercase it, replace each maximal run outside ASCII
+  `[a-z0-9]` with one hyphen, trim leading/trailing hyphens, and reject an empty
+  result. The scaffolder writes `<slug>.md`, emits `/<slug>/` as the explicit
+  URL, and sets the image to `images/<year>-thumbs/<slug>.webp`.
+- The template includes the title, date, URL, image, selected categories, empty
+  tags, `draft: true`, and a `<!--more-->` summary boundary. The command refuses
+  to overwrite an existing destination file.
+- `--category` is repeatable. When it is omitted, an interactive terminal
+  prompts for one or more choices; non-interactive use fails instead of guessing.
+  Canonical choices are Android, ChromeOS, Development, FreeBSD, Hardware,
+  Linux, MacOS, Misc, Networking, Software Dev, Titus, Virtualization, Windows,
+  Windows Server, and YouTube. Values outside this exact set fail validation.
+- New posts use the canonical `MacOS` spelling, while migrated `macOS` and
+  `macos` values remain unchanged. The canonical-set check applies to
+  `--category` input; it rejects those historical variants for new posts. The
+  migration loader separately accepts them only when reading existing content.
+  `Software Dev` generates the normalized taxonomy route
+  `/categories/software-dev/`.
+- Generated posts use the same content schema and validation path as manually
+  authored Markdown. URL collision checks create comparison keys by enforcing
+  one leading and trailing slash and collapsing repeated slashes without
+  changing character case. Thus `/Post/` and `/post/` remain distinct, while
+  `/post`, `post/`, and `/post//` collide with `/post/`. Comparison never
+  rewrites historical front matter. Invalid categories, dates, normalized URL
+  collisions, and existing destination files fail with actionable errors.
+
 ### Livestreams
 
 - `data/livestreams.json` retains `updated` and `items`. Items require
@@ -208,6 +242,13 @@ site.
 - Content validation fixtures prove the three legacy category exceptions pass
   and a newly added uncategorized post fails. A homepage-selection fixture
   proves that a future-dated, non-draft post cannot fill a featured slot.
+- Scaffolder fixtures verify template output under a fixed
+  `America/Chicago` clock, explicit dates, slug edge cases, every canonical
+  category, repeatable category flags, non-interactive failures, draft defaults,
+  rejection of `macOS` and `macos` as new category inputs, acceptance of both in
+  migrated fixtures, case-sensitive URL preservation, trailing-slash collision
+  variants, and overwrite protection. The three empty-category URL exceptions
+  remain covered separately by the content-validation fixtures.
 - The pinned Lighthouse CI profile passes all representative routes for three
   runs using the median thresholds defined above.
 - Manual desktop/mobile and light/dark review is recorded with screenshots;
