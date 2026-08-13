@@ -1,7 +1,12 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import LivestreamArchive from "../../components/LivestreamArchive.astro";
 import livestreams from "../../../data/livestreams.json";
+const items = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId));
+const pageSize = 24;
+const featured = items[0];
+const archive = items.slice(1);
 ---
 <BaseLayout title="Live Streams" description="Chris Titus Tech live stream recordings" canonical="/live-streams/">
-  <section class="container"><header class="article-header"><p class="eyebrow">Watch the archive</p><h1>Live Streams</h1></header><div class="grid post-grid">{livestreams.items.map((stream) => <article class="card"><a href={`/live-streams/player/?v=${encodeURIComponent(stream.videoId)}`}><img src={stream.thumbnail} width="640" height="360" loading="lazy" alt="" /></a><div class="card-body"><h2><a href={`/live-streams/player/?v=${encodeURIComponent(stream.videoId)}`}>{stream.title}</a></h2><p class="meta">{new Date(stream.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</p></div></article>)}</div></section>
+  <LivestreamArchive items={archive.slice(0, pageSize)} featured={featured} page={1} pages={Math.ceil(archive.length / pageSize)} />
 </BaseLayout>

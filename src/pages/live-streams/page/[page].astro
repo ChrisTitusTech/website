@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import LivestreamArchive from "../../../components/LivestreamArchive.astro";
+import livestreams from "../../../../data/livestreams.json";
+
+const pageSize = 24;
+const items = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId));
+const archive = items.slice(1);
+const pages = Math.ceil(archive.length / pageSize);
+export async function getStaticPaths() {
+  const { default: data } = await import("../../../../data/livestreams.json");
+  const count = Math.max(0, data.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId)).length - 1);
+  const totalPages = Math.ceil(count / 24);
+  return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
+    const page = index + 2;
+    return { params: { page: String(page) }, props: { page } };
+  });
+}
+const page = Astro.props.page as number;
+---
+<BaseLayout title={`Live Streams - Page ${page}`} description="Chris Titus Tech live stream recordings" canonical={`/live-streams/page/${page}/`}>
+  <LivestreamArchive items={archive.slice((page - 1) * pageSize, page * pageSize)} page={page} pages={pages} />
+</BaseLayout>

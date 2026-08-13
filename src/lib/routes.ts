@@ -106,7 +106,14 @@ export function legacyFeedPaths(): string[] {
 export function buildPageDescriptors(posts: Post[], pages: Page[]): PageDescriptor[] {
   const output: PageDescriptor[] = [];
   const seen = new Set<string>(["/"]);
-  const reserved = new Set(["/search/", "/live-streams/", "/live-streams/player/", "/videos/"]);
+  const reserved = new Set([
+    "/search/",
+    "/live-streams/",
+    "/live-streams/player/",
+    "/videos/",
+    "/newsletter/",
+    "/rss/",
+  ]);
 
   for (const post of posts) {
     const route = routeKey(post.data.url);

@@ -8,6 +8,7 @@ export const GET: APIRoute = async () => {
   const routes = [
     "/",
     "/live-streams/",
+    "/newsletter/",
     ...descriptors
       .filter((entry) => entry.kind !== "redirect")
       .filter((entry) => {

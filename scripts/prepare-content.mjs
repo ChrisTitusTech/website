@@ -81,7 +81,7 @@ function renderShortcode(name, rawArgs, data, file) {
   }
   if (name === "table") return renderTable(argument, data.tables, file);
   if (name === "shopify") {
-    return '<div class="shopify-products" data-shopify-products><p><a href="https://www.cttstore.com/">Browse digital downloads at the CTT Store</a></p></div>';
+    return '<div class="shopify-products" data-shopify-products><button class="primary-button" type="button" data-shopify-load>Load digital downloads</button><p><a href="https://www.cttstore.com/">Or browse the CTT Store directly</a></p></div>';
   }
   throw new Error(`${file}: unsupported active Hugo shortcode ${name}`);
 }

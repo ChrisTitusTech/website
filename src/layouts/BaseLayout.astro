@@ -9,6 +9,7 @@ interface Props {
   image?: string;
   type?: "website" | "article";
   publishedTime?: string;
+  robots?: string;
 }
 
 const {
@@ -18,6 +19,7 @@ const {
   image = "/images/bannerbackground.webp",
   type = "website",
   publishedTime,
+  robots,
 } = Astro.props;
 const pageTitle = title === site.title ? title : `${title} | ${site.name}`;
 const canonicalUrl = new URL(canonical, site.url).toString();
@@ -67,9 +69,12 @@ const structuredData = JSON.stringify({
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    {robots && <meta name="robots" content={robots} />}
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
     <link rel="alternate" type="application/rss+xml" title={site.name} href="/index.xml" />
+    <link rel="preload" href="/fonts/pt-sans-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/pt-sans-700.woff2" as="font" type="font/woff2" crossorigin />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />
@@ -90,23 +95,21 @@ const structuredData = JSON.stringify({
     <header class="site-header">
       <nav class="nav container" aria-label="Primary navigation">
         <a class="nav-logo" href="/" aria-label="Chris Titus Tech home"><img src="/images/navlogo.webp" width="248" height="50" alt="Chris Titus Tech" /></a>
-        <div class="nav-links">
+        <button class="menu-button icon-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-links">Menu</button>
+        <div class="nav-links" id="primary-links" data-menu>
           <a href="/posts/">Articles</a><a href="/downloads/">Downloads</a><a href="/live-streams/">Live</a><a href="/newsletter/">Newsletter</a><a href="/categories/">Topics</a><a href="/search/">Search</a>
-          <button class="icon-button" type="button" data-theme-toggle aria-label="Toggle color theme">Theme</button>
+          <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to light theme"><span aria-hidden="true" data-theme-icon>☀</span><span class="sr-only">Change color theme</span></button>
           <a href="https://youtube.com/@christitustech">YouTube</a>
         </div>
       </nav>
     </header>
     <main id="main"><slot /></main>
     <footer class="site-footer">
-      <div class="container"><div class="footer-links"><a href="https://forum.christitus.com/">Forums</a><a href="/recommendations/">Recommendations</a><a href="/archive/">Archive</a><a href="/rss/">RSS</a><a href="/privacy/">Privacy</a><a href="/terms-conditions/">Terms</a></div><p>© {new Date().getFullYear()} Chris Titus Tech</p></div>
+      <div class="container"><div class="footer-links"><a href="https://forum.christitus.com/">Forums</a><a href="/recommendations/">Recommendations</a><a href="/archive/">Archive</a><a href="/rss/">RSS</a><a href="https://youtube.com/@christitustech">YouTube</a><a href="https://twitch.tv/christitustech">Twitch</a><a href="https://github.com/christitustech">GitHub</a><a href="/privacy/">Privacy</a><a href="/refund/">Refunds</a><a href="/terms-conditions/">Terms</a></div><p>© {new Date().getFullYear()} Chris Titus Tech</p></div>
     </footer>
-    <script is:inline>
-      document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
-        const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
-        document.documentElement.dataset.theme = next;
-        localStorage.setItem("theme", next);
-      });
+    <script>
+      import "../scripts/site.ts";
     </script>
+    <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"48e9040046c743328a1abd6b87ec22fd"}'></script>
   </body>
 </html>

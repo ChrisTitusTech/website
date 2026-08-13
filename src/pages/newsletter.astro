@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Chris Titus Tech Newsletter" description="Get Chris Titus Tech updates and launch announcements" canonical="/newsletter/">
+  <section class="reading newsletter-page"><header class="article-header"><p class="eyebrow">Stay current</p><h1>Be the first to know</h1><p class="lede">Get updates, launch announcements, and new guides by joining the newsletter.</p></header>
+    <form class="newsletter-form card" action="https://newsletter.christitus.com/subscribe" method="post" accept-charset="utf-8" data-newsletter-form>
+      <div class="card-body"><label for="newsletter-name">Name</label><input type="text" name="name" id="newsletter-name" autocomplete="name" /><label for="newsletter-email">Email</label><input type="email" name="email" id="newsletter-email" autocomplete="email" required /><div class="g-recaptcha" data-sitekey="6Lcej6IpAAAAAEqICzfK-10FyzNaeameNiQffcov"></div><div class="honeypot" aria-hidden="true"><label for="newsletter-hp">Leave this field blank</label><input type="text" name="hp" id="newsletter-hp" tabindex="-1" autocomplete="off" /></div><input type="hidden" name="list" value="BdlkPnowdu7nhx6niCzQUw" /><input type="hidden" name="subform" value="yes" /><button class="primary-button" type="submit" name="submit">Sign me up</button><p class="muted">You are signing up to receive emails from Chris Titus Tech.</p><p class="muted" aria-live="polite" data-recaptcha-status></p></div>
+    </form>
+  </section>
+  <script>
+    const form = document.querySelector("[data-newsletter-form]");
+    if (form && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => { if (entries.some((entry) => entry.isIntersecting)) { const script = document.createElement("script"); script.src = "https://www.google.com/recaptcha/api.js"; script.async = true; script.defer = true; script.addEventListener("error", () => { const status = document.querySelector("[data-recaptcha-status]"); if (status) status.textContent = "Spam protection is unavailable. Please try again later."; }, { once: true }); document.head.append(script); observer.disconnect(); } }, { rootMargin: "400px" });
+      observer.observe(form);
+    }
+  </script>
+</BaseLayout>

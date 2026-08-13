@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPublishedPosts, taxonomy } from "../lib/content";
+const categories = [...taxonomy(await getPublishedPosts(), "categories").entries()].sort((a, b) => a[1].name.localeCompare(b[1].name));
+---
+<BaseLayout title="RSS Feeds" description="Subscribe to Chris Titus Tech articles by RSS" canonical="/rss/" robots="noindex, follow">
+  <section class="reading"><header class="article-header"><p class="eyebrow">Subscribe your way</p><h1>RSS Feeds</h1><p class="lede">Follow every article or choose a topic-specific feed.</p></header><div class="card"><div class="card-body"><h2>All articles</h2><p><a href="/index.xml">Subscribe to the main RSS feed</a></p></div></div><h2>Topics</h2><div class="feed-list">{categories.map(([slug, group]) => <a class="chip" href={`/categories/${slug}/index.xml`}>{group.name} RSS</a>)}</div></section>
+</BaseLayout>

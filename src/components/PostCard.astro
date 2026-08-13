@@ -6,9 +6,10 @@ interface Props { post: Post; heading?: "h2" | "h3" }
 const { post, heading = "h2" } = Astro.props;
 const Heading = heading;
 const image = post.data.image ? `/${post.data.image.replace(/^\//, "")}` : "/images/bannerbackground.webp";
+const transformed = (width: number) => `/cdn-cgi/image/width=${width},height=${Math.round(width * 9 / 16)},fit=cover,format=auto${image}`;
 ---
 <article class="card">
-  <a href={post.data.url}><img src={image} width="640" height="360" loading="lazy" alt="" /></a>
+  <a href={post.data.url}><img src={image} srcset={`${transformed(320)} 320w, ${transformed(640)} 640w`} sizes="(max-width: 700px) 100vw, 640px" data-cf-image width="640" height="360" loading="lazy" alt={`${post.data.title} featured image`} /></a>
   <div class="card-body">
     <p class="meta"><time datetime={post.data.date}>{displayDate(post)}</time></p>
     <Heading><a href={post.data.url}>{post.data.title}</a></Heading>

@@ -72,6 +72,7 @@ for (const post of excludedPosts) if (searchUrls.has(post.url)) throw new Error(
 
 const sitemap = await readFile(path.join(root, "dist/sitemap.xml"), "utf8");
 const feed = await readFile(path.join(root, "dist/index.xml"), "utf8");
+if (!sitemap.includes("https://christitus.com/newsletter/")) throw new Error("newsletter is missing from sitemap");
 for (const post of expectedPosts) {
   if (post.sitemap?.disable !== true && !sitemap.includes(`https://christitus.com${post.url}`)) throw new Error(`published post is missing from sitemap: ${post.url}`);
   if (!feed.includes(`https://christitus.com${post.url}`)) throw new Error(`published post is missing from RSS: ${post.url}`);
@@ -101,6 +102,9 @@ for (const file of htmlFiles) {
   if (/\{\{(?:&lt;|<)/.test(visible)) throw new Error(`${file} contains unresolved Hugo template syntax`);
 }
 const representative = await readFile(path.join(root, "dist/my-ai-workflow/index.html"), "utf8");
+if (!representative.includes("/cdn-cgi/image/") || !representative.includes("data-cf-image")) {
+  throw new Error("representative article is missing Cloudflare responsive image sources");
+}
 const jsonLd = representative.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1];
 if (!jsonLd) throw new Error("representative article is missing JSON-LD");
 const graph = JSON.parse(jsonLd);

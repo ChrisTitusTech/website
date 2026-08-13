@@ -4,7 +4,10 @@ import path from "node:path";
 import fg from "fast-glob";
 import YAML from "yaml";
 
+import livestreams from "../data/livestreams.json" with { type: "json" };
 import site from "../src/data/site.json" with { type: "json" };
+
+const validLivestreamCount = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId)).length;
 
 export function routeKey(value) {
   const segments = value.split(/[?#]/)[0].split("/").filter(Boolean);
@@ -64,7 +67,18 @@ function addPaginated(routes, base, count, minimumPages = 1) {
 }
 
 function derivedRoutes(posts) {
-  const routes = new Set(["/index.xml", "/index.json", "/sitemap.xml", "/404.html"]);
+  const routes = new Set([
+    "/index.xml",
+    "/index.json",
+    "/sitemap.xml",
+    "/404.html",
+    "/search/",
+    "/live-streams/",
+    "/live-streams/player/",
+    "/videos/",
+    "/newsletter/",
+    "/rss/",
+  ]);
   const categories = new Map();
   const tags = new Map();
   for (const post of posts) {
@@ -82,6 +96,8 @@ function derivedRoutes(posts) {
   addPaginated(routes, "/archive/", posts.length);
   routes.add("/posts/index.xml");
   routes.add("/archive/index.xml");
+  const livestreamPages = Math.max(1, Math.ceil(Math.max(0, validLivestreamCount - 1) / 24));
+  for (let page = 1; page <= livestreamPages; page += 1) routes.add(`/live-streams/page/${page}/`);
 
   for (const [field, groups] of [["categories", categories], ["tags", tags]]) {
     const root = `/${field}/`;
@@ -116,6 +132,11 @@ export async function buildInventory(candidate, root = process.cwd()) {
   }
 
   const currentDerived = derivedRoutes(posts);
+  for (const route of currentDerived) {
+    const normalized = publicRoute(route);
+    routes.add(normalized);
+    outputPaths.add(publicOutputPath(normalized));
+  }
   const futurePosts = candidate ? [...posts, candidate] : posts;
   const futureDerived = derivedRoutes(futurePosts);
   if (candidate) {

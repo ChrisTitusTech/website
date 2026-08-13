@@ -78,6 +78,7 @@ describe("post scaffolder", () => {
 
   it("rejects an existing route and accepts a new Software Dev route", async () => {
     await expect(assertCandidateAvailable({ title: "Duplicate", date: "2026-08-13", url: "/my-ai-workflow/", categories: ["Software Dev"], tags: [] })).rejects.toThrow("URL collision");
+    await expect(assertCandidateAvailable({ title: "Reserved", date: "2026-08-13", url: "/live-streams/page/2/", categories: ["Software Dev"], tags: [] })).rejects.toThrow("URL collision");
     await expect(assertCandidateAvailable({ title: "Unique", date: "2099-01-01", url: "/vitest-unique-scaffold-route/", categories: ["Software Dev"], tags: [] })).resolves.toBeUndefined();
   });
 

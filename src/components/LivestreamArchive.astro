@@ -1,0 +1,19 @@
+---
+import Pagination from "./Pagination.astro";
+
+interface Stream {
+  videoId: string;
+  title: string;
+  date: string;
+  thumbnail: string;
+  hasChatReplay?: boolean;
+}
+interface Props { items: Stream[]; page: number; pages: number; featured?: Stream }
+const { items, page, pages, featured } = Astro.props;
+---
+<section class="container">
+  <header class="article-header"><p class="eyebrow">Watch the archive</p><h1>Live Streams</h1><p class="lede">Full recordings, with synchronized Twitch chat when a replay is available.</p></header>
+  {page === 1 && featured && <article class="stream-feature card"><a href={`/live-streams/player/?v=${encodeURIComponent(featured.videoId)}`}><img src={featured.thumbnail} width="640" height="360" alt={`${featured.title} stream thumbnail`} /></a><div class="card-body"><p class="eyebrow">Latest recording</p><h2><a href={`/live-streams/player/?v=${encodeURIComponent(featured.videoId)}`}>{featured.title}</a></h2><p class="meta">{featured.date}{featured.hasChatReplay ? " · Chat replay" : ""}</p></div></article>}
+  <div class="grid stream-grid">{items.map((stream) => <article class="card"><a href={`/live-streams/player/?v=${encodeURIComponent(stream.videoId)}`}><img src={stream.thumbnail} width="640" height="360" loading="lazy" alt={`${stream.title} stream thumbnail`} /></a><div class="card-body"><h2><a href={`/live-streams/player/?v=${encodeURIComponent(stream.videoId)}`}>{stream.title}</a></h2><p class="meta">{stream.date}{stream.hasChatReplay ? " · Chat replay" : ""}</p></div></article>)}</div>
+  <Pagination page={page} pages={pages} base="/live-streams/" />
+</section>

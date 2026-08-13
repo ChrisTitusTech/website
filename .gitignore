@@ -10,6 +10,9 @@ dist/
 .astro-content/
 *.log
 node_modules/
+.lighthouseci/
+test-results/
+playwright-report/
 .env
 *.sh
 .DS_Store

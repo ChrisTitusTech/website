@@ -1,4 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Page not found" canonical="/404.html"><section class="reading"><p class="eyebrow">404</p><h1>That page could not be found.</h1><p>Try <a href="/search/">searching the archive</a> or return to the <a href="/">homepage</a>.</p></section></BaseLayout>
+<BaseLayout title="Page not found" description="The requested page could not be found" canonical="/404.html" robots="noindex, nofollow">
+  <section class="reading error-page"><p class="eyebrow">404</p><h1>That page wandered off.</h1><p class="lede">Try a search, browse the latest articles, or head back home.</p><div class="error-actions"><a class="primary-button" href="/search/">Search the site</a><a href="/">Return home</a></div></section>
+</BaseLayout>
