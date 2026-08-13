@@ -8,15 +8,16 @@ import livestreams from "../../data/livestreams.json";
 const allPosts = await getAllPosts();
 const posts = await getPublishedPosts();
 const featured = homepagePosts(allPosts);
+const featuredImage = featured[0]?.data.image ? `/${featured[0].data.image.replace(/^\//, "")}` : undefined;
 const topics = [...taxonomy(posts, "categories").entries()]
   .map(([slug, group]) => ({ slug, name: group.name, count: group.posts.length }))
   .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name))
   .slice(0, 8);
 const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId)).slice(0, 3);
 ---
-<BaseLayout>
+<BaseLayout preloadImage={featuredImage}>
   <section class="hero container"><p class="eyebrow">Independent tech guides</p><h1>Make your technology work for you.</h1><p class="lede">Practical Linux, Windows, networking, software development, and open-source guidance from Chris Titus Tech.</p></section>
-  <section class="container"><h2>Featured</h2><div class="grid post-grid">{featured.map((post, index) => <PostCard post={post} heading={index === 0 ? "h2" : "h3"} />)}</div></section>
+  <section class="container"><h2>Featured</h2><div class="grid post-grid">{featured.map((post, index) => <PostCard post={post} heading={index === 0 ? "h2" : "h3"} priority={index === 0} />)}</div></section>
   <section class="container hero"><h2>Explore topics</h2><div class="chips">{topics.map((topic) => <a class="chip" href={`/categories/${topic.slug}/`}>{topic.name} ({topic.count})</a>)}</div></section>
   <section class="container"><h2>Latest articles</h2><PostList posts={posts.slice(0, 10)} /><p><a href="/posts/">Browse all articles →</a></p></section>
   <section class="container hero"><div class="section-heading"><div><p class="eyebrow">From the studio</p><h2>Recent live streams</h2></div><a href="/live-streams/">View the archive →</a></div><div class="grid stream-grid">{recentStreams.map((stream) => <article class="card"><a href={`/live-streams/player/?v=${stream.videoId}`}><img src={stream.thumbnail} width="640" height="360" loading="lazy" alt={`${stream.title} stream thumbnail`} /></a><div class="card-body"><h3><a href={`/live-streams/player/?v=${stream.videoId}`}>{stream.title}</a></h3><p class="meta">{stream.date}</p></div></article>)}</div></section>

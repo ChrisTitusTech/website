@@ -6,8 +6,22 @@ import YAML from "yaml";
 import { afterEach, describe, expect, it } from "vitest";
 
 import site from "../../src/data/site.json" with { type: "json" };
-import { chicagoToday, main, parseArguments, renderTemplate, slugify, validateInput } from "../../scripts/new-post.mjs";
-import { assertCandidateAvailable, buildInventory, emittedPath, publicOutputPath, redirectMatches, routeKey } from "../../scripts/route-contract.mjs";
+import {
+  chicagoToday,
+  main,
+  parseArguments,
+  renderTemplate,
+  slugify,
+  validateInput,
+} from "../../scripts/new-post.mjs";
+import {
+  assertCandidateAvailable,
+  buildInventory,
+  emittedPath,
+  publicOutputPath,
+  redirectMatches,
+  routeKey,
+} from "../../scripts/route-contract.mjs";
 
 const temporaryRoots = [];
 
@@ -20,14 +34,24 @@ async function fixture(publicFiles = ["index.html"], redirects = "") {
     mkdir(path.join(root, "tests/baseline"), { recursive: true }),
     mkdir(path.join(root, "templates"), { recursive: true }),
   ]);
-  await writeFile(path.join(root, "tests/baseline/hugo-public.json"), JSON.stringify({ output: { publicFiles } }));
+  await writeFile(
+    path.join(root, "tests/baseline/hugo-public.json"),
+    JSON.stringify({ output: { publicFiles } }),
+  );
   await writeFile(path.join(root, "static/_redirects"), redirects);
-  await writeFile(path.join(root, "templates/post.md.tmpl"), await readFile("templates/post.md.tmpl", "utf8"));
+  await writeFile(
+    path.join(root, "templates/post.md.tmpl"),
+    await readFile("templates/post.md.tmpl", "utf8"),
+  );
   return root;
 }
 
 afterEach(async () => {
-  await Promise.all(temporaryRoots.splice(0).map((root) => rm(root, { recursive: true, force: true })));
+  await Promise.all(
+    temporaryRoots
+      .splice(0)
+      .map((root) => rm(root, { recursive: true, force: true })),
+  );
 });
 
 describe("post scaffolder", () => {
@@ -37,24 +61,55 @@ describe("post scaffolder", () => {
   });
 
   it("accepts repeatable canonical categories including Software Dev", () => {
-    const input = parseArguments(["A post", "--date", "2026-08-13", "--category", "Linux", "--category", "Software Dev"]);
+    const input = parseArguments([
+      "A post",
+      "--date",
+      "2026-08-13",
+      "--category",
+      "Linux",
+      "--category",
+      "Software Dev",
+    ]);
     expect(validateInput(input)).toBe("a-post");
     expect(input.categories).toEqual(["Linux", "Software Dev"]);
   });
 
-  it.each(["macOS", "macos", "Not Real"])("rejects invalid new category %s", (category) => {
-    expect(() => validateInput({ title: "Post", date: "2026-08-13", categories: [category] })).toThrow("invalid category");
-  });
+  it.each(["macOS", "macos", "Not Real"])(
+    "rejects invalid new category %s",
+    (category) => {
+      expect(() =>
+        validateInput({
+          title: "Post",
+          date: "2026-08-13",
+          categories: [category],
+        }),
+      ).toThrow("invalid category");
+    },
+  );
 
   it("presents and accepts every canonical category", () => {
     for (const category of site.categories) {
-      expect(() => validateInput({ title: category, date: "2026-08-13", categories: [category] })).not.toThrow();
+      expect(() =>
+        validateInput({
+          title: category,
+          date: "2026-08-13",
+          categories: [category],
+        }),
+      ).not.toThrow();
     }
   });
 
   it("rejects missing categories and impossible calendar dates", () => {
-    expect(() => validateInput({ title: "Post", date: "2026-08-13", categories: [] })).toThrow("at least one category");
-    expect(() => validateInput({ title: "Post", date: "2026-02-30", categories: ["Linux"] })).toThrow("real calendar date");
+    expect(() =>
+      validateInput({ title: "Post", date: "2026-08-13", categories: [] }),
+    ).toThrow("at least one category");
+    expect(() =>
+      validateInput({
+        title: "Post",
+        date: "2026-02-30",
+        categories: ["Linux"],
+      }),
+    ).toThrow("real calendar date");
   });
 
   it("round trips YAML metacharacters exactly", async () => {
@@ -71,76 +126,193 @@ describe("post scaffolder", () => {
   it("normalizes routes without changing case", () => {
     expect(routeKey("Post//")).toBe("/Post/");
     expect(emittedPath("/foo/")).toBe("foo/index.html");
-    expect(publicOutputPath("/categories/linux/index.xml")).toBe("categories/linux/index.xml");
+    expect(publicOutputPath("/categories/linux/index.xml")).toBe(
+      "categories/linux/index.xml",
+    );
     expect(redirectMatches("/guides/:slug", "/guides/linux/")).toBe(true);
     expect(redirectMatches("/legacy/*", "/legacy/a/b/")).toBe(true);
   });
 
   it("rejects an existing route and accepts a new Software Dev route", async () => {
-    await expect(assertCandidateAvailable({ title: "Duplicate", date: "2026-08-13", url: "/my-ai-workflow/", categories: ["Software Dev"], tags: [] })).rejects.toThrow("URL collision");
-    await expect(assertCandidateAvailable({ title: "Reserved", date: "2026-08-13", url: "/live-streams/page/2/", categories: ["Software Dev"], tags: [] })).rejects.toThrow("URL collision");
-    await expect(assertCandidateAvailable({ title: "Unique", date: "2099-01-01", url: "/vitest-unique-scaffold-route/", categories: ["Software Dev"], tags: [] })).resolves.toBeUndefined();
+    await expect(
+      assertCandidateAvailable({
+        title: "Duplicate",
+        date: "2026-08-13",
+        url: "/my-ai-workflow/",
+        categories: ["Software Dev"],
+        tags: [],
+      }),
+    ).rejects.toThrow("URL collision");
+    await expect(
+      assertCandidateAvailable({
+        title: "Reserved",
+        date: "2026-08-13",
+        url: "/live-streams/page/2/",
+        categories: ["Software Dev"],
+        tags: [],
+      }),
+    ).rejects.toThrow("URL collision");
+    await expect(
+      assertCandidateAvailable({
+        title: "Unique",
+        date: "2099-01-01",
+        url: "/vitest-unique-scaffold-route/",
+        categories: ["Software Dev"],
+        tags: [],
+      }),
+    ).resolves.toBeUndefined();
   });
 
   it("virtually induces taxonomy, feed, alias, and pagination routes", async () => {
     const root = await fixture();
-    const inventory = await buildInventory({
-      title: "New",
-      date: "2026-08-13",
-      url: "/new/",
-      categories: ["Software Dev"],
-      tags: ["Fresh Tag"],
-    }, root);
-    expect([...inventory.induced]).toEqual(expect.arrayContaining([
-      "/new/",
-      "/posts/2026/new/",
-      "/categories/software-dev/",
-      "/categories/software-dev/page/1/",
-      "/categories/software-dev/index.xml",
-      "/tags/fresh-tag/",
-      "/tags/fresh-tag/page/1/",
-      "/tags/fresh-tag/index.xml",
-    ]));
+    const inventory = await buildInventory(
+      {
+        title: "New",
+        date: "2026-08-13",
+        url: "/new/",
+        categories: ["Software Dev"],
+        tags: ["Fresh Tag"],
+      },
+      root,
+    );
+    expect([...inventory.induced]).toEqual(
+      expect.arrayContaining([
+        "/new/",
+        "/posts/2026/new/",
+        "/categories/software-dev/",
+        "/categories/software-dev/page/1/",
+        "/categories/software-dev/index.xml",
+        "/tags/fresh-tag/",
+        "/tags/fresh-tag/page/1/",
+        "/tags/fresh-tag/index.xml",
+      ]),
+    );
   });
 
   it("detects exact, wildcard, and parameterized redirect overlap", async () => {
-    for (const source of ["/blocked/ /target/ 301\n", "/blocked/* /target/ 301\n", "/:slug /target/ 301\n"]) {
+    for (const source of [
+      "/blocked/ /target/ 301\n",
+      "/blocked/* /target/ 301\n",
+      "/:slug /target/ 301\n",
+    ]) {
       const root = await fixture(["index.html"], source);
-      await expect(assertCandidateAvailable({ title: "Blocked", date: "2026-08-13", url: "/blocked/", categories: ["Linux"], tags: [] }, root)).rejects.toThrow("overlaps redirect source");
+      await expect(
+        assertCandidateAvailable(
+          {
+            title: "Blocked",
+            date: "2026-08-13",
+            url: "/blocked/",
+            categories: ["Linux"],
+            tags: [],
+          },
+          root,
+        ),
+      ).rejects.toThrow("overlaps redirect source");
     }
   });
 
   it("normalizes trailing slashes while preserving route case", async () => {
     const root = await fixture(["index.html", "Post/index.html"]);
-    await expect(assertCandidateAvailable({ title: "Same", date: "2026-08-13", url: "Post//", categories: ["Linux"], tags: [] }, root)).rejects.toThrow("URL collision");
-    await expect(assertCandidateAvailable({ title: "Distinct", date: "2026-08-13", url: "/post/", categories: ["Linux"], tags: [] }, root)).resolves.toBeUndefined();
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Same",
+          date: "2026-08-13",
+          url: "Post//",
+          categories: ["Linux"],
+          tags: [],
+        },
+        root,
+      ),
+    ).rejects.toThrow("URL collision");
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Distinct",
+          date: "2026-08-13",
+          url: "/post/",
+          categories: ["Linux"],
+          tags: [],
+        },
+        root,
+      ),
+    ).resolves.toBeUndefined();
   });
 
   it("rejects static output and file/directory ancestor conflicts", async () => {
     const exact = await fixture();
     await mkdir(path.join(exact, "static/asset"), { recursive: true });
     await writeFile(path.join(exact, "static/asset/index.html"), "static");
-    await expect(assertCandidateAvailable({ title: "Asset", date: "2026-08-13", url: "/asset/", categories: ["Linux"], tags: [] }, exact)).rejects.toThrow(/collision/);
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Asset",
+          date: "2026-08-13",
+          url: "/asset/",
+          categories: ["Linux"],
+          tags: [],
+        },
+        exact,
+      ),
+    ).rejects.toThrow(/collision/);
 
     const ancestor = await fixture(["index.html", "ancestor-other"]);
     await writeFile(path.join(ancestor, "static/ancestor"), "static");
-    await expect(assertCandidateAvailable({ title: "Child", date: "2026-08-13", url: "/ancestor/child/", categories: ["Linux"], tags: [] }, ancestor)).rejects.toThrow("file/directory output conflict");
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Child",
+          date: "2026-08-13",
+          url: "/ancestor/child/",
+          categories: ["Linux"],
+          tags: [],
+        },
+        ancestor,
+      ),
+    ).rejects.toThrow("file/directory output conflict");
   });
 
   it("induces collection pagination at the page boundary", async () => {
     const root = await fixture();
     for (let index = 0; index < 10; index += 1) {
-      await writeFile(path.join(root, "content/posts", `post-${index}.md`), `---\ntitle: Post ${index}\ndate: "2026-08-01"\nurl: /post-${index}/\ncategories: [Linux]\ntags: []\n---\n`);
+      await writeFile(
+        path.join(root, "content/posts", `post-${index}.md`),
+        `---\ntitle: Post ${index}\ndate: "2026-08-01"\nurl: /post-${index}/\ncategories: [Linux]\ntags: []\n---\n`,
+      );
     }
-    const inventory = await buildInventory({ title: "Eleventh", date: "2026-08-13", url: "/eleventh/", categories: ["Linux"], tags: [] }, root);
-    expect([...inventory.induced]).toEqual(expect.arrayContaining(["/posts/page/2/", "/archive/page/2/", "/categories/linux/page/2/"]));
+    const inventory = await buildInventory(
+      {
+        title: "Eleventh",
+        date: "2026-08-13",
+        url: "/eleventh/",
+        categories: ["Linux"],
+        tags: [],
+      },
+      root,
+    );
+    expect([...inventory.induced]).toEqual(
+      expect.arrayContaining([
+        "/posts/page/2/",
+        "/archive/page/2/",
+        "/categories/linux/page/2/",
+      ]),
+    );
   });
 
   it("writes the schema-compatible output once and refuses overwrite", async () => {
     const root = await fixture();
-    const args = ["Safe: Post", "--date", "2026-08-13", "--category", "Software Dev"];
+    const args = [
+      "Safe: Post",
+      "--date",
+      "2026-08-13",
+      "--category",
+      "Software Dev",
+    ];
     await main(args, root);
-    const output = await readFile(path.join(root, "content/posts/2026/safe-post.md"), "utf8");
+    const output = await readFile(
+      path.join(root, "content/posts/2026/safe-post.md"),
+      "utf8",
+    );
     expect(YAML.parse(output.match(/^---\n([\s\S]*?)\n---/)[1])).toMatchObject({
       title: "Safe: Post",
       date: "2026-08-13",

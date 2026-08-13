@@ -10,11 +10,11 @@
   editing.
 - Do not expose secrets, tokens, private keys, sessions, or environment files.
 
-## Project overview and migration state
+## Project overview
 
-- This repository currently builds `https://christitus.com/` with Hugo and is
-  planned for conversion to a fully static Astro site deployed to Cloudflare
-  Pages. `ROADMAP.md` is the migration source of truth.
+- This repository builds `https://christitus.com/` as a fully static Astro site
+  deployed to Cloudflare Pages. `ROADMAP.md` remains the migration and cutover
+  source of truth until Phase 5 is complete.
 - The site is a modern tech publication and creator hub for articles,
   downloads, live-stream archives, newsletter signup, recommendations, search,
   feeds, and legal pages.
@@ -24,29 +24,18 @@
 - Read `SPEC.md` for product and compatibility requirements and `ROADMAP.md`
   for phase order, validation gates, and cutover requirements.
 
-## Current and target toolchains
+## Toolchain
 
-- Until the Astro foundation exists, use Hugo Extended and validate with
-  `hugo --gc --minify`; generated output is `public/` and is not source.
-- Capture Hugo route baselines in an empty temporary destination or with
-  `--cleanDestinationDir`; never derive contracts from a previously populated
-  `public/` tree because it can contain stale routes.
-- The target runtime is Node.js 24 with npm and a committed lockfile.
-- Once the Astro foundation lands, install with `npm ci`, develop with
-  `npm run dev`, run focused checks with `npm run check` and `npm test`, build
-  with `npm run build`, and use `npm run validate` as the complete local gate.
-- Phase 2 must remove the legacy `.gitignore` entries for `package.json` and
-  `package-lock.json`, add `dist/` and `.astro/`, and commit both package files
-  as reviewed source artifacts.
-- The target Astro production output is `dist/`; `.astro/` is generated type and
+- The runtime is Node.js 24 with npm and a committed lockfile. Install with
+  `npm ci`, develop with `npm run dev`, run focused checks with
+  `npm run check` and `npm test`, build with `npm run build`, and use
+  `npm run validate` as the complete local gate.
+- Astro production output is `dist/`; `.astro/` is generated type and
   content metadata. Never edit or commit either directory as source.
 
 ## Repository layout
 
-- During migration, Hugo source remains under `layouts/`, `assets/`,
-  `archetypes/`, and `config.toml`; do not remove it before the Phase 4 parity
-  gate in `ROADMAP.md`.
-- Target `src/pages/` owns public routes and static endpoints.
+- `src/pages/` owns public routes and static endpoints.
 - `src/layouts/` and `src/components/` own the document shell and reusable UI.
 - `src/lib/` owns content queries, route generation, summaries, metadata,
   redirects, and Markdown compatibility behavior.
@@ -55,9 +44,8 @@
   `content/` contains standalone page content.
 - `data/livestreams.json` is generated data consumed by Astro routes.
 - `static/` is Astro's public asset directory and is copied without processing.
-- Hugo also publishes the tracked `content/posts/2023/english.png` at
-  `/posts/2023/english.png`; Phase 2 must move or copy it into Astro's public
-  tree without changing its bytes or public route.
+- The tracked `content/posts/2023/english.png` is copied to
+  `/posts/2023/english.png` without changing its bytes or public route.
 - `scripts/` and `.github/workflows/` maintain livestream and chat replay data.
 - `tests/` contains unit, route-contract, and browser tests.
 
@@ -143,7 +131,9 @@
   workflow at `.github/workflows/update-livestreams.yml` with chained jobs,
   deletes `.github/workflows/update-chat.yml`, and changes delivery from direct
   pushes to a bot branch and pull request. A concurrency group with
-  `cancel-in-progress: false` and `queue: max` serializes every run. Each job
+  `cancel-in-progress: false` serializes accepted runs. GitHub does not expose a
+  configurable `queue: max` field, so the independent watchdog also detects
+  platform queue-limit cancellation. Each job
   checks out its predecessor's emitted SHA, and PR/CI dispatch occurs only after
   the branch still matches the final SHA; neither PR update nor CI dispatch can
   begin before both data jobs succeed. After an interruption, the next queued or
@@ -198,8 +188,7 @@
 
 - Make small reviewable commits even though the migration is delivered in one
   pull request.
-- Validate focused behavior while implementing. Before the Astro foundation
-  exists, run `hugo --gc --minify`; after it lands, run `npm run validate` as
+- Validate focused behavior while implementing and run `npm run validate` as
   the complete gate.
 - For content changes, verify schema parsing, draft and future-date exclusion,
   and production rendering.

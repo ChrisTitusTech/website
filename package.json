@@ -23,7 +23,11 @@
     "test:browser:all": "playwright test",
     "test:browser:webkit": "playwright test --project=webkit",
     "test:lighthouse": "CHROME_PATH=$(node -e \"console.log(require('playwright').chromium.executablePath())\") lhci autorun",
-    "validate:core": "npm run check && npm run test && npm run build && npm run validate:repeat && npm run validate:routes",
+    "format": "prettier --write . --ignore-path .prettierignore",
+    "format:check": "prettier --check . --ignore-path .prettierignore",
+    "lint:markdown": "markdownlint-cli2 README.md ROADMAP.md SPEC.md 'docs/**/*.md' 'templates/**/*.md'",
+    "audit": "node scripts/audit.mjs",
+    "validate:core": "npm run format:check && npm run lint:markdown && npm run audit && npm run check && npm run test && npm run build && npm run validate:repeat && npm run validate:routes",
     "validate": "npm run setup:browsers && npm run validate:core && npm run test:browser && npm run test:lighthouse",
     "new:post": "node scripts/new-post.mjs"
   },
@@ -33,19 +37,26 @@
     "astro": "7.2.1",
     "fast-glob": "3.3.3",
     "gray-matter": "4.0.3",
-    "markdown-it": "14.1.0",
+    "markdown-it": "14.3.0",
     "reading-time": "1.5.0",
-    "sanitize-html": "2.17.0",
-    "yaml": "2.8.1"
+    "sanitize-html": "2.17.7",
+    "yaml": "2.9.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.6",
     "@axe-core/playwright": "4.10.2",
     "@lhci/cli": "0.15.1",
-    "@playwright/test": "1.55.0",
+    "@playwright/test": "1.62.1",
     "@types/node": "24.10.1",
     "@types/sanitize-html": "2.16.0",
+    "markdownlint-cli2": "0.23.2",
+    "prettier": "3.9.6",
+    "prettier-plugin-astro": "0.14.1",
     "typescript": "5.9.3",
     "vitest": "4.1.10"
+  },
+  "overrides": {
+    "tmp": "0.2.7",
+    "uuid": "11.1.1"
   }
 }

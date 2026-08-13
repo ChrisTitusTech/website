@@ -5,4 +5,4 @@ import PostCard from "./PostCard.astro";
 interface Props { posts: Post[] }
 const { posts } = Astro.props;
 ---
-<div class="grid post-grid">{posts.map((post) => <PostCard post={post} />)}</div>
+<div class="grid post-grid">{posts.map((post, index) => <PostCard post={post} priority={index === 0} />)}</div>

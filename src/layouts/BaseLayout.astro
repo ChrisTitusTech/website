@@ -10,6 +10,7 @@ interface Props {
   type?: "website" | "article";
   publishedTime?: string;
   robots?: string;
+  preloadImage?: string;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   type = "website",
   publishedTime,
   robots,
+  preloadImage,
 } = Astro.props;
 const pageTitle = title === site.title ? title : `${title} | ${site.name}`;
 const canonicalUrl = new URL(canonical, site.url).toString();
@@ -73,6 +75,7 @@ const structuredData = JSON.stringify({
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
     <link rel="alternate" type="application/rss+xml" title={site.name} href="/index.xml" />
+    {preloadImage && <link rel="preload" href={preloadImage} as="image" fetchpriority="high" />}
     <link rel="preload" href="/fonts/pt-sans-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/pt-sans-700.woff2" as="font" type="font/woff2" crossorigin />
     <meta property="og:title" content={title} />
@@ -110,6 +113,14 @@ const structuredData = JSON.stringify({
     <script>
       import "../scripts/site.ts";
     </script>
-    <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"48e9040046c743328a1abd6b87ec22fd"}'></script>
+    <script is:inline>
+      if (location.hostname === "christitus.com" || location.hostname === "www.christitus.com") {
+        const analytics = document.createElement("script");
+        analytics.defer = true;
+        analytics.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        analytics.dataset.cfBeacon = '{"token":"48e9040046c743328a1abd6b87ec22fd"}';
+        document.head.append(analytics);
+      }
+    </script>
   </body>
 </html>

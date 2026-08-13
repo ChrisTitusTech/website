@@ -13,7 +13,11 @@ import site from "../src/data/site.json" with { type: "json" };
 
 const root = process.cwd();
 const outputRoot = path.join(root, ".astro-content");
-const markdown = new MarkdownIt({ html: true, linkify: true, typographer: true });
+const markdown = new MarkdownIt({
+  html: true,
+  linkify: true,
+  typographer: true,
+});
 const canonicalCategories = new Set(site.categories);
 const legacyUncategorized = new Set(site.legacyUncategorizedUrls);
 const legacyPairs = new Map(Object.entries(site.legacyCategoryPairs));
@@ -38,7 +42,9 @@ function escapeHtml(value) {
 
 function shortcodeArgs(text) {
   const values = {};
-  for (const match of text.matchAll(/([\w-]+)=(?:"([^"]*)"|'([^']*)'|([^\s]+))/g)) {
+  for (const match of text.matchAll(
+    /([\w-]+)=(?:"([^"]*)"|'([^']*)'|([^\s]+))/g,
+  )) {
     values[match[1]] = match[2] ?? match[3] ?? match[4];
   }
   return values;
@@ -47,7 +53,9 @@ function shortcodeArgs(text) {
 function renderTable(name, tables, file) {
   const rows = tables?.[name];
   if (!Array.isArray(rows) || rows.length === 0) {
-    throw new Error(`${file}: table shortcode references missing table ${name}`);
+    throw new Error(
+      `${file}: table shortcode references missing table ${name}`,
+    );
   }
   const [headers, ...body] = rows;
   return [
@@ -90,7 +98,7 @@ function replaceOutsideInlineCode(line, data, file) {
   let result = "";
   let cursor = 0;
   let codeFence = null;
-  for (let index = 0; index < line.length; ) {
+  for (let index = 0; index < line.length;) {
     if (line[index] === "`") {
       let end = index;
       while (line[end] === "`") end += 1;
@@ -133,7 +141,11 @@ export function transformBody(body, data, file) {
       const closesOnSameLine = line.slice(fence[0].length).includes(fence[1]);
       if (fenced === null && !closesOnSameLine) fenced = fence[1][0];
       else if (fence[1][0] === fenced) fenced = null;
-      output.push(fenced !== null && /^\s*```fstab\s*$/.test(line) ? line.replace(/fstab\s*$/, "text") : line);
+      output.push(
+        fenced !== null && /^\s*```fstab\s*$/.test(line)
+          ? line.replace(/fstab\s*$/, "text")
+          : line,
+      );
       continue;
     }
     if (fenced !== null) {
@@ -144,11 +156,15 @@ export function transformBody(body, data, file) {
     if (notice) {
       const noticeBody = [];
       index += 1;
-      while (index < lines.length && !/^\s*\{\{<\s*\/notice\s*>}}\s*$/.test(lines[index])) {
+      while (
+        index < lines.length &&
+        !/^\s*\{\{<\s*\/notice\s*>}}\s*$/.test(lines[index])
+      ) {
         noticeBody.push(lines[index]);
         index += 1;
       }
-      if (index === lines.length) throw new Error(`${file}: unclosed notice shortcode`);
+      if (index === lines.length)
+        throw new Error(`${file}: unclosed notice shortcode`);
       output.push(
         `<aside class="notice notice-${notice[1]}" role="note"><p class="notice-title">${notice[1] === "tip" ? "Tip" : "Note"}</p>${markdown.render(noticeBody.join("\n"))}</aside>`,
       );
@@ -165,36 +181,54 @@ export function transformBody(body, data, file) {
 export function validateDate(value, file) {
   if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
     const parsed = new Date(`${value}T00:00:00Z`);
-    if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== value) {
+    if (
+      Number.isNaN(parsed.getTime()) ||
+      parsed.toISOString().slice(0, 10) !== value
+    ) {
       throw new Error(`${file}: invalid date ${value}`);
     }
     return;
   }
-  if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:\d{2})$/.test(value)) {
-    if (Number.isNaN(Date.parse(value))) throw new Error(`${file}: invalid date ${value}`);
+  if (
+    /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:\d{2})$/.test(
+      value,
+    )
+  ) {
+    if (Number.isNaN(Date.parse(value)))
+      throw new Error(`${file}: invalid date ${value}`);
     return;
   }
   throw new Error(`${file}: date must be YYYY-MM-DD or include a UTC offset`);
 }
 
 export function validatePost(data, file) {
-  if (typeof data.title !== "string" || data.title.length === 0) throw new Error(`${file}: title is required`);
-  if (typeof data.date !== "string") throw new Error(`${file}: date must remain a string`);
+  if (typeof data.title !== "string" || data.title.length === 0)
+    throw new Error(`${file}: title is required`);
+  if (typeof data.date !== "string")
+    throw new Error(`${file}: date must remain a string`);
   validateDate(data.date, file);
-  if (typeof data.url !== "string" || !/^\/.*\/$/.test(data.url)) throw new Error(`${file}: explicit trailing-slash URL is required`);
-  if (data.draft !== undefined && typeof data.draft !== "boolean") throw new Error(`${file}: draft must be a boolean`);
-  if (data.featuredOrder !== undefined && ![1, 2, 3].includes(data.featuredOrder)) {
+  if (typeof data.url !== "string" || !/^\/.*\/$/.test(data.url))
+    throw new Error(`${file}: explicit trailing-slash URL is required`);
+  if (data.draft !== undefined && typeof data.draft !== "boolean")
+    throw new Error(`${file}: draft must be a boolean`);
+  if (
+    data.featuredOrder !== undefined &&
+    ![1, 2, 3].includes(data.featuredOrder)
+  ) {
     throw new Error(`${file}: featuredOrder must be 1, 2, or 3`);
   }
   const categories = data.categories ?? [];
-  if (!Array.isArray(categories)) throw new Error(`${file}: categories must be an array`);
+  if (!Array.isArray(categories))
+    throw new Error(`${file}: categories must be an array`);
   if (categories.length === 0 && !legacyUncategorized.has(data.url)) {
     throw new Error(`${file}: at least one category is required`);
   }
   for (const category of categories) {
     if (canonicalCategories.has(category)) continue;
     if (legacyPairs.get(data.url) === category) continue;
-    throw new Error(`${file}: category ${category} is not valid for ${data.url}`);
+    throw new Error(
+      `${file}: category ${category} is not valid for ${data.url}`,
+    );
   }
 }
 
@@ -222,34 +256,51 @@ export async function prepareContent() {
     if (post) {
       validatePost(data, relative);
       const normalizedUrl = `/${data.url.split("/").filter(Boolean).join("/")}/`;
-      if (urls.has(normalizedUrl)) throw new Error(`${relative}: duplicate URL with ${urls.get(normalizedUrl)}`);
+      if (urls.has(normalizedUrl))
+        throw new Error(
+          `${relative}: duplicate URL with ${urls.get(normalizedUrl)}`,
+        );
       urls.set(normalizedUrl, relative);
     }
     const destinationRelative = post
       ? relative.slice("content/posts/".length)
       : relative.slice("content/".length).replace(/_index\.md$/, "index.md");
-    const destination = path.join(outputRoot, post ? "posts" : "pages", destinationRelative);
+    const destination = path.join(
+      outputRoot,
+      post ? "posts" : "pages",
+      destinationRelative,
+    );
     await mkdir(path.dirname(destination), { recursive: true });
     const transformed = transformBody(parsed.body, data, relative);
     const frontmatter = YAML.stringify(data).replace(
       /^date: .*$/m,
       `date: ${JSON.stringify(data.date)}`,
     );
-    await writeFile(destination, `---\n${frontmatter}---\n${transformed}`, "utf8");
+    await writeFile(
+      destination,
+      `---\n${frontmatter}---\n${transformed}`,
+      "utf8",
+    );
   }
 
   const preview = process.env.CONTENT_PREVIEW === "1";
   const buildInstant = process.env.BUILD_INSTANT ?? new Date().toISOString();
-  if (Number.isNaN(Date.parse(buildInstant))) throw new Error("BUILD_INSTANT must be an ISO timestamp");
+  if (Number.isNaN(Date.parse(buildInstant)))
+    throw new Error("BUILD_INSTANT must be an ISO timestamp");
   await writeFile(
     path.join(outputRoot, "build.json"),
     `${JSON.stringify({ buildInstant, preview }, null, 2)}\n`,
     "utf8",
   );
 
-  console.log(`Prepared ${files.length} Markdown sources (${preview ? "content preview" : "production"})`);
+  console.log(
+    `Prepared ${files.length} Markdown sources (${preview ? "content preview" : "production"})`,
+  );
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
   await prepareContent();
 }

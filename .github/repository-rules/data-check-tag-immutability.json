@@ -1,0 +1,13 @@
+{
+  "name": "data-check tag immutability",
+  "target": "tag",
+  "enforcement": "disabled",
+  "bypass_actors": [],
+  "conditions": {
+    "ref_name": {
+      "include": ["refs/tags/data-check/**"],
+      "exclude": []
+    }
+  },
+  "rules": [{ "type": "update" }, { "type": "deletion" }]
+}

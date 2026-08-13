@@ -1,0 +1,12 @@
+{
+  "advisories": {
+    "GHSA-JMR9-QJV8-65GV": {
+      "package": "extract-zip",
+      "scope": "development-only Lighthouse CI transitive dependency",
+      "owner": "website maintainers",
+      "expires": "2026-11-30",
+      "rationale": "Lighthouse CI is pinned and receives CHROME_PATH for a Playwright-managed browser, so the vulnerable Puppeteer archive extraction path is not invoked. No patched extract-zip release is available to the pinned Lighthouse CI dependency tree.",
+      "followUp": "Replace or upgrade Lighthouse CI as soon as its dependency tree carries a patched archive extractor."
+    }
+  }
+}

@@ -15,4 +15,5 @@ test-results/
 playwright-report/
 .env
 *.sh
+!.github/scripts/*.sh
 .DS_Store

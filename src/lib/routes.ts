@@ -17,7 +17,13 @@ export type PageDescriptor =
   | { kind: "post"; route: string; post: Post }
   | { kind: "page"; route: string; page: Page }
   | { kind: "listing"; route: string; listing: Listing }
-  | { kind: "terms"; route: string; root: string; title: string; terms: Array<{ name: string; slug: string; count: number }> }
+  | {
+      kind: "terms";
+      route: string;
+      root: string;
+      title: string;
+      terms: Array<{ name: string; slug: string; count: number }>;
+    }
   | { kind: "redirect"; route: string; target: string };
 
 const baseline = JSON.parse(
@@ -38,7 +44,10 @@ function addPaginated(
   description?: string,
   minimumPages = 1,
 ) {
-  const pages = Math.max(minimumPages, Math.ceil(posts.length / site.postsPerPage));
+  const pages = Math.max(
+    minimumPages,
+    Math.ceil(posts.length / site.postsPerPage),
+  );
   for (let page = 1; page <= pages; page += 1) {
     const route = page === 1 ? base : `${base}page/${page}/`;
     const key = routeKey(route);
@@ -50,7 +59,10 @@ function addPaginated(
       listing: {
         title,
         description,
-        posts: posts.slice((page - 1) * site.postsPerPage, page * site.postsPerPage),
+        posts: posts.slice(
+          (page - 1) * site.postsPerPage,
+          page * site.postsPerPage,
+        ),
         page,
         pages,
         base,
@@ -60,7 +72,11 @@ function addPaginated(
   const firstPageAlias = routeKey(base === "/" ? "/page/1/" : `${base}page/1/`);
   if (!seen.has(firstPageAlias)) {
     seen.add(firstPageAlias);
-    output.push({ kind: "redirect", route: firstPageAlias, target: routeKey(base) });
+    output.push({
+      kind: "redirect",
+      route: firstPageAlias,
+      target: routeKey(base),
+    });
   }
 }
 
@@ -82,18 +98,28 @@ function addTermPages(
       route: key,
       root,
       title,
-      terms: terms.slice((page - 1) * site.postsPerPage, page * site.postsPerPage),
+      terms: terms.slice(
+        (page - 1) * site.postsPerPage,
+        page * site.postsPerPage,
+      ),
     });
   }
   const firstPageAlias = routeKey(`${root}page/1/`);
   if (!seen.has(firstPageAlias)) {
     seen.add(firstPageAlias);
-    output.push({ kind: "redirect", route: firstPageAlias, target: routeKey(root) });
+    output.push({
+      kind: "redirect",
+      route: firstPageAlias,
+      target: routeKey(root),
+    });
   }
 }
 
 export function legacyAliases(): Record<string, string> {
-  const aliases = baseline.output.aliases as Record<string, { localRoute: string }>;
+  const aliases = baseline.output.aliases as Record<
+    string,
+    { localRoute: string }
+  >;
   return Object.fromEntries(
     Object.entries(aliases).map(([route, value]) => [route, value.localRoute]),
   );
@@ -103,7 +129,10 @@ export function legacyFeedPaths(): string[] {
   return Object.keys(baseline.output.semantic.feeds);
 }
 
-export function buildPageDescriptors(posts: Post[], pages: Page[]): PageDescriptor[] {
+export function buildPageDescriptors(
+  posts: Post[],
+  pages: Page[],
+): PageDescriptor[] {
   const output: PageDescriptor[] = [];
   const seen = new Set<string>(["/"]);
   const reserved = new Set([
@@ -120,8 +149,14 @@ export function buildPageDescriptors(posts: Post[], pages: Page[]): PageDescript
     if (seen.has(route)) throw new Error(`duplicate emitted route ${route}`);
     seen.add(route);
     output.push({ kind: "post", route, post });
-    const sourceAlias = routeKey(`/${post.data._sourcePath.replace(/^content\//, "").replace(/\.md$/, "")}/`);
-    if (sourceAlias !== route && !seen.has(sourceAlias) && !reserved.has(sourceAlias)) {
+    const sourceAlias = routeKey(
+      `/${post.data._sourcePath.replace(/^content\//, "").replace(/\.md$/, "")}/`,
+    );
+    if (
+      sourceAlias !== route &&
+      !seen.has(sourceAlias) &&
+      !reserved.has(sourceAlias)
+    ) {
       seen.add(sourceAlias);
       output.push({ kind: "redirect", route: sourceAlias, target: route });
     }
@@ -134,17 +169,41 @@ export function buildPageDescriptors(posts: Post[], pages: Page[]): PageDescript
     output.push({ kind: "page", route, page });
   }
 
-  addPaginated(output, seen, "/posts/", "Articles", posts, "Technology guides and commentary");
-  addPaginated(output, seen, "/archive/", "Archive", posts, "Every published article");
+  addPaginated(
+    output,
+    seen,
+    "/posts/",
+    "Articles",
+    posts,
+    "Technology guides and commentary",
+  );
+  addPaginated(
+    output,
+    seen,
+    "/archive/",
+    "Archive",
+    posts,
+    "Every published article",
+  );
   addPaginated(output, seen, "/", "Latest Articles", posts, undefined, 33);
 
   for (const field of ["categories", "tags"] as const) {
     const groups = taxonomy(posts, field);
     const root = `/${field}/`;
     const terms = [...groups.entries()]
-      .map(([slug, group]) => ({ name: group.name, slug, count: group.posts.length }))
+      .map(([slug, group]) => ({
+        name: group.name,
+        slug,
+        count: group.posts.length,
+      }))
       .sort((left, right) => left.name.localeCompare(right.name));
-    addTermPages(output, seen, root, field === "categories" ? "Topics" : "Tags", terms);
+    addTermPages(
+      output,
+      seen,
+      root,
+      field === "categories" ? "Topics" : "Tags",
+      terms,
+    );
     for (const [slug, group] of groups) {
       addPaginated(output, seen, `${root}${slug}/`, group.name, group.posts);
     }

@@ -10,7 +10,10 @@ export const GET: APIRoute = async () => {
         title: post.data.title,
         tags: post.data.tags,
         categories: post.data.categories,
-        contents: (post.body ?? "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim(),
+        contents: (post.body ?? "")
+          .replace(/<[^>]+>/g, " ")
+          .replace(/\s+/g, " ")
+          .trim(),
         permalink: new URL(post.data.url, "https://christitus.com").toString(),
       })),
     ),

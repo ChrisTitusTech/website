@@ -10,6 +10,15 @@ export const GET: APIRoute = async (context) => {
     description: "Having Fun with Technology",
     site: context.site!,
     customData: "<language>en-US</language>",
-    items: posts.map((post) => ({ title: post.data.title, description: summary(post), link: post.data.url, pubDate: new Date(post.data.date.length === 10 ? `${post.data.date}T12:00:00Z` : post.data.date) })),
+    items: posts.map((post) => ({
+      title: post.data.title,
+      description: summary(post),
+      link: post.data.url,
+      pubDate: new Date(
+        post.data.date.length === 10
+          ? `${post.data.date}T12:00:00Z`
+          : post.data.date,
+      ),
+    })),
   });
 };

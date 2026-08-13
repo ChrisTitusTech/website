@@ -34,13 +34,14 @@ const shareText = encodeURIComponent(title);
 const shareUrl = encodeURIComponent(canonicalUrl);
 const toc = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
 const articleImage = descriptor.kind === "post" && descriptor.post.data.image ? `/${descriptor.post.data.image.replace(/^\//, "")}` : undefined;
+const listingImage = descriptor.kind === "listing" && descriptor.listing.posts[0]?.data.image ? `/${descriptor.listing.posts[0].data.image.replace(/^\//, "")}` : undefined;
 const transformedArticleImage = (width: number) => articleImage ? `/cdn-cgi/image/width=${width},height=${Math.round(width * 9 / 16)},fit=cover,format=auto${articleImage}` : "";
 ---
-<BaseLayout title={title} description={description} canonical={descriptor.route} image={descriptor.kind === "post" ? descriptor.post.data.image : undefined} type={descriptor.kind === "post" ? "article" : "website"} publishedTime={descriptor.kind === "post" ? descriptor.post.data.date : undefined}>
+<BaseLayout title={title} description={description} canonical={descriptor.route} image={descriptor.kind === "post" ? descriptor.post.data.image : undefined} type={descriptor.kind === "post" ? "article" : "website"} publishedTime={descriptor.kind === "post" ? descriptor.post.data.date : undefined} preloadImage={listingImage}>
   {descriptor.kind === "post" && <>
     <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
     <article class="article-shell container">
-      {toc.length > 0 && <aside class="article-toc" aria-label="On this page"><details class="article-toc-details" data-responsive-toc open><summary>On this page</summary><nav data-toc><p class="eyebrow">On this page</p><ol>{toc.map((heading) => <li class:list={{ nested: heading.depth === 3 }}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav></details></aside>}
+      {toc.length > 0 && <aside class="article-toc" aria-label="On this page"><details class="article-toc-details" data-responsive-toc><summary>On this page</summary><nav data-toc><p class="eyebrow">On this page</p><ol>{toc.map((heading) => <li class:list={{ nested: heading.depth === 3 }}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav></details></aside>}
       <div class="reading">
         <header class="article-header"><p class="eyebrow">Article</p><h1>{descriptor.post.data.title}</h1><p class="meta"><time datetime={descriptor.post.data.date}>{displayDate(descriptor.post)}</time> · {readingMinutes(descriptor.post)} min read</p><div class="chips">{descriptor.post.data.categories.map((category) => <a class="chip" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>)}</div></header>
         {articleImage && <img class="article-image" src={articleImage} srcset={`${transformedArticleImage(640)} 640w, ${transformedArticleImage(1200)} 1200w`} sizes="(max-width: 800px) 100vw, 760px" data-cf-image alt={`${descriptor.post.data.title} featured image`} width="1200" height="675" />}

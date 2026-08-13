@@ -7,7 +7,9 @@ import YAML from "yaml";
 import livestreams from "../data/livestreams.json" with { type: "json" };
 import site from "../src/data/site.json" with { type: "json" };
 
-const validLivestreamCount = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId)).length;
+const validLivestreamCount = livestreams.items.filter((stream) =>
+  /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId),
+).length;
 
 export function routeKey(value) {
   const segments = value.split(/[?#]/)[0].split("/").filter(Boolean);
@@ -37,7 +39,14 @@ export function publicOutputPath(route) {
 }
 
 export function taxonomySlug(value) {
-  return value.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim().replace(/\s+/g, "-").replace(/[^a-z0-9_+-]/g, "").replace(/^-|-$/g, "");
+  return value
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9_+-]/g, "")
+    .replace(/^-|-$/g, "");
 }
 
 function frontmatter(source, file) {
@@ -51,7 +60,11 @@ export function redirectMatches(pattern, route) {
   if (/^https?:\/\//i.test(source)) return false;
   const escaped = source
     .split("*")
-    .map((part) => part.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/:[A-Za-z][\w-]*/g, "[^/]+"))
+    .map((part) =>
+      part
+        .replace(/[.+?^${}()|[\]\\]/g, "\\$&")
+        .replace(/:[A-Za-z][\w-]*/g, "[^/]+"),
+    )
     .join(".*");
   return new RegExp(`^${escaped}/?$`).test(publicRoute(route));
 }
@@ -62,7 +75,11 @@ function addPaginated(routes, base, count, minimumPages = 1) {
   routes.add(normalizedBase === "/" ? "/page/1/" : `${normalizedBase}page/1/`);
   const pages = Math.max(minimumPages, Math.ceil(count / site.postsPerPage), 1);
   for (let page = 2; page <= pages; page += 1) {
-    routes.add(normalizedBase === "/" ? `/page/${page}/` : `${normalizedBase}page/${page}/`);
+    routes.add(
+      normalizedBase === "/"
+        ? `/page/${page}/`
+        : `${normalizedBase}page/${page}/`,
+    );
   }
 }
 
@@ -83,7 +100,10 @@ function derivedRoutes(posts) {
   const tags = new Map();
   for (const post of posts) {
     routes.add(routeKey(post.url));
-    for (const [field, groups] of [["categories", categories], ["tags", tags]]) {
+    for (const [field, groups] of [
+      ["categories", categories],
+      ["tags", tags],
+    ]) {
       for (const value of post[field] ?? []) {
         const slug = taxonomySlug(value);
         groups.set(slug, (groups.get(slug) ?? 0) + 1);
@@ -96,10 +116,17 @@ function derivedRoutes(posts) {
   addPaginated(routes, "/archive/", posts.length);
   routes.add("/posts/index.xml");
   routes.add("/archive/index.xml");
-  const livestreamPages = Math.max(1, Math.ceil(Math.max(0, validLivestreamCount - 1) / 24));
-  for (let page = 1; page <= livestreamPages; page += 1) routes.add(`/live-streams/page/${page}/`);
+  const livestreamPages = Math.max(
+    1,
+    Math.ceil(Math.max(0, validLivestreamCount - 1) / 24),
+  );
+  for (let page = 1; page <= livestreamPages; page += 1)
+    routes.add(`/live-streams/page/${page}/`);
 
-  for (const [field, groups] of [["categories", categories], ["tags", tags]]) {
+  for (const [field, groups] of [
+    ["categories", categories],
+    ["tags", tags],
+  ]) {
     const root = `/${field}/`;
     addPaginated(routes, root, groups.size);
     routes.add(`${root}index.xml`);
@@ -114,20 +141,29 @@ function derivedRoutes(posts) {
 
 function routeFromPublicFile(relative) {
   if (relative === "index.html") return "/";
-  if (relative.endsWith("/index.html")) return `/${relative.slice(0, -"index.html".length)}`;
+  if (relative.endsWith("/index.html"))
+    return `/${relative.slice(0, -"index.html".length)}`;
   return `/${relative}`;
 }
 
 export async function buildInventory(candidate, root = process.cwd()) {
-  const baseline = JSON.parse(await readFile(path.join(root, "tests/baseline/hugo-public.json"), "utf8"));
-  const routes = new Set(baseline.output.publicFiles.map(routeFromPublicFile).map(publicRoute));
+  const baseline = JSON.parse(
+    await readFile(path.join(root, "tests/baseline/hugo-public.json"), "utf8"),
+  );
+  const routes = new Set(
+    baseline.output.publicFiles.map(routeFromPublicFile).map(publicRoute),
+  );
   const outputPaths = new Set(baseline.output.publicFiles);
 
   const postFiles = await fg("content/posts/**/*.md", { cwd: root });
   const posts = [];
   for (const file of postFiles) {
-    const data = frontmatter(await readFile(path.join(root, file), "utf8"), file);
-    if (data.build?.render === "never" || typeof data.url !== "string") continue;
+    const data = frontmatter(
+      await readFile(path.join(root, file), "utf8"),
+      file,
+    );
+    if (data.build?.render === "never" || typeof data.url !== "string")
+      continue;
     posts.push(data);
   }
 
@@ -140,11 +176,14 @@ export async function buildInventory(candidate, root = process.cwd()) {
   const futurePosts = candidate ? [...posts, candidate] : posts;
   const futureDerived = derivedRoutes(futurePosts);
   if (candidate) {
-    const sourceSlug = candidate._sourceSlug ?? path.basename(routeKey(candidate.url));
+    const sourceSlug =
+      candidate._sourceSlug ?? path.basename(routeKey(candidate.url));
     futureDerived.add(`/posts/${candidate.date.slice(0, 4)}/${sourceSlug}/`);
   }
   const induced = new Set(
-    [...futureDerived].map(publicRoute).filter((route) => !currentDerived.has(route)),
+    [...futureDerived]
+      .map(publicRoute)
+      .filter((route) => !currentDerived.has(route)),
   );
 
   const staticFiles = await fg("static/**/*", { cwd: root, onlyFiles: true });
@@ -154,7 +193,9 @@ export async function buildInventory(candidate, root = process.cwd()) {
     outputPaths.add(relative);
   }
 
-  const redirectLines = (await readFile(path.join(root, "static/_redirects"), "utf8"))
+  const redirectLines = (
+    await readFile(path.join(root, "static/_redirects"), "utf8")
+  )
     .split(/\r?\n/)
     .map((line) => line.trim())
     .filter((line) => line && !line.startsWith("#"));
@@ -162,22 +203,32 @@ export async function buildInventory(candidate, root = process.cwd()) {
   return { routes, outputPaths, induced, redirectSources };
 }
 
-export async function assertCandidateAvailable(candidate, root = process.cwd()) {
+export async function assertCandidateAvailable(
+  candidate,
+  root = process.cwd(),
+) {
   const inventory = await buildInventory(candidate, root);
   const baseline = await buildInventory(undefined, root);
   const candidateRoute = routeKey(candidate.url);
-  if (baseline.routes.has(candidateRoute)) throw new Error(`URL collision: ${candidateRoute} already exists`);
+  if (baseline.routes.has(candidateRoute))
+    throw new Error(`URL collision: ${candidateRoute} already exists`);
 
   const newPathOwners = new Map();
   for (const route of inventory.induced) {
     const output = publicOutputPath(route);
-    if (baseline.routes.has(route)) throw new Error(`route collision: ${route} already exists`);
-    if (baseline.outputPaths.has(output)) throw new Error(`output collision: ${output} already exists`);
+    if (baseline.routes.has(route))
+      throw new Error(`route collision: ${route} already exists`);
+    if (baseline.outputPaths.has(output))
+      throw new Error(`output collision: ${output} already exists`);
     const prior = newPathOwners.get(output);
-    if (prior) throw new Error(`output collision: ${prior} and ${route} both emit ${output}`);
+    if (prior)
+      throw new Error(
+        `output collision: ${prior} and ${route} both emit ${output}`,
+      );
     newPathOwners.set(output, route);
     for (const pattern of inventory.redirectSources) {
-      if (redirectMatches(pattern, route)) throw new Error(`route ${route} overlaps redirect source ${pattern}`);
+      if (redirectMatches(pattern, route))
+        throw new Error(`route ${route} overlaps redirect source ${pattern}`);
     }
   }
 
@@ -187,7 +238,9 @@ export async function assertCandidateAvailable(candidate, root = process.cwd()) 
     for (let length = 1; length < segments.length; length += 1) {
       const ancestor = segments.slice(0, length).join("/");
       if (paths.has(ancestor)) {
-        throw new Error(`file/directory output conflict: ${ancestor} and ${output}`);
+        throw new Error(
+          `file/directory output conflict: ${ancestor} and ${output}`,
+        );
       }
     }
   }

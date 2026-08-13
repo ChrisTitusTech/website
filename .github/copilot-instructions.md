@@ -1,5 +1,12 @@
-# Project Overview
+# Project overview
 
-This is a cloudflare pages project that serves a static website. The project is built using HTML, CSS, and JavaScript. The website is designed to be responsive and works well on both desktop and mobile devices.
+This repository is a fully static Astro site for
+[christitus.com](https://christitus.com), hosted by Cloudflare Pages. Use
+Node.js 24, install with `npm ci`, build with `npm run build`, and run the full
+local quality gate with `npm run validate`.
 
-It uses HUGO as the static site generator, which allows for easy content management and fast build times. The project is hosted on GitHub and deployed to Cloudflare Pages for fast and reliable performance. The project also includes a custom domain and SSL certificate for secure access at https://christitus.com
+Articles remain in `content/`, Astro source lives in `src/`, public assets live
+in `static/`, and generated production output is `dist/`. Preserve explicit
+article URLs, historical Markdown compatibility, accessibility, and the
+livestream JSON/Python contracts. Do not introduce a server adapter or client UI
+framework.

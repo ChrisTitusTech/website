@@ -2,7 +2,14 @@ import { getCollection, type CollectionEntry } from "astro:content";
 
 import buildState from "../../.astro-content/build.json";
 import site from "../data/site.json";
-import { isEligibleData, publicationTimeData, selectHomepageItems, slugify, taxonomySlug, validateFeaturedOrders } from "./content-logic";
+import {
+  isEligibleData,
+  publicationTimeData,
+  selectHomepageItems,
+  slugify,
+  taxonomySlug,
+  validateFeaturedOrders,
+} from "./content-logic";
 
 export type Post = CollectionEntry<"posts">;
 export type Page = CollectionEntry<"pages">;
@@ -10,7 +17,12 @@ export type Page = CollectionEntry<"pages">;
 const buildInstant = new Date(buildState.buildInstant);
 
 export function isProductionEligible(post: Post): boolean {
-  return isEligibleData(post.data, buildInstant, buildState.preview, site.timeZone);
+  return isEligibleData(
+    post.data,
+    buildInstant,
+    buildState.preview,
+    site.timeZone,
+  );
 }
 
 export function publicationTime(post: Post): number {
@@ -21,7 +33,11 @@ export function sortPosts(posts: Post[]): Post[] {
   return [...posts].sort(
     (left, right) =>
       publicationTime(right) - publicationTime(left) ||
-      (left.data.url < right.data.url ? -1 : left.data.url > right.data.url ? 1 : 0),
+      (left.data.url < right.data.url
+        ? -1
+        : left.data.url > right.data.url
+          ? 1
+          : 0),
   );
 }
 
@@ -66,7 +82,11 @@ export function summary(post: Post, length = 220): string {
 }
 
 export function readingMinutes(post: Post): number {
-  const words = (post.body ?? "").replace(/<[^>]+>/g, " ").trim().split(/\s+/).filter(Boolean).length;
+  const words = (post.body ?? "")
+    .replace(/<[^>]+>/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean).length;
   return Math.max(1, Math.ceil(words / 220));
 }
 
@@ -91,7 +111,12 @@ export function taxonomy(posts: Post[], field: "categories" | "tags") {
 }
 
 export function homepagePosts(posts: Post[]): Post[] {
-  return selectHomepageItems(posts, buildInstant, buildState.preview, site.timeZone);
+  return selectHomepageItems(
+    posts,
+    buildInstant,
+    buildState.preview,
+    site.timeZone,
+  );
 }
 
 export function relatedPosts(current: Post, posts: Post[], limit = 5): Post[] {
@@ -102,7 +127,9 @@ export function relatedPosts(current: Post, posts: Post[], limit = 5): Post[] {
     .map((post) => ({
       post,
       score:
-        post.data.categories.filter((category) => categories.has(category)).length * 2 +
+        post.data.categories.filter((category) => categories.has(category))
+          .length *
+          2 +
         post.data.tags.filter((tag) => tags.has(tag)).length,
     }))
     .filter((entry) => entry.score > 0)
@@ -110,7 +137,11 @@ export function relatedPosts(current: Post, posts: Post[], limit = 5): Post[] {
       (left, right) =>
         right.score - left.score ||
         publicationTime(right.post) - publicationTime(left.post) ||
-        (left.post.data.url < right.post.data.url ? -1 : left.post.data.url > right.post.data.url ? 1 : 0),
+        (left.post.data.url < right.post.data.url
+          ? -1
+          : left.post.data.url > right.post.data.url
+            ? 1
+            : 0),
     )
     .slice(0, limit)
     .map((entry) => entry.post);

@@ -33,12 +33,12 @@ or YouTube availability a test dependency.
 `npm run test:lighthouse` ran the committed profile three times per route. The
 table records the median from the final mobile run.
 
-| Route | Performance | Accessibility | Best practices | SEO | LCP | CLS |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| `/` | 99 | 100 | 96 | 100 | 1,952 ms | 0 |
-| `/my-ai-workflow/` | 100 | 100 | 96 | 100 | 1,578 ms | 0 |
-| `/categories/linux/` | 99 | 100 | 96 | 100 | 1,952 ms | 0 |
-| `/live-streams/` | 100 | 100 | 96 | 100 | 1,688 ms | 0 |
+| Route                | Performance | Accessibility | Best practices | SEO |      LCP | CLS |
+| -------------------- | ----------: | ------------: | -------------: | --: | -------: | --: |
+| `/`                  |          99 |           100 |             96 | 100 | 1,952 ms |   0 |
+| `/my-ai-workflow/`   |         100 |           100 |             96 | 100 | 1,578 ms |   0 |
+| `/categories/linux/` |          99 |           100 |             96 | 100 | 1,952 ms |   0 |
+| `/live-streams/`     |         100 |           100 |             96 | 100 | 1,688 ms |   0 |
 
 All required category scores are at least 90, every LCP is below 2.5 seconds,
 and every CLS is below 0.1.

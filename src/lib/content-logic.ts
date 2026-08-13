@@ -27,7 +27,9 @@ function zonedDate(instant: Date, timeZone: string): string {
     month: "2-digit",
     day: "2-digit",
   }).formatToParts(instant);
-  const value = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  const value = Object.fromEntries(
+    parts.map((part) => [part.type, part.value]),
+  );
   return `${value.year}-${value.month}-${value.day}`;
 }
 
@@ -39,12 +41,17 @@ export function isEligibleData(
 ): boolean {
   if (preview) return true;
   if (data.draft === true) return false;
-  if (/^\d{4}-\d{2}-\d{2}$/.test(data.date)) return data.date <= zonedDate(instant, timeZone);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(data.date))
+    return data.date <= zonedDate(instant, timeZone);
   return new Date(data.date).getTime() <= instant.getTime();
 }
 
-export function publicationTimeData(data: { date: string }, timeZone = site.timeZone): number {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(data.date)) return new Date(data.date).getTime();
+export function publicationTimeData(
+  data: { date: string },
+  timeZone = site.timeZone,
+): number {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(data.date))
+    return new Date(data.date).getTime();
   return zonedMidnight(data.date, timeZone);
 }
 
@@ -64,7 +71,9 @@ export function zonedMidnight(date: string, timeZone = site.timeZone): number {
   let guess = desired;
   for (let attempt = 0; attempt < 4; attempt += 1) {
     const parts = Object.fromEntries(
-      formatter.formatToParts(new Date(guess)).map((part) => [part.type, part.value]),
+      formatter
+        .formatToParts(new Date(guess))
+        .map((part) => [part.type, part.value]),
     );
     const represented = Date.UTC(
       Number(parts.year),
@@ -81,7 +90,9 @@ export function zonedMidnight(date: string, timeZone = site.timeZone): number {
   throw new Error(`Could not resolve midnight for ${date} in ${timeZone}`);
 }
 
-export function validateFeaturedOrders(items: Array<{ url: string; featuredOrder?: number }>): void {
+export function validateFeaturedOrders(
+  items: Array<{ url: string; featuredOrder?: number }>,
+): void {
   const used = new Map<number, string>();
   for (const item of items) {
     const order = item.featuredOrder;
@@ -90,7 +101,10 @@ export function validateFeaturedOrders(items: Array<{ url: string; featuredOrder
       throw new Error(`featuredOrder for ${item.url} must be 1, 2, or 3`);
     }
     const existing = used.get(order);
-    if (existing) throw new Error(`featuredOrder ${order} is duplicated by ${existing} and ${item.url}`);
+    if (existing)
+      throw new Error(
+        `featuredOrder ${order} is duplicated by ${existing} and ${item.url}`,
+      );
     used.set(order, item.url);
   }
 }
@@ -106,7 +120,9 @@ export function selectHomepageItems<T extends HomepageItem>(
   timeZone = site.timeZone,
 ): T[] {
   validateFeaturedOrders(items.map((item) => item.data));
-  const eligible = items.filter((item) => isEligibleData(item.data, instant, preview, timeZone));
+  const eligible = items.filter((item) =>
+    isEligibleData(item.data, instant, preview, timeZone),
+  );
   const slots: Array<T | undefined> = [undefined, undefined, undefined];
   const selected = new Set<string>();
   for (const item of eligible) {
@@ -120,9 +136,15 @@ export function selectHomepageItems<T extends HomepageItem>(
     .filter((item) => !selected.has(item.data.url))
     .sort(
       (left, right) =>
-        publicationTimeData(right.data, timeZone) - publicationTimeData(left.data, timeZone) ||
-        (left.data.url < right.data.url ? -1 : left.data.url > right.data.url ? 1 : 0),
+        publicationTimeData(right.data, timeZone) -
+          publicationTimeData(left.data, timeZone) ||
+        (left.data.url < right.data.url
+          ? -1
+          : left.data.url > right.data.url
+            ? 1
+            : 0),
     );
-  for (let index = 0; index < slots.length; index += 1) slots[index] ??= fallback.shift();
+  for (let index = 0; index < slots.length; index += 1)
+    slots[index] ??= fallback.shift();
   return slots.filter((item): item is T => item !== undefined);
 }
