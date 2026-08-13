@@ -135,9 +135,14 @@
   4 consolidates the current livestream and chat workflows into one scheduled
   workflow at `.github/workflows/update-livestreams.yml` with chained jobs,
   deletes `.github/workflows/update-chat.yml`, and changes delivery from direct
-  pushes to a bot branch and pull request. A concurrency group serializes runs;
-  each job checks out its predecessor's emitted SHA, and PR/CI dispatch occurs
-  only after the branch still matches the final SHA. The CI workflow accepts a
+  pushes to a bot branch and pull request. A concurrency group with
+  `cancel-in-progress: false` and `queue: max` serializes every run. Each job
+  checks out its predecessor's emitted SHA, and PR/CI dispatch occurs only after
+  the branch still matches the final SHA; neither PR update nor CI dispatch can
+  begin before both data jobs succeed. After an interruption, the next queued or
+  manual run reconciles the branch, PR, and check state idempotently: it reruns
+  incomplete data jobs from the last confirmed SHA or completes missing PR/CI
+  actions for an already confirmed final SHA. The CI workflow accepts a
   bot branch plus `expected_sha`, invokes its definition from `master`, checks
   out that SHA, and fails if the branch no longer matches. Do not
   assume bot-authored push or pull-request events will start required checks.
@@ -196,13 +201,16 @@
   pre-migration repository rules, plus a revert of the migration pull request.
 - After preview validation, switch production Pages to Node 24,
   `npm run build`, and `dist` immediately before merging the migration PR. Treat
-  the settings change and merge as one guarded cutover window. First disable the
-  livestream and chat data workflows, wait for their queued/running jobs and any
-  active Pages deployment to finish, and verify the PR head and required checks.
+  the settings change and merge as one guarded cutover window. Because
+  pre-merge `master` still has both legacy workflow identities, first disable
+  `.github/workflows/update-livestreams.yml` and `.github/workflows/update-chat.yml`,
+  wait for all their queued/running jobs and any active Pages deployment to
+  finish, and verify the PR head and required checks.
   Allow no intervening default-branch push or deployment with the new settings
   while `master` still contains Hugo.
 - Treat repository-rule activation as a post-merge cutover step. The migration
-  PR must merge before its managed-branch workflow can run. Verify the retained
-  workflow identity is still disabled after merge, then re-enable and manually
-  dispatch it, verify CI on the bot branch's exact final SHA, and enable the new
-  no-bypass rules before any subsequent PR merges.
+  PR must merge before its managed-branch workflow can run. Verify after merge
+  that `update-chat.yml` is absent and the retained `update-livestreams.yml`
+  identity is still disabled, then re-enable and manually dispatch it, verify CI
+  on the bot branch's exact final SHA, and enable the new no-bypass rules before
+  any subsequent PR merges.

@@ -97,9 +97,14 @@ site.
 - Phase 4 consolidates the current livestream and chat workflows into one
   scheduled workflow by retaining `.github/workflows/update-livestreams.yml`,
   chaining both jobs on the same managed bot branch, and deleting
-  `.github/workflows/update-chat.yml`. A concurrency group serializes runs. Each
-  job checks out its predecessor's emitted SHA, and PR/CI dispatch occurs only
-  after verifying the bot branch still equals the final SHA.
+  `.github/workflows/update-chat.yml`. A concurrency group with
+  `cancel-in-progress: false` and `queue: max` serializes every run. Each job
+  checks out its predecessor's emitted SHA, and PR/CI dispatch occurs only after
+  verifying the bot branch still equals the final SHA; neither action begins
+  before both data jobs succeed. After an interruption, the next queued or manual
+  run idempotently reconciles branch, PR, and check state, rerunning incomplete
+  jobs from the last confirmed SHA or completing missing PR/CI actions for an
+  already confirmed final SHA.
 - `data/livestreams.json` retains `updated` and `items`. Items require
   `videoId`, `title`, `description`, `thumbnail`, `date`, and `publishedAt`;
   `twitchVodId` and `hasChatReplay` remain optional. The Python automation
@@ -283,9 +288,11 @@ site.
   production settings change.
 - After preview validation, the production Pages settings switch to Node 24,
   `npm run build`, and `dist` immediately before the migration merge in a
-  guarded cutover window. Both default-branch data workflows are disabled and
-  drained first, with no active Pages deployment and no intervening
-  default-branch push or deployment.
+  guarded cutover window. Because pre-merge `master` still contains both legacy
+  workflow identities, `update-livestreams.yml` and `update-chat.yml` are both
+  disabled and drained first, with no active Pages deployment and no intervening
+  default-branch push or deployment. After merge, `update-chat.yml` is confirmed
+  absent and the retained `update-livestreams.yml` remains disabled.
 - The post-merge cutover transaction re-enables and manually dispatches the
   retained data workflow only after verifying that it remains disabled,
   dispatches CI for the resulting bot-branch head SHA, confirms its pull request
