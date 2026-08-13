@@ -43,7 +43,7 @@ site.
   creator action cards, topic discovery, recent livestreams, latest articles,
   and newsletter/YouTube promotion.
 - Ordered `featuredOrder` values select curated posts; remaining slots use the
-  newest production-eligible posts (`draft: false` and `date <= build time`).
+  newest production-eligible posts using the shared draft/date predicate.
 
 ### Articles and discovery
 
@@ -94,6 +94,12 @@ site.
 
 ### Livestreams
 
+- Phase 4 consolidates the current livestream and chat workflows into one
+  scheduled workflow by retaining `.github/workflows/update-livestreams.yml`,
+  chaining both jobs on the same managed bot branch, and deleting
+  `.github/workflows/update-chat.yml`. A concurrency group serializes runs. Each
+  job checks out its predecessor's emitted SHA, and PR/CI dispatch occurs only
+  after verifying the bot branch still equals the final SHA.
 - `data/livestreams.json` retains `updated` and `items`. Items require
   `videoId`, `title`, `description`, `thumbnail`, `date`, and `publishedAt`;
   `twitchVodId` and `hasChatReplay` remain optional. The Python automation
@@ -118,12 +124,21 @@ site.
   empty category lists only for `/2022-recap/`, `/worst-tech-of-2022/`, and
   `/youtube-telegram-scams/`, and renders those posts without category links.
   The allowlist is explicit in source and tests; any other uncategorized post
-  fails validation. Draft defaults to false. Duplicate normalized URLs fail the
+  fails validation. Draft defaults to false: an omitted field is published, and
+  only explicit `draft: true` is excluded. Duplicate normalized URLs fail the
   build.
-- Production collections and generated routes exclude drafts and posts whose
-  date is later than the build time. Rendering scheduled content is available
-  only through an explicit local preview mode and is never enabled by the
-  production build command.
+- Production captures one build instant and reuses it for every content query.
+  Front matter with an explicit offset is parsed as an instant and is eligible
+  at or before that instant. A date-only `YYYY-MM-DD` value is eligible for the
+  entire matching day: compare it to the `America/Chicago` calendar date that
+  contains the build instant, inclusively. Timestamp values without an explicit
+  offset fail schema validation. Production excludes `draft: true` and later
+  content with this shared predicate.
+- `npm run dev:content` starts Astro in a local-only `content-preview` mode that
+  includes drafts and future content. Standard `npm run dev` uses production
+  filtering. `npm run build` ignores/rejects content-preview mode and always
+  produces the production route contract; a Cloudflare preview is an
+  `npm run build` artifact in `dist/`, not the local content-preview mode.
 - Preserve historical front-matter extensions. In particular, the `tables`
   object on `/bad-windows-defender/` supplies both table shortcodes and must
   survive typed parsing; a test asserts its existing headers and values render.
@@ -182,7 +197,9 @@ site.
 - Never commit or log YouTube API keys, Twitch credentials, access tokens,
   private keys, or environment files.
 - CI runs on pull requests, pushes, and explicit dispatches for an identified
-  ref. Repository rules require type checks, unit tests, production build,
+  ref. Dispatch accepts a bot branch plus `expected_sha`, invokes the definition
+  from `master`, checks out the expected commit, and fails unless the branch
+  still equals it. Repository rules require type checks, unit tests, production build,
   route validation, and browser tests to pass before merge, including for
   administrators. Bot automation dispatches CI for its final branch head SHA
   with `GITHUB_TOKEN`; it does not depend on token-suppressed push or pull
@@ -241,7 +258,16 @@ site.
   Chromium, Firefox, and WebKit projects.
 - Content validation fixtures prove the three legacy category exceptions pass
   and a newly added uncategorized post fails. A homepage-selection fixture
-  proves that a future-dated, non-draft post cannot fill a featured slot.
+  proves that a future-dated, non-draft post cannot fill a featured slot. A
+  published fixture without a `draft` field remains present in routes, search,
+  feeds, sitemap, and homepage selection.
+- Fixed-clock tests cover offset-bearing timestamps immediately before, equal
+  to, and after the build instant; date-only values before, equal to, and after
+  the `America/Chicago` build date; and consistent filtering across homepage,
+  routes, search, feeds, and sitemap. Local `npm run dev:content` includes draft
+  and future fixtures, while standard development and production builds exclude
+  them; Cloudflare-preview artifacts never include them. An offsetless timestamp
+  fixture fails schema validation.
 - Scaffolder fixtures verify template output under a fixed
   `America/Chicago` clock, explicit dates, slug edge cases, every canonical
   category, repeatable category flags, non-interactive failures, draft defaults,
@@ -255,9 +281,15 @@ site.
   keyboard navigation and third-party fallbacks are exercised.
 - A Cloudflare preview uses `npm run build` and `dist/` successfully before
   production settings change.
-- The post-merge cutover transaction manually dispatches the merged data
-  automation, dispatches CI for the resulting bot-branch head SHA, confirms its
-  pull request has every required check, and only then enables the captured
-  no-bypass repository rules before any bot PR or later change merges.
+- After preview validation, the production Pages settings switch to Node 24,
+  `npm run build`, and `dist` immediately before the migration merge in a
+  guarded cutover window. Both default-branch data workflows are disabled and
+  drained first, with no active Pages deployment and no intervening
+  default-branch push or deployment.
+- The post-merge cutover transaction re-enables and manually dispatches the
+  retained data workflow only after verifying that it remains disabled,
+  dispatches CI for the resulting bot-branch head SHA, confirms its pull request
+  has every required check, and only then enables the captured no-bypass
+  repository rules before any bot PR or later change merges.
 - CI, security checks, local review, independent review, and all actionable
   review threads are clean before merge.

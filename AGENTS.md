@@ -70,7 +70,8 @@
   with an empty category list only through the exact legacy URL allowlist in
   `SPEC.md` and render them without category links. Other uncategorized posts
   fail validation. `image`, `tags`, `draft`, `description`, `author`, and
-  `featuredOrder` are optional.
+  `featuredOrder` are optional. An omitted `draft` value means published;
+  production excludes only `draft: true`.
 - Once the Phase 2 Astro foundation lands, create posts with
   `npm run new:post -- "<title>" [--date YYYY-MM-DD] [--category "<name>" ...]`.
   The repository-owned scaffolder renders `templates/post.md.tmpl` into
@@ -83,12 +84,16 @@
   `MacOS`; new-post category input rejects the historical `macOS` and `macos`
   spellings, while the migration loader preserves and accepts them in existing
   content. `Software Dev` maps to `/categories/software-dev/`.
-- Production builds exclude drafts and posts dated after the build time. A
-  future-content preview must be an explicit opt-in and must not affect the
-  production command or generated route contract.
+- Production captures one build instant. Offset-bearing timestamps compare as
+  instants; date-only values are eligible when they are on or before the
+  inclusive `America/Chicago` calendar date containing that instant. Production
+  rejects timestamps without an offset and excludes `draft: true` and later
+  content. `npm run dev:content` is the only draft/future opt-in and uses Astro's
+  local `content-preview` mode; standard development and every `npm run build`
+  remain production-filtered.
 - `featuredOrder` is a positive integer used to curate homepage features.
   Missing feature slots are filled by the newest production-eligible posts
-  (`draft: false` and `date <= build time`).
+  using that same draft/date predicate.
 - Preserve historical front-matter extensions such as `tables`; typed parsing
   must explicitly model them or pass unknown metadata through without loss.
 - Keep `<!--more-->` markers; list summaries depend on them.
@@ -127,10 +132,14 @@
   performance, and security impact.
 - The livestream JSON, Python script, and secret contracts remain stable;
   `publishedAt` remains required because Twitch VOD matching consumes it. Phase
-  4 may change the workflows' delivery path from direct pushes to a bot branch
-  and pull request so protected-branch checks still apply. The CI workflow must
-  accept an explicit ref through `workflow_dispatch`, and the data workflow
-  must dispatch it for the final bot-branch head SHA with `GITHUB_TOKEN`; do not
+  4 consolidates the current livestream and chat workflows into one scheduled
+  workflow at `.github/workflows/update-livestreams.yml` with chained jobs,
+  deletes `.github/workflows/update-chat.yml`, and changes delivery from direct
+  pushes to a bot branch and pull request. A concurrency group serializes runs;
+  each job checks out its predecessor's emitted SHA, and PR/CI dispatch occurs
+  only after the branch still matches the final SHA. The CI workflow accepts a
+  bot branch plus `expected_sha`, invokes its definition from `master`, checks
+  out that SHA, and fails if the branch no longer matches. Do not
   assume bot-authored push or pull-request events will start required checks.
   The dispatcher receives `actions: write`; `contents: write` and
   `pull-requests: write` remain limited to the data jobs that update the bot
@@ -183,9 +192,17 @@
   output.
 - Validate a preview deployment before production cutover. Rollback is the
   previous Cloudflare deployment, restoration of the captured Hugo Pages
-  settings, redirects, and pre-migration repository rules, plus a revert of the
-  migration pull request.
+  configuration including runtime/environment settings, redirects, and
+  pre-migration repository rules, plus a revert of the migration pull request.
+- After preview validation, switch production Pages to Node 24,
+  `npm run build`, and `dist` immediately before merging the migration PR. Treat
+  the settings change and merge as one guarded cutover window. First disable the
+  livestream and chat data workflows, wait for their queued/running jobs and any
+  active Pages deployment to finish, and verify the PR head and required checks.
+  Allow no intervening default-branch push or deployment with the new settings
+  while `master` still contains Hugo.
 - Treat repository-rule activation as a post-merge cutover step. The migration
-  PR must merge before its managed-branch workflows can run; then manually
-  dispatch them, verify CI on the bot branch's exact final SHA, and enable the
-  new no-bypass rules before any subsequent PR merges.
+  PR must merge before its managed-branch workflow can run. Verify the retained
+  workflow identity is still disabled after merge, then re-enable and manually
+  dispatch it, verify CI on the bot branch's exact final SHA, and enable the new
+  no-bypass rules before any subsequent PR merges.

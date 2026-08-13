@@ -39,6 +39,11 @@ Markdown rendering while Hugo remains available for comparison.
 
 - Add Astro, TypeScript, npm scripts, content collections, site configuration,
   shared layouts, and core utilities.
+- Capture one build instant for all content queries. Compare offset-bearing
+  timestamps as instants and date-only values against the inclusive
+  `America/Chicago` build date; reject timestamps without an offset. Add
+  `npm run dev:content` using Astro's local `content-preview` mode; keep normal
+  development and `npm run build` production-filtered.
 - Add `templates/post.md.tmpl` and a repository-owned
   `npm run new:post -- "<title>"` scaffolder. It writes the dated Markdown path,
   generates the explicit URL and thumbnail path, defaults to `draft: true`,
@@ -72,6 +77,14 @@ Markdown rendering while Hugo remains available for comparison.
   from production routes, search, feeds, and sitemap, with fixture coverage for
   both cases. A homepage-selection fixture also proves that a future-dated,
   non-draft post cannot fill a featured slot.
+- A published fixture with no `draft` field remains included in routes, search,
+  feeds, sitemap, and homepage selection; only explicit `draft: true` is
+  excluded.
+- Fixed-clock fixtures cover timestamps immediately before, equal to, and after
+  the build instant plus date-only values before, on, and after the inclusive
+  `America/Chicago` build date. An offsetless timestamp fixture fails schema
+  validation. `npm run dev:content` includes draft and future fixtures locally,
+  while normal development and both repeated production builds exclude them.
 - Route and redirect tests cover the Hugo baseline without duplicate URLs,
   confirm supported `_redirects` rules are present in `dist/`, and reject
   domain-level sources or external `200` proxies.
@@ -133,17 +146,21 @@ protection cutover.
 - Add CI for formatting, Markdown lint, Astro checks, unit tests, production
   build, route validation, browser tests, and the pinned Lighthouse profile.
 - Add CodeQL, dependency review, npm/Actions Dependabot, and audit enforcement.
-- Change the scheduled data automation to commit generated livestream and chat
-  updates to one managed bot branch and open or refresh a pull request. Chain
-  both data jobs on that branch so chat matching sees the new livestream data;
-  do not grant the workflows a protected-branch bypass.
-- Give the CI workflow a `workflow_dispatch` trigger accepting a ref, and have
-  the data workflow dispatch CI for its final bot-branch head SHA with
-  `GITHUB_TOKEN` after all data/chat commits. Do not rely on token-suppressed
-  push or pull-request events to create required checks. Grant the dispatcher
-  `actions: write`; reserve `contents: write` and `pull-requests: write` for the
-  data jobs that update the bot branch and manage its pull request, and keep CI
-  jobs otherwise read-only.
+- Consolidate the current livestream and chat workflows into one scheduled data
+  workflow by retaining `.github/workflows/update-livestreams.yml`, adding the
+  chained chat job there, and deleting `.github/workflows/update-chat.yml`.
+  Serialize runs with one concurrency group. Have each job check out its
+  predecessor's emitted SHA on one managed bot branch so chat matching sees the
+  new data. Verify the branch still equals the final SHA before opening or
+  refreshing its pull request; do not grant the workflow a protected-branch
+  bypass.
+- Give the CI workflow a `workflow_dispatch` trigger accepting `ref` and
+  `expected_sha`. Invoke its definition from `master` with the bot branch as
+  `ref`; CI checks out `expected_sha` and fails unless the branch still equals
+  it. Dispatch only after all data/chat commits and the final branch-head check.
+  Do not rely on token-suppressed events to create required checks. Grant the
+  dispatcher `actions: write`; reserve `contents: write` and
+  `pull-requests: write` for the data jobs, and keep CI jobs otherwise read-only.
 - Commit the documented repository-rule configuration that will require the
   quality and security checks on `master`, including for administrators. Do not
   enable it while the old default-branch workflows are still active.
@@ -157,7 +174,7 @@ protection cutover.
 ### Phase 4 exit criteria
 
 - `npm run validate` passes from a clean install with no Hugo dependency.
-- Scheduled data workflows still update `data/livestreams.json` and
+- The scheduled data workflow still updates `data/livestreams.json` and
   `static/chats/` on their managed branch, open or refresh a pull request, and
   dispatch the same checks as human-authored changes without changing the JSON,
   Python, or secret contracts. Workflow tests or a dry-run fixture verify the
@@ -180,23 +197,35 @@ available.
 
 - Deploy `dist/` to a Cloudflare preview and verify representative URLs,
   redirects, headers, assets, analytics, feeds, and sitemap.
-- Merge the fully green migration PR while the captured pre-migration
-  repository rules remain active. Immediately dispatch the merged data
-  workflow, confirm it creates or refreshes the managed bot PR, and explicitly
-  dispatch CI for that branch's final head SHA. After every required check is
-  attached and green, enable the new no-bypass repository rules before merging
-  the bot PR or any later change.
 - Create and verify the zone-level `http*://www.christitus.com/*` Single
   Redirect to `https://christitus.com/${2}` immediately before production
   cutover, with query preservation; verify `/winget` follows to the latest
   WinUtil release script successfully.
-- Set production Pages to Node 24, build command `npm run build`, and output
-  directory `dist` immediately before merge/cutover.
+- Disable both default-branch livestream/chat data workflows, wait for all
+  queued or running jobs and active Pages deployments to finish, and verify no
+  unreviewed commit reached `master`. Keep both workflows disabled through the
+  settings switch and migration merge.
+- After preview validation and immediately before merging, set production Pages
+  to Node 24, build command `npm run build`, and output directory `dist`. Treat
+  this settings change and merge as one guarded cutover window: reverify the
+  exact PR head and required checks first, and permit no intervening deployment
+  of Hugo `master` with the Astro settings.
+- Merge the fully green migration PR while the captured pre-migration
+  repository rules remain active. Verify the retained `update-livestreams.yml`
+  workflow is still disabled after merge, then re-enable and dispatch it. Confirm
+  it creates or refreshes the managed bot PR and explicitly dispatches CI for
+  that branch's final head SHA. After every required check is attached and green,
+  enable the new no-bypass repository rules before merging the bot PR or any
+  later change.
 - Verify the custom domain and production behavior after deployment.
 
 ### Phase 5 exit criteria
 
 - Preview and production builds finish successfully with captured evidence.
+- Cutover evidence records the preview result, exact merge head, old and new
+  Pages settings, workflow disable/drain and re-enable timestamps, and
+  confirmation that no default-branch push or deployment occurred between the
+  production settings switch and migration merge.
 - The first post-merge bot PR has all required checks on its final head SHA, and
   a controlled failed-check test proves the new no-bypass rule prevents merges
   to `master`, including for administrators.
@@ -211,10 +240,12 @@ available.
 
 ### Rollback
 
-Promote the previous Cloudflare deployment; immediately restore the captured
-pre-migration repository rules so Hugo checks and direct-push data workflows are
-not blocked; restore the captured Cloudflare redirect rules and Pages build
-command/output to `hugo --gc --minify` and `public`; and revert the migration
-pull request. Verify a fresh Hugo deployment and a safe manual dispatch of the
-data workflow succeed with the restored settings. Record the reason and failed
-evidence before retrying cutover.
+Disable the consolidated workflow and drain its queued/running jobs. Promote the
+previous Cloudflare deployment; restore the captured pre-migration repository
+rules so Hugo checks are not blocked; and restore the complete captured
+Cloudflare redirect and Pages configuration, including runtime and environment
+settings. Revert the migration with both legacy workflow files temporarily
+restored as manual-dispatch-only definitions, then verify a fresh Hugo
+deployment. Only after that succeeds, restore their captured schedules and prove
+a safe manual dispatch. Record the reason and failed evidence before retrying
+cutover.
