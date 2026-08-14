@@ -84,8 +84,6 @@ const structuredData = JSON.stringify({
     <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
     {feed && <link rel="alternate" type="application/rss+xml" title={site.title} href={new URL(feed, site.url).toString()} />}
     {preloadImage && <link rel="preload" href={preloadImage} as="image" fetchpriority="high" />}
-    <link rel="preload" href="/fonts/pt-sans-400.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/pt-sans-700.woff2" as="font" type="font/woff2" crossorigin />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />

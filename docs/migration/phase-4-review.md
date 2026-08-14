@@ -14,7 +14,7 @@ with `npm ci`. A single serial `npm run validate` invocation then passed:
 - Astro diagnostics with zero errors, warnings, or hints.
 - 52 unit and workflow-contract tests.
 - A deterministic 1,285-page production build with digest
-  `5245fc43649b82f3fec7435ac7d40e4e36a5e392decc5e571237149a79533390`.
+  `096df00d3fe436f2dbddda91884c95bb584d4b5e35b2f56b1d0baa6b8ee9eb15`.
 - The 1,183-route Hugo compatibility contract and 312 search entries.
 - 54 applicable Chromium, Firefox, and mobile browser tests. Three
   engine-specific tests were skipped by design.
