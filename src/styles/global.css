@@ -587,6 +587,7 @@ td {
   width: min(var(--max), calc(100vw - 2rem));
   margin: 1rem 50%;
   padding: clamp(1rem, 3vw, 1.75rem);
+  border-radius: var(--radius);
   transform: translateX(-50%);
   border: 1px solid var(--border);
   background: var(--surface);
@@ -609,6 +610,7 @@ td {
   display: inline-flex;
   justify-content: center;
   padding: 0.55rem 0.85rem;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
   color: var(--text);
   font-weight: 700;
@@ -634,6 +636,7 @@ td {
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.9rem;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--surface-2);
   color: var(--muted);
