@@ -14,3 +14,11 @@ Looking for the free WinUtil project? Use the official documentation for the
 latest installation instructions, usage guides, and source links.
 
 [Open the WinUtil documentation](https://winutil.christitus.com)
+
+### Community support
+
+For troubleshooting and project feedback, use the matching community support
+category:
+
+- [Windows Utility support](https://forum.christitus.com/c/winutil-support/5)
+- [Linux Utility support](https://forum.christitus.com/c/linux-utility/6)

@@ -188,17 +188,31 @@ test("newsletter retains required subscription contract", async ({ page }) => {
 
 test("search returns generated index results", async ({ page }) => {
   await page.goto("/search/");
+  const communitySearch = page.getByRole("link", {
+    name: "Search the community forums",
+  });
+  await expect(communitySearch).toHaveAttribute(
+    "href",
+    "https://forum.christitus.com/search",
+  );
   await page.getByLabel("Search articles").fill("Linux");
   await page.getByRole("button", { name: "Search" }).click();
   await expect(page.locator("[data-search-status]")).toContainText(/result/i);
   await expect(
     page.locator("[data-search-results] article").first(),
   ).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "Search the community for “Linux”" }),
+  ).toHaveAttribute("href", "https://forum.christitus.com/search?q=Linux");
   await page.getByLabel("Search articles").fill("");
   await page.getByRole("button", { name: "Search" }).click();
   await expect(page.locator("[data-search-results] article")).toHaveCount(0);
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Enter a search term.",
+  );
+  await expect(communitySearch).toHaveAttribute(
+    "href",
+    "https://forum.christitus.com/search",
   );
 });
 
@@ -322,6 +336,12 @@ test("downloads provide a first-party CTT Store handoff", async ({ page }) => {
     "https://cttstore.com/products/the-linux-desktop-guide-1",
   );
   await expect(page.locator("[data-shopify-load]")).toHaveCount(0);
+  await expect(
+    page.getByRole("link", { name: "Windows Utility support" }),
+  ).toHaveAttribute("href", "https://forum.christitus.com/c/winutil-support/5");
+  await expect(
+    page.getByRole("link", { name: "Linux Utility support" }),
+  ).toHaveAttribute("href", "https://forum.christitus.com/c/linux-utility/6");
 });
 
 test("known player states render and unknown ids redirect", async ({
