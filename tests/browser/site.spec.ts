@@ -57,6 +57,35 @@ test("first taxonomy image is prioritized and later images remain lazy", async (
   await expect(images.nth(1)).toHaveAttribute("src", /\/images\//);
 });
 
+test("listing cards use the compact mobile layout", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/categories/linux/");
+  const firstCard = page.locator(".listing-page .card").first();
+  await expect(firstCard.locator(".card-body > p:not(.meta)")).toBeVisible();
+  await expect(firstCard.locator(".card-body > .chips")).toBeVisible();
+  await expect(firstCard).toHaveCSS("display", "grid");
+  await expect(firstCard).toHaveCSS("grid-template-columns", /^112px /);
+  await expect(firstCard.locator("img")).toHaveCSS("width", "112px");
+  await expect(firstCard.locator("img")).toHaveCSS("height", "112px");
+
+  await page.setViewportSize({ width: 320, height: 844 });
+  await expect(firstCard).toHaveCSS("grid-template-columns", /^88px /);
+  await expect(firstCard.locator("img")).toHaveCSS("width", "88px");
+  await expect(firstCard.locator(".card-body > p:not(.meta)")).toBeVisible();
+  expect(
+    await firstCard.evaluate((card) => card.scrollWidth <= card.clientWidth),
+  ).toBe(true);
+
+  await page.setViewportSize({ width: 900, height: 900 });
+  await expect(firstCard.locator(".card-body > p:not(.meta)")).toBeVisible();
+  await expect(firstCard.locator(".card-body > .chips")).toBeVisible();
+  await expect(firstCard).toHaveCSS("display", "block");
+  await expect(firstCard.locator("img")).toHaveCSS("aspect-ratio", "16 / 9");
+  expect(
+    await firstCard.locator("img").evaluate((image) => image.clientWidth),
+  ).toBeGreaterThan(112);
+});
+
 test("article exposes navigation and interactions", async ({
   page,
   isMobile,
