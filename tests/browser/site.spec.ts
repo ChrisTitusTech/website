@@ -14,6 +14,7 @@ for (const path of [
   "/my-ai-workflow/",
   "/categories/linux/",
   "/live-streams/",
+  "/downloads/",
 ]) {
   test(`primary page ${path} has no serious accessibility violations`, async ({
     page,
@@ -297,18 +298,30 @@ test("taxonomy and head pagination expose complete navigation", async ({
   );
 });
 
-test("downloads retain an intent-driven store fallback", async ({ page }) => {
+test("downloads provide a first-party CTT Store handoff", async ({ page }) => {
   await page.goto("/downloads/");
-  const button = page.locator("[data-shopify-load]");
-  await expect(button).toBeVisible();
+  const store = page.locator("[data-store-handoff]");
+  await expect(store).toBeVisible();
+  await expect(store.getByRole("heading", { level: 2 })).toContainText(
+    "Digital products and guides",
+  );
+  await expect(store.locator(".heading-link")).toHaveCount(0);
   await expect(
-    page.getByRole("link", { name: /browse the ctt store directly/i }),
-  ).toHaveAttribute("href", "https://www.cttstore.com/");
-  await button.click();
-  await expect(button).toHaveText("Store unavailable - try again");
+    store.getByRole("link", { name: "Browse the CTT Store" }),
+  ).toHaveAttribute("href", "https://cttstore.com/");
   await expect(
-    page.getByRole("link", { name: /browse the ctt store directly/i }),
-  ).toBeVisible();
+    store.getByRole("link", { name: "Access your purchases" }),
+  ).toHaveAttribute("href", "https://cttstore.com/account");
+  await expect(
+    store.getByRole("link", { name: /Windows Toolbox/i }),
+  ).toHaveAttribute("href", "https://cttstore.com/products/windows-toolbox");
+  await expect(
+    store.getByRole("link", { name: /The Linux Desktop Guide/i }),
+  ).toHaveAttribute(
+    "href",
+    "https://cttstore.com/products/the-linux-desktop-guide-1",
+  );
+  await expect(page.locator("[data-shopify-load]")).toHaveCount(0);
 });
 
 test("known player states render and unknown ids redirect", async ({

@@ -31,7 +31,11 @@ describe("Hugo compatibility preprocessing", () => {
     expect(notice).toContain("notice-tip");
     expect(x).toContain("https://x.com/");
     expect(youtube).toContain("youtube-nocookie.com");
-    expect(shopify).toContain("data-shopify-products");
+    expect(shopify).toContain("data-store-handoff");
+    expect(shopify).toContain("https://cttstore.com/products/windows-toolbox");
+    expect(shopify).toContain(
+      "https://cttstore.com/products/the-linux-desktop-guide-1",
+    );
   });
 
   it("keeps literal shortcode examples inside fenced code", async () => {

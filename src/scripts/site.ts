@@ -94,7 +94,9 @@ document.querySelectorAll<HTMLElement>(".article-body pre").forEach((pre) => {
 });
 
 document
-  .querySelectorAll<HTMLElement>(".article-body :is(h2,h3)[id]")
+  .querySelectorAll<HTMLElement>(
+    ".article-body :is(h2,h3)[id]:not([data-no-heading-link])",
+  )
   .forEach((heading) => {
     heading.classList.add("linked-heading");
     const link = document.createElement("a");
@@ -218,75 +220,3 @@ function loadAds() {
 }
 addEventListener("scroll", loadAds, { once: true, passive: true });
 addEventListener("pointerdown", loadAds, { once: true, passive: true });
-
-document
-  .querySelector<HTMLButtonElement>("[data-shopify-load]")
-  ?.addEventListener("click", async (event) => {
-    const button = event.currentTarget as HTMLButtonElement;
-    const host = button.closest<HTMLElement>("[data-shopify-products]");
-    if (!host) return;
-    button.disabled = true;
-    button.textContent = "Loading store...";
-    const script = document.createElement("script");
-    script.src =
-      "https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js";
-    script.async = true;
-    script.addEventListener(
-      "load",
-      async () => {
-        try {
-          const ShopifyBuy = (window as any).ShopifyBuy;
-          const client = ShopifyBuy.buildClient({
-            domain: "1efdc2-1a.myshopify.com",
-            storefrontAccessToken: "d3832fa1046e2ebd19d3bfd837bf5eb3",
-          });
-          const ui = await ShopifyBuy.UI.onReady(client);
-          const mount = document.createElement("div");
-          mount.hidden = true;
-          host.append(mount);
-          await ui.createComponent("product", {
-            id: "9430583542065",
-            node: mount,
-            moneyFormat: "%24%7B%7Bamount%7D%7D",
-            options: {
-              product: {
-                buttonDestination: "checkout",
-                layout: "horizontal",
-                contents: {
-                  img: false,
-                  imgWithCarousel: true,
-                  description: true,
-                },
-                width: "100%",
-                text: { button: "Buy now" },
-                styles: {
-                  product: { "max-width": "100%", "text-align": "left" },
-                  button: {
-                    "background-color": "#347eaa",
-                    "font-weight": "bold",
-                    ":hover": { "background-color": "#28688e" },
-                  },
-                },
-              },
-            },
-          });
-          host.replaceChildren(mount);
-          mount.hidden = false;
-        } catch {
-          host.querySelector(":scope > div[hidden]")?.remove();
-          button.disabled = false;
-          button.textContent = "Store unavailable - try again";
-        }
-      },
-      { once: true },
-    );
-    script.addEventListener(
-      "error",
-      () => {
-        button.disabled = false;
-        button.textContent = "Store unavailable - try again";
-      },
-      { once: true },
-    );
-    document.head.append(script);
-  });

@@ -90,7 +90,24 @@ function renderShortcode(name, rawArgs, data, file) {
   }
   if (name === "table") return renderTable(argument, data.tables, file);
   if (name === "shopify") {
-    return '<div class="shopify-products" data-shopify-products><button class="primary-button" type="button" data-shopify-load>Load digital downloads</button><p><a href="https://www.cttstore.com/">Or browse the CTT Store directly</a></p></div>';
+    return [
+      '<section class="store-handoff" data-store-handoff aria-labelledby="ctt-store-heading">',
+      '<div class="store-handoff__intro">',
+      '<p class="eyebrow">Official CTT Store</p>',
+      '<h2 id="ctt-store-heading" data-no-heading-link>Digital products and guides</h2>',
+      "<p>Shop securely on CTT Store for current product details, localized pricing, checkout, and access to your purchases.</p>",
+      '<div class="store-handoff__actions">',
+      '<a class="primary-button" href="https://cttstore.com/">Browse the CTT Store</a>',
+      '<a class="store-secondary-button" href="https://cttstore.com/account">Access your purchases</a>',
+      "</div>",
+      "</div>",
+      '<ul class="store-product-grid">',
+      '<li><a class="store-product" href="https://cttstore.com/products/windows-toolbox"><span class="eyebrow">Windows</span><strong>Windows Toolbox</strong><span>Program installation, Windows optimization, and custom ISO creation.</span><span class="store-product__link">View product <span aria-hidden="true">&rarr;</span></span></a></li>',
+      '<li><a class="store-product" href="https://cttstore.com/products/the-linux-desktop-guide-1"><span class="eyebrow">Linux</span><strong>The Linux Desktop Guide</strong><span>A practical Linux desktop guide delivered in PDF and EPUB formats.</span><span class="store-product__link">View product <span aria-hidden="true">&rarr;</span></span></a></li>',
+      "</ul>",
+      '<p class="store-handoff__help">Need help before or after a purchase? Visit <a href="https://cttstore.com/pages/troubleshooting">CTT Store troubleshooting</a> or <a href="https://cttstore.com/pages/contact">contact the store</a>.</p>',
+      "</section>",
+    ].join("");
   }
   throw new Error(`${file}: unsupported active Hugo shortcode ${name}`);
 }

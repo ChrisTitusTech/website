@@ -225,8 +225,12 @@ site.
 
 ## Integrations, security, and privacy
 
-- Retain Cloudflare Web Analytics, Google ads, Utterances, Shopify Buy Button,
-  YouTube, Twitch chat data, newsletter reCAPTCHA, and configured social links.
+- Retain Cloudflare Web Analytics, Google ads, Utterances, a first-party CTT
+  Store handoff, YouTube, Twitch chat data, newsletter reCAPTCHA, and configured
+  social links. The downloads page links to canonical CTT Store product,
+  account, support, and contact routes rather than loading the Shopify Buy
+  Button SDK, so product details, localization, checkout, and fulfillment stay
+  on the store's maintained customer experience.
 - Cloudflare Web Analytics loads with `defer` on every page so no-interaction
   pageviews remain counted. Ads, comments, media APIs, and search data load
   lazily or after user intent where practical.
