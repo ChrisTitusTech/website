@@ -66,7 +66,8 @@ jobs:
               --jq ".[] | select(.head.sha == \"${previous_sha}\" and .base.ref == \"master\" and .merged_at != null) | .number" | head -n 1)
             if git merge-base --is-ancestor "$previous_sha" "$base_sha" || [[ -n "$merged_pr" ]]; then
               git reset --hard "$base_sha"
-            elif [[ -n "$checkpoint_sha" && "$checkpoint_sha" == "$previous_sha" ]]; then
+            elif [[ -n "$checkpoint_sha" && "$checkpoint_sha" == "$previous_sha" ]] && \
+              git merge-base --is-ancestor "$base_sha" "$previous_sha"; then
               resume=true
             elif ! git merge-base --is-ancestor "$base_sha" "$previous_sha"; then
               git rebase "$base_sha"

@@ -36,6 +36,12 @@ describe("production eligibility", () => {
     );
   });
 
+  it("admits undated pages while filtering dated draft and future pages", () => {
+    expect(isEligibleData({}, instant)).toBe(true);
+    expect(isEligibleData({ draft: true }, instant)).toBe(false);
+    expect(isEligibleData({ date: "2099-01-01" }, instant)).toBe(false);
+  });
+
   it("includes draft and future content in content preview", () => {
     expect(
       isEligibleData({ date: "2099-01-01", draft: true }, instant, true),

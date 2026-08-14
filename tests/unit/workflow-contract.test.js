@@ -90,6 +90,9 @@ describe("workflow contracts", () => {
     expect(restoreSource).toContain('git reset --hard "$base_sha"');
     expect(restoreSource).toContain("refs/tags/livestream-data-final");
     expect(restoreSource).toContain('checkpoint_sha" == "$previous_sha');
+    expect(restoreSource).toMatch(
+      /git merge-base --is-ancestor "\$base_sha" "\$previous_sha"; then\s+resume=true/,
+    );
     expect(data.jobs["update-livestreams"].outputs.resume).toContain(
       "steps.branch.outputs.resume",
     );

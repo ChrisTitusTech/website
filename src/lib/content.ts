@@ -21,7 +21,7 @@ export type Page = CollectionEntry<"pages">;
 
 const buildInstant = new Date(buildState.buildInstant);
 
-export function isProductionEligible(post: Post): boolean {
+export function isProductionEligible(post: Post | Page): boolean {
   return isEligibleData(
     post.data,
     buildInstant,
@@ -57,7 +57,7 @@ export async function getPublishedPosts(): Promise<Post[]> {
 }
 
 export async function getPages(): Promise<Page[]> {
-  return getCollection("pages");
+  return (await getCollection("pages")).filter(isProductionEligible);
 }
 
 export function displayDate(post: Post): string {
