@@ -282,17 +282,18 @@ h2 {
 .article-shell > .reading {
   width: 100%;
 }
+.article-toc {
+  position: sticky;
+  top: 7rem;
+  align-self: start;
+  max-height: calc(100vh - 9rem);
+  overflow: auto;
+}
 .article-toc-details > summary {
   display: none;
   color: var(--accent);
   cursor: pointer;
   font-weight: 700;
-}
-.article-toc nav {
-  position: sticky;
-  top: 7rem;
-  max-height: calc(100vh - 9rem);
-  overflow: auto;
 }
 .article-toc ol {
   list-style: none;
@@ -688,9 +689,12 @@ td {
     display: block;
   }
   .article-toc {
+    position: static;
     width: min(100%, var(--reading));
+    max-height: none;
     margin: 0 auto 1.25rem;
     padding: 0.75rem 0.9rem;
+    overflow: visible;
     border: 1px solid var(--border);
     background: var(--surface);
     border-radius: var(--radius);
@@ -705,8 +709,8 @@ td {
     display: none;
   }
   .article-toc nav {
-    position: static;
     max-height: 16rem;
+    overflow: auto;
   }
   .player-wrapper.has-chat {
     grid-template-columns: 1fr;

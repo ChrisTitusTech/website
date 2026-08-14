@@ -141,6 +141,27 @@ test("responsive article navigation follows viewport changes", async ({
   await expect(toc.locator("[data-toc]")).toBeVisible();
 });
 
+test("article table of contents stays pinned while scrolling on desktop", async ({
+  page,
+  isMobile,
+}) => {
+  test.skip(isMobile, "the mobile table of contents is intentionally inline");
+  await page.setViewportSize({ width: 1200, height: 800 });
+  await page.goto("/my-ai-workflow/");
+  const toc = page.locator(".article-toc");
+  await expect(toc).toHaveCSS("position", "sticky");
+  const stickyTop = await toc.evaluate((element) =>
+    Number.parseFloat(getComputedStyle(element).top),
+  );
+  await page.evaluate(() => window.scrollTo(0, 600));
+  await expect
+    .poll(() => page.evaluate(() => window.scrollY))
+    .toBeGreaterThan(0);
+  await expect
+    .poll(() => toc.evaluate((element) => element.getBoundingClientRect().top))
+    .toBeCloseTo(stickyTop, 0);
+});
+
 test("live archive paginates and validates player ids", async ({ page }) => {
   await page.goto("/live-streams/");
   await expect(page.locator(".stream-feature")).toHaveCount(1);
