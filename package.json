@@ -44,17 +44,17 @@
     "yaml": "2.9.0"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.6",
-    "@axe-core/playwright": "4.10.2",
+    "@astrojs/check": "0.9.10",
+    "@axe-core/playwright": "4.12.1",
     "@lhci/cli": "0.15.1",
     "@playwright/test": "1.62.1",
     "@types/markdown-it": "14.1.2",
-    "@types/node": "24.10.1",
-    "@types/sanitize-html": "2.16.0",
+    "@types/node": "26.2.0",
+    "@types/sanitize-html": "2.16.1",
     "markdownlint-cli2": "0.23.2",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "vitest": "4.1.10"
   },
   "overrides": {
