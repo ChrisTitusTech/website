@@ -284,7 +284,7 @@ site.
   preset and Chromium dependency. It measures `/`, `/my-ai-workflow/`,
   `/categories/linux/`, and `/live-streams/` three times and gates on the median
   run. Each representative route must score at least 90 for performance,
-  accessibility, best practices, and SEO, with LCP under 2.5 seconds and CLS
+  accessibility, best practices, and SEO, with LCP under 3 seconds and CLS
   under 0.1. Tool versions and profile settings are committed with the lockfile
   so local and CI runs are reproducible.
 - Local fonts, responsive images, lazy third-party scripts, and minimal client

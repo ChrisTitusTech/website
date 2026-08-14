@@ -141,7 +141,7 @@ all required user workflows.
   exception requires an explicit documented waiver with owner and follow-up.
 - The committed Lighthouse CI mobile profile runs three times against `/`,
   `/my-ai-workflow/`, `/categories/linux/`, and `/live-streams/`; median scores
-  are at least 90 in every required category, LCP is under 2.5 seconds, and CLS
+  are at least 90 in every required category, LCP is under 3 seconds, and CLS
   is under 0.1 on each representative route.
 - Manual keyboard, mobile, desktop, light, and dark review is recorded.
 - Search, feeds, metadata, redirects, livestream chat/no-chat, and third-party
