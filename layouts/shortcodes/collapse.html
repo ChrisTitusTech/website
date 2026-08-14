@@ -1,8 +1,0 @@
-{{ $_hugo_config := `{ "version": 1 }` }}
-
-<div class="border border-default collapse-wrapper">
-  <a class="d-flex p-2 collapse-head" data-toggle="collapse" href="#{{ .Get 0 | urlize }}" role="button">
-    {{ .Get 0 | markdownify }} <i class="las la-plus ml-auto"></i>
-  </a>
-  <div class="collapse" id="{{ .Get 0 | urlize }}"><div class="p-2">{{ .Inner | markdownify }}</div></div>
-</div>

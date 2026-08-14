@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import livestreams from "../../../data/livestreams.json";
+const streams = livestreams.items
+  .filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId))
+  .map(({ videoId, title, date, hasChatReplay }) => ({ videoId, title, date, hasChatReplay: Boolean(hasChatReplay) }));
+const streamData = JSON.stringify(streams).replaceAll("<", "\\u003c");
+---
+<BaseLayout title="Live Stream Player" description="Watch a Chris Titus Tech live stream recording with synchronized chat replay" canonical="/live-streams/player/" robots="noindex, follow">
+  <section class="container stream-player-page"><p><a href="/live-streams/">← Live stream archive</a></p><p class="eyebrow">Recording</p><h1 id="stream-title">Live Stream</h1><p class="meta" id="stream-date"></p><p><a id="youtube-fallback" href="https://youtube.com/@christitustech">Watch on YouTube</a></p>
+    <div class="player-wrapper" id="player-wrapper">
+      <div class="media-embed"><div id="yt-player"></div></div>
+      <aside class="chat-panel" id="chat-col" aria-label="Synchronized Twitch chat" hidden><div class="chat-header"><strong>Chat replay</strong><span id="chat-status" class="meta" aria-hidden="true"></span></div><div id="chat-messages" class="chat-messages"></div><button id="chat-scroll-btn" class="chat-scroll" type="button" hidden>Jump to latest</button><p id="chat-credit" class="chat-credit">Replay synchronized from Twitch.</p></aside>
+    </div>
+    <noscript><p class="notice">JavaScript is required for the video player and synchronized chat.</p></noscript>
+  </section>
+  <script is:inline id="stream-data" type="application/json" set:html={streamData}></script>
+  <script>
+    import "../../scripts/livestream-player.ts";
+  </script>
+</BaseLayout>

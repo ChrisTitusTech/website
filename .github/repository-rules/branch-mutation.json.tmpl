@@ -1,0 +1,28 @@
+{
+  "name": "repository branch mutation boundary",
+  "target": "branch",
+  "enforcement": "disabled",
+  "bypass_actors": [
+    {
+      "actor_id": GITHUB_ACTIONS_INTEGRATION_ID,
+      "actor_type": "Integration",
+      "bypass_mode": "always"
+    },
+    {
+      "actor_id": BRANCH_MAINTAINER_REPOSITORY_ROLE_ID,
+      "actor_type": "RepositoryRole",
+      "bypass_mode": "always"
+    }
+  ],
+  "conditions": {
+    "ref_name": {
+      "include": ["~ALL"],
+      "exclude": []
+    }
+  },
+  "rules": [
+    { "type": "creation" },
+    { "type": "update" },
+    { "type": "deletion" }
+  ]
+}

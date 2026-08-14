@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LivestreamArchive from "../../components/LivestreamArchive.astro";
+import livestreams from "../../../data/livestreams.json";
+const items = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId));
+const pageSize = 24;
+const featured = items[0];
+const archive = items.slice(1);
+const pages = Math.ceil(archive.length / pageSize);
+---
+<BaseLayout title="Live Streams" description="Chris Titus Tech live stream recordings" canonical="/live-streams/" next={pages > 1 ? "/live-streams/page/2/" : undefined} feed="/live-streams/index.xml">
+  <LivestreamArchive items={archive.slice(0, pageSize)} featured={featured} page={1} pages={pages} />
+</BaseLayout>

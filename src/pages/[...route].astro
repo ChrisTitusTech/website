@@ -1,0 +1,68 @@
+---
+import { render } from "astro:content";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Pagination from "../components/Pagination.astro";
+import PostList from "../components/PostList.astro";
+import { displayDate, getPages, getPublishedPosts, readingMinutes, relatedPosts, summary, taxonomySlug } from "../lib/content";
+import { buildPageDescriptors, routeParam, type PageDescriptor } from "../lib/routes";
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  const descriptors = buildPageDescriptors(posts, await getPages());
+  return descriptors.map((descriptor) => ({
+    params: { route: routeParam(descriptor.route) },
+    props: {
+      descriptor,
+      related: descriptor.kind === "post" ? relatedPosts(descriptor.post, posts) : [],
+    },
+  }));
+}
+
+interface Props { descriptor: PageDescriptor; related: import("../lib/content").Post[] }
+const { descriptor, related } = Astro.props;
+if (descriptor.kind === "redirect") return Astro.redirect(descriptor.target, 301);
+
+let Content: any;
+let headings: Array<{ depth: number; slug: string; text: string }> = [];
+if (descriptor.kind === "post") ({ Content, headings } = await render(descriptor.post));
+if (descriptor.kind === "page") ({ Content } = await render(descriptor.page));
+const title = descriptor.kind === "post" ? descriptor.post.data.title : descriptor.kind === "page" ? descriptor.page.data.title : descriptor.kind === "listing" ? descriptor.listing.title : descriptor.title;
+const description = descriptor.kind === "post" ? summary(descriptor.post) : descriptor.kind === "page" ? descriptor.page.data.description : descriptor.kind === "listing" ? descriptor.listing.description : undefined;
+const canonicalUrl = new URL(descriptor.route, "https://christitus.com").toString();
+const shareText = encodeURIComponent(title);
+const shareUrl = encodeURIComponent(canonicalUrl);
+const toc = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+const articleImage = descriptor.kind === "post" && descriptor.post.data.image ? `/${descriptor.post.data.image.replace(/^\//, "")}` : undefined;
+const listingImage = descriptor.kind === "listing" && descriptor.listing.posts[0]?.data.image ? `/${descriptor.listing.posts[0].data.image.replace(/^\//, "")}` : undefined;
+const transformedArticleImage = (width: number) => articleImage ? `/cdn-cgi/image/width=${width},height=${Math.round(width * 9 / 16)},fit=cover,format=auto${articleImage}` : "";
+const pagination = descriptor.kind === "listing" ? descriptor.listing : descriptor.kind === "terms" ? { page: descriptor.page, pages: descriptor.pages, base: descriptor.root } : undefined;
+const previous = pagination && pagination.page > 1 ? pagination.page === 2 ? pagination.base : `${pagination.base}page/${pagination.page - 1}/` : undefined;
+const next = pagination && pagination.page < pagination.pages ? `${pagination.base}page/${pagination.page + 1}/` : undefined;
+const robots = descriptor.kind === "page" && descriptor.page.data.sitemap?.disable === true ? "noindex, follow" : undefined;
+const feed = descriptor.kind === "listing" ? `${descriptor.listing.base}index.xml` : descriptor.kind === "terms" ? `${descriptor.root}index.xml` : undefined;
+---
+<BaseLayout title={title} description={description} canonical={descriptor.route} image={descriptor.kind === "post" ? descriptor.post.data.image : undefined} type={descriptor.kind === "post" ? "article" : "website"} publishedTime={descriptor.kind === "post" ? descriptor.post.data.date : undefined} preloadImage={listingImage} previous={previous} next={next} robots={robots} feed={feed}>
+  {descriptor.kind === "post" && <>
+    <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
+    <article class="article-shell container">
+      {toc.length > 0 && <aside class="article-toc" aria-label="On this page"><details class="article-toc-details" data-responsive-toc><summary>On this page</summary><nav data-toc><p class="eyebrow">On this page</p><ol>{toc.map((heading) => <li class:list={{ nested: heading.depth === 3 }}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav></details></aside>}
+      <div class="reading">
+        <header class="article-header"><p class="eyebrow">Article</p><h1>{descriptor.post.data.title}</h1><p class="meta"><time datetime={descriptor.post.data.date}>{displayDate(descriptor.post)}</time> · {readingMinutes(descriptor.post)} min read</p><div class="chips">{descriptor.post.data.categories.map((category) => <a class="chip" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>)}</div></header>
+        {articleImage && <img class="article-image" src={articleImage} srcset={`${transformedArticleImage(640)} 640w, ${transformedArticleImage(1200)} 1200w`} sizes="(max-width: 800px) 100vw, 760px" data-cf-image alt={`${descriptor.post.data.title} featured image`} width="1200" height="675" />}
+        <div class="share-row" aria-label="Share this article"><span>Share</span><a href={`https://bsky.app/intent/compose?text=${shareText}%20${shareUrl}`}>Bluesky</a><a href={`https://www.reddit.com/submit?url=${shareUrl}&title=${shareText}`}>Reddit</a><a href={`https://news.ycombinator.com/submitlink?u=${shareUrl}&t=${shareText}`}>Hacker News</a><button type="button" data-copy-page>Copy link</button></div>
+        <div class="article-body"><Content /></div>
+        <aside class="ad-slot" data-ad-slot aria-label="Advertisement">
+          <span>Advertisement</span>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6679678361432308" data-ad-slot="2001915683" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </aside>
+        {descriptor.post.data.tags.length > 0 && <footer><h2>Tags</h2><div class="chips">{descriptor.post.data.tags.map((tag) => <a class="chip" href={`/tags/${taxonomySlug(tag)}/`}>{tag}</a>)}</div></footer>}
+        {related.length > 0 && <section aria-labelledby="related-heading"><h2 id="related-heading">Related articles</h2><PostList posts={related} heading="h3" /></section>}
+        <section class="comments" aria-labelledby="comments-heading"><h2 id="comments-heading">Comments</h2><div data-comments><p class="muted">Comments load when this section comes into view.</p></div></section>
+      </div>
+    </article>
+  </>}
+  {descriptor.kind === "page" && <article class="reading"><header class="article-header"><h1>{descriptor.page.data.title}</h1>{descriptor.page.data.description && <p class="lede">{descriptor.page.data.description}</p>}</header><div class="article-body"><Content /></div></article>}
+  {descriptor.kind === "listing" && <section class="container listing-page"><header class="article-header"><p class="eyebrow">Collection</p><h1>{descriptor.listing.title}</h1>{descriptor.listing.description && <p class="lede">{descriptor.listing.description}</p>}</header><PostList posts={descriptor.listing.posts} prioritizeFirst /><Pagination page={descriptor.listing.page} pages={descriptor.listing.pages} base={descriptor.listing.base} /></section>}
+  {descriptor.kind === "terms" && <section class="container"><h1>{descriptor.title}</h1><div class="chips">{descriptor.terms.map((term) => <a class="chip" href={`${descriptor.root}${term.slug}/`}>{term.name} ({term.count})</a>)}</div><Pagination page={descriptor.page} pages={descriptor.pages} base={descriptor.root} /></section>}
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+import type { Post } from "../lib/content";
+import { displayDate, summary, taxonomySlug } from "../lib/content";
+
+interface Props { post: Post; heading?: "h2" | "h3"; priority?: boolean }
+const { post, heading = "h2", priority = false } = Astro.props;
+const Heading = heading;
+const image = post.data.image ? `/${post.data.image.replace(/^\//, "")}` : "/images/bannerbackground.webp";
+const transformed = (width: number) => `/cdn-cgi/image/width=${width},height=${Math.round(width * 9 / 16)},fit=cover,format=auto${image}`;
+---
+<article class="card">
+  <a href={post.data.url}><img src={image} srcset={priority ? undefined : `${transformed(320)} 320w, ${transformed(640)} 640w`} sizes={priority ? undefined : "(max-width: 700px) 100vw, 640px"} data-cf-image={priority ? undefined : ""} width="640" height="360" loading={priority ? "eager" : "lazy"} fetchpriority={priority ? "high" : "auto"} alt={`${post.data.title} featured image`} /></a>
+  <div class="card-body">
+    <p class="meta"><time datetime={post.data.date}>{displayDate(post)}</time></p>
+    <Heading><a href={post.data.url}>{post.data.title}</a></Heading>
+    <p>{summary(post, 150)}</p>
+    <div class="chips">{post.data.categories.map((category) => <a class="chip" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>)}</div>
+  </div>
+</article>

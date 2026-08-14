@@ -1,0 +1,22 @@
+{
+  "capturedAt": "2026-08-13T12:37:50-05:00",
+  "repository": "ChrisTitusTech/website",
+  "authenticatedAs": "ChrisTitusTech",
+  "authenticatedRepositoryPermissions": {
+    "admin": true,
+    "maintain": true,
+    "pull": true,
+    "push": true,
+    "triage": true
+  },
+  "responses": {
+    "GET /repos/ChrisTitusTech/website/rulesets": [],
+    "GET /repos/ChrisTitusTech/website/branches/master/protection": {
+      "httpStatus": 404,
+      "body": {
+        "message": "Branch not protected",
+        "documentation_url": "https://docs.github.com/rest/branches/branch-protection#get-branch-protection"
+      }
+    }
+  }
+}
