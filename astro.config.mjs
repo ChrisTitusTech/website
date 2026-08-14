@@ -8,6 +8,7 @@ export default defineConfig({
   trailingSlash: "always",
   build: {
     format: "directory",
+    inlineStylesheets: "always",
   },
   markdown: {
     shikiConfig: {
