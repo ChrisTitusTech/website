@@ -10,6 +10,7 @@ import MarkdownIt from "markdown-it";
 import YAML from "yaml";
 
 import site from "../src/data/site.json" with { type: "json" };
+import { taxonomySlug } from "../src/lib/content-logic.ts";
 
 const root = process.cwd();
 const outputRoot = path.join(root, ".astro-content");
@@ -267,6 +268,20 @@ export function validatePost(data, file) {
     throw new Error(
       `${file}: category ${category} is not valid for ${data.url}`,
     );
+  }
+  const tags = data.tags ?? [];
+  if (!Array.isArray(tags)) throw new Error(`${file}: tags must be an array`);
+  for (const [field, values] of [
+    ["categories", categories],
+    ["tags", tags],
+  ]) {
+    if (new Set(values).size !== values.length)
+      throw new Error(`${file}: ${field} must not contain duplicates`);
+    for (const value of values)
+      if (typeof value !== "string" || taxonomySlug(value).length === 0)
+        throw new Error(
+          `${file}: ${field} contains an unusable taxonomy value`,
+        );
   }
 }
 

@@ -20,6 +20,23 @@ export function taxonomySlug(value: string): string {
     .replace(/^-|-$/g, "");
 }
 
+export function taxonomyOverlapScore(
+  current: { categories: string[]; tags: string[] },
+  candidate: { categories: string[]; tags: string[] },
+): number {
+  const categorySlugs = new Set(current.categories.map(taxonomySlug));
+  const tagSlugs = new Set(current.tags.map(taxonomySlug));
+  const categoryMatches = new Set(
+    candidate.categories
+      .map(taxonomySlug)
+      .filter((slug) => categorySlugs.has(slug)),
+  ).size;
+  const tagMatches = new Set(
+    candidate.tags.map(taxonomySlug).filter((slug) => tagSlugs.has(slug)),
+  ).size;
+  return categoryMatches * 2 + tagMatches;
+}
+
 function zonedDate(instant: Date, timeZone: string): string {
   const parts = new Intl.DateTimeFormat("en-US", {
     timeZone,

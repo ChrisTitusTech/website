@@ -12,9 +12,9 @@ with `npm ci`. The full validation gates then passed:
   the one time-limited, development-only Lighthouse CI waiver recorded in
   `docs/security/npm-audit-waivers.json`; there are no critical findings.
 - Astro diagnostics with zero errors, warnings, or hints.
-- 58 unit and workflow-contract tests.
+- 61 unit and workflow-contract tests.
 - A deterministic 1,285-page production build with digest
-  `2aafb417a5e648a0e2d0f828c1e87f6b6e006ab890eabc7d2689ca05fd48c195`.
+  `deb4acd28587e4c72c3e6daf01aed8a2c3310a9dd51bdd87610b1d39b840c182`.
 - The 1,183-route Hugo compatibility contract and 312 search entries.
 - 66 applicable Chromium, Firefox, and mobile browser tests. Three
   engine-specific tests were skipped by design.

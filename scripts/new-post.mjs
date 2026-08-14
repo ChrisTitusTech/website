@@ -112,6 +112,8 @@ export function validateInput({ title, date, categories }) {
   if (!slug) throw new Error("title does not produce a usable ASCII slug");
   if (categories.length === 0)
     throw new Error("at least one category is required");
+  if (new Set(categories).size !== categories.length)
+    throw new Error("categories must not contain duplicates");
   for (const category of categories)
     if (!site.categories.includes(category))
       throw new Error(`invalid category: ${category}`);

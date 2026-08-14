@@ -9,6 +9,7 @@ import {
   selectHomepageItems,
   slugify,
   summaryText,
+  taxonomyOverlapScore,
   taxonomySlug,
   validateFeaturedOrders,
   feedPublicationDateData,
@@ -114,17 +115,11 @@ export function homepagePosts(posts: Post[]): Post[] {
 }
 
 export function relatedPosts(current: Post, posts: Post[], limit = 5): Post[] {
-  const categories = new Set(current.data.categories);
-  const tags = new Set(current.data.tags);
   return posts
     .filter((post) => post.data.url !== current.data.url)
     .map((post) => ({
       post,
-      score:
-        post.data.categories.filter((category) => categories.has(category))
-          .length *
-          2 +
-        post.data.tags.filter((tag) => tags.has(tag)).length,
+      score: taxonomyOverlapScore(current.data, post.data),
     }))
     .filter((entry) => entry.score > 0)
     .sort(

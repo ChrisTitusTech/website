@@ -2,6 +2,8 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
+import { taxonomySlug } from "./lib/content-logic";
+
 const dateValue = z
   .string()
   .refine(
@@ -16,6 +18,12 @@ const dateValue = z
 const tableValue = z.array(
   z.array(z.union([z.string(), z.number(), z.boolean()])),
 );
+const taxonomyValue = z
+  .string()
+  .refine(
+    (value) => taxonomySlug(value).length > 0,
+    "taxonomy value must produce a nonempty slug",
+  );
 
 const shared = z
   .object({
@@ -24,8 +32,8 @@ const shared = z
     date: dateValue.optional(),
     url: z.string().optional(),
     image: z.string().optional(),
-    categories: z.array(z.string()).default([]),
-    tags: z.array(z.string()).default([]),
+    categories: z.array(taxonomyValue).default([]),
+    tags: z.array(taxonomyValue).default([]),
     draft: z.boolean().optional().default(false),
     featuredOrder: z
       .union([z.literal(1), z.literal(2), z.literal(3)])

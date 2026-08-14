@@ -74,6 +74,19 @@ describe("post scaffolder", () => {
     expect(input.categories).toEqual(["Linux", "Software Dev"]);
   });
 
+  it("rejects duplicate category flags", () => {
+    const input = parseArguments([
+      "A post",
+      "--date",
+      "2026-08-13",
+      "--category",
+      "Linux",
+      "--category",
+      "Linux",
+    ]);
+    expect(() => validateInput(input)).toThrow("must not contain duplicates");
+  });
+
   it.each(["macOS", "macos", "Not Real"])(
     "rejects invalid new category %s",
     (category) => {

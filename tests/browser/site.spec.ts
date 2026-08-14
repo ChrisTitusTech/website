@@ -269,6 +269,17 @@ test("taxonomy and head pagination expose complete navigation", async ({
     "/categories/page/2/",
   );
   await page.goto("/posts/page/2/");
+  const breadcrumbItems = await page
+    .locator('script[type="application/ld+json"]')
+    .evaluateAll((scripts) =>
+      scripts
+        .map((script) => JSON.parse(script.textContent ?? "{}"))
+        .flatMap((value) => value["@graph"] ?? [])
+        .find((value) => value["@type"] === "BreadcrumbList")
+        ?.itemListElement.map((item) => item.item),
+    );
+  expect(breadcrumbItems).not.toContain("https://christitus.com/posts/page/");
+  expect(breadcrumbItems?.at(-1)).toBe("https://christitus.com/posts/page/2/");
   await expect(page.locator('head link[rel="prev"]')).toHaveAttribute(
     "href",
     "https://christitus.com/posts/",

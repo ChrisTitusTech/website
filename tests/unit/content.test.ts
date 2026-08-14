@@ -7,6 +7,7 @@ import {
   publicationTimeData,
   selectHomepageItems,
   summaryText,
+  taxonomyOverlapScore,
   taxonomySlug,
   validateFeaturedOrders,
 } from "../../src/lib/content-logic";
@@ -47,6 +48,15 @@ describe("taxonomy slugs", () => {
     expect(taxonomySlug("DISM++")).toBe("dism++");
     expect(taxonomySlug("Pop!_OS")).toBe("pop_os");
     expect(taxonomySlug("Software Dev")).toBe("software-dev");
+  });
+
+  it("scores related taxonomy values by their normalized routes", () => {
+    expect(
+      taxonomyOverlapScore(
+        { categories: ["MacOS"], tags: ["Software Development"] },
+        { categories: ["macOS"], tags: ["software-development"] },
+      ),
+    ).toBe(3);
   });
 });
 

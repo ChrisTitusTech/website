@@ -125,6 +125,21 @@ describe("front matter validation", () => {
     ).toThrow("category software dev is not valid");
   });
 
+  it("rejects empty and duplicate taxonomy values", () => {
+    const base = {
+      title: "Fixture",
+      date: "2026-08-13",
+      url: "/fixture/",
+      categories: ["Linux"],
+    };
+    expect(() =>
+      validatePost({ ...base, tags: ["!!!"] }, "fixture.md"),
+    ).toThrow("unusable taxonomy value");
+    expect(() =>
+      validatePost({ ...base, tags: ["Linux", "Linux"] }, "fixture.md"),
+    ).toThrow("must not contain duplicates");
+  });
+
   it("accepts only the exact legacy category URL pairs", () => {
     const base = {
       title: "Fixture",

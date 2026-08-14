@@ -32,15 +32,25 @@ const {
 const pageTitle = title === site.title ? title : `${title} | ${site.name}`;
 const canonicalUrl = new URL(canonical, site.url).toString();
 const imageUrl = new URL(image.startsWith("/") ? image : `/${image}`, site.url).toString();
-const breadcrumbSegments = canonicalUrl === `${site.url}/` ? [] : new URL(canonicalUrl).pathname.split("/").filter(Boolean);
+const canonicalSegments = canonicalUrl === `${site.url}/` ? [] : new URL(canonicalUrl).pathname.split("/").filter(Boolean);
+const paginationPage = canonicalSegments.at(-2) === "page" && /^\d+$/.test(canonicalSegments.at(-1) ?? "")
+  ? canonicalSegments.at(-1)
+  : undefined;
+const breadcrumbSegments = paginationPage ? canonicalSegments.slice(0, -2) : canonicalSegments;
 const breadcrumbItems = [
   { "@type": "ListItem", position: 1, name: "Home", item: `${site.url}/` },
   ...breadcrumbSegments.map((segment, index) => ({
     "@type": "ListItem",
     position: index + 2,
-    name: index === breadcrumbSegments.length - 1 ? title : segment.replaceAll("-", " "),
+    name: !paginationPage && index === breadcrumbSegments.length - 1 ? title : segment.replaceAll("-", " "),
     item: new URL(`/${breadcrumbSegments.slice(0, index + 1).join("/")}/`, site.url).toString(),
   })),
+  ...(paginationPage ? [{
+    "@type": "ListItem",
+    position: breadcrumbSegments.length + 2,
+    name: `${title} page ${paginationPage}`,
+    item: canonicalUrl,
+  }] : []),
 ];
 const structuredData = JSON.stringify({
   "@context": "https://schema.org",
