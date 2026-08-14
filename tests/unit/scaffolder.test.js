@@ -113,7 +113,7 @@ describe("post scaffolder", () => {
   });
 
   it("round trips YAML metacharacters exactly", async () => {
-    const title = 'Colon: # hash "quote" \\ slash\nnext';
+    const title = 'Colon: # hash "quote" \\ slash $& $$ $` $\'\nnext';
     const input = { title, date: "2026-08-13", categories: ["Software Dev"] };
     const template = await readFile("templates/post.md.tmpl", "utf8");
     const output = renderTemplate(template, input, slugify(title));

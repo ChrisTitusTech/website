@@ -95,6 +95,7 @@ const structuredData = JSON.stringify({
     <meta name="twitter:image" content={imageUrl} />
     <script is:inline type="application/ld+json" set:html={structuredData} />
     <script is:inline>
+      document.documentElement.classList.add("js");
       const saved = localStorage.getItem("theme");
       document.documentElement.dataset.theme = saved ?? "dark";
     </script>

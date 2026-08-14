@@ -201,6 +201,57 @@ test("search returns generated index results", async ({ page }) => {
   );
 });
 
+test("clearing search ignores a delayed completion", async ({ page }) => {
+  let release!: () => void;
+  const delayed = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/index.json", async (route) => {
+    await delayed;
+    await route.continue();
+  });
+  await page.goto("/search/");
+  await page.getByLabel("Search articles").fill("Linux");
+  await page.getByRole("button", { name: "Search" }).click();
+  await expect(page.locator("[data-search-status]")).toHaveText(
+    "Loading search index...",
+  );
+  await page.getByLabel("Search articles").fill("");
+  await page.getByRole("button", { name: "Search" }).click();
+  release();
+  await expect(page.locator("[data-search-status]")).toHaveText(
+    "Enter a search term.",
+  );
+  await expect(page.locator("[data-search-results] article")).toHaveCount(0);
+});
+
+test("homepage and article lists preserve heading levels and lazy images", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const featured = page
+    .getByRole("heading", { name: "Featured" })
+    .locator("..");
+  await expect(featured.locator(".post-grid h3")).toHaveCount(3);
+  const latest = page
+    .getByRole("heading", { name: "Latest articles" })
+    .locator("..");
+  await expect(latest.locator(".post-grid .card h3").first()).toBeVisible();
+  await expect(latest.locator(".post-grid .card img").first()).toHaveAttribute(
+    "loading",
+    "lazy",
+  );
+  await page.goto("/my-ai-workflow/");
+  const related = page
+    .getByRole("heading", { name: "Related articles" })
+    .locator("..");
+  await expect(related.locator(".post-grid .card h3").first()).toBeVisible();
+  await expect(related.locator(".post-grid .card img").first()).toHaveAttribute(
+    "loading",
+    "lazy",
+  );
+});
+
 test("taxonomy and head pagination expose complete navigation", async ({
   page,
 }) => {
@@ -316,4 +367,22 @@ test("mobile navigation opens with an accessible control", async ({
   await expect(
     page.getByRole("link", { name: "Newsletter", exact: true }),
   ).toBeVisible();
+});
+
+test("mobile navigation remains usable without JavaScript", async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({
+    baseURL,
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 844 },
+  });
+  const page = await context.newPage();
+  await page.goto("/");
+  await expect(page.getByRole("button", { name: "Menu" })).toBeHidden();
+  await expect(
+    page.getByRole("link", { name: "Newsletter", exact: true }),
+  ).toBeVisible();
+  await context.close();
 });

@@ -119,6 +119,26 @@ export function validateFeaturedOrders(
   }
 }
 
+export function summaryText(body: string, length = 220): string {
+  const prefix = body.split("<!--more-->")[0];
+  const preferred = prefix.trim() ? prefix : body;
+  const text = preferred
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/!\[[^\]]*]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]+)]\([^)]*\)/g, "$1")
+    .replace(/[#>*_`~\-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return text.length > length ? `${text.slice(0, length).trimEnd()}...` : text;
+}
+
+export function feedPublicationDateData(data: { date: string }): Date {
+  return new Date(
+    data.date.length === 10 ? `${data.date}T00:00:00Z` : data.date,
+  );
+}
+
 type HomepageItem = {
   data: { date: string; draft?: boolean; url: string; featuredOrder?: number };
 };

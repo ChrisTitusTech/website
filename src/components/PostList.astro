@@ -2,7 +2,7 @@
 import type { Post } from "../lib/content";
 import PostCard from "./PostCard.astro";
 
-interface Props { posts: Post[] }
-const { posts } = Astro.props;
+interface Props { posts: Post[]; heading?: "h2" | "h3"; prioritizeFirst?: boolean }
+const { posts, heading = "h2", prioritizeFirst = false } = Astro.props;
 ---
-<div class="grid post-grid">{posts.map((post, index) => <PostCard post={post} priority={index === 0} />)}</div>
+<div class="grid post-grid">{posts.map((post, index) => <PostCard post={post} heading={heading} priority={prioritizeFirst && index === 0} />)}</div>

@@ -8,8 +8,8 @@
   },
   "scripts": {
     "prepare:content": "node scripts/prepare-content.mjs",
-    "dev": "CONTENT_PREVIEW=0 npm run prepare:content && CONTENT_PREVIEW=0 astro dev",
-    "dev:content": "CONTENT_PREVIEW=1 npm run prepare:content && CONTENT_PREVIEW=1 astro dev",
+    "dev": "node scripts/dev.mjs",
+    "dev:content": "node scripts/dev.mjs --preview",
     "sync": "npm run prepare:content && astro sync",
     "check": "npm run prepare:content && astro check",
     "build": "CONTENT_PREVIEW=0 npm run prepare:content && CONTENT_PREVIEW=0 astro build",

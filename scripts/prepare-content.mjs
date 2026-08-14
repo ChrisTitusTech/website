@@ -138,11 +138,19 @@ export function transformBody(body, data, file) {
   let fenced = null;
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
-    const fence = line.match(/^\s*(`{3,}|~{3,})/);
+    const fence = line.match(/^\s*(`{3,}|~{3,})(.*)$/);
     if (fence) {
-      const closesOnSameLine = line.slice(fence[0].length).includes(fence[1]);
-      if (fenced === null && !closesOnSameLine) fenced = fence[1][0];
-      else if (fence[1][0] === fenced) fenced = null;
+      const delimiter = fence[1];
+      const remainder = fence[2];
+      const closesOnSameLine = remainder.includes(delimiter);
+      if (fenced === null && !closesOnSameLine) fenced = delimiter;
+      else if (
+        fenced !== null &&
+        delimiter[0] === fenced[0] &&
+        delimiter.length >= fenced.length &&
+        remainder.trim() === ""
+      )
+        fenced = null;
       output.push(
         fenced !== null && /^\s*```fstab\s*$/.test(line)
           ? line.replace(/fstab\s*$/, "text")

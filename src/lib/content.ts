@@ -8,8 +8,10 @@ import {
   publicationTimeData,
   selectHomepageItems,
   slugify,
+  summaryText,
   taxonomySlug,
   validateFeaturedOrders,
+  feedPublicationDateData,
 } from "./content-logic";
 import { renderFeedContent } from "./feed-content";
 
@@ -66,16 +68,11 @@ export function feedContent(post: Post): string {
 }
 
 export function summary(post: Post, length = 220): string {
-  const preferred = (post.body ?? "").split("<!--more-->")[0];
-  const text = preferred
-    .replace(/```[\s\S]*?```/g, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/!\[[^\]]*]\([^)]*\)/g, " ")
-    .replace(/\[([^\]]+)]\([^)]*\)/g, "$1")
-    .replace(/[#>*_`~\-]+/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-  return text.length > length ? `${text.slice(0, length).trimEnd()}...` : text;
+  return summaryText(post.body ?? "", length);
+}
+
+export function feedPublicationDate(post: Post): Date {
+  return feedPublicationDateData(post.data);
 }
 
 export function readingMinutes(post: Post): number {

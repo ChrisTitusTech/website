@@ -88,7 +88,31 @@ describe("workflow contracts", () => {
     expect(restoreSource).toContain("base=master");
     expect(restoreSource).toContain('.base.ref == \\"master\\"');
     expect(restoreSource).toContain('git reset --hard "$base_sha"');
+    expect(restoreSource).toContain("refs/tags/livestream-data-final");
+    expect(restoreSource).toContain('checkpoint_sha" == "$previous_sha');
+    expect(data.jobs["update-livestreams"].outputs.resume).toContain(
+      "steps.branch.outputs.resume",
+    );
+    expect(data.jobs["update-chat"].if).toBeUndefined();
+    const chatSource = JSON.stringify(data.jobs["update-chat"]);
+    expect(chatSource).toContain(
+      "needs.update-livestreams.outputs.resume != 'true'",
+    );
+    expect(chatSource).toContain("git tag -f livestream-data-final");
+    expect(chatSource).toContain("steps.result.outputs.sha");
     await expect(access(".github/workflows/update-chat.yml")).rejects.toThrow();
+  });
+
+  it("rebuilds generated content while the Astro development server runs", async () => {
+    const manifest = JSON.parse(await readFile("package.json", "utf8"));
+    const source = await readFile("scripts/dev.mjs", "utf8");
+    expect(manifest.scripts.dev).toBe("node scripts/dev.mjs");
+    expect(manifest.scripts["dev:content"]).toContain("--preview");
+    expect(source).toContain("await prepareContent()");
+    expect(source).toContain('path.join(root, "content")');
+    expect(source).toContain("watch(");
+    expect(source).toContain('"--ignore-lock"');
+    expect(source).toContain('ASTRO_DEV_BACKGROUND: "0"');
   });
 
   it("rejects malformed, incomplete, and expired audit waivers", () => {

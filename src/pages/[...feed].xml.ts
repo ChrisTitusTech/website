@@ -5,10 +5,12 @@ import livestreams from "../../data/livestreams.json";
 import {
   getPublishedPosts,
   feedContent,
+  feedPublicationDate,
   publicationTime,
   taxonomy,
   taxonomySlug,
 } from "../lib/content";
+import { requiredLivestreamDate } from "../lib/livestreams";
 import { legacyFeedPaths } from "../lib/routes";
 
 export const getStaticPaths = (async () => {
@@ -28,17 +30,24 @@ export const getStaticPaths = (async () => {
 
 export const GET: APIRoute = async (context) => {
   const path = String(context.props.path);
+  const channelUrl = new URL(
+    `/${path.replace(/index\.xml$/, "")}`,
+    context.site,
+  );
   if (path === "live-streams/index.xml") {
     return rss({
       title: "Live Streams | Chris Titus Tech",
       description: "Chris Titus Tech live stream recordings",
-      site: context.site!,
+      site: channelUrl,
       customData: "<language>en-US</language>",
       items: livestreams.items.map((stream) => ({
         title: stream.title,
         description: stream.description,
-        link: `/live-streams/player/?v=${encodeURIComponent(stream.videoId)}`,
-        pubDate: new Date(stream.publishedAt ?? stream.date),
+        link: new URL(
+          `/live-streams/player/?v=${encodeURIComponent(stream.videoId)}`,
+          context.site,
+        ).toString(),
+        pubDate: requiredLivestreamDate(stream.publishedAt, stream.videoId),
       })),
     });
   }
@@ -50,7 +59,7 @@ export const GET: APIRoute = async (context) => {
     return rss({
       title: `${taxonomyRoot} on Chris Titus Tech`,
       description: `Recent content in ${taxonomyRoot} on Chris Titus Tech`,
-      site: context.site!,
+      site: channelUrl,
       customData: "<language>en-US</language>",
       items: [...groups.entries()]
         .sort(
@@ -62,7 +71,7 @@ export const GET: APIRoute = async (context) => {
         )
         .map(([slug, group]) => ({
           title: group.name.toLocaleLowerCase("en-US"),
-          link: `/${taxonomyRoot}/${slug}/`,
+          link: new URL(`/${taxonomyRoot}/${slug}/`, context.site).toString(),
           pubDate: new Date(
             group.posts[0].data.date.length === 10
               ? `${group.posts[0].data.date}T00:00:00Z`
@@ -75,7 +84,7 @@ export const GET: APIRoute = async (context) => {
     return rss({
       title: "Archive on Chris Titus Tech",
       description: "Recent content in Archive on Chris Titus Tech",
-      site: context.site!,
+      site: channelUrl,
       customData: "<language>en-US</language>",
       items: [],
     });
@@ -98,7 +107,7 @@ export const GET: APIRoute = async (context) => {
   return rss({
     title,
     description: "Recent content from Chris Titus Tech",
-    site: context.site!,
+    site: channelUrl,
     customData: "<language>en-US</language>",
     items: posts.map((post) => {
       const content = feedContent(post);
@@ -106,12 +115,8 @@ export const GET: APIRoute = async (context) => {
         title: post.data.title,
         description: content,
         content,
-        link: post.data.url,
-        pubDate: new Date(
-          post.data.date.length === 10
-            ? `${post.data.date}T12:00:00Z`
-            : post.data.date,
-        ),
+        link: new URL(post.data.url, context.site).toString(),
+        pubDate: feedPublicationDate(post),
       };
     }),
   });

@@ -24,7 +24,8 @@ jobs:
       pull-requests: read
     runs-on: ubuntu-latest
     outputs:
-      sha: ${{ steps.publish.outputs.sha }}
+      sha: ${{ steps.result.outputs.sha }}
+      resume: ${{ steps.branch.outputs.resume }}
     steps:
       - name: Require trusted master workflow ref
         run: |
@@ -52,6 +53,8 @@ jobs:
           git fetch --no-tags origin master:refs/remotes/origin/master
           base_sha=$(git rev-parse origin/master)
           previous_sha=""
+          resume=false
+          checkpoint_sha=$(git ls-remote --refs origin "refs/tags/livestream-data-final" | awk '{print $1}')
           if git ls-remote --exit-code --heads origin "$DATA_BRANCH" >/dev/null 2>&1; then
             git fetch --no-tags origin "+refs/heads/${DATA_BRANCH}:refs/remotes/origin/${DATA_BRANCH}"
             previous_sha=$(git rev-parse "refs/remotes/origin/${DATA_BRANCH}")
@@ -63,25 +66,33 @@ jobs:
               --jq ".[] | select(.head.sha == \"${previous_sha}\" and .base.ref == \"master\" and .merged_at != null) | .number" | head -n 1)
             if git merge-base --is-ancestor "$previous_sha" "$base_sha" || [[ -n "$merged_pr" ]]; then
               git reset --hard "$base_sha"
+            elif [[ -n "$checkpoint_sha" && "$checkpoint_sha" == "$previous_sha" ]]; then
+              resume=true
             elif ! git merge-base --is-ancestor "$base_sha" "$previous_sha"; then
               git rebase "$base_sha"
             fi
           else
             git checkout -B "$DATA_BRANCH" "$base_sha"
           fi
-          printf 'base_sha=%s\n' "$base_sha" >> "$GITHUB_OUTPUT"
-          printf 'previous_sha=%s\n' "$previous_sha" >> "$GITHUB_OUTPUT"
+          {
+            printf 'base_sha=%s\n' "$base_sha"
+            printf 'previous_sha=%s\n' "$previous_sha"
+            printf 'resume=%s\n' "$resume"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Install Python dependencies
+        if: steps.branch.outputs.resume != 'true'
         run: python -m pip install --disable-pip-version-check --require-hashes --requirement requirements-automation.txt
 
       - name: Fetch playlist data
+        if: steps.branch.outputs.resume != 'true'
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/fetch-livestreams.py
 
       - name: Commit and publish data head
         id: publish
+        if: steps.branch.outputs.resume != 'true'
         env:
           BASE_SHA: ${{ steps.branch.outputs.base_sha }}
           PREVIOUS_SHA: ${{ steps.branch.outputs.previous_sha }}
@@ -104,6 +115,22 @@ jobs:
           [[ "$remote_sha" == "$candidate_sha" ]]
           printf 'sha=%s\n' "$candidate_sha" >> "$GITHUB_OUTPUT"
 
+      - name: Resolve managed data head
+        id: result
+        env:
+          RESUME: ${{ steps.branch.outputs.resume }}
+          PREVIOUS_SHA: ${{ steps.branch.outputs.previous_sha }}
+          PUBLISHED_SHA: ${{ steps.publish.outputs.sha }}
+        run: |
+          set -euo pipefail
+          if [[ "$RESUME" == "true" ]]; then
+            final_sha=$PREVIOUS_SHA
+          else
+            final_sha=$PUBLISHED_SHA
+          fi
+          [[ "$final_sha" =~ ^[0-9a-f]{40}$ ]]
+          printf 'sha=%s\n' "$final_sha" >> "$GITHUB_OUTPUT"
+
   update-chat:
     name: Update chat replays
     needs: update-livestreams
@@ -112,7 +139,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     outputs:
-      sha: ${{ steps.publish.outputs.sha }}
+      sha: ${{ steps.result.outputs.sha }}
     steps:
       - name: Check out predecessor SHA
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -121,6 +148,7 @@ jobs:
           ref: ${{ needs.update-livestreams.outputs.sha }}
 
       - name: Set up Python
+        if: needs.update-livestreams.outputs.resume != 'true'
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
@@ -139,15 +167,18 @@ jobs:
           git checkout -B "$DATA_BRANCH" "$EXPECTED_SHA"
 
       - name: Install Python dependencies
+        if: needs.update-livestreams.outputs.resume != 'true'
         run: python -m pip install --disable-pip-version-check --require-hashes --requirement requirements-automation.txt
 
       - name: Match Twitch VODs
+        if: needs.update-livestreams.outputs.resume != 'true'
         env:
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: python scripts/match-twitch-vods.py
 
       - name: Install pinned TwitchDownloader CLI
+        if: needs.update-livestreams.outputs.resume != 'true'
         run: |
           set -euo pipefail
           archive="TwitchDownloaderCLI-${TWITCH_DOWNLOADER_VERSION}-Linux-x64.zip"
@@ -159,18 +190,21 @@ jobs:
           chmod 0755 TwitchDownloaderCLI
 
       - name: Download missing chat replays
+        if: needs.update-livestreams.outputs.resume != 'true'
         env:
           TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
           TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
         run: python scripts/download-chat-replays.py
 
       - name: Refresh chat replay flags
+        if: needs.update-livestreams.outputs.resume != 'true'
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python scripts/fetch-livestreams.py
 
       - name: Commit and publish final data head
         id: publish
+        if: needs.update-livestreams.outputs.resume != 'true'
         env:
           PREDECESSOR_SHA: ${{ needs.update-livestreams.outputs.sha }}
         run: |
@@ -190,6 +224,26 @@ jobs:
             printf 'managed branch moved after chat job: %s != %s\n' "$remote_sha" "$final_sha" >&2
             exit 1
           fi
+          git tag -f livestream-data-final "$final_sha"
+          git push --force origin "refs/tags/livestream-data-final"
+          checkpoint_sha=$(git ls-remote --refs origin "refs/tags/livestream-data-final" | awk '{print $1}')
+          [[ "$checkpoint_sha" == "$final_sha" ]]
+          printf 'sha=%s\n' "$final_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Resolve final data head
+        id: result
+        env:
+          RESUME: ${{ needs.update-livestreams.outputs.resume }}
+          PREDECESSOR_SHA: ${{ needs.update-livestreams.outputs.sha }}
+          PUBLISHED_SHA: ${{ steps.publish.outputs.sha }}
+        run: |
+          set -euo pipefail
+          if [[ "$RESUME" == "true" ]]; then
+            final_sha=$PREDECESSOR_SHA
+          else
+            final_sha=$PUBLISHED_SHA
+          fi
+          [[ "$final_sha" =~ ^[0-9a-f]{40}$ ]]
           printf 'sha=%s\n' "$final_sha" >> "$GITHUB_OUTPUT"
 
   reconcile-pull-request:

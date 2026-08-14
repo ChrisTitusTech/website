@@ -1,7 +1,11 @@
 import rss from "@astrojs/rss";
 import type { APIRoute } from "astro";
 
-import { feedContent, getPublishedPosts } from "../lib/content";
+import {
+  feedContent,
+  feedPublicationDate,
+  getPublishedPosts,
+} from "../lib/content";
 
 export const GET: APIRoute = async (context) => {
   const posts = await getPublishedPosts();
@@ -16,12 +20,8 @@ export const GET: APIRoute = async (context) => {
         title: post.data.title,
         description: content,
         content,
-        link: post.data.url,
-        pubDate: new Date(
-          post.data.date.length === 10
-            ? `${post.data.date}T12:00:00Z`
-            : post.data.date,
-        ),
+        link: new URL(post.data.url, context.site).toString(),
+        pubDate: feedPublicationDate(post),
       };
     }),
   });

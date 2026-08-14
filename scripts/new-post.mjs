@@ -120,7 +120,7 @@ export function validateInput({ title, date, categories }) {
 
 export function renderTemplate(template, { title, date, categories }, slug) {
   return template
-    .replaceAll("{{TITLE}}", JSON.stringify(title))
+    .replaceAll("{{TITLE}}", () => JSON.stringify(title))
     .replaceAll("{{DATE}}", date)
     .replaceAll("{{YEAR}}", date.slice(0, 4))
     .replaceAll("{{SLUG}}", slug)

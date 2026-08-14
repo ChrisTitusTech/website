@@ -656,11 +656,11 @@ td {
   .nav-logo img {
     width: 168px;
   }
-  .menu-button {
+  .js .menu-button {
     display: inline-flex;
   }
   .nav-links {
-    display: none;
+    display: flex;
     order: 3;
     width: 100%;
     margin: 0;
@@ -668,7 +668,10 @@ td {
     align-items: stretch;
     flex-direction: column;
   }
-  .nav-links[data-open] {
+  .js .nav-links {
+    display: none;
+  }
+  .js .nav-links[data-open] {
     display: flex;
   }
   .nav-links a {

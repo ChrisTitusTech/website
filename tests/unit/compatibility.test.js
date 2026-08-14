@@ -63,6 +63,19 @@ describe("Hugo compatibility preprocessing", () => {
     expect(output).toContain("youtube-nocookie.com/embed/abc123");
   });
 
+  it("keeps shorter fence markers and shortcodes inside a longer fence", () => {
+    const literal = [
+      "````md",
+      "```",
+      "{{< youtube abc123 >}}",
+      "````",
+      "{{< youtube outside123 >}}",
+    ].join("\n");
+    const output = transformBody(literal, {}, "fixture.md");
+    expect(output).toContain("{{< youtube abc123 >}}");
+    expect(output).toContain("youtube-nocookie.com/embed/outside123");
+  });
+
   it("maps unsupported fstab highlighting to plain text", () => {
     expect(
       transformBody(

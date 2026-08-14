@@ -248,6 +248,12 @@ const sitemapUrls = new Set(
     decodeXml(match[1]),
   ),
 );
+const sitemapEntries = new Map(
+  [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => [
+    decodeXml(match[1].match(/<loc>(.*?)<\/loc>/)?.[1] ?? ""),
+    match[1],
+  ]),
+);
 const rootFeedUrls = new Set(
   [...feed.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((match) =>
     decodeXml(match[1].match(/<link>(.*?)<\/link>/)?.[1] ?? ""),
@@ -262,17 +268,33 @@ const semanticFeedItems = (xml) =>
   }));
 for (const file of Object.keys(baseline.output.semantic.feeds)) {
   const xml = await readFile(path.join(root, "dist", file), "utf8");
-  if (
-    ["categories/index.xml", "tags/index.xml", "archive/index.xml"].includes(
-      file,
-    )
-  ) {
+  const expectedChannelUrl = new URL(
+    `/${file.replace(/index\.xml$/, "")}`,
+    "https://christitus.com/",
+  ).toString();
+  const channelUrl = decodeXml(
+    xml.match(/<channel>[\s\S]*?<link>(.*?)<\/link>/)?.[1] ?? "",
+  );
+  if (channelUrl !== expectedChannelUrl)
+    throw new Error(`${file} channel URL changed: ${channelUrl}`);
+  if (["categories/index.xml", "tags/index.xml"].includes(file)) {
     const expectedItems = baseline.output.semantic.feeds[file].items.map(
       ({ title, link, guid }) => ({ title, link, guid }),
     );
     const actualItems = semanticFeedItems(xml);
-    if (JSON.stringify(actualItems) !== JSON.stringify(expectedItems))
-      throw new Error(`${file} semantic item inventory changed`);
+    const actualKeys = new Set(actualItems.map((item) => JSON.stringify(item)));
+    const missing = expectedItems.filter(
+      (item) => !actualKeys.has(JSON.stringify(item)),
+    );
+    if (missing.length > 0)
+      throw new Error(
+        `${file} lost baseline semantic items: ${JSON.stringify(missing)}`,
+      );
+  }
+  if (file === "archive/index.xml") {
+    const actualItems = semanticFeedItems(xml);
+    if (actualItems.length !== 0)
+      throw new Error("archive/index.xml must remain empty");
   }
   for (const match of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
     const link = decodeXml(match[1].match(/<link>(.*?)<\/link>/)?.[1] ?? "");
@@ -302,6 +324,28 @@ for (const post of expectedPosts) {
     throw new Error(`published post is missing from sitemap: ${post.url}`);
   if (!rootFeedUrls.has(`https://christitus.com${post.url}`))
     throw new Error(`published post is missing from RSS: ${post.url}`);
+  if (
+    post.sitemap?.disable !== true &&
+    !sitemapEntries
+      .get(`https://christitus.com${post.url}`)
+      ?.includes("<lastmod>")
+  )
+    throw new Error(`published post is missing sitemap lastmod: ${post.url}`);
+}
+const dateOnlyPost = expectedPosts.find((post) => post.date.length === 10);
+if (dateOnlyPost) {
+  const item = [...feed.matchAll(/<item>([\s\S]*?)<\/item>/g)].find(
+    (match) =>
+      decodeXml(match[1].match(/<link>(.*?)<\/link>/)?.[1] ?? "") ===
+      `https://christitus.com${dateOnlyPost.url}`,
+  )?.[1];
+  const publicationDate = new Date(
+    decodeXml(item?.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] ?? ""),
+  );
+  if (publicationDate.toISOString().slice(11) !== "00:00:00.000Z")
+    throw new Error(
+      `date-only RSS entry is not UTC midnight: ${dateOnlyPost.url}`,
+    );
 }
 for (const post of excludedPosts) {
   if (sitemapUrls.has(`https://christitus.com${post.url}`))

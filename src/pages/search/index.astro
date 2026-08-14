@@ -9,14 +9,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     const status = document.querySelector<HTMLElement>("[data-search-status]");
     const results = document.querySelector<HTMLElement>("[data-search-results]");
     let index: Array<{ title: string; tags: string[]; categories: string[]; contents: string; permalink: string }> | undefined;
+    let searchGeneration = 0;
     async function search(query: string) {
       if (!status || !results) return;
+      const generation = ++searchGeneration;
       status.textContent = "Loading search index...";
       try {
         index ??= await fetch("/index.json").then((response) => {
           if (!response.ok) throw new Error("Search index failed to load");
           return response.json();
         });
+        if (generation !== searchGeneration) return;
         const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
         const searchIndex = index ?? [];
         const matches = searchIndex.filter((item) => {
@@ -25,11 +28,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         }).slice(0, 50);
         status.textContent = matches.length ? `${matches.length} result${matches.length === 1 ? "" : "s"}` : "No results found.";
         results.replaceChildren(...matches.map((item) => { const article = document.createElement("article"); article.className = "card card-body"; const heading = document.createElement("h2"); const link = document.createElement("a"); link.href = item.permalink; link.textContent = item.title; heading.append(link); article.append(heading); return article; }));
-      } catch (error) { status.textContent = error instanceof Error ? error.message : "Search failed."; }
+      } catch (error) { if (generation === searchGeneration) status.textContent = error instanceof Error ? error.message : "Search failed."; }
     }
     const initial = new URLSearchParams(location.search).get("s") ?? "";
     if (input) input.value = initial;
     if (initial) void search(initial);
-    form?.addEventListener("submit", (event) => { event.preventDefault(); const query = input?.value.trim() ?? ""; history.replaceState({}, "", query ? `/search/?s=${encodeURIComponent(query)}` : "/search/"); if (query) void search(query); else { results?.replaceChildren(); if (status) status.textContent = "Enter a search term."; } });
+    form?.addEventListener("submit", (event) => { event.preventDefault(); const query = input?.value.trim() ?? ""; history.replaceState({}, "", query ? `/search/?s=${encodeURIComponent(query)}` : "/search/"); if (query) void search(query); else { searchGeneration += 1; results?.replaceChildren(); if (status) status.textContent = "Enter a search term."; } });
   </script>
 </BaseLayout>
