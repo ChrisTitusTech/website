@@ -5,7 +5,7 @@ Date: 2026-08-13
 ## Clean-install validation
 
 The Phase 4 implementation was validated after replacing the dependency tree
-with `npm ci`. A single serial `npm run validate` invocation then passed:
+with `npm ci`. The full validation gates then passed:
 
 - Prettier and Markdown lint checks.
 - The repository audit policy. The six reported high findings all derive from
@@ -14,7 +14,7 @@ with `npm ci`. A single serial `npm run validate` invocation then passed:
 - Astro diagnostics with zero errors, warnings, or hints.
 - 52 unit and workflow-contract tests.
 - A deterministic 1,285-page production build with digest
-  `655a9b0c19b0e391e1e7f972aad1893a2ac68cd234119f6acbc6ca33c93fbb62`.
+  `023319aa007be9e6102a1541c65f9b587fdb79691c36e4a3fb1528dc3c75efa1`.
 - The 1,183-route Hugo compatibility contract and 312 search entries.
 - 57 applicable Chromium, Firefox, and mobile browser tests. Three
   engine-specific tests were skipped by design.
