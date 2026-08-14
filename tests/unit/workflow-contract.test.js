@@ -152,6 +152,14 @@ describe("workflow contracts", () => {
     expect(source).toContain('$latest_fresh" == "true');
     expect(source).toContain('$final_sha" == "$master_sha');
     expect(source).toContain("not-required");
+    expect(source).toContain('gh issue list --repo "$GITHUB_REPOSITORY"');
+    expect(source).toContain(
+      'gh issue close "$issue_number" --repo "$GITHUB_REPOSITORY"',
+    );
+    expect(source).toContain('gh issue create --repo "$GITHUB_REPOSITORY"');
+    expect(source).toContain(
+      'gh issue comment "$issue_number" --repo "$GITHUB_REPOSITORY"',
+    );
   });
 
   it("keeps the tag publisher outside the repository-wide branch bypass", async () => {

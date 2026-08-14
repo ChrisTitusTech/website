@@ -52,7 +52,7 @@ jobs:
               '[.jobs[] | select(.name == "Update livestream data" or .name == "Update chat replays" or .name == "Reconcile data pull request") | select(.conclusion == "success")] | if length == 3 then "success" else "incomplete" end' \
               <<< "$jobs")
           fi
-          issue_number=$(gh issue list --state open --search "${ISSUE_TITLE} in:title" --json number,title \
+          issue_number=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "${ISSUE_TITLE} in:title" --json number,title \
             --jq ".[] | select(.title == \"${ISSUE_TITLE}\") | .number" | head -n 1)
           ci_status="missing"
           data_healthy="false"
@@ -71,13 +71,13 @@ jobs:
           fi
           if [[ "$data_healthy" == "true" && ( "$ci_status" == "completed:success" || "$ci_status" == "not-required" ) ]]; then
             if [[ -n "$issue_number" ]]; then
-              gh issue close "$issue_number" --comment "A full serialized reconciliation and exact-head immutable-tag CI completed successfully: ${latest_url}"
+              gh issue close "$issue_number" --repo "$GITHUB_REPOSITORY" --comment "A full serialized reconciliation and exact-head immutable-tag CI completed successfully: ${latest_url}"
             fi
             exit 0
           fi
           body=$(printf "The retained livestream workflow is not reconciled.\n\nLatest data-workflow state: \`%s\`\nLatest run branch: \`%s\`\nLatest run created: \`%s\`\nLatest run age in seconds: \`%s\`\nLatest run fresh (8-hour maximum): \`%s\`\nRequired job state: \`%s\`\nExact-head immutable-tag CI state: \`%s\`\nLatest run: %s\nFailed or cancelled steps: \`%s\`\n\nThis includes missing schedules and queue-limit cancellations and requires the next accepted or manual run to complete data, chat, PR, and exact-head CI reconciliation." "$latest_status" "$latest_head" "$latest_created" "$latest_age_seconds" "$latest_fresh" "$required_jobs" "$ci_status" "$latest_url" "${annotations:-unavailable}")
           if [[ -z "$issue_number" ]]; then
-            gh issue create --title "$ISSUE_TITLE" --body "$body"
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$ISSUE_TITLE" --body "$body"
           else
-            gh issue comment "$issue_number" --body "$body"
+            gh issue comment "$issue_number" --repo "$GITHUB_REPOSITORY" --body "$body"
           fi
