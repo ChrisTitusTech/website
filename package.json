@@ -35,7 +35,7 @@
   "dependencies": {
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.3",
-    "astro": "7.2.1",
+    "astro": "7.2.2",
     "fast-glob": "3.3.3",
     "gray-matter": "4.0.3",
     "markdown-it": "15.0.0",
