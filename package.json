@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
-    "@axe-core/playwright": "4.12.1",
+    "@axe-core/playwright": "4.13.0",
     "@lhci/cli": "0.15.1",
     "@playwright/test": "1.62.1",
     "@types/markdown-it": "14.1.2",
@@ -54,8 +54,8 @@
     "markdownlint-cli2": "0.23.2",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
-    "proxy-agent": "8.0.1",
-    "typescript": "6.0.3",
+    "proxy-agent": "8.0.2",
+    "typescript": "7.0.2",
     "vitest": "4.1.10"
   },
   "overrides": {
