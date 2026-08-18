@@ -2,7 +2,7 @@
 title: "GitHub Copilot App Is Actually Good... Just Not with Copilot"
 date: 2026-08-17
 url: /github-copilot-on-linux/
-image: images/2026/github/intro-myword.webp
+image: images/2026-thumbs/github-copilot-on-linux.webp
 description: "How I use the GitHub Copilot desktop app as a repository dashboard on Linux while routing its AI features through my existing Codex subscription."
 categories:
   - Linux
@@ -19,14 +19,6 @@ GitHub Copilot is a terrible name for this app. Microsoft has put the Copilot na
 I use it to organize repositories, issues, pull requests, and notifications. I do not use the built-in Copilot subscription. Instead, I connect the app to my existing Codex subscription through [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI).
 
 <!--more-->
-
-## Video Walkthrough
-
-The video shows my complete workflow, from replacing the built-in AI provider to triaging issues across roughly 100 repositories.
-
-{{< youtube "sspesgDbWLc" >}}
-
-[Watch the video directly on YouTube](https://youtu.be/sspesgDbWLc) if the embed does not load.
 
 ## The GitHub App I Actually Wanted
 
@@ -218,3 +210,11 @@ Routing its AI features through CLIProxyAPI lets me use the Codex subscription I
 - [OpenAI Codex with a ChatGPT plan](https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan)
 - [CLIProxyAPI project](https://github.com/router-for-me/CLIProxyAPI)
 - [CLIProxyAPI Linux quick start](https://help.router-for.me/introduction/quick-start)
+
+## Video Walkthrough
+
+The video shows my complete workflow, from replacing the built-in AI provider to triaging issues across roughly 100 repositories.
+
+{{< youtube "sspesgDbWLc" >}}
+
+[Watch the video directly on YouTube](https://youtu.be/sspesgDbWLc) if the embed does not load.
