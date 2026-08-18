@@ -1,84 +1,92 @@
 ---
-title: "GitHub Copilot on Linux"
-
-date: 2026-08-10
+title: "GitHub Copilot App Is Actually Good... Just Not with Copilot"
+date: 2026-08-17
 url: /github-copilot-on-linux/
-image: images/2026-thumbs/github-copilot-on-linux.webp
+image: images/2026/github/intro-myword.webp
+description: "How I use the GitHub Copilot desktop app as a repository dashboard on Linux while routing its AI features through my existing Codex subscription."
 categories:
   - Linux
-  - Windows
-  - Networking
+  - Software Dev
 tags:
-  - Ubuntu
   - GitHub Copilot
   - OpenAI Codex
-  - Systemd
-draft: true
+  - CLIProxyAPI
+draft: false
 ---
 
-The GitHub Copilot app is a desktop control center for agent-driven development. Instead of only suggesting the next line in an editor, it can take an issue or prompt, inspect a repository, change files, run commands, and help carry the work through review and a pull request.
+GitHub Copilot is a terrible name for this app. Microsoft has put the Copilot name on everything, but this is much more useful as a **GitHub desktop dashboard** for Linux, macOS, and Windows.
 
-The app is available on Linux, macOS, and Windows. It is built on GitHub Copilot CLI, but adds a visual workflow for managing multiple coding sessions, reviewing changes, and keeping GitHub issues and pull requests close to the code.
+I use it to organize repositories, issues, pull requests, and notifications. I do not use the built-in Copilot subscription. Instead, I connect the app to my existing Codex subscription through [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI).
 
 <!--more-->
 
+## Video Walkthrough
+
+The video shows my complete workflow, from replacing the built-in AI provider to triaging issues across roughly 100 repositories.
+
+{{< youtube "sspesgDbWLc" >}}
+
+[Watch the video directly on YouTube](https://youtu.be/sspesgDbWLc) if the embed does not load.
+
+## The GitHub App I Actually Wanted
+
+The app's **My work** view puts review requests, issues, pull requests, and repository activity in one place. That matters when your notification feed is constantly moving and older projects are easy to forget.
+
 ![GitHub Copilot app My work view with issues and pull requests from connected repositories](/images/2026/github/intro-myword.webp)
 
-## The Top 3 Copilot Features Developers Should Use
+My normal workflow looks like this:
 
-### 1. GitHub-Native Issue and Pull Request Workflows
+1. Open **My work** and scan new activity across every connected repository.
+2. Open an issue or pull request in the app to get the context.
+3. Ask for a plan or initial scaffolding when an issue needs code.
+4. Continue the detailed implementation in my preferred editor or terminal.
+5. Review, close, or archive the item when the work is done.
 
-Copilot can start from an issue, pull request, local folder, or plain prompt. The app keeps repository state, review comments, checks, and pull request context in the same workflow. You can inspect the diff, run validation, and open a pull request without constantly jumping between an editor, terminal, and browser.
+I do not want the app to replace my IDE. It is the front door to the work: a fast way to decide what needs attention before I move into Codex, HerdR, or another development environment.
 
-This is especially useful for maintenance work: pick an issue, have the agent reproduce it, make a focused change, run the project checks, and then review the proposed pull request.
+## Prioritize Issues Across Every Repository
 
-### 2. Built-In Review and Validation
+The biggest win is triage. GitHub's normal notification stream tells you what happened, but it does not necessarily tell you what matters most.
 
-The app provides canvases for plans and other shared work, plus integrated terminal and browser surfaces for validation. Developers should use these to inspect what the agent actually changed instead of treating the chat response as proof that the task is complete.
+I can ask the app to prioritize my outstanding issues and pull requests. If several users report the same WinUtil problem, that cluster should rank above a one-off request with little impact. A useful prompt is:
 
-For code changes, review the diff and run the repository's real build, lint, and test commands. The `/security-review` command can also look for high-confidence security problems before you open a pull request, but it complements normal review and security tooling rather than replacing them.
+```text
+Prioritize my outstanding issues and pull requests across all connected
+repositories. Group duplicate or closely related reports, rank them by user
+impact and urgency, and explain why each item deserves its position.
+```
 
-### 3. Custom Models, Tools, Skills, and Automations
-
-The model picker lets you choose a model and reasoning effort for each session. The app can also connect external tools through MCP servers, package repeatable instructions as skills, and schedule recurring agent work as automations.
-
-Use a fast model for small edits and reserve deeper reasoning for architecture, debugging, or large multi-file changes. Higher reasoning and larger context windows can consume more of your provider allowance, so more is not automatically better.
-
-## Sample Use: Prioritize Issues Across Many Repositories
-
-One useful workflow is asking Copilot to review the open issues across all your connected repositories and return the 20 items that deserve attention first. Instead of sorting only by age or comment count, ask it to consider user impact, regressions, dependencies, security, recent activity, and maintainer effort.
-
-For example, prompt it to inspect the issue lists for your configured repositories, explain any repositories it could not access, and produce a ranked top 20 with a short reason for every choice. This turns a large backlog into a practical starting queue while keeping the final prioritization visible for you to review.
+The result is a practical queue instead of an endless inbox.
 
 ![GitHub Copilot ranking the top 20 outstanding issues across many repositories](/images/2026/github/top20.webp)
 
-## The Codex Subscription Fix: CLIProxyAPI
+AI can miss context, so I still review the source issue before acting. The ranking is a starting point, not an automatic decision-maker.
 
-GitHub's bring-your-own-model support normally expects an API endpoint and API key. A ChatGPT subscription does not give you a normal OpenAI Platform API key with unlimited API billing. However, eligible ChatGPT plans include Codex access through an OpenAI login.
+## Add and Synchronize Existing Repositories
 
-[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) bridges those two systems. It signs in to OpenAI Codex with OAuth, then exposes a local OpenAI-compatible endpoint that the GitHub Copilot app can use as an OpenAI provider.
+Adding a large collection of repositories one at a time is tedious. I pointed the app at my working directory and asked it to identify local GitHub projects that were not already configured.
 
-The request path looks like this:
+Once the repositories are available, the app can help spot stale clones, dirty worktrees, and branches that need attention. That is useful when I commit on one machine and later discover that another workstation has not pulled the change.
+
+Never ask an agent to discard or overwrite local changes automatically. Have it report the repository state first, then review each proposed pull, commit, or cleanup action.
+
+## Replace the Copilot Provider with Codex
+
+The app supports additional model providers. I use that capability to avoid buying another AI subscription for another application.
+
+The path is:
 
 ```text
-GitHub Copilot app -> http://127.0.0.1:8317/v1 -> CLIProxyAPI -> OpenAI Codex
+GitHub Copilot app -> CLIProxyAPI on localhost -> OpenAI Codex
 ```
 
-CLIProxyAPI is a third-party open-source project, not an official GitHub or OpenAI integration. Review what you install, keep it updated, and understand that your normal Codex subscription limits and terms still apply.
+CLIProxyAPI is a third-party open-source project that signs in to supported AI services and exposes an OpenAI-compatible local endpoint. If your ChatGPT plan includes Codex, it can route the app through that existing access instead of a separately billed OpenAI Platform API key.
 
-## Prerequisites
-
-You need:
-
-- The [GitHub Copilot app](https://github.com/copilot) installed and signed in with a GitHub account.
-- A ChatGPT account with Codex access.
-- `curl`, a browser, and a Linux desktop using systemd.
-
-GitHub says the Copilot app can use a configured model provider without a paid Copilot plan. Bring your own model support is still labeled as public preview, so the settings screens may change.
+This is not an official GitHub or OpenAI integration. Review the project before installing it, keep it updated, and expect your normal subscription limits and terms to apply.
 
 ## Install CLIProxyAPI on Linux
 
-CLIProxyAPI's documentation recommends a community-maintained Linux installer. Download it first so you can inspect it before running it:
+The CLIProxyAPI documentation recommends a community-maintained Linux installer. Download it first so you can inspect it before running it:
 
 ```bash
 installer="$(mktemp)"
@@ -91,15 +99,9 @@ bash "$installer"
 rm -f "$installer"
 ```
 
-The installer normally places the binary and configuration under:
+The installer normally places the binary and configuration under `~/cliproxyapi/`. It also creates a `cliproxyapi.service` user unit and generates a local API key.
 
-```text
-~/cliproxyapi/
-```
-
-It also creates a `cliproxyapi.service` user unit and generates a local API key. This key authenticates the Copilot app to your local proxy. It is not your ChatGPT password and it is not an OpenAI Platform API key.
-
-Open `~/cliproxyapi/config.yaml` and verify these important settings. Edit the existing values rather than replacing the whole file because the example configuration contains other options:
+Open `~/cliproxyapi/config.yaml` and verify that the service is bound only to localhost:
 
 ```yaml
 host: "127.0.0.1"
@@ -110,20 +112,15 @@ api-keys:
   - "sk-replace-this-with-a-long-random-local-key"
 ```
 
-Binding to `127.0.0.1` keeps the service off your LAN. If the installer already generated a strong key, keep it and use that value in the Copilot app. If you need a new one, generate it with:
+Edit the existing values instead of replacing the entire configuration. If the installer already generated a strong local key, keep it. Protect the configuration with:
 
 ```bash
-printf 'sk-%s\n' "$(openssl rand -hex 32)"
-```
-
-Paste the result under `api-keys`, then protect the configuration:
-
-```bash
-chmod 700 "$HOME/cliproxyapi"
+install -d -m 700 "$HOME/.cli-proxy-api"
+chmod 700 "$HOME/cliproxyapi" "$HOME/.cli-proxy-api"
 chmod 600 "$HOME/cliproxyapi/config.yaml"
 ```
 
-## Sign In to OpenAI Codex
+## Sign In to Codex and Start the Service
 
 Run the one-time OAuth login as your normal desktop user:
 
@@ -132,19 +129,20 @@ cd "$HOME/cliproxyapi"
 ./cli-proxy-api --codex-login
 ```
 
-Your browser should open the OpenAI sign-in page. Sign in with the ChatGPT account that has Codex access and approve the request. CLIProxyAPI stores the OAuth credentials in the configured authentication directory.
-
-On a headless machine, print the login URL instead:
+For a headless machine, use the device-code flow instead of the browser callback:
 
 ```bash
-./cli-proxy-api --codex-login --no-browser
+./cli-proxy-api --codex-device-login
 ```
 
-The OAuth callback uses local port `1455`, so do not expose that port to the internet.
+After signing in, restrict the saved OAuth credentials to your user:
 
-## Start CLIProxyAPI Automatically With systemd
+```bash
+find "$HOME/.cli-proxy-api" -type d -exec chmod 700 {} +
+find "$HOME/.cli-proxy-api" -type f -exec chmod 600 {} +
+```
 
-The Linux installer includes a user service. Enable it now and on future logins:
+Then enable the user service:
 
 ```bash
 systemctl --user daemon-reload
@@ -152,36 +150,11 @@ systemctl --user enable --now cliproxyapi.service
 systemctl --user status cliproxyapi.service
 ```
 
-If you installed the binary manually and do not already have a unit, create `~/.config/systemd/user/cliproxyapi.service` with this small service definition:
+A desktop user service starts when you log in, which is normally all this setup needs.
 
-```ini
-[Unit]
-Description=CLIProxyAPI local OpenAI-compatible proxy
-Wants=network-online.target
-After=network-online.target
+## Test the Local Endpoint
 
-[Service]
-Type=simple
-WorkingDirectory=%h/cliproxyapi
-ExecStart=%h/cliproxyapi/cli-proxy-api --config %h/cliproxyapi/config.yaml
-Restart=on-failure
-RestartSec=5
-
-[Install]
-WantedBy=default.target
-```
-
-Then enable it with the same `systemctl --user` commands above. A user service normally starts when you log in. If this proxy must start during boot and remain running after logout, enable lingering for your user:
-
-```bash
-sudo loginctl enable-linger "$USER"
-```
-
-Most desktop users do not need lingering because the Copilot app also starts after login.
-
-## Test the Local OpenAI Endpoint
-
-Before touching Copilot settings, verify the service and model list. In Bash, enter the local key from `config.yaml` when prompted:
+Before changing the GitHub app, confirm that the proxy is running and that its local key works:
 
 ```bash
 read -rsp 'CLIProxyAPI key: ' CLIPROXY_API_KEY
@@ -192,74 +165,56 @@ curl -fsS \
 unset CLIPROXY_API_KEY
 ```
 
-A JSON model list confirms that the service is running, the local API key matches, and the Codex login was loaded. Keep the exact model IDs handy in case the Copilot app asks you to enter one manually.
+A JSON model list confirms that the service is reachable, the key matches, and the Codex login was loaded.
 
-## Add CLIProxyAPI to the GitHub Copilot App
+## Connect the GitHub Copilot App
 
-Open the Copilot app and configure the local proxy:
+In the GitHub Copilot app:
 
 1. Open **Settings**.
 2. Select **Model providers**.
-3. Click **Add provider**.
-4. Select **OpenAI**. GitHub describes this option as its OpenAI-compatible completions provider.
-5. Use a name such as `OpenAI Codex via CLIProxyAPI`.
-6. Set the base URL to `http://127.0.0.1:8317/v1`.
-7. Paste the local key from the `api-keys` section of `config.yaml`.
-8. Save the provider.
+3. Choose **Add provider**, then **OpenAI**.
+4. Set the base URL to `http://127.0.0.1:8317/v1`.
+5. Paste the local key from `config.yaml`.
+6. Save the provider and select one of the Codex models it exposes.
 
-The provider's available models should now appear in the model picker. Start a session, choose one of the Codex models exposed by CLIProxyAPI, select the reasoning effort you want, and send a small test prompt against a disposable repository.
-
-GitHub stores provider credentials in the operating system credential store and does not display them again in the UI. The same key still exists in `config.yaml`, which is why the file permissions and localhost-only binding matter.
+Start with a disposable repository and a small test prompt. Confirm the diff and commands before trusting the setup with important work.
 
 ## Troubleshooting
 
-### Copilot Cannot Reach the Provider
-
-Check the service and recent logs:
+Check the service and recent logs with:
 
 ```bash
 systemctl --user status cliproxyapi.service
 journalctl --user -u cliproxyapi.service -n 100 --no-pager
 ```
 
-Confirm that the base URL includes `/v1` and uses port `8317`.
+If the app cannot connect, verify that the base URL includes `/v1`, the port is `8317`, and the service is listening on `127.0.0.1`.
 
-### The Proxy Returns 401 Invalid API Key
-
-The key entered in Copilot must exactly match one of the values under `api-keys` in `config.yaml`. Do not paste your ChatGPT password, OpenAI session token, or a key from a different service.
-
-After changing the configuration, restart the proxy:
+For a `401` response, make sure the key entered in the app exactly matches a value under `api-keys` in `config.yaml`. After changing the configuration, restart the service:
 
 ```bash
 systemctl --user restart cliproxyapi.service
 ```
 
-### No Codex Models Appear
+If no Codex models appear, repeat the OAuth login and test `/v1/models` from the terminal before changing more app settings.
 
-Run the OAuth login again, restart the service, and test `/v1/models` with `curl`. If the command-line test fails, fix CLIProxyAPI before changing more settings in Copilot.
+## Faster GitHub Actions with Blacksmith
 
-### A Model Connects but Cannot Use Tools
+The video also shows [Blacksmith](https://link.christitus.com/blacksmith), the sponsor for this walkthrough. Replacing the standard GitHub-hosted runners and enabling Blacksmith's cache cut one WinOnOneShot workflow from roughly five minutes to about two minutes in my test.
 
-Copilot agent sessions need a model endpoint with streaming and tool-calling support. Choose a Codex model reported by CLIProxyAPI rather than forcing an unrelated model name into the app.
+That result is from one project, not a promise for every workflow, but it is worth testing if CI wait time is slowing down your development loop.
 
 ## Final Thoughts
 
-The GitHub Copilot app is most useful as a workflow manager, not just another chat box. Its isolated worktrees, GitHub integration, validation surfaces, and model-provider support make it a strong Linux desktop for running agentic coding tasks.
+The GitHub Copilot app is useful once I stop treating it as Copilot. It gives me one dashboard for repository activity, issue triage, pull requests, and local projects across Linux, macOS, and Windows.
 
-CLIProxyAPI fills one specific gap: it lets the app's OpenAI-compatible provider talk to the Codex access already attached to your ChatGPT account. Keep the service local, protect the client key, review the third-party proxy before installing updates, and test the entire path before trusting it with important work.
+Routing its AI features through CLIProxyAPI lets me use the Codex subscription I already have, while the app remains valuable even without AI as a GitHub organization and notification tool. For developers managing dozens of repositories, that organization is the real feature.
 
 ## Sources
 
-- GitHub Copilot app overview: <https://docs.github.com/en/copilot/concepts/agents/github-copilot-app>
-- Working with Copilot app agent sessions: <https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions>
-- GitHub Copilot app BYOK setup: <https://docs.github.com/en/copilot/how-tos/github-copilot-app/use-byok-models>
-- GitHub Copilot app BYOK announcement: <https://github.blog/changelog/2026-06-23-github-copilot-app-support-for-byok/>
-- OpenAI Codex with a ChatGPT plan: <https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan>
-- CLIProxyAPI project: <https://github.com/router-for-me/CLIProxyAPI>
-- CLIProxyAPI Linux quick start: <https://help.router-for.me/introduction/quick-start>
-- CLIProxyAPI basic configuration: <https://help.router-for.me/configuration/basic>
-- CLIProxyAPI Codex OAuth login: <https://help.router-for.me/configuration/provider/codex>
-
-## Walkthrough Video
-
-{{< youtube "WVQ_2hN_zzs" >}}
+- [GitHub Copilot app overview](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)
+- [GitHub Copilot app model providers](https://docs.github.com/en/copilot/how-tos/github-copilot-app/use-byok-models)
+- [OpenAI Codex with a ChatGPT plan](https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan)
+- [CLIProxyAPI project](https://github.com/router-for-me/CLIProxyAPI)
+- [CLIProxyAPI Linux quick start](https://help.router-for.me/introduction/quick-start)
