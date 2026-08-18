@@ -146,7 +146,11 @@ site.
   to the archive, loads YouTube playback, and displays metadata for known IDs.
 - Chat JSON is requested only when present. Missing chat keeps video full width.
   Loaded chat supports embedded badges/emotes, seek resynchronization, play/
-  pause synchronization, automatic scrolling, and manual resume.
+  pause synchronization, automatic scrolling, and manual resume. Chat scrolls
+  independently without moving the page. The player and chat remain side by
+  side when both are usable at that width; on narrow portrait screens,
+  the video stays directly above the viewport-bounded chat so both are visible
+  together when the player section is brought into view.
 
 ## Content and rendering model
 

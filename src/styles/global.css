@@ -504,6 +504,7 @@ td {
   position: relative;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
+  contain: size;
   min-height: 0;
   background: var(--surface);
   border-left: 1px solid var(--border);
@@ -520,6 +521,8 @@ td {
 .chat-messages {
   min-height: 0;
   overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-gutter: stable;
   padding: 0.5rem;
   font-size: 0.86rem;
 }
@@ -712,15 +715,58 @@ td {
     max-height: 16rem;
     overflow: auto;
   }
+}
+@media (max-width: 720px) {
   .player-wrapper.has-chat {
     grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    height: min(760px, calc(100dvh - 5rem));
+    overflow: visible;
+    border: 0;
+    background: transparent;
   }
-  .chat-panel {
-    border-left: 0;
-    border-top: 1px solid var(--border);
+  .player-wrapper.has-chat .media-embed {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #000;
+    border-radius: var(--radius);
   }
-  .chat-messages {
-    height: 420px;
+  .player-wrapper.has-chat .chat-panel {
+    contain: none;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+}
+@media (max-width: 559px) and (orientation: landscape) {
+  .player-wrapper.has-chat {
+    height: auto;
+  }
+  .player-wrapper.has-chat .chat-panel {
+    height: min(18rem, calc(100dvh - 5rem));
+    min-height: min(10rem, calc(100dvh - 5rem));
+  }
+}
+@media (min-width: 560px) and (max-width: 720px) and (orientation: landscape) {
+  .player-wrapper.has-chat {
+    grid-template-columns: minmax(0, 1.65fr) minmax(290px, 0.7fr);
+    grid-template-rows: none;
+    gap: 0;
+    height: auto;
+    overflow: clip;
+    border: 1px solid var(--border);
+    background: #000;
+  }
+  .player-wrapper.has-chat .media-embed {
+    border: 0;
+    border-radius: 0;
+  }
+  .player-wrapper.has-chat .chat-panel {
+    contain: size;
+    border: 0;
+    border-left: 1px solid var(--border);
+    border-radius: 0;
   }
 }
 @media (max-width: 900px) {

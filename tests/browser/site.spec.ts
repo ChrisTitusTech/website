@@ -369,6 +369,9 @@ test("known player states render and unknown ids redirect", async ({
   page,
   isMobile,
 }) => {
+  await page.setViewportSize(
+    isMobile ? { width: 390, height: 844 } : { width: 900, height: 700 },
+  );
   await page.goto("/live-streams/player/?v=wf9rLEjWmPE");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Taking a break",
@@ -377,16 +380,130 @@ test("known player states render and unknown ids redirect", async ({
     page.getByRole("link", { name: "Watch on YouTube" }),
   ).toHaveAttribute("href", "https://www.youtube.com/watch?v=wf9rLEjWmPE");
   await expect(page.locator("#chat-col")).toBeVisible();
+  const player = page.locator("#player-wrapper");
+  const media = player.locator(".media-embed");
+  const chat = player.locator("#chat-col");
+  const messages = player.locator("#chat-messages");
+  await messages.evaluate((container) => {
+    for (let index = 0; index < 100; index += 1) {
+      const message = document.createElement("div");
+      message.className = "chat-message";
+      message.textContent = `Layout regression message ${index}`;
+      container.append(message);
+    }
+  });
+  expect(
+    await messages.evaluate(
+      (container) => container.scrollHeight > container.clientHeight,
+    ),
+  ).toBe(true);
+  await expect(messages).toHaveCSS("overflow-y", "auto");
+  await expect(messages).toHaveCSS("overscroll-behavior-y", "contain");
   if (!isMobile) {
-    const fits = await page.locator("#player-wrapper").evaluate((wrapper) => {
-      const chat = wrapper.querySelector("#chat-col")!;
-      return (
-        chat.getBoundingClientRect().bottom <=
-        wrapper.getBoundingClientRect().bottom + 1
-      );
+    const geometry = await player.evaluate((wrapper) => {
+      const mediaBox = wrapper
+        .querySelector(".media-embed")!
+        .getBoundingClientRect();
+      const chatBox = wrapper
+        .querySelector("#chat-col")!
+        .getBoundingClientRect();
+      return {
+        mediaHeight: mediaBox.height,
+        chatHeight: chatBox.height,
+        sideBySide: chatBox.left >= mediaBox.right - 1,
+      };
     });
-    expect(fits).toBe(true);
+    expect(geometry.sideBySide).toBe(true);
+    expect(geometry.chatHeight).toBeCloseTo(geometry.mediaHeight, 0);
   }
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(media).toHaveCSS("position", "relative");
+  const playerTop =
+    (await page
+      .locator(".site-header")
+      .evaluate((element) => element.getBoundingClientRect().bottom)) + 8;
+  await page.evaluate(
+    ({ top }) => {
+      const wrapper = document.querySelector("#player-wrapper")!;
+      window.scrollTo(
+        0,
+        window.scrollY + wrapper.getBoundingClientRect().top - top,
+      );
+    },
+    { top: playerTop },
+  );
+  await expect
+    .poll(() =>
+      player.evaluate((wrapper) => wrapper.getBoundingClientRect().bottom),
+    )
+    .toBeLessThanOrEqual(844);
+  const geometry = await player.evaluate((wrapper) => {
+    const mediaBox = wrapper
+      .querySelector(".media-embed")!
+      .getBoundingClientRect();
+    const chatBox = wrapper.querySelector("#chat-col")!.getBoundingClientRect();
+    return {
+      mediaBottom: mediaBox.bottom,
+      chatTop: chatBox.top,
+      playerBottom: wrapper.getBoundingClientRect().bottom,
+    };
+  });
+  expect(geometry.chatTop).toBeGreaterThanOrEqual(geometry.mediaBottom);
+  expect(geometry.playerBottom).toBeLessThanOrEqual(844);
+  await expect(media).toBeInViewport();
+  await expect(chat).toBeInViewport();
+
+  await page.setViewportSize({ width: 667, height: 320 });
+  await page.evaluate(() => {
+    document.documentElement.style.scrollBehavior = "auto";
+    const wrapper = document.querySelector("#player-wrapper")!;
+    const headerBottom = document
+      .querySelector(".site-header")!
+      .getBoundingClientRect().bottom;
+    window.scrollTo(
+      0,
+      window.scrollY + wrapper.getBoundingClientRect().top - headerBottom - 8,
+    );
+  });
+  const landscapeGeometry = await player.evaluate((wrapper) => {
+    const mediaBox = wrapper
+      .querySelector(".media-embed")!
+      .getBoundingClientRect();
+    const chatBox = wrapper.querySelector("#chat-col")!.getBoundingClientRect();
+    return {
+      sideBySide: chatBox.left >= mediaBox.right - 1,
+      mediaHeight: mediaBox.height,
+      chatHeight: chatBox.height,
+    };
+  });
+  expect(landscapeGeometry.sideBySide).toBe(true);
+  expect(landscapeGeometry.chatHeight).toBeCloseTo(
+    landscapeGeometry.mediaHeight,
+    0,
+  );
+  await expect(media).toBeInViewport();
+  await expect(chat).toBeInViewport();
+
+  await page.setViewportSize({ width: 320, height: 256 });
+  const narrowLandscapeGeometry = await player.evaluate((wrapper) => {
+    const mediaBox = wrapper
+      .querySelector(".media-embed")!
+      .getBoundingClientRect();
+    const chatBox = wrapper.querySelector("#chat-col")!.getBoundingClientRect();
+    const messagesBox = wrapper
+      .querySelector("#chat-messages")!
+      .getBoundingClientRect();
+    return {
+      stacked: chatBox.top >= mediaBox.bottom - 1,
+      chatWidth: chatBox.width,
+      messagesHeight: messagesBox.height,
+      documentWidth: document.documentElement.scrollWidth,
+    };
+  });
+  expect(narrowLandscapeGeometry.stacked).toBe(true);
+  expect(narrowLandscapeGeometry.chatWidth).toBeGreaterThan(290);
+  expect(narrowLandscapeGeometry.messagesHeight).toBeGreaterThan(80);
+  expect(narrowLandscapeGeometry.documentWidth).toBe(320);
   await page.goto("/live-streams/player/?v=hF3dAcTSivs");
   await expect(page.getByRole("heading", { level: 1 })).not.toHaveText(
     "Live Stream",
