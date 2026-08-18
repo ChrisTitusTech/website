@@ -432,6 +432,11 @@ test("mobile navigation opens with an accessible control", async ({
   await expect(
     page.getByRole("link", { name: "Newsletter", exact: true }),
   ).toBeVisible();
+  const forums = page
+    .getByRole("navigation", { name: "Primary navigation" })
+    .getByRole("link", { name: "Forums", exact: true });
+  await expect(forums).toBeVisible();
+  await expect(forums).toHaveAttribute("href", "https://forum.christitus.com/");
 });
 
 test("mobile navigation remains usable without JavaScript", async ({

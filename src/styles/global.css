@@ -723,7 +723,7 @@ td {
     height: 420px;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .nav {
     flex-wrap: wrap;
     min-height: 56px;
@@ -756,6 +756,8 @@ td {
   .nav-links .icon-button {
     align-self: start;
   }
+}
+@media (max-width: 760px) {
   .stream-feature {
     grid-template-columns: 1fr;
   }
