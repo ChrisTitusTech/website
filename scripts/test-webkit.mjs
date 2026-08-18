@@ -8,6 +8,9 @@ const image = "mcr.microsoft.com/playwright:v1.62.1-noble";
 const osRelease =
   process.platform === "linux" ? readFileSync("/etc/os-release", "utf8") : "";
 const needsContainer = /^ID=fedora$/m.test(osRelease);
+const uid = process.getuid?.();
+const gid = process.getgid?.();
+const hostUser = uid !== undefined && gid !== undefined ? `${uid}:${gid}` : "";
 
 function run(command, args) {
   return spawnSync(command, args, { stdio: "inherit" }).status ?? 1;
@@ -20,10 +23,11 @@ for (const engine of ["podman", "docker"]) {
   if (spawnSync(engine, ["--version"], { stdio: "ignore" }).status !== 0)
     continue;
   const volume = `${process.cwd()}:/work${engine === "podman" ? ":Z" : ""}`;
-  const user =
-    engine === "docker" && process.getuid && process.getgid
-      ? ["--user", `${process.getuid()}:${process.getgid()}`]
-      : [];
+  const user = engine === "docker" && hostUser ? ["--user", hostUser] : [];
+  const tmpfs =
+    engine === "podman"
+      ? "/work/.astro:rw,notmpcopyup"
+      : `/work/.astro:rw${hostUser ? `,uid=${uid},gid=${gid}` : ""}`;
   process.exit(
     run(engine, [
       "run",
@@ -32,7 +36,7 @@ for (const engine of ["podman", "docker"]) {
       "-v",
       volume,
       "--tmpfs",
-      `/work/.astro:rw${engine === "podman" ? ",notmpcopyup" : ""}`,
+      tmpfs,
       "-w",
       "/work",
       image,

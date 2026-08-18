@@ -43,10 +43,11 @@ describe("workflow contracts", () => {
     const wrapper = await readFile("scripts/test-webkit.mjs", "utf8");
     const manifest = JSON.parse(await readFile("package.json", "utf8"));
     expect(wrapper).toContain('"--tmpfs"');
-    expect(wrapper).toContain('",notmpcopyup"');
+    expect(wrapper).toContain("/work/.astro:rw,notmpcopyup");
     expect(wrapper).toContain('"--user"');
-    expect(wrapper).toContain("process.getuid()");
-    expect(wrapper).toContain("process.getgid()");
+    expect(wrapper).toContain("process.getuid?.()");
+    expect(wrapper).toContain("process.getgid?.()");
+    expect(wrapper).toContain("uid=${uid},gid=${gid}");
     expect(manifest.scripts["setup:browsers"]).toContain("webkit");
   });
 
