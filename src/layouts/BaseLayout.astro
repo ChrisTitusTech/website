@@ -91,7 +91,7 @@ const structuredData = JSON.stringify({
     <link rel="canonical" href={canonicalUrl} />
     {previous && <link rel="prev" href={new URL(previous, site.url).toString()} />}
     {next && <link rel="next" href={new URL(next, site.url).toString()} />}
-    <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     {feed && <link rel="alternate" type="application/rss+xml" title={site.title} href={new URL(feed, site.url).toString()} />}
     {preloadImage && <link rel="preload" href={preloadImage} as="image" fetchpriority="high" />}
     <meta property="og:title" content={title} />
