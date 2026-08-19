@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-import { watch } from "node:fs";
 import path from "node:path";
 import process from "node:process";
 import { spawn } from "node:child_process";
+
+import chokidar from "chokidar";
 
 import { prepareContent } from "./prepare-content.mjs";
 
@@ -54,15 +55,16 @@ async function refreshContent() {
   }
 }
 
-const watcher = watch(
-  path.join(root, "content"),
-  { recursive: true },
-  (_event, filename) => {
-    if (!filename?.endsWith(".md")) return;
-    clearTimeout(timer);
-    timer = setTimeout(() => void refreshContent(), 100);
-  },
-);
+const watcher = chokidar.watch(path.join(root, "content"), {
+  ignoreInitial: true,
+  usePolling: true,
+  interval: 1000,
+});
+watcher.on("all", (_event, filename) => {
+  if (!filename?.endsWith(".md")) return;
+  clearTimeout(timer);
+  timer = setTimeout(() => void refreshContent(), 100);
+});
 
 function stop(signal) {
   if (stopping) return;

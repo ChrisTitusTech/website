@@ -22,4 +22,13 @@ export default defineConfig({
       destination: "https://youtube.com/@christitustech",
     },
   },
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+        interval: 1000,
+        ignored: ["**/static/**", "**/content/**"],
+      },
+    },
+  },
 });
