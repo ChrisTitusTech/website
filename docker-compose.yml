@@ -1,0 +1,16 @@
+services:
+  christitus-website:
+    build: .
+    container_name: christitus-website
+    working_dir: /app
+    ports:
+      - "127.0.0.1:4321:4321"
+    volumes:
+      - .:/app
+      - astro_node_modules:/app/node_modules
+    environment:
+      - ASTRO_TELEMETRY_DISABLED=1
+      - UV_THREADPOOL_SIZE=32
+
+volumes:
+  astro_node_modules:
