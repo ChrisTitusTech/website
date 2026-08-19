@@ -27,7 +27,7 @@ new `master`; a still-pending divergent head is rebased and retained.
 
 The TwitchDownloader archive is pinned to version `1.56.5` and its SHA-256 is
 verified before extraction. Python automation dependencies are installed from
-the hash-locked `requirements-automation.txt`. Existing secret names and Python
+the hash-locked `scripts/requirements-automation.txt`. Existing secret names and Python
 data contracts are unchanged: `YOUTUBE_API_KEY`, `TWITCH_CLIENT_ID`, and
 `TWITCH_CLIENT_SECRET`.
 
