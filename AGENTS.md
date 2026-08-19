@@ -9,6 +9,10 @@
 - Preserve unrelated worktree changes and inspect `git status --short` before
   editing.
 - Do not expose secrets, tokens, private keys, sessions, or environment files.
+- Never run `npm`, `npx`, `pnpm`, or `yarn` directly on the host, under no
+  circumstances and with no exceptions — not even "just to check something"
+  or for a single quick command. All such commands must go through the
+  Docker Compose service described in Toolchain.
 
 ## Project overview
 
@@ -26,10 +30,39 @@
 
 ## Toolchain
 
-- The runtime is Node.js 24 with npm and a committed lockfile. Install with
-  `npm ci`, develop with `npm run dev`, run focused checks with
-  `npm run check` and `npm test`, build with `npm run build`, and use
-  `npm run validate` as the complete local gate.
+- The runtime is Node.js 24 (`package.json` `engines` requires `>=24 <25`;
+  the `Dockerfile` base image is pinned to match) with npm and a committed
+  lockfile.
+- All npm installs, scripts, and dev servers run inside Docker via
+  `docker-compose.yml`. Invoking `npm`/`npx`/`pnpm`/`yarn` directly on the
+  host is forbidden under all circumstances, no exceptions — see Command
+  execution. The compose service is `christitus-website`.
+  - Install/update deps: `docker compose run --rm christitus-website npm ci`
+    (or `npm install <pkg>` after editing `package.json`)
+  - Dev server: `docker compose up christitus-website` (serves on
+    `127.0.0.1:4321`, host code changes are reflected via the bind mount)
+  - Checks/tests: `docker compose run --rm christitus-website npm run check`
+    and `npm test`
+  - Build: `docker compose run --rm christitus-website npm run build`
+  - Full local gate: `docker compose run --rm christitus-website npm run validate`
+  - After changing `package.json`/`package-lock.json`, rebuild the image:
+    `docker compose build christitus-website`
+  - `node_modules` is a named volume and is not written back to the host tree.
+- On Windows hosts, Docker Desktop's WSL2 backend bridges the bind-mounted
+  project directory over the 9P protocol, which is slow for high-frequency
+  filesystem polling. Dev-server startup takes roughly 15-30s on such hosts;
+  this is expected and not a hang. Related mitigations, do not remove without
+  re-verifying dev-server startup and both live-edit paths on a Windows/WSL2
+  host:
+  - `astro.config.mjs` configures Vite's watcher to poll (native inotify does
+    not see host-side edits over this bridge) at a longer interval than
+    default and excludes `static/` and `content/` from that scope.
+  - `content/` is instead watched by a dedicated `chokidar` poller in
+    `scripts/dev.mjs` that regenerates `.astro-content/`, which Astro's
+    content collections load from.
+  - `docker-compose.yml` raises `UV_THREADPOOL_SIZE` because Astro's startup
+    I/O and both pollers otherwise contend for libuv's default 4 worker
+    threads, which can stall dev-server startup indefinitely.
 - Astro production output is `dist/`; `.astro/` is generated type and
   content metadata. Never edit or commit either directory as source.
 
@@ -61,8 +94,8 @@
   `featuredOrder` are optional. An omitted `draft` value means published;
   production excludes only `draft: true`.
 - Once the Phase 2 Astro foundation lands, create posts with
-  `npm run new:post -- "<title>" [--date YYYY-MM-DD] [--category "<name>" ...]`.
-  The repository-owned scaffolder renders `templates/post.md.tmpl` into
+  `docker compose run --rm christitus-website npm run new:post -- "<title>" [--date YYYY-MM-DD] [--category "<name>" ...]`
+  (see Toolchain). The repository-owned scaffolder renders `templates/post.md.tmpl` into
   `content/posts/<year>/<slug>.md`, defaults new posts to drafts, uses the
   current `America/Chicago` calendar date when `--date` is absent, and refuses
   to overwrite files. It serializes titles as JSON-compatible double-quoted
@@ -188,8 +221,9 @@
 
 - Make small reviewable commits even though the migration is delivered in one
   pull request.
-- Validate focused behavior while implementing and run `npm run validate` as
-  the complete gate.
+- Validate focused behavior while implementing and run
+  `docker compose run --rm christitus-website npm run validate` as
+  the complete gate (see Toolchain).
 - For content changes, verify schema parsing, draft and future-date exclusion,
   and production rendering.
 - For route or metadata changes, compare the generated route contract and
