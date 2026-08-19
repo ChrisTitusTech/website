@@ -69,7 +69,7 @@ site.
   [--category "<name>" ...]` provides the Astro replacement for Hugo archetypes.
   The date defaults to the current calendar day in `America/Chicago`; explicit
   dates use strict `YYYY-MM-DD`. The date determines both front matter and the
-  `content/posts/<year>/` directory.
+  `src/content/posts/<year>/` directory.
 - Slugs are deterministic: trim the title, apply Unicode NFKD normalization,
   remove combining marks, lowercase it, replace each maximal run outside ASCII
   `[a-z0-9]` with one hyphen, trim leading/trailing hyphens, and reject an empty
@@ -154,11 +154,11 @@ site.
 
 ## Content and rendering model
 
-- Astro loads post Markdown from `content/posts/` and standalone page Markdown
-  from the repository's existing `content/` tree.
+- Astro loads post Markdown from `src/content/posts/` and standalone page
+  Markdown from the repository's existing `src/content/` tree.
 - Content with Hugo `build.render: never`, including the duplicate
-  `content/live-streams.md` source, remains excluded from Astro routes. The
-  renderable `content/live-streams/_index.md` owns `/live-streams/`.
+  `src/content/live-streams.md` source, remains excluded from Astro routes.
+  The renderable `src/content/live-streams/_index.md` owns `/live-streams/`.
 - Published posts require valid `title`, `date`, and `url`. New posts require at
   least one category, but the loader accepts the existing published posts with
   empty category lists only for `/2022-recap/`, `/worst-tech-of-2022/`, and
@@ -191,7 +191,7 @@ site.
 - YouTube embeds use privacy-enhanced URLs and descriptive titles. X embeds have
   a usable link fallback. Notice and table output is semantic and accessible.
 - Static images, fonts, downloads, chat JSON, and custom files remain under
-  `static/`. Move or copy the tracked `content/posts/2023/english.png` into the
+  `public/`. Move or copy the tracked `src/content/posts/2023/english.png` into the
   Astro public asset tree so `/posts/2023/english.png` remains byte-identical
   and routable. The site may use Cloudflare image transforms with direct
   fallback.
@@ -222,7 +222,7 @@ site.
   `https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1`.
   Clients following redirects must receive the release script successfully; no
   Worker/Function proxy is introduced.
-- Preserve `static/_headers` security and feed caching behavior, but replace the
+- Preserve `public/_headers` security and feed caching behavior, but replace the
   Hugo `/css/*` and `/js/*` immutable rules. Only fingerprinted `/_astro/*`
   assets receive one-year immutable caching; copied CSS and JavaScript use a
   revalidating or bounded non-immutable policy.

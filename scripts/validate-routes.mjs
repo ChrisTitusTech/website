@@ -373,7 +373,7 @@ if (!notice.includes("notice-tip") || !notice.includes("notice-note"))
   throw new Error("notice shortcodes did not render");
 
 const sourceImage = await readFile(
-  path.join(root, "content/posts/2023/english.png"),
+  path.join(root, "src/content/posts/2023/english.png"),
 );
 const publicImage = await readFile(
   path.join(root, "dist/posts/2023/english.png"),

@@ -25,7 +25,7 @@ fi
 
 while IFS= read -r changed_path; do
 	[[ -z $changed_path ]] && continue
-	if [[ $changed_path != data/livestreams.json && ! $changed_path =~ ^static/chats/[A-Za-z0-9_-]{6,16}\.json$ ]]; then
+	if [[ $changed_path != data/livestreams.json && ! $changed_path =~ ^public/chats/[A-Za-z0-9_-]{6,16}\.json$ ]]; then
 		printf 'candidate changes a non-generated path: %s\n' "$changed_path" >&2
 		exit 1
 	fi

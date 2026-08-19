@@ -7,5 +7,5 @@
     }
   },
   "include": [".astro/types.d.ts", "src/**/*", "astro.config.mjs"],
-  "exclude": ["assets", "dist", "public", "static", "node_modules"]
+  "exclude": ["assets", "dist", "public", "node_modules"]
 }

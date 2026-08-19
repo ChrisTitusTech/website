@@ -297,11 +297,11 @@ describe("workflow contracts", () => {
     ).not.toBe(0);
 
     git(root, "reset", "--hard", base);
-    await mkdir(path.join(root, "static/chats"), { recursive: true });
-    const executable = path.join(root, "static/chats/abcdef.json");
+    await mkdir(path.join(root, "public/chats"), { recursive: true });
+    const executable = path.join(root, "public/chats/abcdef.json");
     await writeFile(executable, "{}\n");
     await chmod(executable, 0o755);
-    git(root, "add", "static/chats/abcdef.json");
+    git(root, "add", "public/chats/abcdef.json");
     git(root, "commit", "-qm", "executable generated path");
     expect(
       spawnSync(
@@ -312,12 +312,12 @@ describe("workflow contracts", () => {
     ).not.toBe(0);
 
     git(root, "reset", "--hard", base);
-    await mkdir(path.join(root, "static/chats"), { recursive: true });
+    await mkdir(path.join(root, "public/chats"), { recursive: true });
     await symlink(
       "../../../README.md",
-      path.join(root, "static/chats/abcdef.json"),
+      path.join(root, "public/chats/abcdef.json"),
     );
-    git(root, "add", "static/chats/abcdef.json");
+    git(root, "add", "public/chats/abcdef.json");
     git(root, "commit", "-qm", "symlink generated path");
     expect(
       spawnSync(
@@ -328,9 +328,9 @@ describe("workflow contracts", () => {
     ).not.toBe(0);
 
     git(root, "reset", "--hard", base);
-    await mkdir(path.join(root, "static/chats/nested"), { recursive: true });
-    await writeFile(path.join(root, "static/chats/nested/abcdef.json"), "{}\n");
-    git(root, "add", "static/chats/nested/abcdef.json");
+    await mkdir(path.join(root, "public/chats/nested"), { recursive: true });
+    await writeFile(path.join(root, "public/chats/nested/abcdef.json"), "{}\n");
+    git(root, "add", "public/chats/nested/abcdef.json");
     git(root, "commit", "-qm", "nested generated path");
     expect(
       spawnSync(

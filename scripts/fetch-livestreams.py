@@ -18,7 +18,7 @@ import requests
 API_KEY = os.environ.get("YOUTUBE_API_KEY", "")
 PLAYLIST_ID = os.environ.get("PLAYLIST_ID", "PLc7fktTRMBow1ksFW020hx2XEKabaD5Vd")
 OUTPUT_FILE = Path(__file__).parent.parent / "data" / "livestreams.json"
-CHATS_DIR   = Path(__file__).parent.parent / "static" / "chats"
+CHATS_DIR   = Path(__file__).parent.parent / "public" / "chats"
 BASE_URL = "https://www.googleapis.com/youtube/v3/playlistItems"
 
 

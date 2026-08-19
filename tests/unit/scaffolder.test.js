@@ -29,8 +29,8 @@ async function fixture(publicFiles = ["index.html"], redirects = "") {
   const root = await mkdtemp(path.join(tmpdir(), "website-scaffolder-"));
   temporaryRoots.push(root);
   await Promise.all([
-    mkdir(path.join(root, "content/posts"), { recursive: true }),
-    mkdir(path.join(root, "static"), { recursive: true }),
+    mkdir(path.join(root, "src/content/posts"), { recursive: true }),
+    mkdir(path.join(root, "public"), { recursive: true }),
     mkdir(path.join(root, "tests/baseline"), { recursive: true }),
     mkdir(path.join(root, "templates"), { recursive: true }),
   ]);
@@ -38,7 +38,7 @@ async function fixture(publicFiles = ["index.html"], redirects = "") {
     path.join(root, "tests/baseline/hugo-public.json"),
     JSON.stringify({ output: { publicFiles } }),
   );
-  await writeFile(path.join(root, "static/_redirects"), redirects);
+  await writeFile(path.join(root, "public/_redirects"), redirects);
   await writeFile(
     path.join(root, "templates/post.md.tmpl"),
     await readFile("templates/post.md.tmpl", "utf8"),
@@ -254,8 +254,8 @@ describe("post scaffolder", () => {
 
   it("rejects static output and file/directory ancestor conflicts", async () => {
     const exact = await fixture();
-    await mkdir(path.join(exact, "static/asset"), { recursive: true });
-    await writeFile(path.join(exact, "static/asset/index.html"), "static");
+    await mkdir(path.join(exact, "public/asset"), { recursive: true });
+    await writeFile(path.join(exact, "public/asset/index.html"), "static");
     await expect(
       assertCandidateAvailable(
         {
@@ -270,7 +270,7 @@ describe("post scaffolder", () => {
     ).rejects.toThrow(/collision/);
 
     const ancestor = await fixture(["index.html", "ancestor-other"]);
-    await writeFile(path.join(ancestor, "static/ancestor"), "static");
+    await writeFile(path.join(ancestor, "public/ancestor"), "static");
     await expect(
       assertCandidateAvailable(
         {
@@ -289,7 +289,7 @@ describe("post scaffolder", () => {
     const root = await fixture();
     for (let index = 0; index < 10; index += 1) {
       await writeFile(
-        path.join(root, "content/posts", `post-${index}.md`),
+        path.join(root, "src/content/posts", `post-${index}.md`),
         `---\ntitle: Post ${index}\ndate: "2026-08-01"\nurl: /post-${index}/\ncategories: [Linux]\ntags: []\n---\n`,
       );
     }
@@ -323,7 +323,7 @@ describe("post scaffolder", () => {
     ];
     await main(args, root);
     const output = await readFile(
-      path.join(root, "content/posts/2026/safe-post.md"),
+      path.join(root, "src/content/posts/2026/safe-post.md"),
       "utf8",
     );
     expect(YAML.parse(output.match(/^---\n([\s\S]*?)\n---/)[1])).toMatchObject({

@@ -83,7 +83,7 @@ jobs:
 
       - name: Install Python dependencies
         if: steps.branch.outputs.resume != 'true'
-        run: python -m pip install --disable-pip-version-check --require-hashes --requirement requirements-automation.txt
+        run: python -m pip install --disable-pip-version-check --require-hashes --requirement scripts/requirements-automation.txt
 
       - name: Fetch playlist data
         if: steps.branch.outputs.resume != 'true'
@@ -169,7 +169,7 @@ jobs:
 
       - name: Install Python dependencies
         if: needs.update-livestreams.outputs.resume != 'true'
-        run: python -m pip install --disable-pip-version-check --require-hashes --requirement requirements-automation.txt
+        run: python -m pip install --disable-pip-version-check --require-hashes --requirement scripts/requirements-automation.txt
 
       - name: Match Twitch VODs
         if: needs.update-livestreams.outputs.resume != 'true'
@@ -212,7 +212,7 @@ jobs:
           set -euo pipefail
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-          git add data/livestreams.json static/chats/
+          git add data/livestreams.json public/chats/
           if ! git diff --staged --quiet; then
             git commit -m "chore: update chat replays"
           fi
