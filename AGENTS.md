@@ -129,46 +129,25 @@
   `publishedAt` remains required because Twitch VOD matching consumes it. Phase
   4 consolidates the current livestream and chat workflows into one scheduled
   workflow at `.github/workflows/update-livestreams.yml` with chained jobs,
-  deletes `.github/workflows/update-chat.yml`, and changes delivery from direct
-  pushes to a bot branch and pull request. A concurrency group with
+  deletes `.github/workflows/update-chat.yml`, and publishes validated generated
+  data directly to `master`. A concurrency group with
   `cancel-in-progress: false` serializes accepted runs. GitHub does not expose a
   configurable `queue: max` field, so the independent watchdog also detects
-  platform queue-limit cancellation. Each job
-  checks out its predecessor's emitted SHA, and PR/CI dispatch occurs only after
-  the branch still matches the final SHA; neither PR update nor CI dispatch can
-  begin before both data jobs succeed. After an interruption, the next queued or
-  manual run reconciles the branch, PR, and check state idempotently: it reruns
-  incomplete data jobs from the last confirmed SHA or completes missing PR/CI
-  actions for an already confirmed final SHA. A canceled/rejected run caused by
-  the 100-run queue limit is detected by a separate scheduled/workflow-run
-  watchdog with `actions: read` and `issues: write`; it opens or updates a durable
-  tracking issue. The next accepted or manual data run performs a full
-  current-state source reconciliation, then the watchdog closes the alert after
-  verified success. The CI workflow accepts a bot branch `ref` plus
-  `expected_sha`. Before dispatch, automation compares `expected_sha` itself to
-  `master`, proves that exact commit changes only allowlisted generated data
-  paths, and proves its workflow and configuration files are byte-identical to
-  `master`. Immediately before tagging, it verifies the remote bot branch still
-  equals `expected_sha`, creates a unique tag pointing directly to that commit,
-  verifies the tag peels to the same SHA, and dispatches the workflow at that
-  immutable tag so the check attaches to the validated commit. Before tests, CI
-  requires the reserved tag namespace and `github.sha == expected_sha`, resolves
-  the bot branch to that same SHA, and independently repeats the exact-commit
-  path allowlist and workflow/configuration comparisons. One tag ruleset
-  restricts creation in the reserved namespace and grants its only bypass to a
-  dedicated GitHub App; an overlapping ruleset forbids updates and deletion
-  with no bypass, including for administrators and that App. Do not assume
-  bot-authored push or pull-request events will start required checks.
-  The App credential lives in a protected environment available only to a
-  tag-publisher job whose workflow definition runs from `master`; before minting
-  the short-lived `contents: write` token, that job executes no action or script
-  from the candidate commit. Trusted publisher code creates only the already
-  validated reserved-tag-to-`expected_sha` mapping and revokes the token after
-  use. The App has no bypass on repository-wide branch creation, update, or
-  deletion rules. The dispatcher receives only `actions: write`. Other
-  `contents: write` and
-  `pull-requests: write` permissions remain limited to the data jobs that update
-  the bot branch and manage its pull request, while CI jobs stay read-only.
+  platform queue-limit cancellation. Every accepted run resets the managed data
+  branch to the exact `master` base and refetches current YouTube/Twitch state,
+  so an interrupted candidate cannot suppress a newer livestream. Each job
+  checks out its predecessor's emitted SHA and verifies the remote branch has
+  not moved. After both data jobs, the workflow builds the generated site and
+  validates its route contract. The final publisher proves `master` still equals
+  the captured base, proves the managed branch still equals the validated final
+  SHA, re-runs the generated-data-only candidate validator, and performs a
+  non-force fast-forward push of that exact SHA to `master`. Base or branch drift
+  fails closed and the next accepted run rebuilds current desired data. The
+  scheduled/workflow-run watchdog opens or updates one durable tracking issue
+  for stale, canceled, or incomplete runs and closes it only after all four jobs
+  succeed and the managed data branch equals `master`. `contents: write` remains
+  limited to the managed-branch jobs and final publisher; site validation stays
+  read-only.
   Never hard-code YouTube or Twitch credentials.
 
 ## Frontend conventions
@@ -230,9 +209,6 @@
 - Treat repository-rule activation as a post-merge cutover step. The migration
   PR must merge before its managed-branch workflow can run. Verify after merge
   that `update-chat.yml` is absent and the retained `update-livestreams.yml`
-  identity is still disabled, then re-enable and manually dispatch it, verify CI
-  on the bot branch's exact final SHA, and disable/drain the workflow again before
-  the bot PR's final head/check audit. Record both PR head and `master` base SHAs;
-  if either moves, update the branch and rerun CI. Enable no-bypass rules that
-  require the branch to be up to date, merge with an exact-head guard, then
-  re-enable the workflow. Merge queue is not part of this cutover contract.
+  identity is still disabled, then re-enable and manually dispatch it. Verify
+  the generated-site validation and exact fast-forward publication jobs on the
+  resulting data SHA before leaving the workflow enabled.

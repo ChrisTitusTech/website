@@ -164,46 +164,28 @@ protection cutover.
   workflow by retaining `.github/workflows/update-livestreams.yml`, adding the
   chained chat job there, and deleting `.github/workflows/update-chat.yml`.
   Serialize every run with one concurrency group using
-  `cancel-in-progress: false` and `queue: max`. Have each job check out its
-  predecessor's emitted SHA
-  on one managed bot branch so chat matching sees the new data. Verify the branch
-  still equals the final SHA before opening or refreshing its pull request; no
-  PR update or CI dispatch starts before both jobs succeed. The next queued or
-  manual run reconciles branch, PR, and check state idempotently after an
-  interruption: rerun incomplete jobs from the last confirmed SHA, or complete
-  missing PR/CI actions for an already confirmed final SHA. Do not grant the
-  workflow a protected-branch bypass. If the 100-run queue limit cancels or
+  `cancel-in-progress: false`. Have each run reset the managed branch to the
+  exact `master` base and refetch current source state. Each job checks out its
+  predecessor's emitted SHA so chat matching sees the new data. After both data
+  jobs, build the generated site and validate its routes. Verify `master` still
+  equals the captured base and the managed branch still equals the validated
+  final SHA, then fast-forward that exact generated-data-only commit directly to
+  `master` without a pull request. Drift fails closed and the next run rebuilds
+  current desired data. If the 100-run queue limit cancels or
   rejects a run, a separate `.github/workflows/monitor-data-workflow.yml` runs on
   a schedule and retained-workflow completion, with its own concurrency group,
   `actions: read`, and `issues: write`. It queries recent run conclusions and
   queue-limit annotations, opens or updates one durable tracking issue, and
   closes it only after a successful full reconciliation. The next accepted or
   manual data run performs that reconciliation idempotently.
-- Give the CI workflow a `workflow_dispatch` trigger accepting `ref` and
-  `expected_sha`. Before dispatch, compare `expected_sha` itself to `master`,
-  prove that exact commit changes only allowlisted generated data paths, and
-  prove its workflow and configuration files are byte-identical to `master`.
-  Immediately before tagging, verify the remote bot branch still equals
-  `expected_sha`; create a unique tag pointing directly to that commit, verify
-  that the tag peels to the same SHA, and dispatch the workflow at that immutable
-  tag so its check attaches to the validated commit. Before tests, CI requires
-  the reserved tag namespace and `github.sha == expected_sha`, resolves the bot
-  branch to that same SHA, and independently repeats the exact-commit path
-  allowlist and workflow/configuration comparisons. Configure one tag ruleset
-  that restricts creation in the reserved namespace and grants its only bypass
-  to a dedicated GitHub App, plus an overlapping ruleset that forbids updates
-  and deletion with no bypass, including for administrators and that App.
-  Dispatch only after all
-  data/chat commits and the final branch-head check. Do not rely on
-  token-suppressed events to create required checks. Store the dedicated App's
-  credential in a protected environment available only to a tag-publisher job
-  whose workflow definition runs from `master`. Before minting its short-lived
-  `contents: write` token, run no action or script from the candidate commit;
-  create only the validated reserved-tag-to-`expected_sha` mapping, then revoke
-  the token. Give the App no bypass on repository-wide branch creation, update,
-  or deletion rules. Give the dispatcher only `actions: write`, reserve other
-  `contents: write` and `pull-requests: write` permissions for the data jobs,
-  and keep CI jobs read-only.
+- Validate the exact final data SHA inside the serialized livestream workflow
+  rather than depending on token-suppressed push or pull-request events. Install
+  pinned Node dependencies, build the production site, and validate generated
+  routes before publication. Recheck the captured `master` base, managed-branch
+  head, and generated-data path allowlist immediately before a non-force
+  fast-forward push to `master`. Keep `contents: write` limited to the data and
+  publication jobs; validation remains read-only. No GitHub App, reserved tag,
+  CI dispatch, or pull-request permission is required for livestream updates.
 - Commit the documented repository-rule configuration that will require the
   quality and security checks on `master`, including for administrators. Do not
   enable it while the old default-branch workflows are still active. Require PR
@@ -220,11 +202,9 @@ protection cutover.
 
 - `npm run validate` passes from a clean install with no Hugo dependency.
 - The scheduled data workflow still updates `data/livestreams.json` and
-  `static/chats/` on their managed branch, open or refresh a pull request, and
-  dispatch the same checks as human-authored changes without changing the JSON,
-  Python, or secret contracts. Workflow tests or a dry-run fixture verify the
-  final head SHA is the dispatched ref; live bot-PR evidence is a Phase 5 gate
-  because the new workflows are not active until the migration merges.
+  `static/chats/` on its managed branch, validates the generated site, and
+  fast-forwards the exact generated-data-only head directly to `master` without
+  changing the JSON, Python, or secret contracts.
 - The final diff contains only the migration and documented automation changes.
 - Artifact tests confirm `_headers` is copied, `/_astro/*` is immutable, copied
   CSS/JS are not immutable, and the security/feed rules remain intact.
@@ -259,15 +239,9 @@ available.
 - Merge the fully green migration PR while the captured pre-migration
   repository rules remain active. Verify after merge that `update-chat.yml` is
   absent and the retained `update-livestreams.yml` workflow is still disabled,
-  then re-enable and dispatch it. Confirm it creates or refreshes the managed bot
-  PR and explicitly dispatches CI for that branch's final head SHA. After every
-  required check is attached and green, disable the data workflow again, drain
-  queued/running work, and refresh the bot PR head. If it changed, dispatch and
-  await CI again. Record the PR head and `master` base SHAs; if either changes,
-  update the branch and rerun CI. Enable the new no-bypass, strict-up-to-date
-  rules only when every check is attached and green on that pair,
-  merge the bot PR with an exact-head guard, then re-enable the workflow. Apply
-  the same freeze and exact-head/base gate to later bot PRs.
+  then re-enable and dispatch it. Confirm the data, chat, generated-site
+  validation, and exact fast-forward publication jobs succeed and leave the
+  managed branch equal to `master`.
 - Verify the custom domain and production behavior after deployment.
 
 ### Phase 5 exit criteria
@@ -277,11 +251,10 @@ available.
   Pages settings, workflow disable/drain and re-enable timestamps, and
   confirmation that no default-branch push or deployment occurred between the
   production settings switch and migration merge.
-- The first post-merge bot PR has all required checks on its final head SHA, and
-  a controlled failed-check test proves the new no-bypass rule prevents merges
-  to `master`, including for administrators.
-- Queue-limit and interruption fixtures prove a later reconciliation run rebuilds
-  current desired data and completes any missing PR/check state idempotently.
+- The first post-merge data run validates the generated site and publishes its
+  exact generated-data-only head to `master` without a pull request.
+- Queue-limit and interruption fixtures prove a later reconciliation run
+  rebuilds current desired data rather than resuming a stale candidate.
 - Watchdog fixtures feed canceled/rejected run and queue-limit API responses,
   prove one durable tracking issue is opened or updated, and close it only after
   verified reconciliation.

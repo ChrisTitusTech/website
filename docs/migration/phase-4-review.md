@@ -35,15 +35,20 @@ engine-specific test was skipped.
   enabled.
 - The exact-commit bot-candidate validator passes ShellCheck and shfmt.
 - The retained Python automation modules compile under Python 3.
-- Workflow contract tests cover the serialized data/chat chain, exact final
-  SHA dispatch, trusted publisher boundary, pinned actions, data-only candidate
-  rejection including deletions, absolute downloader execution, required manual
-  dispatch inputs, and immutable-tag CI reuse.
-- The serialized data workflow records its confirmed final SHA in a checkpoint
-  tag so an interrupted run can resume PR and CI reconciliation without
-  refetching or recommitting already-confirmed data.
+- Workflow contract tests cover the serialized data/chat chain, exact final-SHA
+  validation and publication, `master` drift rejection, pinned actions,
+  data-only candidate rejection including deletions, absolute downloader
+  execution, and required manual dispatch inputs.
+- The serialized data workflow resets its managed branch to the captured
+  `master` base and refetches current source state on every accepted run. It
+  validates the generated site before fast-forwarding the exact candidate to
+  `master`, so interruption recovery does not depend on a stale checkpoint.
 - The committed repository-rule files remain disabled templates. They are not
   applied before the guarded Phase 5 cutover.
+
+Post-migration operations replaced the original PR/checkpoint delivery path
+described in the historical acceptance record above. The current contract is
+the direct-publication workflow and contract-test evidence in this section.
 
 ## Hugo removal
 
