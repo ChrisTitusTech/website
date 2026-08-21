@@ -53,13 +53,8 @@ jobs:
           if git ls-remote --exit-code --heads origin "$DATA_BRANCH" >/dev/null 2>&1; then
             git fetch --no-tags origin "+refs/heads/${DATA_BRANCH}:refs/remotes/origin/${DATA_BRANCH}"
             previous_sha=$(git rev-parse "refs/remotes/origin/${DATA_BRANCH}")
-            merge_base=$(git merge-base "$base_sha" "$previous_sha")
-            .github/scripts/validate-bot-candidate.sh "$merge_base" "$previous_sha"
-            git checkout -B "$DATA_BRANCH" "$previous_sha"
-            git reset --hard "$base_sha"
-          else
-            git checkout -B "$DATA_BRANCH" "$base_sha"
           fi
+          git checkout -B "$DATA_BRANCH" "$base_sha"
           {
             printf 'base_sha=%s\n' "$base_sha"
             printf 'previous_sha=%s\n' "$previous_sha"

@@ -86,7 +86,13 @@ describe("workflow contracts", () => {
     ).run;
     expect(restoreSource).not.toContain("resume");
     expect(restoreSource).not.toContain("livestream-data-final");
-    expect(restoreSource).toContain('git reset --hard "$base_sha"');
+    expect(restoreSource).not.toContain("validate-bot-candidate.sh");
+    expect(restoreSource).not.toContain(
+      'git checkout -B "$DATA_BRANCH" "$previous_sha"',
+    );
+    expect(restoreSource).toContain(
+      'git checkout -B "$DATA_BRANCH" "$base_sha"',
+    );
     expect(data.jobs["update-chat"].if).toBeUndefined();
     const chatSource = JSON.stringify(data.jobs["update-chat"]);
     expect(chatSource).not.toContain("resume");
