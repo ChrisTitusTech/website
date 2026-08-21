@@ -14,7 +14,7 @@ import requests
 
 
 DATA_PATH = Path("data/livestreams.json")
-CHAT_DIR = Path("static/chats")
+CHAT_DIR = Path("public/chats")
 DOWNLOADER = Path(__file__).resolve().parent.parent / "TwitchDownloaderCLI"
 
 

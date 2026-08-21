@@ -14,7 +14,7 @@ div.stickyside.pl-lg-4 {
 
 .mainpagetitle {
   text-align:center
-  
+
 }
 
 .bannerpad {
@@ -55,8 +55,10 @@ div.stickyside.pl-lg-4 {
   float:right;
 }
 
-html {
-	scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+	  scroll-behavior: smooth;
+  }
 }
 
 .googlead {

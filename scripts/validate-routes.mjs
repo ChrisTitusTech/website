@@ -54,8 +54,18 @@ const required = baseline.output.publicFiles.filter(
   (file) =>
     file.endsWith(".html") || file.endsWith(".xml") || file === "index.json",
 );
+const hugoGeneratedBundles = new Set([
+  "css/style.min.813eb079a91fe2c2841894d173687e2fbf88270e951b8eb48ec6e99945260d874847e012be897eb2ad92c56d1296d1fd43685366e89518e20213c1a5bcbfefde.css",
+  "css/vendor/bootstrap.min.3c8f27e6009ccfd710a905e6dcf12d0ee3c6f2ac7da05b0572d3e0d12e736fc8.css",
+  "js/search-bundle.min.395396a70933984f628e0db1d20296c5ac294fdab03c4c42ddc1a29ad1711a27ae93b9be1e2ed48e84596064a6d9e924d7daeb3bac8666295ab35771dc47f3a8.js",
+  "js/shopify-button.16c50dc28234a6f0522d3f791256c26291e20545e7573aeae24102e8681b51f1.js",
+  "js/vendor.min.0fd57716441f97e6f7b50c71fe2b67a7038054c97a6d2546e490f57e70b8efcfd4aa00c7ec1a2b26e10d37147c8bf983992d7a5c686237cc49d3e23505e3d0b4.js",
+]);
+const requiredStatic = baseline.output.publicFiles.filter(
+  (file) => !required.includes(file) && !hugoGeneratedBundles.has(file),
+);
 const missing = [];
-for (const file of required) {
+for (const file of [...required, ...requiredStatic]) {
   try {
     await stat(path.join(root, "dist", file));
   } catch {
@@ -77,6 +87,20 @@ for (const file of [
   "404.html",
 ])
   await stat(path.join(root, "dist", file));
+
+const faviconManifest = JSON.parse(
+  await readFile(path.join(root, "dist/favicon/manifest.json"), "utf8"),
+);
+for (const icon of faviconManifest.icons) {
+  await stat(path.join(root, "dist", icon.src.replace(/^\//, "")));
+}
+const browserConfig = await readFile(
+  path.join(root, "dist/favicon/browserconfig.xml"),
+  "utf8",
+);
+for (const [, source] of browserConfig.matchAll(/\bsrc=["']([^"']+)["']/g)) {
+  await stat(path.join(root, "dist", source.replace(/^\//, "")));
+}
 
 for (const [route, expected] of Object.entries(baseline.output.metadata)) {
   const file = route === "/" ? "index.html" : `${route.slice(1)}index.html`;
@@ -373,7 +397,7 @@ if (!notice.includes("notice-tip") || !notice.includes("notice-note"))
   throw new Error("notice shortcodes did not render");
 
 const sourceImage = await readFile(
-  path.join(root, "content/posts/2023/english.png"),
+  path.join(root, "src/content/posts/2023/english.png"),
 );
 const publicImage = await readFile(
   path.join(root, "dist/posts/2023/english.png"),
@@ -414,5 +438,5 @@ for (const type of ["WebSite", "WebPage", "BlogPosting", "BreadcrumbList"]) {
 }
 
 console.log(
-  `Validated ${required.length} Hugo contract routes and ${search.length} search entries`,
+  `Validated ${required.length} Hugo contract routes, ${requiredStatic.length} baseline static files, and ${search.length} search entries`,
 );

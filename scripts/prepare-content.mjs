@@ -315,14 +315,17 @@ function normalizeData(data, relative) {
 
 export async function prepareContent() {
   await rm(outputRoot, { recursive: true, force: true });
-  const files = await fg("content/**/*.md", { cwd: root, onlyFiles: true });
+  const files = await fg("src/content/**/*.md", {
+    cwd: root,
+    onlyFiles: true,
+  });
   const urls = new Map();
   for (const relative of files.sort()) {
     const source = await readFile(path.join(root, relative), "utf8");
     const parsed = parseDocument(source, relative);
     if (parsed.data.build?.render === "never") continue;
     const data = normalizeData(parsed.data, relative);
-    const post = relative.startsWith("content/posts/");
+    const post = relative.startsWith("src/content/posts/");
     if (post) {
       validatePost(data, relative);
       const normalizedUrl = `/${data.url.split("/").filter(Boolean).join("/")}/`;
@@ -333,8 +336,10 @@ export async function prepareContent() {
       urls.set(normalizedUrl, relative);
     }
     const destinationRelative = post
-      ? relative.slice("content/posts/".length)
-      : relative.slice("content/".length).replace(/_index\.md$/, "index.md");
+      ? relative.slice("src/content/posts/".length)
+      : relative
+          .slice("src/content/".length)
+          .replace(/_index\.md$/, "index.md");
     const destination = path.join(
       outputRoot,
       post ? "posts" : "pages",

@@ -86,7 +86,13 @@ describe("workflow contracts", () => {
     ).run;
     expect(restoreSource).not.toContain("resume");
     expect(restoreSource).not.toContain("livestream-data-final");
-    expect(restoreSource).toContain('git reset --hard "$base_sha"');
+    expect(restoreSource).not.toContain("validate-bot-candidate.sh");
+    expect(restoreSource).not.toContain(
+      'git checkout -B "$DATA_BRANCH" "$previous_sha"',
+    );
+    expect(restoreSource).toContain(
+      'git checkout -B "$DATA_BRANCH" "$base_sha"',
+    );
     expect(data.jobs["update-chat"].if).toBeUndefined();
     const chatSource = JSON.stringify(data.jobs["update-chat"]);
     expect(chatSource).not.toContain("resume");
@@ -112,7 +118,7 @@ describe("workflow contracts", () => {
     expect(manifest.scripts.dev).toBe("node scripts/dev.mjs");
     expect(manifest.scripts["dev:content"]).toContain("--preview");
     expect(source).toContain("await prepareContent()");
-    expect(source).toContain('path.join(root, "content")');
+    expect(source).toContain('path.join(root, "src/content")');
     expect(source).toContain("watch(");
     expect(source).toContain('"--ignore-lock"');
     expect(source).toContain('ASTRO_DEV_BACKGROUND: "0"');
@@ -163,19 +169,6 @@ describe("workflow contracts", () => {
     );
   });
 
-  it("keeps the tag publisher outside the repository-wide branch bypass", async () => {
-    const template = await readFile(
-      ".github/repository-rules/branch-mutation.json.tmpl",
-      "utf8",
-    );
-    expect(template).toContain('"include": ["~ALL"]');
-    expect(template).toContain("GITHUB_ACTIONS_INTEGRATION_ID");
-    expect(template).toContain("BRANCH_MAINTAINER_REPOSITORY_ROLE_ID");
-    expect(template).not.toContain("DATA_CHECK_TAG_APP_INTEGRATION_ID");
-    for (const type of ["creation", "update", "deletion"])
-      expect(template).toContain(`"type": "${type}"`);
-  });
-
   it("fails the audit gate on valid operational-error JSON", async () => {
     const root = await mkdtemp(path.join(tmpdir(), "website-audit-error-"));
     temporaryRoots.push(root);
@@ -194,29 +187,12 @@ describe("workflow contracts", () => {
     expect(result.stderr).toContain("registry unavailable");
   });
 
-  it("keeps tag publication on trusted master with a protected App credential", async () => {
-    const publisher = await workflow("publish-data-check-tag.yml");
-    const job = publisher.jobs.publish;
-    expect(job.environment).toBe("data-check-tag-publisher");
-    expect(job.permissions).toBeUndefined();
-    expect(publisher.permissions).toEqual({
-      actions: "write",
-      contents: "read",
-    });
-    expect(job.steps[1].with.ref).toBe("master");
-    expect(job.if).toBeUndefined();
-    expect(job.steps[0].run).toContain('GITHUB_REF" == "refs/heads/master');
-    expect(JSON.stringify(job)).toContain("permission-contents");
-    expect(JSON.stringify(job)).toContain("data-check/");
-  });
-
-  it("requires exact bot inputs for every manual CI dispatch", async () => {
+  it("runs CI only for pull requests and master pushes", async () => {
     const ci = await workflow("ci.yml");
-    expect(ci.on.workflow_dispatch.inputs.ref.required).toBe(true);
-    expect(ci.on.workflow_dispatch.inputs.expected_sha.required).toBe(true);
-    expect(ci.jobs["validate-dispatch"].steps[1].if).toBe(
-      "github.event_name == 'workflow_dispatch'",
-    );
+    expect(ci.on.pull_request).toBeDefined();
+    expect(ci.on.push.branches).toEqual(["master"]);
+    expect(ci.on.workflow_dispatch).toBeUndefined();
+    expect(ci.jobs["validate-dispatch"]).toBeUndefined();
   });
 
   it("uses an absolute TwitchDownloader executable path", async () => {
@@ -236,12 +212,7 @@ describe("workflow contracts", () => {
   });
 
   it("pins every third-party action to a full commit SHA", async () => {
-    for (const name of [
-      "ci.yml",
-      "codeql.yml",
-      "publish-data-check-tag.yml",
-      "update-livestreams.yml",
-    ]) {
+    for (const name of ["ci.yml", "codeql.yml", "update-livestreams.yml"]) {
       const source = await readFile(`.github/workflows/${name}`, "utf8");
       for (const match of source.matchAll(/^\s*uses:\s*([^\s#]+)/gm)) {
         const reference = match[1];
@@ -297,11 +268,11 @@ describe("workflow contracts", () => {
     ).not.toBe(0);
 
     git(root, "reset", "--hard", base);
-    await mkdir(path.join(root, "static/chats"), { recursive: true });
-    const executable = path.join(root, "static/chats/abcdef.json");
+    await mkdir(path.join(root, "public/chats"), { recursive: true });
+    const executable = path.join(root, "public/chats/abcdef.json");
     await writeFile(executable, "{}\n");
     await chmod(executable, 0o755);
-    git(root, "add", "static/chats/abcdef.json");
+    git(root, "add", "public/chats/abcdef.json");
     git(root, "commit", "-qm", "executable generated path");
     expect(
       spawnSync(
@@ -312,12 +283,12 @@ describe("workflow contracts", () => {
     ).not.toBe(0);
 
     git(root, "reset", "--hard", base);
-    await mkdir(path.join(root, "static/chats"), { recursive: true });
+    await mkdir(path.join(root, "public/chats"), { recursive: true });
     await symlink(
       "../../../README.md",
-      path.join(root, "static/chats/abcdef.json"),
+      path.join(root, "public/chats/abcdef.json"),
     );
-    git(root, "add", "static/chats/abcdef.json");
+    git(root, "add", "public/chats/abcdef.json");
     git(root, "commit", "-qm", "symlink generated path");
     expect(
       spawnSync(
@@ -328,9 +299,9 @@ describe("workflow contracts", () => {
     ).not.toBe(0);
 
     git(root, "reset", "--hard", base);
-    await mkdir(path.join(root, "static/chats/nested"), { recursive: true });
-    await writeFile(path.join(root, "static/chats/nested/abcdef.json"), "{}\n");
-    git(root, "add", "static/chats/nested/abcdef.json");
+    await mkdir(path.join(root, "public/chats/nested"), { recursive: true });
+    await writeFile(path.join(root, "public/chats/nested/abcdef.json"), "{}\n");
+    git(root, "add", "public/chats/nested/abcdef.json");
     git(root, "commit", "-qm", "nested generated path");
     expect(
       spawnSync(

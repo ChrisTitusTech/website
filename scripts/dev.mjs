@@ -55,7 +55,7 @@ async function refreshContent() {
 }
 
 const watcher = watch(
-  path.join(root, "content"),
+  path.join(root, "src/content"),
   { recursive: true },
   (_event, filename) => {
     if (!filename?.endsWith(".md")) return;

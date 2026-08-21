@@ -141,7 +141,7 @@ export async function main(argv = process.argv.slice(2), root = process.cwd()) {
   const slug = validateInput(input);
   const destination = path.join(
     root,
-    "content/posts",
+    "src/content/posts",
     input.date.slice(0, 4),
     `${slug}.md`,
   );

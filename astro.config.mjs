@@ -4,7 +4,6 @@ export default defineConfig({
   site: "https://christitus.com",
   output: "static",
   outDir: "./dist",
-  publicDir: "./static",
   trailingSlash: "always",
   build: {
     format: "directory",

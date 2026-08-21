@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Resize WEBP logos in static/images/linux-logos to 50x50 in place."""
+"""Resize WEBP logos in public/images/linux-logos to 50x50 in place."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-LOGO_DIR = Path("static/images/linux-logos")
+LOGO_DIR = Path("public/images/linux-logos")
 TARGET_SIZE = "50x50"
 
 

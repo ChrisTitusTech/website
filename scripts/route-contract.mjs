@@ -155,7 +155,7 @@ export async function buildInventory(candidate, root = process.cwd()) {
   );
   const outputPaths = new Set(baseline.output.publicFiles);
 
-  const postFiles = await fg("content/posts/**/*.md", { cwd: root });
+  const postFiles = await fg("src/content/posts/**/*.md", { cwd: root });
   const posts = [];
   for (const file of postFiles) {
     const data = frontmatter(
@@ -186,15 +186,15 @@ export async function buildInventory(candidate, root = process.cwd()) {
       .filter((route) => !currentDerived.has(route)),
   );
 
-  const staticFiles = await fg("static/**/*", { cwd: root, onlyFiles: true });
+  const staticFiles = await fg("public/**/*", { cwd: root, onlyFiles: true });
   for (const file of staticFiles) {
-    const relative = file.slice("static/".length);
+    const relative = file.slice("public/".length);
     routes.add(publicRoute(`/${relative}`));
     outputPaths.add(relative);
   }
 
   const redirectLines = (
-    await readFile(path.join(root, "static/_redirects"), "utf8")
+    await readFile(path.join(root, "public/_redirects"), "utf8")
   )
     .split(/\r?\n/)
     .map((line) => line.trim())

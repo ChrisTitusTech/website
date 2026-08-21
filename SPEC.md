@@ -69,7 +69,7 @@ site.
   [--category "<name>" ...]` provides the Astro replacement for Hugo archetypes.
   The date defaults to the current calendar day in `America/Chicago`; explicit
   dates use strict `YYYY-MM-DD`. The date determines both front matter and the
-  `content/posts/<year>/` directory.
+  `src/content/posts/<year>/` directory.
 - Slugs are deterministic: trim the title, apply Unicode NFKD normalization,
   remove combining marks, lowercase it, replace each maximal run outside ASCII
   `[a-z0-9]` with one hyphen, trim leading/trailing hyphens, and reject an empty
@@ -121,10 +121,9 @@ site.
 
 ### Livestreams
 
-- Phase 4 consolidates the current livestream and chat workflows into one
-  scheduled workflow by retaining `.github/workflows/update-livestreams.yml`,
-  chaining both jobs on the same managed bot branch, and deleting
-  `.github/workflows/update-chat.yml`. A concurrency group with
+- `.github/workflows/update-livestreams.yml` is the scheduled workflow for both
+  livestream metadata and chat replays. Its chained jobs use the same managed
+  data branch, and a concurrency group with
   `cancel-in-progress: false` serializes every accepted run. Each run resets the
   managed branch to its exact `master` base and performs a full current-state
   source reconciliation. Each job checks out its predecessor's emitted SHA and
@@ -156,11 +155,11 @@ site.
 
 ## Content and rendering model
 
-- Astro loads post Markdown from `content/posts/` and standalone page Markdown
-  from the repository's existing `content/` tree.
+- Astro loads post Markdown from `src/content/posts/` and standalone page
+  Markdown from the repository's existing `src/content/` tree.
 - Content with Hugo `build.render: never`, including the duplicate
-  `content/live-streams.md` source, remains excluded from Astro routes. The
-  renderable `content/live-streams/_index.md` owns `/live-streams/`.
+  `src/content/live-streams.md` source, remains excluded from Astro routes.
+  The renderable `src/content/live-streams/_index.md` owns `/live-streams/`.
 - Published posts require valid `title`, `date`, and `url`. New posts require at
   least one category, but the loader accepts the existing published posts with
   empty category lists only for `/2022-recap/`, `/worst-tech-of-2022/`, and
@@ -193,7 +192,7 @@ site.
 - YouTube embeds use privacy-enhanced URLs and descriptive titles. X embeds have
   a usable link fallback. Notice and table output is semantic and accessible.
 - Static images, fonts, downloads, chat JSON, and custom files remain under
-  `static/`. Move or copy the tracked `content/posts/2023/english.png` into the
+  `public/`. Move or copy the tracked `src/content/posts/2023/english.png` into the
   Astro public asset tree so `/posts/2023/english.png` remains byte-identical
   and routable. The site may use Cloudflare image transforms with direct
   fallback.
@@ -224,7 +223,7 @@ site.
   `https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1`.
   Clients following redirects must receive the release script successfully; no
   Worker/Function proxy is introduced.
-- Preserve `static/_headers` security and feed caching behavior, but replace the
+- Preserve `public/_headers` security and feed caching behavior, but replace the
   Hugo `/css/*` and `/js/*` immutable rules. Only fingerprinted `/_astro/*`
   assets receive one-year immutable caching; copied CSS and JavaScript use a
   revalidating or bounded non-immutable policy.
@@ -343,19 +342,10 @@ site.
   runs using the median thresholds defined above.
 - Manual desktop/mobile and light/dark review is recorded with screenshots;
   keyboard navigation and third-party fallbacks are exercised.
-- A Cloudflare preview uses `npm run build` and `dist/` successfully before
-  production settings change.
-- After preview validation, the production Pages settings switch to Node 24,
-  `npm run build`, and `dist` immediately before the migration merge in a
-  guarded cutover window. Because pre-merge `master` still contains both legacy
-  workflow identities, `update-livestreams.yml` and `update-chat.yml` are both
-  disabled and drained first, with no active Pages deployment and no intervening
-  default-branch push or deployment. After merge, `update-chat.yml` is confirmed
-  absent and the retained `update-livestreams.yml` remains disabled.
-- The post-merge cutover transaction re-enables and manually dispatches the
-  retained data workflow only after verifying that it remains disabled,
-  then confirms the data, chat, generated-site validation, and exact
-  fast-forward publication jobs succeed. The workflow remains enabled after the
-  managed data branch is verified equal to `master`.
+- Cloudflare production uses Node 24, `npm run build`, and `dist`; preview
+  deployments use the same build contract.
+- The retained data workflow remains enabled. Its data, chat, generated-site
+  validation, and exact fast-forward publication jobs must all succeed, and the
+  managed data branch must equal `master` after publication.
 - CI, security checks, local review, independent review, and all actionable
   review threads are clean before merge.

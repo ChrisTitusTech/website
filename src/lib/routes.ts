@@ -155,7 +155,7 @@ export function buildPageDescriptors(
     seen.add(route);
     output.push({ kind: "post", route, post });
     const sourceAlias = routeKey(
-      `/${post.data._sourcePath.replace(/^content\//, "").replace(/\.md$/, "")}/`,
+      `/${post.data._sourcePath.replace(/^src\/content\//, "").replace(/\.md$/, "")}/`,
     );
     if (
       sourceAlias !== route &&

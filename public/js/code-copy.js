@@ -8,14 +8,22 @@
 (function() {
   'use strict';
 
-  if(!document.queryCommandSupported('copy')) {
+  if(
+    typeof document.queryCommandSupported !== 'function' ||
+    typeof document.execCommand !== 'function' ||
+    !document.queryCommandSupported('copy')
+  ) {
     return;
   }
 
   function flashCopyMessage(el, msg) {
     el.textContent = msg;
-    setTimeout(function() {
+    if(el.copyMessageTimer) {
+      clearTimeout(el.copyMessageTimer);
+    }
+    el.copyMessageTimer = setTimeout(function() {
       el.textContent = "Copy";
+      el.copyMessageTimer = null;
     }, 1000);
   }
 
@@ -35,15 +43,23 @@
 
     var codeEl = containerEl.firstElementChild;
     copyBtn.addEventListener('click', function() {
+      var selection;
       try {
-        var selection = selectText(codeEl);
-        document.execCommand('copy');
-        selection.removeAllRanges();
+        selection = selectText(codeEl);
+        if(!document.execCommand('copy')) {
+          throw new Error('Copy command was not successful');
+        }
 
-        flashCopyMessage(copyBtn, 'Copied!')
+        flashCopyMessage(copyBtn, 'Copied!');
       } catch(e) {
-        console && console.log(e);
-        flashCopyMessage(copyBtn, 'Failed :\'(')
+        if(typeof console !== 'undefined' && typeof console.log === 'function') {
+          console.log(e);
+        }
+        flashCopyMessage(copyBtn, 'Failed :\'(');
+      } finally {
+        if(selection) {
+          selection.removeAllRanges();
+        }
       }
     });
 
