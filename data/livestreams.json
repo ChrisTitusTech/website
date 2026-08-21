@@ -1,13 +1,13 @@
 {
-  "updated": "2026-08-20T18:10:19Z",
+  "updated": "2026-08-21T04:38:29Z",
   "items": [
     {
       "videoId": "66xYWzbHTys",
       "title": "🔴 An Update, Stealing from Omarchy Quad, and New Projects",
-      "description": "►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
+      "description": "I’m back after taking a couple months away from streaming, and apparently the first thing I needed to do was break Linux live on camera.\n\nIn this stream, I show what I’ve been building with Fedora, DWM, and Quickshell, explain why I moved away from Arch, and finally take a proper look at DHH’s Omarchy.\n\nI went in expecting to find plenty to complain about. Instead, Omarchy ended up being one of the cleanest Linux setups I’ve tried, with some ideas I absolutely want to steal for my own desktop.\n\nWe also dive into my current AI coding workflow, CodeRabbit/Codex reviews, local AI, T3 Code, multi-system development, and why I think AI is useful without replacing the developer.\n\n### Chapters\n\n00:00 I’m Back\n07:23 My New Linux\n34:37 Installing Omarchy\n1:43:53 Omarchy First Look\n2:16:55 Trying T3 Code\n2:45:41 Multi-System Coding\n2:52:16 Life & Development\n\n►► Digital Downloads ➜ https://www.cttstore.com\n►► Patreon ➜ https://www.patreon.com/christitustech\n►► Twitch ➜ https://www.twitch.tv/christitustech\n►► Music by: CreatorMix.com",
       "publishedAt": "2026-08-20T17:27:26Z",
       "date": "August 20, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/66xYWzbHTys/mqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/66xYWzbHTys/mqdefault.jpg",
       "twitchVodId": "2851619713",
       "hasChatReplay": false
     },
