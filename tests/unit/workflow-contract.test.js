@@ -51,21 +51,24 @@ describe("workflow contracts", () => {
     expect(manifest.scripts["setup:browsers"]).toContain("webkit");
   });
 
-  it("serializes data and chat before PR and CI reconciliation", async () => {
+  it("serializes, validates, and publishes livestream data directly to master", async () => {
     const data = await workflow("update-livestreams.yml");
     expect(data.concurrency).toMatchObject({
       group: "livestream-data-reconciliation",
       "cancel-in-progress": false,
     });
     expect(data.jobs["update-chat"].needs).toBe("update-livestreams");
-    expect(data.jobs["reconcile-pull-request"].needs).toBe("update-chat");
-    expect(data.jobs["dispatch-checks"].needs).toBe("reconcile-pull-request");
+    expect(data.jobs["validate-data"].needs).toBe("update-chat");
+    expect(data.jobs["publish-master"].needs).toEqual([
+      "update-livestreams",
+      "update-chat",
+      "validate-data",
+    ]);
     expect(data.jobs["update-chat"].steps[0].with.ref).toContain(
       "needs.update-livestreams.outputs.sha",
     );
-    expect(data.jobs["dispatch-checks"].permissions).toEqual({
-      actions: "write",
-      contents: "read",
+    expect(data.jobs["publish-master"].permissions).toEqual({
+      contents: "write",
     });
     for (const job of Object.values(data.jobs)) {
       expect(job.environment).toBe("livestream-data-automation");
@@ -74,36 +77,32 @@ describe("workflow contracts", () => {
     expect(data.jobs["update-livestreams"].steps[0].run).toContain(
       'GITHUB_REF" == "refs/heads/master',
     );
-    const dispatchSource = JSON.stringify(data.jobs["dispatch-checks"]);
-    expect(dispatchSource).toContain("event=workflow_dispatch");
-    expect(dispatchSource).toContain("data-check/");
+    expect(data.jobs["reconcile-pull-request"]).toBeUndefined();
+    expect(data.jobs["dispatch-checks"]).toBeUndefined();
     expect(JSON.stringify(data.jobs)).toContain("--require-hashes");
     expect(JSON.stringify(data.jobs)).toContain("requirements-automation.txt");
     const restoreSource = data.jobs["update-livestreams"].steps.find(
       (step) => step.name === "Restore or create managed branch",
     ).run;
-    expect(restoreSource.indexOf("git config user.email")).toBeLessThan(
-      restoreSource.indexOf("git rebase"),
-    );
-    expect(restoreSource).toContain(".merged_at != null");
-    expect(restoreSource).toContain("base=master");
-    expect(restoreSource).toContain('.base.ref == \\"master\\"');
+    expect(restoreSource).not.toContain("resume");
+    expect(restoreSource).not.toContain("livestream-data-final");
     expect(restoreSource).toContain('git reset --hard "$base_sha"');
-    expect(restoreSource).toContain("refs/tags/livestream-data-final");
-    expect(restoreSource).toContain('checkpoint_sha" == "$previous_sha');
-    expect(restoreSource).toMatch(
-      /git merge-base --is-ancestor "\$base_sha" "\$previous_sha"; then\s+resume=true/,
-    );
-    expect(data.jobs["update-livestreams"].outputs.resume).toContain(
-      "steps.branch.outputs.resume",
-    );
     expect(data.jobs["update-chat"].if).toBeUndefined();
     const chatSource = JSON.stringify(data.jobs["update-chat"]);
-    expect(chatSource).toContain(
-      "needs.update-livestreams.outputs.resume != 'true'",
+    expect(chatSource).not.toContain("resume");
+    expect(chatSource).not.toContain("livestream-data-final");
+    expect(data.jobs["validate-data"].steps.map((step) => step.run)).toContain(
+      "npm run build",
     );
-    expect(chatSource).toContain("git tag -f livestream-data-final");
-    expect(chatSource).toContain("steps.result.outputs.sha");
+    expect(data.jobs["validate-data"].steps.map((step) => step.run)).toContain(
+      "npm run validate:routes",
+    );
+    const publishSource = data.jobs["publish-master"].steps[1].run;
+    expect(publishSource).toContain(
+      'git push origin "$FINAL_SHA:refs/heads/master"',
+    );
+    expect(publishSource).toContain('remote_master" != "$BASE_SHA');
+    expect(publishSource).toContain("validate-bot-candidate.sh");
     await expect(access(".github/workflows/update-chat.yml")).rejects.toThrow();
   });
 
@@ -143,7 +142,7 @@ describe("workflow contracts", () => {
     expect(isActiveWaiver({ ...valid, owner: "" }, "2026-08-13")).toBe(false);
   });
 
-  it("requires a healthy master run and handles unchanged data in the watchdog", async () => {
+  it("requires a healthy direct publication run in the watchdog", async () => {
     const monitor = await workflow("monitor-data-workflow.yml");
     const source = monitor.jobs.monitor.steps[0].run;
     expect(source).toContain('$latest_head" == "master');
@@ -152,7 +151,8 @@ describe("workflow contracts", () => {
     expect(source).toContain("latest_age_seconds <= 28800");
     expect(source).toContain('$latest_fresh" == "true');
     expect(source).toContain('$final_sha" == "$master_sha');
-    expect(source).toContain("not-required");
+    expect(source).toContain("Publish livestream data to master");
+    expect(source).not.toContain("ci_status");
     expect(source).toContain('gh issue list --repo "$GITHUB_REPOSITORY"');
     expect(source).toContain(
       'gh issue close "$issue_number" --repo "$GITHUB_REPOSITORY"',
@@ -161,19 +161,6 @@ describe("workflow contracts", () => {
     expect(source).toContain(
       'gh issue comment "$issue_number" --repo "$GITHUB_REPOSITORY"',
     );
-  });
-
-  it("keeps the tag publisher outside the repository-wide branch bypass", async () => {
-    const template = await readFile(
-      ".github/repository-rules/branch-mutation.json.tmpl",
-      "utf8",
-    );
-    expect(template).toContain('"include": ["~ALL"]');
-    expect(template).toContain("GITHUB_ACTIONS_INTEGRATION_ID");
-    expect(template).toContain("BRANCH_MAINTAINER_REPOSITORY_ROLE_ID");
-    expect(template).not.toContain("DATA_CHECK_TAG_APP_INTEGRATION_ID");
-    for (const type of ["creation", "update", "deletion"])
-      expect(template).toContain(`"type": "${type}"`);
   });
 
   it("fails the audit gate on valid operational-error JSON", async () => {
@@ -194,29 +181,12 @@ describe("workflow contracts", () => {
     expect(result.stderr).toContain("registry unavailable");
   });
 
-  it("keeps tag publication on trusted master with a protected App credential", async () => {
-    const publisher = await workflow("publish-data-check-tag.yml");
-    const job = publisher.jobs.publish;
-    expect(job.environment).toBe("data-check-tag-publisher");
-    expect(job.permissions).toBeUndefined();
-    expect(publisher.permissions).toEqual({
-      actions: "write",
-      contents: "read",
-    });
-    expect(job.steps[1].with.ref).toBe("master");
-    expect(job.if).toBeUndefined();
-    expect(job.steps[0].run).toContain('GITHUB_REF" == "refs/heads/master');
-    expect(JSON.stringify(job)).toContain("permission-contents");
-    expect(JSON.stringify(job)).toContain("data-check/");
-  });
-
-  it("requires exact bot inputs for every manual CI dispatch", async () => {
+  it("runs CI only for pull requests and master pushes", async () => {
     const ci = await workflow("ci.yml");
-    expect(ci.on.workflow_dispatch.inputs.ref.required).toBe(true);
-    expect(ci.on.workflow_dispatch.inputs.expected_sha.required).toBe(true);
-    expect(ci.jobs["validate-dispatch"].steps[1].if).toBe(
-      "github.event_name == 'workflow_dispatch'",
-    );
+    expect(ci.on.pull_request).toBeDefined();
+    expect(ci.on.push.branches).toEqual(["master"]);
+    expect(ci.on.workflow_dispatch).toBeUndefined();
+    expect(ci.jobs["validate-dispatch"]).toBeUndefined();
   });
 
   it("uses an absolute TwitchDownloader executable path", async () => {
@@ -236,12 +206,7 @@ describe("workflow contracts", () => {
   });
 
   it("pins every third-party action to a full commit SHA", async () => {
-    for (const name of [
-      "ci.yml",
-      "codeql.yml",
-      "publish-data-check-tag.yml",
-      "update-livestreams.yml",
-    ]) {
+    for (const name of ["ci.yml", "codeql.yml", "update-livestreams.yml"]) {
       const source = await readFile(`.github/workflows/${name}`, "utf8");
       for (const match of source.matchAll(/^\s*uses:\s*([^\s#]+)/gm)) {
         const reference = match[1];

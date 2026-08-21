@@ -45,7 +45,6 @@ done < <(git diff --name-only --diff-filter=ACDMRTUXB "$base_sha" "$candidate_sh
 trusted_paths=(
 	.github/scripts/validate-bot-candidate.sh
 	.github/workflows/ci.yml
-	.github/workflows/publish-data-check-tag.yml
 	.github/workflows/update-livestreams.yml
 	.markdownlint-cli2.yaml
 	lighthouserc.cjs

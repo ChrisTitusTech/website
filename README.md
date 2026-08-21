@@ -64,12 +64,10 @@ generated front matter and body, then preview drafts with `npm run dev:content`.
 - `src/content/` contains articles and standalone page Markdown.
 - `public/` is copied directly into the published site.
 - `data/livestreams.json` and `public/chats/` are maintained by Python
-  automation and a managed pull-request workflow.
+  automation that validates the generated site before publishing directly to
+  `master`.
 - `scripts/` contains content preparation, validation, the post scaffolder, and
   data automation.
 - `tests/` contains unit, route-contract, and browser coverage.
-- `SPEC.md` and `ROADMAP.md` record the migration contract and cutover gates.
-
-Cloudflare production cutover, repository-rule activation, and the first live
-managed-data PR are separate guarded operations documented in Phase 5 of
-`ROADMAP.md`.
+- `SPEC.md` records the product and compatibility contract retained from the
+  Astro migration.

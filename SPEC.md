@@ -121,21 +121,22 @@ site.
 
 ### Livestreams
 
-- Phase 4 consolidates the current livestream and chat workflows into one
-  scheduled workflow by retaining `.github/workflows/update-livestreams.yml`,
-  chaining both jobs on the same managed bot branch, and deleting
-  `.github/workflows/update-chat.yml`. A concurrency group with
-  `cancel-in-progress: false` and `queue: max` serializes every run. Each job
-  checks out its predecessor's emitted SHA, and PR/CI dispatch occurs only after
-  verifying the bot branch still equals the final SHA; neither action begins
-  before both data jobs succeed. After an interruption, the next queued or manual
-  run idempotently reconciles branch, PR, and check state, rerunning incomplete
-  jobs from the last confirmed SHA or completing missing PR/CI actions for an
-  already confirmed final SHA. A separate scheduled/workflow-run watchdog uses
+- `.github/workflows/update-livestreams.yml` is the scheduled workflow for both
+  livestream metadata and chat replays. Its chained jobs use the same managed
+  data branch, and a concurrency group with
+  `cancel-in-progress: false` serializes every accepted run. Each run resets the
+  managed branch to its exact `master` base and performs a full current-state
+  source reconciliation. Each job checks out its predecessor's emitted SHA and
+  verifies the branch has not moved. After both data jobs, the workflow builds
+  the generated site and validates its routes. The final publisher proves both
+  the captured `master` base and managed-branch final SHA are unchanged, proves
+  the candidate changes only allowlisted generated data, and fast-forwards that
+  exact SHA directly to `master` without a pull request. Drift fails closed and
+  the next accepted run refetches current data. A separate scheduled/workflow-run watchdog uses
   `actions: read` and `issues: write` to detect queue-limit cancellation or
   rejection through the Actions API and open/update a durable tracking issue.
-  The next accepted or manual run performs a full current-state reconciliation;
-  the watchdog closes the alert only after verified success.
+  The watchdog closes the alert only after every required job succeeds and the
+  managed data branch equals `master`.
 - `data/livestreams.json` retains `updated` and `items`. Items require
   `videoId`, `title`, `description`, `thumbnail`, `date`, and `publishedAt`;
   `twitchVodId` and `hasChatReplay` remain optional. The Python automation
@@ -240,35 +241,19 @@ site.
   lazily or after user intent where practical.
 - Never commit or log YouTube API keys, Twitch credentials, access tokens,
   private keys, or environment files.
-- CI runs on pull requests, pushes, and explicit dispatches for an identified
-  ref. Dispatch accepts a bot branch `ref` plus `expected_sha`. Before dispatch,
-  automation compares `expected_sha` itself to `master`, proves that exact
-  commit changes only allowlisted generated data paths, and proves its workflow
-  and configuration files are byte-identical to `master`. Immediately before
-  tagging, it verifies the remote bot branch still equals `expected_sha`, creates
-  a unique tag pointing directly to that commit, and verifies the tag peels to
-  the same SHA. It dispatches the workflow at that immutable tag so its check
-  attaches to the validated commit. Before tests, CI requires the reserved tag
-  namespace and `github.sha == expected_sha`, resolves the bot branch to that
-  same SHA, and independently repeats the exact-commit path allowlist and
-  workflow/configuration comparisons. One tag ruleset restricts creation in the
-  reserved namespace and grants its only bypass to a dedicated GitHub App; an
-  overlapping ruleset forbids updates and deletion with no bypass, including for
-  administrators and that App. Repository rules require type checks, unit tests,
-  production build, route validation, and browser tests to pass before merge,
-  including for administrators. Bot automation dispatches CI for its final
-  branch head SHA with `GITHUB_TOKEN`; it does not depend on token-suppressed push
-  or pull request events. The App credential lives in a protected environment
-  available only to a tag-publisher job whose workflow definition runs from
-  `master`. Before minting its short-lived `contents: write` installation token,
-  that job runs no action or script from the candidate commit. Trusted publisher
-  code creates only the validated reserved-tag-to-`expected_sha` mapping and
-  revokes the token after use. The App has no bypass on repository-wide branch
-  creation, update, or deletion rules. The dispatcher receives only
-  `actions: write`, and CI jobs remain read-only.
-- Repository rules require the PR branch to be current with `master` so checks
-  cannot be reused against a newer base. Merge queue is excluded from the
-  cutover contract.
+- CI runs on pull requests and pushes. Repository rules require type checks,
+  unit tests, production build, route validation, and browser tests to pass for
+  ordinary code changes, including for administrators. The livestream workflow
+  does not rely on token-suppressed push or pull-request events: after both data
+  jobs it installs the pinned Node dependencies, builds the production site,
+  and validates generated routes on the exact candidate SHA. Publication then
+  rechecks the captured `master` base, managed-branch head, and generated-data
+  path allowlist before a non-force fast-forward push of that SHA to `master`.
+  The workflow token has no broader publication path and no GitHub App or
+  reserved tag is required.
+- Repository rules require pull-request branches to be current with `master` so
+  checks cannot be reused against a newer base. Merge queue is excluded from
+  the cutover contract.
 - CodeQL, dependency review, Dependabot, and npm audit cover the new JavaScript
   supply chain. High and critical findings must be resolved or explicitly
   waived before merge.
@@ -357,23 +342,10 @@ site.
   runs using the median thresholds defined above.
 - Manual desktop/mobile and light/dark review is recorded with screenshots;
   keyboard navigation and third-party fallbacks are exercised.
-- A Cloudflare preview uses `npm run build` and `dist/` successfully before
-  production settings change.
-- After preview validation, the production Pages settings switch to Node 24,
-  `npm run build`, and `dist` immediately before the migration merge in a
-  guarded cutover window. Because pre-merge `master` still contains both legacy
-  workflow identities, `update-livestreams.yml` and `update-chat.yml` are both
-  disabled and drained first, with no active Pages deployment and no intervening
-  default-branch push or deployment. After merge, `update-chat.yml` is confirmed
-  absent and the retained `update-livestreams.yml` remains disabled.
-- The post-merge cutover transaction re-enables and manually dispatches the
-  retained data workflow only after verifying that it remains disabled,
-  dispatches CI for the resulting bot-branch head SHA, confirms its pull request
-  has every required check, then disables and drains the workflow again. It
-  refreshes the final head and reruns CI if needed, enables the captured
-  no-bypass rules only with all checks green on recorded head/base SHAs. If
-  either SHA moves, it updates the branch and reruns CI. It then merges through
-  the strict-up-to-date rule with an exact-head guard and re-enables the
-  workflow. Later bot PRs use the same freeze and head/base gate.
+- Cloudflare production uses Node 24, `npm run build`, and `dist`; preview
+  deployments use the same build contract.
+- The retained data workflow remains enabled. Its data, chat, generated-site
+  validation, and exact fast-forward publication jobs must all succeed, and the
+  managed data branch must equal `master` after publication.
 - CI, security checks, local review, independent review, and all actionable
   review threads are clean before merge.

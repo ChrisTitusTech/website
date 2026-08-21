@@ -4,16 +4,6 @@ on:
   pull_request:
   push:
     branches: [master]
-  workflow_dispatch:
-    inputs:
-      ref:
-        description: Managed data branch associated with an immutable check tag
-        required: true
-        type: string
-      expected_sha:
-        description: Exact managed-branch head SHA to validate
-        required: true
-        type: string
 
 permissions:
   contents: read
@@ -22,50 +12,8 @@ env:
   NODE_VERSION: "24"
 
 jobs:
-  validate-dispatch:
-    name: Validate dispatch
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the tested commit
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          fetch-depth: 0
-
-      - name: Validate immutable bot dispatch
-        if: github.event_name == 'workflow_dispatch'
-        env:
-          BOT_REF: ${{ inputs.ref }}
-          EXPECTED_SHA: ${{ inputs.expected_sha }}
-        run: |
-          set -euo pipefail
-          if [[ -z "$BOT_REF" || -z "$EXPECTED_SHA" ]]; then
-            printf 'ref and expected_sha must be provided together\n' >&2
-            exit 1
-          fi
-          if [[ "$BOT_REF" != "automation/livestream-data" ]]; then
-            printf 'unexpected managed branch: %s\n' "$BOT_REF" >&2
-            exit 1
-          fi
-          if [[ ! "$GITHUB_REF" =~ ^refs/tags/data-check/ ]]; then
-            printf 'bot CI must run from the reserved immutable tag namespace\n' >&2
-            exit 1
-          fi
-          if [[ "$GITHUB_SHA" != "$EXPECTED_SHA" ]]; then
-            printf 'dispatch SHA mismatch: %s != %s\n' "$GITHUB_SHA" "$EXPECTED_SHA" >&2
-            exit 1
-          fi
-          git fetch --no-tags origin master "+refs/heads/${BOT_REF}:refs/remotes/origin/${BOT_REF}"
-          remote_sha=$(git rev-parse "refs/remotes/origin/${BOT_REF}")
-          if [[ "$remote_sha" != "$EXPECTED_SHA" ]]; then
-            printf 'managed branch moved: %s != %s\n' "$remote_sha" "$EXPECTED_SHA" >&2
-            exit 1
-          fi
-          base_sha=$(git rev-parse origin/master)
-          .github/scripts/validate-bot-candidate.sh "$base_sha" "$EXPECTED_SHA"
-
   formatting:
     name: Formatting
-    needs: validate-dispatch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -78,7 +26,6 @@ jobs:
 
   markdown-lint:
     name: Markdown lint
-    needs: validate-dispatch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -91,7 +38,6 @@ jobs:
 
   astro-check:
     name: Astro check
-    needs: validate-dispatch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -104,7 +50,6 @@ jobs:
 
   unit-tests:
     name: Unit tests
-    needs: validate-dispatch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -117,7 +62,6 @@ jobs:
 
   build-route-validation:
     name: Build and route validation
-    needs: validate-dispatch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -132,7 +76,6 @@ jobs:
 
   browser-tests:
     name: Browser tests
-    needs: validate-dispatch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -147,7 +90,6 @@ jobs:
 
   lighthouse:
     name: Lighthouse
-    needs: validate-dispatch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -162,7 +104,6 @@ jobs:
 
   npm-audit:
     name: npm audit
-    needs: validate-dispatch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -175,7 +116,6 @@ jobs:
 
   dependency-review:
     name: Dependency review
-    needs: validate-dispatch
     permissions:
       contents: read
     runs-on: ubuntu-latest
@@ -191,7 +131,6 @@ jobs:
 
   codeql:
     name: CodeQL
-    needs: validate-dispatch
     permissions:
       contents: read
       security-events: write
