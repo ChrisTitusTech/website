@@ -112,7 +112,7 @@ describe("workflow contracts", () => {
     expect(manifest.scripts.dev).toBe("node scripts/dev.mjs");
     expect(manifest.scripts["dev:content"]).toContain("--preview");
     expect(source).toContain("await prepareContent()");
-    expect(source).toContain('path.join(root, "content")');
+    expect(source).toContain('path.join(root, "src/content")');
     expect(source).toContain("watch(");
     expect(source).toContain('"--ignore-lock"');
     expect(source).toContain('ASTRO_DEV_BACKGROUND: "0"');
