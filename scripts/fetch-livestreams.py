@@ -13,13 +13,14 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
+from http_client import create_retry_session
 
 API_KEY = os.environ.get("YOUTUBE_API_KEY", "")
 PLAYLIST_ID = os.environ.get("PLAYLIST_ID", "PLc7fktTRMBow1ksFW020hx2XEKabaD5Vd")
 OUTPUT_FILE = Path(__file__).parent.parent / "data" / "livestreams.json"
 CHATS_DIR   = Path(__file__).parent.parent / "public" / "chats"
 BASE_URL = "https://www.googleapis.com/youtube/v3/playlistItems"
+HTTP = create_retry_session()
 
 
 def fetch_playlist_items() -> list:
@@ -31,15 +32,21 @@ def fetch_playlist_items() -> list:
             "part": "snippet",
             "playlistId": PLAYLIST_ID,
             "maxResults": 50,
-            "key": API_KEY,
         }
         if next_page_token:
             params["pageToken"] = next_page_token
 
-        resp = requests.get(BASE_URL, params=params, timeout=30)
+        resp = HTTP.get(
+            BASE_URL,
+            params=params,
+            headers={"X-Goog-Api-Key": API_KEY},
+            timeout=30,
+        )
         if resp.status_code == 403:
-            print(f"Error 403: Check that your YOUTUBE_API_KEY is valid and the "
-                  f"YouTube Data API v3 is enabled.", file=sys.stderr)
+            print(
+                "Error 403: Check the YouTube API credential, API access, and quota.",
+                file=sys.stderr,
+            )
             sys.exit(1)
         resp.raise_for_status()
         data = resp.json()

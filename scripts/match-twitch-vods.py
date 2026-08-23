@@ -17,12 +17,13 @@ import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-import requests
+from http_client import create_retry_session
 
 CLIENT_ID     = os.environ.get("TWITCH_CLIENT_ID", "")
 CLIENT_SECRET = os.environ.get("TWITCH_CLIENT_SECRET", "")
 CHANNEL_LOGIN = os.environ.get("TWITCH_CHANNEL", "christitustech")
 LIVESTREAMS   = Path(__file__).parent.parent / "data" / "livestreams.json"
+HTTP = create_retry_session()
 
 # How close (in seconds) the Twitch VOD start must be to the YouTube publishedAt
 MATCH_WINDOW_SEC = 10800   # ±3 hours — accounts for stream-start vs YouTube publish delay
@@ -31,7 +32,7 @@ MATCH_WINDOW_SEC = 10800   # ±3 hours — accounts for stream-start vs YouTube 
 # ── Twitch auth ───────────────────────────────────────────────────────────────
 
 def get_app_token() -> str:
-    resp = requests.post(
+    resp = HTTP.post(
         "https://id.twitch.tv/oauth2/token",
         data={
             "client_id":     CLIENT_ID,
@@ -54,7 +55,7 @@ def twitch_headers(token: str) -> dict:
 # ── Twitch API helpers ────────────────────────────────────────────────────────
 
 def get_user_id(headers: dict, login: str) -> str:
-    resp = requests.get(
+    resp = HTTP.get(
         "https://api.twitch.tv/helix/users",
         params={"login": login},
         headers=headers,
@@ -92,7 +93,7 @@ def fetch_vods(headers: dict, user_id: str, max_vods: int = 200) -> list[dict]:
         params: dict = {"user_id": user_id, "type": "archive", "first": 100}
         if cursor:
             params["after"] = cursor
-        resp = requests.get(
+        resp = HTTP.get(
             "https://api.twitch.tv/helix/videos",
             params=params,
             headers=headers,

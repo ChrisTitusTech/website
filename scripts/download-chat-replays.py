@@ -12,10 +12,13 @@ from pathlib import Path
 
 import requests
 
+from http_client import create_retry_session
+
 
 DATA_PATH = Path("data/livestreams.json")
 CHAT_DIR = Path("public/chats")
 DOWNLOADER = Path(__file__).resolve().parent.parent / "TwitchDownloaderCLI"
+HTTP = create_retry_session()
 
 
 def parse_iso(value: str) -> datetime:
@@ -27,7 +30,7 @@ def current_live_vod(data: dict, client_id: str, client_secret: str) -> str | No
         return None
     channel = os.environ.get("TWITCH_CHANNEL", "christitustech")
     try:
-        token_response = requests.post(
+        token_response = HTTP.post(
             "https://id.twitch.tv/oauth2/token",
             data={
                 "client_id": client_id,
@@ -41,7 +44,7 @@ def current_live_vod(data: dict, client_id: str, client_secret: str) -> str | No
             "Authorization": f"Bearer {token_response.json()['access_token']}",
             "Client-Id": client_id,
         }
-        stream_response = requests.get(
+        stream_response = HTTP.get(
             "https://api.twitch.tv/helix/streams",
             params={"user_login": channel},
             headers=headers,
@@ -58,7 +61,7 @@ def current_live_vod(data: dict, client_id: str, client_secret: str) -> str | No
             video_id = item.get("videoId")
             if not vod_id or not video_id or (CHAT_DIR / f"{video_id}.json").exists():
                 continue
-            video_response = requests.get(
+            video_response = HTTP.get(
                 "https://api.twitch.tv/helix/videos",
                 params={"id": vod_id},
                 headers=headers,
