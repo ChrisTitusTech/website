@@ -15,6 +15,7 @@
     "build": "CONTENT_PREVIEW=0 npm run prepare:content && CONTENT_PREVIEW=0 astro build",
     "preview": "astro preview",
     "test": "CONTENT_PREVIEW=0 npm run prepare:content && vitest run",
+    "test:automation": "python -m unittest discover -s tests/python -p \"test_*.py\" -v",
     "test:watch": "vitest",
     "validate:routes": "node scripts/validate-routes.mjs",
     "validate:repeat": "node scripts/validate-repeatability.mjs",
@@ -28,7 +29,7 @@
     "format:check": "prettier --check . --ignore-path .prettierignore",
     "lint:markdown": "markdownlint-cli2 README.md SPEC.md 'docs/**/*.md' 'templates/**/*.md'",
     "audit": "node scripts/audit.mjs",
-    "validate:core": "npm run format:check && npm run lint:markdown && npm run audit && npm run check && npm run test && npm run build && npm run validate:repeat && npm run validate:routes",
+    "validate:core": "npm run format:check && npm run lint:markdown && npm run audit && npm run check && npm run test && npm run test:automation && npm run build && npm run validate:repeat && npm run validate:routes",
     "validate": "npm run setup:browsers && npm run validate:core && npm run test:browser && npm run test:browser:webkit && npm run test:lighthouse",
     "new:post": "node scripts/new-post.mjs"
   },

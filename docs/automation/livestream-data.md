@@ -28,6 +28,14 @@ the hash-locked `scripts/requirements-automation.txt`. Existing secret names and
 data contracts are unchanged: `YOUTUBE_API_KEY`, `TWITCH_CLIENT_ID`, and
 `TWITCH_CLIENT_SECRET`.
 
+YouTube and Twitch API calls share a bounded retry policy for connection and
+read failures plus HTTP 408, 429, and transient 5xx responses. The policy uses
+exponential backoff, honors `Retry-After` up to 60 seconds, and does not retry
+permanent 4xx responses. The YouTube API key is sent in the `X-Goog-Api-Key`
+header so failures cannot expose it in a request URL. Run the regression suite
+with `npm run test:automation` after installing the hash-locked Python
+requirements.
+
 All retained-workflow jobs use the protected `livestream-data-automation`
 environment, and the entry job requires the workflow to run from `master`. The
 three data credentials are scoped to that environment, whose deployment policy

@@ -193,21 +193,20 @@ describe("workflow contracts", () => {
     expect(ci.on.push.branches).toEqual(["master"]);
     expect(ci.on.workflow_dispatch).toBeUndefined();
     expect(ci.jobs["validate-dispatch"]).toBeUndefined();
+    const automationSteps = ci.jobs["automation-tests"].steps;
+    expect(automationSteps.map((step) => step.run)).toContain(
+      'python -m unittest discover -s tests/python -p "test_*.py" -v',
+    );
+    expect(JSON.stringify(automationSteps)).toContain(
+      "requirements-automation.txt",
+    );
+    expect(JSON.stringify(automationSteps)).toContain("--require-hashes");
   });
 
   it("uses an absolute TwitchDownloader executable path", async () => {
-    const result = spawnSync(
-      "python",
-      [
-        "-c",
-        "import runpy; print(runpy.run_path('scripts/download-chat-replays.py')['DOWNLOADER'])",
-      ],
-      { encoding: "utf8" },
-    );
-    expect(result.status, result.stderr).toBe(0);
-    expect(path.isAbsolute(result.stdout.trim())).toBe(true);
-    expect(result.stdout.trim()).toBe(
-      path.join(process.cwd(), "TwitchDownloaderCLI"),
+    const source = await readFile("scripts/download-chat-replays.py", "utf8");
+    expect(source).toMatch(
+      /DOWNLOADER\s*=\s*Path\(__file__\)\.resolve\(\)\.parent\.parent\s*\/\s*"TwitchDownloaderCLI"/,
     );
   });
 

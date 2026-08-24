@@ -7,11 +7,13 @@ Astro site and deployed with Cloudflare Pages.
 
 - Node.js 24
 - npm
+- Python 3.12
 
 Install the exact dependency tree and run the complete local gate:
 
 ```bash
 npm ci
+python -m pip install --disable-pip-version-check --require-hashes --requirement scripts/requirements-automation.txt
 npm run validate
 ```
 
