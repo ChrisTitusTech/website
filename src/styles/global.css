@@ -151,6 +151,14 @@ input {
   display: none;
   margin-left: auto;
 }
+.menu-icon::before {
+  content: "\2630";
+  font-size: 1.1em;
+  line-height: 1;
+}
+.menu-button[aria-expanded="true"] .menu-icon::before {
+  content: "\2715";
+}
 .icon-button,
 .primary-button {
   border: 1px solid var(--border);
