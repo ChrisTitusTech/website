@@ -406,6 +406,14 @@ pre {
   border-radius: var(--radius);
   padding: 0.2rem 0.45rem;
   cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+.code-copy:hover,
+.code-copy:focus-visible {
+  border-color: var(--accent);
+  background: #1c3140;
 }
 .table-scroll {
   overflow-x: auto;
