@@ -48,17 +48,6 @@ menuButton?.addEventListener("click", () => {
   menu?.toggleAttribute("data-open", open);
 });
 
-const responsiveToc = document.querySelector<HTMLDetailsElement>(
-  "[data-responsive-toc]",
-);
-const tocMedia = matchMedia("(max-width: 940px)");
-const syncResponsiveToc = (mobile: boolean) =>
-  responsiveToc?.toggleAttribute("open", !mobile);
-syncResponsiveToc(tocMedia.matches);
-tocMedia.addEventListener("change", (event) =>
-  syncResponsiveToc(event.matches),
-);
-
 const progress = document.querySelector<HTMLElement>("[data-reading-progress]");
 if (progress) {
   const update = () => {
