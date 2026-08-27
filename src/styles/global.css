@@ -87,7 +87,7 @@ input {
   margin-inline: auto;
 }
 .reading {
-  width: min(calc(100% - 1.5rem), var(--reading));
+  width: min(calc(100% - 1.5rem), var(--max));
   margin-inline: auto;
 }
 .sr-only {
@@ -222,7 +222,7 @@ h2 {
 .post-grid,
 .stream-grid,
 .action-grid {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .card {
   border: 1px solid var(--border);
@@ -454,6 +454,9 @@ td {
 }
 .comments {
   margin-top: 2rem;
+}
+.comments .utterances {
+  max-width: none !important;
 }
 .pagination {
   display: flex;
