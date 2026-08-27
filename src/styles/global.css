@@ -23,6 +23,7 @@
   --accent-strong: #8addf8;
   --accent-ink: #04141c;
   --border: #2d4658;
+  --code-copy-hover-bg: #1c3140;
   --shadow: 0 10px 30px rgb(0 0 0 / 24%);
   --radius: 2px;
   --max: 1180px;
@@ -413,7 +414,7 @@ pre {
 .code-copy:hover,
 .code-copy:focus-visible {
   border-color: var(--accent);
-  background: #1c3140;
+  background: var(--code-copy-hover-bg);
 }
 .table-scroll {
   overflow-x: auto;
