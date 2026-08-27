@@ -353,6 +353,11 @@ h2 {
 .article-body :is(pre, table, iframe) {
   max-width: 100%;
 }
+.article-body img {
+  margin-block: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
 .article-body h2 {
   margin-top: 2rem;
 }
