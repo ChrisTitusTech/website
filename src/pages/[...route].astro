@@ -55,8 +55,10 @@ const feed = descriptor.kind === "listing" ? `${descriptor.listing.base}index.xm
         <header class="article-header"><p class="eyebrow">Article</p><h1>{descriptor.post.data.title}</h1><p class="meta"><time datetime={descriptor.post.data.date}>{displayDate(descriptor.post)}</time> · {readingMinutes(descriptor.post)} min read</p><div class="chips">{descriptor.post.data.categories.map((category) => <a class="chip" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>)}</div></header>
         {articleImage && <img class="article-image" src={articleImage} srcset={`${transformedArticleImage(640)} 640w, ${transformedArticleImage(1200)} 1200w`} sizes="(max-width: 800px) 100vw, 760px" data-cf-image alt={`${descriptor.post.data.title} featured image`} width="1200" height="675" />}
         <div class="article-body"><Content /></div>
+        <div class="article-meta-footer">
         {descriptor.post.data.tags.length > 0 && <div class="taxonomy-row"><span class="taxonomy-label">Tags:</span><div class="chips">{descriptor.post.data.tags.map((tag) => <a class="chip chip-tag" href={`/tags/${taxonomySlug(tag)}/`}>{tag}</a>)}</div></div>}
         <div class="share-icons" aria-label="Share this article"><span class="share-icons-label">Share via:</span><a href={`https://bsky.app/intent/compose?text=${shareText}%20${shareUrl}`} aria-label="Share on Bluesky" title="Share on Bluesky" set:html={blueskyIcon} /><a href={`https://www.reddit.com/submit?url=${shareUrl}&title=${shareText}`} aria-label="Share on Reddit" title="Share on Reddit" set:html={redditIcon} /><a href={`https://news.ycombinator.com/submitlink?u=${shareUrl}&t=${shareText}`} aria-label="Share on Hacker News" title="Share on Hacker News" set:html={hackernewsIcon} /><button type="button" data-copy-page aria-label="Copy link" title="Copy link" set:html={linkIcon} /></div>
+        </div>
         <aside class="ad-slot" data-ad-slot aria-label="Advertisement">
           <span>Advertisement</span>
           <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6679678361432308" data-ad-slot="2001915683" data-ad-format="auto" data-full-width-responsive="true"></ins>

@@ -268,12 +268,16 @@ h2 {
   color: var(--muted);
   font-size: 0.82rem;
 }
+.article-meta-footer {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
 .taxonomy-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin: 1.25rem 0;
 }
 .taxonomy-label {
   color: var(--muted);
@@ -371,9 +375,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  margin: 1rem 0 1.25rem;
-  padding-block: 0.6rem;
-  border-block: 1px solid var(--border);
+  margin-top: 0.75rem;
 }
 .share-icons-label {
   color: var(--muted);
