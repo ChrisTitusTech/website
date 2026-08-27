@@ -263,6 +263,22 @@ h2 {
   text-decoration: none;
   font-size: 0.88rem;
 }
+.chip-tag {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.taxonomy-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+}
+.taxonomy-label {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
 .section-heading {
   display: flex;
   align-items: end;

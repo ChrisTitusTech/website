@@ -52,11 +52,11 @@ const feed = descriptor.kind === "listing" ? `${descriptor.listing.base}index.xm
         {articleImage && <img class="article-image" src={articleImage} srcset={`${transformedArticleImage(640)} 640w, ${transformedArticleImage(1200)} 1200w`} sizes="(max-width: 800px) 100vw, 760px" data-cf-image alt={`${descriptor.post.data.title} featured image`} width="1200" height="675" />}
         <div class="share-row" aria-label="Share this article"><span>Share</span><a href={`https://bsky.app/intent/compose?text=${shareText}%20${shareUrl}`}>Bluesky</a><a href={`https://www.reddit.com/submit?url=${shareUrl}&title=${shareText}`}>Reddit</a><a href={`https://news.ycombinator.com/submitlink?u=${shareUrl}&t=${shareText}`}>Hacker News</a><button type="button" data-copy-page>Copy link</button></div>
         <div class="article-body"><Content /></div>
+        {descriptor.post.data.tags.length > 0 && <div class="taxonomy-row"><span class="taxonomy-label">Tags:</span><div class="chips">{descriptor.post.data.tags.map((tag) => <a class="chip chip-tag" href={`/tags/${taxonomySlug(tag)}/`}>{tag}</a>)}</div></div>}
         <aside class="ad-slot" data-ad-slot aria-label="Advertisement">
           <span>Advertisement</span>
           <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6679678361432308" data-ad-slot="2001915683" data-ad-format="auto" data-full-width-responsive="true"></ins>
         </aside>
-        {descriptor.post.data.tags.length > 0 && <footer><h2>Tags</h2><div class="chips">{descriptor.post.data.tags.map((tag) => <a class="chip" href={`/tags/${taxonomySlug(tag)}/`}>{tag}</a>)}</div></footer>}
         {related.length > 0 && <section aria-labelledby="related-heading"><h2 id="related-heading">Related articles</h2><PostList posts={related} heading="h3" /></section>}
         <section class="comments" aria-labelledby="comments-heading"><h2 id="comments-heading">Comments</h2><div data-comments><p class="muted">Comments load when this section comes into view.</p></div></section>
       </div>
