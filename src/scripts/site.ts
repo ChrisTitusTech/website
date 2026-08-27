@@ -1,3 +1,5 @@
+import checkIcon from "../icons/check.svg?raw";
+
 const root = document.documentElement;
 
 function syncThemeControl() {
@@ -99,17 +101,25 @@ document
     heading.prepend(link);
   });
 
-document
-  .querySelector<HTMLButtonElement>("[data-copy-page]")
-  ?.addEventListener("click", async (event) => {
-    const button = event.currentTarget as HTMLButtonElement;
+const copyButton =
+  document.querySelector<HTMLButtonElement>("[data-copy-page]");
+if (copyButton) {
+  const defaultLabel = copyButton.getAttribute("aria-label") ?? "Copy link";
+  const defaultIcon = copyButton.innerHTML;
+  copyButton.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(location.href);
-      button.textContent = "Link copied";
+      copyButton.innerHTML = checkIcon;
+      copyButton.setAttribute("aria-label", "Link copied");
     } catch {
-      button.textContent = "Copy failed";
+      copyButton.setAttribute("aria-label", "Copy failed");
     }
+    setTimeout(() => {
+      copyButton.innerHTML = defaultIcon;
+      copyButton.setAttribute("aria-label", defaultLabel);
+    }, 1600);
   });
+}
 
 const tocLinks = [
   ...document.querySelectorAll<HTMLAnchorElement>("[data-toc] a"),

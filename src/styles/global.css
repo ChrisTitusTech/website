@@ -367,26 +367,38 @@ h2 {
 .heading-link:focus {
   opacity: 1;
 }
-.share-row {
+.share-icons {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.75rem;
+  gap: 0.35rem;
   margin: 1rem 0 1.25rem;
   padding-block: 0.6rem;
   border-block: 1px solid var(--border);
-  font-size: 0.92rem;
 }
-.share-row > span {
+.share-icons-label {
   color: var(--muted);
   font-weight: 700;
+  font-size: 0.85rem;
+  margin-right: 0.15rem;
 }
-.share-row button {
+.share-icons a,
+.share-icons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
   border: 0;
+  border-radius: var(--radius);
   padding: 0;
   background: transparent;
-  color: var(--accent);
+  color: var(--muted);
   cursor: pointer;
+}
+.share-icons a:hover,
+.share-icons button:hover {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
 }
 .reading-progress {
   position: fixed;
@@ -823,10 +835,6 @@ td {
   }
   .section-heading {
     align-items: start;
-    flex-direction: column;
-  }
-  .share-row {
-    align-items: flex-start;
     flex-direction: column;
   }
   .pagination {
