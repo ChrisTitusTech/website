@@ -87,7 +87,7 @@ input {
   margin-inline: auto;
 }
 .reading {
-  width: min(calc(100% - 1.5rem), var(--reading));
+  width: min(calc(100% - 1.5rem), var(--max));
   margin-inline: auto;
 }
 .sr-only {
@@ -297,8 +297,7 @@ h2 {
 }
 .article-shell {
   display: grid;
-  grid-template-columns: minmax(170px, 220px) minmax(0, var(--reading));
-  justify-content: center;
+  grid-template-columns: minmax(170px, 220px) minmax(0, 1fr);
   gap: clamp(1.5rem, 3vw, 3rem);
 }
 .article-shell > .reading {
