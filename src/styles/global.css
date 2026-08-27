@@ -363,8 +363,24 @@ h2 {
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
+.article-body h2,
+.comments h2 {
+  display: inline-block;
+  max-width: 100%;
+  padding-bottom: 0.6rem;
+}
 .article-body h2 {
   margin-top: 2rem;
+}
+.article-body h2::after,
+.comments h2::after {
+  content: "";
+  display: block;
+  margin-top: 0.6rem;
+  width: 75%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), transparent);
 }
 .article-body h3 {
   margin-top: 1.5rem;
