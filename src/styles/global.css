@@ -507,6 +507,9 @@ td {
 .comments {
   margin-top: 2rem;
 }
+.comments .utterances {
+  max-width: none !important;
+}
 .pagination {
   display: flex;
   align-items: center;
