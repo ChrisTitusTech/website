@@ -87,9 +87,7 @@ test("listing cards use the compact mobile layout", async ({ page }) => {
   ).toBeGreaterThan(112);
 });
 
-test("article exposes navigation and interactions", async ({
-  page,
-}) => {
+test("article exposes navigation and interactions", async ({ page }) => {
   await page.goto("/my-ai-workflow/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("AI");
   const toc = page.locator(".article-toc-details");
