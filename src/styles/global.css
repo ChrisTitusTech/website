@@ -349,7 +349,9 @@ h2 {
   text-decoration: none;
   font-size: 0.92rem;
   line-height: 1.35;
-  transition: color 0.15s ease, background-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
 }
 .article-toc li a:hover {
   color: var(--accent);
