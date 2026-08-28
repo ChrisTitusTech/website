@@ -174,6 +174,30 @@ input {
   background: var(--accent-strong);
   color: var(--accent-ink);
 }
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+.back-to-top:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.back-to-top[hidden] {
+  display: none;
+}
 main {
   min-height: 72vh;
   padding-block: clamp(1.25rem, 3vw, 2.5rem);

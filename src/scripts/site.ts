@@ -204,6 +204,19 @@ if (comments && "IntersectionObserver" in window) {
   observer.observe(comments);
 }
 
+const backToTop =
+  document.querySelector<HTMLButtonElement>("[data-back-to-top]");
+if (backToTop) {
+  const syncVisibility = () => {
+    backToTop.hidden = scrollY < 600;
+  };
+  addEventListener("scroll", syncVisibility, { passive: true });
+  syncVisibility();
+  backToTop.addEventListener("click", () => {
+    scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
 function loadAds() {
   if (
     !document.querySelector("[data-ad-slot]") ||
