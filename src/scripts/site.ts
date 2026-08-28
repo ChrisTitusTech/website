@@ -1,4 +1,5 @@
 import checkIcon from "../icons/check.svg?raw";
+import errorIcon from "../icons/error.svg?raw";
 
 const root = document.documentElement;
 
@@ -112,6 +113,7 @@ if (copyButton) {
       copyButton.innerHTML = checkIcon;
       copyButton.setAttribute("aria-label", "Link copied");
     } catch {
+      copyButton.innerHTML = errorIcon;
       copyButton.setAttribute("aria-label", "Copy failed");
     }
     setTimeout(() => {
