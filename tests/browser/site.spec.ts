@@ -89,13 +89,12 @@ test("listing cards use the compact mobile layout", async ({ page }) => {
 
 test("article exposes navigation and interactions", async ({
   page,
-  isMobile,
 }) => {
   await page.goto("/my-ai-workflow/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("AI");
-  const toc = page.locator("[data-responsive-toc]");
+  const toc = page.locator(".article-toc-details");
   await expect(toc).toBeVisible();
-  if (isMobile) await toc.locator("summary").click();
+  await toc.locator("summary").click();
   await expect(toc.locator("[data-toc]")).toBeVisible();
   await expect(page.getByRole("button", { name: "Copy link" })).toBeVisible();
   const image = page.locator(".article-image");
@@ -112,7 +111,7 @@ test("numeric article headings do not abort site enhancements", async ({
   const errors: Error[] = [];
   page.on("pageerror", (error) => errors.push(error));
   await page.goto("/windows-24h2/");
-  const toc = page.locator("[data-responsive-toc]");
+  const toc = page.locator(".article-toc-details");
   if (!(await toc.evaluate((element) => element.hasAttribute("open"))))
     await toc.locator("summary").click();
   await expect(
@@ -125,33 +124,29 @@ test("numeric article headings do not abort site enhancements", async ({
   expect(errors).toEqual([]);
 });
 
-test("responsive article navigation follows viewport changes", async ({
+test("table of contents stays collapsed by default at every viewport", async ({
   page,
-  isMobile,
 }) => {
-  test.skip(isMobile, "desktop projects exercise viewport transitions");
   await page.setViewportSize({ width: 1200, height: 800 });
   await page.goto("/my-ai-workflow/");
-  const toc = page.locator("[data-responsive-toc]");
-  await expect(toc).toHaveAttribute("open", "");
+  const toc = page.locator(".article-toc-details");
+  await expect(toc).not.toHaveAttribute("open", "");
   await page.setViewportSize({ width: 800, height: 800 });
   await expect(toc).not.toHaveAttribute("open", "");
-  await page.setViewportSize({ width: 1200, height: 800 });
+  await toc.locator("summary").click();
   await expect(toc).toHaveAttribute("open", "");
   await expect(toc.locator("[data-toc]")).toBeVisible();
 });
 
-test("article table of contents stays pinned while scrolling on desktop", async ({
+test("article table of contents is not sticky while scrolling", async ({
   page,
-  isMobile,
 }) => {
-  test.skip(isMobile, "the mobile table of contents is intentionally inline");
   await page.setViewportSize({ width: 1200, height: 800 });
   await page.goto("/my-ai-workflow/");
   const toc = page.locator(".article-toc");
-  await expect(toc).toHaveCSS("position", "sticky");
-  const stickyTop = await toc.evaluate((element) =>
-    Number.parseFloat(getComputedStyle(element).top),
+  await expect(toc).not.toHaveCSS("position", "sticky");
+  const initialTop = await toc.evaluate(
+    (element) => element.getBoundingClientRect().top,
   );
   await page.evaluate(() => window.scrollTo(0, 600));
   await expect
@@ -159,7 +154,7 @@ test("article table of contents stays pinned while scrolling on desktop", async 
     .toBeGreaterThan(0);
   await expect
     .poll(() => toc.evaluate((element) => element.getBoundingClientRect().top))
-    .toBeCloseTo(stickyTop, 0);
+    .toBeLessThan(initialTop);
 });
 
 test("live archive paginates and validates player ids", async ({ page }) => {
