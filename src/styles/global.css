@@ -328,11 +328,7 @@ h2 {
   width: 100%;
 }
 .article-toc {
-  position: sticky;
-  top: 7rem;
   align-self: start;
-  max-height: calc(100vh - 9rem);
-  overflow: auto;
 }
 .article-toc-details > summary {
   display: none;
