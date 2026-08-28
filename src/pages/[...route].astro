@@ -46,7 +46,7 @@ const next = pagination && pagination.page < pagination.pages ? `${pagination.ba
 const robots = descriptor.kind === "page" && descriptor.page.data.sitemap?.disable === true ? "noindex, follow" : undefined;
 const feed = descriptor.kind === "listing" ? `${descriptor.listing.base}index.xml` : descriptor.kind === "terms" ? `${descriptor.root}index.xml` : undefined;
 ---
-<BaseLayout title={title} description={description} canonical={descriptor.route} image={descriptor.kind === "post" ? descriptor.post.data.image : undefined} type={descriptor.kind === "post" ? "article" : "website"} publishedTime={descriptor.kind === "post" ? descriptor.post.data.date : undefined} preloadImage={listingImage} previous={previous} next={next} robots={robots} feed={feed}>
+<BaseLayout title={title} description={description} canonical={descriptor.route} image={descriptor.kind === "post" ? descriptor.post.data.image : undefined} type={descriptor.kind === "post" ? "article" : "website"} publishedTime={descriptor.kind === "post" ? descriptor.post.data.date : undefined} preloadImage={listingImage} previous={previous} next={next} robots={robots} feed={feed} backToTop={descriptor.kind === "post"}>
   {descriptor.kind === "post" && <>
     <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
     <article class="article-shell container">
