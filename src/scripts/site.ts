@@ -214,8 +214,9 @@ if (backToTop) {
   };
   addEventListener("scroll", syncVisibility, { passive: true });
   syncVisibility();
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   backToTop.addEventListener("click", () => {
-    scrollTo({ top: 0, behavior: "smooth" });
+    scrollTo({ top: 0, behavior: reducedMotion.matches ? "auto" : "smooth" });
   });
 }
 
