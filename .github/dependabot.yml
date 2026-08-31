@@ -9,6 +9,10 @@ updates:
     groups:
       npm-development:
         dependency-type: development
+    ignore:
+      # @astrojs/check 0.9.10 supports TypeScript 5 and 6 only.
+      - dependency-name: typescript
+        versions: ["7.x"]
 
   - package-ecosystem: github-actions
     directory: /
