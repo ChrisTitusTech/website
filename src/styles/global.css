@@ -211,12 +211,6 @@ main {
   min-height: 72vh;
   padding-block: clamp(1.25rem, 3vw, 2.5rem);
 }
-.hero {
-  padding-block: clamp(1.25rem, 4vw, 3rem);
-}
-.hero:first-child {
-  padding-top: clamp(1.75rem, 5vw, 4rem);
-}
 .eyebrow {
   margin: 0 0 0.35rem;
   color: var(--accent);
@@ -253,8 +247,7 @@ h2 {
   gap: 0.85rem;
 }
 .post-grid,
-.stream-grid,
-.action-grid {
+.stream-grid {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
 }
 .card {
@@ -335,12 +328,6 @@ h2 {
   color: var(--muted);
   font-weight: 700;
   font-size: 0.85rem;
-}
-.section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 0.75rem;
 }
 .article-header {
   margin-bottom: 1.25rem;
@@ -948,10 +935,6 @@ td {
   .listing-page .card h2,
   .listing-page .card h3 {
     overflow-wrap: anywhere;
-  }
-  .section-heading {
-    align-items: start;
-    flex-direction: column;
   }
   .pagination {
     align-items: flex-start;

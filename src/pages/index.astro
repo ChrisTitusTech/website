@@ -16,20 +16,20 @@ const topics = [...taxonomy(posts, "categories").entries()]
 const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId)).slice(0, 3);
 ---
 <BaseLayout preloadImage={featuredImage} feed="/index.xml">
-  <section class="hero container">
+  <section class="home-hero container">
     <p class="eyebrow">Independent tech guides</p>
     <h1>Make your technology work for you.</h1>
     <p class="lede">
       Practical Linux, Windows, networking, software development, and open-source guidance from Chris Titus Tech.
     </p>
   </section>
-  <section class="container">
+  <section class="container home-featured">
     <h2>Featured</h2>
     <div class="grid post-grid">
       {featured.map((post, index) => <PostCard post={post} heading="h3" priority={index === 0} />)}
     </div>
   </section>
-  <section class="container hero">
+  <section class="container home-topics">
     <h2>Explore topics</h2>
     <div class="chips">
       {topics.map((topic) => (
@@ -39,13 +39,13 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
       ))}
     </div>
   </section>
-  <section class="container">
+  <section class="container home-latest">
     <h2>Latest articles</h2>
     <PostList posts={posts.slice(0, 8)} heading="h3" />
     <p><a class="btn" href="/posts/">Browse all articles →</a></p>
   </section>
-  <section class="container hero">
-    <div class="section-heading">
+  <section class="container home-streams">
+    <div class="home-streams-heading">
       <div>
         <p class="eyebrow">From the studio</p>
         <h2>Recent live streams</h2>
@@ -66,10 +66,10 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
       ))}
     </div>
   </section>
-  <section class="container hero" aria-labelledby="creator-heading">
+  <section class="container home-creator-hub" aria-labelledby="creator-heading">
     <p class="eyebrow">Creator hub</p>
     <h2 id="creator-heading">Put the guides to work</h2>
-    <div class="grid action-grid">
+    <div class="grid home-creator-grid">
       <article class="card">
         <div class="card-body">
           <h3>Downloads</h3>
@@ -100,7 +100,7 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
       </article>
     </div>
   </section>
-  <section class="container hero">
+  <section class="container home-newsletter">
     <div class="card">
       <div class="card-body">
         <p class="eyebrow">Stay current</p>
@@ -113,3 +113,31 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .home-hero {
+    padding-top: clamp(1.75rem, 5vw, 4rem);
+    padding-bottom: clamp(1.25rem, 4vw, 3rem);
+  }
+  .home-topics,
+  .home-streams,
+  .home-creator-hub,
+  .home-newsletter {
+    padding-block: clamp(1.25rem, 4vw, 3rem);
+  }
+  .home-streams-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .home-creator-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  }
+  @media (max-width: 760px) {
+    .home-streams-heading {
+      align-items: start;
+      flex-direction: column;
+    }
+  }
+</style>
