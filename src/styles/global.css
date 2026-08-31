@@ -255,7 +255,7 @@ h2 {
   flex-direction: column;
   border: 1px solid var(--border);
   background: var(--surface);
-  border-radius: 10px;
+  border-radius: var(--radius);
   overflow: clip;
   box-shadow: var(--shadow);
 }
