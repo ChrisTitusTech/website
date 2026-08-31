@@ -119,9 +119,11 @@ site.
   Invalid categories, dates, route/output collisions, and existing destination
   files fail with actionable errors.
 - `tests/contracts/published-post-urls.json` is the framework-neutral immutable
-  contract for non-draft post URLs. Route validation requires every contracted
-  URL to remain present and requires new publishable URLs to be added to the
-  contract, without depending on Hugo-generated output.
+  contract for non-draft post URLs, including scheduled URLs registered before
+  publication. Route validation requires every contracted URL to remain
+  present, requires new publishable URLs to be added, and rejects URLs removed
+  from the base branch's contract in pull-request CI, without depending on
+  Hugo-generated output.
 
 ### Livestreams
 

@@ -212,11 +212,19 @@ export async function buildInventory(candidate, root = process.cwd()) {
   const candidateAlias = candidate
     ? `/posts/${candidate.date.slice(0, 4)}/${candidate._sourceSlug ?? path.basename(routeKey(candidate.url))}/`
     : undefined;
+  const normalizedCurrentDerived = new Set(
+    [...currentDerived].map(publicRoute),
+  );
+  const normalizedCandidateAlias = candidateAlias
+    ? publicRoute(candidateAlias)
+    : undefined;
   const induced = new Set(
     [...futureDerived]
       .map(publicRoute)
       .filter(
-        (route) => !currentDerived.has(route) || route === candidateAlias,
+        (route) =>
+          !normalizedCurrentDerived.has(route) ||
+          route === normalizedCandidateAlias,
       ),
   );
 

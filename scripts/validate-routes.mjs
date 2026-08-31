@@ -15,6 +15,11 @@ import {
 } from "../src/lib/content-logic.ts";
 import site from "../src/data/site.json" with { type: "json" };
 import { renderFeedContent } from "../src/lib/feed-content.ts";
+import {
+  publishedUrlContractPath,
+  readBasePublishedUrlContract,
+  validatePublishedUrlContract,
+} from "./published-url-contract.mjs";
 
 const root = process.cwd();
 const absoluteUrl = (route) => new URL(route, site.url).toString();
@@ -217,54 +222,32 @@ const postFiles = await fg(".astro-content/posts/**/*.md", {
 });
 const expectedPosts = [];
 const excludedPosts = [];
-const nonDraftPostUrls = [];
+const registeredPostUrls = [];
 const expectedFeedContent = new Map();
 for (const file of postFiles) {
   const source = await readFile(path.join(root, file), "utf8");
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   const data = YAML.parse(match[1]);
-  if (data.draft !== true) nonDraftPostUrls.push(data.url);
+  const eligible = isEligibleData(
+    data,
+    new Date(buildState.buildInstant),
+    false,
+  );
+  if (data.draft !== true) registeredPostUrls.push(data.url);
   expectedFeedContent.set(
     absoluteUrl(data.url),
     normalizeFeedBody(renderFeedContent(source.slice(match[0].length))),
   );
-  (isEligibleData(data, new Date(buildState.buildInstant), false)
-    ? expectedPosts
-    : excludedPosts
-  ).push(data);
+  (eligible ? expectedPosts : excludedPosts).push(data);
 }
 const publishedUrlContract = JSON.parse(
-  await readFile(
-    path.join(root, "tests/contracts/published-post-urls.json"),
-    "utf8",
-  ),
+  await readFile(path.join(root, publishedUrlContractPath), "utf8"),
 );
-if (
-  !Array.isArray(publishedUrlContract) ||
-  publishedUrlContract.some((url) => typeof url !== "string") ||
-  new Set(publishedUrlContract).size !== publishedUrlContract.length ||
-  JSON.stringify(publishedUrlContract) !==
-    JSON.stringify([...publishedUrlContract].sort())
-)
-  throw new Error(
-    "published post URL contract must be a sorted array of unique strings",
-  );
-const currentUrlSet = new Set(nonDraftPostUrls);
-const contractUrlSet = new Set(publishedUrlContract);
-const missingContractUrls = publishedUrlContract.filter(
-  (url) => !currentUrlSet.has(url),
+validatePublishedUrlContract(
+  registeredPostUrls,
+  publishedUrlContract,
+  readBasePublishedUrlContract(root),
 );
-const uncontractedUrls = [...currentUrlSet]
-  .filter((url) => !contractUrlSet.has(url))
-  .sort();
-if (missingContractUrls.length || uncontractedUrls.length)
-  throw new Error(
-    [
-      "published post URL contract changed",
-      ...missingContractUrls.map((url) => `missing: ${url}`),
-      ...uncontractedUrls.map((url) => `uncontracted: ${url}`),
-    ].join("\n"),
-  );
 expectedPosts.sort(
   (left, right) =>
     publicationTimeData(right, site.timeZone) -

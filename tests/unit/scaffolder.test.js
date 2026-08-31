@@ -246,6 +246,28 @@ describe("post scaffolder", () => {
     ).rejects.toThrow("route collision: /posts/2026/existing/");
   });
 
+  it("does not induce an existing dotted route for an unrelated candidate", async () => {
+    const root = await fixture();
+    await mkdir(path.join(root, "src/content/posts/2026"), { recursive: true });
+    await writeFile(
+      path.join(root, "src/content/posts/2026/release.md"),
+      '---\ntitle: Release\ndate: "2026-08-01"\nurl: /release.xml/\ncategories: [Linux]\ntags: []\n---\n',
+    );
+
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Unrelated",
+          date: "2026-08-13",
+          url: "/unrelated/",
+          categories: ["Linux"],
+          tags: [],
+        },
+        root,
+      ),
+    ).resolves.toBeUndefined();
+  });
+
   it("detects exact, wildcard, and parameterized redirect overlap", async () => {
     for (const source of [
       "/blocked/ /target/ 301\n",
