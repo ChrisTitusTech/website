@@ -2,5 +2,53 @@
 interface Props { page: number; pages: number; base: string }
 const { page, pages, base } = Astro.props;
 const route = (value: number) => value === 1 ? base : `${base}page/${value}/`;
+
+type Item = number | "ellipsis";
+
+const WINDOW = 5;
+
+function pageItems(current: number, total: number): Item[] {
+  if (total <= WINDOW + 2) return Array.from({ length: total }, (_, i) => i + 1);
+  const half = Math.floor(WINDOW / 2);
+  let start: number;
+  let end: number;
+  if (current <= half + 1) {
+    start = 1;
+    end = WINDOW;
+  } else if (current >= total - half) {
+    start = total - WINDOW + 1;
+    end = total;
+  } else {
+    start = current - half;
+    end = current + half;
+  }
+  const items: Item[] = [];
+  if (start > 1) items.push(1);
+  if (start > 2) items.push("ellipsis");
+  for (let i = start; i <= end; i++) items.push(i);
+  if (end < total - 1) items.push("ellipsis");
+  if (end < total) items.push(total);
+  return items;
+}
+
+const items = pageItems(page, pages);
 ---
-{pages > 1 && <nav class="pagination" aria-label="Pagination"><span>{page > 1 && <a rel="prev" href={route(page - 1)}>← Newer</a>}</span><span>Page {page} of {pages}</span><span>{page < pages && <a rel="next" href={route(page + 1)}>Older →</a>}</span></nav>}
+{pages > 1 && (
+  <nav class="pagination" aria-label="Pagination">
+    {page > 1
+      ? <a class="pagination-box pagination-edge" rel="prev" href={route(page - 1)}>← Newer</a>
+      : <span class="pagination-box pagination-edge is-disabled" aria-disabled="true">← Newer</span>}
+    <span class="pagination-numbers">
+      {items.map((item) =>
+        item === "ellipsis"
+          ? <span class="pagination-ellipsis">…</span>
+          : item === page
+            ? <span class="pagination-box is-current" aria-current="page">{item}</span>
+            : <a class="pagination-box" href={route(item)}>{item}</a>
+      )}
+    </span>
+    {page < pages
+      ? <a class="pagination-box pagination-edge" rel="next" href={route(page + 1)}>Older →</a>
+      : <span class="pagination-box pagination-edge is-disabled" aria-disabled="true">Older →</span>}
+  </nav>
+)}

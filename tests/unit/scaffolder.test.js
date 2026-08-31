@@ -287,7 +287,7 @@ describe("post scaffolder", () => {
 
   it("induces collection pagination at the page boundary", async () => {
     const root = await fixture();
-    for (let index = 0; index < 10; index += 1) {
+    for (let index = 0; index < site.postsPerPage; index += 1) {
       await writeFile(
         path.join(root, "src/content/posts", `post-${index}.md`),
         `---\ntitle: Post ${index}\ndate: "2026-08-01"\nurl: /post-${index}/\ncategories: [Linux]\ntags: []\n---\n`,

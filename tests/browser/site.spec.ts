@@ -298,8 +298,8 @@ test("taxonomy and head pagination expose complete navigation", async ({
     page.locator('link[type="application/rss+xml"]'),
   ).toHaveAttribute("href", "https://christitus.com/categories/index.xml");
   await expect(
-    page.getByRole("navigation", { name: "Pagination" }),
-  ).toContainText("Page 1 of 2");
+    page.getByRole("navigation", { name: "Pagination" }).locator(".is-current"),
+  ).toHaveText("1");
   await expect(page.getByRole("link", { name: /older/i })).toHaveAttribute(
     "href",
     "/categories/page/2/",
