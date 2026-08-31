@@ -251,6 +251,8 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
 }
 .card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: 10px;
@@ -280,7 +282,14 @@ h2 {
   transform: scale(1.04);
 }
 .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 0.9rem;
+}
+.card-body .chips {
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 .card h2,
 .card h3 {
