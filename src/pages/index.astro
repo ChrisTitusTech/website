@@ -23,14 +23,14 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
       Practical Linux, Windows, networking, software development, and open-source guidance from Chris Titus Tech.
     </p>
   </section>
-  <section class="container home-featured">
-    <h2>Featured</h2>
+  <section class="container home-featured" aria-labelledby="featured-heading">
+    <h2 id="featured-heading">Featured</h2>
     <div class="grid post-grid">
       {featured.map((post, index) => <PostCard post={post} heading="h3" priority={index === 0} />)}
     </div>
   </section>
-  <section class="container home-topics">
-    <h2>Explore topics</h2>
+  <section class="container home-topics" aria-labelledby="topics-heading">
+    <h2 id="topics-heading">Explore topics</h2>
     <div class="chips">
       {topics.map((topic) => (
         <a class="chip" href={`/categories/${topic.slug}/`}>
@@ -39,24 +39,24 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
       ))}
     </div>
   </section>
-  <section class="container home-latest">
-    <h2>Latest articles</h2>
+  <section class="container home-latest" aria-labelledby="latest-heading">
+    <h2 id="latest-heading">Latest articles</h2>
     <PostList posts={posts.slice(0, 8)} heading="h3" />
-    <p><a class="btn" href="/posts/">Browse all articles →</a></p>
+    <p><a class="btn" href="/posts/">Browse all articles <span aria-hidden="true">→</span></a></p>
   </section>
-  <section class="container home-streams">
+  <section class="container home-streams" aria-labelledby="streams-heading">
     <div class="home-streams-heading">
       <div>
         <p class="eyebrow">From the studio</p>
-        <h2>Recent live streams</h2>
+        <h2 id="streams-heading">Recent live streams</h2>
       </div>
-      <a href="/live-streams/">View the archive →</a>
+      <a href="/live-streams/">View the archive <span aria-hidden="true">→</span></a>
     </div>
     <div class="grid stream-grid">
       {recentStreams.map((stream) => (
         <article class="card">
-          <a href={`/live-streams/player/?v=${stream.videoId}`}>
-            <img src={stream.thumbnail} width="640" height="360" loading="lazy" alt={`${stream.title} stream thumbnail`} />
+          <a href={`/live-streams/player/?v=${stream.videoId}`} aria-hidden="true" tabindex="-1">
+            <img src={stream.thumbnail} width="640" height="360" loading="lazy" alt="" />
           </a>
           <div class="card-body">
             <h3><a href={`/live-streams/player/?v=${stream.videoId}`}>{stream.title}</a></h3>
@@ -74,37 +74,37 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
         <div class="card-body">
           <h3>Downloads</h3>
           <p>Get scripts, utilities, and digital resources.</p>
-          <a href="/downloads/">Browse downloads →</a>
+          <a href="/downloads/">Browse downloads <span aria-hidden="true">→</span></a>
         </div>
       </article>
       <article class="card">
         <div class="card-body">
           <h3>Live</h3>
           <p>Watch recent recordings with synchronized chat replay.</p>
-          <a href="/live-streams/">Open the archive →</a>
+          <a href="/live-streams/">Open the archive <span aria-hidden="true">→</span></a>
         </div>
       </article>
       <article class="card">
         <div class="card-body">
           <h3>Recommendations</h3>
           <p>See the hardware and services Chris uses.</p>
-          <a href="/recommendations/">View recommendations →</a>
+          <a href="/recommendations/">View recommendations <span aria-hidden="true">→</span></a>
         </div>
       </article>
       <article class="card">
         <div class="card-body">
           <h3>Community</h3>
           <p>Ask questions and share what you are building.</p>
-          <a href="https://forum.christitus.com/">Visit the forums →</a>
+          <a href="https://forum.christitus.com/">Visit the forums <span aria-hidden="true">→</span></a>
         </div>
       </article>
     </div>
   </section>
-  <section class="container home-newsletter">
+  <section class="container home-newsletter" aria-labelledby="newsletter-heading">
     <div class="card">
       <div class="card-body">
         <p class="eyebrow">Stay current</p>
-        <h2>Newsletter and YouTube</h2>
+        <h2 id="newsletter-heading">Newsletter and YouTube</h2>
         <p>Get the latest guides, livestreams, and independent takes on technology.</p>
         <p>
           <a href="/newsletter/">Join the newsletter</a> · <a href="https://youtube.com/@christitustech">Watch on YouTube</a>
