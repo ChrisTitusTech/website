@@ -348,7 +348,8 @@ h2 {
 .btn:hover {
   background: var(--accent-strong);
   color: var(--accent-ink);
-  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent-strong) 30%, transparent);
+  box-shadow: 0 6px 18px
+    color-mix(in srgb, var(--accent-strong) 30%, transparent);
   transform: translateY(-2px);
 }
 .article-meta-footer {
