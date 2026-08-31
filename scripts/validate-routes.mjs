@@ -17,6 +17,7 @@ import site from "../src/data/site.json" with { type: "json" };
 import { renderFeedContent } from "../src/lib/feed-content.ts";
 
 const root = process.cwd();
+const absoluteUrl = (route) => new URL(route, site.url).toString();
 const htmlAttribute = (html, selector, attribute) => {
   const tag = html.match(selector)?.[0];
   return tag?.match(new RegExp(`\\b${attribute}=["']([^"']*)["']`, "i"))?.[1];
@@ -67,16 +68,16 @@ for (const file of [
 
 const metadataChecks = {
   "/": {
-    feed: "https://christitus.com/index.xml",
+    feed: absoluteUrl("/index.xml"),
     structuredTypes: ["WebSite"],
   },
   "/categories/linux/": {
-    feed: "https://christitus.com/categories/linux/index.xml",
+    feed: absoluteUrl("/categories/linux/index.xml"),
     structuredTypes: ["WebSite", "WebPage"],
   },
   "/downloads/": { structuredTypes: ["WebSite", "WebPage"] },
   "/live-streams/": {
-    feed: "https://christitus.com/live-streams/index.xml",
+    feed: absoluteUrl("/live-streams/index.xml"),
     structuredTypes: ["WebSite", "WebPage"],
   },
   "/my-ai-workflow/": {
@@ -91,7 +92,7 @@ for (const [route, expected] of Object.entries(metadataChecks)) {
     /<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i,
     "href",
   );
-  if (canonical !== new URL(route, "https://christitus.com").toString())
+  if (canonical !== absoluteUrl(route))
     throw new Error(`${route} canonical metadata changed: ${canonical}`);
   for (const key of [
     "og:title",
@@ -222,7 +223,7 @@ for (const file of postFiles) {
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   const data = YAML.parse(match[1]);
   expectedFeedContent.set(
-    `https://christitus.com${data.url}`,
+    absoluteUrl(data.url),
     normalizeFeedBody(renderFeedContent(source.slice(match[0].length))),
   );
   (isEligibleData(data, new Date(buildState.buildInstant), false)
@@ -331,7 +332,8 @@ const reservedPages = new Set([
 for (const file of pageFiles) {
   const source = await readFile(path.join(root, file), "utf8");
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  const data = YAML.parse(match[1]);
+  if (!match) throw new Error(`${file}: missing YAML front matter`);
+  const data = YAML.parse(match[1]) ?? {};
   if (
     data.build?.render === "never" ||
     !isEligibleData(data, new Date(buildState.buildInstant), false)
@@ -341,7 +343,7 @@ for (const file of pageFiles) {
     .replace(/^\.astro-content\/pages\//, "")
     .replace(/\.md$/, "")
     .replace(/\/index$/, "");
-  const route = data.url ?? `/${id}/`;
+  const route = typeof data.url === "string" ? data.url : `/${id}/`;
   if (!reservedPages.has(route)) addRoute(route);
 }
 const validLivestreams = livestreams.items.filter((stream) =>
@@ -414,7 +416,7 @@ for (const file of expectedFeedFiles) {
   const xml = await readFile(path.join(root, "dist", file), "utf8");
   const expectedChannelUrl = new URL(
     `/${file.replace(/index\.xml$/, "")}`,
-    "https://christitus.com/",
+    site.url,
   ).toString();
   const channelUrl = decodeXml(
     xml.match(/<channel>[\s\S]*?<link>(.*?)<\/link>/)?.[1] ?? "",
@@ -430,7 +432,7 @@ for (const file of expectedFeedFiles) {
         `${file} contains ${actualItems.length} terms, expected ${groups.size}`,
       );
     for (const [slug, group] of groups) {
-      const link = `https://christitus.com/${field}/${slug}/`;
+      const link = absoluteUrl(`/${field}/${slug}/`);
       const expectedTitle = group.name.toLocaleLowerCase("en-US");
       if (
         !actualItems.some(
@@ -466,21 +468,16 @@ if (validatedFeedBodies < expectedPosts.length)
   throw new Error(
     "RSS full-body validation did not cover every published post",
   );
-if (!sitemapUrls.has("https://christitus.com/newsletter/"))
+if (!sitemapUrls.has(absoluteUrl("/newsletter/")))
   throw new Error("newsletter is missing from sitemap");
 for (const post of expectedPosts) {
-  if (
-    post.sitemap?.disable !== true &&
-    !sitemapUrls.has(`https://christitus.com${post.url}`)
-  )
+  if (post.sitemap?.disable !== true && !sitemapUrls.has(absoluteUrl(post.url)))
     throw new Error(`published post is missing from sitemap: ${post.url}`);
-  if (!rootFeedUrls.has(`https://christitus.com${post.url}`))
+  if (!rootFeedUrls.has(absoluteUrl(post.url)))
     throw new Error(`published post is missing from RSS: ${post.url}`);
   if (
     post.sitemap?.disable !== true &&
-    !sitemapEntries
-      .get(`https://christitus.com${post.url}`)
-      ?.includes("<lastmod>")
+    !sitemapEntries.get(absoluteUrl(post.url))?.includes("<lastmod>")
   )
     throw new Error(`published post is missing sitemap lastmod: ${post.url}`);
 }
@@ -489,7 +486,7 @@ if (dateOnlyPost) {
   const item = [...feed.matchAll(/<item>([\s\S]*?)<\/item>/g)].find(
     (match) =>
       decodeXml(match[1].match(/<link>(.*?)<\/link>/)?.[1] ?? "") ===
-      `https://christitus.com${dateOnlyPost.url}`,
+      absoluteUrl(dateOnlyPost.url),
   )?.[1];
   const publicationDate = new Date(
     decodeXml(item?.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] ?? ""),
@@ -500,13 +497,13 @@ if (dateOnlyPost) {
     );
 }
 for (const post of excludedPosts) {
-  if (sitemapUrls.has(`https://christitus.com${post.url}`))
+  if (sitemapUrls.has(absoluteUrl(post.url)))
     throw new Error(`excluded post leaked into sitemap: ${post.url}`);
-  if (rootFeedUrls.has(`https://christitus.com${post.url}`))
+  if (rootFeedUrls.has(absoluteUrl(post.url)))
     throw new Error(`excluded post leaked into RSS: ${post.url}`);
 }
 for (const disabled of ["/search/", "/live-streams/player/", "/rss/"]) {
-  if (sitemapUrls.has(`https://christitus.com${disabled}`))
+  if (sitemapUrls.has(absoluteUrl(disabled)))
     throw new Error(`sitemap-disabled route leaked into sitemap: ${disabled}`);
 }
 

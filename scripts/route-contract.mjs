@@ -173,17 +173,21 @@ export async function buildInventory(candidate, root = process.cwd()) {
     posts.push({ ...data, _sourcePath: file });
   }
 
-  const pageFiles = await fg("src/content/*.md", { cwd: root });
+  const pageFiles = await fg(
+    ["src/content/**/*.md", "!src/content/posts/**/*.md"],
+    { cwd: root },
+  );
   for (const file of pageFiles) {
     const data = frontmatter(
       await readFile(path.join(root, file), "utf8"),
       file,
     );
     if (data.build?.render === "never") continue;
-    const route =
-      typeof data.url === "string"
-        ? data.url
-        : `/${path.basename(file, path.extname(file))}/`;
+    const id = file
+      .replace(/^src\/content\//, "")
+      .replace(/\.md$/, "")
+      .replace(/\/_?index$/, "");
+    const route = typeof data.url === "string" ? data.url : `/${id}/`;
     routes.add(publicRoute(route));
     outputPaths.add(publicOutputPath(route));
   }

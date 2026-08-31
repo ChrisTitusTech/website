@@ -203,6 +203,26 @@ describe("post scaffolder", () => {
     expect(inventory.routes).toContain("/live-streams/index.xml");
   });
 
+  it("detects routes from nested standalone pages", async () => {
+    const root = await fixture();
+    const page = path.join(root, "src/content/guides/getting-started.md");
+    await mkdir(path.dirname(page), { recursive: true });
+    await writeFile(page, "---\ntitle: Getting Started\n---\n");
+
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Duplicate",
+          date: "2026-08-13",
+          url: "/guides/getting-started/",
+          categories: ["Linux"],
+          tags: [],
+        },
+        root,
+      ),
+    ).rejects.toThrow("URL collision");
+  });
+
   it("detects exact, wildcard, and parameterized redirect overlap", async () => {
     for (const source of [
       "/blocked/ /target/ 301\n",
