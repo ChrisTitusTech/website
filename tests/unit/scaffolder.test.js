@@ -223,6 +223,29 @@ describe("post scaffolder", () => {
     ).rejects.toThrow("URL collision");
   });
 
+  it("rejects a candidate source alias owned by an existing post", async () => {
+    const root = await fixture();
+    await mkdir(path.join(root, "src/content/posts/2026"), { recursive: true });
+    await writeFile(
+      path.join(root, "src/content/posts/2026/existing.md"),
+      '---\ntitle: Existing\ndate: "2026-08-01"\nurl: /existing/\ncategories: [Linux]\ntags: []\n---\n',
+    );
+
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Duplicate alias",
+          date: "2026-08-13",
+          url: "/unique-canonical/",
+          categories: ["Linux"],
+          tags: [],
+          _sourceSlug: "existing",
+        },
+        root,
+      ),
+    ).rejects.toThrow("route collision: /posts/2026/existing/");
+  });
+
   it("detects exact, wildcard, and parameterized redirect overlap", async () => {
     for (const source of [
       "/blocked/ /target/ 301\n",

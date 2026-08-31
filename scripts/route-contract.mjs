@@ -209,10 +209,15 @@ export async function buildInventory(candidate, root = process.cwd()) {
       ]
     : posts;
   const futureDerived = derivedRoutes(futurePosts);
+  const candidateAlias = candidate
+    ? `/posts/${candidate.date.slice(0, 4)}/${candidate._sourceSlug ?? path.basename(routeKey(candidate.url))}/`
+    : undefined;
   const induced = new Set(
     [...futureDerived]
       .map(publicRoute)
-      .filter((route) => !currentDerived.has(route)),
+      .filter(
+        (route) => !currentDerived.has(route) || route === candidateAlias,
+      ),
   );
 
   const staticFiles = await fg("public/**/*", { cwd: root, onlyFiles: true });
