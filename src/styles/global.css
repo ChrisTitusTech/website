@@ -302,6 +302,15 @@ h2 {
   border-radius: var(--radius);
   text-decoration: none;
   font-size: 0.88rem;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+.chip:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent-strong);
 }
 .chip-tag {
   color: var(--muted);
