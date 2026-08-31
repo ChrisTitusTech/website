@@ -31,13 +31,13 @@ async function fixture(publicFiles = ["index.html"], redirects = "") {
   await Promise.all([
     mkdir(path.join(root, "src/content/posts"), { recursive: true }),
     mkdir(path.join(root, "public"), { recursive: true }),
-    mkdir(path.join(root, "tests/baseline"), { recursive: true }),
     mkdir(path.join(root, "templates"), { recursive: true }),
   ]);
-  await writeFile(
-    path.join(root, "tests/baseline/hugo-public.json"),
-    JSON.stringify({ output: { publicFiles } }),
-  );
+  for (const file of publicFiles) {
+    const target = path.join(root, "public", file);
+    await mkdir(path.dirname(target), { recursive: true });
+    await writeFile(target, "fixture");
+  }
   await writeFile(path.join(root, "public/_redirects"), redirects);
   await writeFile(
     path.join(root, "templates/post.md.tmpl"),
@@ -200,6 +200,7 @@ describe("post scaffolder", () => {
         "/tags/fresh-tag/index.xml",
       ]),
     );
+    expect(inventory.routes).toContain("/live-streams/index.xml");
   });
 
   it("detects exact, wildcard, and parameterized redirect overlap", async () => {

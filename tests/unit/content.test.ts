@@ -50,7 +50,7 @@ describe("production eligibility", () => {
 });
 
 describe("taxonomy slugs", () => {
-  it("preserves Hugo-compatible plus and underscore routes", () => {
+  it("preserves plus and underscore routes", () => {
     expect(taxonomySlug("DISM++")).toBe("dism++");
     expect(taxonomySlug("Pop!_OS")).toBe("pop_os");
     expect(taxonomySlug("Software Dev")).toBe("software-dev");

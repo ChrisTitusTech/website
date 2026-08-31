@@ -294,10 +294,10 @@ site.
 - `npm ci` and `npm run validate` pass from a clean checkout using Node 24.
 - All non-draft, non-future content builds; draft and scheduled fixtures are
   absent from production routes, search, feeds, and sitemap; every supported
-  shortcode has tested output; and no unresolved Hugo template syntax appears
+  shortcode has tested output; and no unresolved legacy template syntax appears
   outside literal code or `pre` content in generated pages.
-- The generated route/redirect contract covers the Hugo baseline, including
-  mixed-case URLs, feeds, pagination, aliases, and static files.
+- The generated route/redirect contract covers the current Astro content,
+  including mixed-case URLs, feeds, pagination, aliases, and static files.
 - The production artifact contains `_headers` and supported `_redirects`; tests
   assert `/_astro/*` is immutable, copied CSS/JS are not immutable, and
   security/feed rules remain present. Preview/production request tests verify
