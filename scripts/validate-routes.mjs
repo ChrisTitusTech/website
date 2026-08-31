@@ -126,7 +126,7 @@ for (const [route, expected] of Object.entries(metadataChecks)) {
     ? [
         {
           href: expected.feed,
-          title: "Chris Titus Tech | Tech Content Creator",
+          title: site.title,
           type: "application/rss+xml",
         },
       ]
@@ -217,11 +217,13 @@ const postFiles = await fg(".astro-content/posts/**/*.md", {
 });
 const expectedPosts = [];
 const excludedPosts = [];
+const nonDraftPostUrls = [];
 const expectedFeedContent = new Map();
 for (const file of postFiles) {
   const source = await readFile(path.join(root, file), "utf8");
   const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   const data = YAML.parse(match[1]);
+  if (data.draft !== true) nonDraftPostUrls.push(data.url);
   expectedFeedContent.set(
     absoluteUrl(data.url),
     normalizeFeedBody(renderFeedContent(source.slice(match[0].length))),
@@ -231,6 +233,38 @@ for (const file of postFiles) {
     : excludedPosts
   ).push(data);
 }
+const publishedUrlContract = JSON.parse(
+  await readFile(
+    path.join(root, "tests/contracts/published-post-urls.json"),
+    "utf8",
+  ),
+);
+if (
+  !Array.isArray(publishedUrlContract) ||
+  publishedUrlContract.some((url) => typeof url !== "string") ||
+  new Set(publishedUrlContract).size !== publishedUrlContract.length ||
+  JSON.stringify(publishedUrlContract) !==
+    JSON.stringify([...publishedUrlContract].sort())
+)
+  throw new Error(
+    "published post URL contract must be a sorted array of unique strings",
+  );
+const currentUrlSet = new Set(nonDraftPostUrls);
+const contractUrlSet = new Set(publishedUrlContract);
+const missingContractUrls = publishedUrlContract.filter(
+  (url) => !currentUrlSet.has(url),
+);
+const uncontractedUrls = [...currentUrlSet]
+  .filter((url) => !contractUrlSet.has(url))
+  .sort();
+if (missingContractUrls.length || uncontractedUrls.length)
+  throw new Error(
+    [
+      "published post URL contract changed",
+      ...missingContractUrls.map((url) => `missing: ${url}`),
+      ...uncontractedUrls.map((url) => `uncontracted: ${url}`),
+    ].join("\n"),
+  );
 expectedPosts.sort(
   (left, right) =>
     publicationTimeData(right, site.timeZone) -
