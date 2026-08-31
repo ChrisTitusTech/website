@@ -9,7 +9,7 @@ const image = post.data.image ? `/${post.data.image.replace(/^\//, "")}` : "/ima
 const transformed = (width: number) => `/cdn-cgi/image/width=${width},height=${Math.round(width * 9 / 16)},fit=cover,format=auto${image}`;
 ---
 <article class="card">
-  <a href={post.data.url}><img src={image} srcset={priority ? undefined : `${transformed(320)} 320w, ${transformed(640)} 640w`} sizes={priority ? undefined : "(max-width: 700px) 100vw, 640px"} data-cf-image={priority ? undefined : ""} width="640" height="360" loading={priority ? "eager" : "lazy"} fetchpriority={priority ? "high" : "auto"} alt={`${post.data.title} featured image`} /></a>
+  <a href={post.data.url} aria-hidden="true" tabindex="-1"><img src={image} srcset={priority ? undefined : `${transformed(320)} 320w, ${transformed(640)} 640w`} sizes={priority ? undefined : "(max-width: 700px) 100vw, 640px"} data-cf-image={priority ? undefined : ""} width="640" height="360" loading={priority ? "eager" : "lazy"} fetchpriority={priority ? "high" : "auto"} alt="" /></a>
   <div class="card-body">
     <p class="meta"><time datetime={post.data.date}>{displayDate(post)}</time></p>
     <Heading><a href={post.data.url}>{post.data.title}</a></Heading>
