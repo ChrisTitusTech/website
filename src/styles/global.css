@@ -253,7 +253,7 @@ h2 {
 .card {
   border: 1px solid var(--border);
   background: var(--surface);
-  border-radius: var(--radius);
+  border-radius: 10px;
   overflow: clip;
   box-shadow: var(--shadow);
   transition:
@@ -270,6 +270,10 @@ h2 {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  transition: transform 0.25s ease;
+}
+.card:hover img {
+  transform: scale(1.04);
 }
 .card-body {
   padding: 0.9rem;
