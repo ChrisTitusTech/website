@@ -29,6 +29,11 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
       {featured.map((post, index) => <PostCard post={post} heading="h3" priority={index === 0} />)}
     </div>
   </section>
+  <section class="container home-latest" aria-labelledby="latest-heading">
+    <h2 id="latest-heading">Latest articles</h2>
+    <PostList posts={posts.slice(0, 8)} heading="h3" />
+    <p class="home-latest-cta"><a class="btn" href="/posts/">Browse all articles <span aria-hidden="true">→</span></a></p>
+  </section>
   <section class="container home-topics" aria-labelledby="topics-heading">
     <h2 id="topics-heading">Explore topics</h2>
     <div class="chips">
@@ -38,11 +43,6 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
         </a>
       ))}
     </div>
-  </section>
-  <section class="container home-latest" aria-labelledby="latest-heading">
-    <h2 id="latest-heading">Latest articles</h2>
-    <PostList posts={posts.slice(0, 8)} heading="h3" />
-    <p class="home-latest-cta"><a class="btn" href="/posts/">Browse all articles <span aria-hidden="true">→</span></a></p>
   </section>
   <section class="container home-streams" aria-labelledby="streams-heading">
     <p class="eyebrow">From the studio</p>
