@@ -301,6 +301,25 @@ h2 {
   color: var(--muted);
   font-size: 0.82rem;
 }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+.btn:hover {
+  background: var(--accent-strong);
+  color: var(--accent-ink);
+  transform: translateY(-1px);
+}
 .article-meta-footer {
   margin-top: 1.75rem;
   padding-top: 1.25rem;
