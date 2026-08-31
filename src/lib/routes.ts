@@ -1,5 +1,3 @@
-import { readFileSync } from "node:fs";
-
 import type { Page, Post } from "./content";
 import { pageRoute, slugify, taxonomy } from "./content";
 import site from "../data/site.json";
@@ -27,10 +25,6 @@ export type PageDescriptor =
       pages: number;
     }
   | { kind: "redirect"; route: string; target: string };
-
-const baseline = JSON.parse(
-  readFileSync("tests/baseline/hugo-public.json", "utf8"),
-);
 
 function routeKey(route: string): string {
   const segments = route.split("/").filter(Boolean);
@@ -119,18 +113,19 @@ function addTermPages(
   }
 }
 
-export function legacyAliases(): Record<string, string> {
-  const aliases = baseline.output.aliases as Record<
-    string,
-    { localRoute: string }
-  >;
-  return Object.fromEntries(
-    Object.entries(aliases).map(([route, value]) => [route, value.localRoute]),
-  );
-}
-
-export function legacyFeedPaths(): string[] {
-  return Object.keys(baseline.output.semantic.feeds);
+export function feedPaths(posts: Post[]): string[] {
+  const paths = new Set([
+    "archive/index.xml",
+    "categories/index.xml",
+    "live-streams/index.xml",
+    "posts/index.xml",
+    "tags/index.xml",
+  ]);
+  for (const field of ["categories", "tags"] as const) {
+    for (const slug of taxonomy(posts, field).keys())
+      paths.add(`${field}/${slug}/index.xml`);
+  }
+  return [...paths];
 }
 
 export function buildPageDescriptors(
@@ -148,6 +143,12 @@ export function buildPageDescriptors(
     "/newsletter/",
     "/rss/",
   ]);
+  seen.add("/live-streams/page/1/");
+  output.push({
+    kind: "redirect",
+    route: "/live-streams/page/1/",
+    target: "/live-streams/",
+  });
 
   for (const post of posts) {
     const route = routeKey(post.data.url);
@@ -214,12 +215,6 @@ export function buildPageDescriptors(
     }
   }
 
-  for (const [route, target] of Object.entries(legacyAliases())) {
-    const key = routeKey(route);
-    if (seen.has(key) || reserved.has(key)) continue;
-    seen.add(key);
-    output.push({ kind: "redirect", route: key, target });
-  }
   return output;
 }
 

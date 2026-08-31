@@ -31,13 +31,13 @@ async function fixture(publicFiles = ["index.html"], redirects = "") {
   await Promise.all([
     mkdir(path.join(root, "src/content/posts"), { recursive: true }),
     mkdir(path.join(root, "public"), { recursive: true }),
-    mkdir(path.join(root, "tests/baseline"), { recursive: true }),
     mkdir(path.join(root, "templates"), { recursive: true }),
   ]);
-  await writeFile(
-    path.join(root, "tests/baseline/hugo-public.json"),
-    JSON.stringify({ output: { publicFiles } }),
-  );
+  for (const file of publicFiles) {
+    const target = path.join(root, "public", file);
+    await mkdir(path.dirname(target), { recursive: true });
+    await writeFile(target, "fixture");
+  }
   await writeFile(path.join(root, "public/_redirects"), redirects);
   await writeFile(
     path.join(root, "templates/post.md.tmpl"),
@@ -200,6 +200,72 @@ describe("post scaffolder", () => {
         "/tags/fresh-tag/index.xml",
       ]),
     );
+    expect(inventory.routes).toContain("/live-streams/index.xml");
+  });
+
+  it("detects routes from nested standalone pages", async () => {
+    const root = await fixture();
+    const page = path.join(root, "src/content/guides/getting-started.md");
+    await mkdir(path.dirname(page), { recursive: true });
+    await writeFile(page, "---\ntitle: Getting Started\n---\n");
+
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Duplicate",
+          date: "2026-08-13",
+          url: "/guides/getting-started/",
+          categories: ["Linux"],
+          tags: [],
+        },
+        root,
+      ),
+    ).rejects.toThrow("URL collision");
+  });
+
+  it("rejects a candidate source alias owned by an existing post", async () => {
+    const root = await fixture();
+    await mkdir(path.join(root, "src/content/posts/2026"), { recursive: true });
+    await writeFile(
+      path.join(root, "src/content/posts/2026/existing.md"),
+      '---\ntitle: Existing\ndate: "2026-08-01"\nurl: /existing/\ncategories: [Linux]\ntags: []\n---\n',
+    );
+
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Duplicate alias",
+          date: "2026-08-13",
+          url: "/unique-canonical/",
+          categories: ["Linux"],
+          tags: [],
+          _sourceSlug: "existing",
+        },
+        root,
+      ),
+    ).rejects.toThrow("route collision: /posts/2026/existing/");
+  });
+
+  it("does not induce an existing dotted route for an unrelated candidate", async () => {
+    const root = await fixture();
+    await mkdir(path.join(root, "src/content/posts/2026"), { recursive: true });
+    await writeFile(
+      path.join(root, "src/content/posts/2026/release.md"),
+      '---\ntitle: Release\ndate: "2026-08-01"\nurl: /release.xml/\ncategories: [Linux]\ntags: []\n---\n',
+    );
+
+    await expect(
+      assertCandidateAvailable(
+        {
+          title: "Unrelated",
+          date: "2026-08-13",
+          url: "/unrelated/",
+          categories: ["Linux"],
+          tags: [],
+        },
+        root,
+      ),
+    ).resolves.toBeUndefined();
   });
 
   it("detects exact, wildcard, and parameterized redirect overlap", async () => {

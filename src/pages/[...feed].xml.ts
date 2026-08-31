@@ -11,16 +11,11 @@ import {
   taxonomySlug,
 } from "../lib/content";
 import { requiredLivestreamDate } from "../lib/livestreams";
-import { legacyFeedPaths } from "../lib/routes";
+import { feedPaths } from "../lib/routes";
 
 export const getStaticPaths = (async () => {
   const posts = await getPublishedPosts();
-  const paths = new Set(legacyFeedPaths());
-  for (const field of ["categories", "tags"] as const) {
-    for (const slug of taxonomy(posts, field).keys())
-      paths.add(`${field}/${slug}/index.xml`);
-  }
-  return [...paths]
+  return feedPaths(posts)
     .filter((path) => path !== "index.xml")
     .map((path) => ({
       params: { feed: path.replace(/\.xml$/, "") },

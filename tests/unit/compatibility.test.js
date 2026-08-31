@@ -8,7 +8,7 @@ import {
   validatePost,
 } from "../../scripts/prepare-content.mjs";
 
-describe("Hugo compatibility preprocessing", () => {
+describe("historical content preprocessing", () => {
   it("renders table, notice, embeds, and shopify shortcodes", async () => {
     const defender = await readFile(
       ".astro-content/posts/2022/bad-windows-defender.md",
@@ -39,11 +39,11 @@ describe("Hugo compatibility preprocessing", () => {
   });
 
   it("keeps literal shortcode examples inside fenced code", async () => {
-    const hugo = await readFile(
+    const article = await readFile(
       ".astro-content/posts/2020/hugo-guide.md",
       "utf8",
     );
-    expect(hugo).toContain('{{ partial "share-buttons.html" . }}');
+    expect(article).toContain('{{ partial "share-buttons.html" . }}');
   });
 
   it("transforms only active shortcodes", () => {

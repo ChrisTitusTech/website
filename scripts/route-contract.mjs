@@ -91,6 +91,8 @@ function derivedRoutes(posts) {
     "/404.html",
     "/search/",
     "/live-streams/",
+    "/live-streams/index.xml",
+    "/live-streams/page/1/",
     "/live-streams/player/",
     "/videos/",
     "/newsletter/",
@@ -100,6 +102,15 @@ function derivedRoutes(posts) {
   const tags = new Map();
   for (const post of posts) {
     routes.add(routeKey(post.url));
+    if (post._sourcePath) {
+      routes.add(
+        routeKey(
+          `/${post._sourcePath.replace(/^src\/content\//, "").replace(/\.md$/, "")}/`,
+        ),
+      );
+    } else if (post._sourceSlug) {
+      routes.add(`/posts/${post.date.slice(0, 4)}/${post._sourceSlug}/`);
+    }
     for (const [field, groups] of [
       ["categories", categories],
       ["tags", tags],
@@ -147,13 +158,8 @@ function routeFromPublicFile(relative) {
 }
 
 export async function buildInventory(candidate, root = process.cwd()) {
-  const baseline = JSON.parse(
-    await readFile(path.join(root, "tests/baseline/hugo-public.json"), "utf8"),
-  );
-  const routes = new Set(
-    baseline.output.publicFiles.map(routeFromPublicFile).map(publicRoute),
-  );
-  const outputPaths = new Set(baseline.output.publicFiles);
+  const routes = new Set();
+  const outputPaths = new Set();
 
   const postFiles = await fg("src/content/posts/**/*.md", { cwd: root });
   const posts = [];
@@ -164,7 +170,26 @@ export async function buildInventory(candidate, root = process.cwd()) {
     );
     if (data.build?.render === "never" || typeof data.url !== "string")
       continue;
-    posts.push(data);
+    posts.push({ ...data, _sourcePath: file });
+  }
+
+  const pageFiles = await fg(
+    ["src/content/**/*.md", "!src/content/posts/**/*.md"],
+    { cwd: root },
+  );
+  for (const file of pageFiles) {
+    const data = frontmatter(
+      await readFile(path.join(root, file), "utf8"),
+      file,
+    );
+    if (data.build?.render === "never") continue;
+    const id = file
+      .replace(/^src\/content\//, "")
+      .replace(/\.md$/, "")
+      .replace(/\/_?index$/, "");
+    const route = typeof data.url === "string" ? data.url : `/${id}/`;
+    routes.add(publicRoute(route));
+    outputPaths.add(publicOutputPath(route));
   }
 
   const currentDerived = derivedRoutes(posts);
@@ -173,23 +198,40 @@ export async function buildInventory(candidate, root = process.cwd()) {
     routes.add(normalized);
     outputPaths.add(publicOutputPath(normalized));
   }
-  const futurePosts = candidate ? [...posts, candidate] : posts;
+  const futurePosts = candidate
+    ? [
+        ...posts,
+        {
+          ...candidate,
+          _sourceSlug:
+            candidate._sourceSlug ?? path.basename(routeKey(candidate.url)),
+        },
+      ]
+    : posts;
   const futureDerived = derivedRoutes(futurePosts);
-  if (candidate) {
-    const sourceSlug =
-      candidate._sourceSlug ?? path.basename(routeKey(candidate.url));
-    futureDerived.add(`/posts/${candidate.date.slice(0, 4)}/${sourceSlug}/`);
-  }
+  const candidateAlias = candidate
+    ? `/posts/${candidate.date.slice(0, 4)}/${candidate._sourceSlug ?? path.basename(routeKey(candidate.url))}/`
+    : undefined;
+  const normalizedCurrentDerived = new Set(
+    [...currentDerived].map(publicRoute),
+  );
+  const normalizedCandidateAlias = candidateAlias
+    ? publicRoute(candidateAlias)
+    : undefined;
   const induced = new Set(
     [...futureDerived]
       .map(publicRoute)
-      .filter((route) => !currentDerived.has(route)),
+      .filter(
+        (route) =>
+          !normalizedCurrentDerived.has(route) ||
+          route === normalizedCandidateAlias,
+      ),
   );
 
   const staticFiles = await fg("public/**/*", { cwd: root, onlyFiles: true });
   for (const file of staticFiles) {
     const relative = file.slice("public/".length);
-    routes.add(publicRoute(`/${relative}`));
+    routes.add(publicRoute(routeFromPublicFile(relative)));
     outputPaths.add(relative);
   }
 
@@ -208,17 +250,17 @@ export async function assertCandidateAvailable(
   root = process.cwd(),
 ) {
   const inventory = await buildInventory(candidate, root);
-  const baseline = await buildInventory(undefined, root);
+  const current = await buildInventory(undefined, root);
   const candidateRoute = routeKey(candidate.url);
-  if (baseline.routes.has(candidateRoute))
+  if (current.routes.has(candidateRoute))
     throw new Error(`URL collision: ${candidateRoute} already exists`);
 
   const newPathOwners = new Map();
   for (const route of inventory.induced) {
     const output = publicOutputPath(route);
-    if (baseline.routes.has(route))
+    if (current.routes.has(route))
       throw new Error(`route collision: ${route} already exists`);
-    if (baseline.outputPaths.has(output))
+    if (current.outputPaths.has(output))
       throw new Error(`output collision: ${output} already exists`);
     const prior = newPathOwners.get(output);
     if (prior)
@@ -232,7 +274,7 @@ export async function assertCandidateAvailable(
     }
   }
 
-  const paths = new Set([...baseline.outputPaths, ...newPathOwners.keys()]);
+  const paths = new Set([...current.outputPaths, ...newPathOwners.keys()]);
   for (const output of paths) {
     const segments = output.split("/");
     for (let length = 1; length < segments.length; length += 1) {
