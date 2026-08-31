@@ -114,7 +114,7 @@ export function homepagePosts(posts: Post[]): Post[] {
   );
 }
 
-export function relatedPosts(current: Post, posts: Post[], limit = 5): Post[] {
+export function relatedPosts(current: Post, posts: Post[], limit = 6): Post[] {
   return posts
     .filter((post) => post.data.url !== current.data.url)
     .map((post) => ({
