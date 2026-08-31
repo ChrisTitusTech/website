@@ -211,12 +211,6 @@ main {
   min-height: 72vh;
   padding-block: clamp(1.25rem, 3vw, 2.5rem);
 }
-.hero {
-  padding-block: clamp(1.25rem, 4vw, 3rem);
-}
-.hero:first-child {
-  padding-top: clamp(1.75rem, 5vw, 4rem);
-}
 .eyebrow {
   margin: 0 0 0.35rem;
   color: var(--accent);
@@ -253,24 +247,49 @@ h2 {
   gap: 0.85rem;
 }
 .post-grid,
-.stream-grid,
-.action-grid {
+.stream-grid {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
 }
 .card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: var(--radius);
   overflow: clip;
   box-shadow: var(--shadow);
 }
+.card-link {
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.card-link:hover {
+  border-color: var(--accent);
+  box-shadow: 0 14px 32px rgb(0 0 0 / 20%);
+  transform: translateY(-3px);
+}
 .card img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+.card-link img {
+  transition: transform 0.25s ease;
+}
+.card-link:hover img {
+  transform: scale(1.04);
+}
 .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 0.9rem;
+}
+.card-body .chips {
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 .card h2,
 .card h3 {
@@ -296,10 +315,42 @@ h2 {
   border-radius: var(--radius);
   text-decoration: none;
   font-size: 0.88rem;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+.chip:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent-strong);
 }
 .chip-tag {
   color: var(--muted);
   font-size: 0.82rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 25%, transparent);
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+.btn:hover {
+  background: var(--accent-strong);
+  color: var(--accent-ink);
+  box-shadow: 0 6px 18px
+    color-mix(in srgb, var(--accent-strong) 30%, transparent);
+  transform: translateY(-2px);
 }
 .article-meta-footer {
   margin-top: 1.75rem;
@@ -316,12 +367,6 @@ h2 {
   color: var(--muted);
   font-weight: 700;
   font-size: 0.85rem;
-}
-.section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 0.75rem;
 }
 .article-header {
   margin-bottom: 1.25rem;
@@ -929,10 +974,6 @@ td {
   .listing-page .card h2,
   .listing-page .card h3 {
     overflow-wrap: anywhere;
-  }
-  .section-heading {
-    align-items: start;
-    flex-direction: column;
   }
   .pagination {
     align-items: flex-start;
