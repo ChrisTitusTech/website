@@ -42,16 +42,11 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
   <section class="container home-latest" aria-labelledby="latest-heading">
     <h2 id="latest-heading">Latest articles</h2>
     <PostList posts={posts.slice(0, 8)} heading="h3" />
-    <p><a class="btn" href="/posts/">Browse all articles <span aria-hidden="true">→</span></a></p>
+    <p class="home-latest-cta"><a class="btn" href="/posts/">Browse all articles <span aria-hidden="true">→</span></a></p>
   </section>
   <section class="container home-streams" aria-labelledby="streams-heading">
-    <div class="home-streams-heading">
-      <div>
-        <p class="eyebrow">From the studio</p>
-        <h2 id="streams-heading">Recent live streams</h2>
-      </div>
-      <a href="/live-streams/">View the archive <span aria-hidden="true">→</span></a>
-    </div>
+    <p class="eyebrow">From the studio</p>
+    <h2 id="streams-heading">Recent live streams</h2>
     <div class="grid stream-grid">
       {recentStreams.map((stream) => (
         <article class="card">
@@ -65,6 +60,7 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
         </article>
       ))}
     </div>
+    <p class="home-streams-cta"><a class="btn" href="/live-streams/">View the archive <span aria-hidden="true">→</span></a></p>
   </section>
   <section class="container home-creator-hub" aria-labelledby="creator-heading">
     <p class="eyebrow">Creator hub</p>
@@ -125,19 +121,11 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
   .home-newsletter {
     padding-block: clamp(1.25rem, 4vw, 3rem);
   }
-  .home-streams-heading {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 0.75rem;
+  .home-latest-cta,
+  .home-streams-cta {
+    text-align: right;
   }
   .home-creator-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-  }
-  @media (max-width: 760px) {
-    .home-streams-heading {
-      align-items: start;
-      flex-direction: column;
-    }
   }
 </style>
