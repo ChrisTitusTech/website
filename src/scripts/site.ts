@@ -1,3 +1,6 @@
+import checkIcon from "../icons/check.svg?raw";
+import errorIcon from "../icons/error.svg?raw";
+
 const root = document.documentElement;
 
 function syncThemeControl() {
@@ -110,17 +113,26 @@ document
     heading.prepend(link);
   });
 
-document
-  .querySelector<HTMLButtonElement>("[data-copy-page]")
-  ?.addEventListener("click", async (event) => {
-    const button = event.currentTarget as HTMLButtonElement;
+const copyButton =
+  document.querySelector<HTMLButtonElement>("[data-copy-page]");
+if (copyButton) {
+  const defaultLabel = copyButton.getAttribute("aria-label") ?? "Copy link";
+  const defaultIcon = copyButton.innerHTML;
+  copyButton.addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText(location.href);
-      button.textContent = "Link copied";
+      copyButton.innerHTML = checkIcon;
+      copyButton.setAttribute("aria-label", "Link copied");
     } catch {
-      button.textContent = "Copy failed";
+      copyButton.innerHTML = errorIcon;
+      copyButton.setAttribute("aria-label", "Copy failed");
     }
+    setTimeout(() => {
+      copyButton.innerHTML = defaultIcon;
+      copyButton.setAttribute("aria-label", defaultLabel);
+    }, 1600);
   });
+}
 
 const tocLinks = [
   ...document.querySelectorAll<HTMLAnchorElement>("[data-toc] a"),
@@ -192,6 +204,20 @@ if (comments && "IntersectionObserver" in window) {
     { rootMargin: "500px" },
   );
   observer.observe(comments);
+}
+
+const backToTop =
+  document.querySelector<HTMLButtonElement>("[data-back-to-top]");
+if (backToTop) {
+  const syncVisibility = () => {
+    backToTop.hidden = scrollY < 600;
+  };
+  addEventListener("scroll", syncVisibility, { passive: true });
+  syncVisibility();
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  backToTop.addEventListener("click", () => {
+    scrollTo({ top: 0, behavior: reducedMotion.matches ? "auto" : "smooth" });
+  });
 }
 
 function loadAds() {

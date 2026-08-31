@@ -141,7 +141,7 @@ test("responsive article navigation follows viewport changes", async ({
   await expect(toc.locator("[data-toc]")).toBeVisible();
 });
 
-test("article table of contents stays pinned while scrolling on desktop", async ({
+test("article table of contents scrolls away with the page on desktop", async ({
   page,
   isMobile,
 }) => {
@@ -149,9 +149,9 @@ test("article table of contents stays pinned while scrolling on desktop", async 
   await page.setViewportSize({ width: 1200, height: 800 });
   await page.goto("/my-ai-workflow/");
   const toc = page.locator(".article-toc");
-  await expect(toc).toHaveCSS("position", "sticky");
-  const stickyTop = await toc.evaluate((element) =>
-    Number.parseFloat(getComputedStyle(element).top),
+  await expect(toc).not.toHaveCSS("position", "sticky");
+  const initialTop = await toc.evaluate(
+    (element) => element.getBoundingClientRect().top,
   );
   await page.evaluate(() => window.scrollTo(0, 600));
   await expect
@@ -159,7 +159,7 @@ test("article table of contents stays pinned while scrolling on desktop", async 
     .toBeGreaterThan(0);
   await expect
     .poll(() => toc.evaluate((element) => element.getBoundingClientRect().top))
-    .toBeCloseTo(stickyTop, 0);
+    .toBeLessThan(initialTop);
 });
 
 test("live archive paginates and validates player ids", async ({ page }) => {

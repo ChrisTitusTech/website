@@ -14,6 +14,7 @@ interface Props {
   previous?: string;
   next?: string;
   feed?: string;
+  backToTop?: boolean;
 }
 
 const {
@@ -28,6 +29,7 @@ const {
   previous,
   next,
   feed,
+  backToTop = false,
 } = Astro.props;
 const pageTitle = title === site.title ? title : `${title} | ${site.name}`;
 const canonicalUrl = new URL(canonical, site.url).toString();
@@ -127,6 +129,7 @@ const structuredData = JSON.stringify({
     <footer class="site-footer">
       <div class="container"><div class="footer-links"><a href="https://forum.christitus.com/">Forums</a><a href="/recommendations/">Recommendations</a><a href="/archive/">Archive</a><a href="/rss/">RSS</a><a href="https://youtube.com/@christitustech">YouTube</a><a href="https://twitch.tv/christitustech">Twitch</a><a href="https://github.com/christitustech">GitHub</a><a href="/privacy/">Privacy</a><a href="/refund/">Refunds</a><a href="/terms-conditions/">Terms</a></div><p>© {new Date().getFullYear()} Chris Titus Tech</p></div>
     </footer>
+    {backToTop && <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></button>}
     <script>
       import "../scripts/site.ts";
     </script>
