@@ -256,6 +256,15 @@ h2 {
   border-radius: var(--radius);
   overflow: clip;
   box-shadow: var(--shadow);
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 14px 32px rgb(0 0 0 / 20%);
+  transform: translateY(-3px);
 }
 .card img {
   width: 100%;
