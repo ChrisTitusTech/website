@@ -594,6 +594,7 @@ a.pagination-box:hover {
   background: var(--accent);
   color: var(--accent-ink);
   font-weight: 700;
+  border-radius: 8px;
 }
 a.pagination-box.pagination-edge:hover {
   background: var(--accent-strong);
