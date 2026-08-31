@@ -80,7 +80,7 @@ test("listing cards use the compact mobile layout", async ({ page }) => {
   await page.setViewportSize({ width: 900, height: 900 });
   await expect(firstCard.locator(".card-body > p:not(.meta)")).toBeVisible();
   await expect(firstCard.locator(".card-body > .chips")).toBeVisible();
-  await expect(firstCard).toHaveCSS("display", "block");
+  await expect(firstCard).toHaveCSS("display", "flex");
   await expect(firstCard.locator("img")).toHaveCSS("aspect-ratio", "16 / 9");
   expect(
     await firstCard.locator("img").evaluate((image) => image.clientWidth),
