@@ -3,4 +3,4 @@ interface Props { page: number; pages: number; base: string }
 const { page, pages, base } = Astro.props;
 const route = (value: number) => value === 1 ? base : `${base}page/${value}/`;
 ---
-{pages > 1 && <nav class="pagination" aria-label="Pagination"><span>{page > 1 && <a rel="prev" href={route(page - 1)}>← Newer</a>}</span><span>Page {page} of {pages}</span><span>{page < pages && <a rel="next" href={route(page + 1)}>Older →</a>}</span></nav>}
+{pages > 1 && <nav class="pagination" aria-label="Pagination"><span class="pagination-slot">{page > 1 && <a class="pagination-box" rel="prev" href={route(page - 1)}>← Newer</a>}</span><span class="pagination-box pagination-status">Page {page} of {pages}</span><span class="pagination-slot">{page < pages && <a class="pagination-box" rel="next" href={route(page + 1)}>Older →</a>}</span></nav>}
