@@ -39,7 +39,7 @@
     "astro": "7.2.4",
     "fast-glob": "3.3.3",
     "gray-matter": "4.0.3",
-    "markdown-it": "15.0.0",
+    "markdown-it": "15.0.1",
     "reading-time": "1.5.0",
     "sanitize-html": "2.17.7",
     "yaml": "2.9.0"
