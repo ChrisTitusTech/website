@@ -112,17 +112,27 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
 
 <style>
   .home-hero {
-    padding-top: clamp(1.75rem, 5vw, 4rem);
-    padding-bottom: clamp(1.25rem, 4vw, 3rem);
+    padding-top: clamp(0.5rem, 1.5vw, 1rem);
   }
+  .home-featured,
   .home-topics,
+  .home-latest,
   .home-streams,
   .home-creator-hub,
   .home-newsletter {
-    padding-block: clamp(1.25rem, 4vw, 3rem);
+    padding-top: 28px;
+  }
+  .home-featured h2,
+  .home-topics h2,
+  .home-latest h2,
+  .home-streams h2,
+  .home-creator-hub h2,
+  .home-newsletter h2 {
+    margin-top: 0;
   }
   .home-latest-cta,
   .home-streams-cta {
+    margin-bottom: 0;
     text-align: right;
   }
   .home-creator-grid {
