@@ -49,7 +49,7 @@ const recentStreams = livestreams.items.filter((stream) => /^[A-Za-z0-9_-]{6,16}
     <h2 id="streams-heading">Recent live streams</h2>
     <div class="grid stream-grid">
       {recentStreams.map((stream) => (
-        <article class="card">
+        <article class="card card-link">
           <a href={`/live-streams/player/?v=${stream.videoId}`} aria-hidden="true" tabindex="-1">
             <img src={stream.thumbnail} width="640" height="360" loading="lazy" alt="" />
           </a>

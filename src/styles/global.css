@@ -256,12 +256,14 @@ h2 {
   border-radius: 10px;
   overflow: clip;
   box-shadow: var(--shadow);
+}
+.card-link {
   transition:
     transform 0.15s ease,
     border-color 0.15s ease,
     box-shadow 0.15s ease;
 }
-.card:hover {
+.card-link:hover {
   border-color: var(--accent);
   box-shadow: 0 14px 32px rgb(0 0 0 / 20%);
   transform: translateY(-3px);
@@ -270,9 +272,11 @@ h2 {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+.card-link img {
   transition: transform 0.25s ease;
 }
-.card:hover img {
+.card-link:hover img {
   transform: scale(1.04);
 }
 .card-body {
