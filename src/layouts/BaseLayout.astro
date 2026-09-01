@@ -119,11 +119,34 @@ const structuredData = JSON.stringify({
         <a class="nav-logo" href="/" aria-label="Chris Titus Tech home"><img src="/images/navlogo.webp" width="248" height="50" alt="Chris Titus Tech" /></a>
         <button class="menu-button icon-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-links"><span class="menu-icon" aria-hidden="true"></span><span class="sr-only">Menu</span></button>
         <div class="nav-links" id="primary-links" data-menu>
-          <a href="/posts/">Articles</a><a href="/downloads/">Downloads</a><a href="https://forum.christitus.com/">Forums</a><a href="/live-streams/">Live</a><a href="/newsletter/">Newsletter</a><a href="/categories/">Topics</a><a href="/search/">Search</a>
+          <a href="/posts/">Articles</a><a href="/downloads/">Downloads</a><a href="https://forum.christitus.com/">Forums</a><a href="/live-streams/">Live</a><a href="/newsletter/">Newsletter</a><a href="/categories/">Topics</a>
+          <button class="icon-button" type="button" data-search-toggle aria-expanded="false" aria-controls="search-panel"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="sr-only">Toggle search</span></button>
           <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to light theme"><span aria-hidden="true" data-theme-icon>☀</span><span class="sr-only">Change color theme</span></button>
           <a href="https://youtube.com/@christitustech">YouTube</a>
         </div>
       </nav>
+      <div class="search-panel" id="search-panel" data-search-panel hidden>
+        <div class="container">
+          <form role="search" data-search-form>
+            <label for="search-query">Search articles</label><div class="search-row">
+              <input
+                id="search-query"
+                name="s"
+                type="search"
+                autocomplete="off"
+                placeholder="Search articles..."
+              /><button type="submit" class="primary-button">Search</button>
+            </div>
+          </form><p class="muted" aria-live="polite" data-search-status>
+            Enter a search term.
+          </p><p class="muted">
+            Need project help? <a
+              href="https://forum.christitus.com/search"
+              data-community-search>Search the community forums</a
+            >.
+          </p><div class="grid" data-search-results></div>
+        </div>
+      </div>
     </header>
     <main id="main"><slot /></main>
     <footer class="site-footer">

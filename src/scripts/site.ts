@@ -51,6 +51,138 @@ menuButton?.addEventListener("click", () => {
   menu?.toggleAttribute("data-open", open);
 });
 
+const searchToggle =
+  document.querySelector<HTMLButtonElement>("[data-search-toggle]");
+const searchPanel =
+  document.querySelector<HTMLElement>("[data-search-panel]");
+const searchForm =
+  document.querySelector<HTMLFormElement>("[data-search-form]");
+const searchInput =
+  document.querySelector<HTMLInputElement>("#search-query");
+const searchStatus =
+  document.querySelector<HTMLElement>("[data-search-status]");
+const searchResults =
+  document.querySelector<HTMLElement>("[data-search-results]");
+const communitySearch = document.querySelector<HTMLAnchorElement>(
+  "[data-community-search]",
+);
+if (searchToggle && searchPanel && searchForm && searchInput) {
+  let searchIndex:
+    | Array<{
+        title: string;
+        tags: string[];
+        categories: string[];
+        contents: string;
+        permalink: string;
+      }>
+    | undefined;
+  let searchGeneration = 0;
+
+  const updateCommunitySearch = (query: string) => {
+    if (!communitySearch) return;
+    communitySearch.href = query
+      ? `https://forum.christitus.com/search?q=${encodeURIComponent(query)}`
+      : "https://forum.christitus.com/search";
+    communitySearch.textContent = query
+      ? `Search the community for “${query}”`
+      : "Search the community forums";
+  };
+
+  const runSearch = async (query: string) => {
+    if (!searchStatus || !searchResults) return;
+    const generation = ++searchGeneration;
+    searchStatus.textContent = "Loading search index...";
+    try {
+      searchIndex ??= await fetch("/index.json").then((response) => {
+        if (!response.ok) throw new Error("Search index failed to load");
+        return response.json();
+      });
+      if (generation !== searchGeneration) return;
+      const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+      const index = searchIndex ?? [];
+      const matches = index
+        .filter((item) => {
+          const value = [
+            item.title,
+            item.contents,
+            ...item.tags,
+            ...item.categories,
+          ]
+            .join(" ")
+            .toLowerCase();
+          return terms.every((term) => value.includes(term));
+        })
+        .slice(0, 50);
+      searchStatus.textContent = matches.length
+        ? `${matches.length} result${matches.length === 1 ? "" : "s"}`
+        : "No results found.";
+      searchResults.replaceChildren(
+        ...matches.map((item) => {
+          const article = document.createElement("article");
+          article.className = "card card-body";
+          const heading = document.createElement("h2");
+          const link = document.createElement("a");
+          link.href = item.permalink;
+          link.textContent = item.title;
+          heading.append(link);
+          article.append(heading);
+          return article;
+        }),
+      );
+    } catch (error) {
+      if (generation === searchGeneration)
+        searchStatus.textContent =
+          error instanceof Error ? error.message : "Search failed.";
+    }
+  };
+
+  const openSearch = () => {
+    searchToggle.setAttribute("aria-expanded", "true");
+    searchPanel.hidden = false;
+    searchInput.focus();
+  };
+  const closeSearch = () => {
+    searchToggle.setAttribute("aria-expanded", "false");
+    searchPanel.hidden = true;
+  };
+
+  searchToggle.addEventListener("click", () => {
+    if (searchPanel.hidden) openSearch();
+    else closeSearch();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !searchPanel.hidden) {
+      closeSearch();
+      searchToggle.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (searchPanel.hidden) return;
+    const target = event.target as Node;
+    if (searchPanel.contains(target) || searchToggle.contains(target)) return;
+    closeSearch();
+  });
+
+  updateCommunitySearch(searchInput.value.trim());
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const query = searchInput.value.trim();
+    updateCommunitySearch(query);
+    if (query) void runSearch(query);
+    else {
+      searchGeneration += 1;
+      searchResults?.replaceChildren();
+      if (searchStatus) searchStatus.textContent = "Enter a search term.";
+    }
+  });
+}
+
+document.querySelectorAll<HTMLElement>("[data-open-search]").forEach((el) => {
+  el.addEventListener("click", () => {
+    searchToggle?.dispatchEvent(new MouseEvent("click"));
+  });
+});
+
 const responsiveToc = document.querySelector<HTMLDetailsElement>(
   "[data-responsive-toc]",
 );
