@@ -216,7 +216,7 @@ test("search returns generated index results", async ({ page, isMobile }) => {
   await expect(page.locator("[data-search-extra]")).toBeVisible();
   await expect(page.locator("[data-search-status]")).toContainText(/result/i);
   await expect(
-    page.locator("[data-search-results] article").first(),
+    page.locator("[data-search-result]").first(),
   ).toBeVisible();
   const communitySearch = page.getByRole("link", {
     name: "Search the community for “Linux”",
@@ -227,7 +227,7 @@ test("search returns generated index results", async ({ page, isMobile }) => {
   );
   await page.getByLabel("Search articles").fill("");
   await expect(page.locator("[data-search-extra]")).toBeHidden();
-  await expect(page.locator("[data-search-results] article")).toHaveCount(0);
+  await expect(page.locator("[data-search-result]")).toHaveCount(0);
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Enter a search term.",
   );
@@ -257,7 +257,7 @@ test("clearing search ignores a delayed completion", async ({
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Enter a search term.",
   );
-  await expect(page.locator("[data-search-results] article")).toHaveCount(0);
+  await expect(page.locator("[data-search-result]")).toHaveCount(0);
 });
 
 test("clicking the search backdrop closes it", async ({ page, isMobile }) => {
