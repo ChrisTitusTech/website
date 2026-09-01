@@ -313,7 +313,6 @@ for (const route of [
   "/live-streams/player/",
   "/newsletter/",
   "/rss/",
-  "/search/",
   "/videos/",
 ])
   addRoute(route);

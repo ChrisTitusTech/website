@@ -49,6 +49,10 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
+html.search-open {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
 body {
   margin: 0;
   background:
@@ -148,10 +152,6 @@ input {
 .nav-links a:hover {
   color: var(--accent);
 }
-.menu-button {
-  display: none;
-  margin-left: auto;
-}
 .menu-icon::before {
   content: "\2630";
   font-size: 1.1em;
@@ -162,6 +162,9 @@ input {
 }
 .icon-button,
 .primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -169,6 +172,28 @@ input {
   padding: 0.38rem 0.65rem;
   cursor: pointer;
   text-decoration: none;
+}
+.icon-button svg {
+  width: 18px;
+  height: 18px;
+}
+.menu-button,
+.search-toggle-mobile,
+.search-toggle-desktop,
+[data-theme-toggle] {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+}
+.menu-button {
+  display: none;
+}
+.search-toggle-mobile {
+  display: none;
+}
+[data-search-toggle][hidden],
+[data-open-search][hidden] {
+  display: none !important;
 }
 .primary-button {
   display: inline-flex;
@@ -182,6 +207,119 @@ input {
 .primary-button:hover {
   background: var(--accent-strong);
   color: var(--accent-ink);
+}
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: min(14vh, 6rem) 1rem 2rem;
+  background: color-mix(in srgb, black 70%, transparent);
+  backdrop-filter: blur(3px);
+}
+.search-overlay[hidden] {
+  display: none;
+}
+.search-dialog {
+  width: min(640px, 100%);
+  max-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  overflow: hidden;
+}
+.search-dialog [data-search-extra]:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-height: 0;
+  overflow: hidden;
+}
+.search-dialog .search-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-dialog .search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+.search-dialog .search-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.search-dialog input[type="search"] {
+  width: 100%;
+  padding: 0.65rem 0.75rem 0.65rem 2.35rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+}
+.search-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+  padding: 0.1rem;
+}
+.search-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    border-color 0.12s ease,
+    background-color 0.12s ease;
+}
+.search-result:hover,
+.search-result:focus-visible {
+  background: var(--surface-2);
+  border-color: var(--accent);
+}
+.search-result-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.search-result-arrow {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 0.12s ease,
+    transform 0.12s ease;
+}
+.search-result-arrow svg {
+  width: 16px;
+  height: 16px;
+}
+.search-result:hover .search-result-arrow,
+.search-result:focus-visible .search-result-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 .back-to-top {
   position: fixed;
@@ -864,6 +1002,9 @@ a.pagination-box.pagination-edge:hover {
   padding-block: clamp(3rem, 10vw, 6rem);
   text-align: center;
 }
+.error-page .lede {
+  margin-inline: auto;
+}
 .error-actions {
   display: flex;
   justify-content: center;
@@ -973,6 +1114,13 @@ a.pagination-box.pagination-edge:hover {
   }
   .js .menu-button {
     display: inline-flex;
+  }
+  .js .search-toggle-mobile {
+    display: inline-flex;
+    margin-left: auto;
+  }
+  .js .nav-links .search-toggle-desktop {
+    display: none;
   }
   .nav-links {
     display: flex;

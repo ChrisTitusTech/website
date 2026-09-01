@@ -207,37 +207,49 @@ test("newsletter retains required subscription contract", async ({ page }) => {
   );
 });
 
-test("search returns generated index results", async ({ page }) => {
-  await page.goto("/search/");
+test("search controls stay hidden when scripting is unavailable", async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto(new URL("/", baseURL!).toString());
+  await expect(page.locator("[data-search-toggle]")).toHaveCount(2);
+  await expect(page.locator("[data-search-toggle]").first()).toBeHidden();
+  await expect(page.locator("[data-search-toggle]").last()).toBeHidden();
+  await page.goto(new URL("/404.html", baseURL!).toString());
+  await expect(page.locator("[data-open-search]")).toBeHidden();
+  await context.close();
+});
+
+test("search returns generated index results", async ({ page, isMobile }) => {
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
+  await expect(page.locator("[data-search-extra]")).toBeHidden();
+  await page.getByLabel("Search articles").fill("Linux");
+  await expect(page.locator("[data-search-extra]")).toBeVisible();
+  await expect(page.locator("[data-search-status]")).toContainText(/result/i);
+  await expect(page.locator("[data-search-result]").first()).toBeVisible();
   const communitySearch = page.getByRole("link", {
-    name: "Search the community forums",
+    name: "Search the community for “Linux”",
   });
   await expect(communitySearch).toHaveAttribute(
     "href",
-    "https://forum.christitus.com/search",
+    "https://forum.christitus.com/search?q=Linux",
   );
-  await page.getByLabel("Search articles").fill("Linux");
-  await page.getByRole("button", { name: "Search" }).click();
-  await expect(page.locator("[data-search-status]")).toContainText(/result/i);
-  await expect(
-    page.locator("[data-search-results] article").first(),
-  ).toBeVisible();
-  await expect(
-    page.getByRole("link", { name: "Search the community for “Linux”" }),
-  ).toHaveAttribute("href", "https://forum.christitus.com/search?q=Linux");
   await page.getByLabel("Search articles").fill("");
-  await page.getByRole("button", { name: "Search" }).click();
-  await expect(page.locator("[data-search-results] article")).toHaveCount(0);
+  await expect(page.locator("[data-search-extra]")).toBeHidden();
+  await expect(page.locator("[data-search-result]")).toHaveCount(0);
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Enter a search term.",
   );
-  await expect(communitySearch).toHaveAttribute(
-    "href",
-    "https://forum.christitus.com/search",
-  );
 });
 
-test("clearing search ignores a delayed completion", async ({ page }) => {
+test("clearing search ignores a delayed completion", async ({
+  page,
+  isMobile,
+}) => {
   let release!: () => void;
   const delayed = new Promise<void>((resolve) => {
     release = resolve;
@@ -246,19 +258,134 @@ test("clearing search ignores a delayed completion", async ({ page }) => {
     await delayed;
     await route.continue();
   });
-  await page.goto("/search/");
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
   await page.getByLabel("Search articles").fill("Linux");
-  await page.getByRole("button", { name: "Search" }).click();
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Loading search index...",
   );
   await page.getByLabel("Search articles").fill("");
-  await page.getByRole("button", { name: "Search" }).click();
   release();
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Enter a search term.",
   );
-  await expect(page.locator("[data-search-results] article")).toHaveCount(0);
+  await expect(page.locator("[data-search-result]")).toHaveCount(0);
+});
+
+test("concurrent searches share the pending index request", async ({
+  page,
+  isMobile,
+}) => {
+  let requestCount = 0;
+  let release!: () => void;
+  const delayed = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/index.json", async (route) => {
+    requestCount += 1;
+    await delayed;
+    await route.continue();
+  });
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
+  const input = page.getByLabel("Search articles");
+  await input.fill("Lin");
+  await expect.poll(() => requestCount).toBe(1);
+  await input.fill("Linux");
+  await page.waitForTimeout(300);
+  expect(requestCount).toBe(1);
+  release();
+  await expect(page.locator("[data-search-result]").first()).toBeVisible();
+});
+
+test("replacing a query invalidates results during the debounce delay", async ({
+  page,
+  isMobile,
+}) => {
+  let release!: () => void;
+  const delayed = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/index.json", async (route) => {
+    await delayed;
+    await route.fulfill({
+      json: [
+        {
+          title: "Linux only",
+          tags: [],
+          categories: [],
+          contents: "",
+          permalink: "/linux/",
+        },
+        {
+          title: "Windows only",
+          tags: [],
+          categories: [],
+          contents: "",
+          permalink: "/windows/",
+        },
+      ],
+    });
+  });
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
+  const input = page.getByLabel("Search articles");
+  await input.fill("Linux");
+  await expect(page.locator("[data-search-status]")).toHaveText(
+    "Loading search index...",
+  );
+  await input.fill("Windows");
+  release();
+  await page.waitForTimeout(100);
+  await expect(page.locator("[data-search-result]")).toHaveCount(0);
+  await expect(page.locator("[data-search-result]")).toHaveText([
+    "Windows only",
+  ]);
+});
+
+test("search traps focus while its extra controls are hidden", async ({
+  page,
+  isMobile,
+}) => {
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
+  const input = page.getByLabel("Search articles");
+  await expect(input).toBeFocused();
+  await page.keyboard.press("Tab");
+  await expect(input).toBeFocused();
+  await page.keyboard.press("Shift+Tab");
+  await expect(input).toBeFocused();
+});
+
+test("search restores focus to a visible toggle after a breakpoint change", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1000, height: 800 });
+  await page.goto("/");
+  const desktopToggle = page.locator(".search-toggle-desktop");
+  const mobileToggle = page.locator(".search-toggle-mobile");
+  await desktopToggle.click();
+  await page.setViewportSize({ width: 900, height: 800 });
+  await expect(desktopToggle).toBeHidden();
+  await expect(mobileToggle).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(mobileToggle).toBeFocused();
+});
+
+test("clicking the search backdrop closes it", async ({ page, isMobile }) => {
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  const toggle = page.getByRole("button", { name: "Toggle search" });
+  await toggle.click();
+  const panel = page.locator("[data-search-panel]");
+  await expect(panel).toBeVisible();
+  await panel.click({ position: { x: 10, y: 10 } });
+  await expect(panel).toBeHidden();
+  await expect(toggle).toHaveAttribute("aria-expanded", "false");
 });
 
 test("homepage and article lists preserve heading levels and lazy images", async ({
@@ -326,11 +453,6 @@ test("taxonomy and head pagination expose complete navigation", async ({
   );
   await page.goto("/my-ai-workflow/");
   await expect(page.locator('link[type="application/rss+xml"]')).toHaveCount(0);
-  await page.goto("/search/");
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
-    "content",
-    "noindex, follow",
-  );
 });
 
 test("downloads provide a first-party CTT Store handoff", async ({ page }) => {

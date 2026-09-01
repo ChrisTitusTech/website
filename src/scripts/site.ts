@@ -1,5 +1,6 @@
 import checkIcon from "../icons/check.svg?raw";
 import errorIcon from "../icons/error.svg?raw";
+import arrowRightIcon from "../icons/arrow-right.svg?raw";
 
 const root = document.documentElement;
 
@@ -50,6 +51,210 @@ menuButton?.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", String(open));
   menu?.toggleAttribute("data-open", open);
 });
+
+const searchToggles = [
+  ...document.querySelectorAll<HTMLButtonElement>("[data-search-toggle]"),
+];
+const searchOpeners = [
+  ...document.querySelectorAll<HTMLElement>("[data-open-search]"),
+];
+const searchPanel = document.querySelector<HTMLElement>("[data-search-panel]");
+const searchDialog = searchPanel?.querySelector<HTMLElement>(".search-dialog");
+const searchForm =
+  document.querySelector<HTMLFormElement>("[data-search-form]");
+const searchInput = document.querySelector<HTMLInputElement>("#search-query");
+const searchExtra = document.querySelector<HTMLElement>("[data-search-extra]");
+const searchStatus = document.querySelector<HTMLElement>(
+  "[data-search-status]",
+);
+const searchResults = document.querySelector<HTMLElement>(
+  "[data-search-results]",
+);
+const communitySearch = document.querySelector<HTMLAnchorElement>(
+  "[data-community-search]",
+);
+if (searchToggles.length && searchPanel && searchForm && searchInput) {
+  type SearchIndexItem = {
+    title: string;
+    tags: string[];
+    categories: string[];
+    contents: string;
+    permalink: string;
+  };
+  let searchIndexPromise: Promise<SearchIndexItem[]> | undefined;
+  let searchGeneration = 0;
+  let searchOpener: HTMLElement | null = null;
+
+  const isTabbable = (element: HTMLElement) =>
+    document.contains(element) &&
+    element.tabIndex >= 0 &&
+    !element.hasAttribute("disabled") &&
+    element.getClientRects().length > 0 &&
+    getComputedStyle(element).visibility !== "hidden";
+
+  const loadSearchIndex = () => {
+    searchIndexPromise ??= fetch("/index.json")
+      .then(async (response) => {
+        if (!response.ok) throw new Error("Search index failed to load");
+        return (await response.json()) as SearchIndexItem[];
+      })
+      .catch((error: unknown) => {
+        searchIndexPromise = undefined;
+        throw error;
+      });
+    return searchIndexPromise;
+  };
+
+  const updateCommunitySearch = (query: string) => {
+    if (!communitySearch) return;
+    communitySearch.href = query
+      ? `https://forum.christitus.com/search?q=${encodeURIComponent(query)}`
+      : "https://forum.christitus.com/search";
+    communitySearch.textContent = query
+      ? `Search the community for “${query}”`
+      : "Search the community forums";
+  };
+
+  const runSearch = async (query: string) => {
+    if (!searchStatus || !searchResults) return;
+    const generation = ++searchGeneration;
+    searchStatus.textContent = "Loading search index...";
+    try {
+      const index = await loadSearchIndex();
+      if (generation !== searchGeneration) return;
+      const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+      const matches = index
+        .filter((item) => {
+          const value = [
+            item.title,
+            item.contents,
+            ...item.tags,
+            ...item.categories,
+          ]
+            .join(" ")
+            .toLowerCase();
+          return terms.every((term) => value.includes(term));
+        })
+        .slice(0, 50);
+      searchStatus.textContent = matches.length
+        ? `${matches.length} result${matches.length === 1 ? "" : "s"}`
+        : "No results found.";
+      searchResults.replaceChildren(
+        ...matches.map((item) => {
+          const link = document.createElement("a");
+          link.className = "search-result";
+          link.dataset.searchResult = "";
+          link.href = item.permalink;
+          const title = document.createElement("span");
+          title.className = "search-result-title";
+          title.textContent = item.title;
+          const arrow = document.createElement("span");
+          arrow.className = "search-result-arrow";
+          arrow.innerHTML = arrowRightIcon;
+          link.append(title, arrow);
+          return link;
+        }),
+      );
+    } catch (error) {
+      if (generation === searchGeneration)
+        searchStatus.textContent =
+          error instanceof Error ? error.message : "Search failed.";
+    }
+  };
+
+  const setTogglesExpanded = (expanded: boolean) => {
+    for (const toggle of searchToggles)
+      toggle.setAttribute("aria-expanded", String(expanded));
+  };
+  let searchDebounce: ReturnType<typeof setTimeout> | undefined;
+  const openSearch = (opener?: HTMLElement) => {
+    searchOpener = opener ?? null;
+    setTogglesExpanded(true);
+    searchPanel.hidden = false;
+    root.classList.add("search-open");
+    clearTimeout(searchDebounce);
+    searchGeneration += 1;
+    searchInput.value = "";
+    if (searchExtra) searchExtra.hidden = true;
+    searchResults?.replaceChildren();
+    if (searchStatus) searchStatus.textContent = "Enter a search term.";
+    updateCommunitySearch("");
+    searchInput.focus({ preventScroll: true });
+  };
+  const closeSearch = () => {
+    setTogglesExpanded(false);
+    searchPanel.hidden = true;
+    root.classList.remove("search-open");
+    clearTimeout(searchDebounce);
+    searchGeneration += 1;
+    const active =
+      searchOpener && isTabbable(searchOpener)
+        ? searchOpener
+        : searchToggles.find(isTabbable);
+    active?.focus({ preventScroll: true });
+    searchOpener = null;
+  };
+
+  for (const toggle of searchToggles) {
+    toggle.addEventListener("click", () => {
+      if (searchPanel.hidden) openSearch(toggle);
+      else closeSearch();
+    });
+  }
+  document.addEventListener("keydown", (event) => {
+    if (searchPanel.hidden) return;
+    if (event.key === "Escape") {
+      closeSearch();
+      return;
+    }
+    if (event.key !== "Tab" || !searchDialog) return;
+    const focusable = [
+      ...searchDialog.querySelectorAll<HTMLElement>(
+        "a[href], button:not([disabled]), input:not([disabled])",
+      ),
+    ].filter(isTabbable);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  searchPanel.addEventListener("click", (event) => {
+    if (event.target === searchPanel) closeSearch();
+  });
+
+  updateCommunitySearch(searchInput.value.trim());
+  searchInput.addEventListener("input", () => {
+    clearTimeout(searchDebounce);
+    searchGeneration += 1;
+    const query = searchInput.value.trim();
+    updateCommunitySearch(query);
+    if (searchExtra) searchExtra.hidden = !query;
+    if (!query) {
+      searchResults?.replaceChildren();
+      if (searchStatus) searchStatus.textContent = "Enter a search term.";
+      return;
+    }
+    searchDebounce = setTimeout(() => void runSearch(query), 200);
+  });
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    clearTimeout(searchDebounce);
+    const query = searchInput.value.trim();
+    if (query) void runSearch(query);
+  });
+
+  searchOpeners.forEach((el) => {
+    el.addEventListener("click", () => openSearch(el));
+  });
+  for (const control of [...searchToggles, ...searchOpeners])
+    control.hidden = false;
+}
 
 const responsiveToc = document.querySelector<HTMLDetailsElement>(
   "[data-responsive-toc]",

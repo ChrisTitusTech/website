@@ -103,8 +103,9 @@
 ## URL, metadata, and integration boundaries
 
 - Preserve canonical posts/pages, homepage and taxonomy pagination, legacy
-  aliases, `/search/`, `/index.json`, `/index.xml`, taxonomy feeds,
-  `/sitemap.xml`, `/live-streams/`, and `/live-streams/player/?v=...`.
+  aliases, `/index.json`, `/index.xml`, taxonomy feeds, `/sitemap.xml`,
+  `/live-streams/`, and `/live-streams/player/?v=...`. Search is a header
+  dropdown, not a standalone route; `/search/` is not a page.
 - Redirect the empty historical `/videos/` page to the YouTube channel.
 - Keep supported path rules in `public/_redirects`. Configure `www`
   canonicalization as a Cloudflare zone redirect, not
