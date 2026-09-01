@@ -48,10 +48,10 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
-  scrollbar-gutter: stable;
 }
 html.search-open {
   overflow: hidden;
+  scrollbar-gutter: stable;
 }
 body {
   margin: 0;
