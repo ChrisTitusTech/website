@@ -219,7 +219,6 @@ test("search returns generated index results", async ({ page, isMobile }) => {
     "https://forum.christitus.com/search",
   );
   await page.getByLabel("Search articles").fill("Linux");
-  await page.getByRole("button", { name: "Search", exact: true }).click();
   await expect(page.locator("[data-search-status]")).toContainText(/result/i);
   await expect(
     page.locator("[data-search-results] article").first(),
@@ -228,7 +227,6 @@ test("search returns generated index results", async ({ page, isMobile }) => {
     page.getByRole("link", { name: "Search the community for “Linux”" }),
   ).toHaveAttribute("href", "https://forum.christitus.com/search?q=Linux");
   await page.getByLabel("Search articles").fill("");
-  await page.getByRole("button", { name: "Search", exact: true }).click();
   await expect(page.locator("[data-search-results] article")).toHaveCount(0);
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Enter a search term.",
@@ -255,12 +253,10 @@ test("clearing search ignores a delayed completion", async ({
   if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
   await page.getByRole("button", { name: "Toggle search" }).click();
   await page.getByLabel("Search articles").fill("Linux");
-  await page.getByRole("button", { name: "Search", exact: true }).click();
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Loading search index...",
   );
   await page.getByLabel("Search articles").fill("");
-  await page.getByRole("button", { name: "Search", exact: true }).click();
   release();
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Enter a search term.",
