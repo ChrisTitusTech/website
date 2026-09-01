@@ -56,6 +56,7 @@ const searchToggles = [
   ...document.querySelectorAll<HTMLButtonElement>("[data-search-toggle]"),
 ];
 const searchPanel = document.querySelector<HTMLElement>("[data-search-panel]");
+const searchDialog = searchPanel?.querySelector<HTMLElement>(".search-dialog");
 const searchForm =
   document.querySelector<HTMLFormElement>("[data-search-form]");
 const searchInput = document.querySelector<HTMLInputElement>("#search-query");
@@ -174,7 +175,27 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     });
   }
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !searchPanel.hidden) closeSearch();
+    if (searchPanel.hidden) return;
+    if (event.key === "Escape") {
+      closeSearch();
+      return;
+    }
+    if (event.key !== "Tab" || !searchDialog) return;
+    const focusable = [
+      ...searchDialog.querySelectorAll<HTMLElement>(
+        "a[href], button:not([disabled]), input:not([disabled])",
+      ),
+    ];
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
   searchPanel.addEventListener("click", (event) => {
     if (event.target === searchPanel) closeSearch();
