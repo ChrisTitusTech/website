@@ -81,6 +81,7 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
       }>
     | undefined;
   let searchGeneration = 0;
+  let searchOpener: HTMLElement | null = null;
 
   const updateCommunitySearch = (query: string) => {
     if (!communitySearch) return;
@@ -147,7 +148,9 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     for (const toggle of searchToggles)
       toggle.setAttribute("aria-expanded", String(expanded));
   };
-  const openSearch = () => {
+  let searchDebounce: ReturnType<typeof setTimeout> | undefined;
+  const openSearch = (opener?: HTMLElement) => {
+    searchOpener = opener ?? null;
     setTogglesExpanded(true);
     searchPanel.hidden = false;
     clearTimeout(searchDebounce);
@@ -164,13 +167,17 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     searchPanel.hidden = true;
     clearTimeout(searchDebounce);
     searchGeneration += 1;
-    const active = searchToggles.find((toggle) => toggle.offsetParent !== null);
+    const active =
+      searchOpener && document.contains(searchOpener)
+        ? searchOpener
+        : searchToggles.find((toggle) => toggle.offsetParent !== null);
     active?.focus();
+    searchOpener = null;
   };
 
   for (const toggle of searchToggles) {
     toggle.addEventListener("click", () => {
-      if (searchPanel.hidden) openSearch();
+      if (searchPanel.hidden) openSearch(toggle);
       else closeSearch();
     });
   }
@@ -201,7 +208,6 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     if (event.target === searchPanel) closeSearch();
   });
 
-  let searchDebounce: ReturnType<typeof setTimeout> | undefined;
   updateCommunitySearch(searchInput.value.trim());
   searchInput.addEventListener("input", () => {
     clearTimeout(searchDebounce);
@@ -222,13 +228,13 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     const query = searchInput.value.trim();
     if (query) void runSearch(query);
   });
-}
 
-document.querySelectorAll<HTMLElement>("[data-open-search]").forEach((el) => {
-  el.addEventListener("click", () => {
-    searchToggles[0]?.dispatchEvent(new MouseEvent("click"));
-  });
-});
+  document
+    .querySelectorAll<HTMLElement>("[data-open-search]")
+    .forEach((el) => {
+      el.addEventListener("click", () => openSearch(el));
+    });
+}
 
 const responsiveToc = document.querySelector<HTMLDetailsElement>(
   "[data-responsive-toc]",
