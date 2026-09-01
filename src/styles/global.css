@@ -191,6 +191,10 @@ input {
 .search-toggle-mobile {
   display: none;
 }
+[data-search-toggle][hidden],
+[data-open-search][hidden] {
+  display: none !important;
+}
 .primary-button {
   display: inline-flex;
   justify-content: center;

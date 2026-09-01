@@ -119,11 +119,11 @@ const structuredData = JSON.stringify({
     <header class="site-header">
       <nav class="nav container" aria-label="Primary navigation">
         <a class="nav-logo" href="/" aria-label="Chris Titus Tech home"><img src="/images/navlogo.webp" width="248" height="50" alt="Chris Titus Tech" /></a>
-        <button class="icon-button search-toggle-mobile" type="button" data-search-toggle aria-expanded="false" aria-controls="search-panel"><Fragment set:html={searchIcon} /><span class="sr-only">Toggle search</span></button>
+        <button class="icon-button search-toggle-mobile" type="button" data-search-toggle aria-expanded="false" aria-controls="search-panel" hidden><Fragment set:html={searchIcon} /><span class="sr-only">Toggle search</span></button>
         <button class="menu-button icon-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-links"><span class="menu-icon" aria-hidden="true"></span><span class="sr-only">Menu</span></button>
         <div class="nav-links" id="primary-links" data-menu>
           <a href="/posts/">Articles</a><a href="/downloads/">Downloads</a><a href="https://forum.christitus.com/">Forums</a><a href="/live-streams/">Live</a><a href="/newsletter/">Newsletter</a><a href="/categories/">Topics</a>
-          <button class="icon-button search-toggle-desktop" type="button" data-search-toggle aria-expanded="false" aria-controls="search-panel"><Fragment set:html={searchIcon} /><span class="sr-only">Toggle search</span></button>
+          <button class="icon-button search-toggle-desktop" type="button" data-search-toggle aria-expanded="false" aria-controls="search-panel" hidden><Fragment set:html={searchIcon} /><span class="sr-only">Toggle search</span></button>
           <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to light theme"><span aria-hidden="true" data-theme-icon>☀</span><span class="sr-only">Change color theme</span></button>
           <a href="https://youtube.com/@christitustech">YouTube</a>
         </div>

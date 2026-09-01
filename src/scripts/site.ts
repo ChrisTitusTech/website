@@ -55,6 +55,9 @@ menuButton?.addEventListener("click", () => {
 const searchToggles = [
   ...document.querySelectorAll<HTMLButtonElement>("[data-search-toggle]"),
 ];
+const searchOpeners = [
+  ...document.querySelectorAll<HTMLElement>("[data-open-search]"),
+];
 const searchPanel = document.querySelector<HTMLElement>("[data-search-panel]");
 const searchDialog = searchPanel?.querySelector<HTMLElement>(".search-dialog");
 const searchForm =
@@ -246,9 +249,11 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     if (query) void runSearch(query);
   });
 
-  document.querySelectorAll<HTMLElement>("[data-open-search]").forEach((el) => {
+  searchOpeners.forEach((el) => {
     el.addEventListener("click", () => openSearch(el));
   });
+  for (const control of [...searchToggles, ...searchOpeners])
+    control.hidden = false;
 }
 
 const responsiveToc = document.querySelector<HTMLDetailsElement>(

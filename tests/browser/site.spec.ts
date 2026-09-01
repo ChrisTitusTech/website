@@ -207,6 +207,21 @@ test("newsletter retains required subscription contract", async ({ page }) => {
   );
 });
 
+test("search controls stay hidden when scripting is unavailable", async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.goto(new URL("/", baseURL!).toString());
+  await expect(page.locator("[data-search-toggle]")).toHaveCount(2);
+  await expect(page.locator("[data-search-toggle]").first()).toBeHidden();
+  await expect(page.locator("[data-search-toggle]").last()).toBeHidden();
+  await page.goto(new URL("/404.html", baseURL!).toString());
+  await expect(page.locator("[data-open-search]")).toBeHidden();
+  await context.close();
+});
+
 test("search returns generated index results", async ({ page, isMobile }) => {
   await page.goto("/");
   if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
