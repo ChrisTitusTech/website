@@ -169,6 +169,10 @@ input {
   cursor: pointer;
   text-decoration: none;
 }
+.icon-button svg {
+  width: 18px;
+  height: 18px;
+}
 .menu-button,
 .search-toggle-mobile,
 .search-toggle-desktop,
@@ -242,6 +246,11 @@ input {
   transform: translateY(-50%);
   color: var(--muted);
   pointer-events: none;
+}
+.search-dialog .search-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 .search-dialog input[type="search"] {
   width: 100%;
