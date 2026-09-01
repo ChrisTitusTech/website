@@ -71,17 +71,36 @@ const communitySearch = document.querySelector<HTMLAnchorElement>(
   "[data-community-search]",
 );
 if (searchToggles.length && searchPanel && searchForm && searchInput) {
-  let searchIndex:
-    | Array<{
-        title: string;
-        tags: string[];
-        categories: string[];
-        contents: string;
-        permalink: string;
-      }>
-    | undefined;
+  type SearchIndexItem = {
+    title: string;
+    tags: string[];
+    categories: string[];
+    contents: string;
+    permalink: string;
+  };
+  let searchIndexPromise: Promise<SearchIndexItem[]> | undefined;
   let searchGeneration = 0;
   let searchOpener: HTMLElement | null = null;
+
+  const isTabbable = (element: HTMLElement) =>
+    document.contains(element) &&
+    element.tabIndex >= 0 &&
+    !element.hasAttribute("disabled") &&
+    element.getClientRects().length > 0 &&
+    getComputedStyle(element).visibility !== "hidden";
+
+  const loadSearchIndex = () => {
+    searchIndexPromise ??= fetch("/index.json")
+      .then(async (response) => {
+        if (!response.ok) throw new Error("Search index failed to load");
+        return (await response.json()) as SearchIndexItem[];
+      })
+      .catch((error: unknown) => {
+        searchIndexPromise = undefined;
+        throw error;
+      });
+    return searchIndexPromise;
+  };
 
   const updateCommunitySearch = (query: string) => {
     if (!communitySearch) return;
@@ -98,13 +117,9 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     const generation = ++searchGeneration;
     searchStatus.textContent = "Loading search index...";
     try {
-      searchIndex ??= await fetch("/index.json").then((response) => {
-        if (!response.ok) throw new Error("Search index failed to load");
-        return response.json();
-      });
+      const index = await loadSearchIndex();
       if (generation !== searchGeneration) return;
       const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
-      const index = searchIndex ?? [];
       const matches = index
         .filter((item) => {
           const value = [
@@ -170,9 +185,9 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     clearTimeout(searchDebounce);
     searchGeneration += 1;
     const active =
-      searchOpener && document.contains(searchOpener)
+      searchOpener && isTabbable(searchOpener)
         ? searchOpener
-        : searchToggles.find((toggle) => toggle.offsetParent !== null);
+        : searchToggles.find(isTabbable);
     active?.focus({ preventScroll: true });
     searchOpener = null;
   };
@@ -194,7 +209,7 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
       ...searchDialog.querySelectorAll<HTMLElement>(
         "a[href], button:not([disabled]), input:not([disabled])",
       ),
-    ];
+    ].filter(isTabbable);
     if (!focusable.length) return;
     const first = focusable[0];
     const last = focusable[focusable.length - 1];

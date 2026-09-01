@@ -258,6 +258,63 @@ test("clearing search ignores a delayed completion", async ({
   await expect(page.locator("[data-search-result]")).toHaveCount(0);
 });
 
+test("concurrent searches share the pending index request", async ({
+  page,
+  isMobile,
+}) => {
+  let requestCount = 0;
+  let release!: () => void;
+  const delayed = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/index.json", async (route) => {
+    requestCount += 1;
+    await delayed;
+    await route.continue();
+  });
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
+  const input = page.getByLabel("Search articles");
+  await input.fill("Lin");
+  await expect.poll(() => requestCount).toBe(1);
+  await input.fill("Linux");
+  await page.waitForTimeout(300);
+  expect(requestCount).toBe(1);
+  release();
+  await expect(page.locator("[data-search-result]").first()).toBeVisible();
+});
+
+test("search traps focus while its extra controls are hidden", async ({
+  page,
+  isMobile,
+}) => {
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
+  const input = page.getByLabel("Search articles");
+  await expect(input).toBeFocused();
+  await page.keyboard.press("Tab");
+  await expect(input).toBeFocused();
+  await page.keyboard.press("Shift+Tab");
+  await expect(input).toBeFocused();
+});
+
+test("search restores focus to a visible toggle after a breakpoint change", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1000, height: 800 });
+  await page.goto("/");
+  const desktopToggle = page.locator(".search-toggle-desktop");
+  const mobileToggle = page.locator(".search-toggle-mobile");
+  await desktopToggle.click();
+  await page.setViewportSize({ width: 900, height: 800 });
+  await expect(desktopToggle).toBeHidden();
+  await expect(mobileToggle).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(mobileToggle).toBeFocused();
+});
+
 test("clicking the search backdrop closes it", async ({ page, isMobile }) => {
   await page.goto("/");
   if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
