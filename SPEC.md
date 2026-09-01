@@ -57,9 +57,9 @@ site.
   related posts, lazy ads, and lazy Utterances comments.
 - List, category, and tag pages use ten posts per page and retain Hugo-compatible
   pagination routes. Page-one aliases redirect to the canonical list URL.
-- Search accepts `/search/?s=<query>`, fetches `/index.json` on demand, searches
-  title/content/tags/categories, and exposes loading, results, empty, and error
-  states accessibly.
+- Search opens as a dropdown panel from the header on any page, fetches
+  `/index.json` on demand, searches title/content/tags/categories, and exposes
+  loading, results, empty, and error states accessibly.
 - Archive, RSS directory, downloads, newsletter, recommendations, privacy,
   refund, terms, and 404 pages use the shared redesigned shell.
 
