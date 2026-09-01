@@ -162,6 +162,9 @@ input {
 }
 .icon-button,
 .primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -169,6 +172,9 @@ input {
   padding: 0.38rem 0.65rem;
   cursor: pointer;
   text-decoration: none;
+}
+.search-toggle-mobile {
+  display: none;
 }
 .primary-button {
   display: inline-flex;
@@ -183,40 +189,56 @@ input {
   background: var(--accent-strong);
   color: var(--accent-ink);
 }
-.search-panel {
-  position: absolute;
-  inset-inline: 0;
-  top: 100%;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
-  box-shadow: var(--shadow);
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: min(14vh, 6rem) 1rem 2rem;
+  background: color-mix(in srgb, black 70%, transparent);
+  backdrop-filter: blur(3px);
 }
-.search-panel[hidden] {
+.search-overlay[hidden] {
   display: none;
 }
-.search-panel .container {
+.search-dialog {
+  width: min(640px, 100%);
+  max-height: 75vh;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  padding-block: 1rem 1.25rem;
-}
-.search-panel label {
-  font-weight: 700;
-}
-.search-panel .search-row {
-  display: flex;
-  gap: 0.5rem;
-}
-.search-panel input[type="search"] {
-  flex: 1;
-  padding: 0.5rem 0.65rem;
   border: 1px solid var(--border);
+  border-radius: var(--radius);
   background: var(--surface);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  overflow: hidden;
+}
+.search-dialog .search-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-dialog .search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+}
+.search-dialog input[type="search"] {
+  width: 100%;
+  padding: 0.65rem 0.75rem 0.65rem 2.35rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
   color: var(--text);
   border-radius: var(--radius);
+  font-size: 1.05rem;
 }
-.search-panel [data-search-results] {
-  max-height: min(60vh, 520px);
+.search-dialog [data-search-results] {
   overflow-y: auto;
 }
 .back-to-top {
@@ -1009,6 +1031,13 @@ a.pagination-box.pagination-edge:hover {
   }
   .js .menu-button {
     display: inline-flex;
+  }
+  .js .search-toggle-mobile {
+    display: inline-flex;
+    margin-left: auto;
+  }
+  .js .nav-links .search-toggle-desktop {
+    display: none;
   }
   .nav-links {
     display: flex;

@@ -51,8 +51,9 @@ menuButton?.addEventListener("click", () => {
   menu?.toggleAttribute("data-open", open);
 });
 
-const searchToggle =
-  document.querySelector<HTMLButtonElement>("[data-search-toggle]");
+const searchToggles = [
+  ...document.querySelectorAll<HTMLButtonElement>("[data-search-toggle]"),
+];
 const searchPanel =
   document.querySelector<HTMLElement>("[data-search-panel]");
 const searchForm =
@@ -66,7 +67,7 @@ const searchResults =
 const communitySearch = document.querySelector<HTMLAnchorElement>(
   "[data-community-search]",
 );
-if (searchToggle && searchPanel && searchForm && searchInput) {
+if (searchToggles.length && searchPanel && searchForm && searchInput) {
   let searchIndex:
     | Array<{
         title: string;
@@ -136,50 +137,62 @@ if (searchToggle && searchPanel && searchForm && searchInput) {
     }
   };
 
+  const setTogglesExpanded = (expanded: boolean) => {
+    for (const toggle of searchToggles)
+      toggle.setAttribute("aria-expanded", String(expanded));
+  };
   const openSearch = () => {
-    searchToggle.setAttribute("aria-expanded", "true");
+    setTogglesExpanded(true);
     searchPanel.hidden = false;
     searchInput.focus();
   };
   const closeSearch = () => {
-    searchToggle.setAttribute("aria-expanded", "false");
+    setTogglesExpanded(false);
     searchPanel.hidden = true;
+    const active = searchToggles.find(
+      (toggle) => toggle.offsetParent !== null,
+    );
+    active?.focus();
   };
 
-  searchToggle.addEventListener("click", () => {
-    if (searchPanel.hidden) openSearch();
-    else closeSearch();
-  });
+  for (const toggle of searchToggles) {
+    toggle.addEventListener("click", () => {
+      if (searchPanel.hidden) openSearch();
+      else closeSearch();
+    });
+  }
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !searchPanel.hidden) {
-      closeSearch();
-      searchToggle.focus();
-    }
+    if (event.key === "Escape" && !searchPanel.hidden) closeSearch();
   });
-  document.addEventListener("click", (event) => {
-    if (searchPanel.hidden) return;
-    const target = event.target as Node;
-    if (searchPanel.contains(target) || searchToggle.contains(target)) return;
-    closeSearch();
+  searchPanel.addEventListener("click", (event) => {
+    if (event.target === searchPanel) closeSearch();
   });
 
+  let searchDebounce: ReturnType<typeof setTimeout> | undefined;
   updateCommunitySearch(searchInput.value.trim());
-  searchForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+  searchInput.addEventListener("input", () => {
+    clearTimeout(searchDebounce);
     const query = searchInput.value.trim();
     updateCommunitySearch(query);
-    if (query) void runSearch(query);
-    else {
+    if (!query) {
       searchGeneration += 1;
       searchResults?.replaceChildren();
       if (searchStatus) searchStatus.textContent = "Enter a search term.";
+      return;
     }
+    searchDebounce = setTimeout(() => void runSearch(query), 200);
+  });
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    clearTimeout(searchDebounce);
+    const query = searchInput.value.trim();
+    if (query) void runSearch(query);
   });
 }
 
 document.querySelectorAll<HTMLElement>("[data-open-search]").forEach((el) => {
   el.addEventListener("click", () => {
-    searchToggle?.dispatchEvent(new MouseEvent("click"));
+    searchToggles[0]?.dispatchEvent(new MouseEvent("click"));
   });
 });
 
