@@ -994,6 +994,9 @@ a.pagination-box.pagination-edge:hover {
   padding-block: clamp(3rem, 10vw, 6rem);
   text-align: center;
 }
+.error-page .lede {
+  margin-inline: auto;
+}
 .error-actions {
   display: flex;
   justify-content: center;
