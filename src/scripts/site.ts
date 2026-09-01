@@ -228,11 +228,11 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
   updateCommunitySearch(searchInput.value.trim());
   searchInput.addEventListener("input", () => {
     clearTimeout(searchDebounce);
+    searchGeneration += 1;
     const query = searchInput.value.trim();
     updateCommunitySearch(query);
     if (searchExtra) searchExtra.hidden = !query;
     if (!query) {
-      searchGeneration += 1;
       searchResults?.replaceChildren();
       if (searchStatus) searchStatus.textContent = "Enter a search term.";
       return;

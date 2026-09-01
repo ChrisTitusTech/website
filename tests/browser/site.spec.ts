@@ -285,6 +285,52 @@ test("concurrent searches share the pending index request", async ({
   await expect(page.locator("[data-search-result]").first()).toBeVisible();
 });
 
+test("replacing a query invalidates results during the debounce delay", async ({
+  page,
+  isMobile,
+}) => {
+  let release!: () => void;
+  const delayed = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  await page.route("**/index.json", async (route) => {
+    await delayed;
+    await route.fulfill({
+      json: [
+        {
+          title: "Linux only",
+          tags: [],
+          categories: [],
+          contents: "",
+          permalink: "/linux/",
+        },
+        {
+          title: "Windows only",
+          tags: [],
+          categories: [],
+          contents: "",
+          permalink: "/windows/",
+        },
+      ],
+    });
+  });
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
+  const input = page.getByLabel("Search articles");
+  await input.fill("Linux");
+  await expect(page.locator("[data-search-status]")).toHaveText(
+    "Loading search index...",
+  );
+  await input.fill("Windows");
+  release();
+  await page.waitForTimeout(100);
+  await expect(page.locator("[data-search-result]")).toHaveCount(0);
+  await expect(page.locator("[data-search-result]")).toHaveText([
+    "Windows only",
+  ]);
+});
+
 test("search traps focus while its extra controls are hidden", async ({
   page,
   isMobile,
