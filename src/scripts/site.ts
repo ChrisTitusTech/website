@@ -149,6 +149,8 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
   const openSearch = () => {
     setTogglesExpanded(true);
     searchPanel.hidden = false;
+    clearTimeout(searchDebounce);
+    searchGeneration += 1;
     searchInput.value = "";
     if (searchExtra) searchExtra.hidden = true;
     searchResults?.replaceChildren();
@@ -159,6 +161,8 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
   const closeSearch = () => {
     setTogglesExpanded(false);
     searchPanel.hidden = true;
+    clearTimeout(searchDebounce);
+    searchGeneration += 1;
     const active = searchToggles.find((toggle) => toggle.offsetParent !== null);
     active?.focus();
   };
