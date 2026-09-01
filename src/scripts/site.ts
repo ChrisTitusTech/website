@@ -1,5 +1,6 @@
 import checkIcon from "../icons/check.svg?raw";
 import errorIcon from "../icons/error.svg?raw";
+import arrowRightIcon from "../icons/arrow-right.svg?raw";
 
 const root = document.documentElement;
 
@@ -128,11 +129,10 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
           const title = document.createElement("span");
           title.className = "search-result-title";
           title.textContent = item.title;
-          link.append(title);
-          link.insertAdjacentHTML(
-            "beforeend",
-            '<svg class="search-result-arrow" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>',
-          );
+          const arrow = document.createElement("span");
+          arrow.className = "search-result-arrow";
+          arrow.innerHTML = arrowRightIcon;
+          link.append(title, arrow);
           return link;
         }),
       );

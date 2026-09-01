@@ -295,6 +295,7 @@ input {
   white-space: nowrap;
 }
 .search-result-arrow {
+  display: flex;
   flex-shrink: 0;
   color: var(--accent);
   opacity: 0;
@@ -302,6 +303,10 @@ input {
   transition:
     opacity 0.12s ease,
     transform 0.12s ease;
+}
+.search-result-arrow svg {
+  width: 16px;
+  height: 16px;
 }
 .search-result:hover .search-result-arrow,
 .search-result:focus-visible .search-result-arrow {
