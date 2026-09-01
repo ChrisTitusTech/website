@@ -121,15 +121,19 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
         : "No results found.";
       searchResults.replaceChildren(
         ...matches.map((item) => {
-          const article = document.createElement("article");
-          article.className = "card card-link card-body";
-          const heading = document.createElement("h2");
           const link = document.createElement("a");
+          link.className = "search-result";
+          link.dataset.searchResult = "";
           link.href = item.permalink;
-          link.textContent = item.title;
-          heading.append(link);
-          article.append(heading);
-          return article;
+          const title = document.createElement("span");
+          title.className = "search-result-title";
+          title.textContent = item.title;
+          link.append(title);
+          link.insertAdjacentHTML(
+            "beforeend",
+            '<svg class="search-result-arrow" aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>',
+          );
+          return link;
         }),
       );
     } catch (error) {
