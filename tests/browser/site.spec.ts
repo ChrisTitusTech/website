@@ -207,8 +207,10 @@ test("newsletter retains required subscription contract", async ({ page }) => {
   );
 });
 
-test("search returns generated index results", async ({ page }) => {
-  await page.goto("/search/");
+test("search returns generated index results", async ({ page, isMobile }) => {
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
   const communitySearch = page.getByRole("link", {
     name: "Search the community forums",
   });
@@ -217,7 +219,7 @@ test("search returns generated index results", async ({ page }) => {
     "https://forum.christitus.com/search",
   );
   await page.getByLabel("Search articles").fill("Linux");
-  await page.getByRole("button", { name: "Search" }).click();
+  await page.getByRole("button", { name: "Search", exact: true }).click();
   await expect(page.locator("[data-search-status]")).toContainText(/result/i);
   await expect(
     page.locator("[data-search-results] article").first(),
@@ -226,7 +228,7 @@ test("search returns generated index results", async ({ page }) => {
     page.getByRole("link", { name: "Search the community for “Linux”" }),
   ).toHaveAttribute("href", "https://forum.christitus.com/search?q=Linux");
   await page.getByLabel("Search articles").fill("");
-  await page.getByRole("button", { name: "Search" }).click();
+  await page.getByRole("button", { name: "Search", exact: true }).click();
   await expect(page.locator("[data-search-results] article")).toHaveCount(0);
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Enter a search term.",
@@ -237,7 +239,10 @@ test("search returns generated index results", async ({ page }) => {
   );
 });
 
-test("clearing search ignores a delayed completion", async ({ page }) => {
+test("clearing search ignores a delayed completion", async ({
+  page,
+  isMobile,
+}) => {
   let release!: () => void;
   const delayed = new Promise<void>((resolve) => {
     release = resolve;
@@ -246,14 +251,16 @@ test("clearing search ignores a delayed completion", async ({ page }) => {
     await delayed;
     await route.continue();
   });
-  await page.goto("/search/");
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("button", { name: "Toggle search" }).click();
   await page.getByLabel("Search articles").fill("Linux");
-  await page.getByRole("button", { name: "Search" }).click();
+  await page.getByRole("button", { name: "Search", exact: true }).click();
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Loading search index...",
   );
   await page.getByLabel("Search articles").fill("");
-  await page.getByRole("button", { name: "Search" }).click();
+  await page.getByRole("button", { name: "Search", exact: true }).click();
   release();
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Enter a search term.",
@@ -326,11 +333,6 @@ test("taxonomy and head pagination expose complete navigation", async ({
   );
   await page.goto("/my-ai-workflow/");
   await expect(page.locator('link[type="application/rss+xml"]')).toHaveCount(0);
-  await page.goto("/search/");
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
-    "content",
-    "noindex, follow",
-  );
 });
 
 test("downloads provide a first-party CTT Store handoff", async ({ page }) => {
