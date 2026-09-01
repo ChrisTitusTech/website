@@ -122,7 +122,7 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
       searchResults.replaceChildren(
         ...matches.map((item) => {
           const article = document.createElement("article");
-          article.className = "card card-body";
+          article.className = "card card-link card-body";
           const heading = document.createElement("h2");
           const link = document.createElement("a");
           link.href = item.permalink;
