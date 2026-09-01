@@ -153,6 +153,7 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     searchOpener = opener ?? null;
     setTogglesExpanded(true);
     searchPanel.hidden = false;
+    root.classList.add("search-open");
     clearTimeout(searchDebounce);
     searchGeneration += 1;
     searchInput.value = "";
@@ -160,18 +161,19 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     searchResults?.replaceChildren();
     if (searchStatus) searchStatus.textContent = "Enter a search term.";
     updateCommunitySearch("");
-    searchInput.focus();
+    searchInput.focus({ preventScroll: true });
   };
   const closeSearch = () => {
     setTogglesExpanded(false);
     searchPanel.hidden = true;
+    root.classList.remove("search-open");
     clearTimeout(searchDebounce);
     searchGeneration += 1;
     const active =
       searchOpener && document.contains(searchOpener)
         ? searchOpener
         : searchToggles.find((toggle) => toggle.offsetParent !== null);
-    active?.focus();
+    active?.focus({ preventScroll: true });
     searchOpener = null;
   };
 
