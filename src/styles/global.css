@@ -255,23 +255,29 @@ input {
 .search-results-list {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   overflow-y: auto;
-  margin: 0 -0.5rem;
+  padding: 0.1rem;
 }
 .search-result {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  padding: 0.6rem 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
+  background: var(--surface);
   color: var(--text);
   text-decoration: none;
-  transition: background-color 0.12s ease;
+  transition:
+    border-color 0.12s ease,
+    background-color 0.12s ease;
 }
 .search-result:hover,
 .search-result:focus-visible {
   background: var(--surface-2);
+  border-color: var(--accent);
 }
 .search-result-title {
   min-width: 0;
