@@ -1,0 +1,27 @@
+---
+---
+<div class="search-overlay" id="search-panel" data-search-panel hidden>
+  <div class="search-dialog" role="dialog" aria-modal="true" aria-label="Search">
+    <form role="search" data-search-form>
+      <label for="search-query" class="sr-only">Search articles</label><div class="search-row">
+        <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><input
+          id="search-query"
+          name="s"
+          type="search"
+          autocomplete="off"
+          placeholder="Search articles..."
+        />
+      </div>
+    </form>
+    <div data-search-extra hidden>
+      <p class="muted" aria-live="polite" data-search-status>
+        Enter a search term.
+      </p><div class="search-results-list" data-search-results></div><p class="muted">
+        Need project help? <a
+          href="https://forum.christitus.com/search"
+          data-community-search>Search the community forums</a
+        >.
+      </p>
+    </div>
+  </div>
+</div>
