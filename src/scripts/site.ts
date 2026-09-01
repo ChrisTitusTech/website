@@ -55,18 +55,17 @@ menuButton?.addEventListener("click", () => {
 const searchToggles = [
   ...document.querySelectorAll<HTMLButtonElement>("[data-search-toggle]"),
 ];
-const searchPanel =
-  document.querySelector<HTMLElement>("[data-search-panel]");
+const searchPanel = document.querySelector<HTMLElement>("[data-search-panel]");
 const searchForm =
   document.querySelector<HTMLFormElement>("[data-search-form]");
-const searchInput =
-  document.querySelector<HTMLInputElement>("#search-query");
-const searchExtra =
-  document.querySelector<HTMLElement>("[data-search-extra]");
-const searchStatus =
-  document.querySelector<HTMLElement>("[data-search-status]");
-const searchResults =
-  document.querySelector<HTMLElement>("[data-search-results]");
+const searchInput = document.querySelector<HTMLInputElement>("#search-query");
+const searchExtra = document.querySelector<HTMLElement>("[data-search-extra]");
+const searchStatus = document.querySelector<HTMLElement>(
+  "[data-search-status]",
+);
+const searchResults = document.querySelector<HTMLElement>(
+  "[data-search-results]",
+);
 const communitySearch = document.querySelector<HTMLAnchorElement>(
   "[data-community-search]",
 );
@@ -160,9 +159,7 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
   const closeSearch = () => {
     setTogglesExpanded(false);
     searchPanel.hidden = true;
-    const active = searchToggles.find(
-      (toggle) => toggle.offsetParent !== null,
-    );
+    const active = searchToggles.find((toggle) => toggle.offsetParent !== null);
     active?.focus();
   };
 

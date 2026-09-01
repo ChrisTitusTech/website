@@ -215,9 +215,7 @@ test("search returns generated index results", async ({ page, isMobile }) => {
   await page.getByLabel("Search articles").fill("Linux");
   await expect(page.locator("[data-search-extra]")).toBeVisible();
   await expect(page.locator("[data-search-status]")).toContainText(/result/i);
-  await expect(
-    page.locator("[data-search-result]").first(),
-  ).toBeVisible();
+  await expect(page.locator("[data-search-result]").first()).toBeVisible();
   const communitySearch = page.getByRole("link", {
     name: "Search the community for “Linux”",
   });
