@@ -60,6 +60,8 @@ const searchForm =
   document.querySelector<HTMLFormElement>("[data-search-form]");
 const searchInput =
   document.querySelector<HTMLInputElement>("#search-query");
+const searchExtra =
+  document.querySelector<HTMLElement>("[data-search-extra]");
 const searchStatus =
   document.querySelector<HTMLElement>("[data-search-status]");
 const searchResults =
@@ -144,6 +146,11 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
   const openSearch = () => {
     setTogglesExpanded(true);
     searchPanel.hidden = false;
+    searchInput.value = "";
+    if (searchExtra) searchExtra.hidden = true;
+    searchResults?.replaceChildren();
+    if (searchStatus) searchStatus.textContent = "Enter a search term.";
+    updateCommunitySearch("");
     searchInput.focus();
   };
   const closeSearch = () => {
@@ -174,6 +181,7 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     clearTimeout(searchDebounce);
     const query = searchInput.value.trim();
     updateCommunitySearch(query);
+    if (searchExtra) searchExtra.hidden = !query;
     if (!query) {
       searchGeneration += 1;
       searchResults?.replaceChildren();

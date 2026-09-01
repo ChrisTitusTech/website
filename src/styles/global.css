@@ -148,10 +148,6 @@ input {
 .nav-links a:hover {
   color: var(--accent);
 }
-.menu-button {
-  display: none;
-  margin-left: auto;
-}
 .menu-icon::before {
   content: "\2630";
   font-size: 1.1em;
@@ -172,6 +168,18 @@ input {
   padding: 0.38rem 0.65rem;
   cursor: pointer;
   text-decoration: none;
+}
+.menu-button,
+.search-toggle-mobile,
+.search-toggle-desktop,
+[data-theme-toggle] {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+}
+.menu-button {
+  display: none;
+  margin-left: auto;
 }
 .search-toggle-mobile {
   display: none;
@@ -214,6 +222,13 @@ input {
   background: var(--surface);
   box-shadow: var(--shadow);
   padding: 1rem;
+  overflow: hidden;
+}
+.search-dialog [data-search-extra]:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-height: 0;
   overflow: hidden;
 }
 .search-dialog .search-row {
