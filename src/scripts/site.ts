@@ -229,11 +229,9 @@ if (searchToggles.length && searchPanel && searchForm && searchInput) {
     if (query) void runSearch(query);
   });
 
-  document
-    .querySelectorAll<HTMLElement>("[data-open-search]")
-    .forEach((el) => {
-      el.addEventListener("click", () => openSearch(el));
-    });
+  document.querySelectorAll<HTMLElement>("[data-open-search]").forEach((el) => {
+    el.addEventListener("click", () => openSearch(el));
+  });
 }
 
 const responsiveToc = document.querySelector<HTMLDetailsElement>(
