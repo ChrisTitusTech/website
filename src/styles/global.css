@@ -807,6 +807,9 @@ a.pagination-box.pagination-edge:hover {
   grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.7fr);
   margin-bottom: 1.25rem;
 }
+.stream-feature > a {
+  overflow: clip;
+}
 .stream-feature img {
   height: 100%;
 }
