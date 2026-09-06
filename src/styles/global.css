@@ -152,6 +152,13 @@ input {
 .nav-links a:hover {
   color: var(--accent);
 }
+.nav-utilities {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.8rem;
+  border-left: 1px solid var(--border);
+}
 .menu-icon::before {
   content: "\2630";
   font-size: 1.1em;
@@ -1153,6 +1160,14 @@ a.pagination-box.pagination-edge:hover {
   }
   .nav-links .icon-button {
     align-self: start;
+    padding: 0;
+  }
+  .nav-utilities {
+    margin-top: 0.4rem;
+    padding-left: 0;
+    padding-top: 0.5rem;
+    border-left: none;
+    border-top: 1px solid var(--border);
   }
 }
 @media (max-width: 760px) {
