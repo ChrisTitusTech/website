@@ -177,10 +177,15 @@ input {
   width: 18px;
   height: 18px;
 }
+.icon-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
 .menu-button,
 .search-toggle-mobile,
 .search-toggle-desktop,
-[data-theme-toggle] {
+[data-theme-toggle],
+.nav-social {
   width: 2.25rem;
   height: 2.25rem;
   padding: 0;
