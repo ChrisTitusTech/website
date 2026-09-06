@@ -1021,6 +1021,12 @@ a.pagination-box.pagination-edge:hover {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
 @media (max-width: 940px) {
   .article-shell {
     display: block;
