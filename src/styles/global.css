@@ -1060,6 +1060,10 @@ a.pagination-box.pagination-edge:hover {
   height: 2.25rem;
   padding: 0;
   background: transparent;
+  color: var(--muted);
+}
+.footer-social .icon-button:hover {
+  color: var(--accent);
 }
 .footer-copy {
   font-size: 0.85rem;
