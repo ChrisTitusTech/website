@@ -13,7 +13,7 @@
     "sync": "npm run prepare:content && astro sync",
     "check": "npm run prepare:content && astro check",
     "build": "CONTENT_PREVIEW=0 npm run prepare:content && CONTENT_PREVIEW=0 astro build",
-    "preview": "astro preview",
+    "preview": "ASTRO_PREVIEW_BACKGROUND=0 astro preview",
     "test": "CONTENT_PREVIEW=0 npm run prepare:content && vitest run",
     "test:automation": "python -m unittest discover -s tests/python -p \"test_*.py\" -v",
     "test:watch": "vitest",
@@ -36,7 +36,7 @@
   "dependencies": {
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.4",
-    "astro": "7.2.9",
+    "astro": "7.3.2",
     "fast-glob": "3.3.3",
     "gray-matter": "4.0.3",
     "markdown-it": "15.0.1",
