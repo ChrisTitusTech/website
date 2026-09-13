@@ -304,6 +304,7 @@ test("replacing a query invalidates results during the debounce delay", async ({
   page,
   isMobile,
 }) => {
+  await page.clock.install({ time: new Date("2026-01-01T00:00:00Z") });
   let release!: () => void;
   const delayed = new Promise<void>((resolve) => {
     release = resolve;
@@ -333,14 +334,20 @@ test("replacing a query invalidates results during the debounce delay", async ({
   if (isMobile) await page.getByRole("button", { name: "Menu" }).click();
   await page.getByRole("button", { name: "Toggle search" }).click();
   const input = page.getByLabel("Search articles");
+  await page.clock.pauseAt(new Date("2026-01-01T01:00:00Z"));
   await input.fill("Linux");
+  await page.clock.runFor(200);
   await expect(page.locator("[data-search-status]")).toHaveText(
     "Loading search index...",
   );
   await input.fill("Windows");
+  const response = page.waitForResponse("**/index.json");
   release();
-  await page.waitForTimeout(100);
+  await (await response).finished();
+  // Keep the new query pending while the old response finishes processing.
+  await page.clock.runFor(199);
   await expect(page.locator("[data-search-result]")).toHaveCount(0);
+  await page.clock.runFor(1);
   await expect(page.locator("[data-search-result]")).toHaveText([
     "Windows only",
   ]);
