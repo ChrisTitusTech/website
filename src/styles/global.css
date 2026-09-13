@@ -391,6 +391,7 @@ h2 {
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: var(--radius);
@@ -402,6 +403,12 @@ h2 {
     transform 0.15s ease,
     border-color 0.15s ease,
     box-shadow 0.15s ease;
+}
+.card-link .card-body h2 a::after,
+.card-link .card-body h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 .card-link:hover {
   border-color: var(--accent);
@@ -426,6 +433,8 @@ h2 {
   padding: 0.9rem;
 }
 .card-body .chips {
+  position: relative;
+  z-index: 1;
   margin-top: auto;
   padding-top: 0.5rem;
 }
@@ -797,6 +806,9 @@ a.pagination-box.pagination-edge:hover {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.7fr);
   margin-bottom: 1.25rem;
+}
+.stream-feature > a {
+  overflow: clip;
 }
 .stream-feature img {
   height: 100%;
