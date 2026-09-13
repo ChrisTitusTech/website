@@ -61,6 +61,9 @@
   },
   "overrides": {
     "@puppeteer/browsers": "3.2.0",
+    "markdownlint-cli2": {
+      "smol-toml": "1.8.0"
+    },
     "tmp": "0.2.7",
     "uuid": "11.1.1"
   }

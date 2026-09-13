@@ -3,6 +3,10 @@ import "../styles/global.css";
 import { site } from "../lib/content";
 import SearchDialog from "../components/SearchDialog.astro";
 import searchIcon from "../icons/search.svg?raw";
+import youtubeIcon from "../icons/youtube.svg?raw";
+import twitchIcon from "../icons/twitch.svg?raw";
+import githubIcon from "../icons/github.svg?raw";
+import rssIcon from "../icons/rss.svg?raw";
 
 interface Props {
   title?: string;
@@ -123,16 +127,25 @@ const structuredData = JSON.stringify({
         <button class="menu-button icon-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-links"><span class="menu-icon" aria-hidden="true"></span><span class="sr-only">Menu</span></button>
         <div class="nav-links" id="primary-links" data-menu>
           <a href="/posts/">Articles</a><a href="/downloads/">Downloads</a><a href="https://forum.christitus.com/">Forums</a><a href="/live-streams/">Live</a><a href="/newsletter/">Newsletter</a><a href="/categories/">Topics</a>
-          <button class="icon-button search-toggle-desktop" type="button" data-search-toggle aria-expanded="false" aria-controls="search-panel" hidden><Fragment set:html={searchIcon} /><span class="sr-only">Toggle search</span></button>
-          <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to light theme"><span aria-hidden="true" data-theme-icon>☀</span><span class="sr-only">Change color theme</span></button>
-          <a href="https://youtube.com/@christitustech">YouTube</a>
+          <div class="nav-utilities">
+            <button class="icon-button search-toggle-desktop" type="button" data-search-toggle aria-expanded="false" aria-controls="search-panel" hidden><Fragment set:html={searchIcon} /><span class="sr-only">Toggle search</span></button>
+            <button class="icon-button" type="button" data-theme-toggle aria-label="Switch to light theme"><span aria-hidden="true" data-theme-icon>☀</span><span class="sr-only">Change color theme</span></button>
+            <a class="icon-button nav-social" href="https://youtube.com/@christitustech"><Fragment set:html={youtubeIcon} /><span class="sr-only">YouTube</span></a>
+            <a class="icon-button nav-social" href="https://github.com/christitustech"><Fragment set:html={githubIcon} /><span class="sr-only">GitHub</span></a>
+          </div>
         </div>
       </nav>
     </header>
     <SearchDialog />
     <main id="main"><slot /></main>
     <footer class="site-footer">
-      <div class="container"><div class="footer-links"><a href="https://forum.christitus.com/">Forums</a><a href="/recommendations/">Recommendations</a><a href="/archive/">Archive</a><a href="/rss/">RSS</a><a href="https://youtube.com/@christitustech">YouTube</a><a href="https://twitch.tv/christitustech">Twitch</a><a href="https://github.com/christitustech">GitHub</a><a href="/privacy/">Privacy</a><a href="/refund/">Refunds</a><a href="/terms-conditions/">Terms</a></div><p>© {new Date().getFullYear()} Chris Titus Tech</p></div>
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-links"><a href="https://forum.christitus.com/">Forums</a><a href="/recommendations/">Recommendations</a><a href="/archive/">Archive</a><a href="/privacy/">Privacy</a><a href="/refund/">Refunds</a><a href="/terms-conditions/">Terms</a></div>
+          <div class="footer-social"><a class="icon-button" href="/rss/"><Fragment set:html={rssIcon} /><span class="sr-only">RSS</span></a><a class="icon-button" href="https://youtube.com/@christitustech"><Fragment set:html={youtubeIcon} /><span class="sr-only">YouTube</span></a><a class="icon-button" href="https://twitch.tv/christitustech"><Fragment set:html={twitchIcon} /><span class="sr-only">Twitch</span></a><a class="icon-button" href="https://github.com/christitustech"><Fragment set:html={githubIcon} /><span class="sr-only">GitHub</span></a></div>
+        </div>
+        <p class="footer-copy">© {new Date().getFullYear()} Chris Titus Tech</p>
+      </div>
     </footer>
     {backToTop && <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></button>}
     <script>
