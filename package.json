@@ -52,7 +52,7 @@
     "@types/markdown-it": "14.2.0",
     "@types/node": "26.4.1",
     "@types/sanitize-html": "2.16.1",
-    "markdownlint-cli2": "0.23.2",
+    "markdownlint-cli2": "0.23.3",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
     "proxy-agent": "8.0.2",
