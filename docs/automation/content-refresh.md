@@ -244,6 +244,33 @@ exercised live end to end. See [the curated ledger](content-refresh-pilot.json).
 - Apply evidence: dry-run reported six files; write changed six files; a second
   write returned `already-applied` with zero files.
 
+### Local validation evidence
+
+The complete `npm run validate` gate passed on Linux with Node 24 and an isolated
+Python virtual environment. After review fixes, `npm test` passed 126 tests,
+including 55 updater tests, and formatting and Markdown lint passed again.
+After the mobile wrapping change, the production build and browser checks passed
+again: 123 tests across Chromium, Firefox, mobile emulation, and containerized
+WebKit, with five existing skips. These checks do not substitute for the
+real-device release checks listed above.
+The pinned Lighthouse profile also passed again with three runs on each of its
+four representative routes.
+
+The public explanation and all six changed articles were checked at desktop
+1440 x 1000 and mobile 390 x 844 in dark and light themes. All 28 combinations
+returned successful pages, preserved canonical URLs, and had no document-level
+horizontal overflow or unrendered Hugo shortcodes. Long historical links and
+inline registry paths now wrap without changing their text.
+
+Representative screenshots are preserved for review:
+
+- [Desktop, dark theme](screenshots/firecrawl-desktop-dark.png)
+- [Mobile, light theme](screenshots/firecrawl-mobile-light.png)
+
+The live pilot used the connected import path. Direct Firecrawl and optional
+model adapters were tested with mocked responses; live shell API calls and
+runtime execution of the historical tutorials were not performed.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)
