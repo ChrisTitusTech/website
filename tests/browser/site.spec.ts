@@ -640,11 +640,11 @@ test("known player states render and unknown ids redirect", async ({
   await expect(page.locator("#chat-col")).toBeHidden();
 });
 
-test("legacy redirects resolve", async ({ page }) => {
+test("legacy redirects resolve", async ({ page, baseURL }) => {
   await page.goto("/page/1/");
-  await expect(page).toHaveURL("http://127.0.0.1:4321/");
+  await expect(page).toHaveURL(new URL("/", baseURL!).toString());
   await page.goto("/live-streams/page/1/");
-  await expect(page).toHaveURL("http://127.0.0.1:4321/live-streams/");
+  await expect(page).toHaveURL(new URL("/live-streams/", baseURL!).toString());
 });
 
 test("the not-found page resolves", async ({ page }) => {

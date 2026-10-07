@@ -32,6 +32,10 @@ Focused validation is available through `npm run check`, `npm test`,
 formatting and Markdown-lint rewrites; source, configuration, migration docs,
 and the post template remain enforced.
 
+When another checkout is serving port 4321, run
+`SITE_TEST_PORT=14321 npm run validate` to use a separate local test server.
+Browser validation starts its own server and refuses to reuse an existing one.
+
 ## Create a post
 
 The repository scaffolder is the Astro equivalent of a Hugo archetype. In an
