@@ -36,13 +36,13 @@
   "dependencies": {
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.4",
-    "astro": "7.3.2",
+    "astro": "7.3.3",
     "fast-glob": "3.3.3",
     "gray-matter": "4.0.3",
-    "markdown-it": "15.0.1",
+    "markdown-it": "15.0.2",
     "reading-time": "1.5.0",
     "sanitize-html": "2.17.7",
-    "yaml": "2.9.0"
+    "yaml": "2.9.1"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
@@ -61,8 +61,10 @@
   },
   "overrides": {
     "@puppeteer/browsers": "3.2.0",
+    "basic-ftp": "6.2.2",
+    "katex": "0.19.0",
     "markdownlint-cli2": {
-      "smol-toml": "1.8.0"
+      "smol-toml": "1.9.0"
     },
     "tmp": "0.2.7",
     "uuid": "11.1.1"
