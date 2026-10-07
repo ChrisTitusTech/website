@@ -11,12 +11,16 @@ import { buildInventory, routeKey } from "../route-contract.mjs";
 import { hash, safePath } from "./common.mjs";
 
 const markdown = new MarkdownIt({ html: true, linkify: true });
+// Parse even unsafe schemes for validation; this parser never renders HTML.
+// The site's renderer can recognize destinations MarkdownIt normally rejects.
+markdown.validateLink = () => true;
 
 export function extractLinks(body) {
   const links = new Set();
   const walk = (tokens) => {
     for (const token of tokens) {
       if (token.type === "link_open") links.add(token.attrGet("href"));
+      if (token.type === "image") links.add(token.attrGet("src"));
       if (token.type === "html_block" || token.type === "html_inline")
         for (const match of token.content.matchAll(
           /\bhref\s*=\s*["'](https?:\/\/[^"']+)["']/gi,
@@ -29,7 +33,7 @@ export function extractLinks(body) {
   return [
     ...new Set(
       [...links]
-        .filter((url) => /^(?:https?:\/\/|\/\/)/i.test(url))
+        .filter((url) => /^(?:[a-z][a-z0-9+.-]*:|[\\/]{2})/i.test(url))
         .map((url) => {
           const absolute = url.startsWith("//") ? `https:${url}` : url;
           try {

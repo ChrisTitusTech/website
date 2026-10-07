@@ -176,12 +176,12 @@ describe("production inventory", () => {
     );
     await expect(inventory(root, policy)).rejects.toThrow("Ambiguous");
   });
-  it("does not extract runnable code or image URLs as research links", () => {
+  it("includes image destinations for validation but never extracts code examples", () => {
     expect(
       extractLinks(
         "[docs](https://docs.example.com/guide)\n```sh\ncurl https://evil.test/\n```\n![image](https://evil.test/i.png)",
       ),
-    ).toEqual([sourceUrl]);
+    ).toEqual([sourceUrl, "https://evil.test/i.png"]);
   });
   it("invalidates check history after a content edit", async () => {
     const { root } = await fixture();
@@ -522,10 +522,29 @@ describe("patch approval and recovery", () => {
     "//unapproved.example/download",
     "HTTPS://unapproved.example/download",
     "//docs.example.com/unverified",
+    "javascript:alert(1)",
+    "data:text/html,unsafe",
+    "ftp://unapproved.example/download",
+    "https:unapproved.example/download",
   ])("validates external replacement destination %s", async (url) => {
     const { root, run } = await fixture();
     run.findings = validateFindings(
       { findings: [finding(run, { replacement: `[Download](${url})` })] },
+      run,
+      policy,
+    );
+    await expect(createPatches(root, run, policy)).rejects.toThrow();
+  });
+  it("rejects unverified image destinations", async () => {
+    const { root, run } = await fixture();
+    run.findings = validateFindings(
+      {
+        findings: [
+          finding(run, {
+            replacement: "![Image](https://unapproved.example/tracker.png)",
+          }),
+        ],
+      },
       run,
       policy,
     );
