@@ -4,7 +4,7 @@ import { spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import process from "node:process";
 
-const image = "mcr.microsoft.com/playwright:v1.62.1-noble";
+const image = "mcr.microsoft.com/playwright:v1.63.0-noble";
 const osRelease =
   process.platform === "linux" ? readFileSync("/etc/os-release", "utf8") : "";
 const needsContainer = /^ID=fedora$/m.test(osRelease);

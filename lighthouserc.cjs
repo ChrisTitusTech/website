@@ -1,13 +1,16 @@
+const port = process.env.SITE_TEST_PORT ?? "4321";
+const baseURL = `http://127.0.0.1:${port}`;
+
 module.exports = {
   ci: {
     collect: {
-      startServerCommand: "npm run preview -- --host 127.0.0.1",
-      startServerReadyPattern: "127.0.0.1:4321",
+      startServerCommand: `npm run preview -- --host 127.0.0.1 --port ${port}`,
+      startServerReadyPattern: `127.0.0.1:${port}`,
       url: [
-        "http://127.0.0.1:4321/",
-        "http://127.0.0.1:4321/my-ai-workflow/",
-        "http://127.0.0.1:4321/categories/linux/",
-        "http://127.0.0.1:4321/live-streams/",
+        `${baseURL}/`,
+        `${baseURL}/my-ai-workflow/`,
+        `${baseURL}/categories/linux/`,
+        `${baseURL}/live-streams/`,
       ],
       numberOfRuns: 3,
       settings: {
