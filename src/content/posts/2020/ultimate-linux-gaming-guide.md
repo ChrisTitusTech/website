@@ -79,6 +79,8 @@ sudo pacman -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader li
 
 Official Site: <https://xanmod.org>
 
+> **Update 2026-10-07:** The commands below are the historical setup. [XanMod's current instructions](https://xanmod.org/) use a dedicated keyring with `signed-by` and a distribution codename in the repository entry. Follow those instructions and select the kernel appropriate for your CPU instead of copying this old `apt-key` setup.
+
 ```
 echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list && wget -qO - https://dl.xanmod.org/gpg.key | sudo apt-key add -
 sudo apt update && sudo apt install linux-xanmod -y

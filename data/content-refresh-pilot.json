@@ -1,12 +1,64 @@
 [
-  {"url":"/wsl2/","sources":["https://learn.microsoft.com/en-us/windows/wsl/install"]},
-  {"url":"/windows-update-security-only/","sources":["https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro"]},
-  {"url":"/docker-guide/","sources":["https://docs.docker.com/get-started/get-docker/"]},
-  {"url":"/quickemu/","sources":["https://github.com/quickemu-project/quickemu"]},
-  {"url":"/nix-package-manager/","sources":["https://nix.dev/manual/nix/stable/command-ref/nix-env.html"]},
-  {"url":"/ssh-github/","sources":["https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"]},
-  {"url":"/hugo-guide/","sources":["https://gohugo.io/getting-started/quick-start/"]},
-  {"url":"/zed-editor/","sources":["https://zed.dev/docs/vim"]},
-  {"url":"/ultimate-linux-gaming-guide/","sources":["https://xanmod.org/"]},
-  {"url":"/install-windows-update-powershell/","sources":["https://www.powershellgallery.com/packages/PSWindowsUpdate"]}
+  {
+    "url": "/wsl2/",
+    "sources": [
+      "https://learn.microsoft.com/en-us/windows/wsl/install"
+    ]
+  },
+  {
+    "url": "/windows-update-security-only/",
+    "sources": [
+      "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro"
+    ]
+  },
+  {
+    "url": "/docker-guide/",
+    "sources": [
+      "https://docs.docker.com/get-started/get-docker/",
+      "https://docs.docker.com/get-docker/"
+    ]
+  },
+  {
+    "url": "/quickemu/",
+    "sources": [
+      "https://github.com/quickemu-project/quickemu",
+      "https://github.com/quickemu-project/quickemu/wiki/01-Installation"
+    ]
+  },
+  {
+    "url": "/nix-package-manager/",
+    "sources": [
+      "https://nix.dev/manual/nix/stable/command-ref/nix-env.html"
+    ]
+  },
+  {
+    "url": "/ssh-github/",
+    "sources": [
+      "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+    ]
+  },
+  {
+    "url": "/hugo-guide/",
+    "sources": [
+      "https://gohugo.io/getting-started/quick-start/"
+    ]
+  },
+  {
+    "url": "/zed-editor/",
+    "sources": [
+      "https://zed.dev/docs/vim"
+    ]
+  },
+  {
+    "url": "/ultimate-linux-gaming-guide/",
+    "sources": [
+      "https://xanmod.org/"
+    ]
+  },
+  {
+    "url": "/install-windows-update-powershell/",
+    "sources": [
+      "https://www.powershellgallery.com/packages/PSWindowsUpdate"
+    ]
+  }
 ]

@@ -13,6 +13,8 @@ This article goes over WSL 1 and 2 for Feature Update 2004. This will help you k
 <!--more-->  
 *Source Article: [https://docs.microsoft.com/en-us/windows/wsl/install-win10](https://docs.microsoft.com/en-us/windows/wsl/install-win10) I copy these because Microsoft is notorious for changing URLs and to make additions*
 
+> **Update 2026-10-07:** This is the manual Windows 10 version 2004 walkthrough from 2020. For a new installation on a supported Windows version, follow [Microsoft's current WSL installation guide](https://learn.microsoft.com/en-us/windows/wsl/install), which uses `wsl --install`. Keep the steps below as historical reference.
+
 ## Install the Windows Subsystem for Linux
 
 Before installing any Linux distributions on Windows, you must enable the "Windows Subsystem for Linux" optional feature.  
