@@ -26,7 +26,20 @@ export function extractLinks(body) {
     }
   };
   walk(markdown.parse(body, {}));
-  return [...links].filter((url) => /^https?:\/\//.test(url)).sort();
+  return [
+    ...new Set(
+      [...links]
+        .filter((url) => /^(?:https?:\/\/|\/\/)/i.test(url))
+        .map((url) => {
+          const absolute = url.startsWith("//") ? `https:${url}` : url;
+          try {
+            return new URL(absolute).href;
+          } catch {
+            return absolute;
+          }
+        }),
+    ),
+  ].sort();
 }
 
 export async function inventory(

@@ -32,7 +32,9 @@ export async function createPatches(
   run,
   policy,
   selected = run.findings
-    .filter((f) => f.classification === "confirmed-outdated")
+    .filter(
+      (f) => f.classification === "confirmed-outdated" && f.kind !== "none",
+    )
     .map((f) => f.id),
 ) {
   if (!selected.length || new Set(selected).size !== selected.length)

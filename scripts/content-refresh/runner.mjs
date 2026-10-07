@@ -129,6 +129,11 @@ export async function scan(
           if (
             !capture ||
             capture.provider !== "firecrawl" ||
+            typeof capture.retrievedAt !== "string" ||
+            !/^\d{4}-\d{2}-\d{2}T.*(?:Z|[+-]\d{2}:\d{2})$/.test(
+              capture.retrievedAt,
+            ) ||
+            !Number.isFinite(Date.parse(capture.retrievedAt)) ||
             capture.options?.maxAge !== 0 ||
             capture.options?.onlyMainContent !== true
           )

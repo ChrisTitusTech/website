@@ -90,7 +90,12 @@ export function validateFindings(input, run, policy, now = Date.now()) {
       throw new Error(
         "Historical articles allow notices or link corrections only",
       );
-    if (["current", "historical"].includes(f.classification) && !refs.length)
+    if (
+      ["current", "historical", "confirmed-outdated"].includes(
+        f.classification,
+      ) &&
+      !refs.length
+    )
       throw new Error("A checked claim requires evidence");
     const record = {
       ...f,

@@ -154,7 +154,7 @@ export async function main(args = process.argv.slice(2), root = process.cwd()) {
           });
       await propose(root, run, policy, input);
       const editable = run.findings.filter(
-        (f) => f.classification === "confirmed-outdated",
+        (f) => f.classification === "confirmed-outdated" && f.kind !== "none",
       );
       if (editable.length)
         await writeJson(

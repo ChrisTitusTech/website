@@ -11,6 +11,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import policyFile from "../../data/content-refresh-policy.json";
+import { main } from "../../scripts/content-refresh.mjs";
 import {
   hash,
   publicUrl,
@@ -198,6 +199,22 @@ describe("production inventory", () => {
 });
 
 describe("network and evidence boundaries", () => {
+  it.each([undefined, null, "not-a-date", "2026-10-07"])(
+    "does not assign a new timestamp to an import with %s",
+    async (retrievedAt) => {
+      const { root } = await fixture();
+      const run = await startRun(root, "bad-time", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, {
+        captures: [{ ...capture(), retrievedAt }],
+      });
+      expect(run.status).toBe("partial");
+      expect(run.evidence[hash(sourceUrl).slice(0, 16)].outcome).toBe(
+        "unverifiable",
+      );
+    },
+  );
   it.each([
     "file:///etc/passwd",
     "http://127.0.0.1/",
@@ -358,6 +375,46 @@ describe("network and evidence boundaries", () => {
 });
 
 describe("claim comparison", () => {
+  it("creates a CLI report and patches when report-only and editable findings are mixed", async () => {
+    const { root, run } = await fixture();
+    await mkdir(path.join(root, "data"));
+    await writeFile(
+      path.join(root, "data/content-refresh-policy.json"),
+      JSON.stringify(policy),
+    );
+    const reportOnly = finding(run, {
+      section: "A different confirmed claim",
+      kind: "none",
+      original: "",
+      replacement: "",
+      reason: "Known outdated claim, but no safe replacement yet.",
+    });
+    await writeFile(
+      path.join(root, "findings.json"),
+      JSON.stringify({ findings: [finding(run), reportOnly] }),
+    );
+    await main(
+      ["propose", "--run", "test", "--findings", "findings.json"],
+      root,
+    );
+    const patches = JSON.parse(
+      await readFile(
+        path.join(root, ".content-refresh/runs/test.patches.json"),
+        "utf8",
+      ),
+    );
+    expect(patches).toHaveLength(1);
+    expect(
+      await readFile(path.join(root, ".content-refresh/runs/test.md"), "utf8"),
+    ).toContain("Known outdated claim");
+    expect(() =>
+      validateFindings(
+        { findings: [{ ...reportOnly, evidence: [] }] },
+        run,
+        policy,
+      ),
+    ).toThrow("requires evidence");
+  });
   it("requires exact evidence, context, known fields, and selected articles", async () => {
     const { run } = await fixture();
     for (const update of [
@@ -461,6 +518,32 @@ describe("claim comparison", () => {
 });
 
 describe("patch approval and recovery", () => {
+  it.each([
+    "//unapproved.example/download",
+    "HTTPS://unapproved.example/download",
+    "//docs.example.com/unverified",
+  ])("validates external replacement destination %s", async (url) => {
+    const { root, run } = await fixture();
+    run.findings = validateFindings(
+      { findings: [finding(run, { replacement: `[Download](${url})` })] },
+      run,
+      policy,
+    );
+    await expect(createPatches(root, run, policy)).rejects.toThrow();
+  });
+  it("normalizes approved protocol-relative links before evidence matching", async () => {
+    const { root, run } = await fixture();
+    run.findings = validateFindings(
+      {
+        findings: [
+          finding(run, { replacement: "[Guide](//docs.example.com/guide)" }),
+        ],
+      },
+      run,
+      policy,
+    );
+    expect(await createPatches(root, run, policy)).toHaveLength(1);
+  });
   it("cannot disguise a historical rewrite as a link edit or hide a code edit beside a command", async () => {
     const { root, run } = await fixture();
     run.documents[0].policy = "historical";
