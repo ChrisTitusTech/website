@@ -1,4 +1,5 @@
 node_modules/
+.content-refresh/
 .venv/
 dist/
 .astro/

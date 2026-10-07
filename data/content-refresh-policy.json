@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "maxArticles": 10,
+  "maxRequests": 50,
+  "maxModelCalls": 10,
+  "maxOutputTokens": 3000,
+  "maxInputCharacters": 60000,
+  "timeoutMs": 60000,
+  "maxRunSeconds": 1800,
+  "evidenceMaxAgeDays": 7,
+  "recheckDays": 90,
+  "retentionDays": 30,
+  "domains": [
+    "docs.github.com", "github.com", "learn.microsoft.com", "docs.microsoft.com",
+    "docs.docker.com", "docs.portainer.io", "nix.dev", "nixos.org",
+    "gohugo.io", "zed.dev", "xanmod.org", "www.powershellgallery.com"
+  ],
+  "reportOnly": ["/privacy/", "/terms-conditions/", "/refund/", "/recommendations/"],
+  "generated": ["/archive/", "/search/", "/live-streams/", "/live-streams/player/", "/videos/", "/newsletter/", "/rss/"],
+  "historical": ["/wsl2/", "/hugo-guide/", "/ultimate-linux-gaming-guide/", "/windows-update-security-only/"]
+}
