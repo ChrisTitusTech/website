@@ -93,6 +93,11 @@ export async function createPatches(
         )
       )
         throw new Error("Link findings may replace only a URL");
+      if (
+        f.original.includes("<!--more-->") ||
+        f.replacement.includes("<!--more-->")
+      )
+        throw new Error("Finding must not include a summary marker");
       const isolated =
         parsed.body.slice(0, index) +
         f.replacement +

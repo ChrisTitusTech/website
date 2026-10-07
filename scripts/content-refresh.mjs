@@ -26,6 +26,7 @@ import {
   scan,
   startRun,
   writeReport,
+  recordHistory,
 } from "./content-refresh/runner.mjs";
 
 export async function main(args = process.argv.slice(2), root = process.cwd()) {
@@ -162,31 +163,7 @@ export async function main(args = process.argv.slice(2), root = process.cwd()) {
           `.content-refresh/runs/${run.id}.patches.json`,
           await createPatches(root, run, policy),
         );
-      let history = {};
-      try {
-        history = await readJson(
-          await safePath(root, ".content-refresh/history.json"),
-        );
-      } catch (e) {
-        if (e.code !== "ENOENT") throw e;
-      }
-      for (const d of run.documents) {
-        const findings = run.findings.filter((f) => f.url === d.url);
-        if (
-          d.status === "collected" &&
-          findings.every((f) =>
-            ["current", "historical", "confirmed-outdated"].includes(
-              f.classification,
-            ),
-          )
-        )
-          history[d.url] = {
-            contentHash: d.contentHash,
-            checkedAt: new Date().toISOString(),
-            scope: d.sources,
-          };
-      }
-      await writeJson(root, ".content-refresh/history.json", history);
+      await recordHistory(root, run, policy);
     } else if (command === "approve") {
       const patches = await createPatches(
         root,
@@ -219,9 +196,14 @@ export async function main(args = process.argv.slice(2), root = process.cwd()) {
         at: new Date().toISOString(),
         approvalHash: hash(approval),
       });
+      if (
+        values.write &&
+        ["applied", "already-applied"].includes(result.status)
+      )
+        await recordHistory(root, run, policy, approval);
       console.log(`${result.status}: ${result.files.length} files`);
     }
-    const report = await writeReport(root, run);
+    const report = await writeReport(root, run, policy);
     console.log(`Run ${run.id}: ${run.status}. Report: ${report}`);
     if (command === "scan" && run.status !== "collected") process.exitCode = 2;
   });

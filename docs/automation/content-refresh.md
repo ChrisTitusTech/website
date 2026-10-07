@@ -33,6 +33,10 @@ hashes, links, policy category, check history, and due dates. Eligibility reuses
 the site's date and draft rules under one captured instant. Generated routes,
 render-never sources, drafts, and future content are excluded with reasons.
 History means selected claims were checked, not that an entire article is current.
+Current/historical findings can record an unchanged article as checked. An article
+with confirmed corrections remains due until every correction is applied; its
+history then binds to the resulting content hash. Partial approvals, dry runs,
+and unresolved findings do not defer its next review.
 The generated-route count uses the compatibility inventory, which includes
 reserved routes, aliases, and static assets; it is not a count of rendered pages.
 
@@ -181,7 +185,7 @@ does not claim that the user already approved each correction for publication.
 ```bash
 npm exec -- vitest run tests/unit/content-refresh.test.ts
 npm run validate
-git diff --check
+git -c core.whitespace=cr-at-eol diff --check
 ```
 
 The complete gate checks formatting, Markdown, security policy, types, unit and
@@ -270,6 +274,27 @@ Representative screenshots are preserved for review:
 The live pilot used the connected import path. Direct Firecrawl and optional
 model adapters were tested with mocked responses; live shell API calls and
 runtime execution of the historical tutorials were not performed.
+
+## Archive-wide follow-up
+
+The user subsequently authorized a separate, exhaustive link review of all 330
+posts, including drafts. See the [full archive audit](content-link-audit.md) for
+per-post coverage, corrections, and unresolved destinations. This operator-run
+audit did not change the CLI selection limits or introduce scheduling. The pilot
+ledger above remains the historical record of the original ten-article run.
+
+### Follow-up review fixes
+
+Six existing PR review findings were addressed locally: malformed imported
+captures no longer poison other lookups; a final-source retry preserves
+`budget-limited`; reports use the configured freshness window; findings cannot
+move summary markers; corrected history is recorded only after complete writes;
+and validation accepts preserved CRLF line endings. Six regression tests pass,
+bringing updater coverage to 61 tests and the repository total to 132. The full
+local validation suite passed again. Independent Codex review of this follow-up
+completed with no actionable regressions. The separate CodeRabbit integration
+reported expired/revoked Git-provider credentials; the successful independent
+Codex review supplies the required local review evidence.
 
 ## Provider references
 

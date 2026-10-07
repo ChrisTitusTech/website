@@ -77,6 +77,8 @@ export async function startRun(
   };
 }
 
+class BudgetExhausted extends Error {}
+
 export async function scan(
   root,
   run,
@@ -89,13 +91,22 @@ export async function scan(
     throw new Error(
       "Reviewed runs are immutable; start a new run to refresh evidence",
     );
+  if (captures !== undefined && !Array.isArray(captures))
+    throw new Error("Captures import must be an array");
+  const imported = captures?.flatMap((capture) => {
+    try {
+      return [{ url: publicUrl(capture?.url, policy.domains), capture }];
+    } catch {
+      return [];
+    }
+  });
   const started = Date.now();
   const reserve = async () => {
     if (
       run.requests >= policy.maxRequests ||
       Date.now() - started >= policy.maxRunSeconds * 1000
     )
-      throw new Error("Run request or time budget exhausted");
+      throw new BudgetExhausted("Run request or time budget exhausted");
     run.requests++;
     await saveRun(root, run);
   };
@@ -121,11 +132,10 @@ export async function scan(
         await saveRun(root, run);
         return run;
       }
+      let budgetExhausted = false;
       try {
         if (captures) {
-          const capture = captures.find(
-            (c) => publicUrl(c.url, policy.domains) === url,
-          );
+          const capture = imported.find((entry) => entry.url === url)?.capture;
           if (
             !capture ||
             capture.provider !== "firecrawl" ||
@@ -148,7 +158,8 @@ export async function scan(
             capture.retrievedAt,
           );
         } else run.evidence[id] = await client.scrape(url);
-      } catch {
+      } catch (error) {
+        budgetExhausted = error instanceof BudgetExhausted;
         run.evidence[id] = {
           id,
           url,
@@ -161,6 +172,12 @@ export async function scan(
         };
       }
       if (!doc.evidenceIds.includes(id)) doc.evidenceIds.push(id);
+      if (budgetExhausted) {
+        run.status = "budget-limited";
+        doc.status = "unverifiable";
+        await saveRun(root, run);
+        return run;
+      }
       await saveRun(root, run);
     }
     doc.status =
@@ -193,11 +210,49 @@ export async function propose(root, run, policy, input) {
   return run;
 }
 
+export async function recordHistory(root, run, policy, approval) {
+  let history = {};
+  try {
+    history = await readJson(
+      await safePath(root, ".content-refresh/history.json"),
+    );
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+  for (const doc of run.documents) {
+    const findings = run.findings.filter((finding) => finding.url === doc.url);
+    const patch = approval?.patches.find((item) => item.file === doc.file);
+    const complete =
+      findings.length &&
+      findings.every(
+        (finding) =>
+          ["current", "historical"].includes(finding.classification) ||
+          (finding.classification === "confirmed-outdated" &&
+            patch?.findingIds.includes(finding.id)),
+      );
+    const expectedHash = patch?.afterHash ?? doc.contentHash;
+    if (
+      complete &&
+      doc.status === "collected" &&
+      doc.evidenceIds.every((id) => evidenceFresh(run.evidence[id], policy)) &&
+      hash(await readFile(await safePath(root, doc.file), "utf8")) ===
+        expectedHash
+    ) {
+      history[doc.url] = {
+        contentHash: expectedHash,
+        checkedAt: new Date().toISOString(),
+        scope: doc.sources,
+      };
+    } else delete history[doc.url];
+  }
+  await writeJson(root, ".content-refresh/history.json", history);
+}
+
 const escape = (text) =>
   String(text)
     .replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c])
     .replace(/([\\`*_[\]#|])/g, "\\$1");
-export function report(run) {
+export function report(run, policy) {
   const categories = [
     "current",
     "confirmed-outdated",
@@ -254,14 +309,14 @@ export function report(run) {
     lines.push("");
   }
   for (const e of Object.values(run.evidence))
-    if (!evidenceFresh(e, { evidenceMaxAgeDays: 7 }))
+    if (!evidenceFresh(e, policy))
       lines.push(`- Incomplete source: ${escape(e.url)}.`);
   return lines.join("\n") + "\n";
 }
 
-export async function writeReport(root, run) {
+export async function writeReport(root, run, policy) {
   const file = await safePath(root, `.content-refresh/runs/${run.id}.md`);
-  await writeFile(file, report(run), { mode: 0o600 });
+  await writeFile(file, report(run, policy), { mode: 0o600 });
   return file;
 }
 

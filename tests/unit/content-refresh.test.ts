@@ -43,6 +43,7 @@ import {
   propose,
   report,
   runPath,
+  recordHistory,
 } from "../../scripts/content-refresh/runner.mjs";
 
 const roots: string[] = [];
@@ -359,7 +360,7 @@ describe("network and evidence boundaries", () => {
     ]);
     await scan(root, run, policy, { captures: [capture()] });
     expect(run.status).toBe("partial");
-    expect(report(run)).toContain("incomplete");
+    expect(report(run, policy)).toContain("incomplete");
   });
   it("stops at the processing budget with unprocessed sources visible", async () => {
     const { root } = await fixture();
@@ -721,8 +722,8 @@ describe("patch approval and recovery", () => {
         reason: "<script>bad</script> [click](javascript:bad)",
       },
     ];
-    expect(report(run)).not.toContain("<script>");
-    expect(report(run)).not.toContain("[click]");
+    expect(report(run, policy)).not.toContain("<script>");
+    expect(report(run, policy)).not.toContain("[click]");
   });
   it("rejects traversal, symlink paths, invalid run IDs, and concurrent processes", async () => {
     const { root } = await fixture();
@@ -734,5 +735,128 @@ describe("patch approval and recovery", () => {
     await withLock(root, async () => {
       await expect(withLock(root, async () => {})).rejects.toThrow("locked");
     });
+  });
+});
+
+describe("review regressions", () => {
+  it("isolates malformed captures and rejects a non-array import before scanning", async () => {
+    const { root } = await fixture();
+    const run = await startRun(root, "imports", policy, [
+      { url: "/guide/", sources: [sourceUrl] },
+    ]);
+    await expect(scan(root, run, policy, { captures: {} })).rejects.toThrow(
+      "must be an array",
+    );
+    expect(run.requests).toBe(0);
+    await scan(root, run, policy, {
+      captures: [null, { url: "https://evil.example/" }, capture()],
+    });
+    expect(run.status).toBe("collected");
+    expect(run.requests).toBe(1);
+  });
+  it("preserves budget-limited when the final source cannot retry", async () => {
+    const { root } = await fixture();
+    const limited = { ...policy, maxRequests: 1 };
+    const run = await startRun(root, "retry-budget", limited, [
+      { url: "/guide/", sources: [sourceUrl] },
+    ]);
+    let calls = 0;
+    await scan(root, run, limited, {
+      clientFactory: ({ policy, reserve }: any) =>
+        firecrawlClient({
+          policy,
+          reserve,
+          key: "fixture",
+          sleep: async () => {},
+          fetchImpl: async () => {
+            calls++;
+            return new Response("", { status: 503 });
+          },
+        }),
+    });
+    expect(calls).toBe(1);
+    expect(run.status).toBe("budget-limited");
+    expect(run.documents[0].status).toBe("unverifiable");
+    expect(
+      JSON.parse(await readFile(path.join(root, runPath(run.id)), "utf8"))
+        .status,
+    ).toBe("budget-limited");
+  });
+  it("uses the configured report freshness window", async () => {
+    const { run } = await fixture();
+    Object.values(run.evidence).forEach(
+      (e: any) =>
+        (e.retrievedAt = new Date(Date.now() - 10 * 86400000).toISOString()),
+    );
+    expect(report(run, { ...policy, evidenceMaxAgeDays: 30 })).not.toContain(
+      "Incomplete source:",
+    );
+    expect(report(run, { ...policy, evidenceMaxAgeDays: 2 })).toContain(
+      "Incomplete source:",
+    );
+  });
+  it("rejects a prose edit relocating an unchanged summary marker", async () => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, {
+          original: "Old guidance.\n<!--more-->",
+          replacement: "<!--more-->\nCorrected guidance.",
+        }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "summary marker",
+    );
+  });
+  it("records corrected history only after all corrections are written", async () => {
+    const { root, run } = await proposed();
+    await recordHistory(root, run, policy);
+    const getHistory = async () =>
+      JSON.parse(
+        await readFile(
+          path.join(root, ".content-refresh/history.json"),
+          "utf8",
+        ),
+      );
+    expect((await getHistory())["/guide/"]).toBeUndefined();
+    const patches = await createPatches(root, run, policy);
+    const approval = approve(run, patches, { reviewer: "Test" });
+    await applyPatches(root, run, policy, approval);
+    await recordHistory(root, run, policy, approval);
+    expect((await getHistory())["/guide/"]).toBeUndefined();
+    await applyPatches(root, run, policy, approval, true);
+    await recordHistory(root, run, policy, approval);
+    expect((await getHistory())["/guide/"].contentHash).toBe(
+      patches[0].afterHash,
+    );
+    expect(
+      (await inventory(root, policy, new Date(), await getHistory()))
+        .documents[0].due,
+    ).toBe(false);
+    run.findings.push({ ...run.findings[0], id: "unapplied" });
+    await recordHistory(root, run, policy, approval);
+    expect((await getHistory())["/guide/"]).toBeUndefined();
+  });
+  it("records checked current content without requiring an edit", async () => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, {
+          classification: "current",
+          kind: "none",
+          original: "",
+          replacement: "",
+        }),
+      ],
+    });
+    await recordHistory(root, run, policy);
+    const history = JSON.parse(
+      await readFile(path.join(root, ".content-refresh/history.json"), "utf8"),
+    );
+    expect(history["/guide/"].contentHash).toBe(run.documents[0].contentHash);
+    expect(
+      (await inventory(root, policy, new Date(), history)).documents[0].due,
+    ).toBe(false);
   });
 });
