@@ -461,6 +461,41 @@ describe("claim comparison", () => {
 });
 
 describe("patch approval and recovery", () => {
+  it("cannot disguise a historical rewrite as a link edit or hide a code edit beside a command", async () => {
+    const { root, run } = await fixture();
+    run.documents[0].policy = "historical";
+    run.findings = validateFindings(
+      { findings: [finding(run, { kind: "link" })] },
+      run,
+      policy,
+    );
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "only a URL",
+    );
+    run.documents[0].policy = "editable";
+    run.findings = validateFindings(
+      {
+        findings: [
+          finding(run, { kind: "command" }),
+          finding(run, {
+            original: "old-command",
+            replacement: "unsafe-command",
+          }),
+        ],
+      },
+      run,
+      policy,
+    );
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "Each code block",
+    );
+  });
+  it("does not refresh evidence behind reviewed findings", async () => {
+    const { root, run } = await proposed();
+    await expect(
+      scan(root, run, policy, { captures: [capture()] }),
+    ).rejects.toThrow("immutable");
+  });
   it("applies only approved body bytes, defaults to dry-run, and is idempotent", async () => {
     const { root, run } = await proposed();
     const patches = await createPatches(root, run, policy);

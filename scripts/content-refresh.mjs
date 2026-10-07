@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 import { parseArgs } from "node:util";
-import { access, readFile } from "node:fs/promises";
+import { access } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 import {
   hash,
-  publicUrl,
   readJson,
   safePath,
   validatePolicy,

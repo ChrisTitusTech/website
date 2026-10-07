@@ -85,6 +85,10 @@ export async function scan(
 ) {
   if (run.policyHash !== hash(policy))
     throw new Error("Policy changed; start a new run");
+  if (run.findings.length)
+    throw new Error(
+      "Reviewed runs are immutable; start a new run to refresh evidence",
+    );
   const started = Date.now();
   const reserve = async () => {
     if (

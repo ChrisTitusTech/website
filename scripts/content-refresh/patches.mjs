@@ -44,6 +44,10 @@ export async function createPatches(
       throw new Error("Selected finding cannot be applied");
     if (!/^src\/content\/(?:[^/]+\/)*[^/]+\.md$/.test(f.file))
       throw new Error("Patch is outside content paths");
+    if (f.original.length > 2000 || f.replacement.length > 4000)
+      throw new Error(
+        "Correction is too broad; split it into smaller findings",
+      );
     const {
       id: ignoredId,
       file: ignoredFile,
@@ -80,6 +84,25 @@ export async function createPatches(
       )
         throw new Error("Overlapping findings must be reviewed separately");
       intervals.push([index, index + f.original.length]);
+      if (
+        f.kind === "link" &&
+        ![f.original, f.replacement].every((value) =>
+          /^https?:\/\/[^\s<>]+$/.test(value),
+        )
+      )
+        throw new Error("Link findings may replace only a URL");
+      const isolated =
+        parsed.body.slice(0, index) +
+        f.replacement +
+        parsed.body.slice(index + f.original.length);
+      if (
+        f.kind !== "command" &&
+        hash(protectedParts(parsed.body).blocks) !==
+          hash(protectedParts(isolated).blocks)
+      )
+        throw new Error(
+          "Each code block edit requires an explicit command finding",
+        );
       if (
         f.kind === "notice" &&
         (!f.replacement.includes(f.original) ||
