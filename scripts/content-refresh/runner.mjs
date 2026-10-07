@@ -135,28 +135,40 @@ export async function scan(
       let budgetExhausted = false;
       try {
         if (captures) {
-          const capture = imported.find((entry) => entry.url === url)?.capture;
-          if (
-            !capture ||
-            capture.provider !== "firecrawl" ||
-            typeof capture.retrievedAt !== "string" ||
-            !/^\d{4}-\d{2}-\d{2}T.*(?:Z|[+-]\d{2}:\d{2})$/.test(
-              capture.retrievedAt,
-            ) ||
-            !Number.isFinite(Date.parse(capture.retrievedAt)) ||
-            capture.options?.maxAge !== 0 ||
-            capture.options?.onlyMainContent !== true
-          )
-            throw new Error("Missing fresh Firecrawl capture");
+          let evidence;
+          for (const entry of imported) {
+            if (entry.url !== url) continue;
+            const { capture } = entry;
+            if (
+              capture.provider !== "firecrawl" ||
+              typeof capture.retrievedAt !== "string" ||
+              !/^\d{4}-\d{2}-\d{2}T.*(?:Z|[+-]\d{2}:\d{2})$/.test(
+                capture.retrievedAt,
+              ) ||
+              !Number.isFinite(Date.parse(capture.retrievedAt)) ||
+              capture.options?.maxAge !== 0 ||
+              capture.options?.onlyMainContent !== true
+            )
+              continue;
+            try {
+              const candidate = normalizeEvidence(
+                url,
+                capture.data,
+                policy,
+                capture.retrievedAt,
+              );
+              if (!evidenceFresh(candidate, policy)) continue;
+              evidence = candidate;
+              break;
+            } catch {
+              // A malformed attempt must not hide a usable duplicate capture.
+            }
+          }
+          if (!evidence) throw new Error("Missing fresh Firecrawl capture");
           // Imports do not consume provider requests, but count against the run's
           // processing budget. Captures are trusted operator inputs, not attestations.
           await reserve();
-          run.evidence[id] = normalizeEvidence(
-            url,
-            capture.data,
-            policy,
-            capture.retrievedAt,
-          );
+          run.evidence[id] = evidence;
         } else run.evidence[id] = await client.scrape(url);
       } catch (error) {
         budgetExhausted = error instanceof BudgetExhausted;

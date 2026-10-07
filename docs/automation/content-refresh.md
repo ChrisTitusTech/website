@@ -296,6 +296,14 @@ completed with no actionable regressions. The separate CodeRabbit integration
 reported expired/revoked Git-provider credentials; the successful independent
 Codex review supplies the required local review evidence.
 
+A subsequent review cycle protects shortcode spans against relocation and partial
+edits, and selects fresh, successful evidence among duplicate imported captures.
+Regression coverage also directly exercises dirty-file and overlapping-finding
+guards. All 72 updater tests and 143 total unit tests passed. The complete
+`npm run validate` gate passed again, including 123 browser tests with five
+existing skips and all 12 Lighthouse runs. Real-device and preview-deployment
+checks remain subject to the limits documented above.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)

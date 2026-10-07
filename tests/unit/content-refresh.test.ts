@@ -617,7 +617,7 @@ describe("patch approval and recovery", () => {
       "already-applied",
     );
   });
-  it("rejects stale source hashes and dirty files instead of overwriting", async () => {
+  it("rejects stale source hashes instead of overwriting", async () => {
     const { root, run } = await proposed();
     const approval = approve(run, await createPatches(root, run, policy), {
       reviewer: "Test",
@@ -699,7 +699,7 @@ describe("patch approval and recovery", () => {
       "Replacement link",
     );
   });
-  it("rejects overlapping edits and applies non-overlapping offsets without cascading replacements", async () => {
+  it("applies non-overlapping offsets without cascading replacements", async () => {
     const { root, run } = await fixture();
     const f1 = finding(run, { replacement: "old-command" });
     const f2 = finding(run, {
@@ -753,6 +753,103 @@ describe("review regressions", () => {
     });
     expect(run.status).toBe("collected");
     expect(run.requests).toBe(1);
+  });
+  it.each([
+    { retrievedAt: "2020-01-01T00:00:00Z" },
+    { retrievedAt: "invalid" },
+    { provider: "other" },
+    { options: { maxAge: 60, onlyMainContent: true } },
+    { data: { markdown: "Access denied", metadata: { statusCode: 403 } } },
+    { data: { ...payload, warning: "Partial capture" } },
+    { data: { ...payload, metadata: { url: "https://evil.example/" } } },
+  ])(
+    "uses a fresh duplicate after an unusable capture: %j",
+    async (invalid) => {
+      const { root } = await fixture();
+      const limited = { ...policy, maxRequests: 1 };
+      const run = await startRun(root, "duplicates", limited, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      const captures = [{ ...capture(), ...invalid }, capture()];
+      await scan(root, run, limited, { captures });
+      expect(run.status).toBe("collected");
+      expect(run.requests).toBe(1);
+      expect(Object.values(run.evidence)[0]).toMatchObject({
+        outcome: "retrieved",
+        text: payload.markdown,
+      });
+      await scan(root, run, limited, { captures });
+      expect(run.status).toBe("collected");
+      expect(run.requests).toBe(1);
+    },
+  );
+  it.each([
+    '{{< youtube "example" >}}',
+    "{{% notice note %}}\nNotice.\n{{% /notice %}}",
+  ])(
+    "rejects relocation or partial edits of shortcode %s, but allows surrounding prose edits",
+    async (shortcode) => {
+      const { root } = await fixture();
+      const text = source.replace(
+        "Old guidance.",
+        `Old guidance.\n${shortcode}\nAfter.`,
+      );
+      await writeFile(path.join(root, file), text);
+      const run = await startRun(root, "shortcodes", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      for (const update of [
+        {
+          original: `Old guidance.\n${shortcode}`,
+          replacement: `${shortcode}\nCorrected guidance.`,
+        },
+        { original: shortcode.slice(2, -2), replacement: " changed " },
+      ]) {
+        run.findings = validateFindings(
+          { findings: [finding(run, update)] },
+          run,
+          policy,
+        );
+        await expect(createPatches(root, run, policy)).rejects.toThrow(
+          "overlap a shortcode",
+        );
+      }
+      run.findings = validateFindings(
+        { findings: [finding(run)] },
+        run,
+        policy,
+      );
+      const patches = await createPatches(root, run, policy);
+      expect(patches[0].after).toContain(
+        `Corrected guidance.\n${shortcode}\nAfter.`,
+      );
+    },
+  );
+  it("rejects dirty articles even when their scanned bytes still match", async () => {
+    const { root, run } = await proposed();
+    const approval = approve(run, await createPatches(root, run, policy), {
+      reviewer: "Test",
+    });
+    await writeFile(path.join(root, file), source + "Staged edit\n");
+    execFileSync("git", ["add", file], { cwd: root });
+    await writeFile(path.join(root, file), source);
+    await expect(
+      applyPatches(root, run, policy, approval, true),
+    ).rejects.toThrow("uncommitted changes");
+    expect(await readFile(path.join(root, file), "utf8")).toBe(source);
+  });
+  it("rejects two individually valid findings with overlapping spans", async () => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [
+        finding(run),
+        finding(run, { original: "guidance.", replacement: "instructions." }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "Overlapping findings",
+    );
   });
   it("preserves budget-limited when the final source cannot retry", async () => {
     const { root } = await fixture();

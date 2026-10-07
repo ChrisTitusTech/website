@@ -73,6 +73,7 @@ export async function createPatches(
     const parsed = parseDocument(source, file);
     const front = source.slice(0, source.length - parsed.body.length);
     let body = parsed.body;
+    const shortcodes = [...parsed.body.matchAll(/\{\{[<%][\s\S]*?[>%]\}\}/g)];
     const intervals = [],
       edits = [];
     for (const f of findings) {
@@ -98,6 +99,14 @@ export async function createPatches(
         f.replacement.includes("<!--more-->")
       )
         throw new Error("Finding must not include a summary marker");
+      if (
+        shortcodes.some(
+          (match) =>
+            index < match.index + match[0].length &&
+            index + f.original.length > match.index,
+        )
+      )
+        throw new Error("Finding must not overlap a shortcode");
       const isolated =
         parsed.body.slice(0, index) +
         f.replacement +
