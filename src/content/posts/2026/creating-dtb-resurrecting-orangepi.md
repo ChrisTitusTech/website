@@ -3,7 +3,6 @@ title: "Creating Dtb Resurrecting Orangepi"
 
 date: 2026-04-18
 url: /creating-dtb-resurrecting-orangepi/
-image: images/2026-thumbs/creating-dtb-resurrecting-orangepi.webp
 categories:
   - Linux
 tags:

@@ -18,7 +18,7 @@ This article goes over how to change Cortana search engine to display results in
 
 * <https://github.com/sylveon/SearchWithMyBrowser> &#8211; GitHub Source and Compile Instructions
 * <https://www.microsoft.com/store/apps/9PPKNR9RK26R?ocid=badge> &#8211; Windows Store Link from Developer
-* <https://chrome.google.com/webstore/detail/chrometana-pro-redirect-c/lllggmgeiphnciplalhefnbpddbadfdi> &#8211; Chrometana Pro Google Store Extension
+* <https://chromewebstore.google.com/detail/chrometana-pro-redirect-c/lllggmgeiphnciplalhefnbpddbadfdi> &#8211; Chrometana Pro Google Store Extension
 
 ## Steps to Change Cortana Search (Updated)
 

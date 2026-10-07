@@ -12,6 +12,8 @@ tags:
   - PopOS
   - LinuxMint
 ---
+> **Link update 2026-10-07:** The original `ChrisTitusTech/Linux-MacOS-GNOME` repository is no longer publicly available. The clone and theme-copy commands below are historical and cannot currently be completed from that source.
+
 This Project is to make Ubuntu and other derivative distributions (Mint, PopOS, etc.) look like MacOS. *Version 20+ is required*
 <!--more-->
 

@@ -29,6 +29,16 @@ This is a bounded pilot, not a complete audit of the website or every claim in t
 
 The checked Nix and Zed claims remain unchanged. The Hugo guide's personal theme customizations remain historical. The PowerShell update examples are flagged for separate runtime review because the package documentation alone cannot establish corrected command behavior.
 
+## Full archive link review
+
+A follow-up review covers all 330 Markdown posts in the year folders from 2016 through 2026 and the `old` archive, including its earlier posts. This includes 16 drafts, which remain unpublished. Every post receives an audit entry, including posts with no external links.
+
+The review checks article links, image references, embedded videos, and literal URLs in examples. Shared destinations are checked once and mapped back to every post that uses them. HTTP checks provide broad coverage; Firecrawl and public project APIs help distinguish moved pages from blocked requests. YouTube metadata and player responses identify unavailable or private videos even when the watch page returns HTTP 200.
+
+The corrections include repository migrations, current documentation addresses, missing image references, and replacement of 21 unavailable or private video embeds with availability notes. Repurposed application websites that now serve unrelated gambling content are removed or replaced with verified project sources. Historical commands whose exact downloads cannot be recovered receive explicit notices instead of an unrelated replacement executable.
+
+A successful response alone does not prove that an entire page is current. Blocked requests, timeouts, and unverified replacements remain visible in the repository's [archive link audit report](https://github.com/ChrisTitusTech/website/blob/master/docs/automation/content-link-audit.md). This review adds no schedule or automatic publication.
+
 ## Phase 1: Inventory the published website
 
 The inventory maps eligible Markdown files to their canonical URLs and records content hashes, links, publication dates, policy categories, and check history.

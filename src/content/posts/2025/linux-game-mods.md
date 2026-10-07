@@ -3,7 +3,6 @@ title: "Linux Game Mods"
 
 date: 2025-11-08
 url: /linux-game-mods/
-image: images/2024-thumbs/linux-game-mods.webp
 categories:
   - Linux
 tags:

@@ -3,7 +3,6 @@ title: "Why People Dont Understand Linux"
 
 date: 2026-03-30
 url: /why-people-dont-understand-linux/
-image: images/2026-thumbs/why-people-dont-understand-linux.webp
 categories:
   - Linux
 tags:

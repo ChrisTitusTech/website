@@ -32,9 +32,9 @@ This article goes over how to setup FreeNAS 11 and configure it. These are the b
 
 ## Installation Video Walkthrough
 
-Install FreeNAS Video: {{< youtube G2-s1_OkHGA >}}  
+Install FreeNAS Video: *Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
   
-Setup FreeNAS Video: {{< youtube JexkrpeM_WA >}}  
+Setup FreeNAS Video: *Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
 
 This will get you set up for a reliable network-attached storage in your home environment. Remember once you are finished to clone and image the USB FreeNAS drive. These USB Drives typically only last a couple years, so a backup is a must! In the end, FreeNAS is far more reliable than other commercial NAS products because of ZFS and its versatility.
 

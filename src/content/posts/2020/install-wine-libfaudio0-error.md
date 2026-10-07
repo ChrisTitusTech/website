@@ -10,6 +10,8 @@ tags:
   - Linux Mint
   - Ubuntu
 ---
+> **Link update 2026-10-07:** The two pinned Ubuntu 18.04 `libfaudio0` download links below are no longer available. This workaround is historical; no equivalent replacement packages have been verified for these exact commands.
+
 This article helps you fix the Libfaudio0 error that you run into when installing Wine on an older Linux debian-based distribution like Linux Mint 19 or Ubuntu 18.
 <!--more-->
 Fix the dependancy error by downloading the following packages

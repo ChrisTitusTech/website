@@ -1,0 +1,1781 @@
+{
+  "summary": {
+    "date": "2026-10-07",
+    "baseCommit": "28c567939372e8fbea5a7f976b1086fe5b13a0ae",
+    "posts": 330,
+    "productionEligible": 314,
+    "folders": {
+      "2016": 12,
+      "2017": 10,
+      "2018": 33,
+      "2019": 16,
+      "2020": 34,
+      "2021": 8,
+      "2022": 73,
+      "2023": 39,
+      "2024": 30,
+      "2025": 21,
+      "2026": 24,
+      "old": 30
+    },
+    "originalUniqueTargets": 4051,
+    "currentUniqueTargets": 3994,
+    "unionTargets": 4198,
+    "currentReferences": 4712,
+    "changedPosts": 69,
+    "currentStatuses": {
+      "blocked": 12,
+      "connection-error": 10,
+      "dns-failure": 2,
+      "draft-preview-confirmed": 1,
+      "example-or-local": 25,
+      "http-error": 6,
+      "local-present": 977,
+      "missing": 16,
+      "non-http": 1,
+      "non-public-address": 5,
+      "project-confirmed": 43,
+      "reachable": 2647,
+      "repository-git-confirmed": 1,
+      "repository-metadata-confirmed": 1,
+      "request-dependent": 1,
+      "timeout": 6,
+      "tls-error": 1,
+      "unverified-challenge-or-login": 10,
+      "video-confirmed": 229
+    },
+    "currentMethods": {
+      "HTTP GET": 2647,
+      "Firecrawl scrape": 94,
+      "git ls-remote HEAD": 1,
+      "production build": 977,
+      "local content preview": 1,
+      "HTTP GET + official homepage source link": 1,
+      "GNOME GitLab API": 43,
+      "HTTP GET repodata/repomd.xml": 1,
+      "YouTube oEmbed": 229
+    },
+    "videosChecked": 244,
+    "videosAvailable": 223,
+    "videoEmbedsReplaced": 21,
+    "firecrawlFallbackAttempts": 149
+  },
+  "repairs": [
+    {
+      "old": "https://chrome.google.com/webstore/detail/chrometana-pro-redirect-c/lllggmgeiphnciplalhefnbpddbadfdi",
+      "new": "https://chromewebstore.google.com/detail/chrometana-pro-redirect-c/lllggmgeiphnciplalhefnbpddbadfdi",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2018/2018-10-17-change-cortana-search.md"
+    },
+    {
+      "old": "https://ubuntuforums.org/index.php",
+      "new": "https://discourse.ubuntu.com/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2019/2019-10-09-learn-linux.md"
+    },
+    {
+      "old": "https://github.com/farag2/Windows-10-Setup-Script",
+      "new": "https://github.com/farag2/Sophia-Script-for-Windows",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2020/debloat-windows10-2020.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg?hl=en-US",
+      "new": "https://chromewebstore.google.com/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg?hl=en-US",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2020/geforce-now-linux.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm",
+      "new": "https://chromewebstore.google.com/detail/device-recovery-utility/pocpnlppkickgojjlmhdmidojbmbodfm",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/30days-chromeos.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/checker-plus-for-google-c/hkhggnncdpfibdhinjiegagmopldibha",
+      "new": "https://chromewebstore.google.com/detail/checker-plus-for-google-c/hkhggnncdpfibdhinjiegagmopldibha",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/best-browser-extensions.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
+      "new": "https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/best-browser-extensions.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/web-highlights-pdf-web-hi/hldjnlbobkdkghfidgoecgmklcemanhm",
+      "new": "https://chromewebstore.google.com/detail/web-highlights-pdf-web-hi/hldjnlbobkdkghfidgoecgmklcemanhm",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/best-browser-extensions.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn",
+      "new": "https://chromewebstore.google.com/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/best-browser-extensions.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/get-rss-feed-url/kfghpdldaipanmkhfpdcjglncmilendn",
+      "new": "https://chromewebstore.google.com/detail/get-rss-feed-url/kfghpdldaipanmkhfpdcjglncmilendn",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/best-browser-extensions.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/midnight-lizard/pbnndmlekkboofhnbonilimejonapojg",
+      "new": "https://chromewebstore.google.com/detail/midnight-lizard/pbnndmlekkboofhnbonilimejonapojg",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/best-browser-extensions.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai",
+      "new": "https://chromewebstore.google.com/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/best-browser-extensions.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/clickclean/ghgabhipcejejjmhhchfonmamedcbeod",
+      "new": "https://chromewebstore.google.com/detail/clickclean/ghgabhipcejejjmhhchfonmamedcbeod",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/best-browser-extensions.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca",
+      "new": "https://chromewebstore.google.com/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/best-browser-extensions.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/clickbait-remover-for-you/omoinegiohhgbikclijaniebjpkeopip",
+      "new": "https://chromewebstore.google.com/detail/clickbait-remover-for-you/omoinegiohhgbikclijaniebjpkeopip",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/bypass-paywalls.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/self-destructing-cookies/igdpjhaninpfanncfifdoogibpdidddf",
+      "new": "https://chromewebstore.google.com/detail/self-destructing-cookies/igdpjhaninpfanncfifdoogibpdidddf",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/bypass-paywalls.md"
+    },
+    {
+      "old": "https://chrome.google.com/webstore/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle",
+      "new": "https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle",
+      "occurrences": 1,
+      "reason": "Use current Chrome Web Store address for the identical extension ID.",
+      "file": "src/content/posts/2022/bypass-paywalls.md"
+    },
+    {
+      "old": "https://github.com/jbara2002/windows-defender-remover",
+      "new": "https://github.com/ionuttbara/windows-defender-remover",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2022/disable-win-defender.md"
+    },
+    {
+      "old": "https://github.com/qtkite/defender-control",
+      "new": "https://github.com/pgkt04/defender-control",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2022/disable-win-defender.md"
+    },
+    {
+      "old": "https://github.com/geminis3/EnvyControl",
+      "new": "https://github.com/bayasdev/envycontrol",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2022/laptop-power-management.md"
+    },
+    {
+      "old": "https://github.com/securitywithoutborders/hardentools",
+      "new": "https://github.com/hardentools/hardentools",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2022/not-safe-windows.md"
+    },
+    {
+      "old": "https://github.com/theVakhovskeIsTaken/holoiso",
+      "new": "https://github.com/holoiso-eol/holoiso",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2022/unlock-steam-deck.md"
+    },
+    {
+      "old": "https://github.com/securitywithoutborders/hardentools",
+      "new": "https://github.com/hardentools/hardentools",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2023/atlasos-review.md"
+    },
+    {
+      "old": "https://github.com/stnkl/EverythingToolbar/releases",
+      "new": "https://github.com/srwi/EverythingToolbar/releases",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2023/everything-toolbar.md"
+    },
+    {
+      "old": "https://aur.archlinux.org/yay-bin",
+      "new": "https://aur.archlinux.org/yay-bin.git",
+      "occurrences": 1,
+      "reason": "Use the actual AUR Git clone endpoint, verified with git ls-remote HEAD. An HTML package page is not a clone URL.",
+      "file": "src/content/posts/2023/my-new-desktop-hyprland.md"
+    },
+    {
+      "old": "https://github.com/BuilderIO/partytown",
+      "new": "https://github.com/QwikDev/partytown",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2023/replace-google-fonts-with-bunny-fonts.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~indicator-brightness/indicator-brightness/trunk/files",
+      "new": "https://code.launchpad.net/~indicator-brightness/indicator-brightness/trunk",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~indicator-multiload/indicator-multiload/trunk/files",
+      "new": "https://code.launchpad.net/~indicator-multiload/indicator-multiload/trunk",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_pt-BR.md",
+      "new": "https://github.com/luong-komorebi/Awesome-Linux-Software/blob/master/README_pt-BR.md",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_zh-CN.md",
+      "new": "https://github.com/luong-komorebi/Awesome-Linux-Software/blob/master/README_zh-CN.md",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_es-ES.md",
+      "new": "https://github.com/luong-komorebi/Awesome-Linux-Software/blob/master/README_es-ES.md",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/LewisVo/Awesome-Linux-Software/blob/master/README_th-TH.md",
+      "new": "https://github.com/luong-komorebi/Awesome-Linux-Software/blob/master/README_th-TH.md",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~audio-recorder/audio-recorder/trunk/files",
+      "new": "https://code.launchpad.net/~audio-recorder/audio-recorder/trunk",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~umang/indicator-stickynotes/trunk/files",
+      "new": "https://code.launchpad.net/~umang/indicator-stickynotes/trunk",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~jconti/recent-notifications/trunk/files",
+      "new": "https://code.launchpad.net/~jconti/recent-notifications/trunk",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~gnome-terminator/terminator/gtk3/files",
+      "new": "https://code.launchpad.net/~gnome-terminator/terminator/gtk3",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~widelands-dev/widelands/trunk/changes",
+      "new": "https://code.launchpad.net/~widelands-dev/widelands/trunk",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~artfwo/indicator-cpufreq/trunk/files",
+      "new": "https://code.launchpad.net/~artfwo/indicator-cpufreq/trunk",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "http://bazaar.launchpad.net/~joh/alarm-clock/trunk/files",
+      "new": "https://code.launchpad.net/~joh/alarm-clock/trunk",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~dabisu/sakura/sakura/files",
+      "new": "https://code.launchpad.net/~dabisu/sakura/sakura",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://bazaar.launchpad.net/~cpug-devs/cpug/main/files",
+      "new": "https://code.launchpad.net/~cpug-devs/cpug/main",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/eniqiz/Awesome-Linux-Software-zh_CN",
+      "new": "https://github.com/cachedcapybara/Awesome-Linux-Software-zh_CN",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://yktoo.com/en/software/indicator-sound-switcher",
+      "new": "https://github.com/yktoo/indicator-sound-switcher",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/MiMillieuh/Photoshop-CC2022-Linux",
+      "new": "https://github.com/LinSoftWin/Photoshop-CC2022-Linux",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/popcorn-official/popcorn-desktop",
+      "new": "https://github.com/popcorntime/popcorntime",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/LewisVo/Awesome-Linux-Software/",
+      "new": "https://github.com/luong-komorebi/Awesome-Linux-Software",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/realmazharhussain/gdm-settings",
+      "new": "https://github.com/gdm-settings/gdm-settings",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/jellyfin/jellyfin-media-player",
+      "new": "https://github.com/jellyfin/jellyfin-desktop",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/johannesjo/super-productivity",
+      "new": "https://github.com/super-productivity/super-productivity",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://licensebuttons.net/l/by/4.0/88x31.webp",
+      "new": "https://licensebuttons.net/l/by/4.0/88x31.png",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/Eloston/ungoogled-chromium",
+      "new": "https://github.com/ungoogled-software/ungoogled-chromium",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/Daniele-rolli/Beaver-Notes",
+      "new": "https://github.com/Beaver-Notes/Beaver-Notes",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://tkashkin.github.io/projects/gamehub/",
+      "new": "https://github.com/tkashkin/GameHub",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://www.imagemagick.org/script/index.php",
+      "new": "https://imagemagick.org/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/Cisco-Talos/clamav-devel",
+      "new": "https://github.com/Cisco-Talos/clamav",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/needle-and-thread/vocal",
+      "new": "https://github.com/VocalPodcastProject/vocal",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/spicetify/spicetify-cli",
+      "new": "https://github.com/spicetify/cli",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/Jermolene/TiddlyDesktop",
+      "new": "https://github.com/TiddlyWiki/TiddlyDesktop",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/robbyrussell/oh-my-zsh",
+      "new": "https://github.com/ohmyzsh/ohmyzsh",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/lupoDharkael/flameshot",
+      "new": "https://github.com/flameshot-org/flameshot",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/wereturtle/ghostwriter",
+      "new": "https://github.com/KDE/ghostwriter",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/federico-terzi/espanso",
+      "new": "https://github.com/espanso/espanso",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/cheesecakeufo/komorebi",
+      "new": "https://github.com/christianloopp/komorebi",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/vector-im/element-web",
+      "new": "https://github.com/element-hq/element-web",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://metadatacleaner.romainvigier.fr/",
+      "new": "https://gitlab.com/rmnvgr/metadata-cleaner",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/codito/gnome-pomodoro",
+      "new": "https://github.com/focustimerhq/FocusTimer",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/warner/magic-wormhole",
+      "new": "https://github.com/magic-wormhole/magic-wormhole",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://projects.linuxmint.com/cinnamon/",
+      "new": "https://github.com/linuxmint/cinnamon",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/Beep6581/RawTherapee",
+      "new": "https://github.com/RawTherapee/RawTherapee",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/simonmichael/hledger",
+      "new": "https://github.com/hledgerorg/hledger",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/klaussinani/taskbook",
+      "new": "https://github.com/klaudiosinani/taskbook",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/micahflee/onionshare",
+      "new": "https://github.com/onionshare/onionshare",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/Simmesimme/Gnome-Pie",
+      "new": "https://github.com/Schneegans/Gnome-Pie",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/th-ch/youtube-music",
+      "new": "https://github.com/pear-devs/pear-desktop",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://th-ch.github.io/youtube-music/",
+      "new": "https://github.com/pear-devs/pear-desktop",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/kspalaiologos/bzip3",
+      "new": "https://github.com/iczelia/bzip3",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/XargonWan/RetroDECK",
+      "new": "https://github.com/RetroDECK/RetroDECK",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/WaterfoxCo/Waterfox",
+      "new": "https://github.com/BrowserWorks/waterfox",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/billiob/terminology",
+      "new": "https://github.com/borisfaure/terminology",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/splitbrain/dokuwiki",
+      "new": "https://github.com/dokuwiki/dokuwiki",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://git.pwmt.org/pwmt/zathura.git",
+      "new": "https://github.com/pwmt/zathura",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/minetest/minetest/",
+      "new": "https://github.com/luanti-org/luanti",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/dev47apps/droidcam",
+      "new": "https://github.com/dev47apps/droidcam-linux-client",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/jiahaog/nativefier",
+      "new": "https://github.com/nativefier/nativefier",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/LLK/scratch-flash",
+      "new": "https://github.com/scratchfoundation/scratch-flash",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/Arisotura/melonDS",
+      "new": "https://github.com/melonDS-emu/melonDS",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/SpaceVim/SpaceVim",
+      "new": "https://github.com/wsdjeg/SpaceVim",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/krtirtho/spotube",
+      "new": "https://github.com/team-spotube/spotube",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/red-eclipse/base",
+      "new": "https://github.com/redeclipse/base",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/coelckers/gzdoom",
+      "new": "https://github.com/ZDoom/gzdoom",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/klaussinani/tusk",
+      "new": "https://github.com/klaudiosinani/tusk",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/mydzor/bash2048",
+      "new": "https://github.com/JosefZIla/bash2048",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/alpcoskun/snake",
+      "new": "https://github.com/aprilcoskun/snake",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/meowtec/Imagine",
+      "new": "https://github.com/meowtec/imgo",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/usbkey9/uktools",
+      "new": "https://github.com/aleluff/uktools",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/jwilm/alacritty",
+      "new": "https://github.com/alacritty/alacritty",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://www.howtogeek.com/t/linux/",
+      "new": "https://www.howtogeek.com/category/linux/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/linagora/Twake",
+      "new": "https://github.com/linagora/twake-workplace",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://gamemaker.io/en/gamemaker",
+      "new": "https://gamemaker.io/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/KELiON/cerebro",
+      "new": "https://github.com/cerebroapp/cerebro",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/jonls/redshift",
+      "new": "https://github.com/sharpbracket/redshift",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/zyedidia/micro",
+      "new": "https://github.com/micro-editor/micro",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://dbrgn.github.io/tealdeer/",
+      "new": "https://docs.tealdeer.org/stable/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://sindresorhus.com/caprine",
+      "new": "https://github.com/sindresorhus/caprine",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/jaagr/polybar",
+      "new": "https://github.com/polybar/polybar",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/zadam/trilium",
+      "new": "https://github.com/TriliumNext/Trilium",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/xylosper/bomi",
+      "new": "https://github.com/bylee20/bomi",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/oilshell/oil",
+      "new": "https://github.com/oils-for-unix/oils",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://schollz.com/blog/croc6/",
+      "new": "https://github.com/schollz/croc",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/wez/wezterm",
+      "new": "https://github.com/wezterm/wezterm",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/ncw/rclone",
+      "new": "https://github.com/rclone/rclone",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/zeit/hyper",
+      "new": "https://github.com/vercel/hyper",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://upscayl.github.io/",
+      "new": "https://upscayl.org/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://enlightenment.org",
+      "new": "https://www.enlightenment.org/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://www.qtile.org/",
+      "new": "https://qtile.org/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://boostnote.io/",
+      "new": "https://github.com/BoostIO/BoostNote-App",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://wiki.hyprland.org/Configuring/Monitors/",
+      "new": "https://wiki.hypr.land/0.41.2/Configuring/Monitors/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2025/hyprland-monitor-config.md"
+    },
+    {
+      "old": "https://support.gfi.com/article/112612-how-to-move-a-gfi-archiver-database-to-another-microsoft-sql-server",
+      "new": "https://support.archiver.gfi.com/article/106544-how-to-move-an-archiver-database-to-another-microsoft-sql-server",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/old/2013-04-09-moving-gfi-mailarchiver.md"
+    },
+    {
+      "old": "https://support.gfi.com/article/112712-moving-gfi-archiver-to-a-new-server",
+      "new": "https://support.archiver.gfi.com/article/106396-moving-archiver-to-a-new-server",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/old/2013-04-09-moving-gfi-mailarchiver.md"
+    },
+    {
+      "old": "https://user-images.githubusercontent.com/34844898/194635035-152ed4a6-e5a1-4878-8863-f62391e7d703.webp",
+      "new": "https://user-images.githubusercontent.com/34844898/194635035-152ed4a6-e5a1-4878-8863-f62391e7d703.png",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/glazewm-tiling-window-management.md"
+    },
+    {
+      "old": "https://user-images.githubusercontent.com/34844898/194635089-d5ed152b-1527-43e8-a69c-4e154b97a207.webp",
+      "new": "https://user-images.githubusercontent.com/34844898/194635089-d5ed152b-1527-43e8-a69c-4e154b97a207.png",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/glazewm-tiling-window-management.md"
+    },
+    {
+      "old": "https://github.com/LewisVo/Awesome-Linux-Software/graphs/contributors",
+      "new": "https://github.com/luong-komorebi/Awesome-Linux-Software/graphs/contributors",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/linuxdeepin/dde-file-manager/tree/develop2.0",
+      "new": "https://github.com/linuxdeepin/dde-file-manager",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/CapitaineJSparrow/steam-repo-manager",
+      "new": "https://github.com/waylaidwanderer/steam-deck-repo-manager",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/ZeldaClassic/ZeldaClassic",
+      "new": "https://github.com/ZQuestClassic/ZQuestClassic",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/mps-youtube/mps-youtube",
+      "new": "https://github.com/mps-youtube/yewtube",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/nojhan/liquidprompt",
+      "new": "https://github.com/liquidprompt/liquidprompt",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/Plagman/gamescope",
+      "new": "https://github.com/ValveSoftware/gamescope",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://apps.gnome.org/Cartridges/",
+      "new": "https://github.com/kra-mo/cartridges",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/rg3/youtube-dl",
+      "new": "https://github.com/ytdl-org/youtube-dl",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/dbrgn/tealdeer",
+      "new": "https://github.com/tealdeer-rs/tealdeer",
+      "occurrences": 1,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/davvid/lightdm",
+      "new": "https://github.com/ubuntu/lightdm",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/Peltoche/lsd",
+      "new": "https://github.com/lsd-rs/lsd",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://github.com/cylgom/ly",
+      "new": "https://github.com/fairyglade/ly",
+      "occurrences": 2,
+      "reason": "Follow GitHub permanent repository migration.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://timecop.app/en/",
+      "new": "https://github.com/hamaluik/timecop",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://ugetdm.com/",
+      "new": "https://sourceforge.net/projects/urlget/",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "https://unity8.io/",
+      "new": "https://ubports.com/blog/ubports-news-1/lomiri-new-name-same-great-unity8-115",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "old": "www.skribisto.eu",
+      "new": "https://www.skribisto.eu",
+      "occurrences": 1,
+      "reason": "Replace unavailable destination with verified same-project documentation or source.",
+      "file": "src/content/posts/2024/linux-alternatives.md"
+    },
+    {
+      "file": "src/content/posts/2021/Ultimate-Windows-10-Install.md",
+      "old": "Now let's make it so we will automatically install Windows 10 without answering a bunch of questions. I use a cheatsheet where it just makes it for me from: <https://www.windowsafg.com/win10x86_x64.html>\n\nFill out the form and then click download at the bottom of the page.",
+      "new": "Now let's make it so we will automatically install Windows 10 without answering a bunch of questions.\n\n**Link update 2026-10-07:** The original Windows Answer File Generator website now serves unrelated content. Use [Schneegans' Windows answer-file generator](https://schneegans.de/windows/unattend-generator/) as a current alternative. Review its settings and usage instructions before downloading your answer file; the screenshot below shows the historical tool.",
+      "reason": "Firecrawl confirmed the original domain is repurposed and the replacement generates Windows 10/11 answer files."
+    },
+    {
+      "file": "src/content/posts/2020/debloat-android.md",
+      "old": "  - Homebrew install - `ruby -e \u201c$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"`",
+      "new": "  - Homebrew install - follow the [official Homebrew installation instructions](https://brew.sh/). The old Ruby installer URL is no longer available.",
+      "reason": "Replace retired Ruby installer with verified official installation guidance; no executable substitution."
+    },
+    {
+      "file": "src/content/posts/old/2013-04-09-configuring-sql-authentication.md",
+      "old": "_Note: This article is based on GFI's\n[SQL authentication guide](https://support.gfi.com/article/106972-how-to-configure-microsoft-sql-server-to-accept-sql-authentication-for-gfi-software-products),\nand all credit for the original procedure goes to GFI._",
+      "new": "_Note: This article is based on GFI's original SQL authentication guide,\nwhich is no longer available at its previous address. Credit for the original\nprocedure remains with GFI. For the current procedure, see\n[Microsoft's server authentication documentation](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/change-server-authentication-mode)._",
+      "reason": "Preserve original GFI attribution while linking the verified Microsoft procedure."
+    },
+    {
+      "file": "src/content/posts/2019/2019-10-09-learn-linux.md",
+      "old": "Ubuntu Forums",
+      "new": "Ubuntu Discourse",
+      "reason": "Reflect the community destination now linked."
+    },
+    {
+      "file": "src/content/posts/2020/flatpak-acceleration.md",
+      "old": "image: images/2020-thumbs/flatpak-acceleration.webp\n",
+      "new": "",
+      "reason": "Remove a missing optional image reference; use the existing image fallback instead of an invented asset."
+    },
+    {
+      "file": "src/content/posts/2020/linux-cheatsheet.md",
+      "old": "image: images/2020-thumbs/linux-cheatsheet.webp\n",
+      "new": "",
+      "reason": "Remove a missing optional image reference; use the existing image fallback instead of an invented asset."
+    },
+    {
+      "file": "src/content/posts/2022/cleanup-docker.md",
+      "old": "image: images/2022-thumbs/cleanup-docker.webp\r\n",
+      "new": "",
+      "reason": "Remove a missing optional image reference; use the existing image fallback instead of an invented asset."
+    },
+    {
+      "file": "src/content/posts/old/ideas.md",
+      "old": "image: images/2022-thumbs/ideas.webp\n",
+      "new": "",
+      "reason": "Remove a missing optional image reference; use the existing image fallback instead of an invented asset."
+    },
+    {
+      "file": "src/content/posts/2020/degoogle.md",
+      "old": "images/2020-thumbs/degoogle.webp",
+      "new": "images/2020-thumbs/degoogle-apps.webp",
+      "reason": "Use the existing matching degoogle image asset."
+    },
+    {
+      "file": "src/content/posts/2020/windows-10-scripts.md",
+      "old": "---\ntitle: \"Windows 10 Scripts\"\n\ndate: 2020-08-14T11:43:17-05:00\nurl: /windows-10-scripts/\nimage: images/2020-thumbs/windows-10-scripts.webp\ncategories:\n  - Windows\ntags:\n  -  PowerShell\n---\n",
+      "new": "---\ntitle: \"Windows 10 Scripts\"\n\ndate: 2020-08-14T11:43:17-05:00\nurl: /windows-10-scripts/\nimage: images/2020-thumbs/windows-10-scripts.webp\ncategories:\n  - Windows\ntags:\n  -  PowerShell\n---\n> **Link update 2026-10-07:** The `git.io/JJ5qc` download below is no longer available. This is a historical script listing, not a working installation command. For current Windows maintenance, review [WinUtil](https://github.com/ChrisTitusTech/winutil); it is not a verified replacement for that exact old script.\n\n",
+      "reason": "Mark unavailable historical downloads explicitly; do not invent a replacement executable."
+    },
+    {
+      "file": "src/content/posts/2020/debloat-windows10-2020.md",
+      "old": "---\ntitle: \"Debloat Windows in 2022\"\n\ndate: 2020-06-11T16:04:48-05:00\nurl: /debloat-windows-10-2020/\nimage: images/2022-thumbs/cleanup-windows-2022.webp\ncategories:\n  - Windows\ntags:\n  - Microsoft Store\n  - Windows 10\n  - Windows 11\n\n---\n",
+      "new": "---\ntitle: \"Debloat Windows in 2022\"\n\ndate: 2020-06-11T16:04:48-05:00\nurl: /debloat-windows-10-2020/\nimage: images/2022-thumbs/cleanup-windows-2022.webp\ncategories:\n  - Windows\ntags:\n  - Microsoft Store\n  - Windows 10\n  - Windows 11\n\n---\n> **Link update 2026-10-07:** The `git.io/JTbKD` restore-script download below is no longer available. Do not substitute the current WinUtil installer for a restore script. The old command is retained only as historical reference.\n\n",
+      "reason": "Mark unavailable historical downloads explicitly; do not invent a replacement executable."
+    },
+    {
+      "file": "src/content/posts/2020/linux-macos.md",
+      "old": "---\ntitle: \"Linux MacOS\"\n\ndate: 2020-10-05T13:03:31-05:00\nurl: /linux-macos/\nimage: images/2020-thumbs/linux-macos.webp\ncategories:\n  - Linux\n  - MacOS\ntags:\n  - Ubuntu\n  - PopOS\n  - LinuxMint\n---\n",
+      "new": "---\ntitle: \"Linux MacOS\"\n\ndate: 2020-10-05T13:03:31-05:00\nurl: /linux-macos/\nimage: images/2020-thumbs/linux-macos.webp\ncategories:\n  - Linux\n  - MacOS\ntags:\n  - Ubuntu\n  - PopOS\n  - LinuxMint\n---\n> **Link update 2026-10-07:** The original `ChrisTitusTech/Linux-MacOS-GNOME` repository is no longer publicly available. The clone and theme-copy commands below are historical and cannot currently be completed from that source.\n\n",
+      "reason": "Mark unavailable historical downloads explicitly; do not invent a replacement executable."
+    },
+    {
+      "file": "src/content/posts/2021/bspwm-on-KDE.md",
+      "old": "---\ntitle: \"Bspwm on KDE\"\n\ndate: 2021-07-20T14:46:40-05:00\nurl: /bspwm-on-KDE/\nimage: images/2021-thumbs/bspwm-on-KDE.webp\ncategories:\n  - Linux\ntags:\n  - KDE\n---\n",
+      "new": "---\ntitle: \"Bspwm on KDE\"\n\ndate: 2021-07-20T14:46:40-05:00\nurl: /bspwm-on-KDE/\nimage: images/2021-thumbs/bspwm-on-KDE.webp\ncategories:\n  - Linux\ntags:\n  - KDE\n---\n> **Link update 2026-10-07:** The three configuration downloads from `ChrisTitusTech/BSPWM-on-KDE` below are no longer publicly available. This KDE setup is retained as historical reference; no equivalent replacement files have been verified.\n\n",
+      "reason": "Mark unavailable historical downloads explicitly; do not invent a replacement executable."
+    },
+    {
+      "file": "src/content/posts/2018/2018-08-17-remove-asterisk.md",
+      "old": "---\ntitle: Remove Asterisk from Linux server (ubuntu/centos/debian/rhel)\nauthor: Chris Titus\n\ndate: 2018-08-17T15:58:36+00:00\nurl: /remove-asterisk/\nimage: images/2018/08/Asterisk_003.webp\ncategories:\n  - Linux\ntags:\n  - Asterisk\n\n---\n",
+      "new": "---\ntitle: Remove Asterisk from Linux server (ubuntu/centos/debian/rhel)\nauthor: Chris Titus\n\ndate: 2018-08-17T15:58:36+00:00\nurl: /remove-asterisk/\nimage: images/2018/08/Asterisk_003.webp\ncategories:\n  - Linux\ntags:\n  - Asterisk\n\n---\n> **Link update 2026-10-07:** The `asterisk-14-current.tar.gz` download below is no longer available. Use source matching the installed Asterisk version when following an uninstall procedure; the original commands are retained as historical reference.\n\n",
+      "reason": "Mark unavailable historical downloads explicitly; do not invent a replacement executable."
+    },
+    {
+      "file": "src/content/posts/2020/install-wine-libfaudio0-error.md",
+      "old": "---\ntitle: \"Install Wine Libfaudio0 Error\"\n\ndate: 2020-05-25T13:14:23-05:00\nurl: /install-wine-libfaudio0-error/\nimage: images/2020-thumbs/install-wine-libfaudio0-error.webp\ncategories:\n  - Linux\ntags:\n  - Linux Mint\n  - Ubuntu\n---\n",
+      "new": "---\ntitle: \"Install Wine Libfaudio0 Error\"\n\ndate: 2020-05-25T13:14:23-05:00\nurl: /install-wine-libfaudio0-error/\nimage: images/2020-thumbs/install-wine-libfaudio0-error.webp\ncategories:\n  - Linux\ntags:\n  - Linux Mint\n  - Ubuntu\n---\n> **Link update 2026-10-07:** The two pinned Ubuntu 18.04 `libfaudio0` download links below are no longer available. This workaround is historical; no equivalent replacement packages have been verified for these exact commands.\n\n",
+      "reason": "Mark unavailable historical downloads explicitly; do not invent a replacement executable."
+    },
+    {
+      "file": "src/content/posts/2022/setting-up-the-ultimate-windows-11.md",
+      "old": "---\ntitle: \"Setting Up the Ultimate Windows 11\"\n\ndate: 2022-10-19\nurl: /setting-up-the-ultimate-windows-11/\nimage: images/2022-thumbs/setting-up-the-ultimate-windows-11.webp\ncategories:\n  - Windows\ntags:\n  - Custom ISOs\ndraft: false\n---\n",
+      "new": "---\ntitle: \"Setting Up the Ultimate Windows 11\"\n\ndate: 2022-10-19\nurl: /setting-up-the-ultimate-windows-11/\nimage: images/2022-thumbs/setting-up-the-ultimate-windows-11.webp\ncategories:\n  - Windows\ntags:\n  - Custom ISOs\ndraft: false\n---\n> **Link update 2026-10-07:** The pinned WinGet 1.2.10271 installer and license assets referenced below are no longer available. These commands document the original setup and should not be treated as working downloads.\n\n",
+      "reason": "Mark unavailable historical downloads explicitly; do not invent a replacement executable."
+    },
+    {
+      "file": "src/content/posts/2022/stop-using-apt.md",
+      "old": "---\r\ntitle: \"Stop Using APT\"\r\n\r\ndate: 2022-07-19T17:32:28-05:00\r\nurl: /stop-using-apt/\r\nimage: images/2022-thumbs/stop-using-apt.webp\r\ncategories:\r\n  - Linux\r\ntags:\r\n  - Ubuntu\r\n  - Debian\r\n---\r\n",
+      "new": "---\r\ntitle: \"Stop Using APT\"\r\n\r\ndate: 2022-07-19T17:32:28-05:00\r\nurl: /stop-using-apt/\r\nimage: images/2022-thumbs/stop-using-apt.webp\r\ncategories:\r\n  - Linux\r\ntags:\r\n  - Ubuntu\r\n  - Debian\r\n---\r\n> **Link update 2026-10-07:** The old Volian repository key URL in the installation commands below is no longer available. Do not run that historical repository setup as written; a replacement key for that exact configuration has not been verified.\r\n\r\n",
+      "reason": "Mark unavailable historical downloads explicitly; do not invent a replacement executable."
+    },
+    {
+      "file": "src/content/posts/2020/flatpak-acceleration.md",
+      "old": "---\ntitle: \"Flatpak Acceleration\"\n\ndate: 2020-08-16T18:52:55-05:00\nurl: /flatpak-acceleration/\ncategories:\n  - Linux\ntags:\n  - Flatpak \ndraft: true\n---\n",
+      "new": "---\ntitle: \"Flatpak Acceleration\"\n\ndate: 2020-08-16T18:52:55-05:00\nurl: /flatpak-acceleration/\ncategories:\n  - Linux\ntags:\n  - Flatpak \ndraft: true\n---\n> **Link update 2026-10-07:** The old `cache.sdk.freedesktop.org` repository address is unavailable. See [Flatpak's runtime documentation](https://docs.flatpak.org/en/latest/available-runtimes.html) for current runtime sources; the 2020 commands below remain historical.\n\n",
+      "reason": "Mark unavailable historical downloads explicitly; do not invent a replacement executable."
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://github.com/GNOME/glade",
+      "new": "https://gitlab.gnome.org/Archive/glade",
+      "reason": "Firecrawl confirmed the official archived Glade source (HTTP 200).",
+      "occurrences": 2
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://gitlab.gnome.org/GNOME/california",
+      "new": "https://gitlab.gnome.org/Archive/california",
+      "reason": "GNOME GitLab project API identifies the moved or archived canonical repository.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://gitlab.gnome.org/GNOME/connections",
+      "new": "https://gitlab.gnome.org/GNOME/gnome-connections",
+      "reason": "GNOME GitLab project API identifies the moved or archived canonical repository.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://gitlab.gnome.org/GNOME/fractal",
+      "new": "https://gitlab.gnome.org/World/fractal",
+      "reason": "GNOME GitLab project API identifies the moved or archived canonical repository.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://gitlab.gnome.org/GNOME/gbrainy/",
+      "new": "https://gitlab.gnome.org/Archive/gbrainy",
+      "reason": "GNOME GitLab project API identifies the moved or archived canonical repository.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://gitlab.gnome.org/GNOME/gedit",
+      "new": "https://gitlab.gnome.org/World/gedit/gedit",
+      "reason": "GNOME GitLab project API identifies the moved or archived canonical repository.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://gitlab.gnome.org/GNOME/giggle/",
+      "new": "https://gitlab.gnome.org/Archive/giggle",
+      "reason": "GNOME GitLab project API identifies the moved or archived canonical repository.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://gitlab.gnome.org/swilmet/gnome-latex",
+      "new": "https://gitlab.gnome.org/World/gedit/enter-tex",
+      "reason": "GNOME GitLab project API identifies the moved or archived canonical repository.",
+      "occurrences": 2
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://github.com/GNOME/cheese",
+      "new": "https://gitlab.gnome.org/Archive/cheese",
+      "reason": "Official GNOME project API confirms the canonical Cheese source repository.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "[Lucidor](https://lucidor.org/lucidor/)",
+      "new": "Lucidor (historical; the original website now serves unrelated content)",
+      "reason": "Remove a repurposed application-domain link that now serves gambling content.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "[![Open-Source Software][oss icon]](https://github.com/aptana/studio3) ",
+      "new": "",
+      "reason": "Original upstream repository returns 404 from both the website and GitHub API; do not link an unrelated fork.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "[![Open-Source Software][oss icon]](https://github.com/maximumadmin/zramd) ",
+      "new": "",
+      "reason": "Original upstream repository returns 404 from both the website and GitHub API; do not link an unrelated fork.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "[zramd](https://github.com/maximumadmin/zramd)",
+      "new": "zramd (historical; original repository unavailable)",
+      "reason": "Retain the historical entry without a broken repository hyperlink.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "[![Open-Source Software][oss icon]](https://github.com/Ryujinx/Ryujinx) ",
+      "new": "",
+      "reason": "Original upstream repository returns 404 from both the website and GitHub API; do not link an unrelated fork.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "image: images/2024-thumbs/linux-alternatives.webp\r\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2025/chrome-performance-issues-linux.md",
+      "old": "image: images/2025-thumbs/chrome-performance-issues-linux.webp\r\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2025/dangers-of-kernel-anticheat.md",
+      "old": "image: images/2025-thumbs/dangers-of-kernel-anticheat.webp\r\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2025/linux-game-mods.md",
+      "old": "image: images/2024-thumbs/linux-game-mods.webp\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2025/linux-laptops.md",
+      "old": "image: images/2024-thumbs/linux-laptops.webp\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2025/macbook-problems.md",
+      "old": "image: images/2025-thumbs/macbook-problems.webp\r\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2025/warp-terminal.md",
+      "old": "image: images/2025-thumbs/warp-terminal.webp\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2025/website-design.md",
+      "old": "image: images/2025-thumbs/website-design.webp\r\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2026/cloudflare-pagescms-website.md",
+      "old": "image: images/2026-thumbs/cloudflare-pagescms-website.webp\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2026/creating-dtb-resurrecting-orangepi.md",
+      "old": "image: images/2026-thumbs/creating-dtb-resurrecting-orangepi.webp\r\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2026/gitea.md",
+      "old": "image: images/2026-thumbs/gitea.webp\r\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2026/image-upscale-conversion-linux.md",
+      "old": "image: images/2026-thumbs/image-manipulation-linux.webp\r\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2026/why-people-dont-understand-linux.md",
+      "old": "image: images/2026-thumbs/why-people-dont-understand-linux.webp\r\n",
+      "new": "",
+      "reason": "Remove missing optional image reference; retain draft state and existing card fallback.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2025/hyprland-monitor-config.md",
+      "old": "Syntax for adding specific monitors with configuration looks like this:",
+      "new": "The examples below use the older `monitor=` configuration syntax. The linked versioned Hyprland documentation preserves that syntax; newer releases may use a different format.\r\n\r\nSyntax for adding specific monitors with configuration looks like this:",
+      "reason": "Explain why the repaired documentation link is versioned rather than silently mixing old examples with the new format.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2026/image-upscale-conversion-linux.md",
+      "old": "---\r\ntitle: \"Image Manipulation Linux\"\r\n\r\ndate: 2026-04-18\r\nurl: /image-manipulation-linux/\r\ncategories:\r\n  - Linux\r\ntags:\r\n  - Thunar\r\n  - Image Resize\r\n  - Image Upscaling\r\n  - Webp Conversion\r\ndraft: true\r\n---\r\n",
+      "new": "---\r\ntitle: \"Image Manipulation Linux\"\r\n\r\ndate: 2026-04-18\r\nurl: /image-manipulation-linux/\r\ncategories:\r\n  - Linux\r\ntags:\r\n  - Thunar\r\n  - Image Resize\r\n  - Image Upscaling\r\n  - Webp Conversion\r\ndraft: true\r\n---\r\n> **Link update 2026-10-07:** The `ChrisTitusTech/image-resize` repository is not publicly available. The clone instructions below remain an unfinished draft; no replacement implementation has been verified.\r\n\r\n",
+      "reason": "Make unavailable project dependency explicit without substituting an unrelated tool.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://learn.netdata.cloud/docs/collecting-metrics/linux-systems/network/tc-qos-classes#tcplugin",
+      "new": "https://learn.netdata.cloud/docs/collecting-metrics/collectors/networking/tc-qos-classes",
+      "reason": "HTTP 200 destination no longer contains the old section ID; use its verified page or current section.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://lmms.io/download/#linux",
+      "new": "https://lmms.io/download#linux-div",
+      "reason": "HTTP 200 destination no longer contains the old section ID; use its verified page or current section.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://www.lunarvim.org/#opinionated",
+      "new": "https://www.lunarvim.org/",
+      "reason": "HTTP 200 destination no longer contains the old section ID; use its verified page or current section.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://gnomepomodoro.org/#download",
+      "new": "https://gnomepomodoro.org/",
+      "reason": "HTTP 200 destination no longer contains the old section ID; use its verified page or current section.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/old/ideas.md",
+      "old": "https://www.itechtics.com/enable-gpedit-windows-10-home/#Method_1_Enable_Group_Policy_Editor_in_Windows_10_Home_using_GPEdit_Installer",
+      "new": "https://www.itechtics.com/enable-gpedit-windows-10-home/",
+      "reason": "The draft reference still resolves but its old section anchor no longer exists.",
+      "occurrences": 2
+    },
+    {
+      "file": "src/content/posts/2026/image-upscale-conversion-linux.md",
+      "old": "The `ChrisTitusTech/image-resize` repository is not publicly available.",
+      "new": "The `ChrisTitusTech/image-resize`, `ChrisTitusTech/image-upscale`, and `ChrisTitusTech/thunar-webp-convert` repositories are not publicly available.",
+      "reason": "All three draft clone destinations return 404, not just the first.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2026/image-upscale-conversion-linux.md",
+      "old": "Project: [ChrisTitusTech/image-resize](https://github.com/ChrisTitusTech/image-resize)",
+      "new": "Historical project: `ChrisTitusTech/image-resize` (repository unavailable)",
+      "reason": "Remove unavailable active hyperlink; preserve historical clone example with the explanatory notice.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2022/obsidian.md",
+      "reason": "**Link update 2026-10-07:** The external progress-bar service used by this historical example no longer resolves. The formula is retained for reference and will not render its progress image."
+    },
+    {
+      "file": "src/content/posts/2020/ultimate-linux-gaming-guide.md",
+      "reason": "**Link update 2026-10-07:** The XanMod repository endpoint in the historical command below no longer provides its release metadata. Do not use this old repository setup command; consult the current XanMod project instructions for your distribution."
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://osdn.net/projects/zandronum/scm/",
+      "new": "https://foss.heptapod.net/zandronum/",
+      "reason": "Official zandronum.com links this source namespace; destination HTTP 200 identifies Zandronum. OSDN DNS is unavailable.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://lxde.org/",
+      "new": "https://www.lxde.org/",
+      "reason": "Firecrawl confirmed the canonical LXDE website after the old hostname failed TLS.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://www.activestate.com/products/komodo-ide/",
+      "new": "https://github.com/Komodo/KomodoEdit",
+      "reason": "Old homepage returns 404; use the already verified primary source repository for Komodo Edit.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://www.getmiro.com/",
+      "new": "https://github.com/pculture/miro",
+      "reason": "Homepage returns server-down 521; use the already verified primary source repository for the same Miro application.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "https://the.exa.website/",
+      "new": "https://github.com/ogham/exa",
+      "reason": "Homepage could not be retrieved by HTTP or Firecrawl; retain the original project reference using its verified source repository.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "[Mockitt](https://mockitt.wondershare.com/home.html)",
+      "new": "Mockitt (historical; original website unavailable)",
+      "reason": "Original domain fails DNS and Firecrawl could not retrieve it; retain the historical resource name without a broken hyperlink. No equivalent replacement verified.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "[AllTop](https://linux.alltop.com/)",
+      "new": "AllTop (historical; original Linux directory unavailable)",
+      "reason": "Original domain fails DNS and Firecrawl could not retrieve it; retain the historical resource name without a broken hyperlink. No equivalent replacement verified.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "[Nixcraft forum](https://www.nixcraft.com/)",
+      "new": "Nixcraft forum (historical; original forum unavailable)",
+      "reason": "Original domain fails DNS and Firecrawl could not retrieve it; retain the historical resource name without a broken hyperlink. No equivalent replacement verified.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/home-theater-pc.md",
+      "old": "https://www.amd.com/en/technologies/radeon-software",
+      "new": "https://www.amd.com/en/products/software/adrenalin.html",
+      "reason": "Firecrawl found the old product URL redirects to AMD home; the official current Adrenalin product page was retrieved through web browsing.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2024/linux-alternatives.md",
+      "old": "[Zelda Classic](https://www.zeldaclassic.com/) - A tribute to Nintendo's The Legend of Zelda with additional quests, items and challenges.",
+      "new": "[ZQuest Classic](https://github.com/ZQuestClassic/ZQuestClassic) - An open-source engine for Zelda-style games. This is a current alternative to the historical Zelda Classic website link, which is unavailable.",
+      "reason": "Firecrawl returned SSL failure 526 for the old site; label the verified ZQuest Classic repository explicitly as an alternative.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2020/debloat-windows10-2020.md",
+      "old": "[https://github.com/farag2/Windows-10-Setup-Script](https://github.com/farag2/Sophia-Script-for-Windows)",
+      "new": "[https://github.com/farag2/Sophia-Script-for-Windows](https://github.com/farag2/Sophia-Script-for-Windows)",
+      "reason": "Make the visible URL label match the repaired destination.",
+      "occurrences": 1
+    },
+    {
+      "file": "src/content/posts/2022/30days-chromeos.md",
+      "old": "[https://chrome.google.com/webstore/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm](https://chromewebstore.google.com/detail/device-recovery-utility/pocpnlppkickgojjlmhdmidojbmbodfm)",
+      "new": "[https://chromewebstore.google.com/detail/device-recovery-utility/pocpnlppkickgojjlmhdmidojbmbodfm](https://chromewebstore.google.com/detail/device-recovery-utility/pocpnlppkickgojjlmhdmidojbmbodfm)",
+      "reason": "Make the visible URL label match the repaired destination.",
+      "occurrences": 1
+    }
+  ],
+  "videos": [
+    {
+      "file": "src/content/posts/2018/2018-09-11-installing-linux-subsystem.md",
+      "videoId": "RriP3LmuKNA",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2018/2018-09-11-intro-google-cloud-platform.md",
+      "videoId": "tJyVG-u6RhA",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2018/2018-09-12-google-chrome-update-69-address-bar-and-how-to-fix-it.md",
+      "videoId": "0O9TzNvVwR0",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2018/2018-09-13-issuing-ssl-certs.md",
+      "videoId": "yC3GTHJRQuM",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2018/2018-10-01-xenserver-cannot-connect.md",
+      "videoId": "UqsaRixKveA",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2018/2018-10-09-create-iscsi-sr.md",
+      "videoId": "mn17fHzn2XQ",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2018/2018-10-11-how-to-install-xen-orchestra.md",
+      "videoId": "QU28LQ1CX7Q",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2018/2018-10-12-setup-freenas-11.md",
+      "videoId": "G2-s1_OkHGA",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2018/2018-10-12-setup-freenas-11.md",
+      "videoId": "JexkrpeM_WA",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2018/2018-10-23-install-plex-plugin-freenas.md",
+      "videoId": "99fQNbuAOlg",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2019/2019-01-21-manjaro-architect-installation-guide.md",
+      "videoId": "530O4InhR3A",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2019/2019-09-15-latest-version-of-gimp.md",
+      "videoId": "CysfnD7dYwM",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2020/2020-buyers-guide.md",
+      "videoId": "cuBay8QzYH4",
+      "reason": "Private video",
+      "oembedStatus": 403,
+      "playerStatus": "LOGIN_REQUIRED",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2022/2022-recap.md",
+      "videoId": "8UvGMmGxlyc",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2022/acronis-true-image.md",
+      "videoId": "VYTCeIHS6Kg",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2022/antivirus-worthless.md",
+      "videoId": "UXT17bQ2W2Q",
+      "reason": "Private video",
+      "oembedStatus": 403,
+      "playerStatus": "LOGIN_REQUIRED",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2022/switching-to-dumbphone.md",
+      "videoId": "SXmFBWTxl-U",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2023/changes.md",
+      "videoId": "hv3bfDhEyAI",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2023/fitness-transformation.md",
+      "videoId": "kfQC-sQxMcw",
+      "reason": "Private video",
+      "oembedStatus": 403,
+      "playerStatus": "LOGIN_REQUIRED",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2023/tiny11-has-problems.md",
+      "videoId": "3UVKfliA_Rc",
+      "reason": "This video is unavailable",
+      "oembedStatus": 404,
+      "playerStatus": "ERROR",
+      "replacements": 1
+    },
+    {
+      "file": "src/content/posts/2024/hastebin.md",
+      "videoId": "TpI1siclED0",
+      "reason": "Private video",
+      "oembedStatus": 403,
+      "playerStatus": "LOGIN_REQUIRED",
+      "replacements": 1
+    }
+  ],
+  "externalFragments": [
+    {
+      "url": "https://bazzite.gg/#image-picker",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://bazzite.gg/",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://cmus.github.io/#download",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://cmus.github.io/",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://determinate.systems/posts/nix-on-the-steam-deck#enabling-an-install",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://determinate.systems/blog/nix-on-the-steam-deck/",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://developer.android.com/studio/run/oem-usb#Drivers",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://developer.android.com/studio/run/oem-usb",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://displaycal.net/#download",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://displaycal.net/",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://docs.brew.sh/Formula-Cookbook#homebrew-terminology",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://docs.brew.sh/Formula-Cookbook",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Intel_Management_Engine#Security_vulnerabilities",
+      "status": "fragment-unverified",
+      "finalUrl": "https://en.wikipedia.org/wiki/Intel_Management_Engine",
+      "httpStatus": 403
+    },
+    {
+      "url": "https://github.com/GloriousEggroll/proton-ge-custom#manual",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://github.com/GloriousEggroll/proton-ge-custom",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://github.com/iamtalhaasghar/yewtube#using-pip",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://github.com/iamtalhaasghar/yewtube",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://github.com/ksnip/ksnip#ksnip",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://github.com/ksnip/ksnip",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://lmms.io/download#linux-div",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://lmms.io/download",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://music.163.com/#/download",
+      "status": "client-side-fragment"
+    },
+    {
+      "url": "https://potrace.sourceforge.net/#downloading",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://potrace.sourceforge.net/",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://sylpheed.sraoss.jp/en/download.html#stable",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://sylpheed.sraoss.jp/en/download.html",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://tiddlywiki.com/#TiddlyDesktop",
+      "status": "fragment-unverified",
+      "finalUrl": "https://tiddlywiki.com/",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://wiki.archlinux.org/index.php/wicd#Running_Wicd_in_Text_Mode",
+      "status": "fragment-unverified"
+    },
+    {
+      "url": "https://wiki.archlinux.org/title/Fstab#Automount_with_systemd",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://wiki.archlinux.org/title/Fstab",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://wiki.archlinux.org/title/OpenRC#Usage",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://wiki.archlinux.org/title/OpenRC",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://wiki.gnome.org/Apps/SoundJuicer/Documentation#Installing",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://wiki.gnome.org/Apps/SoundJuicer/Documentation",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://www.cryptoprank.com/#/",
+      "status": "client-side-fragment"
+    },
+    {
+      "url": "https://www.debian.org/doc/manuals/aptitude/ch02s04s05.en.html#tableSearchTermQuickGuide",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://www.debian.org/doc/manuals/aptitude/ch02s04s05.en.html",
+      "httpStatus": 200
+    },
+    {
+      "url": "https://www.tcpdump.org/#source",
+      "status": "fragment-confirmed",
+      "finalUrl": "https://www.tcpdump.org/",
+      "httpStatus": 200
+    }
+  ]
+}

@@ -3,7 +3,6 @@ title: "Macbook Problems"
 
 date: 2025-07-20
 url: /macbook-problems/
-image: images/2025-thumbs/macbook-problems.webp
 categories:
   - MacOS
 tags:

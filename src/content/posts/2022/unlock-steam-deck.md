@@ -52,7 +52,7 @@ This solves all your signing issues.
 
 The new steam interface for steam deck is absolutely a home run. It just works with so much functionality and much more when only controling your system with a controller.
 
-Check out HOLO-ISO - <https://github.com/theVakhovskeIsTaken/holoiso>
+Check out HOLO-ISO - <https://github.com/holoiso-eol/holoiso>
 
 ## League of Legends on Linux / Steam
 

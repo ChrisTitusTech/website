@@ -10,6 +10,8 @@ tags:
   - Custom ISOs
 draft: false
 ---
+> **Link update 2026-10-07:** The pinned WinGet 1.2.10271 installer and license assets referenced below are no longer available. These commands document the original setup and should not be treated as working downloads.
+
 This guide shows you how to get the best performing Windows in the lightest package possible.
 <!--more-->
 

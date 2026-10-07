@@ -37,6 +37,6 @@ This guide goes over how to Create iSCSI SR on Xen to connect to an iSCSI target
 
 ### Video Walkthrough
 
-{{< youtube mn17fHzn2XQ >}}  
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
 
 In the end, we now have a centralized storage system that all our hosts can put their VMs on. This is key for using high availability, Xen Orchestra, and quick migrations. Remember to use the community-driven XenServer @ <https://xcp-ng.org/>, therefore you can get all the enterprise features of XenServer in your lab environment.

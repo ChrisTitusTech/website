@@ -3,7 +3,7 @@ title: "Degoogle"
 
 date: 2020-06-01T17:18:27-05:00
 url: /degoogle/
-image: images/2020-thumbs/degoogle.webp
+image: images/2020-thumbs/degoogle-apps.webp
 categories:
   - Linux
   - Windows

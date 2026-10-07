@@ -38,6 +38,6 @@ This article shows you how to install Xen Orchestra and use the interface via th
 
 ## Video Walkthrough
 
-{{< youtube QU28LQ1CX7Q >}}  
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
 
 I hope you enjoyed this walkthrough of how to install Xen Orchestra and if you have any feedback let me know below. In closing, I really like this product and think it is a great addition to the XenServer and a much-needed improvement over what Citrix offers.

@@ -110,7 +110,7 @@ The remaining programs can be installed using any Linux guide that is based arou
 ### Installing on an Old Machine
 
 - Google Extension and 8GB+ Thumbdrive
-    1. Install via Google Extension _(Required)_ [https://chrome.google.com/webstore/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm](https://chrome.google.com/webstore/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm)
+    1. Install via Google Extension _(Required)_ [https://chromewebstore.google.com/detail/device-recovery-utility/pocpnlppkickgojjlmhdmidojbmbodfm](https://chromewebstore.google.com/detail/device-recovery-utility/pocpnlppkickgojjlmhdmidojbmbodfm)
 
 ## Conclusion
 

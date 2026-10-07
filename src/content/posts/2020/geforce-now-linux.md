@@ -14,7 +14,7 @@ You can now use Geforce Now on your Linux machine with this quick little trick.
 
 ## Install User Agent Switcher Extension
 
-Install the [User Agent Switcher extension](https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg?hl=en-US) for any Chromium-based browser. I used this on Brave and it worked perfectly.
+Install the [User Agent Switcher extension](https://chromewebstore.google.com/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg?hl=en-US) for any Chromium-based browser. I used this on Brave and it worked perfectly.
 
 Install this Extension and launch options!
 

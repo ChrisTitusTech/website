@@ -3,7 +3,6 @@ title: "Image Manipulation Linux"
 
 date: 2026-04-18
 url: /image-manipulation-linux/
-image: images/2026-thumbs/image-manipulation-linux.webp
 categories:
   - Linux
 tags:
@@ -13,6 +12,8 @@ tags:
   - Webp Conversion
 draft: true
 ---
+> **Link update 2026-10-07:** The `ChrisTitusTech/image-resize`, `ChrisTitusTech/image-upscale`, and `ChrisTitusTech/thunar-webp-convert` repositories are not publicly available. The clone instructions below remain an unfinished draft; no replacement implementation has been verified.
+
 If you use Linux and want better-looking images without jumping into a full editor, this toolkit is for you.
 
 I now use three small projects that work from both terminal and Thunar right-click menus:
@@ -42,7 +43,7 @@ This post walks through each one in plain language, with install and usage examp
 
 Use this when you want a quick resize to fit a resolution like `1920x1080` while preserving aspect ratio.
 
-Project: [ChrisTitusTech/image-resize](https://github.com/ChrisTitusTech/image-resize)
+Historical project: `ChrisTitusTech/image-resize` (repository unavailable)
 
 ### Install Image Resize
 

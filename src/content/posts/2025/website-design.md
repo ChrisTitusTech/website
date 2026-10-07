@@ -3,7 +3,6 @@ title: "Website Design"
 
 date: 2025-08-28
 url: /website-design/
-image: images/2025-thumbs/website-design.webp
 categories:
   - Linux
 tags:

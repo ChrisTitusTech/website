@@ -3,7 +3,6 @@ title: "Gitea"
 
 date: 2026-05-04
 url: /gitea/
-image: images/2026-thumbs/gitea.webp
 categories:
   - Linux
   - Windows

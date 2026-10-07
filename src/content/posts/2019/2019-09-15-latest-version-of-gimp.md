@@ -25,4 +25,4 @@ Now simply install GIMP and it will automatically update to the latest version o
 `sudo apt-get install gimp`
 
 Here is a video walkthrough of install special GIMP scripts as well if you want to unlock the complete capabilities of GIMP.  
-{{< youtube CysfnD7dYwM >}}  
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*

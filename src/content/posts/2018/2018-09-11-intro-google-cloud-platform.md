@@ -14,7 +14,7 @@ This is an Introduction to Google Cloud Platform and goes over creating your fir
   
 ## Video Walkthrough
 
-{{< youtube tJyVG-u6RhA >}}  
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
 
 ## GCloud Commands
 

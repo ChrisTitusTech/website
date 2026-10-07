@@ -52,7 +52,7 @@ There are some recommendations and "cheating" I do when it comes to quality of l
 
 This is a big one, but on my dumb phone there is WiFi tethering. My workaround is simply to use an all-in-one android car deck I installed last year that utilizes the WiFi.
 
-{{< youtube SXmFBWTxl-U >}}
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
 
 ### Uber, Food, Music, Workout and Bank Apps
 

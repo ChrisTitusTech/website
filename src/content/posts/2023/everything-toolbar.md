@@ -33,7 +33,7 @@ winget install voidtools.Everything
 
 Getting the right version of everything toolbar is important. Version 0.8+ (Currently Beta ONLY) is compatible with Windows 11 and The official everything toolbar version 0.7.4 or earlier will ONLY work with Windows 10.
 
-Download the beta at: <https://github.com/stnkl/EverythingToolbar/releases>
+Download the beta at: <https://github.com/srwi/EverythingToolbar/releases>
 
 OR
 
@@ -43,7 +43,7 @@ winget install stnkl.EverythingToolbar.Beta
 
 For earlier versions (Windows 10 ONLY)
 
-Download the stable release at: <https://github.com/stnkl/EverythingToolbar/releases>
+Download the stable release at: <https://github.com/srwi/EverythingToolbar/releases>
 
 ```
 choco install everythingtoolbar

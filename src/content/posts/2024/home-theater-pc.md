@@ -31,7 +31,7 @@ Other Tweaks:
 - Chris Titus Tech's Windows Utility - Standard Tweaks applied - [GitHub Guide](https://github.com/christitustech/winutil)
 - Tweaked resolution with [Custom Resolution Utility](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)
 - Resolution set to 1080p for gaming (Note: If you have performance issues, you can lower the resolution to 720p)
-- Installed [Radeon Software](https://www.amd.com/en/technologies/radeon-software) for GPU settings
+- Installed [Radeon Software](https://www.amd.com/en/products/software/adrenalin.html) for GPU settings
 - Steam Installed and Set to Big Picture Mode on Startup (Controller used for all gaming)
 
 ## The Performance

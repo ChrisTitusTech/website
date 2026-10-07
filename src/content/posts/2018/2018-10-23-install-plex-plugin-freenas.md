@@ -36,7 +36,7 @@ This is an in-depth installation and configuration of the Plex plugin in FreeNAS
 
 ## Video Walkthrough
 
-Install Plex on FreeNAS Video: {{< youtube 99fQNbuAOlg >}}  
+Install Plex on FreeNAS Video: *Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
   
 The original FreeNAS installation and setup videos are no longer available.
 

@@ -10,6 +10,8 @@ tags:
   - Ubuntu
   - Debian
 ---
+> **Link update 2026-10-07:** The old Volian repository key URL in the installation commands below is no longer available. Do not run that historical repository setup as written; a replacement key for that exact configuration has not been verified.
+
 APT is slow... single downloading and generally uses slow mirrors as it doesn't optimize them out of the box. It also doesn't have a history so rolling back updates can really suck.
 <!--more-->
 Welp, all that is now fixed with [Nala](https://gitlab.com/volian/nala) and it is absolutely wonderful. Not only does it fix all that listed above but it makes the updates look beautiful.

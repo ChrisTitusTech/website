@@ -47,7 +47,7 @@ I highly recommend hardening your system with just basic tools that do NOT run i
 
 A simple free hardening tool on Github will disable many of these attack surfaces and do FAR more than any antivirus or internet security suite can, while also not adding ANY overhead or extra processes to your system.
 
-HardenTools to disable services: <https://github.com/securitywithoutborders/hardentools>
+HardenTools to disable services: <https://github.com/hardentools/hardentools>
 
 ![harden](/images/2022/hardentools.webp)
 

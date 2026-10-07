@@ -40,7 +40,7 @@ _Note: This will force the pool and slaves to reinitialize with the pool master_
 
 ### How-To Video going over troubleshooting
 
-{{< youtube UqsaRixKveA >}}  
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
 
 ### Conclusion
 

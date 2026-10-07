@@ -3,7 +3,6 @@ title: "Chrome Performance Issues Linux"
 
 date: 2025-11-02
 url: /chrome-performance-issues-linux/
-image: images/2025-thumbs/chrome-performance-issues-linux.webp
 categories:
   - Linux
 tags:

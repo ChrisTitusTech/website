@@ -3,7 +3,6 @@ title: "Warp Terminal"
 
 date: 2025-02-25
 url: /warp-terminal/
-image: images/2025-thumbs/warp-terminal.webp
 categories:
   - Linux
   - Windows

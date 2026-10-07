@@ -3,7 +3,6 @@ title: "Dangers of Kernel Anticheat"
 
 date: 2025-10-13
 url: /dangers-of-kernel-anticheat/
-image: images/2025-thumbs/dangers-of-kernel-anticheat.webp
 categories:
   - Windows
 tags:

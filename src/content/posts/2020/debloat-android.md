@@ -21,7 +21,7 @@ Setup all of the following to use ADB
 - Windows Install with Chocolatey `choco install adb`
 - Linux Install with Terminal `sudo apt-get install android-tools-adb android-tools-fastboot`
 - MacOS Install with Homebrew
-  - Homebrew install - `ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+  - Homebrew install - follow the [official Homebrew installation instructions](https://brew.sh/). The old Ruby installer URL is no longer available.
   - ADB Homebrew Install - `brew cask install android-platform-tools`
 
 ### Setup Phone for ADB Debugging

@@ -3,7 +3,6 @@ title: "Ideas"
 
 date: 2012-11-14
 url: /ideas/
-image: images/2022-thumbs/ideas.webp
 categories:
   - Linux
   - Windows
@@ -27,7 +26,7 @@ Current Ideas for Videos and Articles
 - [ ] Zerotier - BestVPN
 - [ ] Darling - MacOS Emulation [https://www.darlinghq.org/](https://www.darlinghq.org/)
 - [ ] plex server setup linux
-- [ ] Enable GPO in Win 10 Home [https://www.itechtics.com/enable-gpedit-windows-10-home/#Method_1_Enable_Group_Policy_Editor_in_Windows_10_Home_using_GPEdit_Installer](https://www.itechtics.com/enable-gpedit-windows-10-home/#Method_1_Enable_Group_Policy_Editor_in_Windows_10_Home_using_GPEdit_Installer)
+- [ ] Enable GPO in Win 10 Home [https://www.itechtics.com/enable-gpedit-windows-10-home/](https://www.itechtics.com/enable-gpedit-windows-10-home/)
 - [ ] automount drives systemd
 - [ ] rEFInd Bootloader
 - [ ] [snapdrop.net](http://snapdrop.net/) - Share files between devices

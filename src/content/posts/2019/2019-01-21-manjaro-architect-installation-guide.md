@@ -19,4 +19,4 @@ The original Amazon listing is no longer available.
 
 ## Video Walkthrough
 
-{{< youtube 530O4InhR3A >}}  
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*

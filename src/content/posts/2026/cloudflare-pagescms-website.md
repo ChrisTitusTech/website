@@ -3,7 +3,6 @@ title: "Build a Cloudflare Pages Website with Pages CMS"
 
 date: 2026-07-10
 url: /cloudflare-pagescms-website/
-image: images/2026-thumbs/cloudflare-pagescms-website.webp
 categories:
   - Networking
 tags:

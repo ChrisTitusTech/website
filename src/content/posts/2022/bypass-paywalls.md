@@ -18,11 +18,11 @@ Tired of ads, paywalls, and other garbage in your web browsing experience? These
 
 ## The Extensions
 
-- **YouTube Enhancer** - <https://chrome.google.com/webstore/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle>
+- **YouTube Enhancer** - <https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle>
   - Adds screenshots, studio, auto-settings, and much more!
   ![Youtube Enhancer](/images/2022/bypass-paywalls/youtube-enhancer.webp)
 
-- **Self-Destructing Cookies** - <https://chrome.google.com/webstore/detail/self-destructing-cookies/igdpjhaninpfanncfifdoogibpdidddf>
+- **Self-Destructing Cookies** - <https://chromewebstore.google.com/detail/self-destructing-cookies/igdpjhaninpfanncfifdoogibpdidddf>
   - _This is a privacy add-on that deletes cookies when the browser or tab is closed. Note: This will cause some sites to log you out if a sign-in is required._
 
 - **Cookie Remover** - <https://chrome.google.com/webstore/detail/cookie-remover/kcgpggonjhmeaejebeoeomdlohicfhce/related>
@@ -34,7 +34,7 @@ Tired of ads, paywalls, and other garbage in your web browsing experience? These
   ![Dev Mode Load](/images/2022/bypass-paywalls/dev-mode-load.webp)
   ![Bypass Paywalls](/images/2022/bypass-paywalls/bypass-paywalls.webp)
 
-- **Clickbait Removal** - <https://chrome.google.com/webstore/detail/clickbait-remover-for-you/omoinegiohhgbikclijaniebjpkeopip>
+- **Clickbait Removal** - <https://chromewebstore.google.com/detail/clickbait-remover-for-you/omoinegiohhgbikclijaniebjpkeopip>
   - Remove all thumbnails and put parts of video in. Also removes CAPS from the titles
   ![Clickbait Remover](/images/2022/bypass-paywalls/clickbait-remover.webp)
 

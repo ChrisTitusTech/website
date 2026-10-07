@@ -34,7 +34,7 @@ Thanks to DigitalSparky for the Pull Request and updating my website for me! Her
 There are so many more improvements to make! Thanks to feedback from users here is the to-do list.
 
 - Use both Netlify AND Cloudflare utilizing round-robin DNS (Thanks Larry!)
-- Fix "Total Blocking Time" delays with either a new theme or using Partytown to debloat Javascript <https://github.com/BuilderIO/partytown>
+- Fix "Total Blocking Time" delays with either a new theme or using Partytown to debloat Javascript <https://github.com/QwikDev/partytown>
 
 ## Walkthrough Video
 
