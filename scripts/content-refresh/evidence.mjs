@@ -20,14 +20,15 @@ export function normalizeEvidence(
   );
   const text = typeof data?.markdown === "string" ? data.markdown : "";
   const status = data?.metadata?.statusCode;
+  // Conservatively require manual review when challenge text appears, even in
+  // verbose interstitials; response length is not proof of usable content.
   const failed =
     payload?.success === false ||
     !Number.isInteger(status) ||
     status < 200 ||
     status >= 300 ||
     !text.trim() ||
-    (text.length < 1200 &&
-      /captcha|access denied|sign in|checking your browser/i.test(text));
+    /captcha|access denied|sign in|checking your browser/i.test(text);
   if (!Number.isFinite(Date.parse(retrievedAt)))
     throw new Error("Invalid retrieval timestamp");
   return {

@@ -12,9 +12,30 @@ import { extractLinks } from "./inventory.mjs";
 
 function protectedParts(body) {
   const tokens = new MarkdownIt({ html: true }).parse(body, {});
-  const blocks = tokens
-    .filter((t) => t.type === "fence" || t.type === "code_block")
-    .map((t) => ({ type: t.type, content: t.content, info: t.info }));
+  const codeBlocks = tokens.filter(
+    (t) => t.type === "fence" || t.type === "code_block",
+  );
+  const blocks = codeBlocks.map((t) => ({
+    type: t.type,
+    content: t.content,
+    info: t.info,
+  }));
+  const lineOffsets = [0, ...[...body.matchAll(/\n/g)].map((m) => m.index + 1)];
+  const blockRanges = codeBlocks.map((t) => [
+    lineOffsets[t.map[0]],
+    lineOffsets[t.map[1]] ?? body.length,
+  ]);
+  // Inventory omits code examples. Patch validation separately checks literal
+  // destinations in the final code, including URLs changed by substring edits.
+  const codeLinks = tokens
+    .flatMap((t) => [t, ...(t.children ?? [])])
+    .filter((t) => ["fence", "code_block", "code_inline"].includes(t.type))
+    .flatMap(
+      (t) =>
+        t.content.match(/\b[a-z][a-z0-9+.-]*:\/\/[^\s"'`<>(){}\[\]\\]+/gi) ??
+        [],
+    );
+
   const html = tokens
     .flatMap((t) => [t, ...(t.children ?? [])])
     .filter((t) => t.type === "html_block" || t.type === "html_inline")
@@ -23,6 +44,8 @@ function protectedParts(body) {
     markers: body.match(/<!--more-->/g) ?? [],
     shortcodes: body.match(/\{\{[<%][\s\S]*?[>%]\}\}/g) ?? [],
     blocks,
+    blockRanges,
+    codeLinks,
     html,
   };
 }
@@ -72,6 +95,7 @@ export async function createPatches(
       throw new Error("Article changed since scan; rescan before applying");
     const parsed = parseDocument(source, file);
     const front = source.slice(0, source.length - parsed.body.length);
+    const before = protectedParts(parsed.body);
     let body = parsed.body;
     const shortcodes = [...parsed.body.matchAll(/\{\{[<%][\s\S]*?[>%]\}\}/g)];
     const intervals = [],
@@ -113,8 +137,10 @@ export async function createPatches(
         parsed.body.slice(index + f.original.length);
       if (
         f.kind !== "command" &&
-        hash(protectedParts(parsed.body).blocks) !==
-          hash(protectedParts(isolated).blocks)
+        (before.blockRanges.some(
+          ([start, end]) => index < end && index + f.original.length > start,
+        ) ||
+          hash(before.blocks) !== hash(protectedParts(isolated).blocks))
       )
         throw new Error(
           "Each code block edit requires an explicit command finding",
@@ -132,8 +158,7 @@ export async function createPatches(
         body.slice(0, edit.index) +
         edit.replacement +
         body.slice(edit.index + edit.original.length);
-    const before = protectedParts(parsed.body),
-      after = protectedParts(body);
+    const after = protectedParts(body);
     if (
       hash(before.markers) !== hash(after.markers) ||
       hash(before.shortcodes) !== hash(after.shortcodes)
@@ -145,6 +170,13 @@ export async function createPatches(
     if (hash(before.html) !== hash(after.html))
       throw new Error("Patch changes raw HTML");
     validateNewLinks(parsed.body, body, run, policy, extractLinks);
+    validateNewLinks(
+      before.codeLinks,
+      after.codeLinks,
+      run,
+      policy,
+      (links) => links,
+    );
     if (file.startsWith("src/content/posts/")) validatePost(parsed.data, file);
     transformBody(body, parsed.data, file);
     const result = front + body;

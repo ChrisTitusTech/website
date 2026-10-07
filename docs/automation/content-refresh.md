@@ -304,6 +304,17 @@ guards. All 72 updater tests and 143 total unit tests passed. The complete
 existing skips and all 12 Lighthouse runs. Real-device and preview-deployment
 checks remain subject to the limits documented above.
 
+The next remote review identified three additional boundary gaps. Non-command
+findings now reject spans overlapping fenced or indented code. New literal URLs
+in final code (including inline examples and substring edits) must meet the same
+public-domain and fresh-evidence rules as rendered links. This is a literal URL
+check, not a shell interpreter; sensitive command changes still need explicit
+editorial approval. Challenge indicators conservatively require manual review
+regardless of capture length, so verbose interstitials cannot support findings.
+All 82 updater tests and 153 total unit tests passed. The complete validation
+gate passed again, including repeatable production output, route checks, 123
+browser tests (five existing skips), and all 12 Lighthouse runs.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)

