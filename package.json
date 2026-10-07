@@ -36,33 +36,35 @@
   "dependencies": {
     "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.4",
-    "astro": "7.3.2",
+    "astro": "7.3.3",
     "fast-glob": "3.3.3",
     "gray-matter": "4.0.3",
-    "markdown-it": "15.0.1",
+    "markdown-it": "15.0.2",
     "reading-time": "1.5.0",
     "sanitize-html": "2.17.7",
-    "yaml": "2.9.0"
+    "yaml": "2.9.1"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
     "@axe-core/playwright": "4.13.0",
     "@lhci/cli": "0.15.1",
-    "@playwright/test": "1.62.1",
+    "@playwright/test": "1.63.0",
     "@types/markdown-it": "14.2.0",
-    "@types/node": "26.4.1",
+    "@types/node": "26.6.4",
     "@types/sanitize-html": "2.16.1",
-    "markdownlint-cli2": "0.23.2",
-    "prettier": "3.9.6",
-    "prettier-plugin-astro": "0.14.1",
+    "markdownlint-cli2": "0.23.3",
+    "prettier": "3.9.9",
+    "prettier-plugin-astro": "1.1.0",
     "proxy-agent": "8.0.2",
     "typescript": "6.0.3",
-    "vitest": "5.0.0"
+    "vitest": "5.0.3"
   },
   "overrides": {
     "@puppeteer/browsers": "3.2.0",
+    "basic-ftp": "6.2.2",
+    "katex": "0.19.0",
     "markdownlint-cli2": {
-      "smol-toml": "1.8.0"
+      "smol-toml": "1.9.0"
     },
     "tmp": "0.2.7",
     "uuid": "11.1.1"
