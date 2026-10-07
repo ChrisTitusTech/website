@@ -4,6 +4,18 @@ Audit date: 2026-10-07. This follow-up extends the initial Firecrawl pilot to ev
 Markdown post under `src/content/posts`, including drafts and the `old` folder.
 It belongs to the same implementation PR. Scheduling remains excluded.
 
+## Subsequent editorial cleanup
+
+After the audit, the site owner requested deletion of 13 drafts whose missing
+image references had been removed. The DTB Orangepi and Image Manipulation
+articles were retained as drafts and dated 2026-12-18, preserving their original
+day of the month. The remaining draft, Degoogle, was outside that deletion list.
+There are now 317 post files: 314 published posts and three drafts.
+
+The coverage counts, CSVs, and repair ledger below are historical audit evidence
+from before this cleanup, including the deleted drafts. They are not a current
+content inventory. Published articles and routes are unaffected by the cleanup.
+
 ## Coverage
 
 All **330 posts** were inventoried individually: 314 production-eligible posts
@@ -28,7 +40,7 @@ Fragments share an HTTP target but receive separate anchor checks.
 | old    |    30 |
 
 The large unpublished Linux Alternatives list accounts for much of the external
-link inventory. It remains a draft. No publication dates, canonical URLs,
+link inventory. It remained a draft during the audit. No publication dates, canonical URLs,
 categories, or draft flags were changed.
 
 Reviewable evidence:

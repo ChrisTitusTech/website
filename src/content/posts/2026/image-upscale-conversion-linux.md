@@ -1,7 +1,7 @@
 ---
 title: "Image Manipulation Linux"
 
-date: 2026-04-18
+date: 2026-12-18
 url: /image-manipulation-linux/
 categories:
   - Linux

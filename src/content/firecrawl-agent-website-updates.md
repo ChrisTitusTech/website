@@ -31,7 +31,7 @@ The checked Nix and Zed claims remain unchanged. The Hugo guide's personal theme
 
 ## Full archive link review
 
-A follow-up review covers all 330 Markdown posts in the year folders from 2016 through 2026 and the `old` archive, including its earlier posts. This includes 16 drafts, which remain unpublished. Every post receives an audit entry, including posts with no external links.
+The follow-up review covered all 330 Markdown posts present at audit time in the year folders from 2016 through 2026 and the `old` archive, including its earlier posts and 16 unpublished drafts. Every post received an audit entry, including posts with no external links. A subsequent editorial cleanup removed 13 drafts; the retained DTB Orangepi and Image Manipulation drafts were dated December 18, 2026. The audit records preserve the original coverage.
 
 The review checks article links, image references, embedded videos, and literal URLs in examples. Shared destinations are checked once and mapped back to every post that uses them. HTTP checks provide broad coverage; Firecrawl and public project APIs help distinguish moved pages from blocked requests. YouTube metadata and player responses identify unavailable or private videos even when the watch page returns HTTP 200.
 
