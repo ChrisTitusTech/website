@@ -38,42 +38,31 @@ function filesystemArgument(prefix, destination) {
   );
 }
 
-// Preserve offsets and quoted values while removing only trivia used by the
-// expression guards. A linear scan avoids backtracking across repeated comments.
-function expressionText(text) {
-  const chars = text.split("");
-  let quote = null;
-  for (let index = 0; index < text.length;) {
-    const char = text[index];
-    if (quote) {
-      if (char === "\\") index += 2;
-      else {
-        if (char === quote) quote = null;
-        index++;
-      }
-      continue;
-    }
-    if ("\"'`".includes(char)) {
-      quote = char;
+// Skip trivia only at a known expression boundary. Do not interpret comment
+// characters elsewhere: they can be Python operators or JS private fields.
+function skipTrivia(text, index) {
+  while (index < text.length) {
+    if (/\s/.test(text[index])) {
       index++;
       continue;
     }
-    let end = index;
     if (text.startsWith("/*", index)) {
       const close = text.indexOf("*/", index + 2);
-      end = close === -1 ? text.length : close + 2;
-    } else if (text.startsWith("//", index) || char === "#") {
-      while (end < text.length && !"\r\n".includes(text[end])) end++;
-    } else if (char === "\\" && /[\r\n]/.test(text[index + 1] ?? "")) {
-      end =
-        index + (text[index + 1] === "\r" && text[index + 2] === "\n" ? 3 : 2);
-    }
-    if (end > index) {
-      chars.fill(" ", index, end);
-      index = end;
-    } else index++;
+      index = close === -1 ? text.length : close + 2;
+    } else if (text.startsWith("//", index) || text[index] === "#") {
+      while (index < text.length && !"\r\n".includes(text[index])) index++;
+    } else if (text[index] === "\\" && /[\r\n]/.test(text[index + 1] ?? "")) {
+      index += text[index + 1] === "\r" && text[index + 2] === "\n" ? 3 : 2;
+    } else break;
   }
-  return chars.join("");
+  return index;
+}
+
+function cssImportPrefix(prefix) {
+  return [...prefix.matchAll(/@import/gi)].some(
+    (match) =>
+      skipTrivia(prefix, match.index + match[0].length) === prefix.length,
+  );
 }
 
 function concatenatedUrl(text, start, end) {
@@ -81,14 +70,15 @@ function concatenatedUrl(text, start, end) {
   const suffix = text.slice(end);
   return (
     (/^[^\s;|&()<>,}\]]/.test(suffix) && !suffix.startsWith("/>")) ||
-    /^\s*(?:[+.%]|[rubf]{0,2}["'`])/i.test(suffix) ||
-    /[+%]\s*$/.test(prefix) ||
-    (/[^\s=:(,;[{}<>]$/.test(prefix) && !/@import\s*$/i.test(prefix))
+    /^(?:[+.%]|[rubf]{0,2}["'`])/i.test(text.slice(skipTrivia(text, end))) ||
+    [...prefix.matchAll(/[+%]/g)].some(
+      (match) => skipTrivia(prefix, match.index + 1) === prefix.length,
+    ) ||
+    (/[^\s=:(,;[{}<>]$/.test(prefix) && !cssImportPrefix(prefix))
   );
 }
 
 function codeUrls(text) {
-  const expressions = expressionText(text);
   const { urls, nonUrlRanges, urlRanges } = networkCommandArguments(text);
   if (/\bsrcset["']?\s*[:=]/i.test(text))
     urls.push(manualSrcsetPrefix + hash(text));
@@ -111,15 +101,13 @@ function codeUrls(text) {
         prefix,
       ) ||
       /\.\s*open\s*\([^,]*,\s*$/.test(prefix) ||
-      /@import\s*$/i.test(expressions.slice(0, match.index)) ||
+      cssImportPrefix(prefix) ||
       /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*$/.test(prefix);
     const pathShaped =
       /^[^\s/:<>{}\[\]]+\//.test(destination) ||
       /^(?:https?|ftp|file|data|javascript|mailto|tel):/i.test(destination);
     if ((urlContext || pathShaped) && !nonUrl) {
-      if (
-        concatenatedUrl(expressions, match.index, match.index + match[0].length)
-      )
+      if (concatenatedUrl(text, match.index, match.index + match[0].length))
         urls.push(implicitNetworkPrefix + "concatenated-url:" + hash(text));
       if (destination) urls.push(destination);
     }
@@ -178,7 +166,7 @@ function codeUrls(text) {
     if (
       quoted &&
       !filesystemContext &&
-      concatenatedUrl(expressions, match.index - 1, end + 1)
+      concatenatedUrl(text, match.index - 1, end + 1)
     )
       urls.push(implicitNetworkPrefix + "concatenated-url:" + hash(text));
     const syntaxOnly =
@@ -614,7 +602,7 @@ export async function createPatches(
         hash(before.inlineCode) !== hash(after.inlineCode) ||
         hash(before.inlineCodeContexts) !== hash(after.inlineCodeContexts) ||
         hash(before.blockContexts) !== hash(after.blockContexts) ||
-        /\b(ssh|security|password|powershell|registry)\b/i.test(
+        /\b(ssh|security|password|powershell|registry|sudo|doas|rm|rmdir|chmod|chown|mkfs|dd|curl|wget|scp|sftp|rsync|Remove-Item|Invoke-Expression|Start-Process)\b|\b(?:bash|sh)[ \t]+\S|\b(?:run|execute|paste|enter|type)\s+\S/i.test(
           `${source}\n${result}`,
         ),
       before: source,

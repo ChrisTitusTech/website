@@ -511,3 +511,7 @@ The literal classifier does not interpret nested shell execution or wrapper chai
 Quoted URLs with adjacent concatenated prefixes or suffixes require manual validation;
 verification of a prefix does not establish the full runtime destination. Direct
 CSS `@import` strings are validated as destinations, including bare asset names.
+
+Transfer examples using `scp`, `sftp`, or `rsync` require manual validation.
+Common command names and execution instructions in plain prose also require
+sensitive approval, even when they are not formatted as code.
