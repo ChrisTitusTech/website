@@ -275,7 +275,7 @@ export async function recordHistory(root, run, policy, approval) {
 const escape = (text) =>
   String(text)
     .replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c])
-    .replace(/([\\`*_[\]#|])/g, "\\$1");
+    .replace(/([\\`*_[\]#|~])/g, "\\$1");
 export function report(run, policy) {
   const categories = [
     "current",
