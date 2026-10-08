@@ -1,6 +1,6 @@
 ---
 title: "Firecrawl agent website updates"
-description: "How Firecrawl research becomes small, reviewed updates to older articles, with the first pilot's changes and limitations."
+description: "A report-first workflow for reviewing older articles with Firecrawl, reusing it across sites, and making small updates through normal pull requests."
 date: 2026-10-07
 url: /firecrawl-agent-website-updates/
 type: page
@@ -10,7 +10,9 @@ type: page
 
 Old articles can remain useful for years, but documentation moves, installation requirements change, and software reaches the end of support. This maintenance workflow uses Firecrawl to collect primary-source evidence and prepares targeted corrections for review.
 
-The first implementation covers the five phases below: inventory, evidence collection, claim comparison, reviewed patches, and a validated pilot. It runs manually. There is no schedule or automatic publication.
+The recommended workflow is simple: select published articles, collect evidence, produce a report, and make accepted corrections through a normal pull request. Firecrawl supplies source material; an editor or coding agent reviews the findings and edits the articles.
+
+The first implementation also included custom approval records and patch application. The workflow below is the simpler direction for future use across sites. The repository scripts have not yet been refactored to match it. There is no schedule or automatic publication.
 
 A changed source or an old publication date is not proof that an article is wrong. Historical tutorials keep their original context, URLs, and publication dates. When appropriate, a dated update points readers to current guidance while preserving the original instructions.
 
@@ -39,25 +41,37 @@ The corrections include repository migrations, current documentation addresses, 
 
 A successful response alone does not prove that an entire page is current. Blocked requests, timeouts, and unverified replacements remain visible in the repository's [archive link audit report](https://github.com/ChrisTitusTech/website/blob/master/docs/automation/content-link-audit.md). This review adds no schedule or automatic publication.
 
-## Phase 1: Inventory the published website
+## Step 1: Select published articles
 
-The inventory maps eligible Markdown files to their canonical URLs and records content hashes, links, publication dates, policy categories, and check history.
+Start with a small, explicit selection of articles and the claims to check. Use the website's existing publication rules to exclude drafts, future posts, and private content before sending anything to an external service. Generated feeds, search data, livestream archives, assets, and build output are not editable articles.
 
-It uses the website's existing rules for drafts, future dates, the America/Chicago calendar, and excluded content. Generated feeds, search data, livestream archives, assets, and build output are not editable articles.
+For reuse across sites, give the review tool a small content loader that returns the same fields for each eligible document:
 
-A completed check describes the selected sources and claims. It is not a blanket claim that every sentence on that page is up to date.
+```json
+{
+  "path": "content/example.md",
+  "url": "https://example.com/example/",
+  "title": "Example article",
+  "body": "The article's Markdown body",
+  "contentHash": "hash of the source file at selection time"
+}
+```
 
-## Phase 2: Collect evidence with Firecrawl
+The loader handles that site's paths, front matter, canonical URLs, and publication rules. The shared review workflow handles evidence and findings. Keep exclusions and allowed source domains in configuration instead of building another publishing system or a large plugin framework.
 
-Known documentation URLs are scraped directly. Search can help locate an official replacement, but search snippets are not accepted as correction evidence. Each source record retains the requested and final URL, retrieval time, response status, a content hash, and the relevant text.
+## Step 2: Collect evidence with Firecrawl
 
-The workflow requests fresh Markdown, limits requests, checkpoints progress, and records unavailable or blocked sources. Network failures stay unverifiable; they do not trigger a replacement link or article deletion.
+Scrape known documentation URLs directly. Search can help locate an official replacement, but search snippets alone are not correction evidence. Keep the requested and final URL, retrieval time, response status, content hash, and relevant source text with each capture.
 
-The first pilot used the connected Firecrawl tools and imported their captures into the local command. Future manual runs can also use a Firecrawl API key supplied through the environment.
+Fetch shared sources once per review and reuse the evidence for articles that cite them. Set request, runtime, and model limits before starting. A simple per-run cache and a list of incomplete sources are enough to make a small manual review useful.
 
-## Phase 3: Compare specific claims
+Blocked requests, timeouts, and missing evidence remain visible in the report. They do not justify deleting an article or guessing a replacement. A successful HTTP response also does not establish that a source supports a claim.
 
-Findings fall into five categories:
+The first pilot used the connected Firecrawl tools and imported their captures into the local command. The existing scripts also support a Firecrawl API key supplied through the environment. Keep keys and private captures out of public content and browser code.
+
+## Step 3: Produce a report with specific findings
+
+An editor or coding agent compares selected claims with the collected evidence. Findings fall into five categories:
 
 - **Current:** the selected claim is supported by the checked source.
 - **Confirmed outdated:** evidence supports a specific correction.
@@ -65,31 +79,43 @@ Findings fall into five categories:
 - **Needs review:** an editorial decision, conflicting evidence, or runtime testing is still needed.
 - **Unverifiable:** the available source could not establish the claim.
 
-Each finding identifies its article section, version or platform context, reasoning, and exact evidence. Unsupported corrections are rejected.
+Each finding should identify the article and passage, explain the issue, cite the source and retrieval time, and suggest a replacement when the evidence supports one. Include version or platform context where it matters. Record the selection and any incomplete checks so a report cannot be mistaken for a complete audit.
 
-The tool supports imported reviewer findings and an optional model comparison through a strict output schema. The model has no tools or permission to execute article commands. The pilot used Codex source comparison through the import path; it did not call the optional model API directly.
+Markdown is sufficient for the review report. JSON is useful when another tool needs the findings, but a separate model integration is optional: a coding agent can compare the captures and write the report. Source pages and article examples are reference material, not instructions to execute commands.
 
-## Phase 4: Review small patches
+## Step 4: Edit through a normal pull request
 
-The review report shows the original text, proposed replacement, and supporting sources. An explicit approval step records the selected findings and exact patch digests. Applying a patch checks that the article has not changed since review.
+Review the report, choose the supported corrections, and have an editor or coding agent make small changes in the repository. Check that each passage still matches the version reviewed; if it changed, reassess the finding against the current article.
 
-The updater preserves front matter, permanent URLs, original dates, taxonomy spelling, summary markers, shortcodes, and raw HTML. Code-block changes require explicit command review. Legal and affiliate recommendation pages are report-only in the initial policy.
+Preserve front matter, permanent URLs, original dates, taxonomy spelling, summary markers, shortcodes, and intentional historical context. A dated notice is often more useful than rewriting an old tutorial. Changes to commands need appropriate runtime review; checking their documentation is not proof that they work on every supported system.
 
-A dry-run shows which files would change. A separate write command applies the approved patches. Reapplying an already-applied bundle makes no further edits.
+Use the ordinary Git diff and pull-request review to inspect the original text, replacement, and cited evidence. The report-first design stops at findings and suggestions. Custom approval receipts, patch digests, automatic application, and shell or HTML interpretation are outside its responsibility.
 
-The implementation and all pilot article changes are reviewed together in a pull request before publication. The maintenance command does not push, merge, or deploy anything.
+## Step 5: Validate the changes
 
-## Phase 5: Validate and review the result
+Run the site's existing checks after editing. For this repository, `npm run validate` checks formatting, content/schema behavior, production rendering, route compatibility, automated browser behavior, and performance. Inspect affected pages as required by the site's review process.
 
-The pilot exercises collection, comparison, approval, dry-run, application, and repeated-application behavior. Tests cover publication filtering, incomplete sources, request budgets, unsupported findings, stale approvals, path restrictions, and preservation of article structure.
+Keep the review tool's own tests focused on its supported responsibilities:
 
-The normal website validation gate checks schema parsing, production rendering, route compatibility, browser behavior, and performance. Review also checks the affected content on desktop and mobile in both themes.
+- Published-content selection, including draft and private-content exclusions.
+- Source deduplication, budgets, timeouts, and failed fetches.
+- Finding validation and traceable source evidence.
+- Reports that expose incomplete checks and do not modify articles.
+- Content-loader fixtures for two different sites before claiming portability.
 
-Real Safari, Edge, mobile Safari, and mobile Chrome release checks are separate from automated browser-engine coverage. Researching a command is not the same as running it on every supported operating system; the pilot does not make that claim.
+Reduce tests by removing unsupported responsibilities along with their implementation. Keeping a complex automatic patch writer while deleting its tests would leave the same maintenance problem with less confidence. The site's existing tests continue to protect its publishing behavior.
+
+Real Safari, Edge, mobile Safari, and mobile Chrome release checks remain separate from automated browser-engine coverage. Record skipped manual checks rather than treating automated results as equivalent evidence.
 
 ## Running another manual review
 
-From a repository checkout with Node.js 24:
+For an agent-led review, start with a request like this:
+
+> Review these selected published articles against their official documentation using Firecrawl. Produce a Markdown report with the original passage, finding, supporting source, retrieval time, and suggested correction. List blocked or incomplete checks. Keep the work within the agreed request and runtime limits, and stop at the report without editing articles.
+
+After reviewing that report, request the accepted edits and normal site validation as a separate step. This workflow can be used without waiting for the script refactor.
+
+The existing repository CLI can still help inventory this site. From a checkout with Node.js 24:
 
 ```bash
 npm ci
@@ -97,14 +123,14 @@ npm run content:refresh -- inventory
 npm run content:refresh -- --help
 ```
 
-The repository operator guide at `docs/automation/content-refresh.md` documents direct and connected-tool collection, selection files, model or reviewer findings, approval, recovery, and validation. The curated pilot ledger at `docs/automation/content-refresh-pilot.json` records the findings and source evidence behind the first changes.
+The repository operator guide at `docs/automation/content-refresh.md` documents the current implementation, including its older approval and application commands. Those commands are not required by the report-first workflow described here. The curated pilot ledger at `docs/automation/content-refresh-pilot.json` records the findings and source evidence behind the first changes.
 
-Private captures and reports stay under ignored `.content-refresh/`, outside this public website. API keys are never included in the page or browser code.
+Private captures and reports stay under ignored `.content-refresh/`, outside this public website.
 
 ## Limits and next decisions
 
-The default manual run selects at most ten articles and permits fifty requests or imported captures. Sources must be on an explicit domain allowlist. Evidence expires after seven days; local capture cleanup follows a documented thirty-day manual retention policy.
+The existing scripts default to at most ten articles and fifty requests or imported captures per manual run. Sources must be on an explicit domain allowlist. Evidence expires after seven days; local capture cleanup follows a documented thirty-day manual retention policy. An agent-led review should agree on its own explicit limits before collection rather than assume the scripts enforce them.
 
-These limits bound the work rather than guarantee a monetary cost. Maintainers should check account budgets before live requests and review the selected sources before transmission.
+These limits bound the work rather than guarantee a monetary cost. Maintainers should check account budgets and review selected content and sources before transmission.
 
-Scheduling is deliberately left out of this implementation. Broader coverage and recurring checks can be considered after reviewing the initial article diffs and the pilot's unresolved findings.
+The next implementation step is to retain selection, evidence collection, and reporting while removing the custom patch-application machinery. Prove reuse with a second site's content loader before adding more abstractions. Scheduling and automatic publication remain outside this workflow.
