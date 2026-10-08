@@ -37,8 +37,6 @@ const valueOptions = {
     "--form",
     "-T",
     "--upload-file",
-    "-K",
-    "--config",
   ]),
   wget: new Set([
     "-O",
@@ -59,6 +57,56 @@ const valueOptions = {
     "-i",
     "--input-file",
     "--referer",
+  ]),
+};
+const flagOptions = {
+  curl: new Set([
+    "-f",
+    "--fail",
+    "--fail-with-body",
+    "-s",
+    "--silent",
+    "-S",
+    "--show-error",
+    "-L",
+    "--location",
+    "-I",
+    "--head",
+    "-i",
+    "--include",
+    "-v",
+    "--verbose",
+    "-N",
+    "--no-buffer",
+    "-O",
+    "--remote-name",
+    "-J",
+    "--remote-header-name",
+    "--compressed",
+    "-g",
+    "--globoff",
+    "--http1.1",
+    "--http2",
+    "-4",
+    "--ipv4",
+    "-6",
+    "--ipv6",
+    "--no-progress-meter",
+    "--next",
+  ]),
+  wget: new Set([
+    "-q",
+    "--quiet",
+    "-nv",
+    "--no-verbose",
+    "-v",
+    "--verbose",
+    "-c",
+    "--continue",
+    "-N",
+    "--timestamping",
+    "-S",
+    "--server-response",
   ]),
 };
 const urlOptions = {
@@ -122,6 +170,9 @@ export function networkCommandArguments(text) {
   // Nested shell execution needs a real shell parser. Keep these examples in
   // manual review rather than treating unclassified targets as verified.
   if (
+    /\b(?:sh|bash|dash|zsh|ksh|fish|powershell|pwsh|cmd)(?:\.exe)?\b[^\n]*?\s(?:-[^\s]*c[^\s]*|\/c)\b[^\n]*?\b(?:curl|wget)\b/i.test(
+      text,
+    ) ||
     /(?:\$\(|`)[^`]*?\b(?:curl|wget)\b/.test(text) ||
     /\(\s*(?:(?:sudo|env|exec|command)\b[^;\n]*?\s+)?(?:curl|wget)\b/.test(text)
   )
@@ -238,6 +289,7 @@ export function networkCommandArguments(text) {
         : valueOptions[command].has(flag)
           ? "value"
           : null;
+      if (flagOptions[command].has(word)) continue;
       if (role) {
         if (equals < 0) pending = role;
         else if (role === "url") target(word.slice(equals + 1), range);
@@ -250,13 +302,17 @@ export function networkCommandArguments(text) {
             : valueOptions[command].has(short)
               ? "value"
               : null;
-          if (!shortRole) continue;
+          if (!shortRole) {
+            if (!flagOptions[command].has(short))
+              urls.push(implicitNetworkPrefix + "unsupported-command-option");
+            continue;
+          }
           if (index === word.length - 1) pending = shortRole;
           else if (shortRole === "url") target(word.slice(index + 1), range);
           else nonUrlRanges.push(range);
           break;
         }
-      }
+      } else urls.push(implicitNetworkPrefix + "unsupported-command-option");
       continue;
     }
     target(word, range);

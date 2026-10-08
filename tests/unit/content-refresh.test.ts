@@ -762,6 +762,14 @@ describe("review regressions", () => {
     "result=`curl unapproved.example`",
     "(sudo -u root curl unapproved.example)",
     `result=$(curl ${sourceUrl})`,
+    "sh -c 'curl unapproved.example'",
+    'bash -lc "curl unapproved.example"',
+    `curl --connect-to=::unapproved.example: ${sourceUrl}`,
+    `curl --resolve=docs.example.com:443:127.0.0.1 ${sourceUrl}`,
+    `curl --config=local.conf ${sourceUrl}`,
+    `curl -Klocal.conf ${sourceUrl}`,
+    `curl --unknown=value ${sourceUrl}`,
+    `curl -Z ${sourceUrl}`,
   ])(
     "requires explicit verifiable network-command URLs: %s",
     async (command) => {
