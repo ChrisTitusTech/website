@@ -10,7 +10,11 @@ import {
 import { hash, safePath, readJson, writeJson } from "./common.mjs";
 import { validateFindings, validateNewLinks } from "./findings.mjs";
 import { extractLinks, extractDestinations } from "./inventory.mjs";
-import { buildInventory, publicRoute } from "../route-contract.mjs";
+import {
+  buildInventory,
+  publicRoute,
+  redirectMatches,
+} from "../route-contract.mjs";
 
 function protectedParts(body) {
   const tokens = new MarkdownIt({ html: true }).parse(body, {});
@@ -210,13 +214,18 @@ export async function createPatches(
       const resolved = new URL(destination, new URL(findings[0].url, site.url));
       if (resolved.origin !== new URL(site.url).origin || resolved.hash)
         throw new Error("New internal fragments require manual validation");
-      localRoutes ??= (
-        await buildInventory(undefined, root, { productionAt: new Date() })
-      ).routes;
+      localRoutes ??= await buildInventory(undefined, root, {
+        productionAt: new Date(),
+      });
       const route = publicRoute(decodeURIComponent(resolved.pathname));
-      if (!localRoutes.has(route))
+      if (
+        !localRoutes.routes.has(route) &&
+        !localRoutes.redirectSources.some((pattern) =>
+          redirectMatches(pattern, route),
+        )
+      )
         throw new Error(
-          "Replacement internal link has no production route or public asset",
+          "Replacement internal link has no production route, redirect, or public asset",
         );
     }
     validateNewLinks(parsed.body, body, run, policy, extractLinks);

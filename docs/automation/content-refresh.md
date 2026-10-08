@@ -342,6 +342,20 @@ files. All 2,541 eligible routes were checked against generated output. Repeated
 Astro, formatting, Markdown, and unit checks passed with 103 updater tests and
 174 total unit tests; unchanged build/browser/Lighthouse evidence above applies.
 
+The next review cycle adds deployed redirect sources to internal-link validation,
+including exact, wildcard, and parameterized rules. Unknown destinations still
+fail closed. Evidence checks recognize standalone interstitial labels and page
+titles while accepting documentation prose about signing in, access-denied
+errors, and CAPTCHA configuration. Labels are checked throughout the capture,
+including long responses. Firecrawl retries accept both delay-seconds and
+HTTP-date `Retry-After` values; delays beyond 60 seconds stop the run rather than
+retrying early. Regression tests cover accepted and rejected redirects,
+documentation versus challenge pages, and bounded/date-form retry behavior.
+The complete `npm run validate` gate passed with 119 updater tests, 190 total
+unit tests, five Python tests, 123 browser tests (five existing skips), and all
+12 Lighthouse runs. Production validation checked 2,543 outputs and 314 search
+entries. Real-device and preview-deployment limits above remain unchanged.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)

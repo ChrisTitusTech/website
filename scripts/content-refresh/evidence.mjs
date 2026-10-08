@@ -6,6 +6,18 @@ export const scrapeOptions = {
   maxAge: 0,
 };
 
+function isChallenge(text, title) {
+  // Match interstitial labels, not phrases embedded in documentation prose.
+  // Inspect every line so a long challenge page cannot evade the guard.
+  const label =
+    /^(?:captcha|access denied|sign in to continue|checking your browser)(?:[.!\u2026]|\.{3})?$/i;
+  return [title, ...text.split(/\r?\n/)].some(
+    (line) =>
+      typeof line === "string" &&
+      label.test(line.trim().replace(/^#{1,6}\s+/, "")),
+  );
+}
+
 export function normalizeEvidence(
   url,
   payload,
@@ -20,15 +32,13 @@ export function normalizeEvidence(
   );
   const text = typeof data?.markdown === "string" ? data.markdown : "";
   const status = data?.metadata?.statusCode;
-  // Conservatively require manual review when challenge text appears, even in
-  // verbose interstitials; response length is not proof of usable content.
   const failed =
     payload?.success === false ||
     !Number.isInteger(status) ||
     status < 200 ||
     status >= 300 ||
     !text.trim() ||
-    /captcha|access denied|sign in|checking your browser/i.test(text);
+    isChallenge(text, data?.metadata?.title);
   if (!Number.isFinite(Date.parse(retrievedAt)))
     throw new Error("Invalid retrieval timestamp");
   return {
@@ -108,12 +118,15 @@ export function firecrawlClient({
           response.status >= 500) &&
         attempt < 2
       ) {
-        const seconds = Number(response.headers.get("retry-after"));
+        const retryAfter = response.headers.get("retry-after")?.trim();
+        const delay = /^\d+$/.test(retryAfter ?? "")
+          ? Number(retryAfter) * 1000
+          : Date.parse(retryAfter ?? "") - Date.now();
         // Do not hammer a server whose requested delay exceeds this run's bounds.
-        if (Number.isFinite(seconds) && seconds > 60)
+        if (delay > 60000)
           throw new Error("Firecrawl rate limited; resume later");
         await sleep(
-          Math.min(60000, Math.max(1000 * 2 ** attempt, (seconds || 0) * 1000)),
+          Math.max(1000 * 2 ** attempt, Number.isFinite(delay) ? delay : 0),
         );
         continue;
       }

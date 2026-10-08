@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   mkdtemp,
   mkdir,
@@ -817,6 +817,41 @@ describe("review regressions", () => {
     );
   });
 
+  it.each([
+    "/winget",
+    "/setup-qemu-in-archlinux/",
+    "/old/guide/",
+    "/legacy/linux/guide/",
+  ])("accepts a supported redirect destination: %s", async (destination) => {
+    const { root, run } = await fixture();
+    await writeFile(
+      path.join(root, "public/_redirects"),
+      "/winget https://github.com/ChrisTitusTech/winutil/releases/latest/download/winutil.ps1 302\n" +
+        "/setup-qemu-in-archlinux/ /guide/ 301\n" +
+        "/old/:slug/ /guide/ 301\n" +
+        "/legacy/* /guide/ 301\n",
+    );
+    const replacement = `[Guide](${destination})`;
+    await propose(root, run, policy, {
+      findings: [finding(run, { replacement })],
+    });
+    expect((await createPatches(root, run, policy))[0].after).toContain(
+      replacement,
+    );
+    for (const missing of [
+      "/winget-other",
+      "/old/one/two/",
+      "/Legacy/guide/",
+    ]) {
+      await propose(root, run, policy, {
+        findings: [finding(run, { replacement: `[Missing](${missing})` })],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        "no production route",
+      );
+    }
+  });
+
   it.each(["\n", "\r\n"])(
     "protects block and inline HTML source spans with %j line endings",
     async (eol) => {
@@ -955,13 +990,117 @@ describe("review regressions", () => {
       sourceUrl,
       {
         ...payload,
-        markdown: "Interstitial boilerplate. ".repeat(100) + indicator,
+        markdown:
+          "Interstitial boilerplate. ".repeat(100) + `\n\n# ${indicator}\n`,
       },
       policy,
     );
     expect(evidence.outcome).toBe("unverifiable");
     expect(evidenceFresh(evidence, policy)).toBe(false);
   });
+  it.each([
+    "# Connect to GitHub\n\nSign in to your GitHub account, then create a token.",
+    '# Troubleshooting\n\nIf you see "Access denied", check the file permissions.',
+    "# CAPTCHA integration\n\nThis guide explains how to configure CAPTCHA.",
+    "# Authentication\n\nSelect Sign in to continue to your account settings.",
+  ])(
+    "accepts documentation with authentication terminology: %s",
+    (markdown) => {
+      const evidence = normalizeEvidence(
+        sourceUrl,
+        { ...payload, markdown },
+        policy,
+      );
+      expect(evidence.outcome).toBe("retrieved");
+      expect(evidenceFresh(evidence, policy)).toBe(true);
+    },
+  );
+  it("rejects an interstitial identified by the page title", () => {
+    expect(
+      normalizeEvidence(
+        sourceUrl,
+        {
+          ...payload,
+          metadata: { ...payload.metadata, title: "Access denied" },
+        },
+        policy,
+      ).outcome,
+    ).toBe("unverifiable");
+  });
+  it.each([
+    ["5", 5000],
+    ["Thu, 08 Oct 2026 00:00:30 GMT", 30000],
+    ["Wed, 07 Oct 2026 23:59:00 GMT", 1000],
+    ["invalid", 1000],
+    [null, 1000],
+  ])("honors bounded Retry-After %s", async (retryAfter, expectedDelay) => {
+    const clock = vi
+      .spyOn(Date, "now")
+      .mockReturnValue(Date.parse("2026-10-08T00:00:00Z"));
+    try {
+      const delays: number[] = [];
+      let calls = 0,
+        reserved = 0;
+      const client = firecrawlClient({
+        key: "fixture",
+        policy,
+        reserve: async () => {
+          reserved++;
+        },
+        sleep: async (ms: number) => {
+          delays.push(ms);
+        },
+        fetchImpl: async () =>
+          ++calls === 1
+            ? new Response("", {
+                status: 429,
+                headers:
+                  retryAfter === null ? {} : { "Retry-After": retryAfter },
+              })
+            : Response.json({ success: true, data: payload }),
+      });
+      expect((await client.scrape(sourceUrl)).outcome).toBe("retrieved");
+      expect(delays).toEqual([expectedDelay]);
+      expect(calls).toBe(2);
+      expect(reserved).toBe(2);
+    } finally {
+      clock.mockRestore();
+    }
+  });
+  it.each(["61", "Thu, 08 Oct 2026 00:01:01 GMT"])(
+    "stops before an excessive Retry-After %s",
+    async (retryAfter) => {
+      const clock = vi
+        .spyOn(Date, "now")
+        .mockReturnValue(Date.parse("2026-10-08T00:00:00Z"));
+      try {
+        let calls = 0,
+          reserved = 0;
+        const sleep = vi.fn(async () => {});
+        const client = firecrawlClient({
+          key: "fixture",
+          policy,
+          reserve: async () => {
+            reserved++;
+          },
+          sleep,
+          fetchImpl: async () => {
+            calls++;
+            return new Response("", {
+              status: 503,
+              headers: { "Retry-After": retryAfter },
+            });
+          },
+        });
+        await expect(client.scrape(sourceUrl)).rejects.toThrow("resume later");
+        expect(calls).toBe(1);
+        expect(reserved).toBe(1);
+        expect(sleep).not.toHaveBeenCalled();
+      } finally {
+        clock.mockRestore();
+      }
+    },
+  );
   it.each(["```sh\nold-command\n```", "    old-command"])(
     "rejects non-command code relocation and permits prose before %s",
     async (block) => {
