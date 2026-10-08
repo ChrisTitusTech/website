@@ -31,8 +31,7 @@
     "audit": "node scripts/audit.mjs",
     "validate:core": "npm run format:check && npm run lint:markdown && npm run audit && npm run check && npm run test && npm run test:automation && npm run build && npm run validate:repeat && npm run validate:routes",
     "validate": "npm run setup:browsers && npm run validate:core && npm run test:browser && npm run test:browser:webkit && npm run test:lighthouse",
-    "new:post": "node scripts/new-post.mjs",
-    "content:refresh": "node scripts/content-refresh.mjs"
+    "new:post": "node scripts/new-post.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "4.0.19",

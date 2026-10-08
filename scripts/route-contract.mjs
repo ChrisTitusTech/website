@@ -6,7 +6,6 @@ import YAML from "yaml";
 
 import livestreams from "../data/livestreams.json" with { type: "json" };
 import site from "../src/data/site.json" with { type: "json" };
-import { isEligibleData } from "../src/lib/content-logic.ts";
 
 const validLivestreamCount = livestreams.items.filter((stream) =>
   /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId),
@@ -158,11 +157,7 @@ function routeFromPublicFile(relative) {
   return `/${relative}`;
 }
 
-export async function buildInventory(
-  candidate,
-  root = process.cwd(),
-  { productionAt } = {},
-) {
+export async function buildInventory(candidate, root = process.cwd()) {
   const routes = new Set();
   const outputPaths = new Set();
 
@@ -173,11 +168,7 @@ export async function buildInventory(
       await readFile(path.join(root, file), "utf8"),
       file,
     );
-    if (
-      data.build?.render === "never" ||
-      typeof data.url !== "string" ||
-      (productionAt && !isEligibleData(data, productionAt))
-    )
+    if (data.build?.render === "never" || typeof data.url !== "string")
       continue;
     posts.push({ ...data, _sourcePath: file });
   }
@@ -191,11 +182,7 @@ export async function buildInventory(
       await readFile(path.join(root, file), "utf8"),
       file,
     );
-    if (
-      data.build?.render === "never" ||
-      (productionAt && !isEligibleData(data, productionAt))
-    )
-      continue;
+    if (data.build?.render === "never") continue;
     const id = file
       .replace(/^src\/content\//, "")
       .replace(/\.md$/, "")
@@ -255,13 +242,6 @@ export async function buildInventory(
     .map((line) => line.trim())
     .filter((line) => line && !line.startsWith("#"));
   const redirectSources = redirectLines.map((line) => line.split(/\s+/)[0]);
-  // Standalone content may also reserve /search/, but production has no page.
-  if (productionAt) {
-    for (const route of ["/search/", "/_headers/", "/_redirects/"])
-      routes.delete(route);
-    outputPaths.delete("search/index.html");
-    induced.delete("/search/");
-  }
   return { routes, outputPaths, induced, redirectSources };
 }
 

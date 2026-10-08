@@ -2,7 +2,7 @@
 
 Audit date: 2026-10-07. This follow-up extends the initial Firecrawl pilot to every
 Markdown post under `src/content/posts`, including drafts and the `old` folder.
-It belongs to the same implementation PR. Scheduling remains excluded.
+The PR retains these content corrections and evidence; it adds no updater or schedule.
 
 ## Subsequent editorial cleanup
 
@@ -10,7 +10,8 @@ After the audit, the site owner requested deletion of 13 drafts whose missing
 image references had been removed. The DTB Orangepi and Image Manipulation
 articles were retained as drafts and dated 2026-12-18, preserving their original
 day of the month. The remaining draft, Degoogle, was outside that deletion list.
-There are now 317 post files: 314 published posts and three drafts.
+The new Firecrawl article subsequently joined the posts collection. The final
+PR contains 318 post files: 315 published posts and three drafts.
 
 The coverage counts, CSVs, and repair ledger below are historical audit evidence
 from before this cleanup, including the deleted drafts. They are not a current
@@ -85,9 +86,11 @@ and transient signed URLs stay in ignored local storage. The CSV strips query
 strings from final redirect URLs to avoid retaining transient signatures; the
 original public source URL remains available for reproducing the check.
 
-This exhaustive, operator-reviewed pass is separate from the bounded manual
-updater CLI. The CLI's allowlist and ten-article defaults were not expanded, and
-it does not automatically crawl or repair the whole archive.
+This was a one-time, operator-reviewed pass. The experimental updater has been
+removed from the PR; its CLI, patch application, policy files, and tests are not
+part of the delivered change. Future reviews can follow the
+[report-first workflow](../../src/content/posts/2026/firecrawl-agent-website-updates.md)
+using Firecrawl and normal editorial review.
 
 ## Repairs
 
@@ -144,32 +147,29 @@ resolve the remaining uncertainty. Credentials were not requested or embedded.
 
 ## Validation
 
-- Complete `npm run validate` passed: formatting, Markdown lint, dependency
-  policy, Astro checks, unit/automation tests, production build, repeatability,
-  route contracts, Chromium/Firefox/mobile emulation, WebKit, and three
-  Lighthouse runs on each of the four configured representative routes.
-- After final content corrections, `npm run check`, `npm test`,
-  `npm run build`, and `npm run validate:routes` passed again: 126 unit tests,
-  2,543 output contracts, and 314 search entries.
-- Original metadata and draft exclusion are checked separately. The compatibility
-  fixture now uses a confirmed working video while retaining its embed assertion.
-- Local Chromium inspection passed all 32 combinations of eight representative
-  pages, desktop/mobile viewports, and dark/light themes, with no horizontal
-  overflow or unrendered shortcodes. Screenshots are preserved below.
-- After addressing the six existing PR review findings, the complete
-  `npm run validate` gate passed again with 132 unit tests (61 updater tests),
-  123 browser tests and five existing skips, and all Lighthouse thresholds.
-- At audit time, all 330 posts retained metadata other than reviewed optional
-  image repairs; all 314 published routes existed and all 16 drafts were excluded.
-  After the requested cleanup, 317 post files remain: 314 published posts and
-  three excluded drafts. The two retained drafts have December 2026 dates.
-- Independent `codex review --uncommitted` completed with no actionable
-  regressions, covering the archive audit, untracked evidence, and updater review
-  fixes. Its own 132 unit tests, formatting, and Markdown checks passed.
-  The separate CodeRabbit integration reported expired/revoked Git-provider
-  credentials; no successful new CodeRabbit review is claimed.
+The final PR validation results are recorded in the pull-request description.
+The required local gate is `npm run validate`: formatting, Markdown lint,
+dependency policy, Astro checks, unit and automation tests, production build,
+repeatability, route contracts, Chromium/Firefox/mobile emulation, WebKit, and
+three Lighthouse runs on each of the four configured representative routes.
 
-Screenshots: [desktop dark](screenshots/archive-desktop-dark.png) and
+The current inventory is 318 post files: 315 published posts and three excluded
+drafts. The two retained drafts have December 2026 dates. The published URL
+contract includes the new Firecrawl article at its preserved canonical URL.
+The compatibility fixture uses a confirmed working video while retaining its
+embed assertion. Long article links and inline code retain the mobile wrapping
+fix and browser regression coverage.
+
+At audit time, all 330 posts retained metadata other than reviewed optional
+image repairs; all 314 published routes existed and all 16 drafts were excluded.
+The audit also checked all 140 section references in the Linux Alternatives
+draft before the owner requested its deletion. These are historical checks,
+not claims about the final post inventory.
+
+Local Chromium inspection of the audit passed all 32 combinations of eight
+representative pages, desktop/mobile viewports, and dark/light themes, with no
+horizontal overflow or unrendered shortcodes. Screenshots:
+[desktop dark](screenshots/archive-desktop-dark.png) and
 [mobile light](screenshots/archive-mobile-light.png).
 
 Real Safari, Edge, mobile Safari, and mobile Chrome hardware testing and a
