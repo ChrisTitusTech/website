@@ -220,7 +220,9 @@ export function networkCommandArguments(text) {
     const unescapedWord = word.replace(/\\([\s\S])/g, "$1");
     if (
       unescapedWord !== word &&
-      /^(?:[\w./-]*\/)?(?:curl|wget)(?:\.exe)?(?:\s|$)/i.test(unescapedWord)
+      /(?:^|[\s;&|({])(?:[\w./-]*\/)?(?:curl|wget)(?:\.exe)?(?=$|[\s;&|)}])/i.test(
+        unescapedWord,
+      )
     )
       urls.push(implicitNetworkPrefix + "escaped-network-command");
     if (redirectOperand) {
@@ -242,7 +244,9 @@ export function networkCommandArguments(text) {
       if (
         !atStart &&
         !literalCommand &&
-        /^(?:[\w./-]*\/)?(?:curl|wget)(?:\.exe)?(?:\s|$)/i.test(word)
+        /(?:^|[\s;&|({])(?:[\w./-]*\/)?(?:curl|wget)(?:\.exe)?(?=$|[\s;&|)}])/i.test(
+          word,
+        )
       )
         urls.push(implicitNetworkPrefix + "unclassified-network-context");
       if (atStart && /^(?:echo|printf|man|which|type)$/.test(word))
