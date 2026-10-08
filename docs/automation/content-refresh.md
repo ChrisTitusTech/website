@@ -368,6 +368,25 @@ The complete gate passed again: 129 updater tests, 200 total unit tests, five
 Python tests, 2,543 validated production outputs, 123 browser tests with five
 existing skips, and all 12 Lighthouse runs.
 
+Another review cycle preserves whether each shortcode is active or literal using
+the production transformer's own parsing, preventing adjacent edits from hiding
+an embed or activating a literal example. Absolute and protocol-relative
+same-origin URLs now use the internal route/asset/redirect checks, including
+URLs in command examples. New player links require exactly one `v` value naming
+a valid stream in the repository's livestream data.
+
+Evidence also fails closed on provider errors, including Firecrawl's documented
+`metadata.error`, independently of the captured page's language or wording.
+Warning-bearing evidence remains unusable for findings. Textual challenge
+detection is a heuristic: an arbitrary custom interstitial returned as HTTP 200
+without a provider error, warning, or recognizable label cannot be distinguished
+reliably from source content by this adapter. Operators must inspect evidence;
+successful retrieval alone never proves a page's claims or authorizes a patch.
+The complete gate passed with 151 updater tests, 222 total unit tests, five
+Python tests, 2,543 production outputs, 123 browser tests (five existing skips),
+and all 12 Lighthouse runs. A direct comparison with the prior commit confirmed
+byte-identical transformed output for all 331 Markdown sources.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)

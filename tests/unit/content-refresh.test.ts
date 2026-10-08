@@ -740,6 +740,143 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    ['{{< youtube "example" >}}', "inline"],
+    ['{{< youtube "example" >}}', "fenced"],
+    ["{{% notice note %}}\nArchived notice.\n{{% /notice %}}", "fenced"],
+  ])(
+    "preserves active/literal context for %s with %s edits",
+    async (token, style) => {
+      for (const unwrap of [false, true]) {
+        const { root } = await fixture();
+        const before = style === "inline" ? "Before. " : "Before.\n";
+        const after = style === "inline" ? " After." : "\nAfter.";
+        const open = style === "inline" ? "`" : "```\n";
+        const close = style === "inline" ? "`" : "\n```";
+        const first = before + (unwrap ? open : "");
+        const last = (unwrap ? close : "") + after;
+        await writeFile(
+          path.join(root, file),
+          source.replace("Old guidance.", first + token + last),
+        );
+        const run = await startRun(root, "shortcode-context", policy, [
+          { url: "/guide/", sources: [sourceUrl] },
+        ]);
+        await scan(root, run, policy, { captures: [capture()] });
+        await propose(root, run, policy, {
+          findings: [
+            finding(run, {
+              kind: "command",
+              original: first,
+              replacement: before + (unwrap ? "" : open),
+            }),
+            finding(run, {
+              kind: "command",
+              original: last,
+              replacement: (unwrap ? "" : close) + after,
+            }),
+          ],
+        });
+        await expect(createPatches(root, run, policy)).rejects.toThrow(
+          "shortcode rendering context",
+        );
+      }
+    },
+  );
+  it.each([
+    "[Guide](https://christitus.com/guide/)",
+    "[Guide](//christitus.com/guide/)",
+    "![Image](https://christitus.com/images/exists.png)",
+    "Run `curl https://christitus.com/guide/`.",
+  ])("validates same-origin destinations locally: %s", async (replacement) => {
+    const { root, run } = await fixture();
+    await mkdir(path.join(root, "public/images"));
+    await writeFile(path.join(root, "public/images/exists.png"), "fixture");
+    await propose(root, run, policy, {
+      findings: [finding(run, { replacement })],
+    });
+    expect((await createPatches(root, run, policy))[0].after).toContain(
+      replacement,
+    );
+  });
+  it.each([
+    "[Missing](https://christitus.com/missing/)",
+    "[Missing](//christitus.com/missing/)",
+    "Run `curl https://christitus.com/missing/`.",
+    "[Fragment](https://christitus.com/guide/#missing)",
+    "[Credentials](https://user:pass@christitus.com/guide/)",
+  ])("rejects invalid same-origin destinations: %s", async (replacement) => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [finding(run, { replacement })],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      /internal|Internal/,
+    );
+  });
+  it.each([
+    "",
+    "?video=known123",
+    "?v=missing123",
+    "?v=bad!",
+    "?v=known123&v=other123",
+  ])("rejects invalid livestream player query %s", async (query) => {
+    const { root, run } = await fixture();
+    await mkdir(path.join(root, "data"));
+    await writeFile(
+      path.join(root, "data/livestreams.json"),
+      JSON.stringify({ items: [{ videoId: "known123" }] }),
+    );
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, { replacement: `[Watch](/live-streams/player/${query})` }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "one known video ID",
+    );
+  });
+  it.each(["", "https://christitus.com"])(
+    "accepts a known livestream with origin %s",
+    async (origin) => {
+      const { root, run } = await fixture();
+      await mkdir(path.join(root, "data"));
+      await writeFile(
+        path.join(root, "data/livestreams.json"),
+        JSON.stringify({ items: [{ videoId: "known123" }] }),
+      );
+      const replacement = `[Watch](${origin}/live-streams/player/?v=known123)`;
+      await propose(root, run, policy, {
+        findings: [finding(run, { replacement })],
+      });
+      expect((await createPatches(root, run, policy))[0].after).toContain(
+        replacement,
+      );
+    },
+  );
+  it.each(["metadata", "data", "payload"])(
+    "rejects provider-reported errors in %s despite custom page text",
+    (location) => {
+      const data = {
+        ...payload,
+        markdown: "A customized interstitial in any language.",
+        metadata: { ...payload.metadata },
+      };
+      const response: any = { success: true, data };
+      const target =
+        location === "metadata"
+          ? data.metadata
+          : location === "data"
+            ? data
+            : response;
+      Object.assign(target, {
+        error: "Provider could not retrieve the requested page",
+      });
+      const evidence = normalizeEvidence(sourceUrl, response, policy);
+      expect(evidence.outcome).toBe("unverifiable");
+      expect(evidenceFresh(evidence, policy)).toBe(false);
+    },
+  );
+  it.each([
     `[Docs](${sourceUrl}#unverified)`,
     `![Diagram](${sourceUrl}#unverified)`,
     "[Docs](//docs.example.com/guide#unverified)",

@@ -78,6 +78,18 @@ function protectedParts(body) {
   };
 }
 
+function shortcodeContexts(body, data, file) {
+  const offsets = [0, ...[...body.matchAll(/\n/g)].map((m) => m.index + 1)];
+  const active = new Set();
+  transformBody(body, data, file, (line, column) =>
+    active.add(offsets[line] + column),
+  );
+  return [...body.matchAll(/\{\{[<%][\s\S]*?[>%]\}\}/g)].map((m) => ({
+    token: m[0],
+    active: active.has(m.index),
+  }));
+}
+
 export async function createPatches(
   root,
   run,
@@ -117,6 +129,16 @@ export async function createPatches(
   }
   const patches = [];
   let localRoutes;
+  let streamIds;
+  const siteOrigin = new URL(site.url).origin;
+  const externalLinks = (links) =>
+    links.filter((link) => {
+      try {
+        return new URL(link).origin !== siteOrigin;
+      } catch {
+        return true;
+      } // Keep malformed URLs for normal external validation.
+    });
   for (const [file, findings] of groups) {
     const target = await safePath(root, file);
     const source = await readFile(target, "utf8");
@@ -199,25 +221,47 @@ export async function createPatches(
       hash(before.shortcodes) !== hash(after.shortcodes)
     )
       throw new Error("Patch changes summary markers or shortcodes");
+    if (
+      hash(shortcodeContexts(parsed.body, parsed.data, file)) !==
+      hash(shortcodeContexts(body, parsed.data, file))
+    )
+      throw new Error("Patch changes shortcode rendering context");
     const commandsChanged = hash(before.blocks) !== hash(after.blocks);
     if (commandsChanged && !findings.some((f) => f.kind === "command"))
       throw new Error("Code block changes require an explicit command finding");
     if (hash(before.html) !== hash(after.html))
       throw new Error("Patch changes raw HTML");
-    const oldDestinations = new Set(extractDestinations(parsed.body));
-    for (const destination of extractDestinations(body)) {
-      if (
-        oldDestinations.has(destination) ||
-        /^(?:[a-z][a-z0-9+.-]*:|[\\/]{2})/i.test(destination)
-      )
-        continue;
+    const oldDestinations = new Set([
+      ...extractDestinations(parsed.body),
+      ...before.codeLinks,
+    ]);
+    for (const destination of [
+      ...extractDestinations(body),
+      ...after.codeLinks,
+    ]) {
+      if (oldDestinations.has(destination)) continue;
       const resolved = new URL(destination, new URL(findings[0].url, site.url));
-      if (resolved.origin !== new URL(site.url).origin || resolved.hash)
+      if (resolved.origin !== siteOrigin) continue;
+      if (resolved.username || resolved.password)
+        throw new Error("Internal links must not contain credentials");
+      if (resolved.hash)
         throw new Error("New internal fragments require manual validation");
       localRoutes ??= await buildInventory(undefined, root, {
         productionAt: new Date(),
       });
       const route = publicRoute(decodeURIComponent(resolved.pathname));
+      if (route === "/live-streams/player/") {
+        streamIds ??= new Set(
+          (await readJson(await safePath(root, "data/livestreams.json"))).items
+            .filter((stream) => /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId))
+            .map((stream) => stream.videoId),
+        );
+        const ids = resolved.searchParams.getAll("v");
+        if (ids.length !== 1 || !streamIds.has(ids[0]))
+          throw new Error(
+            "Livestream player links require one known video ID in v",
+          );
+      }
       if (
         !localRoutes.routes.has(route) &&
         !localRoutes.redirectSources.some((pattern) =>
@@ -228,13 +272,15 @@ export async function createPatches(
           "Replacement internal link has no production route, redirect, or public asset",
         );
     }
-    validateNewLinks(parsed.body, body, run, policy, extractLinks);
+    validateNewLinks(parsed.body, body, run, policy, (text) =>
+      externalLinks(extractLinks(text)),
+    );
     validateNewLinks(
       before.codeLinks,
       after.codeLinks,
       run,
       policy,
-      (links) => links,
+      externalLinks,
     );
     if (file.startsWith("src/content/posts/")) validatePost(parsed.data, file);
     transformBody(body, parsed.data, file);

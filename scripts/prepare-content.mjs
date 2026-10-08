@@ -112,7 +112,7 @@ function renderShortcode(name, rawArgs, data, file) {
   throw new Error(`${file}: unsupported active Hugo shortcode ${name}`);
 }
 
-function replaceOutsideInlineCode(line, data, file) {
+function replaceOutsideInlineCode(line, data, file, onShortcode) {
   let result = "";
   let cursor = 0;
   let codeFence = null;
@@ -137,6 +137,7 @@ function replaceOutsideInlineCode(line, data, file) {
       const token = line.slice(index + 3, end).trim();
       const match = token.match(/^([\w-]+)([\s\S]*)$/);
       if (!match) throw new Error(`${file}: malformed Hugo shortcode`);
+      onShortcode?.(index);
       result += renderShortcode(match[1], match[2], data, file);
       cursor = end + 3;
       index = cursor;
@@ -150,7 +151,9 @@ function replaceOutsideInlineCode(line, data, file) {
     .replaceAll("src='../images/", "src='/images/");
 }
 
-export function transformBody(body, data, file) {
+// The optional observer receives zero-based source line/column positions for
+// consumed shortcode tokens, including both delimiters of a paired notice.
+export function transformBody(body, data, file, onShortcode) {
   const lines = body.split(/\r?\n/);
   const output = [];
   let fenced = null;
@@ -184,6 +187,7 @@ export function transformBody(body, data, file) {
       /^\s*(?:\{\{<\s*notice\s+(tip|note)\s*>}}|\{\{%\s*notice\s+(tip|note)\s*%}})\s*$/,
     );
     if (notice) {
+      onShortcode?.(index, line.indexOf("{{"));
       const noticeType = notice[1] ?? notice[2];
       const noticeBody = [];
       index += 1;
@@ -198,6 +202,7 @@ export function transformBody(body, data, file) {
       }
       if (index === lines.length)
         throw new Error(`${file}: unclosed notice shortcode`);
+      onShortcode?.(index, lines[index].indexOf("{{"));
       output.push(
         `<aside class="notice notice-${noticeType}" role="note"><p class="notice-title">${noticeType === "tip" ? "Tip" : "Note"}</p>${markdown.render(noticeBody.join("\n"))}</aside>`,
       );
@@ -206,7 +211,11 @@ export function transformBody(body, data, file) {
     if (/\{\{(?:<\s*\/notice\s*>|%\s*\/notice\s*%)}}/.test(line)) {
       throw new Error(`${file}: unmatched notice shortcode`);
     }
-    output.push(replaceOutsideInlineCode(line, data, file));
+    output.push(
+      replaceOutsideInlineCode(line, data, file, (column) =>
+        onShortcode?.(index, column),
+      ),
+    );
   }
   return output.join("\n");
 }

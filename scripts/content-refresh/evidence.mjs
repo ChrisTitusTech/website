@@ -34,6 +34,7 @@ export function normalizeEvidence(
   const status = data?.metadata?.statusCode;
   const failed =
     payload?.success === false ||
+    Boolean(payload?.error || data?.error || data?.metadata?.error) ||
     !Number.isInteger(status) ||
     status < 200 ||
     status >= 300 ||
