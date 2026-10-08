@@ -770,6 +770,9 @@ describe("review regressions", () => {
     `curl -Klocal.conf ${sourceUrl}`,
     `curl --unknown=value ${sourceUrl}`,
     `curl -Z ${sourceUrl}`,
+    "wget -i targets.txt",
+    "wget --input-file=targets.txt",
+    "env -S 'curl unapproved.example'",
   ])(
     "requires explicit verifiable network-command URLs: %s",
     async (command) => {
@@ -960,6 +963,9 @@ describe("review regressions", () => {
     'open("config.yaml")',
     'systemctl enable "nginx.service"',
     'console.log("Done.Next")',
+    "sudo -i",
+    "sudo -iu postgres psql",
+    "env -S python3 script.py",
     `document.write('<a href="/guide/">Guide</a>')`,
   ])(
     "preserves ordinary strings and bare filesystem arguments: %s",

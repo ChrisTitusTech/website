@@ -54,8 +54,6 @@ const valueOptions = {
     "--tries",
     "--post-data",
     "--post-file",
-    "-i",
-    "--input-file",
     "--referer",
   ]),
 };
@@ -187,7 +185,8 @@ export function networkCommandArguments(text) {
     optionsEnded = false,
     redirectOperand = false,
     wrapper = null,
-    wrapperValue = false;
+    wrapperValue = false,
+    ambiguousWrapper = false;
   const target = (value, range) => {
     urlRanges.push(range);
     urls.push(
@@ -206,6 +205,7 @@ export function networkCommandArguments(text) {
       redirectOperand = false;
       wrapper = null;
       wrapperValue = false;
+      ambiguousWrapper = false;
       continue;
     }
     const word = raw.replace(
@@ -249,8 +249,7 @@ export function networkCommandArguments(text) {
           values.has(word.slice(0, 2))
         ) {
           /* attached value */
-        } else if (!flags.has(flag) || equals >= 0)
-          urls.push(implicitNetworkPrefix + "unsupported-wrapper-option");
+        } else if (!flags.has(flag) || equals >= 0) ambiguousWrapper = true;
         continue;
       }
       if (
@@ -258,12 +257,14 @@ export function networkCommandArguments(text) {
         (/^(?:if|then|do|!|\$)$/.test(word) || /^[A-Za-z_]\w*=/.test(word))
       )
         continue;
+      if (atStart && ambiguousWrapper && /\b(?:curl|wget)\b/.test(word))
+        urls.push(implicitNetworkPrefix + "unsupported-wrapper-option");
       const found = atStart && word.match(/(?:^|\/)(curl|wget)(?:\.exe)?$/i);
       if (found) {
         command = found[1].toLowerCase();
         nonUrlRanges.push(range);
       }
-      atStart = false;
+      atStart = ambiguousWrapper && !found;
       continue;
     }
     if (word.startsWith("#")) {

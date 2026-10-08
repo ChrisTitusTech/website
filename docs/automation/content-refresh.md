@@ -488,5 +488,5 @@ commands require manual validation, including commands that set a default
 protocol. [curl's URL rules](https://curl.se/docs/manpage.html) otherwise allow
 protocol guessing. This is a conservative argument classifier, not a shell
 interpreter: detected nested network commands, unsupported wrapper or network-command
-options, and curl configuration-file options are rejected for manual validation. Configuration files and unfamiliar command syntax also
+options, curl configuration files, and wget input files are rejected for manual validation. Configuration files and unfamiliar command syntax also
 require operator review.
