@@ -807,6 +807,9 @@ describe("review regressions", () => {
     "env --split-string='curl unapproved.example'",
     "env -Scurl unapproved.example",
     "$'curl' docs.example.com/guide",
+    '$"curl" docs.example.com/guide',
+    'c$"ur"l docs.example.com/guide',
+    '$"wget" docs.example.com/guide',
     "c{ur,x}l docs.example.com/guide",
     "{curl,wget} docs.example.com/guide",
     'curl "#" docs.example.com/guide',
@@ -1049,6 +1052,7 @@ describe("review regressions", () => {
     'printf "%s" curl',
     "which curl",
     "printf $'curl'",
+    'printf $"curl"',
     `document.write('<a href="/guide/">Guide</a>')`,
   ])(
     "preserves ordinary strings and bare filesystem arguments: %s",

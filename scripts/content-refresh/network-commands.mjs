@@ -246,8 +246,8 @@ export function networkCommandArguments(text) {
     if (!command) {
       if (atStart && /^[^()\s=]*\{[^{}]*(?:,|\.\.)[^{}]*\}/.test(raw))
         urls.push(implicitNetworkPrefix + "brace-expanded-command");
-      if ((atStart || !literalCommand) && /\$'/.test(raw))
-        urls.push(implicitNetworkPrefix + "ansi-quoted-command");
+      if ((atStart || !literalCommand) && /\$['"]/.test(raw))
+        urls.push(implicitNetworkPrefix + "dollar-quoted-command");
       // A literal curl/wget invocation behind an unknown executor must not
       // disappear merely because that executor is outside the supported set.
       if (
