@@ -804,6 +804,8 @@ describe("review regressions", () => {
     "wget -i targets.txt",
     "wget --input-file=targets.txt",
     "env -S 'curl unapproved.example'",
+    "env --split-string='curl unapproved.example'",
+    "env -Scurl unapproved.example",
     "if false; then :; else curl unapproved.example; fi",
     "if false; then :; elif curl unapproved.example; then :; fi",
     "{ curl unapproved.example; }",

@@ -272,7 +272,11 @@ export function networkCommandArguments(text) {
           values.has(word.slice(0, 2))
         ) {
           /* attached value */
-        } else if (!flags.has(flag) || equals >= 0) ambiguousWrapper = true;
+        } else if (!flags.has(flag) || equals >= 0) {
+          ambiguousWrapper = true;
+          if (/(?:curl|wget)/i.test(unescapedWord))
+            urls.push(implicitNetworkPrefix + "unsupported-wrapper-option");
+        }
         continue;
       }
       if (
