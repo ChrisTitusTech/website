@@ -96,7 +96,9 @@ values below as evidence.
 ]
 ```
 
-Imports count toward the processing limit but make no new provider requests.
+Each imported-source lookup counts toward the processing limit, including
+missing, malformed, stale, warned, or failed captures, but makes no new provider
+requests. Reusing fresh evidence already collected in the run consumes no unit.
 The default ten-article/fifty-request limits bound work, not monetary cost.
 Check the Firecrawl account budget separately; no pricing assumptions or credit
 guarantees are embedded. Text is limited to 40,000 characters per source and
@@ -330,8 +332,8 @@ production article's warning and unchanged canonical URL were checked directly.
 New internal links and image destinations are checked against production-eligible
 routes and public assets, including relative destinations resolved from the
 article URL. Draft/future posts and the reserved non-page `/search/` are not valid
-targets. New fragment destinations require separate manual validation; the
-updater fails closed instead of guessing anchor availability. The validation
+targets. New internal or external fragment destinations require separate manual
+validation; the updater fails closed instead of guessing anchor availability. The validation
 cycle passed all 101 updater tests and 172 total unit tests, the full production
 and route checks, 123 browser tests (five existing skips), and all 12 Lighthouse
 runs. Saved evidence is also rechecked against the HTTPS/domain rules.
@@ -355,6 +357,16 @@ The complete `npm run validate` gate passed with 119 updater tests, 190 total
 unit tests, five Python tests, 123 browser tests (five existing skips), and all
 12 Lighthouse runs. Production validation checked 2,543 outputs and 314 search
 entries. Real-device and preview-deployment limits above remain unchanged.
+
+The subsequent remote review closes two more validation gaps: new external URL
+fragments fail closed even when the base page has fresh evidence, and unsuccessful
+import lookups consume their processing unit before scanning capture candidates.
+Coverage includes rendered links/images, inline and fenced command URLs, missing
+or unusable imports across multiple documents, persisted counters, and resuming
+an exhausted run without processing further sources.
+The complete gate passed again: 129 updater tests, 200 total unit tests, five
+Python tests, 2,543 validated production outputs, 123 browser tests with five
+existing skips, and all 12 Lighthouse runs.
 
 ## Provider references
 

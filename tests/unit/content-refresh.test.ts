@@ -739,6 +739,90 @@ describe("patch approval and recovery", () => {
 });
 
 describe("review regressions", () => {
+  it.each([
+    `[Docs](${sourceUrl}#unverified)`,
+    `![Diagram](${sourceUrl}#unverified)`,
+    "[Docs](//docs.example.com/guide#unverified)",
+    `Run \`curl ${sourceUrl}#unverified\`.`,
+  ])("rejects unverified external fragments: %s", async (replacement) => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [finding(run, { replacement })],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "external fragments require manual validation",
+    );
+  });
+  it("rejects a fragment introduced into an existing command URL", async () => {
+    const { root } = await fixture();
+    await writeFile(
+      path.join(root, file),
+      source.replace("old-command", `curl ${sourceUrl}`),
+    );
+    const run = await startRun(root, "command-fragment", policy, [
+      { url: "/guide/", sources: [sourceUrl] },
+    ]);
+    await scan(root, run, policy, { captures: [capture()] });
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, {
+          kind: "command",
+          original: sourceUrl,
+          replacement: `${sourceUrl}#unverified`,
+        }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "external fragments require manual validation",
+    );
+  });
+  it.each(["missing", "malformed", "stale", "failed", "warning"])(
+    "charges %s imports before stopping at the processing budget",
+    async (failure) => {
+      const { root } = await fixture();
+      await writeFile(
+        path.join(root, "src/content/posts/2020/second.md"),
+        source.replace("url: /guide/", "url: /second/"),
+      );
+      const limited = { ...policy, maxRequests: 1 };
+      const run = await startRun(root, "failed-import-budget", limited, [
+        { url: "/guide/", sources: [sourceUrl] },
+        { url: "/second/", sources: ["https://docs.example.com/second"] },
+      ]);
+      const captures = {
+        missing: [],
+        malformed: [null, { url: sourceUrl }],
+        stale: [{ ...capture(), retrievedAt: "2020-01-01T00:00:00Z" }],
+        failed: [
+          {
+            ...capture(),
+            data: {
+              ...payload,
+              metadata: { ...payload.metadata, statusCode: 500 },
+            },
+          },
+        ],
+        warning: [
+          { ...capture(), data: { ...payload, warning: "Incomplete scrape" } },
+        ],
+      }[failure];
+      await scan(root, run, limited, { captures });
+      expect(run.requests).toBe(1);
+      expect(run.status).toBe("budget-limited");
+      expect(run.documents[0].status).toBe("unverifiable");
+      expect(run.documents[1].status).toBe("pending");
+      expect(run.documents[1].evidenceIds).toEqual([]);
+      expect(Object.keys(run.evidence)).toHaveLength(1);
+      expect(
+        JSON.parse(await readFile(path.join(root, runPath(run.id)), "utf8"))
+          .requests,
+      ).toBe(1);
+      await scan(root, run, limited, { captures: [capture()] });
+      expect(run.requests).toBe(1);
+      expect(run.status).toBe("budget-limited");
+      expect(Object.values(run.evidence)[0].outcome).toBe("unverifiable");
+    },
+  );
   it("requires HTTPS for requested and final evidence URLs", () => {
     expect(() =>
       publicUrl("http://docs.example.com/guide", policy.domains),

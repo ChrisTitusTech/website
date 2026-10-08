@@ -175,6 +175,8 @@ export function validateNewLinks(before, after, run, policy, links) {
   for (const link of links(after)) {
     if (old.has(link)) continue;
     const normalized = publicUrl(link, policy.domains);
+    if (new URL(link).hash)
+      throw new Error("New external fragments require manual validation");
     if (
       !Object.values(run.evidence).some(
         (e) => e.finalUrl === normalized && evidenceFresh(e, policy),

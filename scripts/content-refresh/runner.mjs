@@ -135,6 +135,9 @@ export async function scan(
       let budgetExhausted = false;
       try {
         if (captures) {
+          // Imports consume a processing unit even when no usable capture exists.
+          // They make no provider requests; captures are operator inputs, not attestations.
+          await reserve();
           let evidence;
           for (const entry of imported) {
             if (entry.url !== url) continue;
@@ -165,9 +168,6 @@ export async function scan(
             }
           }
           if (!evidence) throw new Error("Missing fresh Firecrawl capture");
-          // Imports do not consume provider requests, but count against the run's
-          // processing budget. Captures are trusted operator inputs, not attestations.
-          await reserve();
           run.evidence[id] = evidence;
         } else run.evidence[id] = await client.scrape(url);
       } catch (error) {
