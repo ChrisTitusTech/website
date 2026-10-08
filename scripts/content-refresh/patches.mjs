@@ -43,7 +43,7 @@ function concatenatedUrl(text, start, end) {
   const suffix = text.slice(end);
   return (
     (/^[^\s;|&()<>,}\]]/.test(suffix) && !suffix.startsWith("/>")) ||
-    /^(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*(?:\r?\n|$))*(?:\+|\.|%)/.test(
+    /^(?:\s|\\\r?\n|\/\*[\s\S]*?\*\/|(?:\/\/|#)[^\r\n]*(?:\r?\n|$))*(?:\+|\.|%|[rubf]{0,2}["'`])/i.test(
       suffix,
     ) ||
     /(?:\+|%)(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*(?:\r?\n|$))*$/.test(prefix) ||
