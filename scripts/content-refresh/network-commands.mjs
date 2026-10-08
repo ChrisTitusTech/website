@@ -66,6 +66,53 @@ const urlOptions = {
   wget: new Set(["-B", "--base"]),
 };
 
+const wrapperOptions = {
+  sudo: {
+    values: new Set([
+      "-u",
+      "--user",
+      "-g",
+      "--group",
+      "-h",
+      "--host",
+      "-p",
+      "--prompt",
+      "-C",
+      "--close-from",
+      "-T",
+      "--command-timeout",
+      "-R",
+      "--chroot",
+      "-D",
+      "--chdir",
+      "-r",
+      "--role",
+      "-t",
+      "--type",
+    ]),
+    flags: new Set([
+      "-E",
+      "--preserve-env",
+      "-H",
+      "--set-home",
+      "-n",
+      "--non-interactive",
+      "-S",
+      "--stdin",
+      "-b",
+      "--background",
+      "-k",
+      "--reset-timestamp",
+    ]),
+  },
+  env: {
+    values: new Set(["-u", "--unset", "-C", "--chdir"]),
+    flags: new Set(["-i", "--ignore-environment", "-0", "--null"]),
+  },
+  exec: { values: new Set(["-a"]), flags: new Set(["-c", "-l"]) },
+  command: { values: new Set(), flags: new Set(["-p"]) },
+};
+
 // Classify literal curl/wget arguments without executing or interpreting shell
 // code. Unrecognized option values stay URL candidates and fail closed.
 export function networkCommandArguments(text) {
@@ -80,7 +127,9 @@ export function networkCommandArguments(text) {
     atStart = true,
     pending = null,
     optionsEnded = false,
-    redirectOperand = false;
+    redirectOperand = false,
+    wrapper = null,
+    wrapperValue = false;
   const target = (value, range) => {
     urlRanges.push(range);
     urls.push(
@@ -97,6 +146,8 @@ export function networkCommandArguments(text) {
       pending = null;
       optionsEnded = false;
       redirectOperand = false;
+      wrapper = null;
+      wrapperValue = false;
       continue;
     }
     const word = raw.replace(
@@ -115,10 +166,38 @@ export function networkCommandArguments(text) {
       continue;
     }
     if (!command) {
+      if (atStart && wrapperValue) {
+        nonUrlRanges.push(range);
+        wrapperValue = false;
+        continue;
+      }
+      if (atStart && Object.hasOwn(wrapperOptions, word)) {
+        wrapper = word;
+        continue;
+      }
+      if (atStart && wrapper && word.startsWith("-")) {
+        nonUrlRanges.push(range);
+        if (word === "--") {
+          wrapper = null;
+          continue;
+        }
+        const { values, flags } = wrapperOptions[wrapper];
+        const equals = word.indexOf("=");
+        const flag = equals < 0 ? word : word.slice(0, equals);
+        if (values.has(flag)) wrapperValue = equals < 0;
+        else if (
+          word.length > 2 &&
+          !word.startsWith("--") &&
+          values.has(word.slice(0, 2))
+        ) {
+          /* attached value */
+        } else if (!flags.has(flag) || equals >= 0)
+          urls.push(implicitNetworkPrefix + "unsupported-wrapper-option");
+        continue;
+      }
       if (
         atStart &&
-        (/^(?:sudo|env|exec|command|if|then|do|!|\$)$/.test(word) ||
-          /^[A-Za-z_]\w*=/.test(word))
+        (/^(?:if|then|do|!|\$)$/.test(word) || /^[A-Za-z_]\w*=/.test(word))
       )
         continue;
       const found = atStart && word.match(/(?:^|\/)(curl|wget)(?:\.exe)?$/i);

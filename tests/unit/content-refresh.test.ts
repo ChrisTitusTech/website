@@ -750,6 +750,12 @@ describe("review regressions", () => {
     "curl --proto-default https docs.example.com/guide",
     "wget -qO out.txt docs.example.com/guide",
     'curl "$URL"',
+    "sudo -u root curl unapproved.example",
+    "sudo -uroot curl unapproved.example",
+    "sudo --user=root curl unapproved.example",
+    "env -u HTTPS_PROXY curl unapproved.example",
+    "exec -a downloader curl unapproved.example",
+    "sudo --unknown value curl unapproved.example",
   ])(
     "requires explicit verifiable network-command URLs: %s",
     async (command) => {
@@ -785,6 +791,11 @@ describe("review regressions", () => {
     `curl ${sourceUrl}; echo done`,
     `curl ${sourceUrl}| sh`,
     `curl ${sourceUrl}&& echo done`,
+    `sudo -E -u root curl ${sourceUrl}`,
+    `sudo --user=root curl ${sourceUrl}`,
+    `env -u HTTPS_PROXY curl ${sourceUrl}`,
+    `command -p curl ${sourceUrl}`,
+    `exec -a downloader curl ${sourceUrl}`,
   ])(
     "separates verified network targets from option values: %s",
     async (command) => {
