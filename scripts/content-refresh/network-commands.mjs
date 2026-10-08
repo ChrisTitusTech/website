@@ -170,7 +170,7 @@ export function networkCommandArguments(text) {
   // Nested shell execution needs a real shell parser. Keep these examples in
   // manual review rather than treating unclassified targets as verified.
   const nestedText = text.replace(/["']/g, "");
-  if (/(?:\$\(|[<>]\(|`)\s*[^\s()`]*\$(?:\{|[A-Za-z_0-9@*#?$!-])/.test(text))
+  if (/\$\(|[<>]\(|`[^`]*\$(?:\{|[A-Za-z_0-9@*#?$!-])/.test(text))
     urls.push(implicitNetworkPrefix + "parameter-expanded-command");
   // Git's scp-style remotes have no scheme and cannot satisfy HTTPS evidence.
   for (const segment of nestedText.replace(/\\\r?\n/g, "").split(/[;\n|&]/)) {

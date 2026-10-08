@@ -501,3 +501,7 @@ also require manual validation, including escaped Git executable names.
 
 Parameter-expanded executable names require manual validation; the scanner does
 not infer which command an environment variable or default expression selects.
+
+Shell command and process substitutions (`$(...)`, `<(...)`, and `>(...)`)
+require manual validation as a whole, even without a visible network command.
+The literal classifier does not interpret nested shell execution or wrapper chains.
