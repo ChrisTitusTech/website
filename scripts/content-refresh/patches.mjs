@@ -6,7 +6,7 @@ import {
   transformBody,
   validatePost,
 } from "../prepare-content.mjs";
-import { hash, safePath } from "./common.mjs";
+import { hash, safePath, readJson, writeJson } from "./common.mjs";
 import { validateFindings, validateNewLinks } from "./findings.mjs";
 import { extractLinks } from "./inventory.mjs";
 
@@ -40,6 +40,27 @@ function protectedParts(body) {
     .flatMap((t) => [t, ...(t.children ?? [])])
     .filter((t) => t.type === "html_block" || t.type === "html_inline")
     .map((t) => t.content);
+  const htmlRanges = [];
+  for (const token of tokens) {
+    if (!token.map) continue;
+    const start = lineOffsets[token.map[0]],
+      end = lineOffsets[token.map[1]] ?? body.length;
+    if (token.type === "html_block") htmlRanges.push([start, end]);
+    for (const child of token.children ?? []) {
+      if (child.type !== "html_inline") continue;
+      const literal = child.content
+        .split("\n")
+        .map((line) => line.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+        .join("\\r?\\n");
+      for (const match of body
+        .slice(start, end)
+        .matchAll(new RegExp(literal, "g")))
+        htmlRanges.push([
+          start + match.index,
+          start + match.index + match[0].length,
+        ]);
+    }
+  }
   return {
     markers: body.match(/<!--more-->/g) ?? [],
     shortcodes: body.match(/\{\{[<%][\s\S]*?[>%]\}\}/g) ?? [],
@@ -47,6 +68,7 @@ function protectedParts(body) {
     blockRanges,
     codeLinks,
     html,
+    htmlRanges,
   };
 }
 
@@ -131,6 +153,12 @@ export async function createPatches(
         )
       )
         throw new Error("Finding must not overlap a shortcode");
+      if (
+        before.htmlRanges.some(
+          ([start, end]) => index < end && index + f.original.length > start,
+        )
+      )
+        throw new Error("Finding must not overlap raw HTML");
       const isolated =
         parsed.body.slice(0, index) +
         f.replacement +
@@ -240,8 +268,18 @@ export async function applyPatches(root, run, policy, approval, write = false) {
       hash(await readFile(await safePath(root, p.file), "utf8")),
     ),
   );
-  if (existing.every((h, i) => h === approval.patches[i].afterHash))
+  const appliedPath = `.content-refresh/runs/${run.id}.applied.json`;
+  if (existing.every((h, i) => h === approval.patches[i].afterHash)) {
+    let receipt;
+    try {
+      receipt = await readJson(await safePath(root, appliedPath));
+    } catch {
+      throw new Error("Matching files require a verified prior apply receipt");
+    }
+    if (receipt.version !== 1 || receipt.approvalHash !== hash(approval))
+      throw new Error("Approval does not match the prior apply receipt");
     return { status: "already-applied", files: [] };
+  }
   if (existing.some((h, i) => h === approval.patches[i].afterHash))
     throw new Error(
       "Partial prior apply detected; inspect the receipt and recover before retrying",
@@ -297,6 +335,13 @@ export async function applyPatches(root, run, policy, approval, write = false) {
       await rename(item.temp, item.target);
       applied.push(item);
     }
+    // Record only a fully validated successful write. Keep this proof separate
+    // from the CLI receipt, which dry runs and no-op calls may overwrite.
+    await writeJson(root, appliedPath, {
+      version: 1,
+      approvalHash: hash(approval),
+      appliedAt: new Date().toISOString(),
+    });
   } catch (error) {
     for (const item of applied) {
       if (hash(await readFile(item.target, "utf8")) === item.patch.afterHash)

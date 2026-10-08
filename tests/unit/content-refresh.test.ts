@@ -739,6 +739,134 @@ describe("patch approval and recovery", () => {
 });
 
 describe("review regressions", () => {
+  it.each(["\n", "\r\n"])(
+    "protects block and inline HTML source spans with %j line endings",
+    async (eol) => {
+      for (const fragment of [
+        "<div>Archived HTML</div>",
+        'Text <span title="a.b">inline</span> tail.',
+        'Text <span\n title="a.b">inline</span> tail.',
+      ]) {
+        const { root } = await fixture();
+        const text = source
+          .replace(
+            "Old guidance.",
+            `Old guidance.\n\nBefore.\n\n${fragment}\n\nAfter.`,
+          )
+          .replace(/\n/g, eol);
+        await writeFile(path.join(root, file), text);
+        const run = await startRun(root, "html-spans", policy, [
+          { url: "/guide/", sources: [sourceUrl] },
+        ]);
+        await scan(root, run, policy, { captures: [capture()] });
+        const html = fragment.replace(/\n/g, eol);
+        run.findings = validateFindings(
+          {
+            findings: [
+              finding(run, {
+                original: `Before.${eol}${eol}${html}`,
+                replacement: `${html}${eol}${eol}Corrected.`,
+              }),
+            ],
+          },
+          run,
+          policy,
+        );
+        await expect(createPatches(root, run, policy)).rejects.toThrow(
+          "overlap raw HTML",
+        );
+        run.findings = validateFindings(
+          { findings: [finding(run)] },
+          run,
+          policy,
+        );
+        const patches = await createPatches(root, run, policy);
+        expect(patches[0].after).toContain(html);
+        expect(patches[0].after).toContain("Corrected guidance.");
+      }
+    },
+  );
+  it("rejects forged no-op approval before any successful apply", async () => {
+    const { root, run } = await proposed();
+    const approval = approve(run, await createPatches(root, run, policy), {
+      reviewer: "Test",
+    });
+    approval.patches[0].afterHash = hash(source);
+    await expect(
+      applyPatches(root, run, policy, approval, true),
+    ).rejects.toThrow("verified prior apply receipt");
+    expect(await readFile(path.join(root, file), "utf8")).toBe(source);
+  });
+  it.each(["digest", "findingIds"])(
+    "verifies %s on repeated application",
+    async (field) => {
+      const { root, run } = await proposed();
+      const approval = approve(run, await createPatches(root, run, policy), {
+        reviewer: "Test",
+      });
+      await applyPatches(root, run, policy, approval, true);
+      const altered = structuredClone(approval);
+      if (field === "digest") altered.patches[0].digest = "forged";
+      else altered.patches[0].findingIds = ["forged"];
+      await expect(
+        applyPatches(root, run, policy, altered, true),
+      ).rejects.toThrow("prior apply receipt");
+      expect((await applyPatches(root, run, policy, approval)).status).toBe(
+        "already-applied",
+      );
+      expect(
+        (await applyPatches(root, run, policy, approval, true)).status,
+      ).toBe("already-applied");
+    },
+  );
+  it("retries HTTP 408 search responses within the request budget", async () => {
+    let requests = 0,
+      calls = 0;
+    const client = firecrawlClient({
+      key: "fixture",
+      policy,
+      reserve: async () => {
+        requests++;
+      },
+      sleep: async () => {},
+      fetchImpl: async () =>
+        ++calls === 1
+          ? new Response("", { status: 408 })
+          : Response.json({
+              data: { web: [{ url: sourceUrl, title: "Docs" }] },
+            }),
+    });
+    expect(await client.search("guide")).toEqual([
+      { url: sourceUrl, title: "Docs" },
+    ]);
+    expect(requests).toBe(2);
+    expect(calls).toBe(2);
+  });
+  it("bounds repeated HTTP 408 responses and stops retrying at budget exhaustion", async () => {
+    for (const budget of [1, 10]) {
+      let requests = 0,
+        calls = 0;
+      const client = firecrawlClient({
+        key: "fixture",
+        policy,
+        reserve: async () => {
+          if (requests >= budget) throw new Error("budget");
+          requests++;
+        },
+        sleep: async () => {},
+        fetchImpl: async () => {
+          calls++;
+          return new Response("", { status: 408 });
+        },
+      });
+      await expect(client.search("guide")).rejects.toThrow(
+        budget === 1 ? "budget" : "HTTP 408",
+      );
+      expect(calls).toBe(Math.min(budget, 3));
+      expect(requests).toBe(calls);
+    }
+  });
+
   it.each([
     "CAPTCHA",
     "Access denied",

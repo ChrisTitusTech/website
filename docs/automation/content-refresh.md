@@ -215,7 +215,10 @@ Ordinary apply errors restore files already written when their bytes still match
 the proposed result. A process crash between file renames can leave a partial
 apply. Inspect the patch bundle, receipt, and Git diff before recovery. Preserve
 intervening user edits. Complete or reverse the exact reviewed changes manually,
-then create a new run. A fully applied bundle is a no-op on repeated application.
+then create a new run. A fully applied bundle is a no-op on repeated application
+only when its approval matches the successful-write `.applied.json` record. This
+record is separate from dry-run receipts. Missing or mismatched proof fails
+closed; inspect the diff and start a new run instead of fabricating a receipt.
 Do not use a repository-wide hard reset.
 
 Private snapshots are for local review. The initial retention policy is 30 days;
@@ -314,6 +317,14 @@ regardless of capture length, so verbose interstitials cannot support findings.
 All 82 updater tests and 153 total unit tests passed. The complete validation
 gate passed again, including repeatable production output, route checks, 123
 browser tests (five existing skips), and all 12 Lighthouse runs.
+
+A further review cycle protects raw HTML source spans (including CRLF content),
+requires a matching successful-write record before accepting repeated applies,
+and retries HTTP 408 within the existing request cap. The HoloISO link now has a
+dated warning that its destination is an unsupported historical archive. All 89
+updater tests and 160 total unit tests passed, along with the complete validation
+gate, 123 browser tests (five existing skips), and all 12 Lighthouse runs. The
+production article's warning and unchanged canonical URL were checked directly.
 
 ## Provider references
 

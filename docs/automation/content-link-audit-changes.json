@@ -212,7 +212,7 @@
       "old": "https://github.com/theVakhovskeIsTaken/holoiso",
       "new": "https://github.com/holoiso-eol/holoiso",
       "occurrences": 1,
-      "reason": "Follow GitHub permanent repository migration.",
+      "reason": "Follow GitHub permanent repository migration. Review follow-up retains this archive as historical context with a dated end-of-life and unsupported-version warning.",
       "file": "src/content/posts/2022/unlock-steam-deck.md"
     },
     {

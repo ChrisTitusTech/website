@@ -96,7 +96,12 @@ export function firecrawlClient({
         await sleep(1000 * 2 ** attempt);
         continue;
       }
-      if ((response.status === 429 || response.status >= 500) && attempt < 2) {
+      if (
+        (response.status === 408 ||
+          response.status === 429 ||
+          response.status >= 500) &&
+        attempt < 2
+      ) {
         const seconds = Number(response.headers.get("retry-after"));
         // Do not hammer a server whose requested delay exceeds this run's bounds.
         if (Number.isFinite(seconds) && seconds > 60)
