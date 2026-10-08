@@ -487,5 +487,6 @@ are not mistaken for targets. Scheme-less or dynamic targets in recognized
 commands require manual validation, including commands that set a default
 protocol. [curl's URL rules](https://curl.se/docs/manpage.html) otherwise allow
 protocol guessing. This is a conservative argument classifier, not a shell
-interpreter: nested substitutions, unsupported wrapper options, configuration files, and
-unfamiliar command syntax require operator review.
+interpreter: detected nested network commands and unsupported wrapper options are rejected
+for manual validation. Configuration files and unfamiliar command syntax also
+require operator review.

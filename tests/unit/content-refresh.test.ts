@@ -756,6 +756,12 @@ describe("review regressions", () => {
     "env -u HTTPS_PROXY curl unapproved.example",
     "exec -a downloader curl unapproved.example",
     "sudo --unknown value curl unapproved.example",
+    "result=$(curl unapproved.example)",
+    "(curl unapproved.example)",
+    'result="$(curl unapproved.example)"',
+    "result=`curl unapproved.example`",
+    "(sudo -u root curl unapproved.example)",
+    `result=$(curl ${sourceUrl})`,
   ])(
     "requires explicit verifiable network-command URLs: %s",
     async (command) => {

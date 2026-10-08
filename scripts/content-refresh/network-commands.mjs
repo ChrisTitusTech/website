@@ -119,6 +119,13 @@ export function networkCommandArguments(text) {
   const urls = [],
     urlRanges = [],
     nonUrlRanges = [];
+  // Nested shell execution needs a real shell parser. Keep these examples in
+  // manual review rather than treating unclassified targets as verified.
+  if (
+    /(?:\$\(|`)[^`]*?\b(?:curl|wget)\b/.test(text) ||
+    /\(\s*(?:(?:sudo|env|exec|command)\b[^;\n]*?\s+)?(?:curl|wget)\b/.test(text)
+  )
+    urls.push(implicitNetworkPrefix + "nested-shell-command");
   const source = text.replace(/\\\r?\n/g, (match) => " ".repeat(match.length));
   const tokens = source.matchAll(
     /(?:\d*|&)(?:>>?|<)(?:&(?:\d+|-))?|(?:'[^']*'|"(?:\\[\s\S]|[^"\\])*"|\\[\s\S]|[^\s"'\\;&|<>])+|[;&|\n]/g,
