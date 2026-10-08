@@ -742,6 +742,140 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    'fetch("api/missing")',
+    'fetch("missing")',
+    'new Worker("assets/worker.js")',
+    'customNetworkAPI("assets/worker.js")',
+    'xhr.open("GET", "api/missing")',
+    "<img src=assets/missing.png>",
+    '<img src="assets/missing.png">',
+    "url: api/missing",
+    "background: url(assets/missing.png)",
+  ])("validates bare relative code destinations: %s", async (command) => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, {
+          kind: "command",
+          original: "old-command",
+          replacement: command,
+        }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "Replacement internal link",
+    );
+  });
+  it("accepts a bare relative worker asset that exists below the article URL", async () => {
+    const { root, run } = await fixture();
+    await mkdir(path.join(root, "public/guide/assets"), { recursive: true });
+    await writeFile(
+      path.join(root, "public/guide/assets/worker.js"),
+      "// worker\n",
+    );
+    const command = 'new Worker("assets/worker.js")';
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, {
+          kind: "command",
+          original: "old-command",
+          replacement: command,
+        }),
+      ],
+    });
+    expect((await createPatches(root, run, policy))[0].after).toContain(
+      command,
+    );
+  });
+  it.each(['console.log("Hello")', 'readFile("config.json")'])(
+    "preserves ordinary strings and bare filesystem arguments: %s",
+    async (command) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: command,
+          }),
+        ],
+      });
+      expect((await createPatches(root, run, policy))[0].after).toContain(
+        command,
+      );
+    },
+  );
+  it.each(["before", "after"])(
+    "requires sensitive approval for prose %s an unchanged command block",
+    async (side) => {
+      const { root } = await fixture();
+      const prose = "Do not run this command.";
+      const block = "```sh\nsudo rm -rf /important\n```";
+      const text = source.replace(
+        "```sh\nold-command\n```",
+        side === "before" ? `${prose}\n\n${block}` : `${block}\n\n${prose}`,
+      );
+      await writeFile(path.join(root, file), text);
+      const run = await startRun(root, "fenced-context", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, { original: "Do not run", replacement: "Run" }),
+        ],
+      });
+      const patches = await createPatches(root, run, policy);
+      expect(patches[0].after).toContain(block);
+      expect(patches[0].sensitive).toBe(true);
+      expect(() => approve(run, patches, { reviewer: "Test" })).toThrow(
+        "--allow-sensitive",
+      );
+      expect(() =>
+        approve(run, patches, { reviewer: "Test", allowSensitive: true }),
+      ).not.toThrow();
+    },
+  );
+  it.each(["/old-guide/", "./old-guide/", "../old-guide/", "old-guide/"])(
+    "allows historical internal link corrections: %s",
+    async (oldUrl) => {
+      const { root } = await fixture();
+      const historicalPolicy = { ...policy, historical: ["/guide/"] };
+      await writeFile(
+        path.join(root, file),
+        source.replace("Old guidance.", `[Historical](${oldUrl})`),
+      );
+      const run = await startRun(root, "historical-link", historicalPolicy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, historicalPolicy, { captures: [capture()] });
+      await propose(root, run, historicalPolicy, {
+        findings: [
+          finding(run, {
+            kind: "link",
+            original: oldUrl,
+            replacement: "/guide/",
+          }),
+        ],
+      });
+      expect(
+        (await createPatches(root, run, historicalPolicy))[0].after,
+      ).toContain("[Historical](/guide/)");
+      await propose(root, run, historicalPolicy, {
+        findings: [
+          finding(run, {
+            kind: "link",
+            original: "Historical",
+            replacement: "/guide/",
+          }),
+        ],
+      });
+      await expect(createPatches(root, run, historicalPolicy)).rejects.toThrow(
+        "only a URL",
+      );
+    },
+  );
+  it.each([
     "<img src=/missing.png>",
     "<a href=/guide/,missing>Broken</a>",
     "<a href=/guide/;missing>Broken</a>",

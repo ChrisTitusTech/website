@@ -445,6 +445,18 @@ The complete gate passed with 215 updater tests, 286 total unit tests, five
 Python tests, 2,543 production outputs, 123 browser tests with five existing
 skips, and all 12 Lighthouse runs.
 
+The following cycle validates bare relative strings in recognizable URL-taking
+calls and path-shaped string literals, as well as unquoted URL attributes,
+configuration fields, and CSS. Ordinary strings and recognizable filesystem
+arguments remain distinct. Sensitive approval now also compares the text
+immediately before and after fenced command blocks and their source positions.
+Historical link findings must target an actual extracted destination; they
+accept root-, dot-, and bare-relative corrections and validate the replacement
+against the production route contract. Link-label prose cannot use this path.
+The complete gate passed with 233 updater tests, 304 total unit tests, five
+Python tests, 2,543 production outputs, 123 browser tests with five existing
+skips, and all 12 Lighthouse runs.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)

@@ -20,8 +20,48 @@ import {
   redirectMatches,
 } from "../route-contract.mjs";
 
+function filesystemArgument(prefix, destination) {
+  return (
+    /\b(?:readFile|readFileSync|writeFile|writeFileSync|mkdir|mkdirSync|readdir|readdirSync|stat|statSync|unlink|unlinkSync)\s*\(\s*$/.test(
+      prefix,
+    ) ||
+    /(?:^|\n)\s*(?:sudo\s+)?(?:ssh-add|cp|mv|rm|mkdir|rmdir|chmod|chown|cat|ls|cd|touch)\s+(?:[^\n;|&$()<>`]*\s+)?$/.test(
+      prefix,
+    ) ||
+    (/^\.{1,2}\//.test(destination) && /(?:^|\n)\s*$/.test(prefix))
+  );
+}
+
 function codeUrls(text) {
   const urls = [];
+  // Bare relative references need context or a path-shaped literal. Ordinary
+  // strings are not URLs; filesystem arguments remain separately classified.
+  for (const match of text.matchAll(/(["'`])((?:\\[\s\S]|(?!\1)[^\\])*)\1/g)) {
+    const destination = match[2];
+    if (/^(?:\/|\.{1,2}\/|[a-z][a-z0-9+.-]*:\/\/)/i.test(destination)) continue;
+    const prefix = text.slice(0, match.index);
+    const urlContext =
+      /(?:\b(?:fetch|Request|URL|Worker|SharedWorker|WebSocket|EventSource|importScripts|sendBeacon|url)|\b(?:axios|requests|http|https)\.(?:get|post|put|patch|delete|head|request)|\b(?:window|location)\.(?:open|assign|replace)|\bserviceWorker\.register)\s*\(\s*$/i.test(
+        prefix,
+      ) ||
+      /\.\s*open\s*\([^,]*,\s*$/.test(prefix) ||
+      /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*$/.test(prefix);
+    const pathShaped =
+      /^[^\s/]+\//.test(destination) ||
+      /^[a-z_][\w.-]*\.[a-z][\w]*(?:[?#].*)?$/i.test(destination) ||
+      /^[a-z][a-z0-9+.-]*:/i.test(destination);
+    if (
+      destination &&
+      (urlContext || pathShaped) &&
+      !filesystemArgument(prefix, destination)
+    )
+      urls.push(destination);
+  }
+  for (const match of text.matchAll(
+    /\b(?:href|src|action|poster)\s*=\s*([^\s"'`<>]+)|\b(?:url|endpoint)\s*:\s*([^\s"'`<>]+)|\burl\(\s*([^\s"'`)]+)\s*\)/gi,
+  )) {
+    urls.push(match[1] ?? match[2] ?? match[3]);
+  }
   const starts =
     /\b[a-z][a-z0-9+.-]*:\/\/|(?:^|(?<=["'`=:(\s]))(?:\/{1,2}|\.{1,2}\/)/gi;
   for (let match; (match = starts.exec(text));) {
@@ -41,14 +81,7 @@ function codeUrls(text) {
     // Relative paths are ambiguous. Exempt only recognizable filesystem
     // arguments; unknown contexts must still pass destination validation.
     // Enumerating network APIs would silently miss new URL-taking forms.
-    const filesystemContext =
-      /\b(?:readFile|readFileSync|writeFile|writeFileSync|mkdir|mkdirSync|readdir|readdirSync|stat|statSync|unlink|unlinkSync)\s*\(\s*$/.test(
-        prefix,
-      ) ||
-      /(?:^|\n)\s*(?:sudo\s+)?(?:ssh-add|cp|mv|rm|mkdir|rmdir|chmod|chown|cat|ls|cd|touch)\s+(?:[^\n;|&$()<>`]*\s+)?$/.test(
-        prefix,
-      ) ||
-      (/^\.{1,2}\//.test(destination) && /(?:^|\n)\s*$/.test(prefix));
+    const filesystemContext = filesystemArgument(prefix, destination);
     const syntaxOnly =
       !quoted &&
       !/[=:(]\s*$/.test(prefix) &&
@@ -75,6 +108,20 @@ function protectedParts(body) {
     content: t.content,
     info: t.info,
   }));
+  const blockContexts = codeBlocks.map((t) => {
+    const index = tokens.indexOf(t);
+    return {
+      before:
+        tokens
+          .slice(0, index)
+          .reverse()
+          .find((token) => token.content.trim())?.content ?? "",
+      after:
+        tokens.slice(index + 1).find((token) => token.content.trim())
+          ?.content ?? "",
+      lines: t.map,
+    };
+  });
   const lineOffsets = [0, ...[...body.matchAll(/\n/g)].map((m) => m.index + 1)];
   const blockRanges = codeBlocks.map((t) => [
     lineOffsets[t.map[0]],
@@ -116,6 +163,7 @@ function protectedParts(body) {
     markers: body.match(/<!--more-->/g) ?? [],
     shortcodes: body.match(/\{\{[<%][\s\S]*?[>%]\}\}/g) ?? [],
     blocks,
+    blockContexts,
     inlineCode: tokens
       .flatMap((t) => t.children ?? [])
       .filter((t) => t.type === "code_inline")
@@ -225,11 +273,13 @@ export async function createPatches(
       intervals.push([index, index + f.original.length]);
       if (
         f.kind === "link" &&
-        ![f.original, f.replacement].every((value) =>
-          /^https?:\/\/[^\s<>]+$/.test(value),
-        )
+        (!originalDestinations.includes(f.original) ||
+          ![f.original, f.replacement].every((value) =>
+            /^[^\s<>]+$/.test(value),
+          ))
       )
         throw new Error("Link findings may replace only a URL");
+      if (f.kind === "link") editedDestinations.push(f.replacement);
       if (
         f.original.includes("<!--more-->") ||
         f.replacement.includes("<!--more-->")
@@ -387,6 +437,7 @@ export async function createPatches(
         findings.some((f) => f.kind === "command") ||
         hash(before.inlineCode) !== hash(after.inlineCode) ||
         hash(before.inlineCodeContexts) !== hash(after.inlineCodeContexts) ||
+        hash(before.blockContexts) !== hash(after.blockContexts) ||
         /\b(ssh|security|password|powershell|registry)\b/i.test(
           `${source}\n${result}`,
         ),
