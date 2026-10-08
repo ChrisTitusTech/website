@@ -225,7 +225,7 @@ export function networkCommandArguments(text) {
     const unescapedWord = word.replace(/\\([\s\S])/g, "$1");
     if (
       unescapedWord !== word &&
-      /(?:^|[\s;&|({])(?:[\w./-]*\/)?(?:curl|wget)(?:\.exe)?(?=$|[\s;&|)}])/i.test(
+      /(?:^|[\s;&|({])(?:[\w.:/\\-]*[\\/])?(?:curl|wget)(?:\.exe)?(?=$|[\s;&|)}])/i.test(
         unescapedWord,
       )
     )
@@ -244,12 +244,14 @@ export function networkCommandArguments(text) {
       continue;
     }
     if (!command) {
+      if ((atStart || !literalCommand) && /\$'/.test(raw))
+        urls.push(implicitNetworkPrefix + "ansi-quoted-command");
       // A literal curl/wget invocation behind an unknown executor must not
       // disappear merely because that executor is outside the supported set.
       if (
         !atStart &&
         !literalCommand &&
-        /(?:^|[\s;&|({])(?:[\w./-]*\/)?(?:curl|wget)(?:\.exe)?(?=$|[\s;&|)}])/i.test(
+        /(?:^|[\s;&|({])(?:[\w.:/\\-]*[\\/])?(?:curl|wget)(?:\.exe)?(?=$|[\s;&|)}])/i.test(
           word,
         )
       )
@@ -296,7 +298,7 @@ export function networkCommandArguments(text) {
         continue;
       if (atStart && ambiguousWrapper && /\b(?:curl|wget)\b/.test(word))
         urls.push(implicitNetworkPrefix + "unsupported-wrapper-option");
-      const found = atStart && word.match(/(?:^|\/)(curl|wget)(?:\.exe)?$/i);
+      const found = atStart && word.match(/(?:^|[\\/])(curl|wget)(?:\.exe)?$/i);
       if (found) {
         command = found[1].toLowerCase();
         nonUrlRanges.push(range);

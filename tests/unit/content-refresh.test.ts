@@ -806,6 +806,13 @@ describe("review regressions", () => {
     "env -S 'curl unapproved.example'",
     "env --split-string='curl unapproved.example'",
     "env -Scurl unapproved.example",
+    "$'curl' docs.example.com/guide",
+    "c$'ur'l docs.example.com/guide",
+    String.raw`$'\x63url' docs.example.com/guide`,
+    `eval "$'curl' docs.example.com/guide"`,
+    String.raw`C:\tools\curl.exe docs.example.com/guide`,
+    String.raw`C:\tools\wget.exe docs.example.com/guide`,
+    String.raw`custom-executor C:\tools\curl.exe docs.example.com/guide`,
     "if false; then :; else curl unapproved.example; fi",
     "if false; then :; elif curl unapproved.example; then :; fi",
     "{ curl unapproved.example; }",
@@ -876,6 +883,8 @@ describe("review regressions", () => {
     `{ curl ${sourceUrl}; }`,
     `2>errors.log curl ${sourceUrl}`,
     `>"downloads/output.txt" curl ${sourceUrl}`,
+    String.raw`C:\tools\curl.exe ${sourceUrl}`,
+    String.raw`& "C:\tools\curl.exe" ${sourceUrl}`,
   ])(
     "separates verified network targets from option values: %s",
     async (command) => {
@@ -1032,6 +1041,7 @@ describe("review regressions", () => {
     "echo curl",
     'printf "%s" curl',
     "which curl",
+    "printf $'curl'",
     `document.write('<a href="/guide/">Guide</a>')`,
   ])(
     "preserves ordinary strings and bare filesystem arguments: %s",
