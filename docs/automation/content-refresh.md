@@ -434,6 +434,17 @@ The complete gate passed
 with 194 updater tests, 265 total unit tests, five Python tests, 2,543 production
 outputs, 123 browser tests with five existing skips, and all 12 Lighthouse runs.
 
+Further review extends literal URL validation to unquoted HTML/configuration
+values and CSS `url(...)` expressions, preserving path punctuation rather than
+accepting a valid prefix of a broken target. Inline-code approval also compares
+the surrounding Markdown text and position, so changing "Do not run" to "Run"
+requires sensitive approval even when the command itself is unchanged. Notices
+must retain the original exactly once and introduce a real calendar date in
+the newly added text; a date already present in the original cannot qualify.
+The complete gate passed with 215 updater tests, 286 total unit tests, five
+Python tests, 2,543 production outputs, 123 browser tests with five existing
+skips, and all 12 Lighthouse runs.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)

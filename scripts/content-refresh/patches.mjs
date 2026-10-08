@@ -22,22 +22,25 @@ import {
 
 function codeUrls(text) {
   const urls = [];
-  const starts = /\b[a-z][a-z0-9+.-]*:\/\/|(?<=["'`])(?:\/{1,2}|\.{1,2}\/)/gi;
+  const starts =
+    /\b[a-z][a-z0-9+.-]*:\/\/|(?:^|(?<=["'`=:(\s]))(?:\/{1,2}|\.{1,2}\/)/gi;
   for (let match; (match = starts.exec(text));) {
     const quote = text[match.index - 1];
+    const quoted = quote === '"' || quote === "'" || quote === "`";
+    const prefix = text.slice(0, match.index - (quoted ? 1 : 0));
     let end = starts.lastIndex;
-    if (quote === '"' || quote === "'" || quote === "`") {
+    if (quoted) {
       while (end < text.length && text[end] !== quote) {
         end += text[end] === "\\" ? 2 : 1;
       }
     } else {
-      while (end < text.length && !/[\s<>`]/.test(text[end])) end++;
+      const delimiter = /\burl\(\s*$/i.test(prefix) ? /[\s<>`)]/ : /[\s<>`]/;
+      while (end < text.length && !delimiter.test(text[end])) end++;
     }
     const destination = text.slice(match.index, end);
     // Relative paths are ambiguous. Exempt only recognizable filesystem
     // arguments; unknown contexts must still pass destination validation.
     // Enumerating network APIs would silently miss new URL-taking forms.
-    const prefix = text.slice(0, match.index - 1);
     const filesystemContext =
       /\b(?:readFile|readFileSync|writeFile|writeFileSync|mkdir|mkdirSync|readdir|readdirSync|stat|statSync|unlink|unlinkSync)\s*\(\s*$/.test(
         prefix,
@@ -46,7 +49,16 @@ function codeUrls(text) {
         prefix,
       ) ||
       (/^\.{1,2}\//.test(destination) && /(?:^|\n)\s*$/.test(prefix));
-    if (!/^\/(?!\/)|^\.{1,2}\//.test(destination) || !filesystemContext)
+    const syntaxOnly =
+      !quoted &&
+      !/[=:(]\s*$/.test(prefix) &&
+      (destination === "/" ||
+        destination === "//" ||
+        destination.startsWith("/*"));
+    if (
+      !syntaxOnly &&
+      (!/^\/(?!\/)|^\.{1,2}\//.test(destination) || !filesystemContext)
+    )
       urls.push(destination);
     starts.lastIndex = end + 1;
   }
@@ -108,6 +120,9 @@ function protectedParts(body) {
       .flatMap((t) => t.children ?? [])
       .filter((t) => t.type === "code_inline")
       .map((t) => t.content),
+    inlineCodeContexts: tokens
+      .filter((t) => t.children?.some((child) => child.type === "code_inline"))
+      .map((t) => ({ content: t.content, lines: t.map })),
     blockRanges,
     codeLinks,
     html,
@@ -129,6 +144,17 @@ function shortcodeContexts(body, data, file) {
     token: m[0],
     active: active.has(m.index),
   }));
+}
+
+function hasCalendarDate(text) {
+  return [...text.matchAll(/\b\d{4}-\d{2}-\d{2}\b/g)].some(([date]) => {
+    const parsed = new Date(`${date}T00:00:00.000Z`);
+    return (
+      Number(date.slice(0, 4)) > 0 &&
+      Number.isFinite(parsed.getTime()) &&
+      parsed.toISOString().slice(0, 10) === date
+    );
+  });
 }
 
 export async function createPatches(
@@ -251,12 +277,25 @@ export async function createPatches(
         throw new Error(
           "Each code block edit requires an explicit command finding",
         );
-      if (
-        f.kind === "notice" &&
-        (!f.replacement.includes(f.original) ||
-          !/\b\d{4}-\d{2}-\d{2}\b/.test(f.replacement))
-      )
-        throw new Error("Notices must retain the original and include a date");
+      if (f.kind === "notice") {
+        const retained = f.replacement.indexOf(f.original);
+        const additions =
+          retained < 0
+            ? []
+            : [
+                f.replacement.slice(0, retained),
+                f.replacement.slice(retained + f.original.length),
+              ];
+        if (
+          retained < 0 ||
+          f.replacement.indexOf(f.original, retained + f.original.length) !==
+            -1 ||
+          !additions.some(hasCalendarDate)
+        )
+          throw new Error(
+            "Notices must retain the original and add a valid calendar date",
+          );
+      }
       edits.push({ index, original: f.original, replacement: f.replacement });
     }
     for (const edit of edits.sort((a, b) => b.index - a.index))
@@ -347,6 +386,7 @@ export async function createPatches(
       sensitive:
         findings.some((f) => f.kind === "command") ||
         hash(before.inlineCode) !== hash(after.inlineCode) ||
+        hash(before.inlineCodeContexts) !== hash(after.inlineCodeContexts) ||
         /\b(ssh|security|password|powershell|registry)\b/i.test(
           `${source}\n${result}`,
         ),
