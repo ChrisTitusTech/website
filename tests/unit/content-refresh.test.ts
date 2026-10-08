@@ -2316,6 +2316,9 @@ describe("review regressions", () => {
     "Access denied",
     "Sign in to continue",
     "Checking your browser",
+    "Just a moment...",
+    "Enable JavaScript and cookies to continue",
+    "Attention Required! | Cloudflare",
   ])("rejects long HTTP 200 challenge evidence containing %s", (indicator) => {
     const evidence = normalizeEvidence(
       sourceUrl,
@@ -2334,6 +2337,7 @@ describe("review regressions", () => {
     '# Troubleshooting\n\nIf you see "Access denied", check the file permissions.',
     "# CAPTCHA integration\n\nThis guide explains how to configure CAPTCHA.",
     "# Authentication\n\nSelect Sign in to continue to your account settings.",
+    '# Troubleshooting\n\nIf a page says "Just a moment...", check your browser settings.',
   ])(
     "accepts documentation with authentication terminology: %s",
     (markdown) => {
@@ -2346,13 +2350,18 @@ describe("review regressions", () => {
       expect(evidenceFresh(evidence, policy)).toBe(true);
     },
   );
-  it("rejects an interstitial identified by the page title", () => {
+  it.each([
+    "Access denied",
+    "Just a moment...",
+    "Enable JavaScript and cookies to continue",
+    "Attention Required! | Cloudflare",
+  ])("rejects an interstitial identified by the page title: %s", (title) => {
     expect(
       normalizeEvidence(
         sourceUrl,
         {
           ...payload,
-          metadata: { ...payload.metadata, title: "Access denied" },
+          metadata: { ...payload.metadata, title },
         },
         policy,
       ).outcome,
@@ -2732,10 +2741,48 @@ describe("review regressions", () => {
       (await inventory(root, policy, new Date(), await getHistory()))
         .documents[0].due,
     ).toBe(true);
+    const completedHistory = await getHistory();
     run.findings.push({ ...run.findings[0], id: "unapplied" });
     await recordHistory(root, run, policy, approval);
-    expect((await getHistory())["/guide/"]).toBeUndefined();
+    expect(await getHistory()).toEqual(completedHistory);
   });
+  it.each(["needs-review", "unverifiable", "confirmed-outdated"])(
+    "preserves prior scoped history after a later %s claim until content changes",
+    async (classification) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            classification: "current",
+            kind: "none",
+            original: "",
+            replacement: "",
+          }),
+        ],
+      });
+      await recordHistory(root, run, policy);
+      const historyPath = path.join(root, ".content-refresh/history.json");
+      const completed = await readFile(historyPath, "utf8");
+      run.findings = [
+        {
+          ...run.findings[0],
+          id: "different-claim",
+          section: "Another section",
+          classification,
+        },
+      ];
+      await recordHistory(root, run, policy);
+      expect(await readFile(historyPath, "utf8")).toBe(completed);
+      await writeFile(
+        path.join(root, file),
+        source + "\nChanged article content.\n",
+      );
+      await recordHistory(root, run, policy);
+      expect(
+        JSON.parse(await readFile(historyPath, "utf8"))["/guide/"],
+      ).toBeUndefined();
+    },
+  );
   it("records checked current content without requiring an edit", async () => {
     const { root, run } = await fixture();
     await propose(root, run, policy, {

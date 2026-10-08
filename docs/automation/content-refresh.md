@@ -39,7 +39,9 @@ to the resulting content hash. The inventory exposes this as `lastClaimReview`,
 with an advisory `nextCheck` for those claims. Bounded reviews never certify an
 entire article: document-level `due` stays true and `nextCheck` stays null,
 including for legacy history without claim scope. Partial approvals, dry runs,
-and unresolved findings do not record successful claim history.
+and unresolved findings do not record successful claim history. An incomplete
+review preserves earlier scoped history for the same content hash; changed
+article content invalidates that history.
 The generated-route count uses the compatibility inventory, which includes
 reserved routes, aliases, and static assets; it is not a count of rendered pages.
 

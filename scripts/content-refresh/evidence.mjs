@@ -10,7 +10,7 @@ function isChallenge(text, title) {
   // Match interstitial labels, not phrases embedded in documentation prose.
   // Inspect every line so a long challenge page cannot evade the guard.
   const label =
-    /^(?:captcha|access denied|sign in to continue|checking your browser)(?:[.!\u2026]|\.{3})?$/i;
+    /^(?:(?:captcha|access denied|sign in to continue|checking your browser|just a moment|enable javascript and cookies to continue)(?:[.!\u2026]|\.{3})?|attention required!?\s*\|\s*cloudflare)$/i;
   return [title, ...text.split(/\r?\n/)].some(
     (line) =>
       typeof line === "string" &&

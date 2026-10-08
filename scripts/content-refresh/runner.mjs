@@ -249,12 +249,14 @@ export async function recordHistory(root, run, policy, approval) {
             patch?.findingIds.includes(finding.id)),
       );
     const expectedHash = patch?.afterHash ?? doc.contentHash;
+    const actualHash = hash(
+      await readFile(await safePath(root, doc.file), "utf8"),
+    );
     if (
       complete &&
       doc.status === "collected" &&
       doc.evidenceIds.every((id) => evidenceFresh(run.evidence[id], policy)) &&
-      hash(await readFile(await safePath(root, doc.file), "utf8")) ===
-        expectedHash
+      actualHash === expectedHash
     ) {
       history[doc.url] = {
         contentHash: expectedHash,
@@ -267,7 +269,8 @@ export async function recordHistory(root, run, policy, approval) {
           sources: evidence.map((item) => item.url),
         })),
       };
-    } else delete history[doc.url];
+    } else if (history[doc.url]?.contentHash !== actualHash)
+      delete history[doc.url];
   }
   await writeJson(root, ".content-refresh/history.json", history);
 }
