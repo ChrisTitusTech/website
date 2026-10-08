@@ -177,6 +177,11 @@ export function networkCommandArguments(text) {
     /\(\s*(?:(?:sudo|env|exec|command)\b[^;\n]*?\s+)?(?:curl|wget)\b/.test(text)
   )
     urls.push(implicitNetworkPrefix + "nested-shell-command");
+  if (
+    /\S\\\r?\n(?=\S)/.test(text) &&
+    /\b(?:curl|wget)\b/i.test(text.replace(/\\\r?\n/g, ""))
+  )
+    urls.push(implicitNetworkPrefix + "split-shell-word");
   const source = text.replace(/\\\r?\n/g, (match) => " ".repeat(match.length));
   const tokens = source.matchAll(
     /(?:\d*|&)(?:>>?|<)(?:&(?:\d+|-))?|(?:'[^']*'|"(?:\\[\s\S]|[^"\\])*"|\\[\s\S]|[^\s"'\\;&|<>])+|[;&|\n]/g,

