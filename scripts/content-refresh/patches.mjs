@@ -38,21 +38,57 @@ function filesystemArgument(prefix, destination) {
   );
 }
 
+// Preserve offsets and quoted values while removing only trivia used by the
+// expression guards. A linear scan avoids backtracking across repeated comments.
+function expressionText(text) {
+  const chars = text.split("");
+  let quote = null;
+  for (let index = 0; index < text.length;) {
+    const char = text[index];
+    if (quote) {
+      if (char === "\\") index += 2;
+      else {
+        if (char === quote) quote = null;
+        index++;
+      }
+      continue;
+    }
+    if ("\"'`".includes(char)) {
+      quote = char;
+      index++;
+      continue;
+    }
+    let end = index;
+    if (text.startsWith("/*", index)) {
+      const close = text.indexOf("*/", index + 2);
+      end = close === -1 ? text.length : close + 2;
+    } else if (text.startsWith("//", index) || char === "#") {
+      while (end < text.length && !"\r\n".includes(text[end])) end++;
+    } else if (char === "\\" && /[\r\n]/.test(text[index + 1] ?? "")) {
+      end =
+        index + (text[index + 1] === "\r" && text[index + 2] === "\n" ? 3 : 2);
+    }
+    if (end > index) {
+      chars.fill(" ", index, end);
+      index = end;
+    } else index++;
+  }
+  return chars.join("");
+}
+
 function concatenatedUrl(text, start, end) {
   const prefix = text.slice(0, start);
   const suffix = text.slice(end);
   return (
     (/^[^\s;|&()<>,}\]]/.test(suffix) && !suffix.startsWith("/>")) ||
-    /^(?:\s|\\\r?\n|\/\*[\s\S]*?\*\/|(?:\/\/|#)[^\r\n]*(?:\r?\n|$))*(?:\+|\.|%|[rubf]{0,2}["'`])/i.test(
-      suffix,
-    ) ||
-    /(?:\+|%)(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*(?:\r?\n|$))*$/.test(prefix) ||
-    (/[^\s=:(,;[{}<>]$/.test(prefix) &&
-      !/@import(?:\s|\/\*[\s\S]*?\*\/)*$/i.test(prefix))
+    /^\s*(?:[+.%]|[rubf]{0,2}["'`])/i.test(suffix) ||
+    /[+%]\s*$/.test(prefix) ||
+    (/[^\s=:(,;[{}<>]$/.test(prefix) && !/@import\s*$/i.test(prefix))
   );
 }
 
 function codeUrls(text) {
+  const expressions = expressionText(text);
   const { urls, nonUrlRanges, urlRanges } = networkCommandArguments(text);
   if (/\bsrcset["']?\s*[:=]/i.test(text))
     urls.push(manualSrcsetPrefix + hash(text));
@@ -75,13 +111,15 @@ function codeUrls(text) {
         prefix,
       ) ||
       /\.\s*open\s*\([^,]*,\s*$/.test(prefix) ||
-      /@import(?:\s|\/\*[\s\S]*?\*\/)*$/i.test(prefix) ||
+      /@import\s*$/i.test(expressions.slice(0, match.index)) ||
       /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*$/.test(prefix);
     const pathShaped =
       /^[^\s/:<>{}\[\]]+\//.test(destination) ||
       /^(?:https?|ftp|file|data|javascript|mailto|tel):/i.test(destination);
     if ((urlContext || pathShaped) && !nonUrl) {
-      if (concatenatedUrl(text, match.index, match.index + match[0].length))
+      if (
+        concatenatedUrl(expressions, match.index, match.index + match[0].length)
+      )
         urls.push(implicitNetworkPrefix + "concatenated-url:" + hash(text));
       if (destination) urls.push(destination);
     }
@@ -140,7 +178,7 @@ function codeUrls(text) {
     if (
       quoted &&
       !filesystemContext &&
-      concatenatedUrl(text, match.index - 1, end + 1)
+      concatenatedUrl(expressions, match.index - 1, end + 1)
     )
       urls.push(implicitNetworkPrefix + "concatenated-url:" + hash(text));
     const syntaxOnly =

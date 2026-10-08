@@ -1200,6 +1200,31 @@ describe("review regressions", () => {
       "Replacement internal link",
     );
   });
+  it.each(["import", "prefix", "suffix"])(
+    "handles repeated comment delimiters without backtracking: %s",
+    async (kind) => {
+      const { root, run } = await fixture();
+      const comments = "/*" + "*//*".repeat(900) + "*/";
+      const command =
+        kind === "import"
+          ? `@import${comments} "missing.css";`
+          : kind === "prefix"
+            ? `fetch(prefix + ${comments} "${sourceUrl}")`
+            : `fetch("${sourceUrl}" ${comments} + suffix)`;
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: command,
+          }),
+        ],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        kind === "import" ? "Replacement internal link" : "manual validation",
+      );
+    },
+  );
   it.each(["style.css", sourceUrl])(
     "accepts a validated direct CSS import: %s",
     async (destination) => {
