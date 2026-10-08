@@ -217,6 +217,12 @@ export function networkCommandArguments(text) {
       (_match, single, double) => single ?? double,
     );
     const range = [token.index, token.index + raw.length];
+    const unescapedWord = word.replace(/\\([\s\S])/g, "$1");
+    if (
+      unescapedWord !== word &&
+      /^(?:[\w./-]*\/)?(?:curl|wget)(?:\.exe)?(?:\s|$)/i.test(unescapedWord)
+    )
+      urls.push(implicitNetworkPrefix + "escaped-network-command");
     if (redirectOperand) {
       nonUrlRanges.push(range);
       redirectOperand = false;

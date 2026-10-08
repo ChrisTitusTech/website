@@ -818,6 +818,10 @@ describe("review regressions", () => {
     "nohup curl unapproved.example",
     "nice -n 10 curl unapproved.example",
     "custom-executor /usr/bin/curl unapproved.example",
+    String.raw`c\url docs.example.com/guide`,
+    String.raw`w\get docs.example.com/file`,
+    String.raw`\curl docs.example.com/guide`,
+    String.raw`/usr/bin/c\url docs.example.com/guide`,
   ])(
     "requires explicit verifiable network-command URLs: %s",
     async (command) => {
