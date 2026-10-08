@@ -457,6 +457,17 @@ The complete gate passed with 233 updater tests, 304 total unit tests, five
 Python tests, 2,543 production outputs, 123 browser tests with five existing
 skips, and all 12 Lighthouse runs.
 
+The next checks reject encoded query/fragment delimiters in URL pathnames before
+route normalization. Raw HTML protection tracks parser-reported active/literal
+occurrences and verifies their expected source positions after each edit,
+including identical copies in one paragraph, separate paragraphs, and CRLF
+content. Ambiguous source-to-parser mappings require manual validation.
+Recognized filesystem strings retain Windows drive paths, and ordinary header,
+CSS, and HTML strings do not become spurious relative URLs; URL attributes
+inside HTML strings are still checked. The complete gate passed with 246 updater
+tests, 317 total unit tests, five Python tests, 2,543 production outputs, 123
+browser tests with five existing skips, and all 12 Lighthouse runs.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)

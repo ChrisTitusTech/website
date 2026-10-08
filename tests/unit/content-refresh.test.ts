@@ -742,6 +742,79 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    ["same paragraph", " ", "\n"],
+    ["separate paragraphs", "\n\n", "\n"],
+    ["CRLF paragraphs", "\n\n", "\r\n"],
+  ])(
+    "rejects swapping identical active and literal HTML in %s",
+    async (_label, separator, eol) => {
+      const { root } = await fixture();
+      const html = '<span title="a>b">same</span>';
+      const text = source
+        .replace("Old guidance.", `A ${html} B.${separator}C \`${html}\` D.`)
+        .replace(/\n/g, eol);
+      await writeFile(path.join(root, file), text);
+      const run = await startRun(root, "html-context", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, { original: "A ", replacement: "A `" }),
+          finding(run, { original: " B.", replacement: "` B." }),
+          finding(run, { original: "C `", replacement: "C " }),
+          finding(run, { original: "` D.", replacement: " D." }),
+        ],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        "raw HTML rendering context",
+      );
+      await propose(root, run, policy, {
+        findings: [finding(run, { original: "A ", replacement: "Longer A " })],
+      });
+      expect((await createPatches(root, run, policy))[0].after).toContain(
+        `Longer A ${html}`,
+      );
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            original: `\`${html}\``,
+            replacement: `\`${html.replace("same", "changed")}\``,
+          }),
+        ],
+      });
+      const patches = await createPatches(root, run, policy);
+      expect(patches[0].after).toContain(`A ${html} B.`);
+      expect(patches[0].sensitive).toBe(true);
+    },
+  );
+  it("rejects swapping a raw HTML block with a literal copy", async () => {
+    const { root } = await fixture();
+    const html = "<div>same</div>";
+    await writeFile(
+      path.join(root, file),
+      source.replace(
+        "Old guidance.",
+        `A\n\n${html}\n\nB\n\nC\n\n\`${html}\`\n\nD`,
+      ),
+    );
+    const run = await startRun(root, "html-block-context", policy, [
+      { url: "/guide/", sources: [sourceUrl] },
+    ]);
+    await scan(root, run, policy, { captures: [capture()] });
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, { original: "A\n\n", replacement: "A\n\n`" }),
+        finding(run, { original: "\nB", replacement: "`\nB" }),
+        finding(run, { original: "C\n\n`", replacement: "C\n\n" }),
+        finding(run, { original: "`\n\nD", replacement: "\n\nD" }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "raw HTML rendering context",
+    );
+  });
+  it.each([
     'fetch("api/missing")',
     'fetch("missing")',
     'new Worker("assets/worker.js")',
@@ -749,6 +822,7 @@ describe("review regressions", () => {
     'xhr.open("GET", "api/missing")',
     "<img src=assets/missing.png>",
     '<img src="assets/missing.png">',
+    `document.write('<img src="assets/missing.png">')`,
     "url: api/missing",
     "background: url(assets/missing.png)",
   ])("validates bare relative code destinations: %s", async (command) => {
@@ -787,7 +861,15 @@ describe("review regressions", () => {
       command,
     );
   });
-  it.each(['console.log("Hello")', 'readFile("config.json")'])(
+  it.each([
+    'console.log("Hello")',
+    'readFile("config.json")',
+    'readFile("C:/config.json")',
+    'console.log("Content-Type:application/json")',
+    'document.write("<span>example</span>")',
+    'element.style.cssText = "color:red"',
+    `document.write('<a href="/guide/">Guide</a>')`,
+  ])(
     "preserves ordinary strings and bare filesystem arguments: %s",
     async (command) => {
       const { root, run } = await fixture();
@@ -1390,6 +1472,9 @@ describe("review regressions", () => {
     "/guide//",
     "/images%2Fexists.png",
     "/images%5Cexists.png",
+    "/guide/%3Fmissing",
+    "/guide/%3fmissing",
+    "/guide/%23missing",
   ])("rejects lossy internal path normalization: %s", async (destination) => {
     const { root, run } = await fixture();
     await mkdir(path.join(root, "public/images"));

@@ -34,12 +34,15 @@ function filesystemArgument(prefix, destination) {
 
 function codeUrls(text) {
   const urls = [];
+  const filesystemStrings = [];
   // Bare relative references need context or a path-shaped literal. Ordinary
   // strings are not URLs; filesystem arguments remain separately classified.
   for (const match of text.matchAll(/(["'`])((?:\\[\s\S]|(?!\1)[^\\])*)\1/g)) {
     const destination = match[2];
-    if (/^(?:\/|\.{1,2}\/|[a-z][a-z0-9+.-]*:\/\/)/i.test(destination)) continue;
     const prefix = text.slice(0, match.index);
+    if (filesystemArgument(prefix, destination))
+      filesystemStrings.push([match.index, match.index + match[0].length]);
+    if (/^(?:\/|\.{1,2}\/|[a-z][a-z0-9+.-]*:\/\/)/i.test(destination)) continue;
     const urlContext =
       /(?:\b(?:fetch|Request|URL|Worker|SharedWorker|WebSocket|EventSource|importScripts|sendBeacon|url)|\b(?:axios|requests|http|https)\.(?:get|post|put|patch|delete|head|request)|\b(?:window|location)\.(?:open|assign|replace)|\bserviceWorker\.register)\s*\(\s*$/i.test(
         prefix,
@@ -47,15 +50,20 @@ function codeUrls(text) {
       /\.\s*open\s*\([^,]*,\s*$/.test(prefix) ||
       /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*$/.test(prefix);
     const pathShaped =
-      /^[^\s/]+\//.test(destination) ||
+      /^[^\s/:<>{}\[\]]+\//.test(destination) ||
       /^[a-z_][\w.-]*\.[a-z][\w]*(?:[?#].*)?$/i.test(destination) ||
-      /^[a-z][a-z0-9+.-]*:/i.test(destination);
+      /^(?:https?|ftp|file|data|javascript|mailto|tel):/i.test(destination);
     if (
       destination &&
       (urlContext || pathShaped) &&
       !filesystemArgument(prefix, destination)
     )
       urls.push(destination);
+  }
+  for (const match of text.matchAll(
+    /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*(["'`])((?:\\[\s\S]|(?!\1)[^\\])*)\1/gi,
+  )) {
+    urls.push(match[2]);
   }
   for (const match of text.matchAll(
     /\b(?:href|src|action|poster)\s*=\s*([^\s"'`<>]+)|\b(?:url|endpoint)\s*:\s*([^\s"'`<>]+)|\burl\(\s*([^\s"'`)]+)\s*\)/gi,
@@ -81,7 +89,11 @@ function codeUrls(text) {
     // Relative paths are ambiguous. Exempt only recognizable filesystem
     // arguments; unknown contexts must still pass destination validation.
     // Enumerating network APIs would silently miss new URL-taking forms.
-    const filesystemContext = filesystemArgument(prefix, destination);
+    const filesystemContext =
+      filesystemArgument(prefix, destination) ||
+      filesystemStrings.some(
+        ([start, end]) => match.index >= start && match.index < end,
+      );
     const syntaxOnly =
       !quoted &&
       !/[=:(]\s*$/.test(prefix) &&
@@ -98,8 +110,65 @@ function codeUrls(text) {
   return urls;
 }
 
+function htmlOccurrenceContexts(body, tokens, markdown) {
+  const htmlRule = markdown.inline.ruler
+    .getRules("")
+    .find((rule) => rule.name === "html_inline");
+  if (!htmlRule)
+    throw new Error("HTML occurrence tracking requires manual validation");
+  const scan = (text) => {
+    const state = new markdown.inline.State(text, markdown, {}, []);
+    const occurrences = [];
+    for (let position = text.indexOf("<"); position !== -1;) {
+      state.pos = position;
+      if (htmlRule(state, false)) {
+        occurrences.push({
+          token: state.tokens.at(-1).content.replace(/\r\n?/g, "\n"),
+          position,
+          end: state.pos,
+        });
+        position = text.indexOf("<", state.pos);
+      } else position = text.indexOf("<", position + 1);
+    }
+    return occurrences;
+  };
+  const parsed = [];
+  const walk = (items, literal = false) => {
+    for (const token of items) {
+      if (token.children)
+        walk(token.children, literal || token.type === "image");
+      else if (token.content)
+        parsed.push(
+          ...scan(token.content).map((item) => ({
+            ...item,
+            active:
+              !literal && ["html_inline", "html_block"].includes(token.type),
+          })),
+        );
+    }
+  };
+  walk(tokens);
+  const protectedTags = new Set(
+    parsed.filter((item) => item.active).map((item) => item.token),
+  );
+  const raw = scan(body).filter((item) => protectedTags.has(item.token));
+  const contexts = parsed.filter((item) => protectedTags.has(item.token));
+  if (
+    hash(raw.map((item) => item.token)) !==
+    hash(contexts.map((item) => item.token))
+  )
+    throw new Error(
+      "Ambiguous raw HTML occurrence mapping requires manual validation",
+    );
+  return raw.map((item, index) => ({
+    ...item,
+    active: contexts[index].active,
+  }));
+}
+
 function protectedParts(body) {
-  const tokens = new MarkdownIt({ html: true }).parse(body, {});
+  const markdown = new MarkdownIt({ html: true });
+  const tokens = markdown.parse(body, {});
   const codeBlocks = tokens.filter(
     (t) => t.type === "fence" || t.type === "code_block",
   );
@@ -138,27 +207,19 @@ function protectedParts(body) {
     .flatMap((t) => [t, ...(t.children ?? [])])
     .filter((t) => t.type === "html_block" || t.type === "html_inline")
     .map((t) => t.content);
-  const htmlRanges = [];
-  for (const token of tokens) {
-    if (!token.map) continue;
-    const start = lineOffsets[token.map[0]],
-      end = lineOffsets[token.map[1]] ?? body.length;
-    if (token.type === "html_block") htmlRanges.push([start, end]);
-    for (const child of token.children ?? []) {
-      if (child.type !== "html_inline") continue;
-      const literal = child.content
-        .split("\n")
-        .map((line) => line.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
-        .join("\\r?\\n");
-      for (const match of body
-        .slice(start, end)
-        .matchAll(new RegExp(literal, "g")))
-        htmlRanges.push([
-          start + match.index,
-          start + match.index + match[0].length,
-        ]);
-    }
-  }
+  const htmlContexts = htmlOccurrenceContexts(body, tokens, markdown);
+  const htmlBlocks = tokens
+    .filter((token) => token.type === "html_block")
+    .map((token) => ({
+      token: token.content,
+      position: lineOffsets[token.map[0]],
+      end: lineOffsets[token.map[1]] ?? body.length,
+      active: true,
+    }));
+  const htmlRanges = [
+    ...htmlBlocks,
+    ...htmlContexts.filter((item) => item.active),
+  ].map((item) => [item.position, item.end]);
   return {
     markers: body.match(/<!--more-->/g) ?? [],
     shortcodes: body.match(/\{\{[<%][\s\S]*?[>%]\}\}/g) ?? [],
@@ -174,6 +235,10 @@ function protectedParts(body) {
     blockRanges,
     codeLinks,
     html,
+    htmlContexts: [
+      ...htmlBlocks,
+      ...htmlContexts.filter((item) => item.active),
+    ],
     htmlRanges,
   };
 }
@@ -369,6 +434,23 @@ export async function createPatches(
       throw new Error("Code block changes require an explicit command finding");
     if (hash(before.html) !== hash(after.html))
       throw new Error("Patch changes raw HTML");
+    const shifted = (position) =>
+      position +
+      edits.reduce(
+        (offset, edit) =>
+          offset +
+          (edit.index + edit.original.length <= position
+            ? edit.replacement.length - edit.original.length
+            : 0),
+        0,
+      );
+    const expectedHtml = before.htmlContexts.map((item) => ({
+      ...item,
+      position: shifted(item.position),
+      end: shifted(item.end),
+    }));
+    if (hash(expectedHtml) !== hash(after.htmlContexts))
+      throw new Error("Patch changes raw HTML rendering context");
     const requiredDestinations = new Set([
       ...editedDestinations,
       ...addedOccurrences(
@@ -394,11 +476,12 @@ export async function createPatches(
       localRoutes ??= await buildInventory(undefined, root, {
         productionAt: new Date(),
       });
+      if (/%(?:2f|5c|3f|23)/i.test(resolved.pathname))
+        throw new Error("Replacement internal link has a noncanonical path");
       const pathname = decodeURIComponent(resolved.pathname);
       const route = publicRoute(pathname);
       if (
         pathname.includes("//") ||
-        /%2f|%5c/i.test(resolved.pathname) ||
         (pathname.endsWith("/") && !route.endsWith("/"))
       )
         throw new Error("Replacement internal link has a noncanonical path");
