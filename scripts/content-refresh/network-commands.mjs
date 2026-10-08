@@ -70,6 +70,7 @@ const urlOptions = {
 // code. Unrecognized option values stay URL candidates and fail closed.
 export function networkCommandArguments(text) {
   const urls = [],
+    urlRanges = [],
     nonUrlRanges = [];
   const source = text.replace(/\\\r?\n/g, (match) => " ".repeat(match.length));
   const tokens = source.matchAll(
@@ -80,12 +81,14 @@ export function networkCommandArguments(text) {
     pending = null,
     optionsEnded = false,
     redirectOperand = false;
-  const target = (value) =>
+  const target = (value, range) => {
+    urlRanges.push(range);
     urls.push(
       /^[a-z][a-z0-9+.-]*:\/\//i.test(value) && !/[$`]/.test(value)
         ? value
         : implicitNetworkPrefix + encodeURIComponent(value),
     );
+  };
   for (const token of tokens) {
     const raw = token[0];
     if (/^[;&|\n]$/.test(raw)) {
@@ -132,7 +135,7 @@ export function networkCommandArguments(text) {
       continue;
     }
     if (pending) {
-      if (pending === "url") target(word);
+      if (pending === "url") target(word, range);
       else nonUrlRanges.push(range);
       pending = null;
       continue;
@@ -151,7 +154,7 @@ export function networkCommandArguments(text) {
           : null;
       if (role) {
         if (equals < 0) pending = role;
-        else if (role === "url") target(word.slice(equals + 1));
+        else if (role === "url") target(word.slice(equals + 1), range);
         else nonUrlRanges.push(range);
       } else if (!word.startsWith("--")) {
         for (let index = 1; index < word.length; index++) {
@@ -163,14 +166,14 @@ export function networkCommandArguments(text) {
               : null;
           if (!shortRole) continue;
           if (index === word.length - 1) pending = shortRole;
-          else if (shortRole === "url") target(word.slice(index + 1));
+          else if (shortRole === "url") target(word.slice(index + 1), range);
           else nonUrlRanges.push(range);
           break;
         }
       }
       continue;
     }
-    target(word);
+    target(word, range);
   }
-  return { urls, nonUrlRanges };
+  return { urls, nonUrlRanges, urlRanges };
 }

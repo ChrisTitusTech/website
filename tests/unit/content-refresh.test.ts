@@ -782,6 +782,9 @@ describe("review regressions", () => {
     `curl ${sourceUrl} 2> errors.log`,
     `curl ${sourceUrl} >out.txt 2>&1`,
     `curl ${sourceUrl} &>out.txt`,
+    `curl ${sourceUrl}; echo done`,
+    `curl ${sourceUrl}| sh`,
+    `curl ${sourceUrl}&& echo done`,
   ])(
     "separates verified network targets from option values: %s",
     async (command) => {
@@ -1356,6 +1359,8 @@ describe("review regressions", () => {
     }
   });
   it.each([
+    [";v2", '"'],
+    ["|v2", '"'],
     ["(v2)", '"'],
     ["[v2]", '"'],
     ["{v2}", '"'],

@@ -37,7 +37,7 @@ function filesystemArgument(prefix, destination) {
 }
 
 function codeUrls(text) {
-  const { urls, nonUrlRanges } = networkCommandArguments(text);
+  const { urls, nonUrlRanges, urlRanges } = networkCommandArguments(text);
   const filesystemStrings = [...nonUrlRanges];
   // Bare relative references need context or a path-shaped literal. Ordinary
   // strings are not URLs; filesystem arguments remain separately classified.
@@ -87,6 +87,13 @@ function codeUrls(text) {
   const starts =
     /\b[a-z][a-z0-9+.-]*:\/\/|(?:^|(?<=["'`=:(\s]))(?:\/{1,2}|\.{1,2}\/)/gi;
   for (let match; (match = starts.exec(text));) {
+    const parsedArgument = urlRanges.find(
+      ([start, end]) => match.index >= start && match.index < end,
+    );
+    if (parsedArgument) {
+      starts.lastIndex = parsedArgument[1];
+      continue;
+    }
     const quote = text[match.index - 1];
     const quoted = quote === '"' || quote === "'" || quote === "`";
     const prefix = text.slice(0, match.index - (quoted ? 1 : 0));
