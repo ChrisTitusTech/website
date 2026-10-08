@@ -172,10 +172,11 @@ export function networkCommandArguments(text) {
   const nestedText = text.replace(/["']/g, "");
   if (/\$\(|[<>]\(|`[^`]*\$(?:\{|[A-Za-z_0-9@*#?$!-])/.test(text))
     urls.push(implicitNetworkPrefix + "parameter-expanded-command");
-  const transferCommand = /\b(?:scp|sftp|rsync)(?:\.exe)?\s/i;
+  const transferCommand = /\b(?:scp|sftp|rsync)(?:\.exe)?(?=$|[\s<>;&|()])/i;
+  const transferText = nestedText.replace(/\\\r?\n/g, "");
   if (
-    transferCommand.test(nestedText) ||
-    transferCommand.test(nestedText.replace(/\\([^\r\n])/g, "$1"))
+    transferCommand.test(transferText) ||
+    transferCommand.test(transferText.replace(/\\([^\r\n])/g, "$1"))
   )
     urls.push(implicitNetworkPrefix + "transfer-command");
   // Git's scp-style remotes have no scheme and cannot satisfy HTTPS evidence.
