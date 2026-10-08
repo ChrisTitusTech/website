@@ -220,7 +220,10 @@ export function networkCommandArguments(text) {
       redirectOperand = false;
       continue;
     }
-    if (command && /^(?:\d*|&)(?:>>?|<)(?:&(?:\d+|-))?$/.test(raw)) {
+    if (
+      (command || atStart) &&
+      /^(?:\d*|&)(?:>>?|<)(?:&(?:\d+|-))?$/.test(raw)
+    ) {
       nonUrlRanges.push(range);
       redirectOperand = !/&(?:\d+|-)$/.test(raw);
       continue;

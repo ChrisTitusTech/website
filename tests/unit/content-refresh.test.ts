@@ -809,6 +809,9 @@ describe("review regressions", () => {
     "{ curl unapproved.example; }",
     "while curl unapproved.example; do :; done",
     "until curl unapproved.example; do :; done",
+    "2>errors.log curl unapproved.example",
+    '>"downloads/output.txt" curl unapproved.example',
+    "2>&1 curl unapproved.example",
   ])(
     "requires explicit verifiable network-command URLs: %s",
     async (command) => {
@@ -851,6 +854,8 @@ describe("review regressions", () => {
     `exec -a downloader curl ${sourceUrl}`,
     `if false; then :; else curl ${sourceUrl}; fi`,
     `{ curl ${sourceUrl}; }`,
+    `2>errors.log curl ${sourceUrl}`,
+    `>"downloads/output.txt" curl ${sourceUrl}`,
   ])(
     "separates verified network targets from option values: %s",
     async (command) => {
