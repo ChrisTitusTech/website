@@ -336,6 +336,12 @@ cycle passed all 101 updater tests and 172 total unit tests, the full production
 and route checks, 123 browser tests (five existing skips), and all 12 Lighthouse
 runs. Saved evidence is also rechecked against the HTTPS/domain rules.
 
+Independent review then identified the standalone search source as another route
+reservation. The final production inventory excludes it and Cloudflare metadata
+files. All 2,541 eligible routes were checked against generated output. Repeated
+Astro, formatting, Markdown, and unit checks passed with 103 updater tests and
+174 total unit tests; unchanged build/browser/Lighthouse evidence above applies.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)

@@ -771,11 +771,17 @@ describe("review regressions", () => {
     "[Draft](/draft-only/)",
     "[Future](/future-only/)",
     "[Search](/search/)",
+    "[Config](/_headers)",
+    "[Config](/_redirects)",
     "[Anchor](/guide/#unverified)",
   ])(
     "rejects a new unavailable internal destination: %s",
     async (replacement) => {
       const { root, run } = await fixture();
+      await writeFile(
+        path.join(root, "src/content/search.md"),
+        "---\ntitle: Search\nlayout: search\ndraft: false\n---\n",
+      );
       await writeFile(
         path.join(root, "src/content/posts/2020/draft.md"),
         source.replace("url: /guide/", "url: /draft-only/\ndraft: true"),

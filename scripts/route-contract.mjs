@@ -206,8 +206,6 @@ export async function buildInventory(
   }
 
   const currentDerived = derivedRoutes(posts);
-  // /search/ is reserved for collision checks but is not a generated page.
-  if (productionAt) currentDerived.delete("/search/");
   for (const route of currentDerived) {
     const normalized = publicRoute(route);
     routes.add(normalized);
@@ -257,6 +255,13 @@ export async function buildInventory(
     .map((line) => line.trim())
     .filter((line) => line && !line.startsWith("#"));
   const redirectSources = redirectLines.map((line) => line.split(/\s+/)[0]);
+  // Standalone content may also reserve /search/, but production has no page.
+  if (productionAt) {
+    for (const route of ["/search/", "/_headers/", "/_redirects/"])
+      routes.delete(route);
+    outputPaths.delete("search/index.html");
+    induced.delete("/search/");
+  }
   return { routes, outputPaths, induced, redirectSources };
 }
 
