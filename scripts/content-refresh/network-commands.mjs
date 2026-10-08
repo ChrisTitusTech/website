@@ -244,6 +244,8 @@ export function networkCommandArguments(text) {
       continue;
     }
     if (!command) {
+      if (atStart && /^[^()\s=]*\{[^{}]*(?:,|\.\.)[^{}]*\}/.test(raw))
+        urls.push(implicitNetworkPrefix + "brace-expanded-command");
       if ((atStart || !literalCommand) && /\$'/.test(raw))
         urls.push(implicitNetworkPrefix + "ansi-quoted-command");
       // A literal curl/wget invocation behind an unknown executor must not
@@ -306,7 +308,7 @@ export function networkCommandArguments(text) {
       atStart = ambiguousWrapper && !found;
       continue;
     }
-    if (word.startsWith("#")) {
+    if (raw.startsWith("#")) {
       command = null;
       atStart = false;
       continue;
