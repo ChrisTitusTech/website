@@ -24,6 +24,8 @@ import {
   redirectMatches,
 } from "../route-contract.mjs";
 
+const manualSrcsetPrefix = "manual-srcset-context:";
+
 function filesystemArgument(prefix, destination) {
   return (
     /\b(?:readFile|readFileSync|writeFile|writeFileSync|mkdir|mkdirSync|readdir|readdirSync|stat|statSync|unlink|unlinkSync)\s*\(\s*$/.test(
@@ -38,6 +40,8 @@ function filesystemArgument(prefix, destination) {
 
 function codeUrls(text) {
   const { urls, nonUrlRanges, urlRanges } = networkCommandArguments(text);
+  if (/\bsrcset["']?\s*[:=]/i.test(text))
+    urls.push(manualSrcsetPrefix + hash(text));
   const filesystemStrings = [...nonUrlRanges];
   // Bare relative references need context or a path-shaped literal. Ordinary
   // strings are not URLs; filesystem arguments remain separately classified.
@@ -481,6 +485,8 @@ export async function createPatches(
     ]);
     const externalDestinations = [];
     for (const destination of requiredDestinations) {
+      if (destination.startsWith(manualSrcsetPrefix))
+        throw new Error("srcset code examples require manual validation");
       if (destination.startsWith(implicitNetworkPrefix))
         throw new Error(
           "Network commands require explicit HTTPS URLs; ambiguous targets need manual validation",

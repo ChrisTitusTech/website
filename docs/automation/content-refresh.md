@@ -494,3 +494,7 @@ require operator review.
 Literal curl/wget invocations found behind unsupported executors require manual
 validation. Plain output and lookup commands (`echo`, `printf`, `man`, `which`,
 and `type`) retain their literal argument behavior.
+
+New or edited `srcset` code examples require manual validation. The patch tool
+does not certify a candidate list from a single URL match. Scp-style Git remotes
+also require manual validation, including escaped Git executable names.
