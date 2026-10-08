@@ -6,6 +6,7 @@ import YAML from "yaml";
 
 import livestreams from "../data/livestreams.json" with { type: "json" };
 import site from "../src/data/site.json" with { type: "json" };
+import { isEligibleData } from "../src/lib/content-logic.ts";
 
 const validLivestreamCount = livestreams.items.filter((stream) =>
   /^[A-Za-z0-9_-]{6,16}$/.test(stream.videoId),
@@ -157,7 +158,11 @@ function routeFromPublicFile(relative) {
   return `/${relative}`;
 }
 
-export async function buildInventory(candidate, root = process.cwd()) {
+export async function buildInventory(
+  candidate,
+  root = process.cwd(),
+  { productionAt } = {},
+) {
   const routes = new Set();
   const outputPaths = new Set();
 
@@ -168,7 +173,11 @@ export async function buildInventory(candidate, root = process.cwd()) {
       await readFile(path.join(root, file), "utf8"),
       file,
     );
-    if (data.build?.render === "never" || typeof data.url !== "string")
+    if (
+      data.build?.render === "never" ||
+      typeof data.url !== "string" ||
+      (productionAt && !isEligibleData(data, productionAt))
+    )
       continue;
     posts.push({ ...data, _sourcePath: file });
   }
@@ -182,7 +191,11 @@ export async function buildInventory(candidate, root = process.cwd()) {
       await readFile(path.join(root, file), "utf8"),
       file,
     );
-    if (data.build?.render === "never") continue;
+    if (
+      data.build?.render === "never" ||
+      (productionAt && !isEligibleData(data, productionAt))
+    )
+      continue;
     const id = file
       .replace(/^src\/content\//, "")
       .replace(/\.md$/, "")
@@ -193,6 +206,8 @@ export async function buildInventory(candidate, root = process.cwd()) {
   }
 
   const currentDerived = derivedRoutes(posts);
+  // /search/ is reserved for collision checks but is not a generated page.
+  if (productionAt) currentDerived.delete("/search/");
   for (const route of currentDerived) {
     const normalized = publicRoute(route);
     routes.add(normalized);

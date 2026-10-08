@@ -73,7 +73,7 @@ export function publicUrl(value, domains) {
     throw new Error("Invalid source URL");
   }
   if (
-    !["https:", "http:"].includes(url.protocol) ||
+    url.protocol !== "https:" ||
     url.username ||
     url.password ||
     url.port ||

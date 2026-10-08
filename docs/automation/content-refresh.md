@@ -227,6 +227,7 @@ URLs, short excerpts, hashes, finding dispositions, and validation evidence in
 the curated PR ledger. Delete expired local captures when no active review
 depends on them. New runs need fresh evidence, not archived ledger snippets.
 
+Evidence URLs require HTTPS, including the final provider-reported URL.
 URLs reject credentials, query strings, IP literals, unexpected ports, and hosts
 outside the exact domain allowlist. The local process only connects to fixed
 provider APIs. Firecrawl performs remote DNS resolution and redirects; returned
@@ -325,6 +326,15 @@ dated warning that its destination is an unsupported historical archive. All 89
 updater tests and 160 total unit tests passed, along with the complete validation
 gate, 123 browser tests (five existing skips), and all 12 Lighthouse runs. The
 production article's warning and unchanged canonical URL were checked directly.
+
+New internal links and image destinations are checked against production-eligible
+routes and public assets, including relative destinations resolved from the
+article URL. Draft/future posts and the reserved non-page `/search/` are not valid
+targets. New fragment destinations require separate manual validation; the
+updater fails closed instead of guessing anchor availability. The validation
+cycle passed all 101 updater tests and 172 total unit tests, the full production
+and route checks, 123 browser tests (five existing skips), and all 12 Lighthouse
+runs. Saved evidence is also rechecked against the HTTPS/domain rules.
 
 ## Provider references
 

@@ -159,8 +159,10 @@ resolve the remaining uncertainty. Credentials were not requested or embedded.
 - After addressing the six existing PR review findings, the complete
   `npm run validate` gate passed again with 132 unit tests (61 updater tests),
   123 browser tests and five existing skips, and all Lighthouse thresholds.
-- All 330 posts retain metadata other than reviewed optional image repairs;
-  all 314 published routes exist and all 16 drafts remain excluded.
+- At audit time, all 330 posts retained metadata other than reviewed optional
+  image repairs; all 314 published routes existed and all 16 drafts were excluded.
+  After the requested cleanup, 317 post files remain: 314 published posts and
+  three excluded drafts. The two retained drafts have December 2026 dates.
 - Independent `codex review --uncommitted` completed with no actionable
   regressions, covering the archive audit, untracked evidence, and updater review
   fixes. Its own 132 unit tests, formatting, and Markdown checks passed.

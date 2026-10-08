@@ -1,6 +1,7 @@
 import { readFile, writeFile, rename, unlink, open } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
 import MarkdownIt from "markdown-it";
+import site from "../../src/data/site.json" with { type: "json" };
 import {
   parseDocument,
   transformBody,
@@ -8,7 +9,8 @@ import {
 } from "../prepare-content.mjs";
 import { hash, safePath, readJson, writeJson } from "./common.mjs";
 import { validateFindings, validateNewLinks } from "./findings.mjs";
-import { extractLinks } from "./inventory.mjs";
+import { extractLinks, extractDestinations } from "./inventory.mjs";
+import { buildInventory, publicRoute } from "../route-contract.mjs";
 
 function protectedParts(body) {
   const tokens = new MarkdownIt({ html: true }).parse(body, {});
@@ -110,6 +112,7 @@ export async function createPatches(
     groups.set(f.file, group);
   }
   const patches = [];
+  let localRoutes;
   for (const [file, findings] of groups) {
     const target = await safePath(root, file);
     const source = await readFile(target, "utf8");
@@ -197,6 +200,25 @@ export async function createPatches(
       throw new Error("Code block changes require an explicit command finding");
     if (hash(before.html) !== hash(after.html))
       throw new Error("Patch changes raw HTML");
+    const oldDestinations = new Set(extractDestinations(parsed.body));
+    for (const destination of extractDestinations(body)) {
+      if (
+        oldDestinations.has(destination) ||
+        /^(?:[a-z][a-z0-9+.-]*:|[\\/]{2})/i.test(destination)
+      )
+        continue;
+      const resolved = new URL(destination, new URL(findings[0].url, site.url));
+      if (resolved.origin !== new URL(site.url).origin || resolved.hash)
+        throw new Error("New internal fragments require manual validation");
+      localRoutes ??= (
+        await buildInventory(undefined, root, { productionAt: new Date() })
+      ).routes;
+      const route = publicRoute(decodeURIComponent(resolved.pathname));
+      if (!localRoutes.has(route))
+        throw new Error(
+          "Replacement internal link has no production route or public asset",
+        );
+    }
     validateNewLinks(parsed.body, body, run, policy, extractLinks);
     validateNewLinks(
       before.codeLinks,

@@ -15,7 +15,7 @@ const markdown = new MarkdownIt({ html: true, linkify: true });
 // The site's renderer can recognize destinations MarkdownIt normally rejects.
 markdown.validateLink = () => true;
 
-export function extractLinks(body) {
+export function extractDestinations(body) {
   const links = new Set();
   const walk = (tokens) => {
     for (const token of tokens) {
@@ -23,13 +23,18 @@ export function extractLinks(body) {
       if (token.type === "image") links.add(token.attrGet("src"));
       if (token.type === "html_block" || token.type === "html_inline")
         for (const match of token.content.matchAll(
-          /\bhref\s*=\s*["'](https?:\/\/[^"']+)["']/gi,
+          /\b(?:href|src)\s*=\s*["']([^"']+)["']/gi,
         ))
           links.add(match[1]);
       if (token.children) walk(token.children);
     }
   };
   walk(markdown.parse(body, {}));
+  return [...links].filter((url) => typeof url === "string");
+}
+
+export function extractLinks(body) {
+  const links = extractDestinations(body);
   return [
     ...new Set(
       [...links]

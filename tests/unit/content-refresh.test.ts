@@ -739,6 +739,78 @@ describe("patch approval and recovery", () => {
 });
 
 describe("review regressions", () => {
+  it("requires HTTPS for requested and final evidence URLs", () => {
+    expect(() =>
+      publicUrl("http://docs.example.com/guide", policy.domains),
+    ).toThrow("outside the approved");
+    expect(() =>
+      normalizeEvidence(
+        sourceUrl,
+        {
+          ...payload,
+          metadata: { statusCode: 200, url: "http://docs.example.com/guide" },
+        },
+        policy,
+      ),
+    ).toThrow("outside the approved");
+    const valid = normalizeEvidence(sourceUrl, payload, policy);
+    expect(evidenceFresh(valid, policy)).toBe(true);
+    for (const field of ["url", "finalUrl"]) {
+      expect(
+        evidenceFresh(
+          { ...valid, [field]: "http://docs.example.com/guide" },
+          policy,
+        ),
+      ).toBe(false);
+    }
+  });
+  it.each([
+    "[Missing](/missing/)",
+    "![Missing](/missing.png)",
+    "[Missing](missing/)",
+    "[Draft](/draft-only/)",
+    "[Future](/future-only/)",
+    "[Search](/search/)",
+    "[Anchor](/guide/#unverified)",
+  ])(
+    "rejects a new unavailable internal destination: %s",
+    async (replacement) => {
+      const { root, run } = await fixture();
+      await writeFile(
+        path.join(root, "src/content/posts/2020/draft.md"),
+        source.replace("url: /guide/", "url: /draft-only/\ndraft: true"),
+      );
+      await writeFile(
+        path.join(root, "src/content/posts/2020/future.md"),
+        source
+          .replace("url: /guide/", "url: /future-only/")
+          .replace("2020-01-01", "2099-01-01"),
+      );
+      await propose(root, run, policy, {
+        findings: [finding(run, { replacement })],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        /internal (link|fragments)/,
+      );
+    },
+  );
+  it.each([
+    "[Guide](/guide/)",
+    "[Guide](../guide/)",
+    "[Category](/categories/linux/)",
+    "![Image](/images/exists.png)",
+  ])("accepts a verified production destination: %s", async (replacement) => {
+    const { root, run } = await fixture();
+    await mkdir(path.join(root, "public/images"));
+    await writeFile(path.join(root, "public/images/exists.png"), "fixture");
+    await propose(root, run, policy, {
+      findings: [finding(run, { replacement })],
+    });
+    expect((await createPatches(root, run, policy))[0].after).toContain(
+      replacement,
+    );
+  });
+
   it.each(["\n", "\r\n"])(
     "protects block and inline HTML source spans with %j line endings",
     async (eol) => {

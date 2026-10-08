@@ -53,6 +53,12 @@ export function normalizeEvidence(
 }
 
 export function evidenceFresh(e, policy, now = Date.now()) {
+  try {
+    publicUrl(e.url, policy.domains);
+    publicUrl(e.finalUrl, policy.domains);
+  } catch {
+    return false;
+  }
   const age = now - Date.parse(e.retrievedAt);
   return (
     e.outcome === "retrieved" &&
