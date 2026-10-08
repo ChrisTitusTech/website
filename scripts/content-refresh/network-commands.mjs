@@ -170,6 +170,8 @@ export function networkCommandArguments(text) {
   // Nested shell execution needs a real shell parser. Keep these examples in
   // manual review rather than treating unclassified targets as verified.
   const nestedText = text.replace(/["']/g, "");
+  if (/(?:\$\(|[<>]\(|`)\s*[^\s()`]*\$(?:\{|[A-Za-z_0-9@*#?$!-])/.test(text))
+    urls.push(implicitNetworkPrefix + "parameter-expanded-command");
   // Git's scp-style remotes have no scheme and cannot satisfy HTTPS evidence.
   for (const segment of nestedText.replace(/\\\r?\n/g, "").split(/[;\n|&]/)) {
     const gitOperation =
@@ -325,6 +327,12 @@ export function networkCommandArguments(text) {
         continue;
       if (atStart && ambiguousWrapper && /\b(?:curl|wget)\b/.test(word))
         urls.push(implicitNetworkPrefix + "unsupported-wrapper-option");
+      if (
+        atStart &&
+        !/^[A-Za-z_][\w.]*\(/.test(raw) &&
+        /\$(?:\{|[A-Za-z_0-9@*#?$!-])/.test(raw)
+      )
+        urls.push(implicitNetworkPrefix + "parameter-expanded-command");
       const found = atStart && word.match(/(?:^|[\\/])(curl|wget)(?:\.exe)?$/i);
       if (found) {
         command = found[1].toLowerCase();

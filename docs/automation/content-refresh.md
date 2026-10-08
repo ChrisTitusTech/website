@@ -498,3 +498,6 @@ and `type`) retain their literal argument behavior.
 New or edited `srcset` code examples require manual validation. The patch tool
 does not certify a candidate list from a single URL match. Scp-style Git remotes
 also require manual validation, including escaped Git executable names.
+
+Parameter-expanded executable names require manual validation; the scanner does
+not infer which command an environment variable or default expression selects.
