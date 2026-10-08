@@ -44,6 +44,7 @@ import {
   report,
   runPath,
   recordHistory,
+  saveRun,
 } from "../../scripts/content-refresh/runner.mjs";
 
 const roots: string[] = [];
@@ -741,6 +742,66 @@ describe("patch approval and recovery", () => {
 });
 
 describe("review regressions", () => {
+  it.each(["expired", "retry", "late", "success"])(
+    "enforces the persisted discovery-search deadline: %s",
+    async (outcome) => {
+      const { root } = await fixture();
+      const limited = { ...policy, maxRunSeconds: 1 };
+      await mkdir(path.join(root, "data"));
+      await writeFile(
+        path.join(root, "data/content-refresh-policy.json"),
+        JSON.stringify(limited),
+      );
+      const run = await startRun(root, "search-deadline", limited, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await saveRun(root, run);
+      let clock =
+        Date.parse(run.createdAt) + (outcome === "expired" ? 1001 : 0);
+      const time = vi.spyOn(Date, "now").mockImplementation(() => clock);
+      const request = vi
+        .spyOn(globalThis, "fetch")
+        .mockImplementation(async () => {
+          if (outcome === "retry" || outcome === "late") clock += 1001;
+          return new Response(
+            JSON.stringify({
+              success: true,
+              data: { web: [{ url: sourceUrl, title: "Guide" }] },
+            }),
+            { status: outcome === "retry" ? 503 : 200 },
+          );
+        });
+      vi.stubEnv("FIRECRAWL_API_KEY", "test-only-key");
+      try {
+        const command = main(
+          ["search", "--run", run.id, "--query", "guide"],
+          root,
+        );
+        if (outcome === "success") await command;
+        else
+          await expect(command).rejects.toThrow(
+            "Run request or time budget exhausted",
+          );
+        expect(request).toHaveBeenCalledTimes(outcome === "expired" ? 0 : 1);
+        const persisted = JSON.parse(
+          await readFile(path.join(root, runPath(run.id)), "utf8"),
+        );
+        expect(persisted.requests).toBe(outcome === "expired" ? 0 : 1);
+        if (outcome === "success")
+          expect(persisted.discovery).toEqual([
+            { url: sourceUrl, title: "Guide" },
+          ]);
+        else {
+          expect(persisted.status).toBe("budget-limited");
+          expect(persisted.discovery).toBeUndefined();
+        }
+      } finally {
+        time.mockRestore();
+        request.mockRestore();
+        vi.unstubAllEnvs();
+      }
+    },
+  );
   it.each([
     "sh -c 'curl original.example/install'",
     "result=$(curl original.example/install)",
@@ -816,6 +877,11 @@ describe("review regressions", () => {
     'c$"ur"l docs.example.com/guide',
     '$"wget" docs.example.com/guide',
     "c{ur,x}l docs.example.com/guide",
+    "result=$(c{ur,ur}l unapproved.example)",
+    "echo $(c{ur,x}l unapproved.example)",
+    `curl ${sourceUrl} --output >(c{ur,x}l unapproved.example)`,
+    "echo `c{ur,x}l unapproved.example`",
+    "(c{ur,x}l unapproved.example)",
     "{curl,wget} docs.example.com/guide",
     'curl "#" docs.example.com/guide',
     "curl '#' docs.example.com/guide",

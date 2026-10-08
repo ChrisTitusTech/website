@@ -115,16 +115,25 @@ export async function main(args = process.argv.slice(2), root = process.cwd()) {
           : undefined,
       });
     } else if (command === "search") {
+      const deadline = Date.parse(run.createdAt) + policy.maxRunSeconds * 1000;
+      if (!Number.isFinite(deadline))
+        throw new Error("Invalid run creation time");
+      const exhausted = async () => {
+        run.status = "budget-limited";
+        await saveRun(root, run);
+        throw new Error("Run request or time budget exhausted");
+      };
       const client = firecrawlClient({
         policy,
         reserve: async () => {
-          if (run.requests >= policy.maxRequests)
-            throw new Error("Request budget exhausted");
+          if (run.requests >= policy.maxRequests || Date.now() >= deadline)
+            await exhausted();
           run.requests++;
           await saveRun(root, run);
         },
       });
       const hits = await client.search(values.query);
+      if (Date.now() >= deadline) await exhausted();
       run.discovery = hits;
       await saveRun(root, run);
       console.log(

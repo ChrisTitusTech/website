@@ -172,6 +172,7 @@ export function networkCommandArguments(text) {
   const nestedText = text.replace(/["']/g, "");
   if (
     (/\$\(|[<>]\(/.test(text) && /\$['"]/.test(text)) ||
+    /(?:\$\(|[<>]\(|`)[^`]*?\{[^{}]*(?:,|\.\.)[^{}]*\}/.test(nestedText) ||
     /\b(?:sh|bash|dash|zsh|ksh|fish|powershell|pwsh|cmd)(?:\.exe)?\b[^\n]*?\s(?:-[^\s]*c[^\s]*|\/c)\b[^\n]*?\b(?:curl|wget)\b/i.test(
       nestedText,
     ) ||
@@ -248,7 +249,7 @@ export function networkCommandArguments(text) {
       continue;
     }
     if (!command) {
-      if (atStart && /^[^()\s=]*\{[^{}]*(?:,|\.\.)[^{}]*\}/.test(raw))
+      if (atStart && /^(?:\(\s*)?[^()\s=]*\{[^{}]*(?:,|\.\.)[^{}]*\}/.test(raw))
         urls.push(implicitNetworkPrefix + "brace-expanded-command");
       if ((atStart || !literalCommand) && /\$['"]/.test(raw))
         urls.push(implicitNetworkPrefix + "dollar-quoted-command");
