@@ -776,6 +776,12 @@ describe("review regressions", () => {
     `wget -qO "downloads/out.txt" ${sourceUrl}`,
     `curl -fsSL \\\n${sourceUrl}`,
     `sudo /usr/bin/curl ${sourceUrl}`,
+    `curl ${sourceUrl} > out.txt`,
+    `curl ${sourceUrl} >> "downloads/out.txt"`,
+    `curl ${sourceUrl}>out.txt`,
+    `curl ${sourceUrl} 2> errors.log`,
+    `curl ${sourceUrl} >out.txt 2>&1`,
+    `curl ${sourceUrl} &>out.txt`,
   ])(
     "separates verified network targets from option values: %s",
     async (command) => {

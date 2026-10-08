@@ -73,12 +73,13 @@ export function networkCommandArguments(text) {
     nonUrlRanges = [];
   const source = text.replace(/\\\r?\n/g, (match) => " ".repeat(match.length));
   const tokens = source.matchAll(
-    /(?:'[^']*'|"(?:\\[\s\S]|[^"\\])*"|\\[\s\S]|[^\s"'\\;&|])+|[;&|\n]/g,
+    /(?:\d*|&)(?:>>?|<)(?:&(?:\d+|-))?|(?:'[^']*'|"(?:\\[\s\S]|[^"\\])*"|\\[\s\S]|[^\s"'\\;&|<>])+|[;&|\n]/g,
   );
   let command = null,
     atStart = true,
     pending = null,
-    optionsEnded = false;
+    optionsEnded = false,
+    redirectOperand = false;
   const target = (value) =>
     urls.push(
       /^[a-z][a-z0-9+.-]*:\/\//i.test(value) && !/[$`]/.test(value)
@@ -92,6 +93,7 @@ export function networkCommandArguments(text) {
       atStart = true;
       pending = null;
       optionsEnded = false;
+      redirectOperand = false;
       continue;
     }
     const word = raw.replace(
@@ -99,6 +101,16 @@ export function networkCommandArguments(text) {
       (_match, single, double) => single ?? double,
     );
     const range = [token.index, token.index + raw.length];
+    if (redirectOperand) {
+      nonUrlRanges.push(range);
+      redirectOperand = false;
+      continue;
+    }
+    if (command && /^(?:\d*|&)(?:>>?|<)(?:&(?:\d+|-))?$/.test(raw)) {
+      nonUrlRanges.push(range);
+      redirectOperand = !/&(?:\d+|-)$/.test(raw);
+      continue;
+    }
     if (!command) {
       if (
         atStart &&
