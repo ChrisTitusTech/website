@@ -38,6 +38,20 @@ function filesystemArgument(prefix, destination) {
   );
 }
 
+function concatenatedUrl(text, start, end) {
+  const prefix = text.slice(0, start);
+  const suffix = text.slice(end);
+  return (
+    (/^[^\s;|&()<>,}\]]/.test(suffix) && !suffix.startsWith("/>")) ||
+    /^(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*(?:\r?\n|$))*(?:\+|\.|%)/.test(
+      suffix,
+    ) ||
+    /(?:\+|%)(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*(?:\r?\n|$))*$/.test(prefix) ||
+    (/[^\s=:(,;[{}<>]$/.test(prefix) &&
+      !/@import(?:\s|\/\*[\s\S]*?\*\/)*$/i.test(prefix))
+  );
+}
+
 function codeUrls(text) {
   const { urls, nonUrlRanges, urlRanges } = networkCommandArguments(text);
   if (/\bsrcset["']?\s*[:=]/i.test(text))
@@ -66,8 +80,11 @@ function codeUrls(text) {
     const pathShaped =
       /^[^\s/:<>{}\[\]]+\//.test(destination) ||
       /^(?:https?|ftp|file|data|javascript|mailto|tel):/i.test(destination);
-    if (destination && (urlContext || pathShaped) && !nonUrl)
-      urls.push(destination);
+    if ((urlContext || pathShaped) && !nonUrl) {
+      if (concatenatedUrl(text, match.index, match.index + match[0].length))
+        urls.push(implicitNetworkPrefix + "concatenated-url:" + hash(text));
+      if (destination) urls.push(destination);
+    }
   }
   for (const match of text.matchAll(
     /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*(["'`])((?:\\[\s\S]|(?!\1)[^\\])*)\1/gi,
@@ -123,16 +140,7 @@ function codeUrls(text) {
     if (
       quoted &&
       !filesystemContext &&
-      ((/^[^\s;|&()<>,}\]]/.test(text.slice(end + 1)) &&
-        !text.startsWith("/>", end + 1)) ||
-        /^(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*(?:\r?\n|$))*(?:\+|\.|%)/.test(
-          text.slice(end + 1),
-        ) ||
-        /(?:\+|%)(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*(?:\r?\n|$))*$/.test(
-          prefix,
-        ) ||
-        (/[^\s=:(,;[{}<>]$/.test(prefix) &&
-          !/@import(?:\s|\/\*[\s\S]*?\*\/)*$/i.test(prefix)))
+      concatenatedUrl(text, match.index - 1, end + 1)
     )
       urls.push(implicitNetworkPrefix + "concatenated-url:" + hash(text));
     const syntaxOnly =
