@@ -29,14 +29,17 @@ npm run content:refresh -- inventory
 ```
 
 Read `.content-refresh/inventory.json`. It records source paths, canonical URLs,
-hashes, links, policy category, check history, and due dates. Eligibility reuses
+hashes, links, policy category, and scoped claim history. Eligibility reuses
 the site's date and draft rules under one captured instant. Generated routes,
 render-never sources, drafts, and future content are excluded with reasons.
-History means selected claims were checked, not that an entire article is current.
-Current/historical findings can record an unchanged article as checked. An article
-with confirmed corrections remains due until every correction is applied; its
-history then binds to the resulting content hash. Partial approvals, dry runs,
-and unresolved findings do not defer its next review.
+History records each selected claim's ID, section, classification, and evidence
+sources. Current/historical findings can record an unchanged claim as checked;
+confirmed corrections record history after every correction is applied, bound
+to the resulting content hash. The inventory exposes this as `lastClaimReview`,
+with an advisory `nextCheck` for those claims. Bounded reviews never certify an
+entire article: document-level `due` stays true and `nextCheck` stays null,
+including for legacy history without claim scope. Partial approvals, dry runs,
+and unresolved findings do not record successful claim history.
 The generated-route count uses the compatibility inventory, which includes
 reserved routes, aliases, and static assets; it is not a count of rendered pages.
 
@@ -58,6 +61,8 @@ One request runs at a time. Transient errors retry up to three total attempts
 with bounded backoff; requests have a 60-second timeout. Partial collection exits
 with status 2 and records incomplete sources. Other failures exit 1. Successful
 collection exits 0. Budget exhaustion cannot be bypassed by resuming the run.
+The collection deadline is the persisted run creation time plus `maxRunSeconds`;
+time spent paused also counts, and a resume cannot extend that deadline.
 Choose a new, smaller selection when a run needs additional budget.
 
 Successful evidence is reused within its seven-day validity window. A resume
@@ -409,6 +414,14 @@ and path punctuation; ambiguous backslash escaping or whitespace requires manual
 validation. The complete gate passed with 175 updater tests, 246 total unit
 tests, five Python tests, 2,543 production outputs, 123 browser tests with five
 existing skips, and all 12 Lighthouse runs.
+
+The next cycle adds destination validation for quoted scheme-relative,
+root-relative, and dot-relative code literals. Review history now retains the
+specific claim IDs, sections, classifications, and evidence sources without
+deferring the entire article. Collection uses the persisted creation time for
+its deadline, including across serialized resumes. The complete gate passed
+with 184 updater tests, 255 total unit tests, five Python tests, 2,543 production
+outputs, 123 browser tests with five existing skips, and all 12 Lighthouse runs.
 
 ## Provider references
 

@@ -100,12 +100,16 @@ export async function scan(
       return [];
     }
   });
-  const started = Date.now();
+  // createdAt is persisted with the run; resuming cannot reset this deadline.
+  const deadline = Date.parse(run.createdAt) + policy.maxRunSeconds * 1000;
+  if (!Number.isFinite(deadline)) throw new Error("Invalid run creation time");
+  if (Date.now() >= deadline) {
+    run.status = "budget-limited";
+    await saveRun(root, run);
+    return run;
+  }
   const reserve = async () => {
-    if (
-      run.requests >= policy.maxRequests ||
-      Date.now() - started >= policy.maxRunSeconds * 1000
-    )
+    if (run.requests >= policy.maxRequests || Date.now() >= deadline)
       throw new BudgetExhausted("Run request or time budget exhausted");
     run.requests++;
     await saveRun(root, run);
@@ -124,10 +128,7 @@ export async function scan(
         if (!doc.evidenceIds.includes(id)) doc.evidenceIds.push(id);
         continue;
       }
-      if (
-        Date.now() - started >= policy.maxRunSeconds * 1000 ||
-        run.requests >= policy.maxRequests
-      ) {
+      if (Date.now() >= deadline || run.requests >= policy.maxRequests) {
         run.status = "budget-limited";
         await saveRun(root, run);
         return run;
@@ -254,6 +255,12 @@ export async function recordHistory(root, run, policy, approval) {
         contentHash: expectedHash,
         checkedAt: new Date().toISOString(),
         scope: doc.sources,
+        claims: findings.map(({ id, section, classification, evidence }) => ({
+          id,
+          section,
+          classification,
+          sources: evidence.map((item) => item.url),
+        })),
       };
     } else delete history[doc.url];
   }

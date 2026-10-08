@@ -22,7 +22,7 @@ import {
 
 function codeUrls(text) {
   const urls = [];
-  const starts = /\b[a-z][a-z0-9+.-]*:\/\//gi;
+  const starts = /\b[a-z][a-z0-9+.-]*:\/\/|(?<=["'])(?:\/{1,2}|\.{1,2}\/)/gi;
   for (let match; (match = starts.exec(text));) {
     const quote = text[match.index - 1];
     let end = starts.lastIndex;

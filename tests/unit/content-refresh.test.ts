@@ -190,12 +190,14 @@ describe("production inventory", () => {
       "/guide/": { contentHash: hash(source), checkedAt: now() },
     };
     expect(
-      (await inventory(root, policy, new Date(), history)).documents[0].due,
-    ).toBe(false);
+      (await inventory(root, policy, new Date(), history)).documents[0]
+        .lastClaimReview,
+    ).toMatchObject({ checkedAt: history["/guide/"].checkedAt });
     await writeFile(path.join(root, file), source + "Edited\n");
     expect(
-      (await inventory(root, policy, new Date(), history)).documents[0].due,
-    ).toBe(true);
+      (await inventory(root, policy, new Date(), history)).documents[0]
+        .lastClaimReview,
+    ).toBeNull();
   });
 });
 
@@ -739,6 +741,122 @@ describe("patch approval and recovery", () => {
 });
 
 describe("review regressions", () => {
+  it.each(["//evil.example/payload", "/missing/", "./missing/", "../missing/"])(
+    "rejects unverified relative URL literals in code: %s",
+    async (destination) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: `fetch("${destination}")`,
+          }),
+        ],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow();
+    },
+  );
+  it.each(["/guide/", "//docs.example.com/guide"])(
+    "accepts verified relative URL literals in code: %s",
+    async (destination) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: `fetch('${destination}')`,
+          }),
+        ],
+      });
+      expect((await createPatches(root, run, policy))[0].after).toContain(
+        `fetch('${destination}')`,
+      );
+    },
+  );
+  it("preserves the collection deadline across serialized resumes", async () => {
+    const { root } = await fixture();
+    const limited = { ...policy, maxRunSeconds: 1 };
+    const run = await startRun(root, "time-budget", limited, [
+      {
+        url: "/guide/",
+        sources: [sourceUrl, "https://docs.example.com/second"],
+      },
+    ]);
+    let clock = Date.parse(run.createdAt);
+    const time = vi.spyOn(Date, "now").mockImplementation(() => clock);
+    const scrape = vi.fn();
+    const clientFactory = ({ reserve }: any) => ({
+      scrape: async (url: string) => {
+        await reserve();
+        scrape(url);
+        clock += 1001;
+        return normalizeEvidence(url, payload, limited);
+      },
+    });
+    try {
+      await scan(root, run, limited, { clientFactory });
+      expect(run.status).toBe("budget-limited");
+      expect(run.requests).toBe(1);
+      const resumed = JSON.parse(
+        await readFile(path.join(root, runPath(run.id)), "utf8"),
+      );
+      await scan(root, resumed, limited, { clientFactory });
+      expect(resumed.status).toBe("budget-limited");
+      expect(resumed.requests).toBe(1);
+      expect(scrape).toHaveBeenCalledTimes(1);
+      expect(Object.values(resumed.evidence)).toHaveLength(1);
+    } finally {
+      time.mockRestore();
+    }
+  });
+  it("does not process imports after the persisted deadline", async () => {
+    const { root } = await fixture();
+    const limited = { ...policy, maxRunSeconds: 1 };
+    const run = await startRun(
+      root,
+      "expired-imports",
+      limited,
+      [{ url: "/guide/", sources: [sourceUrl] }],
+      new Date(Date.now() - 2000),
+    );
+    await scan(root, run, limited, { captures: [capture()] });
+    expect(run.status).toBe("budget-limited");
+    expect(run.requests).toBe(0);
+    expect(run.evidence).toEqual({});
+  });
+  it("never defers a whole article based on bounded or legacy claim history", async () => {
+    const { root, run } = await fixture();
+    for (const claims of [
+      undefined,
+      [
+        {
+          id: "one-claim",
+          section: "Introduction",
+          classification: "current",
+          sources: [sourceUrl],
+        },
+      ],
+    ]) {
+      const history = {
+        "/guide/": {
+          contentHash: run.documents[0].contentHash,
+          checkedAt: now(),
+          scope: [sourceUrl],
+          ...(claims ? { claims } : {}),
+        },
+      };
+      const document = (await inventory(root, policy, new Date(), history))
+        .documents[0];
+      expect(document.due).toBe(true);
+      expect(document.nextCheck).toBeNull();
+      expect(document.lastSuccessfulCheck).toBeNull();
+      expect(document.lastClaimReview.claims).toEqual(claims ?? []);
+      expect(document.lastClaimReview.sources).toEqual([sourceUrl]);
+      expect(Boolean(document.lastClaimReview.nextCheck)).toBe(Boolean(claims));
+    }
+  });
   it.each([
     ["(v2)", '"'],
     ["[v2]", '"'],
@@ -1832,7 +1950,7 @@ describe("review regressions", () => {
     expect(
       (await inventory(root, policy, new Date(), await getHistory()))
         .documents[0].due,
-    ).toBe(false);
+    ).toBe(true);
     run.findings.push({ ...run.findings[0], id: "unapplied" });
     await recordHistory(root, run, policy, approval);
     expect((await getHistory())["/guide/"]).toBeUndefined();
@@ -1856,6 +1974,9 @@ describe("review regressions", () => {
     expect(history["/guide/"].contentHash).toBe(run.documents[0].contentHash);
     expect(
       (await inventory(root, policy, new Date(), history)).documents[0].due,
-    ).toBe(false);
+    ).toBe(true);
+    expect(history["/guide/"].claims).toMatchObject([
+      { id: run.findings[0].id, section: "Introduction", sources: [sourceUrl] },
+    ]);
   });
 });

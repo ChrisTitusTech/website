@@ -96,13 +96,20 @@ export async function inventory(
     seen.add(url);
     const contentHash = hash(source),
       last = history[url];
-    const lastSuccessfulCheck =
-      last?.contentHash === contentHash ? last.checkedAt : null;
-    const nextCheck = lastSuccessfulCheck
-      ? new Date(
-          Date.parse(lastSuccessfulCheck) + policy.recheckDays * 86400000,
-        ).toISOString()
-      : null;
+    const lastClaimReview =
+      last?.contentHash === contentHash &&
+      Number.isFinite(Date.parse(last.checkedAt))
+        ? {
+            checkedAt: last.checkedAt,
+            sources: last.scope ?? [],
+            claims: last.claims ?? [],
+            nextCheck: last.claims?.length
+              ? new Date(
+                  Date.parse(last.checkedAt) + policy.recheckDays * 86400000,
+                ).toISOString()
+              : null,
+          }
+        : null;
     documents.push({
       file,
       url,
@@ -115,9 +122,11 @@ export async function inventory(
         : policy.historical.includes(url)
           ? "historical"
           : "editable",
-      lastSuccessfulCheck,
-      nextCheck,
-      due: !nextCheck || nextCheck <= instant.toISOString(),
+      lastClaimReview,
+      // Bounded claim reviews do not certify or defer the entire document.
+      lastSuccessfulCheck: null,
+      nextCheck: null,
+      due: true,
       timeSensitive:
         /\b(latest|current|supported|version|install|download)\b/i.test(body),
     });
