@@ -2,6 +2,8 @@
 import { parseArgs } from "node:util";
 import { access } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
+import { execFileSync } from "node:child_process";
+import { parseDocument } from "./prepare-content.mjs";
 import {
   hash,
   readJson,
@@ -151,17 +153,71 @@ export async function main(args = process.argv.slice(2), root = process.cwd()) {
           )
         )
           throw new Error("Article changed or is no longer eligible; rescan");
-      const input = values.findings
-        ? await importJson(values.findings)
-        : await modelFindings(run, policy, {
+      if (values.model) {
+        for (const doc of run.documents) {
+          const dirty = execFileSync(
+            "git",
+            ["status", "--porcelain", "--", doc.file],
+            {
+              cwd: root,
+              encoding: "utf8",
+            },
+          );
+          if (dirty.trim())
+            throw new Error(
+              "Selected article has uncommitted changes; model transmission refused",
+            );
+          let committed;
+          try {
+            committed = execFileSync("git", ["show", `HEAD:${doc.file}`], {
+              cwd: root,
+              encoding: "utf8",
+              stdio: "pipe",
+            });
+          } catch {
+            throw new Error(
+              "Selected article is not committed; model transmission refused",
+            );
+          }
+          if (
+            hash(committed) !== doc.contentHash ||
+            parseDocument(committed, doc.file).body !== doc.body
+          )
+            throw new Error(
+              "Article snapshot differs from committed content; model transmission refused",
+            );
+        }
+      }
+      let input;
+      if (values.findings) input = await importJson(values.findings);
+      else {
+        const deadline =
+          Date.parse(run.createdAt) + policy.maxRunSeconds * 1000;
+        if (!Number.isFinite(deadline))
+          throw new Error("Invalid run creation time");
+        const checkTime = async () => {
+          if (Date.now() < deadline) return;
+          run.status = "budget-limited";
+          await saveRun(root, run);
+          throw new Error("Run time budget exhausted");
+        };
+        try {
+          input = await modelFindings(run, policy, {
             model: values.model,
             reserve: async () => {
+              await checkTime();
               if (run.modelCalls >= policy.maxModelCalls)
                 throw new Error("Model call budget exhausted");
               run.modelCalls++;
               await saveRun(root, run);
+              await checkTime();
             },
           });
+        } finally {
+          // A late result or error cannot advance the review outside its budget.
+          await checkTime();
+        }
+      }
       await propose(root, run, policy, input);
       const editable = run.findings.filter(
         (f) => f.classification === "confirmed-outdated" && f.kind !== "none",

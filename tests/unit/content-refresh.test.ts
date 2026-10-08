@@ -347,6 +347,54 @@ describe("network and evidence boundaries", () => {
       { url: sourceUrl, title: "Docs" },
     ]);
   });
+  it.each(["import", "provider"])(
+    "reuses shared %s failures within a scan but retries on resume",
+    async (mode) => {
+      const { root } = await fixture();
+      await writeFile(
+        path.join(root, "src/content/posts/2020/second.md"),
+        source.replace("url: /guide/", "url: /second/"),
+      );
+      const otherUrl = "https://docs.example.com/other";
+      const limited = { ...policy, maxRequests: 3 };
+      const run = await startRun(root, "shared-failure", limited, [
+        { url: "/guide/", sources: [sourceUrl] },
+        { url: "/second/", sources: [sourceUrl, otherUrl] },
+      ]);
+      let failedCalls = 0;
+      const options =
+        mode === "import"
+          ? { captures: [capture(otherUrl)] }
+          : {
+              clientFactory: ({ reserve }: any) => ({
+                scrape: async (url: string) => {
+                  await reserve();
+                  if (url === sourceUrl) {
+                    failedCalls++;
+                    throw new Error("fixture unavailable");
+                  }
+                  return normalizeEvidence(
+                    url,
+                    { ...payload, metadata: { statusCode: 200, url } },
+                    limited,
+                  );
+                },
+              }),
+            };
+      await scan(root, run, limited, options);
+      expect(run.requests).toBe(2);
+      expect(run.status).toBe("partial");
+      expect(
+        run.documents.every((doc: any) => doc.status === "unverifiable"),
+      ).toBe(true);
+      expect(run.evidence[hash(otherUrl).slice(0, 16)].outcome).toBe(
+        "retrieved",
+      );
+      await scan(root, run, limited, options);
+      expect(run.requests).toBe(3);
+      if (mode === "provider") expect(failedCalls).toBe(2);
+    },
+  );
   it("deduplicates and resumes captures without consuming the budget again", async () => {
     const { root, run } = await fixture();
     const count = run.requests;
@@ -489,6 +537,152 @@ describe("claim comparison", () => {
       "Every selected",
     );
   });
+  it.each(["unstaged", "staged", "assume-unchanged", "snapshot", "clean"])(
+    "preflights committed article bytes before model transmission: %s",
+    async (state) => {
+      const { root } = await fixture();
+      await mkdir(path.join(root, "data"));
+      await writeFile(
+        path.join(root, "data/content-refresh-policy.json"),
+        JSON.stringify(policy),
+      );
+      if (!["clean", "snapshot"].includes(state)) {
+        if (state === "assume-unchanged")
+          execFileSync(
+            "git",
+            ["update-index", "--assume-unchanged", "--", file],
+            { cwd: root },
+          );
+        await writeFile(
+          path.join(root, file),
+          source + "\nUnpublished fixture text.\n",
+        );
+        if (state === "staged")
+          execFileSync("git", ["add", "--", file], { cwd: root });
+      }
+      const run = await startRun(root, "model-preflight", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      if (state === "snapshot") {
+        run.documents[0].body += "\nPrivate cached fixture text.";
+        await saveRun(root, run);
+      }
+      const request = vi
+        .spyOn(globalThis, "fetch")
+        .mockImplementation(async () =>
+          Response.json({
+            status: "completed",
+            output: [
+              {
+                content: [
+                  {
+                    type: "output_text",
+                    text: JSON.stringify({
+                      findings: [
+                        finding(run, {
+                          classification: "current",
+                          kind: "none",
+                          original: "",
+                          replacement: "",
+                        }),
+                      ],
+                    }),
+                  },
+                ],
+              },
+            ],
+          }),
+        );
+      vi.stubEnv("OPENAI_API_KEY", "fixture-only");
+      try {
+        const operation = main(
+          ["propose", "--run", run.id, "--model", "fixture-model"],
+          root,
+        );
+        if (state === "clean") {
+          await operation;
+          expect(request).toHaveBeenCalledTimes(1);
+        } else {
+          await expect(operation).rejects.toThrow("model transmission refused");
+          expect(request).not.toHaveBeenCalled();
+        }
+      } finally {
+        request.mockRestore();
+        vi.unstubAllEnvs();
+      }
+    },
+  );
+  it.each(["expired", "late", "late-error", "on-time"])(
+    "enforces the persisted model-call deadline: %s",
+    async (outcome) => {
+      const { root } = await fixture();
+      const limited = { ...policy, maxRunSeconds: 1 };
+      await mkdir(path.join(root, "data"));
+      await writeFile(
+        path.join(root, "data/content-refresh-policy.json"),
+        JSON.stringify(limited),
+      );
+      const run = await startRun(root, "model-deadline", limited, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, limited, { captures: [capture()] });
+      let clock =
+        Date.parse(run.createdAt) + (outcome === "expired" ? 1001 : 0);
+      const time = vi.spyOn(Date, "now").mockImplementation(() => clock);
+      const request = vi
+        .spyOn(globalThis, "fetch")
+        .mockImplementation(async () => {
+          if (outcome.startsWith("late")) clock += 1001;
+          if (outcome === "late-error")
+            throw new Error("fixture request failed");
+          return Response.json({
+            status: "completed",
+            output: [
+              {
+                content: [
+                  {
+                    type: "output_text",
+                    text: JSON.stringify({
+                      findings: [
+                        finding(run, {
+                          classification: "current",
+                          kind: "none",
+                          original: "",
+                          replacement: "",
+                        }),
+                      ],
+                    }),
+                  },
+                ],
+              },
+            ],
+          });
+        });
+      vi.stubEnv("OPENAI_API_KEY", "fixture-only");
+      try {
+        const operation = main(
+          ["propose", "--run", run.id, "--model", "fixture-model"],
+          root,
+        );
+        if (outcome === "on-time") await operation;
+        else
+          await expect(operation).rejects.toThrow("Run time budget exhausted");
+        expect(request).toHaveBeenCalledTimes(outcome === "expired" ? 0 : 1);
+        const saved = JSON.parse(
+          await readFile(path.join(root, runPath(run.id)), "utf8"),
+        );
+        if (outcome !== "on-time") {
+          expect(saved.status).toBe("budget-limited");
+          expect(saved.findings).toEqual([]);
+        } else expect(saved.findings).toHaveLength(1);
+      } finally {
+        request.mockRestore();
+        time.mockRestore();
+        vi.unstubAllEnvs();
+      }
+    },
+  );
   it("uses schema-constrained model output without tools, retaining no API response state", async () => {
     const { run } = await fixture();
     let body: any;
@@ -2837,6 +3031,21 @@ describe("review regressions", () => {
       JSON.parse(await readFile(path.join(root, runPath(run.id)), "utf8"))
         .status,
     ).toBe("budget-limited");
+  });
+  it("recomputes report article completeness when evidence expires", async () => {
+    const { run } = await fixture();
+    expect(report(run, policy)).toContain(
+      "Evidence collected for 1 articles; 0 incomplete.",
+    );
+    Object.values(run.evidence).forEach((e: any) => {
+      e.retrievedAt = "2020-01-01T00:00:00Z";
+    });
+    expect(run.documents[0].status).toBe("collected");
+    const output = report(run, policy);
+    expect(output).toContain(
+      "Evidence collected for 0 articles; 1 incomplete.",
+    );
+    expect(output).toContain("Incomplete source:");
   });
   it("uses the configured report freshness window", async () => {
     const { run } = await fixture();

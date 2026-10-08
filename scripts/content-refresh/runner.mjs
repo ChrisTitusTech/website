@@ -115,6 +115,7 @@ export async function scan(
     await saveRun(root, run);
   };
   const client = captures ? null : clientFactory({ policy, reserve });
+  const attempted = new Set();
   for (const doc of run.documents) {
     if (
       hash(await readFile(await safePath(root, doc.file), "utf8")) !==
@@ -124,7 +125,7 @@ export async function scan(
     for (const url of doc.sources) {
       const id = hash(url).slice(0, 16),
         prior = run.evidence[id];
-      if (prior && evidenceFresh(prior, policy)) {
+      if (prior && (evidenceFresh(prior, policy) || attempted.has(id))) {
         if (!doc.evidenceIds.includes(id)) doc.evidenceIds.push(id);
         continue;
       }
@@ -134,6 +135,7 @@ export async function scan(
         return run;
       }
       let budgetExhausted = false;
+      attempted.add(id);
       try {
         if (captures) {
           // Imports consume a processing unit even when no usable capture exists.
@@ -280,6 +282,16 @@ const escape = (text) =>
     .replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c])
     .replace(/([\\`*_[\]#|~])/g, "\\$1");
 export function report(run, policy) {
+  const instant = Date.now();
+  const collected = run.documents.filter(
+    (doc) =>
+      doc.status === "collected" &&
+      doc.sources.length &&
+      doc.evidenceIds.length === doc.sources.length &&
+      doc.evidenceIds.every((id) =>
+        evidenceFresh(run.evidence[id], policy, instant),
+      ),
+  ).length;
   const categories = [
     "current",
     "confirmed-outdated",
@@ -300,7 +312,7 @@ export function report(run, policy) {
     "",
     `Inventory: ${run.inventory.total} eligible sources; ${run.inventory.excluded} excluded sources. Selected: ${run.documents.length}. Unselected: ${run.inventory.total - run.documents.length}.`,
     "",
-    `Evidence collected for ${run.documents.filter((d) => d.status === "collected").length} articles; ${run.documents.filter((d) => d.status !== "collected").length} incomplete. Requests/imports: ${run.requests}. Model calls: ${run.modelCalls}.`,
+    `Evidence collected for ${collected} articles; ${run.documents.length - collected} incomplete. Requests/imports: ${run.requests}. Model calls: ${run.modelCalls}.`,
     "",
     "Coverage is limited to selected claims and sources, not a complete audit of these articles or the website.",
     "",
@@ -336,7 +348,7 @@ export function report(run, policy) {
     lines.push("");
   }
   for (const e of Object.values(run.evidence))
-    if (!evidenceFresh(e, policy))
+    if (!evidenceFresh(e, policy, instant))
       lines.push(`- Incomplete source: ${escape(e.url)}.`);
   return lines.join("\n") + "\n";
 }

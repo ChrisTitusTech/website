@@ -519,3 +519,10 @@ sensitive approval, even when they are not formatted as code.
 HTML code examples validate additional single-URL attributes such as `formaction`,
 object `data`, and `cite`. URL-list attributes (`srcset`, `imagesrcset`, `ping`,
 `archive`, and `attributionsrc`) require manual validation.
+
+Before model transmission, selected articles must be clean in Git and the saved
+body/hash must match committed content. Shared-source failures are reused within
+a single scan invocation but may be retried on resume. Reports recompute article
+completeness using current evidence freshness.
+Model requests share the persisted run deadline: expired runs make no request,
+and late responses or errors preserve the budget-limited checkpoint.
