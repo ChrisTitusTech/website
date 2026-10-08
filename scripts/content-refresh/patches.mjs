@@ -61,6 +61,7 @@ function codeUrls(text) {
         prefix,
       ) ||
       /\.\s*open\s*\([^,]*,\s*$/.test(prefix) ||
+      /@import(?:\s|\/\*[\s\S]*?\*\/)*$/i.test(prefix) ||
       /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*$/.test(prefix);
     const pathShaped =
       /^[^\s/:<>{}\[\]]+\//.test(destination) ||

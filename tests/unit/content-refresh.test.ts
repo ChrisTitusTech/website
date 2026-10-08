@@ -1142,6 +1142,10 @@ describe("review regressions", () => {
     );
   });
   it.each([
+    '@import "missing.css";',
+    "@import 'missing.css' screen;",
+    '@import"missing.css";',
+    '@IMPORT /* theme */ "missing.css" layer(theme);',
     'fetch("api/missing")',
     'fetch("missing")',
     'new Worker("assets/worker.js")',
@@ -1168,6 +1172,30 @@ describe("review regressions", () => {
       "Replacement internal link",
     );
   });
+  it.each(["style.css", sourceUrl])(
+    "accepts a validated direct CSS import: %s",
+    async (destination) => {
+      const { root, run } = await fixture();
+      await mkdir(path.join(root, "public/guide"), { recursive: true });
+      await writeFile(
+        path.join(root, "public/guide/style.css"),
+        "body { color: white; }\n",
+      );
+      const command = `@import "${destination}";`;
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: command,
+          }),
+        ],
+      });
+      expect((await createPatches(root, run, policy))[0].after).toContain(
+        command,
+      );
+    },
+  );
   it("accepts a bare relative worker asset that exists below the article URL", async () => {
     const { root, run } = await fixture();
     await mkdir(path.join(root, "public/guide/assets"), { recursive: true });
