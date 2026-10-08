@@ -741,6 +741,49 @@ describe("patch approval and recovery", () => {
 });
 
 describe("review regressions", () => {
+  it.each([
+    'ssh-add "/home/user/.ssh/github"',
+    '"./configure"',
+    'readFile("/home/user/config")',
+  ])(
+    "allows quoted filesystem arguments through sensitive approval: %s",
+    async (command) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: command,
+          }),
+        ],
+      });
+      const patches = await createPatches(root, run, policy);
+      expect(() => approve(run, patches, { reviewer: "Test" })).toThrow(
+        "Sensitive",
+      );
+      expect(
+        approve(run, patches, { reviewer: "Test", allowSensitive: true })
+          .patches,
+      ).toHaveLength(1);
+      expect(patches[0].after).toContain(command);
+    },
+  );
+  it("validates relative URL template literals in request calls", async () => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, {
+          kind: "command",
+          original: "old-command",
+          replacement: "fetch(`/missing/`)",
+        }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "Replacement internal link",
+    );
+  });
   it.each(["//evil.example/payload", "/missing/", "./missing/", "../missing/"])(
     "rejects unverified relative URL literals in code: %s",
     async (destination) => {

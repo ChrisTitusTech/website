@@ -22,18 +22,28 @@ import {
 
 function codeUrls(text) {
   const urls = [];
-  const starts = /\b[a-z][a-z0-9+.-]*:\/\/|(?<=["'])(?:\/{1,2}|\.{1,2}\/)/gi;
+  const starts = /\b[a-z][a-z0-9+.-]*:\/\/|(?<=["'`])(?:\/{1,2}|\.{1,2}\/)/gi;
   for (let match; (match = starts.exec(text));) {
     const quote = text[match.index - 1];
     let end = starts.lastIndex;
-    if (quote === '"' || quote === "'") {
+    if (quote === '"' || quote === "'" || quote === "`") {
       while (end < text.length && text[end] !== quote) {
         end += text[end] === "\\" ? 2 : 1;
       }
     } else {
       while (end < text.length && !/[\s<>`]/.test(text[end])) end++;
     }
-    urls.push(text.slice(match.index, end));
+    const destination = text.slice(match.index, end);
+    // A quoted /path or ./path can be a filesystem argument. Treat it as a
+    // web destination only in recognizable URL calls or attributes; absolute
+    // and scheme-relative URLs are unambiguous regardless of their context.
+    const prefix = text.slice(0, match.index - 1);
+    const urlContext =
+      /(?:\b(?:fetch|Request|URL|importScripts|url)|\b(?:axios|requests|http|https|location|window)\.(?:get|post|put|patch|delete|head|request|assign|replace|open))\s*\(\s*$/i.test(
+        prefix,
+      ) || /\b(?:href|src|action|url|endpoint)\s*[:=]\s*$/i.test(prefix);
+    if (!/^\/(?!\/)|^\.{1,2}\//.test(destination) || urlContext)
+      urls.push(destination);
     starts.lastIndex = end + 1;
   }
   return urls;

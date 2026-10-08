@@ -415,12 +415,16 @@ validation. The complete gate passed with 175 updater tests, 246 total unit
 tests, five Python tests, 2,543 production outputs, 123 browser tests with five
 existing skips, and all 12 Lighthouse runs.
 
-The next cycle adds destination validation for quoted scheme-relative,
-root-relative, and dot-relative code literals. Review history now retains the
+The next cycle adds destination validation for quoted scheme-relative code
+literals and relative paths in recognizable URL calls or attributes. Quoted
+filesystem arguments remain eligible for sensitive-edit approval. Static
+inspection does not evaluate code or trace variables; operators must still
+review command semantics and dynamically constructed destinations.
+Review history now retains the
 specific claim IDs, sections, classifications, and evidence sources without
 deferring the entire article. Collection uses the persisted creation time for
 its deadline, including across serialized resumes. The complete gate passed
-with 184 updater tests, 255 total unit tests, five Python tests, 2,543 production
+with 188 updater tests, 259 total unit tests, five Python tests, 2,543 production
 outputs, 123 browser tests with five existing skips, and all 12 Lighthouse runs.
 
 ## Provider references
