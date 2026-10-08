@@ -812,6 +812,12 @@ describe("review regressions", () => {
     "2>errors.log curl unapproved.example",
     '>"downloads/output.txt" curl unapproved.example',
     "2>&1 curl unapproved.example",
+    "time curl unapproved.example",
+    "timeout 10 curl unapproved.example",
+    'eval "curl unapproved.example"',
+    "nohup curl unapproved.example",
+    "nice -n 10 curl unapproved.example",
+    "custom-executor /usr/bin/curl unapproved.example",
   ])(
     "requires explicit verifiable network-command URLs: %s",
     async (command) => {
@@ -1009,6 +1015,9 @@ describe("review regressions", () => {
     "sudo -i",
     "sudo -iu postgres psql",
     "env -S python3 script.py",
+    "echo curl",
+    'printf "%s" curl',
+    "which curl",
     `document.write('<a href="/guide/">Guide</a>')`,
   ])(
     "preserves ordinary strings and bare filesystem arguments: %s",

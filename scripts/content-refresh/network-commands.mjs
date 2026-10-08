@@ -188,7 +188,8 @@ export function networkCommandArguments(text) {
     redirectOperand = false,
     wrapper = null,
     wrapperValue = false,
-    ambiguousWrapper = false;
+    ambiguousWrapper = false,
+    literalCommand = false;
   const target = (value, range) => {
     urlRanges.push(range);
     urls.push(
@@ -208,6 +209,7 @@ export function networkCommandArguments(text) {
       wrapper = null;
       wrapperValue = false;
       ambiguousWrapper = false;
+      literalCommand = false;
       continue;
     }
     const word = raw.replace(
@@ -229,6 +231,16 @@ export function networkCommandArguments(text) {
       continue;
     }
     if (!command) {
+      // A literal curl/wget invocation behind an unknown executor must not
+      // disappear merely because that executor is outside the supported set.
+      if (
+        !atStart &&
+        !literalCommand &&
+        /^(?:[\w./-]*\/)?(?:curl|wget)(?:\.exe)?(?:\s|$)/i.test(word)
+      )
+        urls.push(implicitNetworkPrefix + "unclassified-network-context");
+      if (atStart && /^(?:echo|printf|man|which|type)$/.test(word))
+        literalCommand = true;
       if (atStart && wrapperValue) {
         nonUrlRanges.push(range);
         wrapperValue = false;

@@ -490,3 +490,7 @@ protocol guessing. This is a conservative argument classifier, not a shell
 interpreter: detected nested network commands, unsupported wrapper or network-command
 options, curl configuration files, and wget input files are rejected for manual validation. Configuration files and unfamiliar command syntax also
 require operator review.
+
+Literal curl/wget invocations found behind unsupported executors require manual
+validation. Plain output and lookup commands (`echo`, `printf`, `man`, `which`,
+and `type`) retain their literal argument behavior.
