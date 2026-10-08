@@ -468,8 +468,24 @@ inside HTML strings are still checked. The complete gate passed with 246 updater
 tests, 317 total unit tests, five Python tests, 2,543 production outputs, 123
 browser tests with five existing skips, and all 12 Lighthouse runs.
 
+Bare filenames and dotted words are interpreted as URLs only in recognizable
+URL-taking contexts. PowerShell output filenames, Python `open(...)` filenames,
+systemd unit names, and ordinary dotted messages remain eligible for command
+review, while `Worker("worker.js")` still needs a valid destination. Unknown API
+semantics require operator review; static inspection cannot infer the meaning
+of every ordinary string argument.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)
 - [Firecrawl freshness controls](https://docs.firecrawl.dev/features/fast-scraping)
 - [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses)
+
+Literal `curl` and `wget` targets must use explicit HTTPS URLs. The scanner
+recognizes common option arguments so output paths, headers, and request data
+are not mistaken for targets. Scheme-less or dynamic targets in recognized
+commands require manual validation, including commands that set a default
+protocol. [curl's URL rules](https://curl.se/docs/manpage.html) otherwise allow
+protocol guessing. This is a conservative argument classifier, not a shell
+interpreter: nested substitutions, wrapper options, configuration files, and
+unfamiliar command syntax require operator review.

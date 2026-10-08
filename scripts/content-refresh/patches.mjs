@@ -15,6 +15,10 @@ import {
 } from "./findings.mjs";
 import { extractDestinations } from "./inventory.mjs";
 import {
+  networkCommandArguments,
+  implicitNetworkPrefix,
+} from "./network-commands.mjs";
+import {
   buildInventory,
   publicRoute,
   redirectMatches,
@@ -33,14 +37,19 @@ function filesystemArgument(prefix, destination) {
 }
 
 function codeUrls(text) {
-  const urls = [];
-  const filesystemStrings = [];
+  const { urls, nonUrlRanges } = networkCommandArguments(text);
+  const filesystemStrings = [...nonUrlRanges];
   // Bare relative references need context or a path-shaped literal. Ordinary
   // strings are not URLs; filesystem arguments remain separately classified.
   for (const match of text.matchAll(/(["'`])((?:\\[\s\S]|(?!\1)[^\\])*)\1/g)) {
     const destination = match[2];
     const prefix = text.slice(0, match.index);
-    if (filesystemArgument(prefix, destination))
+    const nonUrl =
+      filesystemArgument(prefix, destination) ||
+      filesystemStrings.some(
+        ([start, end]) => match.index >= start && match.index < end,
+      );
+    if (nonUrl)
       filesystemStrings.push([match.index, match.index + match[0].length]);
     if (/^(?:\/|\.{1,2}\/|[a-z][a-z0-9+.-]*:\/\/)/i.test(destination)) continue;
     const urlContext =
@@ -51,24 +60,29 @@ function codeUrls(text) {
       /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*$/.test(prefix);
     const pathShaped =
       /^[^\s/:<>{}\[\]]+\//.test(destination) ||
-      /^[a-z_][\w.-]*\.[a-z][\w]*(?:[?#].*)?$/i.test(destination) ||
       /^(?:https?|ftp|file|data|javascript|mailto|tel):/i.test(destination);
-    if (
-      destination &&
-      (urlContext || pathShaped) &&
-      !filesystemArgument(prefix, destination)
-    )
+    if (destination && (urlContext || pathShaped) && !nonUrl)
       urls.push(destination);
   }
   for (const match of text.matchAll(
     /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*(["'`])((?:\\[\s\S]|(?!\1)[^\\])*)\1/gi,
   )) {
-    urls.push(match[2]);
+    if (
+      !filesystemStrings.some(
+        ([start, end]) => match.index >= start && match.index < end,
+      )
+    )
+      urls.push(match[2]);
   }
   for (const match of text.matchAll(
     /\b(?:href|src|action|poster)\s*=\s*([^\s"'`<>]+)|\b(?:url|endpoint)\s*:\s*([^\s"'`<>]+)|\burl\(\s*([^\s"'`)]+)\s*\)/gi,
   )) {
-    urls.push(match[1] ?? match[2] ?? match[3]);
+    if (
+      !filesystemStrings.some(
+        ([start, end]) => match.index >= start && match.index < end,
+      )
+    )
+      urls.push(match[1] ?? match[2] ?? match[3]);
   }
   const starts =
     /\b[a-z][a-z0-9+.-]*:\/\/|(?:^|(?<=["'`=:(\s]))(?:\/{1,2}|\.{1,2}\/)/gi;
@@ -460,6 +474,10 @@ export async function createPatches(
     ]);
     const externalDestinations = [];
     for (const destination of requiredDestinations) {
+      if (destination.startsWith(implicitNetworkPrefix))
+        throw new Error(
+          "Network commands require explicit HTTPS URLs; ambiguous targets need manual validation",
+        );
       if (/[\\\s]/.test(destination))
         throw new Error(
           "Ambiguous URL escaping or whitespace requires manual validation",

@@ -742,6 +742,59 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    "curl docs.example.com/guide",
+    "curl -fsSL docs.example.com/guide",
+    'curl "docs.example.com/guide"',
+    "curl --url docs.example.com/guide",
+    "curl --url=docs.example.com/guide",
+    "curl --proto-default https docs.example.com/guide",
+    "wget -qO out.txt docs.example.com/guide",
+    'curl "$URL"',
+  ])(
+    "requires explicit verifiable network-command URLs: %s",
+    async (command) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: command,
+          }),
+        ],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        "Network commands require explicit HTTPS URLs",
+      );
+    },
+  );
+  it.each([
+    `curl -fsSL ${sourceUrl}`,
+    `curl -o "downloads/out.ps1" -H "Content-Type:application/json" ${sourceUrl}`,
+    `curl ${sourceUrl} -o out.txt`,
+    `curl --url=${sourceUrl} --output=out.txt`,
+    `wget -qO "downloads/out.txt" ${sourceUrl}`,
+    `curl -fsSL \\\n${sourceUrl}`,
+    `sudo /usr/bin/curl ${sourceUrl}`,
+  ])(
+    "separates verified network targets from option values: %s",
+    async (command) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: command,
+          }),
+        ],
+      });
+      expect((await createPatches(root, run, policy))[0].after).toContain(
+        command,
+      );
+    },
+  );
+  it.each([
     ["same paragraph", " ", "\n"],
     ["separate paragraphs", "\n\n", "\n"],
     ["CRLF paragraphs", "\n\n", "\r\n"],
@@ -818,6 +871,7 @@ describe("review regressions", () => {
     'fetch("api/missing")',
     'fetch("missing")',
     'new Worker("assets/worker.js")',
+    'new Worker("worker.js")',
     'customNetworkAPI("assets/worker.js")',
     'xhr.open("GET", "api/missing")',
     "<img src=assets/missing.png>",
@@ -868,6 +922,10 @@ describe("review regressions", () => {
     'console.log("Content-Type:application/json")',
     'document.write("<span>example</span>")',
     'element.style.cssText = "color:red"',
+    `Invoke-WebRequest "${sourceUrl}" -OutFile "winutil.ps1"`,
+    'open("config.yaml")',
+    'systemctl enable "nginx.service"',
+    'console.log("Done.Next")',
     `document.write('<a href="/guide/">Guide</a>')`,
   ])(
     "preserves ordinary strings and bare filesystem arguments: %s",
