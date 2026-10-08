@@ -34,15 +34,19 @@ function codeUrls(text) {
       while (end < text.length && !/[\s<>`]/.test(text[end])) end++;
     }
     const destination = text.slice(match.index, end);
-    // A quoted /path or ./path can be a filesystem argument. Treat it as a
-    // web destination only in recognizable URL calls or attributes; absolute
-    // and scheme-relative URLs are unambiguous regardless of their context.
+    // Relative paths are ambiguous. Exempt only recognizable filesystem
+    // arguments; unknown contexts must still pass destination validation.
+    // Enumerating network APIs would silently miss new URL-taking forms.
     const prefix = text.slice(0, match.index - 1);
-    const urlContext =
-      /(?:\b(?:fetch|Request|URL|importScripts|url)|\b(?:axios|requests|http|https|location|window)\.(?:get|post|put|patch|delete|head|request|assign|replace|open))\s*\(\s*$/i.test(
+    const filesystemContext =
+      /\b(?:readFile|readFileSync|writeFile|writeFileSync|mkdir|mkdirSync|readdir|readdirSync|stat|statSync|unlink|unlinkSync)\s*\(\s*$/.test(
         prefix,
-      ) || /\b(?:href|src|action|url|endpoint)\s*[:=]\s*$/i.test(prefix);
-    if (!/^\/(?!\/)|^\.{1,2}\//.test(destination) || urlContext)
+      ) ||
+      /(?:^|\n)\s*(?:sudo\s+)?(?:ssh-add|cp|mv|rm|mkdir|rmdir|chmod|chown|cat|ls|cd|touch)\s+(?:[^\n;|&$()<>`]*\s+)?$/.test(
+        prefix,
+      ) ||
+      (/^\.{1,2}\//.test(destination) && /(?:^|\n)\s*$/.test(prefix));
+    if (!/^\/(?!\/)|^\.{1,2}\//.test(destination) || !filesystemContext)
       urls.push(destination);
     starts.lastIndex = end + 1;
   }

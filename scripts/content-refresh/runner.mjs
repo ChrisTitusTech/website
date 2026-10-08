@@ -171,8 +171,13 @@ export async function scan(
           if (!evidence) throw new Error("Missing fresh Firecrawl capture");
           run.evidence[id] = evidence;
         } else run.evidence[id] = await client.scrape(url);
+        if (Date.now() >= deadline)
+          throw new BudgetExhausted(
+            "Run time budget exhausted during collection",
+          );
       } catch (error) {
-        budgetExhausted = error instanceof BudgetExhausted;
+        budgetExhausted =
+          error instanceof BudgetExhausted || Date.now() >= deadline;
         run.evidence[id] = {
           id,
           url,
@@ -181,7 +186,7 @@ export async function scan(
           text: "",
           contentHash: hash(""),
           error:
-            "Source unavailable, disallowed, stale, or request budget exhausted",
+            "Source unavailable, disallowed, stale, or request/time budget exhausted",
         };
       }
       if (!doc.evidenceIds.includes(id)) doc.evidenceIds.push(id);

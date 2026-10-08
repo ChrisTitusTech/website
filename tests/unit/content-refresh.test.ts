@@ -742,6 +742,65 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    'new Worker("/missing.js")',
+    'new WebSocket("/socket")',
+    'xhr.open("GET", "/missing/")',
+    'customNetworkAPI("/missing/")',
+  ])(
+    "fails closed for relative paths in unlisted API contexts: %s",
+    async (command) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "old-command",
+            replacement: command,
+          }),
+        ],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        "Replacement internal link",
+      );
+    },
+  );
+  it.each(["success", "failure"])(
+    "marks the final late %s as budget-limited",
+    async (outcome) => {
+      const { root } = await fixture();
+      const limited = { ...policy, maxRunSeconds: 1 };
+      const run = await startRun(root, "late-response", limited, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      let clock = Date.parse(run.createdAt);
+      const time = vi.spyOn(Date, "now").mockImplementation(() => clock);
+      try {
+        await scan(root, run, limited, {
+          clientFactory: ({ reserve }: any) => ({
+            scrape: async (url: string) => {
+              await reserve();
+              clock += 1001;
+              if (outcome === "failure") throw new Error("Request timed out");
+              return normalizeEvidence(url, payload, limited);
+            },
+          }),
+        });
+        expect(run.status).toBe("budget-limited");
+        expect(run.documents[0].status).toBe("unverifiable");
+        expect(Object.values(run.evidence)).toMatchObject([
+          { outcome: "unverifiable", text: "" },
+        ]);
+        const persisted = JSON.parse(
+          await readFile(path.join(root, runPath(run.id)), "utf8"),
+        );
+        expect(persisted.status).toBe("budget-limited");
+        expect(persisted.requests).toBe(1);
+      } finally {
+        time.mockRestore();
+      }
+    },
+  );
+  it.each([
     'ssh-add "/home/user/.ssh/github"',
     '"./configure"',
     'readFile("/home/user/config")',

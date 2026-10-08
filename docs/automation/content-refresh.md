@@ -416,15 +416,22 @@ tests, five Python tests, 2,543 production outputs, 123 browser tests with five
 existing skips, and all 12 Lighthouse runs.
 
 The next cycle adds destination validation for quoted scheme-relative code
-literals and relative paths in recognizable URL calls or attributes. Quoted
-filesystem arguments remain eligible for sensitive-edit approval. Static
-inspection does not evaluate code or trace variables; operators must still
-review command semantics and dynamically constructed destinations.
+literals and relative paths. Recognizable filesystem arguments (such as
+`ssh-add`, `cp`, `readFile`, and `writeFile` paths) remain eligible for
+sensitive-edit approval; other ambiguous paths must pass route validation or
+be handled manually outside the patch tool. The scanner does not rely on a
+closed list of network APIs. Static inspection does not evaluate code or trace
+variables; operators must still review command semantics and dynamically
+constructed destinations.
 Review history now retains the
 specific claim IDs, sections, classifications, and evidence sources without
 deferring the entire article. Collection uses the persisted creation time for
-its deadline, including across serialized resumes. The complete gate passed
-with 188 updater tests, 259 total unit tests, five Python tests, 2,543 production
+its deadline, including across serialized resumes. Responses received after
+the deadline are discarded and the run remains budget-limited, including when
+the final request succeeds or fails. An in-flight request still has its normal
+per-request timeout, but late evidence cannot make the run collected.
+The complete gate passed
+with 194 updater tests, 265 total unit tests, five Python tests, 2,543 production
 outputs, 123 browser tests with five existing skips, and all 12 Lighthouse runs.
 
 ## Provider references
