@@ -804,6 +804,11 @@ describe("review regressions", () => {
     "wget -i targets.txt",
     "wget --input-file=targets.txt",
     "env -S 'curl unapproved.example'",
+    "if false; then :; else curl unapproved.example; fi",
+    "if false; then :; elif curl unapproved.example; then :; fi",
+    "{ curl unapproved.example; }",
+    "while curl unapproved.example; do :; done",
+    "until curl unapproved.example; do :; done",
   ])(
     "requires explicit verifiable network-command URLs: %s",
     async (command) => {
@@ -844,6 +849,8 @@ describe("review regressions", () => {
     `env -u HTTPS_PROXY curl ${sourceUrl}`,
     `command -p curl ${sourceUrl}`,
     `exec -a downloader curl ${sourceUrl}`,
+    `if false; then :; else curl ${sourceUrl}; fi`,
+    `{ curl ${sourceUrl}; }`,
   ])(
     "separates verified network targets from option values: %s",
     async (command) => {

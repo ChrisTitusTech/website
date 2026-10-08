@@ -256,7 +256,8 @@ export function networkCommandArguments(text) {
       }
       if (
         atStart &&
-        (/^(?:if|then|do|!|\$)$/.test(word) || /^[A-Za-z_]\w*=/.test(word))
+        (/^(?:if|then|do|else|elif|while|until|!|\$|\{)$/.test(word) ||
+          /^[A-Za-z_]\w*=/.test(word))
       )
         continue;
       if (atStart && ambiguousWrapper && /\b(?:curl|wget)\b/.test(word))
