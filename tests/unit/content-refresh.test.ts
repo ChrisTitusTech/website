@@ -740,6 +740,43 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    "/index.xml/",
+    "/images/exists.png/",
+    "/images//exists.png",
+    "/guide//",
+    "/images%2Fexists.png",
+    "/images%5Cexists.png",
+  ])("rejects lossy internal path normalization: %s", async (destination) => {
+    const { root, run } = await fixture();
+    await mkdir(path.join(root, "public/images"));
+    await writeFile(path.join(root, "public/images/exists.png"), "fixture");
+    await propose(root, run, policy, {
+      findings: [finding(run, { replacement: `[Link](${destination})` })],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "noncanonical path",
+    );
+  });
+  it.each(["PowerShell", "registry", "password", "SSH", "security"])(
+    "requires sensitive approval for new %s prose",
+    async (topic) => {
+      const { root, run } = await fixture();
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, { replacement: `Updated ${topic} instructions.` }),
+        ],
+      });
+      const patches = await createPatches(root, run, policy);
+      expect(patches[0].sensitive).toBe(true);
+      expect(() => approve(run, patches, { reviewer: "Test" })).toThrow(
+        "--allow-sensitive",
+      );
+      expect(() =>
+        approve(run, patches, { reviewer: "Test", allowSensitive: true }),
+      ).not.toThrow();
+    },
+  );
+  it.each([
     ['{{< youtube "example" >}}', "inline"],
     ['{{< youtube "example" >}}', "fenced"],
     ["{{% notice note %}}\nArchived notice.\n{{% /notice %}}", "fenced"],

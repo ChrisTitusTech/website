@@ -249,7 +249,14 @@ export async function createPatches(
       localRoutes ??= await buildInventory(undefined, root, {
         productionAt: new Date(),
       });
-      const route = publicRoute(decodeURIComponent(resolved.pathname));
+      const pathname = decodeURIComponent(resolved.pathname);
+      const route = publicRoute(pathname);
+      if (
+        pathname.includes("//") ||
+        /%2f|%5c/i.test(resolved.pathname) ||
+        (pathname.endsWith("/") && !route.endsWith("/"))
+      )
+        throw new Error("Replacement internal link has a noncanonical path");
       if (route === "/live-streams/player/") {
         streamIds ??= new Set(
           (await readJson(await safePath(root, "data/livestreams.json"))).items
@@ -292,7 +299,9 @@ export async function createPatches(
       findingIds: findings.map((f) => f.id),
       sensitive:
         findings.some((f) => f.kind === "command") ||
-        /\b(ssh|security|password|powershell|registry)\b/i.test(source),
+        /\b(ssh|security|password|powershell|registry)\b/i.test(
+          `${source}\n${result}`,
+        ),
       before: source,
       after: result,
     };

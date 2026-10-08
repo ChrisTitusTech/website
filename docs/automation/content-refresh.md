@@ -387,6 +387,15 @@ Python tests, 2,543 production outputs, 123 browser tests (five existing skips),
 and all 12 Lighthouse runs. A direct comparison with the prior commit confirmed
 byte-identical transformed output for all 331 Markdown sources.
 
+The next review rejects internal paths whose duplicate separators, encoded
+separators, or trailing slash on a file would otherwise be normalized into a
+different valid target. Sensitive-review classification now examines both the
+original and patched content, so newly introduced security, SSH, password,
+PowerShell, or registry guidance requires the explicit sensitive approval flag.
+The complete gate passed again with 162 updater tests, 233 total unit tests,
+five Python tests, 2,543 production outputs, 123 browser tests with five existing
+skips, and all 12 Lighthouse runs.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)
