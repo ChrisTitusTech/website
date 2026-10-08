@@ -169,12 +169,16 @@ export function networkCommandArguments(text) {
     nonUrlRanges = [];
   // Nested shell execution needs a real shell parser. Keep these examples in
   // manual review rather than treating unclassified targets as verified.
+  const nestedText = text.replace(/["']/g, "");
   if (
+    (/\$\(|[<>]\(/.test(text) && /\$['"]/.test(text)) ||
     /\b(?:sh|bash|dash|zsh|ksh|fish|powershell|pwsh|cmd)(?:\.exe)?\b[^\n]*?\s(?:-[^\s]*c[^\s]*|\/c)\b[^\n]*?\b(?:curl|wget)\b/i.test(
-      text,
+      nestedText,
     ) ||
-    /(?:\$\(|`)[^`]*?\b(?:curl|wget)\b/.test(text) ||
-    /\(\s*(?:(?:sudo|env|exec|command)\b[^;\n]*?\s+)?(?:curl|wget)\b/.test(text)
+    /(?:\$\(|`)[^`]*?\b(?:curl|wget)\b/.test(nestedText) ||
+    /\(\s*(?:(?:sudo|env|exec|command)\b[^;\n]*?\s+)?(?:curl|wget)\b/.test(
+      nestedText,
+    )
   )
     urls.push(implicitNetworkPrefix + "nested-shell-command");
   if (
