@@ -12,6 +12,7 @@ node_modules/
 test-results/
 playwright-report/
 .env
+.content-refresh/
 *.sh
 !.github/scripts/*.sh
 .DS_Store

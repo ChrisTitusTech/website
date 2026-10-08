@@ -23,7 +23,7 @@ describe("historical content preprocessing", () => {
       "utf8",
     );
     const youtube = await readFile(
-      ".astro-content/posts/2022/2022-recap.md",
+      ".astro-content/posts/2022/best-package-manager.md",
       "utf8",
     );
     const shopify = await readFile(".astro-content/pages/downloads.md", "utf8");

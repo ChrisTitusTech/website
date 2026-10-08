@@ -18,7 +18,7 @@ This article gives you the resources on how to learn Linux. If I am missing a re
 |[Debian Wiki](https://wiki.debian.org/)|[Fedora's Discord](https://discord.gg/fedora)|
 |[Ubuntu Wiki](https://wiki.ubuntu.com/)|[Linux4Noobs](https://www.reddit.com/r/linux4noobs/)|
 |[OpenSUSE Wiki](https://en.opensuse.org/Main_Page)|[Linux Questions Forums](https://www.linuxquestions.org/questions/)|
-|[Fedora Wiki](https://fedoraproject.org/wiki/Fedora_Project_Wiki)|[Ubuntu Forums](https://ubuntuforums.org/index.php)|
+|[Fedora Wiki](https://fedoraproject.org/wiki/Fedora_Project_Wiki)|[Ubuntu Discourse](https://discourse.ubuntu.com/)|
 ||[Arch Linux Forums](https://bbs.archlinux.org/)|
 
 |![videos](/images/2019/10/playbutton.webp)|![externalsites](/images/2019/10/Screenwriting-Websites.webp)|

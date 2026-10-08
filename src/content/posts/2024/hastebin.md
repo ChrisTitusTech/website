@@ -19,4 +19,4 @@ draft: false
 
 ## Walkthrough Video
 
-{{< youtube "TpI1siclED0" >}}
+*Video update 2026-10-07: The original video is private. The written article is retained as a reference.*

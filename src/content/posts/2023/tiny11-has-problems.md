@@ -44,4 +44,4 @@ Build with <https://github.com/ntdevlabs/tiny11builder>, but do NOT use the oscd
 
 ## Walkthrough Video
 
-{{< youtube "3UVKfliA_Rc" >}}
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*

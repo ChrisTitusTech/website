@@ -65,7 +65,7 @@ AtlasOS 22H2 (Current Release) has the following security issues:
 - Logging needs to be more robust and is too stripped down. Troubleshooting an AtlasOS system would be a nightmare.
 - Fill out the "what is removed section" in FAQ.
 - Better documentation. Example: unpacking the playbook with the password `malte` is hard to find.
-- Incorporate basic security hygiene - Check out the project <https://github.com/securitywithoutborders/hardentools>
+- Incorporate basic security hygiene - Check out the project <https://github.com/hardentools/hardentools>
 
 ## Who is this for?
 

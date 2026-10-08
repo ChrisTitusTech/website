@@ -1,0 +1,331 @@
+file,folder,url,production_eligible,changed,references,unique_targets,status_counts
+src/content/posts/2016/2016-03-17-encore-bandit-connection.md,2016,/encore-bandit-connection/,true,false,3,3,local-present=2; reachable=1
+src/content/posts/2016/2016-07-04-grant-full-access-public-folders.md,2016,/grant-full-access-public-folders/,true,false,2,2,local-present=2
+src/content/posts/2016/2016-07-04-prevent-autodiscover-exchange-server.md,2016,/prevent-autodiscover-exchange-server/,true,false,2,2,local-present=2
+src/content/posts/2016/2016-07-13-citrix-xencenter-error-ssl-secure-channel.md,2016,/citrix-xencenter-error-ssl-secure-channel/,true,false,2,2,local-present=2
+src/content/posts/2016/2016-07-21-target-account-name-domain-controller-error.md,2016,/target-account-name-domain-controller-error/,true,false,2,2,local-present=2
+src/content/posts/2016/2016-08-03-reattach-lvm-xenserver.md,2016,/reattach-lvm-xenserver/,true,false,4,3,local-present=2; reachable=1
+src/content/posts/2016/2016-08-03-winsxs-free-space-server.md,2016,/winsxs-free-space-server/,true,false,2,2,local-present=2
+src/content/posts/2016/2016-08-03-xenserver-tapdisk-error.md,2016,/xenserver-tapdisk-error/,true,false,2,2,local-present=2
+src/content/posts/2016/2016-09-18-windows-10-iis-rewrite-error.md,2016,/windows-10-iis-rewrite-error/,true,false,3,3,local-present=2; reachable=1
+src/content/posts/2016/2016-10-07-force-active-directory-sync.md,2016,/force-active-directory-sync/,true,false,2,2,local-present=2
+src/content/posts/2016/2016-10-31-exclude-shared-mailboxes-exchange.md,2016,/exclude-shared-mailboxes-exchange/,true,false,4,4,local-present=3; reachable=1
+src/content/posts/2016/2016-11-12-update-netscaler-vpx.md,2016,/update-netscaler-vpx/,true,false,4,4,local-present=4
+src/content/posts/2017/2017-02-14-create-swap-file.md,2017,/create-swap-file/,true,false,2,2,local-present=2
+src/content/posts/2017/2017-02-27-cloud-migration.md,2017,/cloud-migration/,true,false,4,4,local-present=4
+src/content/posts/2017/2017-03-09-benchmark-dns-server.md,2017,/benchmark-dns-server/,true,false,5,4,local-present=3; reachable=1
+src/content/posts/2017/2017-03-26-run-as-administrator.md,2017,/run-as-administrator/,true,false,2,2,local-present=2
+src/content/posts/2017/2017-05-02-spooler-subsystem-app-cpu-usage.md,2017,/spooler-subsystem-app-cpu-usage/,true,false,2,2,local-present=2
+src/content/posts/2017/2017-06-21-troubleshooting-nagios.md,2017,/troubleshooting-nagios/,true,false,2,2,local-present=2
+src/content/posts/2017/2017-06-23-nvidia-smi-nagios.md,2017,/nvidia-smi-nagios/,true,false,3,3,local-present=3
+src/content/posts/2017/2017-07-10-amazon-fire-launcher.md,2017,/amazon-fire-launcher/,true,false,7,6,local-present=5; reachable=1
+src/content/posts/2017/2017-08-31-taking-databases-offline-sql-query.md,2017,/taking-databases-offline-sql-query/,true,false,2,2,local-present=2
+src/content/posts/2017/2017-11-28-api-json-call.md,2017,/api-json-call/,true,false,2,2,local-present=2
+src/content/posts/2018/2018-06-14-changing-file-permissions.md,2018,/changing-file-permissions/,true,false,2,2,local-present=2
+src/content/posts/2018/2018-06-20-windows-server-2016-core-remote.md,2018,/windows-server-2016-core-remote/,true,false,2,2,local-present=2
+src/content/posts/2018/2018-06-21-commiting-docker-images.md,2018,/commiting-docker-images/,true,false,3,3,local-present=3
+src/content/posts/2018/2018-06-21-moving-unifi-access-point.md,2018,/moving-unifi-access-point/,true,false,5,5,example-or-local=1; local-present=4
+src/content/posts/2018/2018-07-02-repair-windows-boot-partition.md,2018,/repair-windows-boot-partition/,true,false,5,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2018/2018-08-17-remove-asterisk.md,2018,/remove-asterisk/,true,true,3,3,local-present=2; missing=1
+src/content/posts/2018/2018-09-07-virtualization-introduction.md,2018,/virtualization-introduction/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2018/2018-09-09-debloat-windows-10.md,2018,/debloat-windows-10/,true,false,9,7,local-present=3; reachable=3; video-confirmed=1
+src/content/posts/2018/2018-09-09-xenserver-xcp-ng-first-vm-install.md,2018,/xenserver-xcp-ng-first-vm-install/,true,false,4,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2018/2018-09-10-setup-always-on-vpn.md,2018,/setup-always-on-vpn/,true,false,6,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2018/2018-09-11-installing-linux-subsystem.md,2018,/installing-linux-subsystem/,true,true,3,3,local-present=2; reachable=1
+src/content/posts/2018/2018-09-11-intro-google-cloud-platform.md,2018,/intro-google-cloud-platform/,true,true,4,3,local-present=2; reachable=1
+src/content/posts/2018/2018-09-12-google-chrome-update-69-address-bar-and-how-to-fix-it.md,2018,/google-chrome-update-69-address-bar-and-how-to-fix-it/,true,true,2,2,local-present=2
+src/content/posts/2018/2018-09-13-issuing-ssl-certs.md,2018,/issuing-ssl-certs/,true,true,6,4,local-present=2; reachable=2
+src/content/posts/2018/2018-09-14-using-iometer.md,2018,/using-iometer/,true,false,7,7,local-present=6; reachable=1
+src/content/posts/2018/2018-09-18-snipping-tool-removed.md,2018,/snipping-tool-removed/,true,false,5,4,local-present=3; reachable=1
+src/content/posts/2018/2018-09-23-perfect-htaccess.md,2018,/perfect-htaccess/,true,false,3,3,example-or-local=1; local-present=2
+src/content/posts/2018/2018-09-26-apache-mpm-prefork.md,2018,/apache-mpm-prefork/,true,false,5,5,local-present=3; reachable=1; video-confirmed=1
+src/content/posts/2018/2018-09-28-configuring-windows-server-2016-core.md,2018,/configuring-windows-server-2016-core/,true,false,5,4,local-present=3; reachable=1
+src/content/posts/2018/2018-10-01-xenserver-cannot-connect.md,2018,/xenserver-cannot-connect/,true,true,3,3,local-present=3
+src/content/posts/2018/2018-10-03-configuring-exchange-2019.md,2018,/configuring-exchange-2019/,true,false,4,3,example-or-local=1; local-present=2
+src/content/posts/2018/2018-10-05-sata-vs-sas-vs-nvme.md,2018,/sata-vs-sas-vs-nvme/,true,false,3,2,local-present=2
+src/content/posts/2018/2018-10-06-disable-windows-firewall-properly.md,2018,/disable-windows-firewall-properly/,true,false,4,4,local-present=3; video-confirmed=1
+src/content/posts/2018/2018-10-09-create-iscsi-sr.md,2018,/create-iscsi-sr/,true,true,5,4,local-present=3; reachable=1
+src/content/posts/2018/2018-10-11-how-to-install-xen-orchestra.md,2018,/how-to-install-xen-orchestra/,true,true,5,4,local-present=2; reachable=2
+src/content/posts/2018/2018-10-12-setup-freenas-11.md,2018,/setup-freenas-11/,true,true,22,12,local-present=2; reachable=10
+src/content/posts/2018/2018-10-16-linux-switch-video.md,2018,/linux-switch-video/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2018/2018-10-17-change-cortana-search.md,2018,/change-cortana-search/,true,true,8,5,local-present=2; reachable=3
+src/content/posts/2018/2018-10-18-install-linux-first-time.md,2018,/install-linux-first-time/,true,false,9,6,local-present=3; reachable=3
+src/content/posts/2018/2018-10-23-install-plex-plugin-freenas.md,2018,/install-plex-plugin-freenas/,true,true,4,3,local-present=3
+src/content/posts/2018/2018-10-25-orphaned-shadow-copies.md,2018,/orphaned-shadow-copies/,true,false,3,3,local-present=3
+src/content/posts/2018/2018-11-09-logitech-c920-linux-driver.md,2018,/logitech-c920-linux-driver/,true,false,5,5,local-present=4; video-confirmed=1
+src/content/posts/2018/2018-11-17-resize-lvm-partition-fedora-29-step-by-step-guide.md,2018,/resize-lvm-partition-fedora-29-step-by-step-guide/,true,false,6,5,local-present=5
+src/content/posts/2019/2019-01-21-manjaro-architect-installation-guide.md,2019,/manjaro-architect-installation-guide/,true,true,3,3,local-present=3
+src/content/posts/2019/2019-02-15-garmin-express-linux.md,2019,/garmin-express-linux/,true,false,6,5,local-present=3; reachable=1; video-confirmed=1
+src/content/posts/2019/2019-03-12-aptitude-explained.md,2019,/aptitude-explained/,true,false,5,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2019/2019-03-14-wordpress-google-cloud-platform.md,2019,/wordpress-google-cloud-platform/,true,false,21,18,blocked=1; example-or-local=2; local-present=8; reachable=6; video-confirmed=1
+src/content/posts/2019/2019-04-01-grub-rescue.md,2019,/grub-rescue/,true,false,5,5,local-present=3; reachable=1; video-confirmed=1
+src/content/posts/2019/2019-09-15-latest-version-of-gimp.md,2019,/latest-version-of-gimp/,true,true,2,2,local-present=2
+src/content/posts/2019/2019-09-18-ssh-guide.md,2019,/ssh-guide/,true,false,13,8,connection-error=1; local-present=2; reachable=3; timeout=1; video-confirmed=1
+src/content/posts/2019/2019-09-20-openvpn-server.md,2019,/openvpn-server/,true,false,13,11,local-present=7; reachable=3; video-confirmed=1
+src/content/posts/2019/2019-09-23-linux-file-system.md,2019,/linux-file-system/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2019/2019-09-28-custom-kernel.md,2019,/custom-kernel/,true,false,16,12,http-error=1; local-present=4; reachable=3; video-confirmed=4
+src/content/posts/2019/2019-10-09-learn-linux.md,2019,/learn-linux/,true,true,24,24,connection-error=1; local-present=6; reachable=16; video-confirmed=1
+src/content/posts/2019/2019-10-10-secure-web-server.md,2019,/secure-web-server/,true,false,6,6,local-present=5; video-confirmed=1
+src/content/posts/2019/2019-10-14-clean-up-windows-10.md,2019,/clean-up-windows-10/,true,false,15,12,local-present=8; reachable=3; video-confirmed=1
+src/content/posts/2019/2019-10-28-hackintosh-ryzen-install.md,2019,/hackintosh-ryzen-install/,true,false,15,12,local-present=8; reachable=4
+src/content/posts/2019/2019-11-08-lvm-guide.md,2019,/lvm-guide/,true,false,4,4,local-present=3; video-confirmed=1
+src/content/posts/2019/2019-12-01-vpn-kill-switch.md,2019,/vpn-kill-switch/,true,false,10,10,local-present=7; reachable=1; video-confirmed=2
+src/content/posts/2020/2020-buyers-guide.md,2020,/2020-buyers-guide/,true,true,56,32,local-present=7; reachable=23; video-confirmed=2
+src/content/posts/2020/amazon-fire-debloat.md,2020,/amazon-fire-debloat/,true,false,9,8,local-present=5; reachable=2; video-confirmed=1
+src/content/posts/2020/btrfs-guide.md,2020,/btrfs-guide/,true,false,5,5,local-present=4; video-confirmed=1
+src/content/posts/2020/change-wallpaper.md,2020,/change-wallpaper/,true,false,13,9,local-present=4; reachable=5
+src/content/posts/2020/common-computer-issues.md,2020,/common-computer-issues/,true,false,18,10,local-present=2; reachable=8
+src/content/posts/2020/create-windows-service.md,2020,/create-windows-service/,true,false,7,5,local-present=2; reachable=3
+src/content/posts/2020/custom-vim.md,2020,/custom-vim/,true,false,6,5,local-present=4; reachable=1
+src/content/posts/2020/debloat-android.md,2020,/debloat-android/,true,true,4,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2020/debloat-windows10-2020.md,2020,/debloat-windows-10-2020/,true,true,14,10,local-present=2; missing=1; reachable=6; video-confirmed=1
+src/content/posts/2020/degoogle-apps.md,2020,/degoogle-apps/,true,false,2,2,local-present=2
+src/content/posts/2020/degoogle.md,2020,/degoogle/,false,true,1,1,local-present=1
+src/content/posts/2020/disable-snaps.md,2020,/disable-snaps/,true,false,2,2,local-present=2
+src/content/posts/2020/doom-eternal-linux.md,2020,/doom-eternal-linux/,true,false,6,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2020/emoji.md,2020,/emoji/,true,false,5,4,local-present=2; reachable=2
+src/content/posts/2020/fix-ticwatch-lag.md,2020,/fix-ticwatch-lag/,true,false,9,6,local-present=3; reachable=3
+src/content/posts/2020/flatpak-acceleration.md,2020,/flatpak-acceleration/,false,true,2,2,dns-failure=1; reachable=1
+src/content/posts/2020/geforce-now-linux.md,2020,/geforce-now-linux/,true,true,7,6,local-present=4; reachable=2
+src/content/posts/2020/hugo-guide.md,2020,/hugo-guide/,true,false,19,18,example-or-local=5; local-present=3; non-public-address=1; reachable=8; video-confirmed=1
+src/content/posts/2020/install-wine-libfaudio0-error.md,2020,/install-wine-libfaudio0-error/,true,true,4,4,local-present=2; missing=2
+src/content/posts/2020/lcars-screensaver.md,2020,/lcars-screensaver/,true,false,4,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2020/lightdm-configuration.md,2020,/lightdm-configuration/,true,false,6,6,connection-error=1; local-present=2; reachable=1; timeout=1; video-confirmed=1
+src/content/posts/2020/linux-cheatsheet.md,2020,/linux-cheatsheet/,false,true,2,1,example-or-local=1
+src/content/posts/2020/linux-macos.md,2020,/linux-macos/,true,true,26,16,local-present=2; missing=1; reachable=13
+src/content/posts/2020/macos-sysadmin-tips.md,2020,/macos-sysadmin-tips/,true,false,6,4,local-present=2; reachable=2
+src/content/posts/2020/opencore-mac.md,2020,/opencore-mac/,true,false,20,11,local-present=2; reachable=9
+src/content/posts/2020/raspberry-pi-laptop.md,2020,/raspberry-pi-laptop/,true,false,12,10,local-present=5; reachable=4; video-confirmed=1
+src/content/posts/2020/secure-linux.md,2020,/secure-linux/,true,false,9,7,connection-error=1; local-present=5; reachable=1
+src/content/posts/2020/ssh-github.md,2020,/ssh-github/,true,false,5,5,local-present=4; reachable=1
+src/content/posts/2020/ultimate-linux-gaming-guide.md,2020,/ultimate-linux-gaming-guide/,true,true,39,29,http-error=1; local-present=9; missing=1; reachable=15; video-confirmed=3
+src/content/posts/2020/ultimate-windows-setup-guide.md,2020,/ultimate-windows-setup-guide/,true,false,8,7,local-present=4; reachable=2; video-confirmed=1
+src/content/posts/2020/windows-10-scripts.md,2020,/windows-10-scripts/,true,true,7,7,local-present=3; missing=1; reachable=2; video-confirmed=1
+src/content/posts/2020/windows-update.md,2020,/windows-update-security-only/,true,false,6,6,local-present=5; reachable=1
+src/content/posts/2020/wsl2.md,2020,/wsl2/,true,false,25,23,local-present=7; reachable=16
+src/content/posts/2020/zsh.md,2020,/zsh/,true,false,7,6,local-present=3; reachable=2; video-confirmed=1
+src/content/posts/2021/Ultimate-Windows-10-Install.md,2021,/Ultimate-Windows-10-Install-ISO/,true,true,19,15,local-present=5; reachable=9; video-confirmed=1
+src/content/posts/2021/Windows-10-Optimization-Guide.md,2021,/Windows-10-Optimization-Guide/,true,false,26,18,local-present=3; reachable=12; video-confirmed=3
+src/content/posts/2021/bootloader-themes.md,2021,/bootloader-themes/,true,false,18,17,local-present=7; reachable=8; unverified-challenge-or-login=1; video-confirmed=1
+src/content/posts/2021/bspwm-on-KDE.md,2021,/bspwm-on-KDE/,true,true,5,5,local-present=2; missing=3
+src/content/posts/2021/pi-website.md,2021,/pi-website/,true,false,10,7,local-present=2; non-public-address=2; reachable=3
+src/content/posts/2021/rocky-linux.md,2021,/rocky-linux/,true,false,19,15,local-present=2; reachable=12; repository-metadata-confirmed=1
+src/content/posts/2021/uninstall-edge.md,2021,/uninstall-edge/,true,false,4,3,local-present=3
+src/content/posts/2021/update-any-pc-to-windows11.md,2021,/update-any-pc-to-windows11/,true,false,12,8,local-present=5; reachable=1; video-confirmed=2
+src/content/posts/2022/2022-recap.md,2022,/2022-recap/,true,true,2,2,local-present=2
+src/content/posts/2022/30days-chromeos.md,2022,/30days-chromeos/,true,true,10,9,local-present=4; reachable=4; video-confirmed=1
+src/content/posts/2022/5-terminal-commands.md,2022,/5-terminal-commands/,true,false,7,7,local-present=6; video-confirmed=1
+src/content/posts/2022/Windows-22H2-problems.md,2022,/Windows-22H2-problems/,true,false,13,9,local-present=4; reachable=4; video-confirmed=1
+src/content/posts/2022/acronis-true-image.md,2022,/acronis-true-image/,true,true,8,7,local-present=6; reachable=1
+src/content/posts/2022/antivirus-worthless.md,2022,/antivirus-worthless/,true,true,9,8,local-present=6; reachable=2
+src/content/posts/2022/auto-mount-systemd.md,2022,/auto-mount-systemd/,true,false,4,3,local-present=2; reachable=1
+src/content/posts/2022/bad-windows-defender.md,2022,/bad-windows-defender/,true,false,6,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2022/be-a-better-programmer.md,2022,/be-a-better-programmer/,true,false,7,5,local-present=3; reachable=2
+src/content/posts/2022/beautiful-bash.md,2022,/beautiful-bash/,true,false,6,6,local-present=4; reachable=1; video-confirmed=1
+src/content/posts/2022/best-browser-extensions.md,2022,/best-browser-extensions/,true,true,23,23,local-present=12; reachable=10; video-confirmed=1
+src/content/posts/2022/best-package-manager.md,2022,/best-package-manager/,true,false,9,7,local-present=2; reachable=4; video-confirmed=1
+src/content/posts/2022/block-razer-bloatware.md,2022,/block-razer-bloatware/,true,false,7,6,local-present=3; reachable=2; video-confirmed=1
+src/content/posts/2022/buying-cheap-ebay-graphics-card.md,2022,/buying-cheap-ebay-graphics-card/,true,false,12,10,local-present=6; reachable=3; video-confirmed=1
+src/content/posts/2022/bypass-paywalls.md,2022,/bypass-paywalls/,true,true,19,14,local-present=7; reachable=6; video-confirmed=1
+src/content/posts/2022/chezmoi.md,2022,/chezmoi/,true,false,6,6,example-or-local=1; local-present=5
+src/content/posts/2022/choose-linux-distro.md,2022,/choose-linux-distro/,true,false,15,11,local-present=7; reachable=1; video-confirmed=3
+src/content/posts/2022/cleanup-docker.md,2022,/cleanup-docker/,true,true,2,2,local-present=1; reachable=1
+src/content/posts/2022/clickpaste.md,2022,/clickpaste/,true,false,15,13,local-present=3; reachable=9; video-confirmed=1
+src/content/posts/2022/customizing-steam-games-in-linux.md,2022,/customizing-steam-games-in-linux/,true,false,8,7,local-present=5; reachable=1; video-confirmed=1
+src/content/posts/2022/disable-win-defender.md,2022,/disable-win-defender/,true,true,11,8,local-present=4; reachable=3; video-confirmed=1
+src/content/posts/2022/docker-guide.md,2022,/docker-guide/,true,false,7,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2022/docker-macos.md,2022,/docker-macos/,true,false,15,13,example-or-local=1; local-present=6; reachable=5; video-confirmed=1
+src/content/posts/2022/fix-corrupt-windows-install.md,2022,/fix-corrupt-windows-install/,true,false,7,6,local-present=3; reachable=2; video-confirmed=1
+src/content/posts/2022/fix-libGL0-error.md,2022,/fix-libGL-errors/,true,false,3,3,local-present=3
+src/content/posts/2022/future-internet.md,2022,/future-internet/,true,false,11,8,local-present=4; reachable=3; video-confirmed=1
+src/content/posts/2022/hate-linux-distributions.md,2022,/hate-linux-distributions/,true,false,7,7,local-present=6; video-confirmed=1
+src/content/posts/2022/how-i-setup-my-website.md,2022,/how-i-setup-my-website/,true,false,14,14,example-or-local=2; local-present=3; reachable=8; video-confirmed=1
+src/content/posts/2022/install-windows-update-powershell.md,2022,/install-windows-update-powershell/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2022/installing-appx-without-msstore.md,2022,/installing-appx-without-msstore/,true,false,17,14,local-present=6; reachable=7; video-confirmed=1
+src/content/posts/2022/is-windows-bad.md,2022,/is-windows-bad/,true,false,10,7,local-present=3; reachable=3; video-confirmed=1
+src/content/posts/2022/laptop-power-management.md,2022,/laptop-power-management/,true,true,10,8,local-present=4; reachable=3; video-confirmed=1
+src/content/posts/2022/linux-for-beginners.md,2022,/linux-for-beginners/,true,false,16,10,local-present=2; reachable=4; video-confirmed=4
+src/content/posts/2022/linux-security-mistakes.md,2022,/linux-security-mistakes/,true,false,10,7,local-present=3; reachable=3; video-confirmed=1
+src/content/posts/2022/macos-on-linux.md,2022,/macos-on-linux/,true,false,16,10,local-present=4; reachable=5; video-confirmed=1
+src/content/posts/2022/making-the-perfect-phone.md,2022,/making-the-perfect-phone/,true,false,14,13,local-present=6; reachable=6; video-confirmed=1
+src/content/posts/2022/neovim-is-better.md,2022,/neovim-is-better/,true,false,11,9,local-present=4; reachable=4; video-confirmed=1
+src/content/posts/2022/nix-package-manager.md,2022,/nix-package-manager/,true,false,10,8,local-present=2; reachable=5; video-confirmed=1
+src/content/posts/2022/not-safe-windows.md,2022,/not-safe-windows/,true,true,6,5,local-present=3; reachable=1; video-confirmed=1
+src/content/posts/2022/ntlite-guide.md,2022,/ntlite-guide/,true,false,16,12,local-present=8; reachable=3; video-confirmed=1
+src/content/posts/2022/obsidian.md,2022,/obsidian/,true,true,8,8,dns-failure=1; local-present=6; video-confirmed=1
+src/content/posts/2022/one-tool-for-everything.md,2022,/one-tool-for-everything/,true,false,10,7,local-present=3; reachable=3; video-confirmed=1
+src/content/posts/2022/pretty-powershell.md,2022,/pretty-powershell/,true,false,10,9,local-present=5; reachable=3; video-confirmed=1
+src/content/posts/2022/pros-use-bleachbit.md,2022,/pros-use-bleachbit/,true,false,8,7,local-present=3; reachable=2; video-confirmed=2
+src/content/posts/2022/quickemu.md,2022,/quickemu/,true,false,11,9,local-present=5; reachable=3; video-confirmed=1
+src/content/posts/2022/reagentc-windows-recovery-partition.md,2022,/reagentc-windows-recovery-partition/,true,false,8,8,local-present=6; reachable=1; video-confirmed=1
+src/content/posts/2022/regex.md,2022,/regex/,true,false,7,6,local-present=3; reachable=2; video-confirmed=1
+src/content/posts/2022/robocopy.md,2022,/robocopy/,true,false,4,4,local-present=3; video-confirmed=1
+src/content/posts/2022/setting-up-the-ultimate-windows-11.md,2022,/setting-up-the-ultimate-windows-11/,true,true,13,10,local-present=4; missing=2; reachable=3; video-confirmed=1
+src/content/posts/2022/shell-the-essential-app.md,2022,/shell-the-essential-app/,true,false,8,8,local-present=5; reachable=2; video-confirmed=1
+src/content/posts/2022/shrink-vmware-vmdk.md,2022,/shrink-vmware-vmdk/,true,false,4,4,local-present=4
+src/content/posts/2022/speedup-linux.md,2022,/speedup-linux/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2022/star-trek-os.md,2022,/star-trek-os/,true,false,14,11,local-present=2; reachable=8; video-confirmed=1
+src/content/posts/2022/starfield-screensaver.md,2022,/screensavers/,true,false,25,23,local-present=10; reachable=12; video-confirmed=1
+src/content/posts/2022/stop-using-apt.md,2022,/stop-using-apt/,true,true,8,8,local-present=4; missing=1; reachable=2; video-confirmed=1
+src/content/posts/2022/switching-to-dumbphone.md,2022,/switching-to-dumbphone/,true,true,10,8,local-present=3; reachable=3; video-confirmed=2
+src/content/posts/2022/switching-to-ubuntu.md,2022,/switching-to-ubuntu/,true,false,13,10,local-present=5; reachable=4; video-confirmed=1
+src/content/posts/2022/twitter-archive.md,2022,/twitter-archive/,true,false,10,10,local-present=4; reachable=5; video-confirmed=1
+src/content/posts/2022/ubuntu-decline.md,2022,/ubuntu-decline/,true,false,5,5,local-present=4; video-confirmed=1
+src/content/posts/2022/ubuntus-arm-is-good.md,2022,/ubuntus-arm-is-good/,true,false,6,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2022/unlock-steam-deck.md,2022,/unlock-steam-deck/,true,true,11,8,example-or-local=1; local-present=3; reachable=3; video-confirmed=1
+src/content/posts/2022/urbackup.md,2022,/urbackup/,true,false,19,14,local-present=7; reachable=6; video-confirmed=1
+src/content/posts/2022/using-github-correctly.md,2022,/using-github-correctly/,true,false,4,4,local-present=3; video-confirmed=1
+src/content/posts/2022/vim-the-ultimate-editor.md,2022,/vim-the-ultimate-editor/,true,false,14,11,local-present=3; reachable=7; video-confirmed=1
+src/content/posts/2022/virtual-machine-formats.md,2022,/virtual-machine-formats/,true,false,4,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2022/vm-setup-in-linux.md,2022,/vm-setup-in-linux/,true,false,6,6,local-present=2; reachable=3; video-confirmed=1
+src/content/posts/2022/why-the-cli-is-op.md,2022,/why-the-cli-is-op/,true,false,4,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2022/why-we-dont-browse-the-internet-anymore.md,2022,/why-we-dont-browse-the-internet-anymore/,true,false,10,9,local-present=4; reachable=4; video-confirmed=1
+src/content/posts/2022/win10-to-win11.md,2022,/win10-to-win11/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2022/windows-explorer-stealing-cpu.md,2022,/windows-explorer-stealing-cpu/,true,false,4,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2022/windows-inside-linux.md,2022,/windows-inside-linux/,true,false,13,9,local-present=5; reachable=3; video-confirmed=1
+src/content/posts/2022/windows-tool.md,2022,/windows-tool/,true,false,10,10,local-present=2; reachable=5; video-confirmed=3
+src/content/posts/2022/worst-tech-of-2022.md,2022,/worst-tech-of-2022/,true,false,8,6,local-present=4; video-confirmed=2
+src/content/posts/2023/ame-wizard-the-future-of-debloat.md,2023,/ame-wizard-the-future-of-debloat/,true,false,6,5,local-present=3; reachable=1; video-confirmed=1
+src/content/posts/2023/atlasos-review.md,2023,/atlasos-review/,true,true,7,6,local-present=2; reachable=3; video-confirmed=1
+src/content/posts/2023/changes.md,2023,/changes/,true,true,2,2,local-present=2
+src/content/posts/2023/creating-a-secure-system.md,2023,/creating-a-secure-system/,true,false,11,8,local-present=2; reachable=5; video-confirmed=1
+src/content/posts/2023/dism-plus.md,2023,/dism-plus/,true,false,9,8,local-present=6; reachable=1; video-confirmed=1
+src/content/posts/2023/do-not-makes-these-github-mistakes.md,2023,/do-not-make-these-github-mistakes/,true,false,9,8,local-present=5; reachable=2; video-confirmed=1
+src/content/posts/2023/everything-toolbar.md,2023,/everything-toolbar/,true,true,9,7,local-present=4; reachable=2; video-confirmed=1
+src/content/posts/2023/ext4-in-windows.md,2023,/ext4-in-windows/,true,false,5,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2023/fitness-transformation.md,2023,/fitness-transformation/,true,true,2,2,local-present=2
+src/content/posts/2023/fix-screen-tearing-linux.md,2023,/fix-screen-tearing-linux/,true,false,5,5,local-present=4; video-confirmed=1
+src/content/posts/2023/flatseal-required-flatpak-addon.md,2023,/flatseal-required-flatpak-addon/,true,false,6,6,local-present=5; video-confirmed=1
+src/content/posts/2023/hardest-game-to-play-on-steamdeck.md,2023,/hardest-game-to-play-on-steamdeck/,true,false,6,6,local-present=5; video-confirmed=1
+src/content/posts/2023/im-sorry-netlify.md,2023,/im-sorry-netlify/,true,false,8,8,local-present=7; video-confirmed=1
+src/content/posts/2023/install-windows-the-arch-linux-way.md,2023,/install-windows-the-arch-linux-way/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2023/installing-arch-in-2-minutes.md,2023,/installing-arch-in-2-minutes/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2023/ltt-bad.md,2023,/ltt-bad/,true,false,10,7,local-present=3; reachable=1; video-confirmed=3
+src/content/posts/2023/microsoft-is-driving-users-away.md,2023,/microsoft-is-driving-users-away/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2023/my-new-desktop-hyprland.md,2023,/my-new-desktop-hyprland/,true,true,13,10,local-present=2; reachable=5; repository-git-confirmed=1; video-confirmed=2
+src/content/posts/2023/my-new-editor.md,2023,/my-new-editor/,true,false,7,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2023/nixos-explained.md,2023,/nixos-explained/,true,false,17,10,local-present=2; reachable=2; video-confirmed=6
+src/content/posts/2023/recovering-deleted-windows-boot-partition.md,2023,/recovering-deleted-windows-boot-partition/,true,false,8,6,local-present=3; reachable=2; video-confirmed=1
+src/content/posts/2023/registry-cleaner.md,2023,/registry-cleaner/,true,false,4,4,local-present=3; video-confirmed=1
+src/content/posts/2023/replace-google-fonts-with-bunny-fonts.md,2023,/replace-google-fonts-with-bunny-fonts/,true,true,11,8,local-present=2; reachable=4; request-dependent=1; video-confirmed=1
+src/content/posts/2023/saving-a-business-5000-a-year-in-telecom.md,2023,/saving-a-business-5000-a-year-in-telecom/,true,false,16,14,local-present=10; video-confirmed=4
+src/content/posts/2023/script-for-optimizing-images.md,2023,/script-for-optimizing-images/,true,false,5,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2023/steamdeck-as-a-desktop.md,2023,/steamdeck-as-a-desktop/,true,false,10,7,local-present=3; reachable=3; video-confirmed=1
+src/content/posts/2023/sync-local-files.md,2023,/sync-local-files/,true,false,16,13,local-present=9; reachable=3; video-confirmed=1
+src/content/posts/2023/the-perfect-system.md,2023,/the-perfect-system/,true,false,11,9,local-present=6; reachable=2; video-confirmed=1
+src/content/posts/2023/the-teamviewer-scam.md,2023,/the-teamviewer-scam/,true,false,7,6,local-present=4; reachable=1; video-confirmed=1
+src/content/posts/2023/theming-windows-with-rainmeter.md,2023,/theming-windows-with-rainmeter/,true,false,13,10,local-present=2; reachable=7; video-confirmed=1
+src/content/posts/2023/thumbnails-in-windows.md,2023,/thumbnails-in-windows/,true,false,7,7,local-present=6; video-confirmed=1
+src/content/posts/2023/tiny11-has-problems.md,2023,/tiny11-has-problems/,true,true,10,6,local-present=2; reachable=4
+src/content/posts/2023/tituspi-2023.md,2023,/tituspi-2023/,true,false,12,10,local-present=5; reachable=4; video-confirmed=1
+src/content/posts/2023/why-open-source.md,2023,/why-open-source/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2023/windows-11-perfect-install.md,2023,/windows-11-perfect-install/,true,false,7,6,local-present=4; reachable=1; video-confirmed=1
+src/content/posts/2023/windows-network-and-sharing.md,2023,/windows-network-and-sharing/,true,false,4,4,local-present=2; non-http=1; video-confirmed=1
+src/content/posts/2023/winutil-may-23-update.md,2023,/winutil-may-23-update/,true,false,5,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2023/you-will-watch-ads.md,2023,/you-will-watch-ads/,true,false,8,6,local-present=3; reachable=2; video-confirmed=1
+src/content/posts/2023/youtube-telegram-scams.md,2023,/youtube-telegram-scams/,true,false,7,7,local-present=6; video-confirmed=1
+src/content/posts/2024/3cx-version-20-update.md,2024,/3cx-version-20-update/,true,false,11,8,local-present=2; reachable=3; video-confirmed=3
+src/content/posts/2024/bazzite-linux.md,2024,/bazzite-linux/,true,false,10,6,local-present=2; reachable=2; video-confirmed=2
+src/content/posts/2024/crowdstrike-alternatives.md,2024,/crowdstrike-alternatives/,true,false,15,9,local-present=2; reachable=6; video-confirmed=1
+src/content/posts/2024/cursor-editor.md,2024,/cursor-editor/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2024/drivers-in-windows.md,2024,/drivers-in-windows/,true,false,8,8,local-present=2; reachable=5; video-confirmed=1
+src/content/posts/2024/enhanced-linux-in-windows.md,2024,/enhanced-linux-in-windows/,true,false,7,5,connection-error=1; local-present=2; reachable=2
+src/content/posts/2024/freedesktop-bans-hyprland.md,2024,/freedesktop-bans-hyprland/,true,false,9,8,local-present=2; reachable=3; video-confirmed=3
+src/content/posts/2024/glazewm-tiling-window-management.md,2024,/glazewm-tiling-window-management/,true,true,9,9,local-present=2; reachable=4; video-confirmed=3
+src/content/posts/2024/hastebin.md,2024,/hastebin/,true,true,2,2,local-present=2
+src/content/posts/2024/home-theater-pc.md,2024,/home-theater-pc/,true,true,10,10,local-present=5; reachable=3; video-confirmed=2
+src/content/posts/2024/improve-youtube.md,2024,/improve-youtube/,true,false,7,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2024/linux-alternatives.md,2024,/linux-alternatives/,false,true,2236,2091,blocked=10; connection-error=5; draft-preview-confirmed=1; http-error=5; local-present=3; project-confirmed=43; reachable=2009; timeout=4; tls-error=1; unverified-challenge-or-login=9; video-confirmed=1
+src/content/posts/2024/linux-atomic-desktops.md,2024,/linux-atomic-desktops/,true,false,7,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2024/microsoft-recall-situation.md,2024,/microsoft-recall-situation/,true,false,6,5,local-present=3; reachable=1; video-confirmed=1
+src/content/posts/2024/my-problems-with-linux.md,2024,/my-problems-with-linux/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2024/mybash.md,2024,/mybash/,true,false,4,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2024/remove-youtube-shorts.md,2024,/remove-youtube-shorts/,true,false,7,6,local-present=3; reachable=2; video-confirmed=1
+src/content/posts/2024/removing-systemd.md,2024,/removing-systemd/,true,false,8,5,local-present=2; reachable=3
+src/content/posts/2024/risingoss.md,2024,/risingoss/,true,false,11,7,local-present=2; reachable=4; video-confirmed=1
+src/content/posts/2024/sony-playstation-is-the-devil.md,2024,/sony-playstation-and-freebsd/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2024/the-ultimate-powershell-experience.md,2024,/the-ultimate-powershell-experience/,true,false,5,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2024/the-ultimate-system.md,2024,/the-ultimate-system/,true,false,18,14,local-present=3; reachable=4; video-confirmed=7
+src/content/posts/2024/universal-android-debloat.md,2024,/universal-android-debloat/,true,false,6,6,local-present=2; reachable=3; video-confirmed=1
+src/content/posts/2024/vpn-tier-list-2024.md,2024,/vpn-tier-list-2024/,true,false,4,4,local-present=3; video-confirmed=1
+src/content/posts/2024/why-you-NEED-to-contribute-to-open-source.md,2024,/why-you-NEED-to-contribute-to-open-source/,true,false,4,4,local-present=2; video-confirmed=2
+src/content/posts/2024/windows-24h2.md,2024,/windows-24h2/,true,false,6,5,local-present=2; reachable=1; video-confirmed=2
+src/content/posts/2024/windows-utility-improved.md,2024,/windows-utility-improved/,true,false,5,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2024/winutil-install.md,2024,/winutil-install/,true,false,11,8,local-present=5; reachable=2; video-confirmed=1
+src/content/posts/2024/xz-affected-these-users.md,2024,/xz-affected-these-users/,true,false,7,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2024/zoxide.md,2024,/zoxide/,true,false,5,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2025/chrome-performance-issues-linux.md,2025,/chrome-performance-issues-linux/,false,true,0,0,
+src/content/posts/2025/cleaning-arch-linux.md,2025,/cleaning-arch-linux/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2025/dangers-of-kernel-anticheat.md,2025,/dangers-of-kernel-anticheat/,false,true,5,3,local-present=1; reachable=1; video-confirmed=1
+src/content/posts/2025/enable-vrr-xorg.md,2025,/enable-vrr-xorg/,true,false,2,2,local-present=2
+src/content/posts/2025/how-vulnerable-windows-users-are-by-update.md,2025,/how-vulnerable-windows-users-are-by-update/,true,false,10,8,local-present=5; reachable=2; video-confirmed=1
+src/content/posts/2025/hyprland-monitor-config.md,2025,/hyprland-monitor-config/,true,true,4,4,local-present=3; reachable=1
+src/content/posts/2025/iscsi-on-boot.md,2025,/iscsi-on-boot/,true,false,2,2,local-present=2
+src/content/posts/2025/jakoolit-hyprland.md,2025,/jakoolit-hyprland/,true,false,6,6,local-present=3; reachable=2; video-confirmed=1
+src/content/posts/2025/linux-game-mods.md,2025,/linux-game-mods/,false,true,5,3,reachable=2; video-confirmed=1
+src/content/posts/2025/linux-laptops.md,2025,/linux-laptops/,false,true,4,3,reachable=2; video-confirmed=1
+src/content/posts/2025/macbook-problems.md,2025,/macbook-problems/,false,true,2,2,reachable=1; video-confirmed=1
+src/content/posts/2025/patching-programs-from-forks.md,2025,/patching-programs-from-forks/,true,false,3,3,local-present=3
+src/content/posts/2025/prioritize-ipv4-over-ipv6-linux.md,2025,/prioritize-ipv4-over-ipv6-linux/,true,false,2,2,local-present=2
+src/content/posts/2025/setting-up-reshade-on-linux.md,2025,/setting-up-reshade-on-linux/,true,false,9,7,local-present=2; reachable=4; video-confirmed=1
+src/content/posts/2025/the-ai-problem.md,2025,/the-ai-problem/,true,false,5,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2025/the-state-of-linux-gaming.md,2025,/the-state-of-linux-gaming/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2025/track-changes-word-author-macro.md,2025,/track-changes-word-author-macro/,true,false,3,3,local-present=3
+src/content/posts/2025/warp-terminal.md,2025,/warp-terminal/,false,true,7,6,local-present=4; reachable=1; video-confirmed=1
+src/content/posts/2025/website-design.md,2025,/website-design/,false,true,2,2,reachable=1; video-confirmed=1
+src/content/posts/2025/why-i-use-linux.md,2025,/why-i-use-linux/,true,false,3,3,local-present=2; video-confirmed=1
+src/content/posts/2025/windows-to-linux.md,2025,/windows-to-linux/,true,false,11,7,local-present=2; reachable=4; video-confirmed=1
+src/content/posts/2026/brave-origin-new-browser.md,2026,/brave-origin-new-browser/,true,false,5,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2026/check-network-security.md,2026,/check-network-security/,true,false,18,17,local-present=3; reachable=13; video-confirmed=1
+src/content/posts/2026/cloudflare-pagescms-website.md,2026,/cloudflare-pagescms-website/,false,true,12,12,example-or-local=1; reachable=10; video-confirmed=1
+src/content/posts/2026/creating-dtb-resurrecting-orangepi.md,2026,/creating-dtb-resurrecting-orangepi/,false,true,1,1,reachable=1
+src/content/posts/2026/fix-nfs-network-drives.md,2026,/fix-nfs-network-drives/,true,false,4,3,local-present=2; reachable=1
+src/content/posts/2026/gitea.md,2026,/gitea/,false,true,6,5,example-or-local=3; reachable=1; video-confirmed=1
+src/content/posts/2026/github-copilot-on-linux.md,2026,/github-copilot-on-linux/,true,false,15,15,local-present=4; non-public-address=2; reachable=7; video-confirmed=2
+src/content/posts/2026/how-i-use-linux.md,2026,/how-i-use-linux/,true,false,9,6,local-present=2; reachable=3; video-confirmed=1
+src/content/posts/2026/how-to-benchmark-in-linux.md,2026,/how-to-benchmark-in-linux/,true,false,10,10,local-present=4; reachable=5; video-confirmed=1
+src/content/posts/2026/i-rebuilt-my-website-in-astro-was-it-worth-it.md,2026,/i-rebuilt-my-website-in-astro-was-it-worth-it/,true,false,4,4,local-present=3; reachable=1
+src/content/posts/2026/image-upscale-conversion-linux.md,2026,/image-manipulation-linux/,false,true,4,4,missing=3; reachable=1
+src/content/posts/2026/my-ai-workflow.md,2026,/my-ai-workflow/,true,false,4,4,local-present=2; reachable=1; video-confirmed=1
+src/content/posts/2026/neovim-the-elite-editor.md,2026,/neovim-the-elite-editor/,true,false,7,6,local-present=4; reachable=1; video-confirmed=1
+src/content/posts/2026/resolve-in-arch-linux.md,2026,/resolve-in-arch-linux/,true,false,12,8,local-present=2; reachable=5; video-confirmed=1
+src/content/posts/2026/restore-wim-corruption.md,2026,/restore-wmi-corruption/,true,false,3,3,local-present=3
+src/content/posts/2026/switch-from-arch-to-fedora.md,2026,/switch-from-arch-to-fedora/,true,false,13,8,local-present=2; reachable=5; video-confirmed=1
+src/content/posts/2026/system76-sucks.md,2026,/stop-using-pop-os-cosmic/,true,false,23,13,local-present=2; reachable=10; video-confirmed=1
+src/content/posts/2026/the-problems-with-AI.md,2026,/the-problems-with-AI/,true,false,2,2,local-present=2
+src/content/posts/2026/top-linux-distros.md,2026,/top-linux-distros/,true,false,12,9,local-present=5; reachable=3; video-confirmed=1
+src/content/posts/2026/topgrade-linux.md,2026,/topgrade-linux/,true,false,6,5,local-present=2; reachable=2; video-confirmed=1
+src/content/posts/2026/what-can-AI-do-in-2026.md,2026,/what-can-AI-do-in-2026/,true,false,8,8,local-present=2; reachable=5; video-confirmed=1
+src/content/posts/2026/why-people-dont-understand-linux.md,2026,/why-people-dont-understand-linux/,false,true,1,1,video-confirmed=1
+src/content/posts/2026/winutil-in-2026.md,2026,/winutil-in-2026/,true,false,8,8,local-present=2; reachable=5; video-confirmed=1
+src/content/posts/2026/zed-editor.md,2026,/zed-editor/,true,false,9,9,local-present=5; reachable=3; video-confirmed=1
+src/content/posts/old/2011-03-22-target-specific-people-or-computers-with-item-level-targeting-in-gpos.md,old,/target-specific-people-or-computers-with-item-level-targeting-in-gpos/,true,false,1,1,local-present=1
+src/content/posts/old/2011-03-23-disable-outlook-anywhere-in-group-policy-object-gpo.md,old,/disable-outlook-anywhere-in-group-policy-object-gpo/,true,false,1,1,local-present=1
+src/content/posts/old/2011-09-15-keep-windows-7-from-installing-device-drivers-from-windows-update.md,old,/keep-windows-7-from-installing-device-drivers-from-windows-update/,true,false,1,1,local-present=1
+src/content/posts/old/2011-09-29-release-and-renew-ip-in-os-x.md,old,/release-and-renew-ip-in-os-x/,true,false,1,1,local-present=1
+src/content/posts/old/2011-10-13-valid-short-file-name.md,old,/valid-short-file-name/,true,false,2,2,local-present=2
+src/content/posts/old/2012-01-24-kernel-panic-mac-osx.md,old,/kernel-panic-mac-osx/,true,false,2,2,local-present=2
+src/content/posts/old/2012-07-26-exchange-primary-domain-controller.md,old,/exchange-primary-domain-controller/,true,false,2,2,local-present=2
+src/content/posts/old/2012-09-26-windows-refresh-pc.md,old,/windows-refresh-pc/,true,false,5,4,blocked=1; local-present=3
+src/content/posts/old/2012-10-12-windows-store-not-loading.md,old,/windows-store-not-loading/,true,false,2,2,local-present=2
+src/content/posts/old/2013-04-04-update-is-pending.md,old,/update-is-pending/,true,false,4,3,local-present=2; reachable=1
+src/content/posts/old/2013-04-09-configuring-sql-authentication.md,old,/configuring-sql-authentication/,true,true,3,3,local-present=2; reachable=1
+src/content/posts/old/2013-04-09-full-screen-rdp.md,old,/full-screen-rdp/,true,false,2,2,local-present=2
+src/content/posts/old/2013-04-09-mais-queue-folder.md,old,/mais-queue-folder/,true,false,2,2,local-present=2
+src/content/posts/old/2013-04-09-moving-gfi-mailarchiver.md,old,/moving-gfi-mailarchiver/,true,true,7,5,local-present=3; reachable=2
+src/content/posts/old/2013-04-15-rename-folders-mapped-drive.md,old,/rename-folders-mapped-drive/,true,false,2,2,local-present=2
+src/content/posts/old/2013-07-01-error-0x800f0906.md,old,/error-0x800f0906/,true,false,4,3,local-present=2; reachable=1
+src/content/posts/old/2013-08-07-verifone-vx510-add-9.md,old,/verifone-vx510-add-9/,true,false,2,2,local-present=2
+src/content/posts/old/2013-12-09-outlook-security-certificate.md,old,/outlook-security-certificate/,true,false,7,7,example-or-local=5; local-present=2
+src/content/posts/old/2014-01-13-take-ownership-windows.md,old,/take-ownership-windows/,true,false,3,3,local-present=3
+src/content/posts/old/2014-02-21-find-command-linux-terminal.md,old,/find-command-linux-terminal/,true,false,2,2,local-present=2
+src/content/posts/old/2014-06-26-hide-system-reserved-partition.md,old,/hide-system-reserved-partition/,true,false,2,2,local-present=2
+src/content/posts/old/2014-07-01-deploy-excel-macros.md,old,/deploy-excel-macros/,true,false,2,2,local-present=2
+src/content/posts/old/2014-12-28-windows-software-raid.md,old,/windows-software-raid/,true,false,3,3,local-present=3
+src/content/posts/old/2015-03-06-gfi-archiver-resource-usage.md,old,/gfi-archiver-resource-usage/,true,false,2,2,local-present=2
+src/content/posts/old/2015-03-24-idrac-dell-server.md,old,/idrac-dell-server/,true,false,3,3,local-present=3
+src/content/posts/old/2015-07-25-sfc-scannow-error.md,old,/sfc-scannow-error/,true,false,5,4,local-present=3; reachable=1
+src/content/posts/old/2015-09-14-check-external-ip.md,old,/check-external-ip/,true,false,2,2,local-present=2
+src/content/posts/old/2015-12-03-ftp-credentials-required.md,old,/ftp-credentials-required/,true,false,2,2,local-present=2
+src/content/posts/old/2015-12-25-move-website-linux-iis.md,old,/move-website-linux-iis/,true,false,4,4,local-present=2; reachable=2
+src/content/posts/old/ideas.md,old,/ideas/,true,true,22,13,local-present=1; reachable=12

@@ -16,7 +16,7 @@ This is a full walk-through and guide for Docker.
 
 ## Install and Getting Started
 
-- Official Docker: <https://docs.docker.com/get-docker/>
+- Official Docker: <https://docs.docker.com/get-started/get-docker/>
 - Official Portainer: <https://docs.portainer.io/start/install/server/docker>
 
 ## Quick Commands

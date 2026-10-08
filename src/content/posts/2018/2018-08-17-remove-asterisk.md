@@ -11,6 +11,8 @@ tags:
   - Asterisk
 
 ---
+> **Link update 2026-10-07:** The `asterisk-14-current.tar.gz` download below is no longer available. Use source matching the installed Asterisk version when following an uninstall procedure; the original commands are retained as historical reference.
+
 The following removal instructions go over how to completely remove Asterisk from your Linux Instance. <!--more-->
 
 ## REMOVE AND REINSTALL INSTRUCTIONS

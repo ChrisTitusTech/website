@@ -14,9 +14,10 @@ tags:
 ---
 Configuring SQL Authentication can be tricky at times, and this is a great article that goes over the two types of authentication in SQL. I find some programs interface better with direct SQL authentication when Windows Authentication fails for any reason.<!--more-->
 
-_Note: This article is based on GFI's
-[SQL authentication guide](https://support.gfi.com/article/106972-how-to-configure-microsoft-sql-server-to-accept-sql-authentication-for-gfi-software-products),
-and all credit for the original procedure goes to GFI._
+_Note: This article is based on GFI's original SQL authentication guide,
+which is no longer available at its previous address. Credit for the original
+procedure remains with GFI. For the current procedure, see
+[Microsoft's server authentication documentation](https://learn.microsoft.com/en-us/sql/database-engine/configure-windows/change-server-authentication-mode)._
 
 ## Fix Authentication in GFI ReportCenter
 

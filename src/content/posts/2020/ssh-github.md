@@ -19,13 +19,13 @@ Setting Up SSH Authentication with GitHub for Secure Access with 2FA GitHub Acco
 Type this in to create GitHub Keys for your computer
 
 ```
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
 Notes:
 
 - I typically save this in ~/.ssh/github
-- You don't have to put a password if you aren't worried about security
+- Protect the private key with a passphrase; the SSH agent can manage it during your session. See [GitHub's key-generation guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for current guidance and the RSA fallback for legacy systems.
 
 ## Adding the New Key to GitHub and Local SSH-Agent
 

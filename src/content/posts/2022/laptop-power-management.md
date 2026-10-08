@@ -132,7 +132,7 @@ While there are technically 3 options, I recommend only using NVIDIA and intel, 
 
 Cool python project that rebuilds the init system to exclude nvidia.
 
-<https://github.com/geminis3/EnvyControl>
+<https://github.com/bayasdev/envycontrol>
 
 ### Windows - GUI Power Management
 

@@ -1,0 +1,297 @@
+{
+  "version": 1,
+  "runId": "pilot-reviewed-2026-10-07",
+  "createdAt": "2026-10-07T19:07:42.701Z",
+  "provider": "Firecrawl connected tools",
+  "comparison": "Codex primary-source comparison imported through the same strict findings schema; no direct model API call was made.",
+  "scope": "Ten selected articles and specific claims; not a full site audit.",
+  "inventory": {
+    "total": 320,
+    "excluded": 24,
+    "generatedRoutes": 2309
+  },
+  "successfulSourceCaptures": 12,
+  "findings": [
+    {
+      "id": "c7a55d961ca8b331",
+      "url": "/wsl2/",
+      "section": "Install the Windows Subsystem for Linux",
+      "kind": "notice",
+      "original": "## Install the Windows Subsystem for Linux",
+      "replacement": "> **Update 2026-10-07:** This is the manual Windows 10 version 2004 walkthrough from 2020. For a new installation on a supported Windows version, follow [Microsoft's current WSL installation guide](https://learn.microsoft.com/en-us/windows/wsl/install), which uses `wsl --install`. Keep the steps below as historical reference.\n\n## Install the Windows Subsystem for Linux",
+      "reason": "The archived manual workflow predates the current single-command installer; retain the original walkthrough and direct new installations to current documentation.",
+      "context": "New WSL installations; the original article explicitly targets Windows 10 version 2004.",
+      "evidence": [
+        {
+          "id": "d8fc68513d3e1d16",
+          "excerpt": "You can now install everything you need to run WSL with a single command.",
+          "url": "https://learn.microsoft.com/en-us/windows/wsl/install",
+          "retrievedAt": "2026-10-07T18:59:13.484Z",
+          "contentHash": "7c5ddeb394919df8d9c15dbc6896589f28ff57fe7e549eb6ebdd4993098c32cc"
+        }
+      ],
+      "classification": "confirmed-outdated",
+      "file": "src/content/posts/2020/wsl2.md",
+      "sourceHash": "bacd77955d8d2efa1513ff6853a89d713ec99e7d5fe417e976debf5f2a54838b"
+    },
+    {
+      "id": "0ef3863923cd8213",
+      "url": "/windows-update-security-only/",
+      "section": "Windows 10 Pro Users - Policy Editor Method",
+      "kind": "notice",
+      "original": "## Windows 10 Pro Users - Policy Editor Method",
+      "replacement": "> **Update 2026-10-07:** Standard support for Windows 10 Home and Pro has ended. The historical update-deferral settings below do not extend Microsoft support. Check [Microsoft's lifecycle information for your edition](https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro) before relying on this 2020 guide.\n\n## Windows 10 Pro Users - Policy Editor Method",
+      "reason": "The article presents Windows 10 update settings without noting that standard Home/Pro support has ended. A dated notice keeps the original settings in their historical context.",
+      "context": "Windows 10 Home/Pro standard lifecycle; no claim about ESU enrollment or LTSC editions.",
+      "evidence": [
+        {
+          "id": "64ebe903850ec640",
+          "excerpt": "Windows 10 will reach end of support on October 14, 2025.",
+          "url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro",
+          "retrievedAt": "2026-10-07T19:00:21.126Z",
+          "contentHash": "fc62b6eacffa7243115054e67e3526965245ed9fc66eaf350157ef4a3f959b63"
+        }
+      ],
+      "classification": "confirmed-outdated",
+      "file": "src/content/posts/2020/windows-update.md",
+      "sourceHash": "2e2041fe67d6c0db44db24a8c2ef048e89c50cebb3eae1d616b238cf07969658"
+    },
+    {
+      "id": "e0f0d34999ee705a",
+      "url": "/docker-guide/",
+      "section": "Install and Getting Started",
+      "kind": "link",
+      "original": "https://docs.docker.com/get-docker/",
+      "replacement": "https://docs.docker.com/get-started/get-docker/",
+      "reason": "Firecrawl followed the old installation URL to this current official destination. Update the link to avoid the redirect; the old link is not dead.",
+      "context": "Docker installation documentation; container commands were not audited.",
+      "evidence": [
+        {
+          "id": "eb3bcffe1c85c365",
+          "excerpt": "Docker is an open platform for developing, shipping, and running applications.",
+          "url": "https://docs.docker.com/get-started/get-docker/",
+          "retrievedAt": "2026-10-07T19:00:23.072Z",
+          "contentHash": "44600c1b7b7b3084dddebd851acbe7f79c190a431e05a06d223ffaa516b599cc"
+        }
+      ],
+      "classification": "confirmed-outdated",
+      "file": "src/content/posts/2022/docker-guide.md",
+      "sourceHash": "192b6f8dc5ac65fd8af6b70e17592f8b581a4cde12bdfe518ad4b9a22fce75e7"
+    },
+    {
+      "id": "20b1b1f448134ca8",
+      "url": "/quickemu/",
+      "section": "Installation",
+      "kind": "notice",
+      "original": "GUI Install",
+      "replacement": "**Update 2026-10-07:** On Ubuntu 24.04 (Noble) or later, the [upstream installation guide](https://github.com/quickemu-project/quickemu/wiki/01-Installation) also calls for `qemu-system-modules-spice` if it is not already installed. The Quickemu PPA commands above remain documented upstream.\r\n\r\nGUI Install",
+      "reason": "Upstream adds a distribution-specific dependency absent from the 2022 installation steps. Keep the still-supported PPA commands.",
+      "context": "Ubuntu 24.04 or later; GUI installation and guest compatibility are not verified by this finding.",
+      "evidence": [
+        {
+          "id": "0df4fb5396cd1144",
+          "excerpt": "Users of `noble` (24.04) or later should install `qemu-system-modules-spice` if this is not already installed.",
+          "url": "https://github.com/quickemu-project/quickemu/wiki/01-Installation",
+          "retrievedAt": "2026-10-07T19:04:30.222Z",
+          "contentHash": "863a495f67e935d25c16437cb0c9eb9078d9d1839655e85831b83f74263f5f82"
+        }
+      ],
+      "classification": "confirmed-outdated",
+      "file": "src/content/posts/2022/quickemu.md",
+      "sourceHash": "22359dc5e50897d4d1023fc9e41a45cd02fa678b9e5c0db71032e9354d39052f"
+    },
+    {
+      "id": "1f089089c1dc52a0",
+      "url": "/ssh-github/",
+      "section": "Creating SSH Keys",
+      "kind": "command",
+      "original": "ssh-keygen -t rsa -b 4096 -C \"your_email@example.com\"",
+      "replacement": "ssh-keygen -t ed25519 -C \"your_email@example.com\"",
+      "reason": "Use the primary key-generation example in current GitHub documentation. RSA remains a documented fallback for legacy clients; this does not claim RSA stopped working.",
+      "context": "New SSH keys on clients supporting Ed25519; retain the custom key-path instructions.",
+      "evidence": [
+        {
+          "id": "08d1b0a4553214e7",
+          "excerpt": "ssh-keygen -t ed25519 -C \"your_email@example.com\"",
+          "url": "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent",
+          "retrievedAt": "2026-10-07T19:00:29.083Z",
+          "contentHash": "c97ea142ed58995a5a9d4c37f3bf3a539622e7edb2cf201b32cddec9b0145bd4"
+        }
+      ],
+      "classification": "confirmed-outdated",
+      "file": "src/content/posts/2020/ssh-github.md",
+      "sourceHash": "52ae0736a2eeaaa45380e5d841e9f184d9629fcf9fcc0b9bc2e9f789cf9379c7"
+    },
+    {
+      "id": "4c36d0e94a13a998",
+      "url": "/ssh-github/",
+      "section": "Creating SSH Keys",
+      "kind": "prose",
+      "original": "- You don't have to put a password if you aren't worried about security",
+      "replacement": "- Protect the private key with a passphrase; the SSH agent can manage it during your session. See [GitHub's key-generation guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) for current guidance and the RSA fallback for legacy systems.",
+      "reason": "Replace the casual dismissal of key protection with the documented passphrase guidance and a source link.",
+      "context": "Interactive SSH key generation, not unattended deployment keys.",
+      "evidence": [
+        {
+          "id": "08d1b0a4553214e7",
+          "excerpt": "At the prompt, type a secure passphrase.",
+          "url": "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent",
+          "retrievedAt": "2026-10-07T19:00:29.083Z",
+          "contentHash": "c97ea142ed58995a5a9d4c37f3bf3a539622e7edb2cf201b32cddec9b0145bd4"
+        }
+      ],
+      "classification": "confirmed-outdated",
+      "file": "src/content/posts/2020/ssh-github.md",
+      "sourceHash": "52ae0736a2eeaaa45380e5d841e9f184d9629fcf9fcc0b9bc2e9f789cf9379c7"
+    },
+    {
+      "id": "7e789220314a7527",
+      "url": "/ultimate-linux-gaming-guide/",
+      "section": "Xanmod (Debian-based Only)",
+      "kind": "notice",
+      "original": "Official Site: <https://xanmod.org>",
+      "replacement": "Official Site: <https://xanmod.org>\n\n> **Update 2026-10-07:** The commands below are the historical setup. [XanMod's current instructions](https://xanmod.org/) use a dedicated keyring with `signed-by` and a distribution codename in the repository entry. Follow those instructions and select the kernel appropriate for your CPU instead of copying this old `apt-key` setup.",
+      "reason": "The current official repository setup differs from the legacy apt-key and releases-suite example. Preserve the archive but clearly redirect new installations.",
+      "context": "XanMod installation only; the other gaming, driver, and kernel instructions are not verified.",
+      "evidence": [
+        {
+          "id": "638bbe68742056b1",
+          "excerpt": "echo \"deb [signed-by=/etc/apt/keyrings/xanmod-archive-keyring.gpg] http://deb.xanmod.org $(lsb_release -sc) main\"",
+          "url": "https://xanmod.org/",
+          "retrievedAt": "2026-10-07T19:03:10.001Z",
+          "contentHash": "f08791d2ca8ae064e212d9950873c6528c1f4c0dadfc29da950f9ea56975c300"
+        }
+      ],
+      "classification": "confirmed-outdated",
+      "file": "src/content/posts/2020/ultimate-linux-gaming-guide.md",
+      "sourceHash": "68b02dde0a0862fd54ce1daee7d83b7358ac117992acb65773d72649ee50878a"
+    },
+    {
+      "id": "acc219fb7632c1bc",
+      "url": "/nix-package-manager/",
+      "section": "Usage",
+      "kind": "none",
+      "original": "",
+      "replacement": "",
+      "reason": "The current Nix manual still documents nix-env. An older command interface is not by itself expired content; no migration to nix profile is justified by this evidence.",
+      "context": "Only the documented existence and role of nix-env were checked; installation and desktop integration remain outside this finding.",
+      "evidence": [
+        {
+          "id": "70bf7fd7d11093cd",
+          "excerpt": "The command `nix-env` is used to manipulate Nix user environments.",
+          "url": "https://nix.dev/manual/nix/2.34/command-ref/nix-env.html",
+          "retrievedAt": "2026-10-07T19:00:27.186Z",
+          "contentHash": "6a38a3bb6f6981b346517ce577773236a81d0582038bc437474b1fd18d6bf4c3"
+        }
+      ],
+      "classification": "current",
+      "file": "src/content/posts/2022/nix-package-manager.md",
+      "sourceHash": "d8694aec433382471e7daf81459c39da3312c77494a32ee6f08af57c8eba7cc7"
+    },
+    {
+      "id": "7e6703b0d41dea65",
+      "url": "/zed-editor/",
+      "section": "Basic Zed Features",
+      "kind": "none",
+      "original": "",
+      "replacement": "",
+      "reason": "The Vim-mode documentation linked by the article still exists and documents the feature. Leave the supported claim unchanged.",
+      "context": "Vim mode only; version 1.0, Threads, performance, and AI claims were not verified.",
+      "evidence": [
+        {
+          "id": "00381b8a98ea4a27",
+          "excerpt": "Vim mode replicates the behavior of motions and commands where it makes sense",
+          "url": "https://zed.dev/docs/vim",
+          "retrievedAt": "2026-10-07T19:03:07.601Z",
+          "contentHash": "5148f2aca5d651b78a06226365fddca3465422ba3aec14560b683586aacdf90d"
+        }
+      ],
+      "classification": "current",
+      "file": "src/content/posts/2026/zed-editor.md",
+      "sourceHash": "51cd6c8e9d531afa34a767cf95f1e23a899c87d1077cedf969e2b13ff1944fef"
+    },
+    {
+      "id": "9023a73ac65eed24",
+      "url": "/hugo-guide/",
+      "section": "The First Changes",
+      "kind": "none",
+      "original": "",
+      "replacement": "",
+      "reason": "This section describes the author's historical Mainroad setup. Current quick-start commands use a different theme and are not grounds to replace that account. The article already links to the official quick start.",
+      "context": "Historical Hugo/Mainroad customizations, not a current installation guarantee.",
+      "evidence": [
+        {
+          "id": "1093fceb5b32c21b",
+          "excerpt": "hugo new project quickstart",
+          "url": "https://gohugo.io/getting-started/quick-start/",
+          "retrievedAt": "2026-10-07T19:03:05.787Z",
+          "contentHash": "db5832639de2f6d5cae935f4b5197e1cd851db777a44bbdb571ae1db16e38ead"
+        }
+      ],
+      "classification": "historical",
+      "file": "src/content/posts/2020/hugo-guide.md",
+      "sourceHash": "306042c429983571fe431e9029bd32c01921258929b6ef41e61c5b35454a5789"
+    },
+    {
+      "id": "3364bb8129d6b267",
+      "url": "/install-windows-update-powershell/",
+      "section": "Commands",
+      "kind": "none",
+      "original": "",
+      "replacement": "",
+      "reason": "The module installation remains documented, but the remote-computer and log-filename examples need a separate PowerShell runtime review. The package page alone does not establish corrected command behavior, so no patch is proposed.",
+      "context": "PSWindowsUpdate module presence only; remote execution and reboot commands have not been run.",
+      "evidence": [
+        {
+          "id": "f66838fcfd531774",
+          "excerpt": "Install-Module -Name PSWindowsUpdate",
+          "url": "https://www.powershellgallery.com/packages/PSWindowsUpdate/2.2.1.5",
+          "retrievedAt": "2026-10-07T19:03:11.893Z",
+          "contentHash": "a45da9b4f2a77a8bc4e1682c63a90c93bad75efb44f35372cb2ee668b23887d4"
+        }
+      ],
+      "classification": "needs-review",
+      "file": "src/content/posts/2022/install-windows-update-powershell.md",
+      "sourceHash": "c12be89c34412d070460e4dbb0fe8a7e67a55cc0081916af4564ce502d4929e8"
+    }
+  ],
+  "patches": [
+    {
+      "file": "src/content/posts/2020/wsl2.md",
+      "digest": "9cc3eb7c9d6a018c0fbfdaed66b1d7cd3de74344ba9406200b60c78c36ea9e89",
+      "afterHash": "a5bd4194ebc035ef988259edfc755befe87c1ab130008389f2d9ed6be81b8674",
+      "findingIds": ["c7a55d961ca8b331"]
+    },
+    {
+      "file": "src/content/posts/2020/windows-update.md",
+      "digest": "6ad68005c3848cd457df974e924ecdd003176adfd2ab5792b2fa057af79c369a",
+      "afterHash": "466cf69767b86b1a1e19da68e14b64ddc71486811ca0fb884ec82de830ff45ef",
+      "findingIds": ["0ef3863923cd8213"]
+    },
+    {
+      "file": "src/content/posts/2022/docker-guide.md",
+      "digest": "e7576fa5ad7eb101a1b9103021f09c685fd0b061a252018ab19a47802abea15d",
+      "afterHash": "3d891e3ed789a270d484699fd075179f23d967df964c1f3491fee3426e65dd02",
+      "findingIds": ["e0f0d34999ee705a"]
+    },
+    {
+      "file": "src/content/posts/2022/quickemu.md",
+      "digest": "888c903082d5070b5a2dd3250264b532d9f3def458d8cab38fda1491f51d52c8",
+      "afterHash": "f44226a858733ad190b120b0694bc40a5996f00224ad662a01c5ecf05d5f6242",
+      "findingIds": ["20b1b1f448134ca8"]
+    },
+    {
+      "file": "src/content/posts/2020/ssh-github.md",
+      "digest": "ba1e38e8f68e0b8010e9e7c46ed5d566ab5644051bfd1948280002258de92e10",
+      "afterHash": "b63c0ffe6c72e7107826ada66424fb0a5d93af9998cb6c5517a15f2603d5032d",
+      "findingIds": ["1f089089c1dc52a0", "4c36d0e94a13a998"]
+    },
+    {
+      "file": "src/content/posts/2020/ultimate-linux-gaming-guide.md",
+      "digest": "715e3ea077737ae14e5c9616f066eabddf331a3bc3329a6af947c10a606810a8",
+      "afterHash": "e61a798f3232e7ed5d6cc852a84963e861ce6e3b729fbd74acd03bdf2403af2f",
+      "findingIds": ["7e789220314a7527"]
+    }
+  ],
+  "editorialReview": "Proposed fixes applied locally under user authorization for review in the pull request. Human publication approval is pending."
+}

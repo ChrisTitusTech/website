@@ -66,9 +66,9 @@ Put these in `ToolKit_Directory\Updates\w10\x64`
 
 ### Make Autounattend.xml
 
-Now let's make it so we will automatically install Windows 10 without answering a bunch of questions. I use a cheatsheet where it just makes it for me from: <https://www.windowsafg.com/win10x86_x64.html>
+Now let's make it so we will automatically install Windows 10 without answering a bunch of questions.
 
-Fill out the form and then click download at the bottom of the page.
+**Link update 2026-10-07:** The original Windows Answer File Generator website now serves unrelated content. Use [Schneegans' Windows answer-file generator](https://schneegans.de/windows/unattend-generator/) as a current alternative. Review its settings and usage instructions before downloading your answer file; the screenshot below shows the historical tool.
 
 ![autounattend](/images/2021/01-win10iso/autounattend.webp)
 

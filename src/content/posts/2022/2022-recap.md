@@ -34,4 +34,4 @@ This year will be the best year all around. I made mistakes in 2022 and have a b
 
 ## Walkthrough Video
 
-{{< youtube 8UvGMmGxlyc >}}
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*

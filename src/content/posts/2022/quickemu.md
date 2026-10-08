@@ -33,6 +33,8 @@ sudo apt update
 sudo apt install quickemu
 ```
 
+**Update 2026-10-07:** On Ubuntu 24.04 (Noble) or later, the [upstream installation guide](https://github.com/quickemu-project/quickemu/wiki/01-Installation) also calls for `qemu-system-modules-spice` if it is not already installed. The Quickemu PPA commands above remain documented upstream.
+
 GUI Install
 
 ```

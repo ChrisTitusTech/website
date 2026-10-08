@@ -37,4 +37,4 @@ I would even caution against joining a gym or rigorous workout program without f
 
 ## Walkthrough Video
 
-{{< youtube kfQC-sQxMcw >}}
+*Video update 2026-10-07: The original video is private. The written article is retained as a reference.*

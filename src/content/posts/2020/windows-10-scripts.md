@@ -9,6 +9,8 @@ categories:
 tags:
   -  PowerShell
 ---
+> **Link update 2026-10-07:** The `git.io/JJ5qc` download below is no longer available. This is a historical script listing, not a working installation command. For current Windows maintenance, review [WinUtil](https://github.com/ChrisTitusTech/winutil); it is not a verified replacement for that exact old script.
+
 Three Windows 10 Scripts
 <!--more-->
 

@@ -73,7 +73,7 @@ Razer has a bunch of cool features, but also has a great open source project cal
 
 Here is Equipment I use for A/V and recommend to others. Below is a video going over my entire studio setup, but I left out the impractical gear that many wouldn't want.
 
-{{< youtube cuBay8QzYH4 >}}  
+*Video update 2026-10-07: The original video is private. The written article is retained as a reference.*
 
 - Camera - M200 - $550 - <https://amzn.to/32T9qEU>
 - Camera Lens - Canon 22M 2.0 - $200 - <https://amzn.to/3pzW0r0>

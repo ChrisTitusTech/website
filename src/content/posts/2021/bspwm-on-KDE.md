@@ -9,6 +9,8 @@ categories:
 tags:
   - KDE
 ---
+> **Link update 2026-10-07:** The three configuration downloads from `ChrisTitusTech/BSPWM-on-KDE` below are no longer publicly available. This KDE setup is retained as historical reference; no equivalent replacement files have been verified.
+
 This goes over switching the window manager of KDE to bspwm.
 <!--more-->
 

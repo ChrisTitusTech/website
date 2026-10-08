@@ -12,6 +12,8 @@ tags:
   - Windows 11
 
 ---
+> **Link update 2026-10-07:** The `git.io/JTbKD` restore-script download below is no longer available. Do not substitute the current WinUtil installer for a restore script. The old command is retained only as historical reference.
+
 This goes over debloating and slimming down Windows 10 and 11 so you get maximum performance from your PC.
 <!--more-->I made a guide going over the debloat process two years ago [https://christitus.com/debloat-windows-10/](https://christitus.com/debloat-windows-10/) - The guide has evolved and the github project I was using has also improved. I've also made a newer post going over the all the changes @ <https://christitus.com/windows-tool>
 
@@ -75,7 +77,7 @@ The project I use has been developed for many years now and is extremely good. H
 [https://github.com/Sycnex/Windows10Debloater](https://github.com/Sycnex/Windows10Debloater)
 
 This is a new project that was brought to my attention, but has quickly made a name for itself. It works very well and is typically more up to date than the above project.  
-[https://github.com/farag2/Windows-10-Setup-Script](https://github.com/farag2/Windows-10-Setup-Script)
+[https://github.com/farag2/Sophia-Script-for-Windows](https://github.com/farag2/Sophia-Script-for-Windows)
 
 ## Optimal Way to Use this Tool
 

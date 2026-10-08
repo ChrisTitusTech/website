@@ -12,6 +12,8 @@ tags:
 This article shows how to install only security updates on Windows 10. This is vital to avoid long updates on startup or shutdown!
 <!--more-->
 
+> **Update 2026-10-07:** Standard support for Windows 10 Home and Pro has ended. The historical update-deferral settings below do not extend Microsoft support. Check [Microsoft's lifecycle information for your edition](https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro) before relying on this 2020 guide.
+
 ## Windows 10 Pro Users - Policy Editor Method
 
 Open your Local Policy editor (Start - Run) and type `gpedit.msc`  

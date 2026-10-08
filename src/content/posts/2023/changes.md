@@ -35,4 +35,4 @@ For videos, I will only make a video once a project wraps up or has a major upda
 
 ## Walkthrough Video
 
-{{< youtube hv3bfDhEyAI >}}
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*

@@ -52,6 +52,8 @@ Adds Home button and just makes it easy to always get back to your kanban to-do 
 
 This is for progress bar, or if you want to do filters, tags, yaml headers, and other sorting techniques. It does WAY more than I use it for at the moment. Since I'm limiting my notes to maybe 10-20 notes I don't need the other stuff, but it is there incase I expand. For now, I will use the following code in my templates to add a progress bar that tracks any checkboxes and how many are checked compared to total.
 
+**Link update 2026-10-07:** The external progress-bar service used by this historical example no longer resolves. The formula is retained for reference and will not render its progress image.
+
 ```
 `="![progress](https://progress-bar.dev/" + round(length(filter(this.file.tasks.completed, (t) => t = true)) / length(this.file.tasks.text) * 100) + "/)"`
 ```

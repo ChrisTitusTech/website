@@ -66,4 +66,4 @@ ESET NOD32 Antivirus is the best I've found. They were one of the original antiv
 
 ## Walkthrough Video
 
-{{< youtube UXT17bQ2W2Q >}}
+*Video update 2026-10-07: The original video is private. The written article is retained as a reference.*

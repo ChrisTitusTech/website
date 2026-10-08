@@ -21,6 +21,8 @@ Here is a screenshot of `hyprctl monitors`
 
 ## Add to hyprland.conf
 
+The examples below use the older `monitor=` configuration syntax. The linked versioned Hyprland documentation preserves that syntax; newer releases may use a different format.
+
 Syntax for adding specific monitors with configuration looks like this:
 `monitor=desc:MONITOR_DESCRIPTION,resolution,position,scale`
 
@@ -31,7 +33,7 @@ Examples:
 ### MONITORS ###
 ################
 
-# See https://wiki.hyprland.org/Configuring/Monitors/
+# See https://wiki.hypr.land/0.41.2/Configuring/Monitors/
 # Studio PC Config
 monitor=desc:AOP 27HC5R 1207043ED3W01,preferred,auto,1
 

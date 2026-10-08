@@ -48,4 +48,4 @@ The product has moved to a subscription model. The essential model is local and 
 
 ## Walkthrough Video
 
-{{< youtube VYTCeIHS6Kg >}}
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*

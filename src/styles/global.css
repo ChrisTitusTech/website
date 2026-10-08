@@ -594,6 +594,10 @@ h2 {
 .article-body {
   font-size: 1.08rem;
 }
+.article-body a,
+.article-body :not(pre) > code {
+  overflow-wrap: anywhere;
+}
 .article-body :is(pre, table, iframe) {
   max-width: 100%;
 }

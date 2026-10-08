@@ -16,16 +16,16 @@ These extensions make life easier when using a browser.
 
 ## The List
 
-- [Authenticator](https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai) - 2 Factor for websites
-- [Checker Plus](https://chrome.google.com/webstore/detail/checker-plus-for-google-c/hkhggnncdpfibdhinjiegagmopldibha) - Google Calendar with 1-click
-- [Click and Clean](https://chrome.google.com/webstore/detail/clickclean/ghgabhipcejejjmhhchfonmamedcbeod) - History and Cache cleaning
-- [Get RSS Feed URL](https://chrome.google.com/webstore/detail/get-rss-feed-url/kfghpdldaipanmkhfpdcjglncmilendn) - Easily grab the RSS feed for a website
-- [GoFullPage](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl) - Full Page Screen Capture
-- [Midnight Lizard](https://chrome.google.com/webstore/detail/midnight-lizard/pbnndmlekkboofhnbonilimejonapojg) - Dark mode everywhere
-- [Momentum](https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca) - Focused Start Screen (Great for Brave users)
-- [Notifier for GitHub](https://chrome.google.com/webstore/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn) - Notification Panel for GitHub
+- [Authenticator](https://chromewebstore.google.com/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai) - 2 Factor for websites
+- [Checker Plus](https://chromewebstore.google.com/detail/checker-plus-for-google-c/hkhggnncdpfibdhinjiegagmopldibha) - Google Calendar with 1-click
+- [Click and Clean](https://chromewebstore.google.com/detail/clickclean/ghgabhipcejejjmhhchfonmamedcbeod) - History and Cache cleaning
+- [Get RSS Feed URL](https://chromewebstore.google.com/detail/get-rss-feed-url/kfghpdldaipanmkhfpdcjglncmilendn) - Easily grab the RSS feed for a website
+- [GoFullPage](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl) - Full Page Screen Capture
+- [Midnight Lizard](https://chromewebstore.google.com/detail/midnight-lizard/pbnndmlekkboofhnbonilimejonapojg) - Dark mode everywhere
+- [Momentum](https://chromewebstore.google.com/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca) - Focused Start Screen (Great for Brave users)
+- [Notifier for GitHub](https://chromewebstore.google.com/detail/notifier-for-github/lmjdlojahmbbcodnpecnjnmlddbkjhnn) - Notification Panel for GitHub
 - [Roboform Password Management](https://www.anrdoezrs.net/click-9109049-14329390) (Bitwarden is a good alternative)
-- [Web Highlights](https://chrome.google.com/webstore/detail/web-highlights-pdf-web-hi/hldjnlbobkdkghfidgoecgmklcemanhm) - Highlight parts of a webpage
+- [Web Highlights](https://chromewebstore.google.com/detail/web-highlights-pdf-web-hi/hldjnlbobkdkghfidgoecgmklcemanhm) - Highlight parts of a webpage
 
 ### Security
 

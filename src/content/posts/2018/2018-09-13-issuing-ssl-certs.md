@@ -15,7 +15,7 @@ This article goes over Issuing SSL Certs using Let&#8217;s Encrypt in Ubuntu 16.
 
 ## Video Guide
 
-{{< youtube yC3GTHJRQuM >}}  
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
   
 ## Links
 

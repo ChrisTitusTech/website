@@ -26,7 +26,7 @@ tags:
 
 ## Video Walkthrough
 
-{{< youtube 0O9TzNvVwR0 >}}  
+*Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*
 
 ## Conclusion
 

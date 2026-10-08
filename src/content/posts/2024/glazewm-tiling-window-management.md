@@ -43,11 +43,11 @@ These hotkeys are customizable, and users are encouraged to tailor them to their
 
 Alt Hotkeys
 
-![GlazeWM Hotkey Maps](https://user-images.githubusercontent.com/34844898/194635035-152ed4a6-e5a1-4878-8863-f62391e7d703.webp)
+![GlazeWM Hotkey Maps](https://user-images.githubusercontent.com/34844898/194635035-152ed4a6-e5a1-4878-8863-f62391e7d703.png)
 
 Alt+Shift Hotkeys
 
-![GlazeWM Hotkey Maps2](https://user-images.githubusercontent.com/34844898/194635089-d5ed152b-1527-43e8-a69c-4e154b97a207.webp)
+![GlazeWM Hotkey Maps2](https://user-images.githubusercontent.com/34844898/194635089-d5ed152b-1527-43e8-a69c-4e154b97a207.png)
 
 ### Custom Hotkeys
 
