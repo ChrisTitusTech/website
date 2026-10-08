@@ -742,6 +742,37 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    "sh -c 'curl original.example/install'",
+    "result=$(curl original.example/install)",
+    "curl --connect-to=::original.example: https://docs.example.com/guide",
+    "wget -i original.example",
+  ])(
+    "revalidates edits to existing ambiguous commands: %s",
+    async (command) => {
+      const { root } = await fixture();
+      await writeFile(
+        path.join(root, file),
+        source.replace("old-command", command),
+      );
+      const run = await startRun(root, "edited-ambiguous-command", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: "original.example",
+            replacement: "unapproved.example",
+          }),
+        ],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        "Network commands require explicit HTTPS URLs",
+      );
+    },
+  );
+  it.each([
     "curl docs.example.com/guide",
     "curl -fsSL docs.example.com/guide",
     'curl "docs.example.com/guide"',

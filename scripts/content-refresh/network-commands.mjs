@@ -1,3 +1,5 @@
+import { hash } from "./common.mjs";
+
 export const implicitNetworkPrefix = "implicit-network-target:";
 
 const valueOptions = {
@@ -318,5 +320,12 @@ export function networkCommandArguments(text) {
     }
     target(word, range);
   }
-  return { urls, nonUrlRanges, urlRanges };
+  return {
+    // An existing ambiguity must not cancel out after a partial command edit.
+    urls: urls.map((url) =>
+      url.startsWith(implicitNetworkPrefix) ? `${url}:${hash(text)}` : url,
+    ),
+    nonUrlRanges,
+    urlRanges,
+  };
 }
