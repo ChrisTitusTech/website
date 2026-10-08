@@ -8,13 +8,36 @@ import {
   validatePost,
 } from "../prepare-content.mjs";
 import { hash, safePath, readJson, writeJson } from "./common.mjs";
-import { validateFindings, validateNewLinks } from "./findings.mjs";
-import { extractLinks, extractDestinations } from "./inventory.mjs";
+import {
+  validateFindings,
+  validateNewLinks,
+  addedOccurrences,
+} from "./findings.mjs";
+import { extractDestinations } from "./inventory.mjs";
 import {
   buildInventory,
   publicRoute,
   redirectMatches,
 } from "../route-contract.mjs";
+
+function codeUrls(text) {
+  const urls = [];
+  const starts = /\b[a-z][a-z0-9+.-]*:\/\//gi;
+  for (let match; (match = starts.exec(text));) {
+    const quote = text[match.index - 1];
+    let end = starts.lastIndex;
+    if (quote === '"' || quote === "'") {
+      while (end < text.length && text[end] !== quote) {
+        end += text[end] === "\\" ? 2 : 1;
+      }
+    } else {
+      while (end < text.length && !/[\s<>`]/.test(text[end])) end++;
+    }
+    urls.push(text.slice(match.index, end));
+    starts.lastIndex = end + 1;
+  }
+  return urls;
+}
 
 function protectedParts(body) {
   const tokens = new MarkdownIt({ html: true }).parse(body, {});
@@ -36,11 +59,7 @@ function protectedParts(body) {
   const codeLinks = tokens
     .flatMap((t) => [t, ...(t.children ?? [])])
     .filter((t) => ["fence", "code_block", "code_inline"].includes(t.type))
-    .flatMap(
-      (t) =>
-        t.content.match(/\b[a-z][a-z0-9+.-]*:\/\/[^\s"'`<>(){}\[\]\\]+/gi) ??
-        [],
-    );
+    .flatMap((t) => codeUrls(t.content));
 
   const html = tokens
     .flatMap((t) => [t, ...(t.children ?? [])])
@@ -71,11 +90,19 @@ function protectedParts(body) {
     markers: body.match(/<!--more-->/g) ?? [],
     shortcodes: body.match(/\{\{[<%][\s\S]*?[>%]\}\}/g) ?? [],
     blocks,
+    inlineCode: tokens
+      .flatMap((t) => t.children ?? [])
+      .filter((t) => t.type === "code_inline")
+      .map((t) => t.content),
     blockRanges,
     codeLinks,
     html,
     htmlRanges,
   };
+}
+
+function destinationOccurrences(body, parts = protectedParts(body)) {
+  return [...extractDestinations(body, { unique: false }), ...parts.codeLinks];
 }
 
 function shortcodeContexts(body, data, file) {
@@ -131,14 +158,6 @@ export async function createPatches(
   let localRoutes;
   let streamIds;
   const siteOrigin = new URL(site.url).origin;
-  const externalLinks = (links) =>
-    links.filter((link) => {
-      try {
-        return new URL(link).origin !== siteOrigin;
-      } catch {
-        return true;
-      } // Keep malformed URLs for normal external validation.
-    });
   for (const [file, findings] of groups) {
     const target = await safePath(root, file);
     const source = await readFile(target, "utf8");
@@ -147,6 +166,8 @@ export async function createPatches(
     const parsed = parseDocument(source, file);
     const front = source.slice(0, source.length - parsed.body.length);
     const before = protectedParts(parsed.body);
+    const originalDestinations = destinationOccurrences(parsed.body, before);
+    const editedDestinations = [];
     let body = parsed.body;
     const shortcodes = [...parsed.body.matchAll(/\{\{[<%][\s\S]*?[>%]\}\}/g)];
     const intervals = [],
@@ -192,12 +213,26 @@ export async function createPatches(
         parsed.body.slice(0, index) +
         f.replacement +
         parsed.body.slice(index + f.original.length);
+      const isolatedParts = protectedParts(isolated);
+      const isolatedDestinations = destinationOccurrences(
+        isolated,
+        isolatedParts,
+      );
+      const inContext = new Set(isolatedDestinations);
+      // Validate links within the edited snippet, plus destinations changed by
+      // partial-token edits in their full surrounding Markdown/code context.
+      editedDestinations.push(
+        ...destinationOccurrences(f.replacement).filter((url) =>
+          inContext.has(url),
+        ),
+        ...addedOccurrences(originalDestinations, isolatedDestinations),
+      );
       if (
         f.kind !== "command" &&
         (before.blockRanges.some(
           ([start, end]) => index < end && index + f.original.length > start,
         ) ||
-          hash(before.blocks) !== hash(protectedParts(isolated).blocks))
+          hash(before.blocks) !== hash(isolatedParts.blocks))
       )
         throw new Error(
           "Each code block edit requires an explicit command finding",
@@ -231,17 +266,24 @@ export async function createPatches(
       throw new Error("Code block changes require an explicit command finding");
     if (hash(before.html) !== hash(after.html))
       throw new Error("Patch changes raw HTML");
-    const oldDestinations = new Set([
-      ...extractDestinations(parsed.body),
-      ...before.codeLinks,
+    const requiredDestinations = new Set([
+      ...editedDestinations,
+      ...addedOccurrences(
+        originalDestinations,
+        destinationOccurrences(body, after),
+      ),
     ]);
-    for (const destination of [
-      ...extractDestinations(body),
-      ...after.codeLinks,
-    ]) {
-      if (oldDestinations.has(destination)) continue;
+    const externalDestinations = [];
+    for (const destination of requiredDestinations) {
+      if (/[\\\s]/.test(destination))
+        throw new Error(
+          "Ambiguous URL escaping or whitespace requires manual validation",
+        );
       const resolved = new URL(destination, new URL(findings[0].url, site.url));
-      if (resolved.origin !== siteOrigin) continue;
+      if (resolved.origin !== siteOrigin) {
+        externalDestinations.push(resolved.href);
+        continue;
+      }
       if (resolved.username || resolved.password)
         throw new Error("Internal links must not contain credentials");
       if (resolved.hash)
@@ -279,16 +321,7 @@ export async function createPatches(
           "Replacement internal link has no production route, redirect, or public asset",
         );
     }
-    validateNewLinks(parsed.body, body, run, policy, (text) =>
-      externalLinks(extractLinks(text)),
-    );
-    validateNewLinks(
-      before.codeLinks,
-      after.codeLinks,
-      run,
-      policy,
-      externalLinks,
-    );
+    validateNewLinks([], externalDestinations, run, policy, (links) => links);
     if (file.startsWith("src/content/posts/")) validatePost(parsed.data, file);
     transformBody(body, parsed.data, file);
     const result = front + body;
@@ -299,6 +332,7 @@ export async function createPatches(
       findingIds: findings.map((f) => f.id),
       sensitive:
         findings.some((f) => f.kind === "command") ||
+        hash(before.inlineCode) !== hash(after.inlineCode) ||
         /\b(ssh|security|password|powershell|registry)\b/i.test(
           `${source}\n${result}`,
         ),

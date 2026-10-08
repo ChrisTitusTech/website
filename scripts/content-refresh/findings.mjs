@@ -170,10 +170,20 @@ export async function modelFindings(
   return validateSchema(JSON.parse(text), findingSchema);
 }
 
+export function addedOccurrences(before, after) {
+  const remaining = new Map();
+  for (const value of before)
+    remaining.set(value, (remaining.get(value) ?? 0) + 1);
+  return after.filter((value) => {
+    const count = remaining.get(value) ?? 0;
+    if (!count) return true;
+    remaining.set(value, count - 1);
+    return false;
+  });
+}
+
 export function validateNewLinks(before, after, run, policy, links) {
-  const old = new Set(links(before));
-  for (const link of links(after)) {
-    if (old.has(link)) continue;
+  for (const link of addedOccurrences(links(before), links(after))) {
     const normalized = publicUrl(link, policy.domains);
     if (new URL(link).hash)
       throw new Error("New external fragments require manual validation");

@@ -396,6 +396,20 @@ The complete gate passed again with 162 updater tests, 233 total unit tests,
 five Python tests, 2,543 production outputs, 123 browser tests with five existing
 skips, and all 12 Lighthouse runs.
 
+Further regression coverage validates complete literal code URLs containing
+parentheses, brackets, or braces; prefix evidence cannot validate a longer
+destination. Destination collection can retain repeated occurrences for patch
+checks. Each edited snippet is checked in its surrounding document context, so
+reusing a link found elsewhere, swapping destinations, or compensating an added
+link with a removal does not avoid validation. Untouched historical links remain
+preserved. Changes to inline code conservatively require `--allow-sensitive`,
+including when the finding is classified as prose rather than a command.
+Quoted code URLs use their enclosing quote delimiter, retaining opposite quotes
+and path punctuation; ambiguous backslash escaping or whitespace requires manual
+validation. The complete gate passed with 175 updater tests, 246 total unit
+tests, five Python tests, 2,543 production outputs, 123 browser tests with five
+existing skips, and all 12 Lighthouse runs.
+
 ## Provider references
 
 - [Firecrawl scrape API](https://docs.firecrawl.dev/api-reference/endpoint/scrape)

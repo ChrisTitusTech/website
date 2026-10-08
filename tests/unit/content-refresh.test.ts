@@ -740,6 +740,180 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    ["(v2)", '"'],
+    ["[v2]", '"'],
+    ["{v2}", '"'],
+    ["'v2", '"'],
+    ['"v2', "'"],
+  ])(
+    "validates complete code URLs with %s inside %s",
+    async (suffix, quote) => {
+      const { root } = await fixture();
+      await writeFile(
+        path.join(root, file),
+        source.replace("old-command", `curl ${quote}${sourceUrl}${quote}`),
+      );
+      const run = await startRun(root, "complete-code-url", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      const target = sourceUrl + suffix;
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            kind: "command",
+            original: sourceUrl,
+            replacement: target,
+          }),
+        ],
+      });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        "fresh successful evidence",
+      );
+      const evidence = normalizeEvidence(
+        target,
+        { ...payload, metadata: { ...payload.metadata, url: target } },
+        policy,
+      );
+      run.evidence[evidence.id] = evidence;
+      expect((await createPatches(root, run, policy))[0].after).toContain(
+        `curl ${quote}${target}${quote}`,
+      );
+    },
+  );
+  it("rejects ambiguous escaped quotes in code URLs", async () => {
+    const { root, run } = await fixture();
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, {
+          kind: "command",
+          original: "old-command",
+          replacement: `curl "${sourceUrl}\\\"suffix"`,
+        }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "Ambiguous URL escaping",
+    );
+  });
+  it.each(["duplicate", "swap", "remove-and-replace"])(
+    "revalidates edited links despite existing occurrences: %s",
+    async (mode) => {
+      const { root } = await fixture();
+      const bad = "http://example.net/old";
+      const links = `[Existing](${bad})\n[Target](${sourceUrl})`;
+      await writeFile(
+        path.join(root, file),
+        source.replace("Old guidance.", links),
+      );
+      const run = await startRun(root, "edited-links", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      const updates =
+        mode === "swap"
+          ? [
+              finding(run, {
+                original: links,
+                replacement: `[Existing](${sourceUrl})\n[Target](${bad})`,
+              }),
+            ]
+          : [
+              finding(run, {
+                kind: "link",
+                original: sourceUrl,
+                replacement: bad,
+              }),
+            ];
+      if (mode === "remove-and-replace")
+        updates.push(
+          finding(run, {
+            original: `[Existing](${bad})`,
+            replacement: "Removed outdated link.",
+          }),
+        );
+      await propose(root, run, policy, { findings: updates });
+      await expect(createPatches(root, run, policy)).rejects.toThrow(
+        "approved public domains",
+      );
+    },
+  );
+  it("revalidates duplicate destinations introduced by partial-token edits", async () => {
+    const { root } = await fixture();
+    await writeFile(
+      path.join(root, file),
+      source.replace(
+        "Old guidance.",
+        `[Existing](https://docs.example.com/unverified)\n[Target](${sourceUrl})`,
+      ),
+    );
+    const run = await startRun(root, "partial-duplicate", policy, [
+      { url: "/guide/", sources: [sourceUrl] },
+    ]);
+    await scan(root, run, policy, { captures: [capture()] });
+    await propose(root, run, policy, {
+      findings: [
+        finding(run, { original: "guide", replacement: "unverified" }),
+      ],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "fresh successful evidence",
+    );
+  });
+  it("grandfathers old destinations only outside edited snippets", async () => {
+    const { root } = await fixture();
+    await writeFile(
+      path.join(root, file),
+      source + "\n[Old](http://example.net/old)\n[Missing](/missing/)\n",
+    );
+    const run = await startRun(root, "untouched-links", policy, [
+      { url: "/guide/", sources: [sourceUrl] },
+    ]);
+    await scan(root, run, policy, { captures: [capture()] });
+    await propose(root, run, policy, { findings: [finding(run)] });
+    expect((await createPatches(root, run, policy))[0].after).toContain(
+      "Corrected guidance.",
+    );
+    await propose(root, run, policy, {
+      findings: [finding(run, { replacement: "See [Missing](/missing/)." })],
+    });
+    await expect(createPatches(root, run, policy)).rejects.toThrow(
+      "no production route",
+    );
+  });
+  it.each([false, true])(
+    "requires sensitive approval for inline command changes, existing=%s",
+    async (existing) => {
+      const { root } = await fixture();
+      const text = existing
+        ? source.replace("Old guidance.", "Run `echo safe`.")
+        : source;
+      await writeFile(path.join(root, file), text);
+      const run = await startRun(root, "inline-command", policy, [
+        { url: "/guide/", sources: [sourceUrl] },
+      ]);
+      await scan(root, run, policy, { captures: [capture()] });
+      await propose(root, run, policy, {
+        findings: [
+          finding(run, {
+            original: existing ? "echo safe" : "Old guidance.",
+            replacement: existing
+              ? "sudo rm -rf /important"
+              : "Run `sudo rm -rf /important`.",
+          }),
+        ],
+      });
+      const patches = await createPatches(root, run, policy);
+      expect(patches[0].sensitive).toBe(true);
+      expect(() => approve(run, patches, { reviewer: "Test" })).toThrow(
+        "--allow-sensitive",
+      );
+      expect(() =>
+        approve(run, patches, { reviewer: "Test", allowSensitive: true }),
+      ).not.toThrow();
+    },
+  );
+  it.each([
     "/index.xml/",
     "/images/exists.png/",
     "/images//exists.png",
