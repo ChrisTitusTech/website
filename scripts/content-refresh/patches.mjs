@@ -125,6 +125,12 @@ function codeUrls(text) {
       !filesystemContext &&
       ((/^[^\s;|&()<>,}\]]/.test(text.slice(end + 1)) &&
         !text.startsWith("/>", end + 1)) ||
+        /^(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*(?:\r?\n|$))*(?:\+|\.|%)/.test(
+          text.slice(end + 1),
+        ) ||
+        /(?:\+|%)(?:\s|\/\*[\s\S]*?\*\/|\/\/[^\r\n]*(?:\r?\n|$))*$/.test(
+          prefix,
+        ) ||
         (/[^\s=:(,;[{}<>]$/.test(prefix) &&
           !/@import(?:\s|\/\*[\s\S]*?\*\/)*$/i.test(prefix)))
     )
