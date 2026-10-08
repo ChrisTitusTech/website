@@ -120,6 +120,15 @@ function codeUrls(text) {
       filesystemStrings.some(
         ([start, end]) => match.index >= start && match.index < end,
       );
+    if (
+      quoted &&
+      !filesystemContext &&
+      ((/^[^\s;|&()<>,}\]]/.test(text.slice(end + 1)) &&
+        !text.startsWith("/>", end + 1)) ||
+        (/[^\s=:(,;[{}<>]$/.test(prefix) &&
+          !/@import(?:\s|\/\*[\s\S]*?\*\/)*$/i.test(prefix)))
+    )
+      urls.push(implicitNetworkPrefix + "concatenated-url:" + hash(text));
     const syntaxOnly =
       !quoted &&
       !/[=:(]\s*$/.test(prefix) &&

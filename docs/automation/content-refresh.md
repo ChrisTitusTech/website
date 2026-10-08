@@ -507,3 +507,7 @@ not infer which command an environment variable or default expression selects.
 Shell command and process substitutions (`$(...)`, `<(...)`, and `>(...)`)
 require manual validation as a whole, even without a visible network command.
 The literal classifier does not interpret nested shell execution or wrapper chains.
+
+Quoted URLs with adjacent concatenated prefixes or suffixes require manual validation;
+verification of a prefix does not establish the full runtime destination. Direct
+CSS `@import` strings are validated as destinations, including bare asset names.
