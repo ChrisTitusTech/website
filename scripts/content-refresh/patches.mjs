@@ -83,6 +83,21 @@ function codeUrls(text) {
   if (/\bsrcset["']?\s*[:=]/i.test(text))
     urls.push(manualSrcsetPrefix + hash(text));
   const filesystemStrings = [...nonUrlRanges];
+  for (const tag of text.matchAll(
+    /<([a-z][\w:-]*)\b(?:[^"'<>]|"[^"]*"|'[^']*')*>/gi,
+  )) {
+    if (/\b(?:ping|archive|attributionsrc|imagesrcset)\s*=/i.test(tag[0]))
+      urls.push(manualSrcsetPrefix + hash(text));
+    for (const attribute of tag[0].matchAll(
+      /\b(formaction|cite|background|longdesc|manifest|profile|codebase|classid|data)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'<>]+))/gi,
+    )) {
+      if (
+        attribute[1].toLowerCase() !== "data" ||
+        tag[1].toLowerCase() === "object"
+      )
+        urls.push(attribute[2] ?? attribute[3] ?? attribute[4]);
+    }
+  }
   // Bare relative references need context or a path-shaped literal. Ordinary
   // strings are not URLs; filesystem arguments remain separately classified.
   for (const match of text.matchAll(/(["'`])((?:\\[\s\S]|(?!\1)[^\\])*)\1/g)) {
@@ -102,7 +117,9 @@ function codeUrls(text) {
       ) ||
       /\.\s*open\s*\([^,]*,\s*$/.test(prefix) ||
       cssImportPrefix(prefix) ||
-      /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*$/.test(prefix);
+      /\b(?:href|src|action|formaction|poster|url|endpoint)["']?\s*[:=]\s*$/.test(
+        prefix,
+      );
     const pathShaped =
       /^[^\s/:<>{}\[\]]+\//.test(destination) ||
       /^(?:https?|ftp|file|data|javascript|mailto|tel):/i.test(destination);
@@ -113,7 +130,7 @@ function codeUrls(text) {
     }
   }
   for (const match of text.matchAll(
-    /\b(?:href|src|action|poster|url|endpoint)["']?\s*[:=]\s*(["'`])((?:\\[\s\S]|(?!\1)[^\\])*)\1/gi,
+    /\b(?:href|src|action|formaction|poster|url|endpoint)["']?\s*[:=]\s*(["'`])((?:\\[\s\S]|(?!\1)[^\\])*)\1/gi,
   )) {
     if (
       !filesystemStrings.some(
@@ -123,7 +140,7 @@ function codeUrls(text) {
       urls.push(match[2]);
   }
   for (const match of text.matchAll(
-    /\b(?:href|src|action|poster)\s*=\s*([^\s"'`<>]+)|\b(?:url|endpoint)\s*:\s*([^\s"'`<>]+)|\burl\(\s*([^\s"'`)]+)\s*\)/gi,
+    /\b(?:href|src|action|formaction|poster)\s*=\s*([^\s"'`<>]+)|\b(?:url|endpoint)\s*:\s*([^\s"'`<>]+)|\burl\(\s*([^\s"'`)]+)\s*\)/gi,
   )) {
     if (
       !filesystemStrings.some(
@@ -536,7 +553,9 @@ export async function createPatches(
     const externalDestinations = [];
     for (const destination of requiredDestinations) {
       if (destination.startsWith(manualSrcsetPrefix))
-        throw new Error("srcset code examples require manual validation");
+        throw new Error(
+          "HTML URL-list code examples require manual validation",
+        );
       if (destination.startsWith(implicitNetworkPrefix))
         throw new Error(
           "Network commands require explicit HTTPS URLs; ambiguous targets need manual validation",

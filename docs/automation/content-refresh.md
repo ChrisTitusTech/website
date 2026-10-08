@@ -515,3 +515,7 @@ CSS `@import` strings are validated as destinations, including bare asset names.
 Transfer examples using `scp`, `sftp`, or `rsync` require manual validation.
 Common command names and execution instructions in plain prose also require
 sensitive approval, even when they are not formatted as code.
+
+HTML code examples validate additional single-URL attributes such as `formaction`,
+object `data`, and `cite`. URL-list attributes (`srcset`, `imagesrcset`, `ping`,
+`archive`, and `attributionsrc`) require manual validation.

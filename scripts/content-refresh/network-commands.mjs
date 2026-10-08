@@ -180,9 +180,11 @@ export function networkCommandArguments(text) {
   )
     urls.push(implicitNetworkPrefix + "transfer-command");
   // Git's scp-style remotes have no scheme and cannot satisfy HTTPS evidence.
-  for (const segment of nestedText.replace(/\\\r?\n/g, "").split(/[;\n|&]/)) {
+  for (const segment of nestedText
+    .replace(/\\\r?\n/g, "")
+    .split(/[;\n|]|(?<![<>])&(?!>)/)) {
     const gitOperation =
-      /\bgit(?:\.exe)?\s[^\n]*?\b(?:clone|fetch|pull|push|ls-remote|remote\s+(?:add|set-url)|submodule\s+add)\b/i;
+      /\bgit(?:\.exe)?(?=$|[\s<>;&|()])[^\n]*?\b(?:clone|fetch|pull|push|ls-remote|remote\s+(?:add|set-url)|submodule\s+add)\b/i;
     if (
       !gitOperation.test(segment) &&
       !gitOperation.test(segment.replace(/\\([^\r\n])/g, "$1"))
