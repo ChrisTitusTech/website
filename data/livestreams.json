@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-12T18:16:37Z",
+  "updated": "2026-10-13T00:40:58Z",
   "items": [
     {
       "videoId": "R7ks4_B3U0Q",
       "title": "🔴 Artcraft - Photoshop/Word Clones Testing and Development",
-      "description": "",
+      "description": "I test Artcraft's Photoshop and Microsoft Word alternatives on Linux, explore PDFCraft and FilmCraft, and build GridCraft from source. Then I connect Photocraft to AI through its CLI and MCP server, customize my thumbnail workflow, and report a bug. Along the way, I discuss compatibility problems, concerns about cloning proprietary software, and what these projects could mean for Adobe and Microsoft.\n\n0:00 Introduction\n8:23 Exploring Artcraft Apps\n14:32 Testing Photocraft\n20:36 Subject Selection\n25:58 Testing PDFCraft\n33:20 Trying FilmCraft\n41:57 Choosing Daily Tools\n48:35 WordCraft Compatibility\n54:05 Cloning Concerns\n1:02:12 Cloning Repositories\n1:10:22 Building GridCraft\n1:15:26 Forgejo Setup Troubleshooting\n1:25:04 Photocraft CLI\n1:32:01 AI Logo Results\n1:37:56 Business Adoption Challenges\n1:43:53 Connecting AI Skills\n1:50:09 Customizing Thumbnail Workflows\n1:55:51 Native File Formats\n2:01:21 Reporting Useful Bugs\n2:06:37 Artcraft's Future\n2:14:46 Known Photocraft Issues",
       "publishedAt": "2026-10-12T16:50:45Z",
       "date": "October 12, 2026",
-      "thumbnail": "https://i.ytimg.com/vi/R7ks4_B3U0Q/mqdefault_live.jpg",
+      "thumbnail": "https://i.ytimg.com/vi/R7ks4_B3U0Q/mqdefault.jpg",
       "twitchVodId": "2898928938",
       "hasChatReplay": false
     },
