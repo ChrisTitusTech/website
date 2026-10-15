@@ -13,6 +13,9 @@ draft: false
 ---
 Current Ideas for Videos and Articles
 <!--more-->
+
+## Video and article ideas
+
 - [ ] ZFS, couple that with Sanoid and Syncoid
 - [ ] Tiling Window Manager for Windows - https://github.com/LGUG2Z/komorebi
 - [ ] TrueNAS Scale

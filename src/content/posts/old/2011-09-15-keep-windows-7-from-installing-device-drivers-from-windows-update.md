@@ -10,6 +10,8 @@ categories:
 ---
 I find a very annoying feature of Windows 7 is every device you install by default searches windows update. This makes installing devices a lot longer than it needs to be. Follow these steps to make windows search your computer first and then Windows Update if needed.<!--more-->
 
+## Change device installation settings
+
 1. Right Click My Computer from Start Menu and select &#8220;Properties&#8221;
   
 2. Click &#8220;Advanced System Settings&#8221;

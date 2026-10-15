@@ -11,6 +11,8 @@ categories:
 ---
 The commands below will show you how to take ownership of an entire drive. Here is a simple script to accomplish just that.<!--more-->
 
+## Run the ownership commands
+
 Option 1: Create a cmd file takeowner.cmd in notepad
 
 Option 2: Type the following or past this in a command line prompt one line at a time

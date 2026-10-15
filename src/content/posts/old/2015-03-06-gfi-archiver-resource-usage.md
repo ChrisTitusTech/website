@@ -14,6 +14,8 @@ tags:
 ---
 Does your GFI Archiver resource usage SQL process ballon over 8GB? If so, the following procedure will reduce usage by about half and fix many performance issues.<!--more-->
 
+## Reduce the SQL connection pool size
+
 1. Stop all MailArchiver and SQL services
   
 2. Create a backup of ..MailArchiverStoreDataproduct.config

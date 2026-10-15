@@ -12,6 +12,8 @@ tags:
 ---
 If you had the misfortune of installing Exchange on Primary Domain Controller you will experience some pain when doing a reboot. Typically it will take 10-15 minutes before it restarts and up to 30 minutes to start the Microsoft Exchange Information Store. Consequently, what is really happening in the background is the IS service is being terminated incorrectly on shutdown and the store is left in a &#8220;DIRTY&#8221; shutdown state. This is very bad on several levels and can cause the Store to corrupt and not start at all, which can be catastrophic.<!--more-->
 
+## Stop Exchange services before restarting
+
 Luckily, it&#8217;s a simple fix and all you have to do is shut down the services before restarting. Below is a script that does it automatically. So, just plug it into a .cmd or .bat file and run.
 
 ```

@@ -13,11 +13,11 @@ Run the following commands if you are running low on C: drive space. Generally, 
 
 _Please Note: You have to run updates on Windows Server 2008 if you are far behind and these commands don&#8217;t exist!_
 
-MASTER CLEANUP: (Run this First)
+## MASTER CLEANUP: (Run this First)
   
 `Dism.exe /online /Cleanup-Image /SPSuperseded`
 
-FOLLOWUP:
+## FOLLOWUP:
   
 ```
 Windows 2008 Use: Dism.exe /online /Cleanup-Image /StartComponentCleanup

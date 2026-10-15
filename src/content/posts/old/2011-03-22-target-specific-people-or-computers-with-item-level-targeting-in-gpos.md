@@ -10,7 +10,7 @@ categories:
 ---
 Using Group Policy Objects can be a huge time saver, but if used improperly can be a big headache. Once you&#8217;ve messed around with GPO settings enough, you quickly figure out that you need to create new GPOs for specific programs, events, etc&#8230; that are not all in one GPO. This gives you a lot more flexibility and makes it very easy to track down troublesome GPO related issues when done properly. <!--more-->Now lets say you create a Power Savings GPO that you want to apply only to computers that meet certain conditions. WMI, Security, and Site Filtering are all too broad for this task, and you want to use Item-Level Targeting. After you create your Group Policy Object you will need to add this setting to the GPO.
 
-**In Group Policy Management Settings**
+## In Group Policy Management Settings
   
 -User Configuration -> Preferences -> Control Panel -> Regional Options
   

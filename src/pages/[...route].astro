@@ -2,6 +2,7 @@
 import { render } from "astro:content";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TableOfContents from "../components/TableOfContents.astro";
 import Pagination from "../components/Pagination.astro";
 import PostList from "../components/PostList.astro";
 import { displayDate, getPages, getPublishedPosts, readingMinutes, relatedPosts, summary, taxonomySlug } from "../lib/content";
@@ -30,7 +31,7 @@ if (descriptor.kind === "redirect") return Astro.redirect(descriptor.target, 301
 let Content: any;
 let headings: Array<{ depth: number; slug: string; text: string }> = [];
 if (descriptor.kind === "post") ({ Content, headings } = await render(descriptor.post));
-if (descriptor.kind === "page") ({ Content } = await render(descriptor.page));
+if (descriptor.kind === "page") ({ Content, headings } = await render(descriptor.page));
 const title = descriptor.kind === "post" ? descriptor.post.data.title : descriptor.kind === "page" ? descriptor.page.data.title : descriptor.kind === "listing" ? descriptor.listing.title : descriptor.title;
 const description = descriptor.kind === "post" ? summary(descriptor.post) : descriptor.kind === "page" ? descriptor.page.data.description : descriptor.kind === "listing" ? descriptor.listing.description : undefined;
 const canonicalUrl = new URL(descriptor.route, "https://christitus.com").toString();
@@ -50,7 +51,7 @@ const feed = descriptor.kind === "listing" ? `${descriptor.listing.base}index.xm
   {descriptor.kind === "post" && <>
     <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
     <article class="article-shell container">
-      {toc.length > 0 && <aside class="article-toc" aria-label="On this page"><details class="article-toc-details" data-responsive-toc><summary>On this page</summary><nav data-toc><p class="eyebrow">On this page</p><ol>{toc.map((heading) => <li class:list={{ nested: heading.depth === 3 }}><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav></details></aside>}
+      <TableOfContents headings={toc} />
       <div class="reading">
         <header class="article-header"><p class="eyebrow">Article</p><h1>{descriptor.post.data.title}</h1><p class="meta"><time datetime={descriptor.post.data.date}>{displayDate(descriptor.post)}</time> · {readingMinutes(descriptor.post)} min read</p><div class="chips">{descriptor.post.data.categories.map((category) => <a class="chip" href={`/categories/${taxonomySlug(category)}/`}>{category}</a>)}</div></header>
         {articleImage && <img class="article-image" src={articleImage} srcset={`${transformedArticleImage(640)} 640w, ${transformedArticleImage(1200)} 1200w`} sizes="(max-width: 800px) 100vw, 760px" data-cf-image alt={`${descriptor.post.data.title} featured image`} width="1200" height="675" />}
@@ -68,7 +69,7 @@ const feed = descriptor.kind === "listing" ? `${descriptor.listing.base}index.xm
     </article>
     <section class="comments container" aria-labelledby="comments-heading"><h2 id="comments-heading">Comments</h2><div data-comments><p class="muted">Comments load when this section comes into view.</p></div></section>
   </>}
-  {descriptor.kind === "page" && <article class="reading"><header class="article-header"><h1>{descriptor.page.data.title}</h1>{descriptor.page.data.description && <p class="lede">{descriptor.page.data.description}</p>}</header><div class="article-body"><Content /></div></article>}
+  {descriptor.kind === "page" && <article class="article-shell container"><TableOfContents headings={toc} /><div class="reading"><header class="article-header"><h1>{descriptor.page.data.title}</h1>{descriptor.page.data.description && <p class="lede">{descriptor.page.data.description}</p>}</header><div class="article-body"><Content /></div></div></article>}
   {descriptor.kind === "listing" && <section class="container listing-page"><header class="article-header"><p class="eyebrow">Collection</p><h1>{descriptor.listing.title}</h1>{descriptor.listing.description && <p class="lede">{descriptor.listing.description}</p>}</header><PostList posts={descriptor.listing.posts} prioritizeFirst /><Pagination page={descriptor.listing.page} pages={descriptor.listing.pages} base={descriptor.listing.base} /></section>}
   {descriptor.kind === "terms" && <section class="container"><h1>{descriptor.title}</h1><div class="chips">{descriptor.terms.map((term) => <a class="chip" href={`${descriptor.root}${term.slug}/`}>{term.name} ({term.count})</a>)}</div><Pagination page={descriptor.page} pages={descriptor.pages} base={descriptor.root} /></section>}
 </BaseLayout>

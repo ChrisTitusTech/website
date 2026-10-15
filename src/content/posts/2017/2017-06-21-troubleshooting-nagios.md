@@ -13,7 +13,11 @@ tags:
 ---
 Use the following command to verify you have all your config and command files correct when troubleshooting Nagios core installation. This will give you a readout of any configuration errors, thus giving you the ability to fix it on the fly.<!--more-->
 
+## Verify the Nagios configuration
+
 `/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg`
+
+## Add a testnag alias
 
 I&#8217;d recommend making an alias in your .bashrc so you can just type:`testnag`
 

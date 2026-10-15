@@ -14,6 +14,8 @@ tags:
 ---
 Use the following from an Elevated Powershell Prompt to force active directory sync to your O365 admin portal. You will be performing this on the server where Azure AD Sync is installed, however, when running this command you will need to wait 5 minutes before checking your portal to verify it is working. In larger environments, this can take a longer time.<!--more-->
 
+## Run a delta sync
+
 ```
 Import-Module “C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1”
 Start-ADSyncSyncCycle -PolicyType Delta

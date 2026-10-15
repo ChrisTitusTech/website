@@ -8,7 +8,11 @@ categories:
   - MacOS
 
 ---
-I recently had some issues where a bridged virtual machine in osx would disconnect my osx side network connection. A simple release and renew would fix this. <!--more-->Simply open up Terminal in OSX and type:
+I recently had some issues where a bridged virtual machine in osx would disconnect my osx side network connection. A simple release and renew would fix this. <!--more-->
+
+## Restart the network interface
+
+Simply open up Terminal in OSX and type:
 
 `sudo ifconfig en0 down`
   

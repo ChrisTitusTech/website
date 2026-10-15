@@ -542,6 +542,9 @@ h2 {
   grid-template-columns: minmax(170px, 220px) minmax(0, 1fr);
   gap: clamp(1.5rem, 3vw, 3rem);
 }
+.article-shell:not(:has(> .article-toc)) {
+  grid-template-columns: minmax(0, 1fr);
+}
 .article-shell > .reading {
   width: 100%;
 }
@@ -964,6 +967,11 @@ a.pagination-box.pagination-edge:hover {
 .store-handoff h2,
 .store-handoff p {
   margin-top: 0;
+}
+.article-shell .store-handoff {
+  width: 100%;
+  margin-inline: 0;
+  transform: none;
 }
 .store-handoff__intro {
   max-width: 70ch;

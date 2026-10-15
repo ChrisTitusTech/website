@@ -10,6 +10,8 @@ categories:
 ---
 By default the standard outlk12.adm templates do not come with a configuration of Outlook Anywhere. You can configure the &#8220;**Configure Outlook Anywhere user interface options**&#8221; options to disable or grey out the settings. However, this DOES NOT disable Outlook anywhere, just user interaction with it.
 
+## Add the administrative template
+
 You will need the Article-961112 administrative template that Microsoft released
 for this configuration. Microsoft has retired the original KB article and
 download, so this walkthrough is retained for historical reference.
@@ -27,6 +29,8 @@ In the Policy Templates dialog box locate and select the Article-961112.adm file
   
 Click Close in the Add/Remove Templates dialog box.
   
+## Configure Outlook Anywhere policies
+
 1. Under User Configuration in Administrative Templates expand the policy node labeled Article 961112 Policy Settings. (Note: You may see this under Classic Administrative Templates in a sub-menu)
   
 2. Select the Outlook Anywhere (RPC/HTTP) node to list the following policies under the Setting column in the right-pane:

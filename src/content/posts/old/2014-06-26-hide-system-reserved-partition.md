@@ -11,7 +11,7 @@ categories:
 ---
 Does your system reserve partition have a drive letter? With these steps, you will Hide System Reserved Partition and no longer see it when browsing your computer.<!--more-->
 
-Here is the fix using Diskpart:
+## Hide the partition using Diskpart
 
   1. Load Command Prompt (cmd)
   2. Load Diskpart (diskpart)

@@ -15,6 +15,8 @@ The following script shows you how to launch a startup program to run as adminis
 
 Almost every online tutorial I came across said to run it as a scheduled task. This is very cumbersome and I hate it, however using the following method is easier and saves you time.
 
+## Create the startup script
+
 Create a Text file in shell:startup and put the following in it.
 
 ```

@@ -12,6 +12,8 @@ tags:
 ---
 Here are instructions on how to Update to the latest version of GIMP. This is vital to make sure you get the newest and best features for GIMP. The old versions of gimp that come bundled with Ubuntu 18 and prior aren&#8217;t nearly as good as Gimp 2.10+. <!--more-->
 
+## Install and update GIMP
+
 Start by launching terminal and adding the GIMP repository
 
 `sudo add-apt-repository ppa:otto-kesselgulasch/gimp`
@@ -23,6 +25,8 @@ Verify the apt updates and if it doesn&#8217;t run the following command
 Now simply install GIMP and it will automatically update to the latest version of GIMP from now on
 
 `sudo apt-get install gimp`
+
+## Video walkthrough
 
 Here is a video walkthrough of install special GIMP scripts as well if you want to unlock the complete capabilities of GIMP.  
 *Video update 2026-10-07: The original video is unavailable on YouTube. The written article is retained as a reference.*

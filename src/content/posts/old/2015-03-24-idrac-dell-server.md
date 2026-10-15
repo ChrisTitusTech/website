@@ -14,7 +14,7 @@ I recently had a server freeze up when I wasn&#8217;t on-site and needed to powe
 
 ![iDrac](/images/2015/03/idrac.webp)
 
-**Remote Commands (Workstation or another server)**
+## Remote Commands (Workstation or another server)
   
 `racadm -r -u -p`
 
@@ -24,11 +24,11 @@ DEFAULT USER: root
   
 DEFAULT PASS: calvin
 
-**iDrac Information**
+## iDrac Information
   
 `racadm getsysinfo`
 
-**Reset and Factory Defaults**
+## Reset and Factory Defaults
   
 `racadm racreset` (soft Reset)
 
@@ -36,7 +36,7 @@ DEFAULT PASS: calvin
   
 NOTE: Resets Default IP > 192.168.0.120
 
-**Network Setup**
+## Network Setup
   
 ```
 racadm config -g cfgLanNetworking -o cfgNicEnable 1
@@ -49,7 +49,7 @@ racadm config -g cfgLanNetworking -o cfgDNSServer1 192.168.0.5
 racadm config -g cfgLanNetworking -o cfgDNSServer2 192.168.0.6
 ```
 
-**User Setup**
+## User Setup
   
 ```
 racadm config -g cfgUserAdmin -o cfgUserAdminUserName -i 2 john

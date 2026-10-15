@@ -17,6 +17,8 @@ Here is an example of the error you are seeing:
 
 ![SFC Scannow Error](/images/2015/07/SFC-scannow-error.webp)
 
+## Repair Windows system files
+
 * Download Windows 10 ISO from <https://www.microsoft.com/en-us/software-download/windows10>
 * Mount the ISO file by double-clicking on it.
 * Open &#8216;Windows Powershell&#8217; or &#8216;Command Prompt&#8217; with Admin privileges (right click -> Run as Administrator)

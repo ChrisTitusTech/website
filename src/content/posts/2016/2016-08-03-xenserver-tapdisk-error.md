@@ -14,7 +14,11 @@ tags:
 ---
 When re-attaching a SR on a fresh VM, I ran into this XenServer tapdisk error. I ran the following from XenServer console to eject all CD drives on that host. I was then able to start the VM with the old image.<!--more-->
 
+## Eject attached CDs
+
 `xe vm-cd-eject --multiple`
+
+## Restart the toolstack
 
 If your XenCenter hangs or becomes unresponsive, you can also reset the toolstack from console from a PuTTy session or if XenCenter console is working running the following command:
 

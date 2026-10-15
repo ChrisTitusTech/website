@@ -15,6 +15,8 @@ tags:
 ---
 This is a virtualization introduction and when you should be using it. In the follow-up videos, I will go into using the hypervisor, creating VMs and maintenance.<!--more-->
 
+## Video walkthrough
+
 {{< youtube T0nywDkf1IE >}}  
 
 Now that you understand what it is and if you want to start getting your feet wet, check out my other videos about installing a hypervisor and launching your first virtual machine. I highly recommend starting out with VMware as it used the most. It also has the most material online if looking for virtualization introduction videos and how to guides.

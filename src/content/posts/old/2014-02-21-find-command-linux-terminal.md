@@ -11,9 +11,14 @@ categories:
 ---
 Here is the syntax for using the find command Linux terminal. The following commands are great to have in your back pocket when looking for specific files or directories.<!--more-->
 
+## Find a file
+
 How to find a file from the root directory and check the entire system:
   
 `find / -name filename.ext`  
+
+## View the directory structure
+
 See directory structure without files (requires `tree` use yum or apt-get to install)
   
 `tree -d /var/www/`
