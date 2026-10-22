@@ -46,18 +46,18 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
-    "@axe-core/playwright": "4.13.0",
+    "@axe-core/playwright": "4.14.0",
     "@lhci/cli": "0.15.1",
-    "@playwright/test": "1.63.0",
+    "@playwright/test": "1.64.1",
     "@types/markdown-it": "14.2.0",
-    "@types/node": "26.6.4",
+    "@types/node": "26.6.5",
     "@types/sanitize-html": "2.16.2",
     "markdownlint-cli2": "0.23.3",
-    "prettier": "3.9.9",
-    "prettier-plugin-astro": "1.1.0",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "1.1.1",
     "proxy-agent": "8.0.2",
     "typescript": "6.0.3",
-    "vitest": "5.0.3"
+    "vitest": "5.0.5"
   },
   "overrides": {
     "@puppeteer/browsers": "3.2.0",
