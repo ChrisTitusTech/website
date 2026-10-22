@@ -6,7 +6,7 @@ import path from "node:path";
 import process from "node:process";
 import { spawnSync } from "node:child_process";
 
-import fg from "fast-glob";
+import { glob as fg } from "tinyglobby";
 
 const root = process.cwd();
 const instant = process.env.BUILD_INSTANT ?? new Date().toISOString();

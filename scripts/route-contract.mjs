@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-import fg from "fast-glob";
+import { glob as fg } from "tinyglobby";
 import YAML from "yaml";
 
 import livestreams from "../data/livestreams.json" with { type: "json" };

@@ -5,7 +5,7 @@ import path from "node:path";
 import process from "node:process";
 import { pathToFileURL } from "node:url";
 
-import fg from "fast-glob";
+import { glob as fg } from "tinyglobby";
 import MarkdownIt from "markdown-it";
 import YAML from "yaml";
 
