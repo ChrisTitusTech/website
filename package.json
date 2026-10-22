@@ -41,7 +41,7 @@
     "gray-matter": "4.0.3",
     "markdown-it": "15.0.2",
     "reading-time": "1.5.0",
-    "sanitize-html": "2.17.7",
+    "sanitize-html": "2.18.1",
     "yaml": "2.9.1"
   },
   "devDependencies": {
@@ -51,7 +51,7 @@
     "@playwright/test": "1.63.0",
     "@types/markdown-it": "14.2.0",
     "@types/node": "26.6.4",
-    "@types/sanitize-html": "2.16.1",
+    "@types/sanitize-html": "2.16.2",
     "markdownlint-cli2": "0.23.3",
     "prettier": "3.9.9",
     "prettier-plugin-astro": "1.1.0",
