@@ -76,6 +76,19 @@ This checks common TCP ports and probes service versions; it is not a complete v
 
 Use two test accounts in staging. Can one account read or change the other's data by changing an ID in a request? Can a normal user call an administrator endpoint? These permission bugs can survive every scan above.
 
+## Let a Hosted Scanner Handle It
+
+Want checks built into your workflow? Connect your repository or cloud account to a hosted service:
+
+| Service | What it checks |
+| --- | --- |
+| [GitHub CodeQL](https://github.com/github/codeql-action) | Source code for security flaws, with results in GitHub code scanning. A practical starting point for projects already on GitHub. |
+| [CodeRabbit Security](https://docs.coderabbit.ai/security) | PR security reviews plus a separately billed Deep Scan of committed code and infrastructure configuration for vulnerabilities and exposed secrets. Keep a dependency scanner alongside it. |
+| [Snyk](https://docs.snyk.io/whats-snyk) | Separate products cover source code, open-source dependencies, container images, and infrastructure configuration. |
+| [Wiz](https://www.wiz.io/academy/vulnerability-management/cloud-vulnerability-management) | Cloud workloads and configuration, prioritizing vulnerabilities using context such as exposure and permissions. Useful when the environment is bigger than one server. |
+
+Pick coverage that matches what you run. Check repository access and plan limits before connecting, then review the findings. Paying for a scanner doesn't fix anything by itself.
+
 ## Make It Routine
 
 Run project scans on pull requests and rescan deployed images regularly as new vulnerabilities are disclosed. Prioritize exposed credentials and reachable, exploitable flaws. Patch, test, and scan again.
