@@ -14,6 +14,12 @@ Your project builds. Your server runs. That doesn't mean either is secure. Here 
 
 <!--more-->
 
+## Secure the Network First
+
+Good networking can add real protection to even an insecure system. If a service doesn't need outside access, don't give it any. Block unsolicited inbound traffic, remove unnecessary port forwards, and isolate vulnerable devices on a separate network with firewall rules that restrict who can reach them.
+
+That old machine is harder to attack when the internet and your other devices can't talk to it. Isolation doesn't patch vulnerabilities, though. Malware, compromised allowed devices, and connections initiated from inside can still create a way in. Limit outbound access too, and keep patching what you can.
+
 ## Scan the Project
 
 [Trivy](https://trivy.dev/docs/latest/target/filesystem/) checks supported dependencies for known vulnerabilities, configuration files for insecure settings, and files for exposed secrets. Install the tools from their official documentation, then run project scans from your repository root.
