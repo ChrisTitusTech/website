@@ -68,6 +68,9 @@
     "markdownlint-cli": {
       "js-yaml": "5.4.3",
       "smol-toml": "1.9.1"
+    },
+    "lighthouse": {
+      "puppeteer-core": "25.16.0"
     }
   }
 }
