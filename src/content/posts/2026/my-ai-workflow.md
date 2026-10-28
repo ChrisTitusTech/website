@@ -41,7 +41,7 @@ AI makes each step faster. It does not get to skip any of them.
 
 ## Start With Plain-Text Guardrails
 
-I keep my shared AI development setup in the [titus-ai repository](https://github.com/ChrisTitusTech/titus-ai). It contains examples for instructions, specifications, roadmaps, tasks, and reusable skills.
+I keep my shared AI development setup in the [titstack repository](https://github.com/ChrisTitusTech/titstack). It contains examples for instructions, specifications, roadmaps, tasks, and reusable skills.
 
 Do not get distracted by the terminology. These are plain-text files:
 
