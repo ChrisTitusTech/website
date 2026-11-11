@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-10T18:08:52Z",
+  "updated": "2026-11-11T06:14:41Z",
   "items": [
     {
       "videoId": "dyzJ6a1_0Vw",
       "title": "🔴 Linutil Returns...",
-      "description": "",
+      "description": "I’m back on stream and picking up Linutil again. I update dependencies, review pull requests, and test the RPM Fusion changes. Then a Windows VM that won’t boot turns into a live troubleshooting session with Codex. I get Windows running again and trace the failure to a QEMU change that affected nested virtualization after a Fedora upgrade.\n\nI also walk through WinUtil’s approach to debloating Windows, demo a reusable Windows setup, and show how to report issues for WinOneShot.\n\n00:00 Stream Starts\n11:05 WinUtil PR Review\n24:54 Windows VM Troubleshooting\n43:21 Linutil Returns\n1:25:45 WinUtil Preset Demo\n1:38:01 Codex Tackles Windows\n2:06:44 Windows Boots Again\n2:30:58 WinOneShot Issue Tracker\n2:49:34 QEMU Root Cause\n3:15:32 Future Stream Plans",
       "publishedAt": "2026-11-10T15:56:15Z",
       "date": "November 10, 2026",
       "thumbnail": "https://i.ytimg.com/vi/dyzJ6a1_0Vw/mqdefault.jpg",
